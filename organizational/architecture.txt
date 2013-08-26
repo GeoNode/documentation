@@ -5,7 +5,7 @@ Architecture Overview
 This section provides insight about the components of GeoNode and the way they are used to create the final product.
 
 
-.. image:: images/geonode_architecture.png
+.. image:: img/geonode_architecture.png
 
 .. TODO: Replace this image
 

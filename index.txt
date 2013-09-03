@@ -1,0 +1,71 @@
+=======================
+GeoNode's Documentation
+=======================
+
+Welcome to Geonode the Content Management System for geospatial data. Here you will find all the documentation to Geonode 2.0
+
+How To Use The Documentation
+============================
+
+We have three sections. Each are described in detail below.
+
+ #. :doc:`Organizational <organizational/index>`  about, how to contribute, links, resources, other info
+ #. :doc:`Tutorials <tutorials/index>`  are based on performing tasks in a workshop like format
+ #. :doc:`Reference <reference/index>`  code reference, api, all components, architecture in detail
+
+
+We also have three types of users.
+
+ #. **Users**  you are a person who logs into a Geonode website and starts using it
+ #. **Administrators**  you want to install, play, setup and try geonode
+ #. **Developers**  you are a coder, want to add functionality, integrate in some other system, fix bugs, setup a server and deploy
+
+First Steps
+===========
+
+The following documents give an overview to GeoNode, they are targeted at a non-technical audience and the quick installation guide at people who just want to get it installed and will come back later to the complete documentation.
+
+ * :doc:`About GeoNode <organizational/about>`
+ * :doc:`Quick Installation Guide <tutorials/admin/doc/install/quick_install>`
+ * :doc:`Detail Installation Guide <tutorials/admin/doc/install/installation_devmode>`
+
+Organizational
+==============
+
+:doc:`Organizational <organizational/index>` is  the section about Geonode, how to contribute, learn about the community, links, review process, roadmap and other administraive stuff.
+
+Tutorials
+=========
+
+:doc:`Tutorials <tutorials/index>` are based around performing tasks, like adding data or publishing maps. The tutorials are written in a workshop like format and are broken into three groups Users, Administrators and Developers. 
+
+Reference
+=========
+
+The :doc:`Reference <reference/index>` section is all about Geonode details. You will see the components, security, API and many more.
+
+
+Having trouble? We'd like to help!
+
+ * Search for information in the `archives of the GeoNode  mailing list`_, or
+   `post a question`_.
+
+ * Ask a question in the `#geonode IRC channel`_ using
+   `Freenode's web based client`_
+
+ * Report bugs with GeoNode in our `ticket tracker`_.
+
+.. _archives of the GeoNode mailing list: https://groups.google.com/d/forum/geonode-users
+.. _post a question: mailto:geonode-users+subscribe@googlegroups.com
+.. _#geonode IRC channel: irc://irc.freenode.net/geonode
+.. _Freenode's web based client: http://webchat.freenode.net
+.. _ticket tracker: http://github.com/GeoNode/geonode/issues
+
+.. toctree::
+   :hidden:
+   :maxdepth: 3
+
+   tutorials/index
+   reference/index
+   organizational/index
+

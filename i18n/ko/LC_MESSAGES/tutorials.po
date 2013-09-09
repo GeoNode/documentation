@@ -7,12 +7,12 @@ msgstr ""
 "POT-Creation-Date: 2013-09-04 20:42\n"
 "PO-Revision-Date: 2013-09-05 02:20+0000\n"
 "Last-Translator: geonode <geonode-transifex@opengeo.org>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/geonode/language/es/)\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/geonode/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../tutorials/admin/backup/index.txt:5
 msgid "Backing up and Restoring GeoNode"
@@ -1337,7 +1337,7 @@ msgstr ""
 #: ../../tutorials/devel/old/reference/api.txt:33
 #: ../../tutorials/users/old/index.txt:17
 msgid "Layers"
-msgstr "Capas"
+msgstr "레이어"
 
 #: ../../tutorials/admin/data/permission_and_security.txt:116
 msgid ""
@@ -1514,7 +1514,7 @@ msgstr ""
 #: ../../tutorials/devel/old/reference/api.txt:49
 #: ../../tutorials/users/old/index.txt:22
 msgid "Maps"
-msgstr "Mapas"
+msgstr "지도"
 
 #: ../../tutorials/admin/data/permission_and_security.txt:222
 msgid ""
@@ -1545,7 +1545,7 @@ msgstr ""
 #: ../../tutorials/admin/data/permission_and_security.txt:242
 #: ../../tutorials/devel/old/reference/api.txt:64
 msgid "Documents"
-msgstr "Documentos"
+msgstr "문서"
 
 #: ../../tutorials/admin/data/permission_and_security.txt:244
 msgid "All the same is also valid for your uploaded documents."
@@ -4134,7 +4134,7 @@ msgstr ""
 #: ../../tutorials/devel/api/ogc.txt:4
 #: ../../tutorials/devel/intro_devel/reference.txt:9
 msgid "OGC Services"
-msgstr "Servicios OGC"
+msgstr ""
 
 #: ../../tutorials/devel/core/coremodules.txt:4
 msgid "GeoNode's Core Modules"
@@ -12877,7 +12877,7 @@ msgstr ""
 
 #: ../../tutorials/users/old/share.txt:48
 msgid "View in Google Earth"
-msgstr "Ver en Google Earth"
+msgstr "구글어스로 보기"
 
 #: ../../tutorials/users/old/share.txt:50
 msgid ""
@@ -13296,7 +13296,7 @@ msgstr ""
 
 #: ../../tutorials/users/old/upload.txt:139
 msgid "Permissions"
-msgstr "Permisos"
+msgstr "권한"
 
 #: ../../tutorials/users/old/upload.txt:141
 msgid ""

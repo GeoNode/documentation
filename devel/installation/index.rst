@@ -155,7 +155,7 @@ Set up the local virtual environment for Geonode
 
     $ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     $ mkvirtualenv --python=/usr/bin/python3 geonode
-    $ workon geonode
+    $ workon geonode # or $ source /home/geonode/dev/.venvs/geonode/bin/activate
     This creates a new directory where you want your project to be and creates a new virtualenvironment
 
 4- Download/Clone GeoNode from Github

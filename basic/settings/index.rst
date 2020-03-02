@@ -137,6 +137,24 @@ ADMIN_MODERATE_UPLOADS
     A ``Group Manager`` *can* approve the resource, but he cannot publish it whenever the setting ``RESOURCE_PUBLISHING`` is set to ``True``.
     Otherwise, if ``RESOURCE_PUBLISHING`` is set to ``False``, the resource becomes accessible as soon as it is approved.
 
+AGON_RATINGS_CATEGORY_CHOICES
+-----------------------------
+
+    Default::
+
+        {
+            "maps.Map": {
+                "map": "How good is this map?"
+                },
+            "layers.Layer": {
+                "layer": "How good is this layer?"
+                },
+            "documents.Document": {
+            "document": "How good is this document?"
+            }
+        }
+
+
 ALLOWED_DOCUMENT_TYPES
 ----------------------
 

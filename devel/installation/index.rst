@@ -147,6 +147,13 @@ Set up the local virtual environment for Geonode
 
 .. code-block:: shell
 
+    $ vim ~/.bashrc
+    # add the following line to the bottom
+    $ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+.. code-block:: shell
+
+    $ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     $ mkvirtualenv -p python2.7 geonode
     $ workon geonode # or $ source /home/geonode/dev/.venvs/geonode/bin/activate
     This creates a new directory where you want your project to be and creates a new virtualenvironment
@@ -342,7 +349,14 @@ If you didn't install GeoNode-Core earlier and you wanted to install GeoNode-Pro
 1- Create a virtual environment as follows:
 
 .. code-block:: shell
-    
+
+    $ vim ~/.bashrc
+    # add the following line to the bottom
+    $ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+.. code-block:: shell
+
+    $ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     $ mkvirtualenv my_geonode
 
 2- Clone the geonode-project repo from Github 

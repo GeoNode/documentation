@@ -88,7 +88,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
 
   # Install Packages for Virtual environment management
   sudo apt install -y virtualenv virtualenvwrapper
-  
+
   # Install text editor
   sudo apt install -y vim
 
@@ -127,6 +127,13 @@ Make an instance out of the ``Django Template``
 
 .. code-block:: shell
 
+  vim ~/.bashrc
+  # add the following line to the bottom
+  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+.. code-block:: shell
+
+  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv my_geonode
   pip install Django==1.11.25
 
@@ -202,7 +209,7 @@ Docker
 
     'django4my_geonode' instead of 'django4geonode' and so on...
 
-Deploy an instance of a geonode-project Django template 2.10.2 with Docker on localhost
+Deploy an instance of a geonode-project Django template 2.10.3 with Docker on localhost
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Prepare the environment
@@ -227,6 +234,7 @@ Make an instance out of the ``Django Template``
 
 .. code-block:: shell
 
+  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv my_geonode
   pip install Django==1.11.25
 

@@ -144,7 +144,7 @@ OGC_SERVER
 Ensure that the ``OGC_SERVER`` settings are correctly configured.
 
 Notice that the two properties ``LOGIN_ENDPOINT`` and ``LOGOUT_ENDPOINT`` must specify the GeoServer OAuth2 Endpoints (see details below).
-The default values ``'j_spring_oauth2_geonode_login'`` and ``'j_spring_oauth2_geonode_logout'`` work in most of the cases, unless you need some specific endpoints different from the latter.
+The default values ``'j_spring_oauth2_geonode_login'`` and ``'j_spring_oauth2_geonode_logout'`` work in most of the cases, unless you need some specific endpoints different from the later.
 In any case those values **must** be coherent with the GeoServer OAuth2 Plugin configuration.
 
 If in doubt, please use the default values here below.

@@ -1143,7 +1143,7 @@ MAPSTORE_BASELAYERS
 
     Allows to specify which backgrounds MapStore should use. The parameter ``visibility`` for a layer, specifies which one is the default one.
 
-    A sample configuration using the Bing background tihout OpenStreetMap, could be the following one:
+    A sample configuration using the Bing background without OpenStreetMap, could be the following one:
 
     .. code-block:: python
 

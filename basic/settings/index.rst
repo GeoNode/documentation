@@ -407,7 +407,7 @@ CACHES
     A dictionary containing the settings for all caches to be used with Django.
     This is a `Django setting <https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-CACHES>`__
 
-    The ``'default'`` cache is disabled because we don't have a mechanism to discriminate between client sesssions right now, and we don't want all users fetch the same api results.
+    The ``'default'`` cache is disabled because we don't have a mechanism to discriminate between client sessions right now, and we don't want all users fetch the same api results.
 
     The ``'resources'`` is not currently used. It might be helpful for `caching Django template fragments <https://docs.djangoproject.com/en/2.2/topics/cache/#template-fragment-caching>`__ and/or `Tastypie API Caching <https://django-tastypie.readthedocs.io/en/latest/caching.html>`__.
 
@@ -890,12 +890,12 @@ EPSG_CODE_MATCHES
             'EPSG:4326': '(4326) WGS 84',
             'EPSG:900913': '(900913) Google Maps Global Mercator',
             'EPSG:3857': '(3857) WGS 84 / Pseudo-Mercator',
-            'EPSG:3785': '(3785 DEPRECATED) Popular Visualisation CRS / Mercator',
+            'EPSG:3785': '(3785 DEPRECATED) Popular Visualization CRS / Mercator',
             'EPSG:32647': '(32647) WGS 84 / UTM zone 47N',
             'EPSG:32736': '(32736) WGS 84 / UTM zone 36S'
         }
 
-    Supported projections human readbale descriptions associated to their EPSG Codes.
+    Supported projections human readable descriptions associated to their EPSG Codes.
     This list will be presented to the user during the upload process whenever GeoNode won't be able to recognize a suitable projection.
     Those codes should be aligned to the `UPLOADER` ones and available in GeoServer also.
 
@@ -1143,7 +1143,7 @@ MAPSTORE_BASELAYERS
 
     Allows to specify which backgrounds MapStore should use. The parameter ``visibility`` for a layer, specifies which one is the default one.
 
-    A sample configuration using the Bing background witouhg OpenStreetMap, could be the following one:
+    A sample configuration using the Bing background tihout OpenStreetMap, could be the following one:
 
     .. code-block:: python
 
@@ -1629,7 +1629,7 @@ RECAPTCHA_ENABLED
     | Env: ``RECAPTCHA_ENABLED``
 
     Allows enabling reCaptcha field on signup form.
-    Valid Captcha Public and Private keys will be needed as specifice here https://pypi.org/project/django-recaptcha/#installation
+    Valid Captcha Public and Private keys will be needed as specified here https://pypi.org/project/django-recaptcha/#installation
 
     More options will be available by enabling this setting:
 

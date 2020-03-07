@@ -46,7 +46,7 @@ Chart Widgets
     :height: 30px
     :align: middle
 
-| Let's create a new **Bar Chart**.
+| Lets create a new **Bar Chart**.
 | Click on *Bar Chart* then select the *X Attribute*, the *Y Attribute*, the *Operation* and the *Color* do you prefer.
   You can also display the *Legend*, *Hide the Y axis*, *Hide the grid* and decide what *Label* display into the legend.
 | Now you can filter the data to be considered for the chart by clicking on |advanced_search_button|. We don't need any filter so click |configure_widgets_options_button| to configure other widget options.

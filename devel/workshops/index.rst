@@ -365,7 +365,7 @@ Now from the layer details page, you can see the DOI metadata entry per layer
 
 In this section, we will demonstrate how to create and setup the skeleton of a custom app using the django facilities. The app will add a geocollections functionality to our GeoNode.
 
-The Gecollections app allows to present in a single page, resources and users grouped by a GeoNode Group. We can assign arbitrary resources to a Geocollection, a Group and a name that will be also used to build a dedicated URL. 
+The Geocollections app allows to present in a single page, resources and users grouped by a GeoNode Group. We can assign arbitrary resources to a Geocollection, a Group and a name that will be also used to build a dedicated URL. 
 
 .. Note:: Make sure to be inside "my_geonode" directory to execute the following commands
 
@@ -579,7 +579,7 @@ Then run "python manage.py makemigrations" and "python manage.py migrate" to ins
 
 **Permissions logic (set_default)**
 
-Let's add a method that will be used to set the default permissions on the Geocollections. We can add this logic to the Geocollection model but could also be a generic Mixin similar to how it is implemented in GeoNode.
+Let's add a method that will be used to set the default permissions on the Geocollections. We can add this logic to the Geocollection model but could also be a generic Mix-in similar to how it is implemented in GeoNode.
 
 
 .. code-block:: shell

@@ -65,7 +65,7 @@ What we will see in this section is:
 
     #. Introduction to GeoFence Plugin, the Advanced Security Framework for GeoServer
 
-* **Throubleshooting and Advanced Features**:
+* **Troubleshooting and Advanced Features**:
 
     #. Common Issues and Fixes
 
@@ -76,7 +76,7 @@ What we will see in this section is:
 Introduction
 ------------
 
-GeoServer, i.e. the geospatial backend server of GeoNode, is a sptial server which needs authenticated users in order to access protected resources or administration functions.
+GeoServer, i.e. the geospatial backend server of GeoNode, is a spatial server which needs authenticated users in order to access protected resources or administration functions.
 
 GeoServer supports several kind of Authentication and Authorization mechanisms. Those systems are pluggable and GeoServer can use them at the same time by the use of a ``Filter Chain``.
 Briefly this mechanism allows GeoServer to check for different A&A protocols one by one. The first one matching is used by GeoServer to authorize the users.
@@ -84,16 +84,16 @@ Briefly this mechanism allows GeoServer to check for different A&A protocols one
 GeoNode Authentication is based by default on Django Security Subsystem. Django authentication allows GeoNode to manage its internal users, groups, roles and sessions.
 
 GeoNode has some external components, like GeoServer or QGis Server, which are pluggable and stand-alone services, devoted to the management of geospatial data.
-Those external services have theyr own authentication and authorization mechanisms which must be syncronized somehow with the GeoNode one. Also, those external services
+Those external services have their own authentication and authorization mechanisms which must be synchronized somehow with the GeoNode one. Also, those external services
 maintain, in most of the cases and unless specific configuration does not disable this, alternative security access which for instance allow GeoNode to modify the geospatial catalog
-under the hood, or a system administrator to have indipendent and priviliged access to the servers.
+under the hood, or a system administrator to have independent and privileged access to the servers.
 
-Before going deeply on how GeoServer/GeoNode A&A works and how it can be configured in order to work correctly with GeoNode, lets quickly clarify the difference between the ``Authentication`` and ``Authorization`` concepts.
+Before going deeply on how GeoServer/GeoNode A&A works and how it can be configured in order to work correctly with GeoNode, let's quickly clarify the difference between the ``Authentication`` and ``Authorization`` concepts.
 
 Authentication
 ^^^^^^^^^^^^^^
 
-Authentication is the process of verifying the identity of someone through the use of some sort of credentials and an handshake protocol.
+Authentication is the process of verifying the identity of someone through the use of some sort of credentials and a handshake protocol.
 If the credentials are valid, the authorization process starts. Authentication process always proceeds to Authorization process (although they may often seem to be combined).
 The two terms are often used synonymously but they are two different processes.
 
@@ -143,8 +143,8 @@ OGC_SERVER
 
 Ensure that the ``OGC_SERVER`` settings are correctly configured.
 
-Notice that the two properties ``LOGIN_ENDPOINT`` and ``LOGOUT_ENDPOINT`` must speficy the GeoServer OAuth2 Endpoints (see details below).
-The default values ``'j_spring_oauth2_geonode_login'`` and ``'j_spring_oauth2_geonode_logout'`` work in most of the cases, unless you need some specific endpoints different from the latters.
+Notice that the two properties ``LOGIN_ENDPOINT`` and ``LOGOUT_ENDPOINT`` must specify the GeoServer OAuth2 Endpoints (see details below).
+The default values ``'j_spring_oauth2_geonode_login'`` and ``'j_spring_oauth2_geonode_logout'`` work in most of the cases, unless you need some specific endpoints different from the latter.
 In any case those values **must** be coherent with the GeoServer OAuth2 Plugin configuration.
 
 If in doubt, please use the default values here below.
@@ -185,7 +185,7 @@ Default values are:
 GeoNode and GeoServer A&A Interaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The GeoServer instance used by GeoNode, has a perticular setup that allows the two frameworks to correctly interact and exchange informations on users credentials and permissions.
+The GeoServer instance used by GeoNode, has a particular setup that allows the two frameworks to correctly interact and exchange informations on users credentials and permissions.
 
 In particular GeoServer is configured with a ``Filter Chain`` for Authorization that makes use of the two following protocols:
 
@@ -244,7 +244,7 @@ GeoServer must know and must be able to access GeoNode via HTTP/HTTPS. In other 
     In other words after a successfull Authentication, GeoServer needs to Authorize the user in order to understand which resources he is enable to access or not.
     A ``REST based RoleService`` on GeoNode side, allows GeoServer to talk to GeoNode via `REST <https://en.wikipedia.org/wiki/Representational_state_transfer>`_ to get the current user along with the list of its Roles.
 
-    Nevertheless knowning the Roles associated to a user is not sufficient. The complete GeoServer Authorization needs to catch a set of ``Access Rules``, associdated to the Roles, in order to establish which resources and data are accessible by the user.
+    Nevertheless knowing the Roles associated to a user is not sufficient. The complete GeoServer Authorization needs to catch a set of ``Access Rules``, associated to the Roles, in order to establish which resources and data are accessible by the user.
 
     The GeoServer Authorization is based on Roles only, therefore for each authenticated user we need also to know:
 
@@ -280,17 +280,17 @@ Summarizing we will have different ways to access GeoNode Layers:
 
     .. warning:: If a GeoNode user has "administrator" rights, he will be able to administer GeoServer too.
 
-#. Through GeoServer Security Subsystem; it will be always possible to access to GeoServer using its internal security system and users, unless explictly disabled (**warning** this is dangeruos, you must know what you are doing).
+#. Through GeoServer Security Subsystem; it will be always possible to access to GeoServer using its internal security system and users, unless explictly disabled (**warning** this is dangerous, you must know what you are doing).
 
-Lets now see in details how the single pieces are configured and how they can be configured.
+Let's now see in details how the single pieces are configured and how they can be configured.
 
 DJango OAuth Toolkit Setup and Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As stated above, GeoNode makes use of the OAuth2 protocol for all the frontend interactions with GeoServer. GeoNode must be conifgured as an OAuth2 Provider and provide a ``Client ID`` and a ``Client Sercret`` kayes to GeoServer.
+As stated above, GeoNode makes use of the OAuth2 protocol for all the frontend interactions with GeoServer. GeoNode must be configured as an OAuth2 Provider and provide a ``Client ID`` and a ``Client Sercret`` key to GeoServer.
 This is possible by enabling and configuring the `Django OAuth Toolkit Plugin <https://django-oauth-toolkit.readthedocs.io/en/latest/>`_.
 
-.. warning:: GeoNode and GeoServer won't work at all if the follwing steps are not executed at the first installation.
+.. warning:: GeoNode and GeoServer won't work at all if the following steps are not executed at the first installation.
 
 Default ``settings.py`` Security Settings for OAuth2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -522,7 +522,7 @@ Setup of the GeoNode REST Role Service
 
 #. **If not yet configured** the service ``geonode REST role service``, click on ``Role Services`` > ``Add new``
 
-    .. note:: This passage is **not** needed if the ``geonode REST role service`` has been already created. If so it will be displayed amond the Role Services list
+    .. note:: This passage is **not** needed if the ``geonode REST role service`` has been already created. If so it will be displayed among the Role Services list
 
         .. figure:: img/oauth008.png
 
@@ -606,7 +606,7 @@ Setup of the GeoNode OAuth2 Security Filter
 
 #. **If not yet configured** the Authentication Filter ``geonode-oauth2 - Authentication using a GeoNode OAuth2``, click on ``Authentication Filters`` > ``Add new``
 
-    .. note:: This passage is **not** needed if the ``geonode-oauth2 - Authentication using a GeoNode OAuth2`` has been already created. If so it will be displayed amond the Authentication Filters list
+    .. note:: This passage is **not** needed if the ``geonode-oauth2 - Authentication using a GeoNode OAuth2`` has been already created. If so it will be displayed among the Authentication Filters list
 
         .. figure:: img/oauth015.png
 
@@ -628,15 +628,15 @@ Setup of the GeoNode OAuth2 Security Filter
 
     - ``Logout Authentication EndPoint``; Unless you have specific needs, keep the default value ``/j_spring_oauth2_geonode_logout``
 
-    - ``Force Access Token URI HTTPS Secured Protocol``; This must be ``False`` unless you enabled a ``Secured Connection`` on GeoNode. In that case you will need to trust the GeoNode ``Certificate`` on the GeoServer JVM Kaystore. Please see details below
+    - ``Force Access Token URI HTTPS Secured Protocol``; This must be ``False`` unless you enabled a ``Secured Connection`` on GeoNode. In that case you will need to trust the GeoNode ``Certificate`` on the GeoServer JVM Keystore. Please see details below
 
     - ``Access Token URI``; Set this to ``http://<geonode_host_base_url>/o/token/``
 
-    - ``Force User Authorization URI HTTPS Secured Protocol``; This must be ``False`` unless you enabled a ``Secured Connection`` on GeoNode. In that case you will need to trust the GeoNode ``Certificate`` on the GeoServer JVM Kaystore. Please see details below
+    - ``Force User Authorization URI HTTPS Secured Protocol``; This must be ``False`` unless you enabled a ``Secured Connection`` on GeoNode. In that case you will need to trust the GeoNode ``Certificate`` on the GeoServer JVM Keystore. Please see details below
 
     - ``User Authorization URI``; Set this to ``http://<geonode_host_base_url>/o/authorize/``
 
-    - ``Redirect URI``; Set this to ``http://<geoserver_host>/geoserver``. This address **must** be presenet on the ``Reditect uris`` of GeoNode ``OAuth2`` > ``Applications`` > ``GeoServer`` (see above)
+    - ``Redirect URI``; Set this to ``http://<geoserver_host>/geoserver``. This address **must** be present on the ``Redirect uris`` of GeoNode ``OAuth2`` > ``Applications`` > ``GeoServer`` (see above)
 
     - ``Check Token Endpoint URL``; Set this to ``http://<geonode_host_base_url>/api/o/v4/tokeninfo/``
 
@@ -773,7 +773,7 @@ Setup of the GeoServer Filter Chains
 
     .. figure:: img/oauth033.png
 
-    .. warning:: Every time you modify a Authentication Providers, **don't forget to save** the ``Authentication`` settings. This **must** be done for **each** change.
+    .. warning:: Every time you modify an Authentication Providers, **don't forget to save** the ``Authentication`` settings. This **must** be done for **each** change.
 
         .. figure:: img/oauth020.png
 
@@ -820,7 +820,7 @@ Setup of the GeoFence Server and Rules
 
         .. figure:: img/oauth031.png
 
-Throubleshooting and Advanced Features
+Troubleshooting and Advanced Features
 --------------------------------------
 
 Common Issues and Fixes
@@ -888,7 +888,7 @@ How to setup ``HTTPS`` secured endpoints
 
 In a production system it is a good practice to encrypt the connection between GeoServer and GeoNode. That would be possible by enabling HTTPS Protocol on the GeoNode REST Role Service APIs and OAuth2 Endpoints.
 
-Most of the times you will rely on a self-signed HTTPS connection using a generated certificate. That makes the connection *untrasted* and you will need to tell to the GeoServer Java Virtual Machine to trust it.
+Most of the times you will rely on a self-signed HTTPS connection using a generated certificate. That makes the connection *untrusted* and you will need to tell to the GeoServer Java Virtual Machine to trust it.
 
 This can be done by following the steps below.
 
@@ -992,7 +992,7 @@ In order to do this you can follow the next steps:
 
 5. Restart your server
 
-.. note:: Here below you can find a bash script which simplifies the Keystore SSL Certificates importing. Use it at your conveninece.
+.. note:: Here below you can find a bash script which simplifies the Keystore SSL Certificates importing. Use it at your convenience.
 
 	.. code-block:: shell
 
@@ -1080,7 +1080,7 @@ By default GeoFence is configured to use a filesystem based DB stored on the Geo
         ## - validate: validates the DB schema at startup against the internal model. May fail on oracle spatial.
         ## - update: updates the schema, according to the internal model. Updating automatically the production DB is dangerous.
         ## - create-drop: drop the existing schema and recreates it according to the internal model. REALLY DANGEROUS, YOU WILL LOSE YOUR DATA.
-        ## You may want not to redefine the property entirely, in order to leave the defult value (no action).
+        ## You may want not to redefine the property entirely, in order to leave the default value (no action).
 
         geofenceEntityManagerFactory.jpaPropertyMap[hibernate.hbm2ddl.auto]=update
         geofenceEntityManagerFactory.jpaPropertyMap[javax.persistence.validation.mode]=none

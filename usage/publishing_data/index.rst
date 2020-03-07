@@ -11,7 +11,7 @@ An easy way to accomplish that is to use an ``iframe``. See the following steps:
   .. figure:: img/map_url.png
       :align: center
 
-      *The Map Infromation Page URL*
+      *The Map Information Page URL*
 
 * Add *"/embed"* to the URL so that it will be like this *"http://master.demo.geonode.org/maps/11/embed"*
 

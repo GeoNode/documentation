@@ -26,7 +26,7 @@ Installing this contrib package is a matter of:
 
 .. code-block:: sh
 
-    # 1. install geonode (not shwn here for brevity)
+    # 1. install geonode (not shown here for brevity)
     # 2. install systemwide LDAP libraries
     sudo apt install \
         libldap2-dev \
@@ -168,7 +168,7 @@ whose memberships will not be re-evaluated.
 
 .. note:: Users mapped from LDAP will be marked with an ``ldap`` tag. This will be used to keep them in sync.
 
-.. warning:: If you remove the ``ldap`` tag, the users will be threated as pure internal GeoNode ones.
+.. warning:: If you remove the ``ldap`` tag, the users will be threaten as pure internal GeoNode ones.
 
 You may also manually generate the geonode groups in advance, before users
 login. In this case, when a user logs in and the mapped LDAP group already
@@ -412,7 +412,7 @@ Each time the centralized monitoring service is called, 4 types of *JSON* format
       ]
     }
 
-4. UA (User Agent) Familie details
+4. UA (User Agent) Family details
 
   .. code-block:: json
 
@@ -557,7 +557,7 @@ When saving the service configuration, if monitoring enabled, GeoNode will creat
 `Periodic Task <https://docs.celeryproject.org/en/v4.2.1/userguide/periodic-tasks.html#periodic-tasks>`_
 which will be executed at regular intervals based on the *interval* configured.
 
-You can check this behaviour on the *Periodic Tasks* section of the admin UI:
+You can check this behavior on the *Periodic Tasks* section of the admin UI:
 
 .. image:: img/periodic_tasks_section.png
     :alt: Periodic tasks section

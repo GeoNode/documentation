@@ -142,7 +142,7 @@ If not familiar with Docker, here are some useful commands:
 During startup, a lot of container crash and restart, is it normal?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This is the normal startup process. Due to the nature of the setup, the containers are very interdepentent. Startup from scratch can take approx. 5-10 minutes, during which all containers may restart a lot of times.
+This is the normal startup process. Due to the nature of the setup, the containers are very interdependent. Startup from scratch can take approx. 5-10 minutes, during which all containers may restart a lot of times.
 
 In short, Django will restart until Postgres is up so it can migrate the database. Geoserver will restart until Django has configured OAuth so it can get OAuth2 configuration. Django will restart until Geoserver is running so it can reinitialize the master password.
 

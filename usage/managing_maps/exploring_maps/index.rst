@@ -41,7 +41,7 @@ Search Bar
 ----------
 
 | The *Search Bar* of the map viewer allows you to find point of interests (POIs), streets or locations by name.
-| Let's type the name of some place then select the first record.
+| Lets type the name of some place then select the first record.
 
 .. figure:: img/search_bar_typing_name.png
      :align: center
@@ -144,7 +144,7 @@ The *Sidebar* contains the following tools:
 Basemap Switcher
 ----------------
 
-By deafault, GeoNode allows to enrich maps with many world backgrounds:
+By default, GeoNode allows to enrich maps with many world backgrounds:
 
 * *OpenStreetMap*
 * *OpenTopoMap*

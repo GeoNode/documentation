@@ -4,7 +4,7 @@ How to Install GeoNode-Core for development
 Summary of installation 
 .......................
 
-This section demonstrates a summarization of the steps to be followed in order to install GeoNode-Core for development using Ubuntu 18.04. The following steps will be customised to fit both GeoNode-Project and GeoNode-Core for development purpose.
+This section demonstrates a summarization of the steps to be followed in order to install GeoNode-Core for development using Ubuntu 18.04. The following steps will be customized to fit both GeoNode-Project and GeoNode-Core for development purpose.
 
 The steps to be followed are:
 .............................

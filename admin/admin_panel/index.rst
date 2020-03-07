@@ -164,7 +164,7 @@ made through integrating theming options.
 .. figure:: img/theming/theme-def-0005.png
     :align: center
 
-    *Urbanflooding GeoNode Partners Section*
+    *Urban-flooding GeoNode Partners Section*
 
 The ``Partners`` items can be managed through the ``http://<your_geonode_host>/admin/geonode_themes/partner/`` Admin section
 
@@ -191,7 +191,7 @@ In order to attach or detach a ``Partner`` to an existing ``Theme`` on GeoNode, 
 
 From here you will be able to either to change the ``Partners title`` text and/or select/deselect ``Partners`` from the ``multi-select`` box.
 
-.. note:: In order to select/deselect elements from the ``multi-select`` box, you **must** use the ``CTRL+CLICK`` button combintation.
+.. note:: In order to select/deselect elements from the ``multi-select`` box, you **must** use the ``CTRL+CLICK`` button combination.
 
 Privacy Policies and Cookie settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -212,7 +212,7 @@ it will be possible to allow GeoNode presenting the `Privacy Policies and Cookie
 
 There are plenty of options available, allowing you to customize contact info as long as colors of the bar and page.
 
-One of the most importat to consider it is for sure the ``Cookie law info bar text``
+One of the most important to consider it is for sure the ``Cookie law info bar text``
 
 .. figure:: img/theming/theme-def-0006b.png
     :align: center
@@ -316,7 +316,7 @@ You can check that in the *User Details Page* from the *Admin Panel* (see the pi
 .. figure:: img/new_user_disabled.png
     :align: center
 
-    *Disabeld Users*
+    *Disabled Users*
 
 Change a User password
 ======================
@@ -520,7 +520,7 @@ There are also four links:
 
       *Confirm Group Deletion*
 
-* the :guilabel:`Group Activities` drives you to the *Group Activites Page* where you can see all layers, maps and documents associated with the group. There is also a *Comments* tab which shows comments on those resources.
+* the :guilabel:`Group Activities` drives you to the *Group Activities Page* where you can see all layers, maps and documents associated with the group. There is also a *Comments* tab which shows comments on those resources.
 
   .. figure:: img/group_activities.png
       :align: center
@@ -641,7 +641,7 @@ The publication by the GeoNode Administrator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Prior to the public release of an approved layer, a document or a map, the Administrator of the platform performs a final validation of
-the item and its metadata, notably to check that it is in line with licence policies.
+the item and its metadata, notably to check that it is in line with license policies.
 
 If needed, the GeoNode Administrator can contact the Manager who has approved the layer, document or map, as well as its responsible.
 
@@ -684,7 +684,7 @@ Clicking on the :guilabel:`Admin > Layers` link will show the list of available 
 
 .. warning:: It is not recommended to modify the Layers' ``Attributes`` or ``Styles`` directly from the Admin dashboard unless you are aware of your actions.
 
-The ``Metadata`` information can be changed for multiple Layers at once throguh the :guilabel:`Metadata batch edit` action.
+The ``Metadata`` information can be changed for multiple Layers at once through the :guilabel:`Metadata batch edit` action.
 
 .. figure:: img/admin-layers-batch.png
     :align: center
@@ -693,7 +693,7 @@ By clicking over one Layer link, it will show a detail page allowing you to modi
 
 .. note:: It is strongly recommended to always use the GeoNode :guilabel:`Metadata Wizard` or :guilabel:`Metadata Advanced` tools in order to edit the metadata info.
 
-The ``Permissions`` can be changed also for multiple Layers at once throguh the :guilabel:`Set layers permissions` action.
+The ``Permissions`` can be changed also for multiple Layers at once through the :guilabel:`Set layers permissions` action.
 
 .. figure:: img/set_layers_permissions_action.png
     :align: center
@@ -713,7 +713,7 @@ Move to :guilabel:`Admin > Maps` to access the Maps list.
 .. figure:: img/admin-maps.png
     :align: center
 
-The ``Metadata`` information can be changed for multiple Maps at once throguh the :guilabel:`Metadata batch edit` action.
+The ``Metadata`` information can be changed for multiple Maps at once through the :guilabel:`Metadata batch edit` action.
 
 .. figure:: img/admin-layers-batch.png
     :align: center
@@ -740,7 +740,7 @@ Move to :guilabel:`Admin > Documents` to access the Documents list.
 .. figure:: img/admin-documents.png
     :align: center
 
-The ``Metadata`` information can be changed for multiple Documents at once throguh the :guilabel:`Metadata batch edit` action.
+The ``Metadata`` information can be changed for multiple Documents at once through the :guilabel:`Metadata batch edit` action.
 
 .. figure:: img/admin-layers-batch.png
     :align: center
@@ -771,7 +771,7 @@ In other words the options available from the :guilabel:`select-boxes` of the :g
 
     *Metadata Advanced Panel*
 
-.. note:: When editing the resource metadata throguh the :guilabel:`Metadata Wizard`, some fields are marked as ``mandatory`` and by filling those information
+.. note:: When editing the resource metadata through the :guilabel:`Metadata Wizard`, some fields are marked as ``mandatory`` and by filling those information
     the ``Completeness`` progress will advance accordingly.
 
     .. figure:: img/metadata-base/admin-panel-metadata-contents-0003a.png
@@ -815,7 +815,7 @@ The hierarchy will be reflected in the form of a tree from the metadata panels.
 
 By default each user with editing metadata rights on any resource, will be able to insert new keywords into the system by simply typing a free text on the keywords metadata field.
 
-It is possible to force the user to select from a fixed list of keywords throug the `FREETEXT_KEYWORDS_READONLY <../../basic/settings/index.html#freetext-keywords-readonly>`_ setting.
+It is possible to force the user to select from a fixed list of keywords through the `FREETEXT_KEYWORDS_READONLY <../../basic/settings/index.html#freetext-keywords-readonly>`_ setting.
 
 When set to `True` keywords won't be writable from users anymore. Only admins can will be able to manage them through the :guilabel:`Admin > Base > Hierarchical keywords` panel.
 
@@ -829,21 +829,21 @@ Through the :guilabel:`Admin > Base > Licenses` panel it will be possible to man
 
     *Metadata editor Licenses*
 
-The licence description and the info URL will be shown on the resource detail page.
+The license description and the info URL will be shown on the resource detail page.
 
 .. figure:: img/metadata-base/admin-panel-metadata-contents-0007.png
     :align: center
 
     *Resource detail License*
 
-The licence text will be shown on the catalogue metadata XML documents.
+The license text will be shown on the catalogue metadata XML documents.
 
 .. figure:: img/metadata-base/admin-panel-metadata-contents-0008.png
     :align: center
 
     *Resource Metadata ISO License*
 
-.. warning:: It is **strongly** recommended to not publish resources without an appropriate licence. Always make sure the data provider specifies the correct licence and that all the restrictions have been honored.
+.. warning:: It is **strongly** recommended to not publish resources without an appropriate license. Always make sure the data provider specifies the correct license and that all the restrictions have been honored.
 
 Metadata Regions
 ^^^^^^^^^^^^^^^^
@@ -860,7 +860,7 @@ Notice that those regions are used by GeoNode to filter search results also thro
 .. figure:: img/metadata-base/admin-panel-metadata-contents-0010.png
     :align: center
 
-    *GeoNode fitlering by Metadata Regions*
+    *GeoNode filtering by Metadata Regions*
 
 .. note:: GeoNode tries to guess the ``Regions`` intersecting the data bounding boxes when uploading a new layer. Those should be refined by the user layer on anyway.
 
@@ -871,14 +871,14 @@ Through the :guilabel:`Admin > Base > Metadata Restriction Code Types` and :guil
 be possible to **update only** the metadata descriptions for restrictions and spatial representation types.
 
 Such lists are *read-only* by default since they have been associated to the specific codes of the ``ISO 19115`` metadata schema.
-Changing them would require the system to provide a custom dictionary throguh the metadata catalog too. Such functionality is not supported actually by GeoNode.
+Changing them would require the system to provide a custom dictionary through the metadata catalog too. Such functionality is not supported actually by GeoNode.
 
 Metadata Topic Categories
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Through the :guilabel:`Admin > Base > Metadata Topic Categories` panel it will be possible to manage all the resource metadata categories avaialble into the system.
 
-Notice that by default, GeoNode provides the standard topic categories avaialble with the ``ISO 19115`` metadata schema. Changing them means that the system won't be
+Notice that by default, GeoNode provides the standard topic categories available with the ``ISO 19115`` metadata schema. Changing them means that the system won't be
 compliant with the standard ``ISO 19115`` metadata schema anymore. ``ISO 19115`` metadata schema extensions are not currently supported natively by GeoNode.
 
 It is worth notice that GeoNode allows you to associate `Font Awesome Icons <https://fontawesome.com/icons?d=gallery>`_ to each topic category through their ``fa-icon`` code.
@@ -895,7 +895,7 @@ Announcements
 
 As an Administrator you might need to broadcast announcements to the world about your portal or simply to the internal contributors.
 
-GeoNode ``Announcements`` allow actually to do that; an admin has the possibility to create thre types of messages, accordingly to their severity,
+GeoNode ``Announcements`` allow actually to do that; an admin has the possibility to create three types of messages, accordingly to their severity,
 decide their validity in terms of time period (start date and expiring date of the announcement), who can view them or not (everyone or just the
 registerd members) and whenever a user can hide the message or not and how long.
 
@@ -1159,7 +1159,7 @@ select the followings:
 
         *Select the GeoServer Application*
 
-5. ``Expires``; select an expiration date by uwing the :guilabel:`date-time` widgets.
+5. ``Expires``; select an expiration date by using the :guilabel:`date-time` widgets.
 
     .. figure:: img/oauth2-tokens/admin-panel-tokens-0003d.png
         :align: center
@@ -1188,7 +1188,7 @@ Notice the ``...quest=GetCapabilities&access_token=123456`` (**access_token**) p
 Force a User Session to expire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Everyting said about the creation of a new ``Access Token``, applies to the deletion of the latter.
+Everything said about the creation of a new ``Access Token``, applies to the deletion of the latter.
 
 From the same interface an admin can either select an expiration date or delete all the ``Access Tokens`` associated to a user, in order to
 force its session to expire.

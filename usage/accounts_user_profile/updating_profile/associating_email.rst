@@ -10,7 +10,7 @@ Your account is automatically associated with the e-mail that you used to regist
 
      *Accounts e-mail*
 
-By clicking on :guilabel:`Associated e-mails` of the *Profile* page (see :ref:`editing-profile`), you will have the possibility to fill up a new e-mail address. Type it in the :guilabel:`E-mail` input filed then click on :guilabel:`Add E-mail` to perfrom a new association.
+By clicking on :guilabel:`Associated e-mails` of the *Profile* page (see :ref:`editing-profile`), you will have the possibility to fill up a new e-mail address. Type it in the :guilabel:`E-mail` input filed then click on :guilabel:`Add E-mail` to perform a new association.
 
 .. figure:: img/associate_new_email.png
      :align: center

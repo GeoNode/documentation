@@ -99,7 +99,7 @@ It will run locally against a file-system based ``SQLite`` database.
 
 First of all we need to prepare a new Python Virtual Environment
 
-Since geonode needs a large number of different python libraries and packages, it's recommended to use a python virtual environment to avoid conflicts on dependencies with system wide python packages and other installed software. See also documentation of `Virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/stable/>`_ package for more information
+Since geonode needs a large number of different python libraries and packages, its recommended to use a python virtual environment to avoid conflicts on dependencies with system wide python packages and other installed software. See also documentation of `Virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/stable/>`_ package for more information
 
 .. code-block:: shell
 

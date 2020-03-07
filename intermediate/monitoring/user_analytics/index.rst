@@ -123,7 +123,7 @@ Requests
             }
           }
 
-3. total number of unique sessions per event_type: for example total number of unique visits of resource pages (indipendently by resource type and id)
+3. total number of unique sessions per event_type: for example total number of unique visits of resource pages (independently by resource type and id)
 
     * to get number of requests
 

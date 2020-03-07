@@ -26,7 +26,7 @@ and then issue the command:
 The ``name`` is the identifier you'll use to refer to this thesaurus in your GeoNode instance.
 
 
-If you only want to make sure that a thesaurus file will be properly parsed, give the ``--dry-run`` parameter, so that nothing wil be added to the DB.
+If you only want to make sure that a thesaurus file will be properly parsed, give the ``--dry-run`` parameter, so that nothing will be added to the DB.
 
 *Note*: if the ``name`` starts with the string ``fake``, the file will not be accessed at all, and some test keywords will be added to a fake new thesaurus. In this case the ``dry-run`` param will not be used.
 

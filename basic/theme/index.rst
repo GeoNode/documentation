@@ -283,7 +283,7 @@ From `Bootswatch <https://bootswatch.com/>`_ you can download ready-to-use theme
 
 The following steps will show you how to use a theme from Bootswatch in your own GeoNode Project.
 
-1. Downoload the `Bootswatch themes for Bootstrap v3.3.7 archive <https://github.com/thomaspark/bootswatch/releases/tag/v3.3.7>`_ and extract it on some folder in your disk.
+1. Download the `Bootswatch themes for Bootstrap v3.3.7 archive <https://github.com/thomaspark/bootswatch/releases/tag/v3.3.7>`_ and extract it on some folder in your disk.
 
 2. Select a theme (in this example we will use *Sandstone*) and copy the ``bootstrap.css`` file inside the theme folder to the ``<my_geonode>/static/css`` (the static folder of your GeoNode Project).
 

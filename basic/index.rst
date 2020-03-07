@@ -9,7 +9,7 @@ GeoNode Settings
 
     settings/index
 
-Customise the Look and Feel
+Customize the Look and Feel
 ===========================
 
 .. toctree::

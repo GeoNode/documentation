@@ -27,7 +27,7 @@ Most useful links
 
 - Project homepage: https://geonode.org
 - Repository: https://github.com/GeoNode/geonode
-- Offical Demo: http://master.demo.geonode.org
+- Official Demo: http://master.demo.geonode.org
 - GeoNode Wiki: https://github.com/GeoNode/geonode/wiki
 - Issue tracker: https://github.com/GeoNode/geonode-project/issues
 
@@ -85,6 +85,6 @@ GeoNode's development roadmap is documented in a series of GeoNode Improvement P
 They are documented at `GeoNode Wiki <https://github.com/GeoNode/geonode/wiki/GeoNode-Improvement-Proposals>`_.
 
 GNIPS are considered to be large undertakings which will add a large amount of features to the project. 
-As such they are the topic of community dicussion and guidance. 
+As such they are the topic of community discussion and guidance. 
 
 The community discusses these on the developer mailing list: http://lists.osgeo.org/pipermail/geonode-devel/

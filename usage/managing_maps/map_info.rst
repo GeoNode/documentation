@@ -88,7 +88,7 @@ Map Tools
 * click the :guilabel:`Metadata Detail` button to see the map metadata, see :ref:`map-metadata`;
 * click the :guilabel:`Editing Tools` button to access to many editing tools. Those functionalities will be explained in the :ref:`exploring-maps` section;
 * click the :guilabel:`View Map` button to open the map, see the :ref:`exploring-maps` section for more details;
-* see the *Map Layers* section to konw which layers are used by the map (you can open the *Layer Page* by clicking on its name, available only for local layers);
+* see the *Map Layers* section to know which layers are used by the map (you can open the *Layer Page* by clicking on its name, available only for local layers);
 * click the :guilabel:`Create a Map` button of the *Copy this map* section to duplicate the map;
 * click the :guilabel:`Publish Map WMS` of the *Map WMS* section to publish local map layers as WMS layer group;
 * see the *About* section to know the map *Owner*, the *Contact* user and the *Metadata Author*.

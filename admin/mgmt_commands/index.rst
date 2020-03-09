@@ -7,7 +7,7 @@ Migrate GeoNode Base URL
 The ``migrate_baseurl`` :guilabel:`Management Command` allows you to fix all the GeoNode Links whenever, for some reason,
 you need to change the :guilabel:`Domain Name` of :guilabel:`IP Address` of GeoNode.
 
-This **must** be used also in the cases you'll need to chnage the network schema from ``HTTP`` to ``HTTPS``, as an instance.
+This **must** be used also in the cases you'll need to change the network schema from ``HTTP`` to ``HTTPS``, as an instance.
 
 First of all let's take a look at the :guilabel:`--help` option of the ``migrate_baseurl`` 
 management command in order to inspect all the command options and features. 
@@ -455,8 +455,8 @@ This will produce output that looks like the following
                             in one command
     -a ABSTRACT, --abstract ABSTRACT
                             The abstract for the imported layer(s). Will be the
-                            same forall imported layers if multiple imports are
-                            donein one command
+                            same for all imported layers if multiple imports are
+                            done in one command
     -d DATE, --date DATE  The date and time for the imported layer(s). Will be
                             the same for all imported layers if multiple imports
                             are done in one command. Use quotes to specify both
@@ -477,7 +477,7 @@ reviewing some of the key options a bit more in details.
 - The :guilabel:`-C` option specifies the character encoding of the data.
 
 The import layers management command is invoked by specifying options as described 
-above and specifying the path to a single layer file or to a directory that contains multiple files. For purposes of this exercise, lets use the default set of testing layers that ship with geonode.
+above and specifying the path to a single layer file or to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing layers that ship with geonode.
 You can replace this path with the directory to your own shapefiles.
 
 .. code-block:: shell
@@ -711,7 +711,7 @@ First visit the GeoServer administration interface on your server. This is usual
         -p PERMISSIONS, --permissions PERMISSIONS
                                 Permissions to apply to each layer
 
-.. warning:: One of the :guilabel:`--workspace` or :guilabel:`--store` must be always specified if you want to ingest Layers belonging to a specific ``Workspace``. As an instance, in order to ingest the layers present into the ``geonode`` workspace, you will need to spceify the option ``-w geonode``.
+.. warning:: One of the :guilabel:`--workspace` or :guilabel:`--store` must be always specified if you want to ingest Layers belonging to a specific ``Workspace``. As an instance, in order to ingest the layers present into the ``geonode`` workspace, you will need to specify the option ``-w geonode``.
 
 9. Let's ingest the layer ``geonode:_1_SARMIENTO_ENERO_2018`` from the ``geonode`` workspace.
 
@@ -1193,7 +1193,7 @@ And this should be the corresponding output:
     NoData Value=-3.4028234663852886e+38
 
 You will notice that the ``batemans_elevation.asc`` file does *not* contain projection information while the ``batemans_ele`` file does.
-Because of this, lets use the ``batemans_ele`` files for this exercise and convert them to a GeoTiff for use in GeoNode.
+Because of this, let's use the ``batemans_ele`` files for this exercise and convert them to a GeoTiff for use in GeoNode.
 We will also reproject this file into WGS84 in the process. This can be accomplished with the following command.
 
 .. code-block:: shell
@@ -1247,7 +1247,7 @@ Raster Data Optimization: Optimizing and serving big raster data
 When dealing with big raster datasets it could be very useful to use tiles.
 
 Tiling allows large raster datasets to be broken-up into manageable pieces and are fundamental 
-in defining and implementing an higher level raster I/O interface.
+in defining and implementing a higher level raster I/O interface.
 
 In this example we will use the original dataset of the ``chiangMai_ortho_optimized`` public raster layer which 
 is currently available on the Thai `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_. 

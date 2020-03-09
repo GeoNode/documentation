@@ -262,7 +262,7 @@ Event Types
 ~~~~~~~~~~~
 
 Event Types describe the way resources were used in GeoNode.
-Resource can be accessed as a regular view (throuhg GeoNode, like `/layers/X` url), or through OWS request.
+Resource can be accessed as a regular view (through GeoNode, like `/layers/X` url), or through OWS request.
 Full list of Event Types handled is available in ``/api/event_types/`` endpoint:
 
 ``GET /monitoring/api/event_types/``
@@ -761,7 +761,7 @@ where:
 * each `data` element contains:
 
     - `label` label value associated with metric data value. This can describe user-provided differentiation value (user agent string, request method etc), or, if such value is not in use, default, "count" or "value" label.
-    - `val` is metrid data aggregated value, which should be used by frontend application. For `request.ua` this means count of requests for given user agent string, for `response.time` that will return average response time.
+    - `val` is metric data aggregated value, which should be used by frontend application. For `request.ua` this means count of requests for given user agent string, for `response.time` that will return average response time.
     - `min`, `max`, `sum` are helper statistical values to give insight on data used,
     - `samples_count` is a sum of all samples counts (actual requests) used for this calculation
     - `metric_count` is a number of metric data used to calculate the value.

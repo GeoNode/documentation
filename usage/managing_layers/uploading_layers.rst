@@ -4,7 +4,7 @@ Layers Uploading
 ================
 
 | The most important resource type in GeoNode is the *Layer*. A layer represents spatial information so it can be displayed inside a map.
-| To better understand what we are talking about let's upload your first layer.
+| To better understand what we are talking about lets upload your first layer.
 
 The *Layer Uploading* page can be reached from the :guilabel:`Upload Layer` link of the :guilabel:`Data` menu in the navigation bar.
 

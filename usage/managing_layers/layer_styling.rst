@@ -185,7 +185,7 @@ Once the process has been finished the new *Style* will be visible in the *Layer
 Managing Styles
 ---------------
 
-Given a layer, you can manage all its styles in tha *Styles Management Page* accessible from the :guilabel:`Manage` button of the *Layer Editing* panel.
+Given a layer, you can manage all its styles in the *Styles Management Page* accessible from the :guilabel:`Manage` button of the *Layer Editing* panel.
 
 .. figure:: img/manage_styles.png
     :align: center

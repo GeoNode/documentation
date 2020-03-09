@@ -118,7 +118,7 @@ By clicking on |animation_settings_button| you can manage some *Animation Settin
 
      *The Timeline Settings*
 
-| You can activate the *Snap to guide layer* so that the time cursor will snap to the selected layer's data. You can also set up the *Frame Duration* (by deafult 5 seconds).
+| You can activate the *Snap to guide layer* so that the time cursor will snap to the selected layer's data. You can also set up the *Frame Duration* (by default 5 seconds).
 | If the *Snap to guide layer* option is disabled, you can force the animation step to be a fixed value.
 
 The *Animation Range* option lets you to define a temporal range within which the time cursor can move.

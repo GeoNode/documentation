@@ -13,7 +13,7 @@ Upgrade from 2.4.x
 ==================
 
 These are the notes of a migration from 2.4.x to 2.10.1.
-These notes could possibly works also when migrating from 2.6.x, 2.7.x, 2.8.x but are not tested in that scenarios.
+These notes could possibly work also when migrating from 2.6.x, 2.7.x, 2.8.x but are not tested in that scenarios.
 You should run this procedure on your local machine and once you successfully migrated the database move the backup to your GeoNode 2.10.1 production instance.
 
 PostgreSQL

@@ -22,7 +22,7 @@ Unfortunately  Django overrides this setting, giving the language setting of a u
 Additional Steps
 ================
 
-If this is not the desired behavior, and all users should initially see the default ``LANGUAGE_CODE``, regardless of their browser's settings, do the following steps to ensure Django ignores the browser language settings.  (Users can always use the pulldown language menu to change the language at any time.)
+If this is not the desired behaviour, and all users should initially see the default ``LANGUAGE_CODE``, regardless of their browser's settings, do the following steps to ensure Django ignores the browser language settings.  (Users can always use the pulldown language menu to change the language at any time.)
 
 As **root** create a new directory within GeoNode's site packages
 

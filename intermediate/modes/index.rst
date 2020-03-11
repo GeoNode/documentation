@@ -8,7 +8,12 @@ Overview
 GeoNode gives an option to operate in different modes, according to the needs and demands of the certain application system.
 
 Changing the currently used mode can be done in the admin panel by the user with super-user privileges, by modifying
-``Configuration`` singleton model in the ``BASE`` application.
+``Configuration`` singleton model in the ``BASE`` application:
+
+  .. figure:: img/configuration_admin_panel.png
+      :align: center
+
+      *Configuration change in the admin panel*
 
 Read-Only Mode
 ==============

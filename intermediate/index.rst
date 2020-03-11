@@ -1,5 +1,13 @@
 .. _geonode_monitoring:
 
+Read-Only and Maintenance Mode
+==========
+
+.. toctree::
+    :maxdepth: 3
+
+    modes/index
+
 Monitoring
 ==========
 

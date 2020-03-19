@@ -9,8 +9,8 @@ you need to change the :guilabel:`Domain Name` of :guilabel:`IP Address` of GeoN
 
 This **must** be used also in the cases you'll need to change the network schema from ``HTTP`` to ``HTTPS``, as an instance.
 
-First of all let's take a look at the :guilabel:`--help` option of the ``migrate_baseurl`` 
-management command in order to inspect all the command options and features. 
+First of all let's take a look at the :guilabel:`--help` option of the ``migrate_baseurl``
+management command in order to inspect all the command options and features.
 
 Run
 
@@ -121,8 +121,8 @@ The options are:
 
 * **remove-duplicates**; Removes duplicated Links.
 
-First of all let's take a look at the :guilabel:`--help` option of the ``sync_geonode_layers`` 
-management command in order to inspect all the command options and features. 
+First of all let's take a look at the :guilabel:`--help` option of the ``sync_geonode_layers``
+management command in order to inspect all the command options and features.
 
 Run
 
@@ -209,8 +209,8 @@ The options are:
 
 * **remove-duplicates**; Removes duplicated Links.
 
-First of all let's take a look at the :guilabel:`--help` option of the ``sync_geonode_maps`` 
-management command in order to inspect all the command options and features. 
+First of all let's take a look at the :guilabel:`--help` option of the ``sync_geonode_maps``
+management command in order to inspect all the command options and features.
 
 Run
 
@@ -283,8 +283,8 @@ The options are:
 
 * **delete-orphaned-thumbs**; Removes duplicated Links.
 
-First of all let's take a look at the :guilabel:`--help` option of the ``set_all_layers_metadata`` 
-management command in order to inspect all the command options and features. 
+First of all let's take a look at the :guilabel:`--help` option of the ``set_all_layers_metadata``
+management command in order to inspect all the command options and features.
 
 Run
 
@@ -349,7 +349,7 @@ This will produce output that looks like the following
 Loading Data into GeoNode
 =========================
 
-There are situations where it is not possible or not convenient to use the 
+There are situations where it is not possible or not convenient to use the
 :guilabel:`Upload Form` to add new Layers to GeoNode via the web interface.
 As an instance:
 
@@ -361,8 +361,8 @@ As an instance:
 
 * We need to process the data first and, maybe, transform it to another format.
 
-This section will walk you through the various options available to load data into your 
-GeoNode from GeoServer, from the command-line or programmatically. 
+This section will walk you through the various options available to load data into your
+GeoNode from GeoServer, from the command-line or programmatically.
 
 .. warning:: Some parts of this section have been taken from the `GeoServer <https://geoserver.geo-solutions.it/edu/en>`_ project and training documentation.
 
@@ -371,13 +371,13 @@ GeoNode from GeoServer, from the command-line or programmatically.
 Management Command ``importlayers``
 -----------------------------------
 
-The ``geonode.layers`` Django app includes 2 management commands that you can use to 
+The ``geonode.layers`` Django app includes 2 management commands that you can use to
 load or configure data in your GeoNode.
 
-Both of them can be invoked by using the ``manage.py`` script. 
+Both of them can be invoked by using the ``manage.py`` script.
 
-First of all let's take a look at the :guilabel:`--help` option of the ``importlayers`` 
-management command in order to inspect all the command options and features. 
+First of all let's take a look at the :guilabel:`--help` option of the ``importlayers``
+management command in order to inspect all the command options and features.
 
 Run
 
@@ -467,7 +467,7 @@ This will produce output that looks like the following
     -C CHARSET, --charset CHARSET
                             Specify the charset of the data
 
-While the description of most of the options should be self explanatory, its worth 
+While the description of most of the options should be self explanatory, its worth
 reviewing some of the key options a bit more in details.
 
 - The :guilabel:`-i` option will force the command to stop when it first encounters an error. Without this option specified, the process will skip over errors that have layers and continue loading the other layers.
@@ -476,7 +476,7 @@ reviewing some of the key options a bit more in details.
 - The :guilabel:`-k` option is used to add keywords for all of the layers imported.
 - The :guilabel:`-C` option specifies the character encoding of the data.
 
-The import layers management command is invoked by specifying options as described 
+The import layers management command is invoked by specifying options as described
 above and specifying the path to a single layer file or to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing layers that ship with geonode.
 You can replace this path with the directory to your own shapefiles.
 
@@ -510,12 +510,12 @@ This command will produce the following output to your terminal
     0 Failed layers
     3.750000 seconds per layer
 
-If you encounter errors while running this command, you can use the :guilabel:`-v` 
-option to increase the verbosity of the output so you can debug the problem. 
+If you encounter errors while running this command, you can use the :guilabel:`-v`
+option to increase the verbosity of the output so you can debug the problem.
 
 The verbosity level can be set from :guilabel:`0-3` with :guilabel:`0` being the default.
 
-An example of what the output looks like when an error is encountered and the verbosity 
+An example of what the output looks like when an error is encountered and the verbosity
 is set to :guilabel:`3` is shown below:
 
 .. code-block:: shell
@@ -533,7 +533,7 @@ is set to :guilabel:`3` is shown below:
 
     Detailed report of failures:
 
-    /Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_administrative.shp 
+    /Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_administrative.shp
     ================
     Traceback (most recent call last):
       File "/Users/geosolutions/projects/geonode/geonode/layers/utils.py", line 682, in upload
@@ -561,14 +561,14 @@ is set to :guilabel:`3` is shown below:
 .. note:: This last section of output will be repeated for all layers, and only the first one is show above.
 
 This error indicates that GeoNode was unable to connect to GeoServer to load the layers.
-To solve this, you should make sure GeoServer is running and re-run the command. 
+To solve this, you should make sure GeoServer is running and re-run the command.
 
-If you encounter errors with this command that you cannot solve, 
+If you encounter errors with this command that you cannot solve,
 you should bring them up on the geonode users mailing list.
 
-You should now have the knowledge necessary to import layers into your GeoNode project 
-from a directory on the servers filesystem and can use this to load many layers into 
-your GeoNode at once. 
+You should now have the knowledge necessary to import layers into your GeoNode project
+from a directory on the servers filesystem and can use this to load many layers into
+your GeoNode at once.
 
 .. note:: If you do not use the :guilabel:`-u` command option, the ownership of the imported layers will be assigned to the primary superuser in your system. You can use GeoNodes Django Admin interface to modify this after the fact if you want them to be owned by another user.
 
@@ -577,12 +577,12 @@ your GeoNode at once.
 Management Command ``updatelayers``
 -----------------------------------
 
-While it is possible to import layers directly from your servers filesystem into your 
-GeoNode, you may have an existing GeoServer that already has data in it, or you may 
+While it is possible to import layers directly from your servers filesystem into your
+GeoNode, you may have an existing GeoServer that already has data in it, or you may
 want to configure data from a GeoServer which is not directly supported by uploading data.
 
-GeoServer supports a wide range of data formats and connections to database, and while 
-many of them are not supported as GeoNode upload formats, if they can be configured in 
+GeoServer supports a wide range of data formats and connections to database, and while
+many of them are not supported as GeoNode upload formats, if they can be configured in
 GeoServer, you can add them to your GeoNode by following the procedure described below.
 
 GeoServer supports 3 types of data: :guilabel:`Raster`, :guilabel:`Vector`, :guilabel:`Databases` and :guilabel:`Cascaded`.
@@ -630,7 +630,7 @@ First visit the GeoServer administration interface on your server. This is usual
     .. figure:: img/geoserver_publish_layers.png
        :align: center
 
-5. Select the "Publish" button for one of the layers and the next screen will be displayed where you can enter metadata for this layer. Since we will be managing this metadata in GeoNode, we can leave these alone for now. 
+5. Select the "Publish" button for one of the layers and the next screen will be displayed where you can enter metadata for this layer. Since we will be managing this metadata in GeoNode, we can leave these alone for now.
 
     .. figure:: img/geoserver_layer_params.png
        :align: center
@@ -982,7 +982,7 @@ This will leave you with the following files in the directory where you executed
 
 First, lets inspect this file set using the following command::
 
-    $ ogrinfo -so vicgrid94/mif/lga_polygon/macedon\ ranges/VMADMIN/POSTCODE_POLYGON.mid POSTCODE_POLYGON 
+    $ ogrinfo -so vicgrid94/mif/lga_polygon/macedon\ ranges/VMADMIN/POSTCODE_POLYGON.mid POSTCODE_POLYGON
 
 The output will look like the following::
 
@@ -1062,7 +1062,7 @@ The output will look similar to the output we saw above when we inspected the Ma
     PFI_CREATE: Date (10.0)
     UFI: Real (12.0)
     UFI_CREATE: Date (10.0)
-    UFI_OLD: Real (12.0) 
+    UFI_OLD: Real (12.0)
 
 These files can now be loaded into your GeoNode instance via the normal uploader.
 
@@ -1109,12 +1109,12 @@ You will be left with the following files on your filesystem:
     |   |-- sta.adf
     |   |-- w001001.adf
     |   |-- w001001x.adf
-    |-- batemans_elevation.asc 
+    |-- batemans_elevation.asc
 
-The file ``batemans_elevation.asc`` is an Arc/Info ASCII Grid file and the files in 
+The file ``batemans_elevation.asc`` is an Arc/Info ASCII Grid file and the files in
 the batemans_ele directory are an Arc/Info Binary Grid file.
 
-You can use the ``gdalinfo`` command to inspect both of these files by executing the 
+You can use the ``gdalinfo`` command to inspect both of these files by executing the
 following command:
 
 .. code-block:: shell
@@ -1132,11 +1132,11 @@ The output should look like the following:
     Origin = (239681.000000000000000,6050551.000000000000000)
     Pixel Size = (100.000000000000000,-100.000000000000000)
     Corner Coordinates:
-    Upper Left  (  239681.000, 6050551.000) 
-    Lower Left  (  239681.000, 6036351.000) 
-    Upper Right (  255181.000, 6050551.000) 
-    Lower Right (  255181.000, 6036351.000) 
-    Center      (  247431.000, 6043451.000) 
+    Upper Left  (  239681.000, 6050551.000)
+    Lower Left  (  239681.000, 6036351.000)
+    Upper Right (  255181.000, 6050551.000)
+    Lower Right (  255181.000, 6036351.000)
+    Center      (  247431.000, 6043451.000)
     Band 1 Block=155x1 Type=Float32, ColorInterp=Undefined
         NoData Value=-9999
 
@@ -1145,7 +1145,7 @@ You can then inspect the batemans_ele files by executing the following command:
 .. code-block:: shell
 
     gdalinfo batemans_ele
-    
+
 And this should be the corresponding output:
 
 .. code-block:: shell
@@ -1189,7 +1189,7 @@ And this should be the corresponding output:
     Lower Right (  255181.000, 6036351.000) (150d17'28.49"E, 35d47'11.23"S)
     Center      (  247431.000, 6043451.000) (150d12'28.17"E, 35d43'13.99"S)
     Band 1 Block=256x4 Type=Float32, ColorInterp=Undefined
-        Min=-62.102 Max=142.917 
+        Min=-62.102 Max=142.917
     NoData Value=-3.4028234663852886e+38
 
 You will notice that the ``batemans_elevation.asc`` file does *not* contain projection information while the ``batemans_ele`` file does.
@@ -1200,7 +1200,7 @@ We will also reproject this file into WGS84 in the process. This can be accompli
 
     gdalwarp -t_srs EPSG:4326 batemans_ele batemans_ele.tif
 
-The output will show you the progress of the conversion and when it is complete, 
+The output will show you the progress of the conversion and when it is complete,
 you will be left with a ``batemans_ele.tif`` file that you can upload to your GeoNode.
 
 You can inspect this file with the gdalinfo command:
@@ -1246,13 +1246,13 @@ Raster Data Optimization: Optimizing and serving big raster data
 
 When dealing with big raster datasets it could be very useful to use tiles.
 
-Tiling allows large raster datasets to be broken-up into manageable pieces and are fundamental 
+Tiling allows large raster datasets to be broken-up into manageable pieces and are fundamental
 in defining and implementing a higher level raster I/O interface.
 
-In this example we will use the original dataset of the ``chiangMai_ortho_optimized`` public raster layer which 
-is currently available on the Thai `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_. 
+In this example we will use the original dataset of the ``chiangMai_ortho_optimized`` public raster layer which
+is currently available on the Thai `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_.
 
-This dataset contains an orthorectified image stored as RGBa GeoTiff with 4 bands, 
+This dataset contains an orthorectified image stored as RGBa GeoTiff with 4 bands,
 three bands for the RGB and one for transparency (the alpha channel).
 
 Calling the gdalinfo command to see detailed information:
@@ -1488,8 +1488,8 @@ UAVs usually provide also two other types of data: ``DTM (Digital Terrain Model)
 
 Those data require different processes to be optimized. Let’s look at some examples to better understand how to use gdal to accomplish that task.
 
-From the `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_ platform it is currently available the ``chiangMai_dtm_optimized`` layer, 
-let’s download its original dataset. 
+From the `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_ platform it is currently available the ``chiangMai_dtm_optimized`` layer,
+let’s download its original dataset.
 
 This dataset should contain the DTM file ``chiangMai_dtm.tif``.
 
@@ -1774,7 +1774,7 @@ The easiest way to create a superuser (in linux) is to open your terminal and ty
             $ DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py createsuperuser
 
 You will be asked a username (in this tutorial we will call the superuser you now create *your_superuser*), an email address and a password.
-  
+
 Now you've created a superuser you should become familiar with the *Django Admin Interface*. As a superuser you are having
 access to this interface, where you can manage users, layers, permission and more. To learn more detailed about this interface
 check this LINK. For now it will be enough to just follow the steps. To attend the *Django Admin Interface*, go to your geonode website and *sign in* with *your_superuser*. Once you've logged in, the name of your user will appear on the top right. Click on it and the following menu
@@ -1806,7 +1806,7 @@ Until now we've only created superusers. So how do you create an ordinary user? 
 
 #. Django Admin Interface
 
-   First we will create a user via the *Django Admin Interface* because we've still got it open. Therefore go back to *Auth* -> *Users* and      	you should find a button on the right that says *Add user*.    
+   First we will create a user via the *Django Admin Interface* because we've still got it open. Therefore go back to *Auth* -> *Users* and      	you should find a button on the right that says *Add user*.
 
    .. figure:: img/add_user.png
       :align: center
@@ -1821,26 +1821,26 @@ Until now we've only created superusers. So how do you create an ordinary user? 
    you could also check *staff status*. But for now we leave the settings as they are!
 
    .. todo:: groups and permissions!
-   
+
    To test whether the new user was successfully created, go back to the GeoNode web page and try to sign in.
 
 #. GeoNode website
 
    To create an ordinary user you could also just use the GeoNode website. If you installed GeoNode using a release, you should
     see a *Register* button on the top, beside the *Sign in* button (you might have to log out before).
-   
+
    .. figure:: img/register.png
       :align: center
-   
+
    Hit the button and again a form will appear for you to fill out. This user will be named *geonode_user*
-  
+
    .. figure:: img/sign_up_test_user.png
       :align: center
 
    .. todo:: NEW IMAGE WITH GEONODE USER!
 
-   By hitting *Sign up* the user will be signed up, as default only with the status *active*. 
-   
+   By hitting *Sign up* the user will be signed up, as default only with the status *active*.
+
 .. _batch_sync_permissions:
 
 Batch Sync Permissions
@@ -1907,3 +1907,134 @@ An action named :guilabel:`Set layers permissions` is available from the list, r
 
 .. figure:: img/layer_batch_perms_form.png
    :align: center
+
+
+.. _delete_resources:
+
+Delete Certain GeoNode Resources
+================================
+
+The ``delete_resources`` :guilabel:`Management Command` allows to remove resources meeting a certain condition,
+specified in a form of a serialized django Q() expression.
+
+First of all let's take a look at the ``--help`` option of the ``delete_resources``
+management command in order to inspect all the command options and features.
+
+Run
+
+.. code-block:: shell
+
+    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources --help
+
+.. note:: If you enabled ``local_settings.py`` the command will change as following:
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py delete_resources --help
+
+This will produce output the following output:
+
+.. code-block:: shell
+
+    usage: manage.py delete_resources [-h] [-c CONFIG_PATH]
+                                      [-l LAYER_FILTERS [LAYER_FILTERS ...]]
+                                      [-m MAP_FILTERS [MAP_FILTERS ...]]
+                                      [-d DOCUMENT_FILTERS [DOCUMENT_FILTERS ...]]
+                                      [--version] [-v {0,1,2,3}]
+                                      [--settings SETTINGS]
+                                      [--pythonpath PYTHONPATH] [--traceback]
+                                      [--no-color] [--force-color]
+
+    Delete resources meeting a certain condition
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -c CONFIG_PATH, --config CONFIG_PATH
+                            Configuration file path. Default is:
+                            delete_resources.json
+      -l LAYER_FILTERS [LAYER_FILTERS ...], --layer_filters LAYER_FILTERS [LAYER_FILTERS ...]
+      -m MAP_FILTERS [MAP_FILTERS ...], --map_filters MAP_FILTERS [MAP_FILTERS ...]
+      -d DOCUMENT_FILTERS [DOCUMENT_FILTERS ...], --document_filters DOCUMENT_FILTERS [DOCUMENT_FILTERS ...]
+      --version             show program's version number and exit
+      -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on CommandError exceptions
+      --no-color            Don't colorize the command output.
+      --force-color         Force colorization of the command output.
+
+
+There are two ways to declare Q() expressions filtering which resources should be deleted:
+
+1. With a JSON configuration file: passing ``-c`` argument specifying the path to the JSON configuration file.
+
+* **Example 1**: Relative path to the config file (to ``manage.py``)
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources -c geonode/base/management/commands/delete_resources.json
+
+
+* **Example 2**: Absolute path to the config file
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources -c /home/User/Geonode/configs/delete_resources.json
+
+
+2. With CLI: passing ``-l`` ``-d`` ``-m`` list arguments for each of resources (layers, documents, maps)
+
+* **Example 3**: Delete resources without configuration file
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources -l 'Q(pk__in: [1, 2]) | Q(title__icontains:"italy")' 'Q(owner__name=admin)' -d '*' -m "Q(pk__in=[1, 2])"
+
+
+
+Configuration File
+------------------
+
+The JSON configuration file should contain a single `filters` object, which consists of `layer`, `map` and `document` lists.
+Each list specifies the filter conditions applied to a corresponding queryset, defining which items will be deleted.
+The filters are evaluated and directly inserted into Django .filter() method, which means the filters occurring as
+separated list items are treated as AND condition. To create OR query ``|`` operator should be used. For more info please check Django
+[documentation](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)).
+The only exception is passing a list with ``'*'`` which will cause deleting all the queryset of the resource.
+
+* **Example 4**: Example content of the configuration file, which will delete layers with ID's 1, 2, and 3, those owned by `admin` user, along with all defined maps.
+
+    .. code-block:: shell
+
+        {
+          "filters": {
+          "layer": [
+              "Q(pk__in=[1, 2, 3]) | Q(title__icontains='italy')",
+              "Q(user__name=admin)"
+            ],
+          "map": ["*"],
+          "document": []
+          }
+        }
+
+
+CLI
+---
+
+The CLI configuration can be specified with ``-l`` ``-d`` ``-m`` list arguments, which in fact are a translation
+of the configuration JSON file. ``-l`` ``-d`` ``-m`` arguments are evaluated in the same manner as filters.layer,
+filters.map and filter.document accordingly from the Example 4.
+The following example's result will be equivalent to Example 4:
+
+* **Example 5**: Example CLI configuration, which will delete layers with ID's 1, 2, and 3, along with all maps.
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources -l 'Q(pk__in: [1, 2, 3]) | Q(title__icontains:"italy")' 'Q(owner__name=admin)' -m '*'

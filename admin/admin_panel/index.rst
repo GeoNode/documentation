@@ -574,6 +574,8 @@ The following picture shows you the results.
 
     *New Members of the Group*
 
+If you want to change the role of group members after adding them, you can use the "promote" button to make a member into a manager, and the "demote" button to make a manager into a regular member.
+
 Group based advanced data workflow
 ==================================
 

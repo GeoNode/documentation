@@ -1263,7 +1263,7 @@ MONITORING_DATA_AGGREGATION
 MONITORING_DATA_TTL
 -------------------
 
-    | Default: ``7``
+    | Default: ``365``
     | Env: ``MONITORING_DATA_TTL``
 
     How long monitoring data should be stored in days.

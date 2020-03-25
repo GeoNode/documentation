@@ -223,11 +223,13 @@ GeoNode Admin GUI Inspection
 The history of restored backups can be verified in the admin panel.
 
 Login to the admin panel and select ``Restored backups`` table from ``BACKUP/RESTORE`` application.
+
 .. figure:: img/br_1.png
    :align: center
 
 
 A list will be displayed with a history of all restored backups. You can select a certain backup to view it's data.
+
 .. figure:: img/br_2.png
    :align: center
 

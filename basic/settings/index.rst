@@ -1989,6 +1989,12 @@ SOCIAL_ORIGINS
 
     A list of dictionaries that are used to generate the social links displayed in the Share tab.  For each origin, the name and URL format parameters are replaced by the actual values of the ResourceBase object (layer, map, document).
 
+SOCIALACCOUNT_WITH_GEONODE_LOCAL_SINGUP
+----
+
+    Default: ``True``
+
+    Variable which controls displaying local account registration form. By default form is visible
 
 SRID
 ----

@@ -66,9 +66,9 @@ Requisites and Setup
 Settings
 --------
 
-Accordingly to the admin needs, the file ``settings.ini`` must be tuned up a bit before running a backup / restore.
+Accordingly to the admin needs, the file ``settings.ini`` must be ceated / tuned up a bit before running a backup or restore.
 
-It can be found at ``geonode/br/management/commands/settings.ini`` and by default it contains the following properties:
+The default file can be found at``geonode/br/management/commands/settings.ini`` and it contains the following properties:
 
 .. code-block:: ini
 
@@ -86,7 +86,10 @@ It can be found at ``geonode/br/management/commands/settings.ini`` and by defaul
     apps  = contenttypes,auth,people,groups,account,guardian,admin,actstream,announcements,avatar,base,dialogos,documents,geoserver,invitations,pinax_notifications,layers,maps,oauth2_provider,services,sites,socialaccount,taggit,tastypie,upload,user_messages
     dumps = contenttypes,auth,people,groups,account,guardian,admin,actstream,announcements,avatar,base,dialogos,documents,geoserver,invitations,pinax_notifications,layers,maps,oauth2_provider,services,sites,socialaccount,taggit,tastypie,upload,user_messages
 
-The ``settings.ini`` has few different sections that must carefully checked before running a backup / restore command.
+The ``settings.ini`` file can be created in any directory accessible by GeoNode, and it's path can be passed to the backup / restore
+procedures using `-c` (`--config`) argument.
+
+There are few different sections of the configuration file, that must be carefully checked before running a backup / restore command.
 
 Settings: [database] Section
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -150,7 +153,7 @@ What its properties mean:
 Executing from the CLI
 ======================
 
-The following sections shows instructions on how to perform backup / restore from the command line by using the Admin Management Commands.
+The following sections shows instructions on how to perform backup / restore from the command line by using the Django Admin Management Commands.
 
 In order to obtain a basic user guide for the management command from the command line, just run
 
@@ -170,7 +173,7 @@ It is worth notice that both commands allows the following option
 
         python manage.py restore --force / -f
 
-Which will instruct the management command to not ask for confirmation from the user. It enables bascially a non-interactive mode.
+Which enables a non-interactive mode, meaning the user will not be asked for an explicit confirmation.
 
 Backup
 ------
@@ -181,20 +184,57 @@ In order to perform a backup just run the command:
 
         python manage.py backup --backup-dir=<target_bk_folder_path>
 
-The management command will automatically generate a ``.zip`` archive file on the target folder in case of success.
+The management command will automatically generate a ``.zip`` archive file on the target folder in case of success. In the target directory
+``.md5`` file with the same name as backup will be created. It contains the MD5 hash of the backup file, which can be used to check archive's
+integrity before restoration.
+
+It is worth to mention that ``br`` (Backup & Restore GeoNode application) will not be dumped, even if specified in the ``settings.ini`` as
+its content is strictly related to the certain GeoNode instance.
+
+Currently, GeoNode does not support any automatic extraction of the backup file. It should be manually transferred, if needed to the target
+instance environment.
 
 Restore
 -------
 
-In order to perform a restore just run the command:
+The ``restore`` command has a number of arguments, modifying its execution:
+
+#. ``--skip-geoserver``: the Geoserver backup restoration won't be performed
+
+#. ``--backup-file``: (exclusive together with ``--backup-files-dir``) path to the backup ``.zip`` archive
+
+#. ``--backup-files-dir``: (exclusive together with ``--backup-file``) directory containing backup archives. The directory may contain a number of files, but **only** backup archives are allowed with a ``.zip`` extension. In case multiple archives are present in the directory, the newest one, created after the last already restored backup creation time, will be restored. This option was implemented with a thought of automated restores.
+
+#. ``-l`` / ``--with-logs``: the backup file will be checked against the restoration logs (history). In case this backup has already been restored (MD5 based comparision), RuntimeError is raised, preventing restore execution.
+
+In order to perform a default backup restoration just run the command:
 
     .. code-block:: shell
 
         python manage.py restore --backup-file=<target_restore_file_path>
 
-Restore requires the path of one ``.zip`` archive containing the backup fixtures.
+For restore to run it requires either ``--backup-file`` or ``--backup-files-dir`` argument defined.
 
-.. warning:: The Restore will **overwrite** the whole target GeoNode / GeoServer users, catalog and database, so be very carefull.
+.. warning:: The Restore will **overwrite** the whole target instances of GeoNode (and by default GeoServer) including users, catalog and database, so be very careful.
 
 GeoNode Admin GUI Inspection
 ============================
+
+The history of restored backups can be verified in the admin panel.
+
+Login to the admin panel and select ``Restored backups`` table from ``BACKUP/RESTORE`` application.
+.. figure:: img/br_1.png
+   :align: center
+
+
+A list will be displayed with a history of all restored backups. You can select a certain backup to view it's data.
+.. figure:: img/br_2.png
+   :align: center
+
+
+The detailed view of the restored backup shows backup archive's name, it's MD5 hash, it's creation/modification date (in the target folder), and the date of the restoration. Please note Restored Backup history cannot be modified.
+
+.. figure:: img/br_3.png
+   :align: center
+
+

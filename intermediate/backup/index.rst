@@ -207,6 +207,8 @@ The ``restore`` command has a number of arguments, modifying its execution:
 
 #. ``-l`` / ``--with-logs``: the backup file will be checked against the restoration logs (history). In case this backup has already been restored (MD5 based comparision), RuntimeError is raised, preventing restore execution.
 
+#. ``-n`` / ``--notify``: the restore procedure outcome will be send by an e-mail notification to the superusers of the instance (note: notification will be sent to the superusers of the instance before restoration)
+
 In order to perform a default backup restoration just run the command:
 
     .. code-block:: shell

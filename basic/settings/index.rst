@@ -2005,6 +2005,13 @@ SRID
         'DETAIL': 'never',
         }
 
+SEARCH_RESOURCES_EXTENDED
+----
+    Default: ``True``
+
+    This will extend search with additinoal properties. By default its on and search engine will check resource title or purpose or abstract.
+    When set to False just title lookup is performed.
+
 T
 =
 

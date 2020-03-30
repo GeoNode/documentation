@@ -165,6 +165,10 @@ In order to obtain a basic user guide for the management command from the comman
 
 ``--help`` will provide the list of available command line options with a brief description.
 
+By default both procedures activate `Read Only` mode, disabling any content modifying requests, which is reverted
+to the previous state (from before the execution) after finish, regardless of the command's result (success or failure).
+To disable activation of this mode, ``--skip-read-only`` argument can be passed to the command.
+
 It is worth notice that both commands allows the following option
 
     .. code-block:: shell
@@ -207,7 +211,9 @@ The ``restore`` command has a number of arguments, modifying its execution:
 
 #. ``-l`` / ``--with-logs``: the backup file will be checked against the restoration logs (history). In case this backup has already been restored (MD5 based comparision), RuntimeError is raised, preventing restore execution.
 
-#. ``-n`` / ``--notify``: the restore procedure outcome will be send by an e-mail notification to the superusers of the instance (note: notification will be sent to the superusers of the instance before restoration)
+#. ``-n`` / ``--notify``: the restore procedure outcome will be send by an e-mail notification to the superusers of the instance (note: notification will be sent to the superusers of the instance before restoration).
+
+#. ``--skip-read-only``: the restore procedure will be conducted without setting `Read Only` mode during execution.
 
 In order to perform a default backup restoration just run the command:
 

@@ -116,7 +116,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     workon geonode
 
-.. note:: In order to save permanently the virtualenvwrapper envioroment
+.. note:: In order to save permanently the virtualenvwrapper environment
 
   .. code-block:: shell
 
@@ -316,8 +316,8 @@ We will also perform several optimizations to:
 
   # Install Apache Tomcat 8
   sudo wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.53/bin/apache-tomcat-8.5.53.tar.gz
-  sudo tar xzf apache-tomcat-8.5.50.tar.gz
-  sudo mv apache-tomcat-8.5.50 /usr/local/apache-tomcat8
+  sudo tar xzf apache-tomcat-8.5.53.tar.gz
+  sudo mv apache-tomcat-8.5.53 /usr/local/apache-tomcat8
   sudo useradd -m -U -s /bin/false tomcat
   sudo usermod -a -G www-data tomcat
   sudo sed -i -e 's/xom-\*\.jar/xom-\*\.jar,bcprov\*\.jar/g' /usr/local/apache-tomcat8/conf/catalina.properties

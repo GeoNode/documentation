@@ -1,11 +1,18 @@
 Participate in the Discussion
 =============================
 
-Report Problems on the Issue Tracking System
-============================================
+.. toctree::
+    :maxdepth: 3
+
+    participate_discussion/index
 
 Write Documentation
 ===================
+
+.. toctree::
+    :maxdepth: 3
+
+    documentation/index
 
 Provide Translations
 ====================

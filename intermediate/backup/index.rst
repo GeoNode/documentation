@@ -247,4 +247,12 @@ The detailed view of the restored backup shows backup archive's name, it's MD5 h
 .. figure:: img/br_3.png
    :align: center
 
+B/R in Docker environment
+=========================
+
+When executing B/R in the Docker environment, creation backup to / restoration from should be executed in ``/backup_restore`` directory.
+It is a shared volume between Geoserver and Geonode images, created for this purpose only. Pointing at another
+location will fail, as one of the images won't have an access to the files.
+
+.. warning:: The only other volume shared between images is ``/geoserver_data/data``, but backup creation **should not** be performed there, as the recursive Geoserver backups may be created in such case.
 

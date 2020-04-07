@@ -66,9 +66,10 @@ Requisites and Setup
 Settings
 --------
 
-Accordingly to the admin needs, the file ``settings.ini`` must be ceated / tuned up a bit before running a backup or restore.
+Accordingly to the admin needs, the file ``settings.ini`` must be ceated before running a backup or restore.
 
-The default file can be found at``geonode/br/management/commands/settings.ini`` and it contains the following properties:
+The default files can be found at ``geonode/br/management/commands/settings_sample.ini`` and ``geonode/br/management/commands/settings_docker_sample.ini``
+for the classic and Docker environments accordingly. The content is similar in both of them (an example from ``settings_sample.ini``):
 
 .. code-block:: ini
 
@@ -186,7 +187,7 @@ In order to perform a backup just run the command:
 
     .. code-block:: shell
 
-        python manage.py backup --backup-dir=<target_bk_folder_path>
+        python manage.py backup --backup-dir=<target_bk_folder_path> --config=</path/to/settings.ini>
 
 The management command will automatically generate a ``.zip`` archive file on the target folder in case of success. In the target directory
 ``.md5`` file with the same name as backup will be created. It contains the MD5 hash of the backup file, which can be used to check archive's
@@ -202,6 +203,8 @@ Restore
 -------
 
 The ``restore`` command has a number of arguments, modifying its execution:
+
+# ``-c`` / ``--config``: path to the ``settings.ini`` configuration file
 
 #. ``--skip-geoserver``: the Geoserver backup restoration won't be performed
 
@@ -219,7 +222,7 @@ In order to perform a default backup restoration just run the command:
 
     .. code-block:: shell
 
-        python manage.py restore --backup-file=<target_restore_file_path>
+        python manage.py restore --backup-file=<target_restore_file_path> --config=</path/to/settings.ini>
 
 For restore to run it requires either ``--backup-file`` or ``--backup-files-dir`` argument defined.
 
@@ -253,6 +256,8 @@ B/R in Docker environment
 When executing B/R in the Docker environment, creation backup to / restoration from should be executed in ``/backup_restore`` directory.
 It is a shared volume between Geoserver and Geonode images, created for this purpose only. Pointing at another
 location will fail, as one of the images won't have an access to the files.
+
+.. warning:: When executing B/R in Docker environment **remember** to create ``settings.ini`` file basing on ``settings_docker_sample.ini`` to point at a proper Geoserver data directory! In other case configuration mismatch may cause unexpected errors.
 
 .. warning:: The only other volume shared between images is ``/geoserver_data/data``, but backup creation **should not** be performed there, as the recursive Geoserver backups may be created in such case.
 

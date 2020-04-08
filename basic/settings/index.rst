@@ -565,10 +565,23 @@ CELERY_TASK_QUEUES
 
     A tuple with registered Queues.
 
+CELERY_TASK_LOCK_EXPIRES
+------------------------
+
+    | Default: ``600``
+    | Env: ``CELERY_TASK_LOCK_EXPIRES``
+
+    A custom lock timeout used by ``geonode.tasks.tasks.memcache_lock``. It can be used to create ``synchronized`` blocks.
+
+    ref. http://docs.celeryproject.org/en/latest/tutorials/task-cookbook.html#ensuring-a-task-is-only-executed-one-at-a-time
+
+    implementation example: ``geonode.monitoring.utils.collect_metric``
+
 CELERY_TASK_RESULT_EXPIRES
 --------------------------
 
-    Default: ``43200``
+    | Default: ``43200``
+    | Env: ``CELERY_TASK_RESULT_EXPIRES``
 
     This is a `Celery setting <https://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings>`__.
 
@@ -576,6 +589,7 @@ CELERY_TASK_SERIALIZER
 ----------------------
 
     Default: ``json``
+    Env: ``CELERY_TASK_SERIALIZER``
 
     This is a `Celery setting <https://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings>`__.
 
@@ -611,7 +625,7 @@ CELERY_WORKER_SEND_TASK_EVENTS
 CLIENT_RESULTS_LIMIT
 --------------------
 
-    | Default: ``20``
+    | Default: ``5``
     | Env: ``CLIENT_RESULTS_LIMIT``
 
     The Number of results per page listed in the GeoNode search pages. Different from ``API_LIMIT_PER_PAGE``, affecting the number of items returned by the APIs.
@@ -619,7 +633,8 @@ CLIENT_RESULTS_LIMIT
 CREATE_LAYER
 ------------
 
-    Default: ``False``
+    | Default: ``False``
+    | Env: ``CREATE_LAYER``
 
     Enable the create layer plugin.
 
@@ -639,16 +654,16 @@ CKAN_ORIGINS
 CSRF_COOKIE_HTTPONLY
 --------------------
 
-    | Default: `False`
-    | Env: `CSRF_COOKIE_HTTPONLY`
+    | Default: ``False``
+    | Env: ``CSRF_COOKIE_HTTPONLY``
 
     Whether to use HttpOnly flag on the CSRF cookie. If this is set to True, client-side JavaScript will not be able to access the CSRF cookie. This is a `Django Setting <https://docs.djangoproject.com/en/2.1/ref/settings/#csrf-cookie-httponly>`__
 
 CSRF_COOKIE_SECURE
 ------------------
 
-    | Default: `False`
-    | Env: `CSRF_COOKIE_HTTPONLY`
+    | Default: ``False``
+    | Env: ``CSRF_COOKIE_SECURE``
 
     Whether to use a secure cookie for the CSRF cookie. If this is set to True, the cookie will be marked as “secure,” which means browsers may ensure that the cookie is only sent with an HTTPS connection. This is a `Django Setting <https://docs.djangoproject.com/en/2.1/ref/settings/#csrf-cookie-secure>`__
 
@@ -658,14 +673,15 @@ D
 DATA_UPLOAD_MAX_NUMBER_FIELDS
 -----------------------------
 
-    Default: `100000`
+    Default: ``100000``
 
     Maximum value of parsed attributes.
 
 DEBUG
 -----
 
-    Default: `False`
+    | Default: ``False``
+    | Env: ``DEBUG``
 
     One of the main features of debug mode is the display of detailed error pages. If your app raises an exception when DEBUG is True, Django will display a detailed traceback, including a lot of metadata about your environment, such as all the currently defined Django settings (from settings.py).
     This is a `Django Setting <https://docs.djangoproject.com/en/2.1/ref/settings/#debug>`__
@@ -674,29 +690,30 @@ DEBUG
 DEBUG_STATIC
 ------------
 
-    Default: `False`
+    | Default: ``False``
+    | Env: ``DEBUG_STATIC``
 
     Load non minified version of static files.
 
 DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION
 -------------------------------------
 
-    Default: `True`
+    Default: ``True``
 
     Whether the uploaded resources should downloadable by default.
 
 DEFAULT_ANONYMOUS_VIEW_PERMISSION
 ---------------------------------
 
-    Default: `True`
+    Default: ``True``
 
     Whether the uploaded resources should be public by default.
 
 DEFAULT_LAYER_FORMAT
 --------------------
 
-    | Default: `image/png`
-    | Env: `DEFAULT_LAYER_FORMAT`
+    | Default: ``image/png``
+    | Env: ``DEFAULT_LAYER_FORMAT``
 
     The default format for requested tile images.
 

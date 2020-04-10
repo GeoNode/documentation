@@ -565,18 +565,6 @@ CELERY_TASK_QUEUES
 
     A tuple with registered Queues.
 
-CELERY_TASK_LOCK_EXPIRES
-------------------------
-
-    | Default: ``600``
-    | Env: ``CELERY_TASK_LOCK_EXPIRES``
-
-    A custom lock timeout used by ``geonode.tasks.tasks.memcache_lock``. It can be used to create ``synchronized`` blocks.
-
-    ref. http://docs.celeryproject.org/en/latest/tutorials/task-cookbook.html#ensuring-a-task-is-only-executed-one-at-a-time
-
-    implementation example: ``geonode.monitoring.utils.collect_metric``
-
 CELERY_TASK_RESULT_EXPIRES
 --------------------------
 

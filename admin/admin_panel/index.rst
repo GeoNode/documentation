@@ -608,6 +608,19 @@ Please see the details of the following GeoNode ``Settings``:
 
 * `RESOURCE_PUBLISHING <../../basic/settings/index.html#resource-publishing>`_
 
+
+Change in owner rights in case of advanced workflow is on
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After switching ``ADMIN_MODERATE_UPLOADS`` to True and resource is approved owner is no longer able
+to modify it. He will see new button on the resource detail page: Request change. After clicking this, view with short
+form is shown.
+On this view user can write short message why he want to modify the resource.
+
+This message will be sent through messaging and email system to administrators:
+
+After administrator unapprove the resource owner is again able to modify it.
+
 The group Manager approval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Here, the role of the Manager of the group to which your layer, document or map is linked is to check that the uploaded item is correct.

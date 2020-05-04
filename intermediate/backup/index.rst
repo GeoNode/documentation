@@ -118,16 +118,29 @@ Settings: [geoserver] Section
 
     [geoserver]
     datadir = /opt/gs_data_dir
+    datadir_exclude_file_path =
     dumpvectordata = yes
     dumprasterdata = yes
+    data_dt_filter =
+    data_layername_filter =
+    data_layername_exclude_filter =
 
 This section allows to enable / disable a full data backup / restore of GeoServer.
 
 * *datadir*: the full path of GeoServer Data Dir, by default ``/opt/gs_data_dir``. The path **must** be accessible and **fully writable** by the ``geonode`` and / or ``httpd server`` users when executing a backup / restore command.
 
+* *datadir_exclude_file_path*: comma separated list of paths to exclude from ``geoserver_catalog.zip``; This list will be sent and managed directly by the GeoServer Backup REST API.
+
 * *dumpvectordata*: a boolean flag enabling or disabling creation of a vector data dump from GeoServer (shapefiles or DB tables). If ``false`` (or ``no``) vector data won't be stored / re-stored.
 
 * *dumprasterdata*: a boolean flag enabling or disabling creation of a raster data dump from GeoServer (geotiffs). If ``false`` (or ``no``) raster data won't be stored / re-stored.
+
+* *data_dt_filter*: {cmp_operator} {ISO8601} e.g. > 2019-04-05T24:00 which means "include on backup archive only the files that have been modified later than 2019-04-05T24:00
+
+* *data_layername_filter*: comma separated list of ``layer names``, optionally with glob syntax e.g.: tuscany_*,italy; Only ``RASTER`` original data and ``VECTORIAL`` table dumps matching those filters will be **included** into the backup ZIP archive
+
+* *data_layername_exclude_filter*: comma separated list of ``layer names``, optionally with glob syntax e.g.: tuscany_*,italy; The ``RASTER`` original data and ``VECTORIAL`` table dumps matching those filters will be **excluded** from the backup ZIP archive
+
 
 .. warning:: Enabling these options **requires** the GeoServer Data Dir to be accessible and **fully writable** for the ``geonode`` and / or ``httpd server`` users when executing a backup / restore command.
 
@@ -204,13 +217,19 @@ Restore
 
 The ``restore`` command has a number of arguments, modifying its execution:
 
-# ``-c`` / ``--config``: path to the ``settings.ini`` configuration file
+# ``-c`` / ``--config``: path to the ``settings.ini`` configuration file. If the Backup archive is provided with his settings, the latter will be used by the restore command and this option won't be mandatory anymore
 
-#. ``--skip-geoserver``: the Geoserver backup restoration won't be performed
+#. ``--skip-geoserver``: the GeoServer backup restoration won't be performed
+
+#. ``--skip-geoserver-info``: {Default: True} Skips GeoServer Global Infos, like the proxy base url and other global GeoServer metadata info
+
+#. ``--skip-geoserver-security``: {Default: True} Skips GeoServer all the Security Settings
 
 #. ``--backup-file``: (exclusive together with ``--backup-files-dir``) path to the backup ``.zip`` archive
 
 #. ``--backup-files-dir``: (exclusive together with ``--backup-file``) directory containing backup archives. The directory may contain a number of files, but **only** backup archives are allowed with a ``.zip`` extension. In case multiple archives are present in the directory, the newest one, created after the last already restored backup creation time, will be restored. This option was implemented with a thought of automated restores.
+
+#. ``--recovery-file``: Backup archive containing GeoNode data to restore in case of failure.
 
 #. ``-l`` / ``--with-logs``: the backup file will be checked against the restoration logs (history). In case this backup has already been restored (MD5 based comparision), RuntimeError is raised, preventing restore execution.
 

@@ -341,23 +341,6 @@ BING_API_KEY
             }
             DEFAULT_MS2_BACKGROUNDS = [BASEMAP,] + DEFAULT_MS2_BACKGROUNDS
 
-    If using ``geoext`` client library, make sure the ``MAP_BASELAYERS`` include the following:
-
-    .. code-block:: python
-
-        if BING_API_KEY:
-            BASEMAP = {
-                'source': {
-                    'ptype': 'gxp_bingsource',
-                    'apiKey': BING_API_KEY
-                },
-                'name': 'AerialWithLabels',
-                'fixed': True,
-                'visibility': True,
-                'group': 'background'
-            }
-            MAP_BASELAYERS.append(BASEMAP)
-
 
 BROKER_HEARTBEAT
 ----------------
@@ -948,7 +931,6 @@ GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY
     The library to use for display preview images of layers. The library choices are:
 
      ``"mapstore"``
-     ``"geoext"``
      ``"leaflet"``
      ``"react"``
 

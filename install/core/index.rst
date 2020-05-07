@@ -552,7 +552,7 @@ Serving {“geonode”, “geoserver”} via NGINX
   uid = geonode
   gid = www-data
 
-  plugins = python
+  plugins = python3
   virtualenv = /home/geonode/.virtualenvs/geonode
   env = DEBUG=False
   env = DJANGO_SETTINGS_MODULE=geonode.settings

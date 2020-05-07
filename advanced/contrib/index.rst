@@ -260,7 +260,7 @@ and the ``/opt/geonode/my-geonode/.env`` is something similar to the following o
         uid = <my_user>
         gid = www-data
 
-        plugins = python
+        plugins = python3
         virtualenv = /home/<my_user>/.virtualenvs/geonode
 
         # set environment variables from .env file

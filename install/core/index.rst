@@ -683,7 +683,6 @@ Serving {“geonode”, “geoserver”} via NGINX
     gzip_buffers 16 8k;
     gzip_min_length 1100;
     gzip_comp_level 6;
-    gzip_proxied any;
     gzip_types video/mp4 text/plain application/javascript application/x-javascript text/javascript text/xml text/css image/jpeg;
     
     ##

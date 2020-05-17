@@ -1977,7 +1977,7 @@ SOCIAL_ORIGINS
     A list of dictionaries that are used to generate the social links displayed in the Share tab.  For each origin, the name and URL format parameters are replaced by the actual values of the ResourceBase object (layer, map, document).
 
 SOCIALACCOUNT_WITH_GEONODE_LOCAL_SINGUP
-----
+---------------------------------------
 
     Default: ``True``
 
@@ -1993,7 +1993,8 @@ SRID
         }
 
 SEARCH_RESOURCES_EXTENDED
-----
+-------------------------
+
     Default: ``True``
 
     This will extend search with additinoal properties. By default its on and search engine will check resource title or purpose or abstract.

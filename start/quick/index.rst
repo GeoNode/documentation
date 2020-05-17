@@ -53,14 +53,6 @@ To try out the applications, simply:
 `OSGeoLive <http://live.osgeo.org/>`_ is an `OSGeo Foundation <http://osgeo.org/>`_ project.
 The `OSGeo Foundation <http://osgeo.org/>`_ is a not-for-profit supporting Geospatial Open Source Software development, promotion and `education <http://www.geoforall.org/>`_.
 
-Install via Ansible
-^^^^^^^^^^^^^^^^^^^
-
-`Ansible <https://www.ansible.com/>`__  is an open source automation tool for server configuration and management. It works by organizing your server inventory into groups, describes how those groups should be configured or what actions should be taken on them. We can use ansible for installing GeoNode-project on one or many servers.
-
-*  :ref:`Manual installation of geonode-project <install-with-ansible>` by use of Ansible
-
-
 Install via Docker
 ^^^^^^^^^^^^^^^^^^
 

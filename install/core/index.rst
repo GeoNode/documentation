@@ -988,7 +988,7 @@ Docker
 In this section we are going to list the passages needed to:
 
 1. Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host
-2. Deploy a vanilla ``GeoNode 2.10`` with ``Docker``
+2. Deploy a vanilla ``GeoNode 3.0`` with ``Docker``
 
   a. Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``
   b. Access the ``django4geonode`` Docker image to update the code-base and/or change internal settings
@@ -1009,8 +1009,8 @@ Logout and login again on shell and then execute:
 
   docker run -it hello-world
 
-Deploy a vanilla GeoNode 2.10 with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Deploy a vanilla GeoNode 3.0 with Docker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
 
@@ -1281,6 +1281,8 @@ Update the GeoServer instance inside the GeoServer Container
   GeoNode 2.8.1 is **NOT** compatible with GeoServer > 2.13.x
 
   GeoNode 2.8.2 / 2.10.x are **NOT** compatible with GeoServer < 2.14.x
+
+  GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x
 
 Remove all data and bring your running GeoNode deployment to the initial stage
 ..............................................................................

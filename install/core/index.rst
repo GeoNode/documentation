@@ -991,8 +991,8 @@ In this section we are going to discuess installation process of geonode in wind
 Python Setup
 ^^^^^^^^^^^^
 
-1. Download and install python 3.7 from _this link <https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64.exe>_
-2. Make sure you added python to environment variable path. If you don't know how to add python to environment variable, you can check _this tutorial <https://datatofish.com/add-python-to-windows-path/>_
+1. Download and install python 3.7 from `this link <https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64.exe>`_
+2. Make sure you added python to environment variable path. If you don't know how to add python to environment variable, you can check `this tutorial <https://datatofish.com/add-python-to-windows-path/>`_
 3. Open your command prompt and type ``python --version`` to check whether it added or not
 4. Goto your working directory and clone the geonode repo
 
@@ -1006,7 +1006,7 @@ Installation of Gdal
 
 The ``gdal`` can be install through ``OSGeo4W``. But this time we need to install it manually. This time we need to install the gdal inside our ``virtual environment``.
 
-1. Goto _Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal>_ and Download the compatible gdal wheel file
+1. Goto `Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal>`_ and Download the compatible gdal wheel file
 
 .. note:: First of all check your python version (`python --version`). And download the same version of ``whl file``. If you installed ``python 3.7``, then you should download ``GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl`` file. Here ``cp37`` and ``amd64`` means it is compatible with ``64 bit python 3.7``
 
@@ -1060,7 +1060,7 @@ Postgresql Database setup
 
 In this section we are going to install setup ``PostgreSQL`` database on GeoNode. GeoNode uses the ``PostgreSQL 11`` database. 
 
-1. Download and install the _postgres windows installer <http://www.enterprisedb.com/thank-you-downloading-postgresql?cid=55>_
+1. Download and install the `postgres 11 windows installer <http://www.enterprisedb.com/thank-you-downloading-postgresql?cid=55>`_
 
 2. After installation of ``PostgreSQL 11``, open ``stack builder`` and install the spatial extension named as ``postgis``
 

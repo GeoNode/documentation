@@ -995,6 +995,17 @@ Python Setup
 2. Make sure you added python to environment variable path. If you don't know how to add python to environment variable, you can check `this tutorial <https://datatofish.com/add-python-to-windows-path/>`_
 3. Open your command prompt and type ``python --version`` to check whether it added or not
 4. Goto your working directory and clone the geonode repo
+5. Create vitrualenv using ``pip`` command
+
+.. code-block:: shell
+    
+    cd your/working/directory
+    pip install virtualenv
+    virtualenv ./venv
+    
+    # Activate virtualenv
+    .\venv\Scripts\activate.bat
+    
 
 .. code-block:: shell
 
@@ -1014,7 +1025,12 @@ The ``gdal`` can be install through ``OSGeo4W``. But this time we need to instal
 
 .. code-block:: shell
 
-    pip install GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl
+    # Activate virtualenv
+    cd your/working/directory
+    .\venv\Scripts\activate.bat
+    
+    # install gdal inside your virtualenv
+    pip install <path/to/gdal//wheel/file/GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl>
     
     
 Installation of required libraries and run locally
@@ -1041,6 +1057,11 @@ invoke==1.4.1
 
 .. code-block:: shell
 
+    # Activate virtualenv
+    cd your/working/directory
+    .\venv\Scripts\activate.bat
+    
+    # Install requirement.txt file inside virtualenv
     pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
     pip install -e .
     

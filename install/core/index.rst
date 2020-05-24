@@ -982,6 +982,80 @@ CentOS 7.0
 
 * TODO
 
+
+Windows
+=======
+
+In this section we are going to discuess installation process of geonode in windows. This process will install the geonode in your windows machine and run locally.
+
+Python Setup
+.............
+
+1. Download and install python 3.7 from [this link](https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64.exe)
+2. Make sure you added python to environment variable path. If you don't know how to add python to environment variable, you can check [this tutorial](https://datatofish.com/add-python-to-windows-path/)
+3. Open your command prompt and type `python --version` to check whether it added or not.
+4. Goto your working directory and clone the geonode repo.
+
+.. code-block:: shell
+    cd your/working/directory
+    git clone https://github.com/GeoNode/geonode.git
+    
+Installation of Gdal
+....................
+
+The ``gdal`` can be install through ``OSGeo4W``. But this time we need to install it manually. This time we need to install the gdal inside our ``virtual environment``.
+
+1. Goto [Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal) and Download the compatible gdal wheel file. 
+
+.. note:: First of all check your python version (`python --version`). And download the same version of ``whl file``. If you installed ``python 3.7``, then you should download ``GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl`` file. Here ``cp37`` and ``amd64`` means it is compatible with ``64 bit python 3.7``
+
+2. Install gdal using this ``whl file``.
+
+.. code-block:: shell
+
+    pip install GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl
+    
+    
+Installation of required libraries and run locally
+...................................
+
+For installation of required libraries, you should follow following steps,
+
+1. Edit ``requirement.txt`` file
+
+.. code-block:: shell
+    cd your/working/directory
+    notepad requirement.txt
+    
+It will open the requirement.txt file in notepad. Change ``Shapely==1.7.0`` to ``Shapely==1.6.3``. Since we not gonna deploy geonode in windows, remove the following packages,
+
+~~# production~~
+
+~~uWSGI==2.0.18~~
+
+~~gunicorn==20.0.4~~
+
+~~ipython==7.14.0~~
+
+~~docker==4.2.0~~
+
+~~invoke==1.4.1~~
+
+2. Install the requirement.txt file
+
+.. code-block:: shell
+    pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+    pip install -e .
+    
+3. Run the geonode in ``DEBUG (DEVELOPMENT)`` mode
+
+.. code-block:: shell
+    # Prepare the GeoNode SQLite database (the first time only)
+    paver setup
+    paver sync
+    python manage.py runserver
+  
+
 Docker
 ======
 

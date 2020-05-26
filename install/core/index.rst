@@ -874,7 +874,8 @@ In particular the steps to do are:
     sudo vim /etc/uwsgi/apps-enabled/geonode.ini
 
     # Change everywhere 'localhost' to the new hostname
-    %s/localhost/www.example.org/g
+    :%s/localhost/www.example.org/g
+    :wq
 
     # Restart the service
     sudo service uwsgi restart

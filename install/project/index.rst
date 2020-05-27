@@ -135,7 +135,7 @@ Make an instance out of the ``Django Template``
 
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv --python=/usr/bin/python3 my_geonode
-  pip install Django==2.2.9
+  pip install Django==2.2.12
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
 
@@ -146,6 +146,12 @@ Make an instance out of the ``Django Template``
 
   # Install GDAL Utilities for Python
   pip install pygdal=="`gdal-config --version`.*"
+
+  # Dev scripts
+  mv .override_dev_env.sample .override_dev_env
+  mv manage_dev.sh.sample manage_dev.sh
+  mv paver_dev.sh.sample paver_dev.sh
+
 
 Run GeoNode Project for the first time in DEBUG Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -164,8 +170,8 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 .. code-block:: shell
 
   # Prepare the GeoNode SQLite database (the first time only)
-  paver setup
-  paver sync
+  ./paver_dev.sh setup
+  ./paver_dev.sh sync
 
 .. note::
 
@@ -173,14 +179,14 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 
   .. code:: shell
 
-    paver reset_hard
+    ./paver_dev.sh reset_hard
 
 .. warning:: This will blow up completely your ``local_settings``, delete the SQLlite database and remove the GeoServer data dir.
 
 .. code-block:: shell
 
   # Run the server in DEBUG mode
-  paver start
+  ./paver_dev.sh start
 
 Once the server has finished the initialization and prints on the console the sentence ``GeoNode is now available.``, you can open a browser and go to::
 
@@ -209,8 +215,8 @@ Docker
 
     'django4my_geonode' instead of 'django4geonode' and so on...
 
-Deploy an instance of a geonode-project Django template 2.10.x with Docker on localhost
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Deploy an instance of a geonode-project Django template 3.0 with Docker on localhost
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Prepare the environment
 
@@ -236,7 +242,7 @@ Make an instance out of the ``Django Template``
 
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv --python=/usr/bin/python3 my_geonode
-  pip install Django==2.2.9
+  pip install Django==2.2.12
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
   cd /opt/geonode_custom/my_geonode
@@ -253,8 +259,8 @@ Finally, run the containers
 
   docker-compose -f docker-compose.yml up -d
 
-Deploy an instance of a geonode-project Django template 2.10.x with Docker on a domain
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Deploy an instance of a geonode-project Django template 3.0 with Docker on a domain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: We will use ``www.example.org`` as an example. You can change the name at your convenience.
 

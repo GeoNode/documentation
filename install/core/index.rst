@@ -61,6 +61,9 @@ First, we are going to install all the **system packages** needed for the GeoNod
 
   # Install VIM
   sudo apt install -y vim
+  
+  # Install Packages for Virtual environment management
+  sudo apt install -y virtualenv virtualenvwrapper
 
   sudo apt update -y
   sudo apt upgrade -y

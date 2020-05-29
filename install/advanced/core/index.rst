@@ -1042,6 +1042,7 @@ For installation of required libraries, you should follow following steps,
 1. Edit ``requirement.txt`` file
 
 .. code-block:: shell
+
     cd your/working/directory
     notepad requirement.txt
     

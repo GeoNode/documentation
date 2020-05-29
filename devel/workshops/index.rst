@@ -397,7 +397,7 @@ In this section, we will add a custom model and the related logic as follows:
     
     vim geocollections/models.py
 
-.. code-block::
+.. code-block:: python
     
     from django.db import models
     

@@ -439,12 +439,12 @@ You may want to provide your own certificates to GeoNode
     vim nginx.https.enabled.conf
 
 
-    .. code-block:: diff
+.. code-block:: diff
 
-            -ssl_certificate     /certificate_symlink/fullchain.pem;
-            -ssl_certificate_key /certificate_symlink/privkey.pem;
-            +ssl_certificate       /geonode-certificates/my_geonode/chain.crt;
-            +ssl_certificate_key   /geonode-certificates/my_geonode/my_geonode.key;
+        -ssl_certificate     /certificate_symlink/fullchain.pem;
+        -ssl_certificate_key /certificate_symlink/privkey.pem;
+        +ssl_certificate       /geonode-certificates/my_geonode/chain.crt;
+        +ssl_certificate_key   /geonode-certificates/my_geonode/my_geonode.key;
 
 
 .. code-block:: shell

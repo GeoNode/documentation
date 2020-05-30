@@ -76,8 +76,8 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
   # If the previous command does not work for some reason, try the following one
   python -m django startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
 
-Startup the container
-^^^^^^^^^^^^^^^^^^^^^
+Startup the containers
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -111,9 +111,9 @@ Startup the container
 Connect to :guilabel:`http://localhost/`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The startup tipically takes some time, so be patient...
+The startup typically takes some time, so be patient…
 
-If everything goes well you should be able to see from the ``geonode startup logs`` a line similar to the following one:
+If everything goes well, you should be able to see from the ``geonode startup logs`` a line similar to the following one:
 
 .. code-block:: shell
 
@@ -277,7 +277,7 @@ Third Step: Customize :guilabel:`.env` to match your needs
 
 In the case you would like to modify the GeoNode behavior, always use the :guilabel:`.env` file in order to update the :guilabel:`settings`.
 
-If you need to change a setting which is not driver by :guilabel:`ENV`, you can force the values inside :guilabel:`my_geonode/settings.py`
+If you need to change a setting which does not exist in :guilabel:`.env`, you can force the values inside :guilabel:`my_geonode/settings.py`
 
 Refer to the section: :ref:`settings`
 
@@ -286,10 +286,10 @@ You can add here any property referred as
     | Env: ``PROPERTY_NAME``
 
 
-Restart the container
-^^^^^^^^^^^^^^^^^^^^^
+Restart the containers
+^^^^^^^^^^^^^^^^^^^^^^
 
-Whenever you change someting on :guilabel:`.env` file, you will need to rebuild the container
+Whenever you change someting on :guilabel:`.env` file, you will need to rebuild the containers.
 
 .. warning:: **Be careful!** The following command drops any change you might have done manually inside the containers, except for the static volumes.
 

@@ -57,8 +57,8 @@ Docker Setup (First time only)
   sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
   sudo apt autoremove --purge
 
-  sudo usermod -aG docker <your_system_user>
-  su <your_system_user>
+  sudo usermod -aG docker ${USER}
+  su ${USER}
 
 CentOS (7.0 +)
 ^^^^^^^^^^^^^^
@@ -97,8 +97,8 @@ Docker Setup (First time only)
   sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
 
-  sudo usermod -aG docker <your_system_user>
-  su <your_system_user>
+  sudo usermod -aG docker ${USER}
+  su ${USER}
 
 Create an instance of your ``geonode-project``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -18,8 +18,10 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
 ======================================================================
 
-Ubuntu
-^^^^^^
+Ubuntu (16.0 +)
+^^^^^^^^^^^^^^^
+
+.. note:: Recommended version 18.0.4 or higher.
 
 Packages Installation
 .....................
@@ -55,8 +57,48 @@ Docker Setup (First time only)
   sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
   sudo apt autoremove --purge
 
-  sudo usermod -aG docker <your_system_user>
-  su <your_system_user>
+  sudo usermod -aG docker ${USER}
+  su ${USER}
+
+CentOS (7.0 +)
+^^^^^^^^^^^^^^
+
+.. note:: Recommended version 7.0 or higher.
+
+.. warning:: Accordingly to the version you use, the packages installation might be a bit different.
+
+Packages Installation
+.....................
+
+First, we are going to install all the **system packages** needed for the GeoNode setup.
+Login to the target machine and execute the following commands:
+
+.. code-block:: shell
+
+  sudo yum -y install epel-release
+  sudo yum install -y gdal
+  sudo yum install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
+  sudo pip3 install -U pip
+  sudo pip3 install -U virtualenv
+  sudo yum install -y libxml2 libxml2-dev gettext
+  sudo yum install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev libgdal20
+  sudo yum install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
+
+Docker Setup (First time only)
+..............................
+
+.. code-block:: shell
+
+  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  sudo yum install docker-ce docker-ce-cli containerd.io
+  sudo systemctl start docker
+
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+
+  sudo usermod -aG docker ${USER}
+  su ${USER}
 
 Create an instance of your ``geonode-project``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -67,9 +109,14 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
 
   git clone https://github.com/GeoNode/geonode-project.git -b 3.x
 
+  # Ubuntu
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv --python=/usr/bin/python3 my_geonode
   pip install Django==2.2.12
+
+  # CentOS
+  virtualenv -p python3 my_geonode
+  source my_geonode/bin/activate
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
 

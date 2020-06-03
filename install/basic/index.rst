@@ -551,7 +551,7 @@ The GeoServer web admin employs a CSRF (Cross-Site Request Forgery) protection f
 https://docs.geoserver.org/stable/en/user/security/webadmin/csrf.html
 
 
-Whenever you need to change one of more of the JVM options, you will need to restart the GeoServer Docker container.
+Whenever you need to change one or more of the JVM options, you will need to restart the GeoServer Docker container.
 
 .. code-block:: shell
 

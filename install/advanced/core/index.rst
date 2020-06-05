@@ -568,6 +568,7 @@ Serving {“geonode”, “geoserver”} via NGINX
   env = DJANGO_EMAIL_HOST=localhost
   env = DJANGO_EMAIL_PORT=25
   env = DJANGO_EMAIL_USE_TLS=False
+  env = DJANGO_EMAIL_USE_SSL=False
   env = DEFAULT_FROM_EMAIL=GeoNode <no-reply@localhost>
   env = MONITORING_ENABLED=True
   env = GEOSERVER_PUBLIC_HOST=localhost

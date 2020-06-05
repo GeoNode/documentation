@@ -300,6 +300,7 @@ In the case you would like to deploy to, let's say, :guilabel:`https://my_geonod
     DJANGO_EMAIL_HOST_USER=
     DJANGO_EMAIL_HOST_PASSWORD=
     DJANGO_EMAIL_USE_TLS=False
+    DJANGO_EMAIL_USE_SSL=False
     -DEFAULT_FROM_EMAIL='GeoNode <no-reply@geonode.org>'
     +DEFAULT_FROM_EMAIL='GeoNode <no-reply@my_geonode.geonode.org>'
     

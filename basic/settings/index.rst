@@ -863,6 +863,10 @@ EMAIL_ENABLE
 
             Default: ``False``
 
+        * EMAIL_USE_SSL
+
+            Default: ``False``
+
         * DEFAULT_FROM_EMAIL
 
             Default: ``GeoNode <no-reply@geonode.org>``

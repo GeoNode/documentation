@@ -252,6 +252,47 @@ AUTO_GENERATE_AVATAR_SIZES
 
     An iterable of integers representing the sizes of avatars to generate on upload. This can save rendering time later on if you pre-generate the resized versions.
 
+AVATAR_GRAVATAR_SSL
+-------------------
+
+  | Default: ``False``
+  | Env: ``AVATAR_GRAVATAR_SSL``
+  | Options: ``True | False``
+
+  Force SSL when loading fallback image from gravatar.com.
+
+AVATAR_DEFAULT_URL
+------------------
+
+  | Default: ``/geonode/img/avatar.png``
+  | Env: ``AVATAR_GRAVATAR_SSL``
+  | Options: ``"filepath to image"``
+
+  Allows to set a custom fallback image in case a User has not uploaded a profile image.
+  Needs ``AVATAR_PROVIDERS`` to be set correctly.
+
+AVATAR_PROVIDERS
+----------------
+
+  | Default:
+  .. code-block::
+
+    'avatar.providers.PrimaryAvatarProvider','avatar.providers.GravatarAvatarProvider','avatar.providers.DefaultAvatarProvider'
+
+
+  | Env: ``AVATAR_PROVIDERS``
+  | Options: ``Avatar provider object``
+
+
+  This setting configures in which order gravatar images are loaded. A common use case is the use of a local image over a fallback image loaded from gravatar.com.
+  To do so you would change the order like:
+
+  .. code-block::
+
+    'avatar.providers.PrimaryAvatarProvider','avatar.providers.DefaultAvatarProvider','avatar.providers.GravatarAvatarProvider'
+
+  (DefaultAvatarProvider before GravatarAvatarProvider)
+
 AWS_ACCESS_KEY_ID
 -----------------
 
@@ -1129,7 +1170,7 @@ MAPSTORE_BASELAYERS
                 "args": ["Empty Background", {"visibility": False}]
            }
         ]
- 
+
     | Env: ``MAPSTORE_BASELAYERS``
 
     Allows to specify which backgrounds MapStore should use. The parameter ``visibility`` for a layer, specifies which one is the default one.
@@ -1176,7 +1217,7 @@ MAPSTORE_BASELAYERS
                 "args": ["Empty Background", {"visibility": False}]
            }
         ]
-    
+
     .. warning:: To use a Bing background, you need to correctly set and provide a valid ``BING_API_KEY``
 
 MAX_DOCUMENT_SIZE

@@ -376,7 +376,7 @@ If you didn't install GeoNode-Core earlier and you wanted to install GeoNode-Pro
 
 .. code-block:: shell
     
-    $ django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
+    $ django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
 5- Install all the requirements for the GeoNode-Project and install the GeoNode-Project using pip
 

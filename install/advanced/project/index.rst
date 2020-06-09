@@ -137,7 +137,7 @@ Make an instance out of the ``Django Template``
   mkvirtualenv --python=/usr/bin/python3 my_geonode
   pip install Django==2.2.12
 
-  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
+  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
   # Install the Python packages
   cd /opt/geonode_custom/my_geonode
@@ -244,7 +244,7 @@ Make an instance out of the ``Django Template``
   mkvirtualenv --python=/usr/bin/python3 my_geonode
   pip install Django==2.2.12
 
-  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
+  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
   cd /opt/geonode_custom/my_geonode
 
 Modify the code and the templates and rebuild the Docker Containers

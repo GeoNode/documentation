@@ -20,7 +20,9 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
 ======================================================================
 
-Ubuntu (16.0 +)
+.. _Ubuntu (18.0 +) Basic Setup:
+
+Ubuntu (18.0 +)
 ^^^^^^^^^^^^^^^
 
 .. note:: Recommended version 18.0.4 or higher.
@@ -61,6 +63,8 @@ Docker Setup (First time only)
 
   sudo usermod -aG docker ${USER}
   su ${USER}
+
+.. _CentOS (7.0 +) Basic Setup:
 
 CentOS (7.0 +)
 ^^^^^^^^^^^^^^

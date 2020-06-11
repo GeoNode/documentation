@@ -20,11 +20,11 @@ A definite specification of technical requirements is difficult to recommend. Ac
 
 For deployment of GeoNode on a single server, the following are the *bare minimum* system requirements:
 
-* 8GB of RAM.
-* 2.2GHz processor with 2 cores. (Additional processing power may be required for multiple concurrent styling renderings)
-* 10 GB software disk usage.
-* Additional disk space for any data hosted with GeoNode and tiles cached with GeoWebCache.
-  For spatial data, cached tiles, and "scratch space" useful for administration, a decent baseline size for GeoNode deployments is between 50GB and 100GB.
+* 8GB of RAM (16GB or more preferred for a production deployment).
+* 2.2GHz processor with 4 cores. (Additional processing power may be required for multiple concurrent styling renderings)
+* 30 GB software disk usage (Reserved to OS and source code only).
+* Additional disk space for any data hosted with GeoNode, data stored on the DataBase and tiles cached with GeoWebCache.
+  For db, spatial data, cached tiles, and "scratch space" useful for administration, a decent baseline size for GeoNode deployments is between 50GB and 100GB.
 * 64-bit hardware **strongly** recommended.
 
 OSGEO Live CD
@@ -74,10 +74,10 @@ Multiple containers can run on the same machine and share the OS kernel with oth
 
 The following tutorials will introduce the use of Docker community edition on:
 
-* :doc:`Ubuntu 18.04 </install/core/docker/ubuntu>`
+* :ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Basic Setup>`
 
-* :doc:`CentOS 7.0 </install/core/docker/centos>`
+* :ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`
 
 GeoNode provides also an advanced stack of Docker containers for a more stable, production-like setup:
 
-* :doc:`SPCGeoNode </install/spc/index>`
+* :doc:`SPCGeoNode </install/advanced/spc/index>`

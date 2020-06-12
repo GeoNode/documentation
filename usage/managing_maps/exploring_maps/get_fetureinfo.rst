@@ -2,7 +2,6 @@
 
 Customizing The Layers' GetFeatureInfo Templates
 ================================================
-
 When “clicking” over a feature of a Layer into a GeoNode Map, an info window popups showing a formatted representation of the raw data identified by the coordinates (see Fig. 1)
 
 .. figure:: img/getfetureinfo_templates_001.png
@@ -36,7 +35,6 @@ The “GetFeatureInfo” output will change accordingly as shown in Fig. 3
 
 Simple Template: Assigning A Media-Type To Attribute Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 The easiest way to render a different media-type (:guilabel:`image`, :guilabel:`audio`, :guilabel:`video` or :guilabel:`iframe`) to a property value, is to change it from the :guilabel:`Metadata Editor Wizard` attributes panel.
 
 By changing the :guilabel:`Display Type` of an attribute from this panel as shown in Fig. 4
@@ -88,9 +86,9 @@ By selecting the option :guilabel:`Use a custom template?` as shown in Fig. 9
 
      *Fig. 9*
 
-You will be able to provide your own custom HTML Template for the Fetrue Info output.
+You will be able to provide your own custom HTML Template for the Feature Info output.
 
-The esample below shows how it is possible to create a nice HTML output with an :guilabel:`image` taking the ``src`` from the attribute :guilabel:`NAME` values, through the use of the keyword ``${properties.NAME}``
+The example below shows how it is possible to create a nice HTML output with an :guilabel:`image` taking the ``src`` from the attribute :guilabel:`NAME` values, through the use of the keyword ``${properties.NAME}``
 
 .. figure:: img/getfetureinfo_templates_010.png
      :align: center
@@ -112,3 +110,10 @@ The esample below shows how it is possible to create a nice HTML output with an 
 
      *Fig. 13*
 
+Optional: Customizing the HTML WYSIWYG Editor Menu Bar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :guilabel:`Menu Bar` and :guilabel:`Tool Bar` of the HTML Editor, can be easily customized by overriding the ``TINYMCE_DEFAULT_CONFIG`` variable on :guilabel:`settings.py` (see :ref:`tinyMCE Default Config Settings`)
+
+There are many plugins and options allowing you to easily customize the editor and also provides some predefined *templates* to speed up the editing.
+
+For more information about the Javascript tool, please refer to https://www.tiny.cloud/

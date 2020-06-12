@@ -36,6 +36,7 @@ The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/
     creating_widgets
     timeline
     options_menu
+    get_fetureinfo
 
 Search Bar
 ----------

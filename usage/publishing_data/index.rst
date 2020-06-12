@@ -21,8 +21,8 @@ An easy way to accomplish that is to use an ``iframe``. See the following steps:
 
     <iframe
       style="border: none;" height="400" width="600"
-      src="http://master.demo.geonode.org/maps/11/embed"
-    ></iframe>
+      src="http://master.demo.geonode.org/maps/11/embed">
+    </iframe>
 
 * Put this html block of code inside your web pages to display the map.
 

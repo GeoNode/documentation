@@ -539,7 +539,7 @@ The variable ``GEOSERVER_JAVA_OPTS`` allows you to tune-up the GeoServer contain
         -XX:SoftRefLRUPolicyMSPerMB=36000 -XX:-UseGCOverheadLimit -XX:+UseConcMarkSweepGC 
         -XX:+UseParNewGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Djavax.servlet.request.encoding=UTF-8 
         -Djavax.servlet.response.encoding=UTF-8 -Duser.timezone=GMT 
-        -Dorg.geotools.shapefile.datetime=true -DGEOSERVER_CSRF_DISABLED=true
+        -Dorg.geotools.shapefile.datetime=false -DGEOSERVER_CSRF_DISABLED=true
 
 ``-Djava.awt.headless (true)``
 

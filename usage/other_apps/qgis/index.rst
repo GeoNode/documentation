@@ -54,6 +54,10 @@ After select a layer (WMS or WFS) click on the **Add** button and the layer will
 
      *Example of Geonode layer*
 
+.. warning::
+    This procedure only work with public layers. If the layers are for private use is necessary to do 
+    the standard qgis add remote WMS/WFS layers (through **Data Source Manager**) along with basic auth method and specific endpoints.
+
 
 
 

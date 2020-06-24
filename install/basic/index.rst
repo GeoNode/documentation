@@ -326,6 +326,103 @@ Whenever you change someting on :guilabel:`.env` file, you will need to rebuild 
 
   docker-compose up -d
 
+Troubleshooting
+^^^^^^^^^^^^^^^
+
+If for some reason you are not able to reach the server on the :guilabel:`HTTPS` channel, please check the :guilabel:`NGINX` configuration files below:
+
+1. Enter the :guilabel:`NGINX` container
+
+    .. code-block:: shell
+
+      docker-compose exec geonode sh
+
+2. Install an editor if not present
+
+    .. code-block:: shell
+
+      apk add nano
+
+3. Double check that the ``nginx.https.enabled.conf`` link has been correctly created
+
+    .. code-block:: shell
+
+      ls -lah
+
+    .. figure:: img/throubleshooting_prod_001.png
+        :align: center
+    
+    If the list does not match exactly the figure above, please run the following commands, and check again
+
+    .. code-block:: shell
+
+      rm nginx.https.enabled.conf
+      ln -s nginx.https.available.conf nginx.https.enabled.conf
+
+4. Inspect the ``nginx.https.enabled.conf`` contents
+
+    .. code-block:: shell
+
+      nano nginx.https.enabled.conf
+
+    Make sure the contents match the following
+
+    .. warning::
+
+      Change the :guilabel:`Hostname` accordingly. **This is only an example!**
+
+    .. code-block:: shell
+
+        # NOTE : $VARIABLES are env variables replaced by entrypoint.sh using envsubst
+        # not to be mistaken for nginx variables (also starting with $, but usually lowercase)
+
+        # This file is to be included in the main nginx.conf configuration if HTTPS_HOST is set
+        ssl_session_cache   shared:SSL:10m;
+        ssl_session_timeout 10m;
+
+        # this is the actual HTTPS host
+        server {
+            listen              443 ssl;
+            server_name         my_geonode.geonode.org;
+            keepalive_timeout   70;
+
+            ssl_certificate     /certificate_symlink/fullchain.pem;
+            ssl_certificate_key /certificate_symlink/privkey.pem;
+            ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+            ssl_ciphers         HIGH:!aNULL:!MD5;
+
+            include sites-enabled/*.conf;
+        }
+
+        # if we try to connect from http, we redirect to https
+        server {
+            listen 80;
+            server_name  my_geonode.geonode.org; # TODO : once geoserver supports relative urls, we should allow access though both HTTP and HTTPS at the same time and hence remove HTTP_HOST from this line
+
+            # Except for let's encrypt challenge
+            location /.well-known {
+                alias /geonode-certificates/.well-known;
+                include  /etc/nginx/mime.types;
+            }
+
+            # Redirect to https
+            location / {
+            return 302 https://my_geonode.geonode.org/$request_uri; # TODO : we should use 301 (permanent redirect, but not practical for debug)
+            }
+        }
+
+    .. warning::
+
+      **Save the changes, if any, and exit!**
+
+5. Reload the NGINX configuration
+
+    .. code-block:: shell
+
+      nginx -s reload
+      2020/06/24 10:00:11 [notice] 112#112: signal process started
+      /etc/nginx# exit
+
 Third Step: Customize :guilabel:`.env` to match your needs
 ===========================================================
 

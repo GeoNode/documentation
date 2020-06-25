@@ -105,18 +105,18 @@ Example configuration:
     )
 
     # django_auth_ldap configuration
-    AUTH_LDAP_SERVER_URI = env("LDAP_SERVER_URL")
-    AUTH_LDAP_BIND_DN = env("LDAP_BIND_DN")
-    AUTH_LDAP_BIND_PASSWORD = env("LDAP_BIND_PASSWORD")
+    AUTH_LDAP_SERVER_URI = os.getenv("LDAP_SERVER_URL")
+    AUTH_LDAP_BIND_DN = os.getenv("LDAP_BIND_DN")
+    AUTH_LDAP_BIND_PASSWORD = os.getenv("LDAP_BIND_PASSWORD")
     AUTH_LDAP_USER_SEARCH = ldap_config.LDAPSearch(
-        env("LDAP_USER_SEARCH_DN"),
+        os.getenv("LDAP_USER_SEARCH_DN"),
         ldap.SCOPE_SUBTREE,
-        env("LDAP_USER_SEARCH_FILTERSTR")
+        os.getenv("LDAP_USER_SEARCH_FILTERSTR")
     )
     AUTH_LDAP_GROUP_SEARCH = ldap_config.LDAPSearch(
-        env("LDAP_GROUP_SEARCH_DN"),
+        os.getenv("LDAP_GROUP_SEARCH_DN"),
         ldap.SCOPE_SUBTREE,
-        env("LDAP_GROUP_SEARCH_FILTERSTR")
+        os.getenv("LDAP_GROUP_SEARCH_FILTERSTR")
     )
     AUTH_LDAP_GROUP_TYPE = GeonodeNestedGroupOfNamesType()
     AUTH_LDAP_USER_ATTR_MAP = {
@@ -131,9 +131,9 @@ Example configuration:
 
     # these are not needed by django_auth_ldap - we use them to find and match
     # GroupProfiles and GroupCategories
-    GEONODE_LDAP_GROUP_NAME_ATTRIBUTE = env("LDAP_GROUP_NAME_ATTRIBUTE", default="cn")
-    GEONODE_LDAP_GROUP_PROFILE_FILTERSTR = env("LDAP_GROUP_SEARCH_FILTERSTR", default='(ou=research group)')
-    GEONODE_LDAP_GROUP_PROFILE_MEMBER_ATTR = env("LDAP_GROUP_PROFILE_MEMBER_ATTR", default='member')
+    GEONODE_LDAP_GROUP_NAME_ATTRIBUTE = os.getenv("LDAP_GROUP_NAME_ATTRIBUTE", default="cn")
+    GEONODE_LDAP_GROUP_PROFILE_FILTERSTR = os.getenv("LDAP_GROUP_SEARCH_FILTERSTR", default='(ou=research group)')
+    GEONODE_LDAP_GROUP_PROFILE_MEMBER_ATTR = os.getenv("LDAP_GROUP_PROFILE_MEMBER_ATTR", default='member')
 
 Example environment variables:
 

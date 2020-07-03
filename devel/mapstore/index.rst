@@ -21,7 +21,7 @@ Compile MapStore2 Client
 
     cd geonode-mapstore-client/geonode_mapstore_client/client/
     npm update
-    yarn install
+    npm install
     npm run compile
 
 Edit the file ``env.json``
@@ -47,7 +47,7 @@ Run MapStore2 in Development mode
 
 Connect to :::guilabel:`http://localhost:8081`
 
-This is a ``proxed`` version of GeoNode form MapStore2 client. **To upload new layers user the original GeoNode**.
+This is a ``proxied`` version of GeoNode form MapStore2 client. **To upload new layers user the original GeoNode**.
 
 Everytime you render a map, from GeoNode layers details page or map creation, you will access to the MapStore2 dev mode runnig code.
 

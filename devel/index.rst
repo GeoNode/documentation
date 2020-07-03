@@ -16,6 +16,10 @@ How to Develop
 
     running/index
 
+.. toctree::
+    :maxdepth: 2
+
+    mapstore/index
 
 .. toctree::
     :maxdepth: 2

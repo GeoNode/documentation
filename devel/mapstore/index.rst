@@ -6,6 +6,13 @@ Pre-requisites
 
 #. You need a running instance of GeoNode somewhere; in this specific example we assume GeoNode is running on ::guilabel:`http://localhost:8000`
 
+Install needed packages
+.......................
+
+.. code-block:: shell
+
+    sudo apt install nodejs npm
+
 
 Prepare the source code
 .......................

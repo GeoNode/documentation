@@ -58,6 +58,96 @@ After select a layer (WMS or WFS) click on the **Add** button and the layer will
     This procedure only work with public layers. If the layers are for private use is necessary to do 
     the standard qgis add remote WMS/WFS layers (through **Data Source Manager**) along with basic auth method and specific endpoints.
 
+Connect to Private layers by using OAuth2
+-----------------------------------------
 
+GeoNode OAuth2 Client App Setup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Login to GeoNode as a superuser
 
+.. figure:: img/geonode_oauth2_001.png
+     :align: center
+
+Browse to :guilabel:`http://<geonode>/o/applications/`
+
+.. figure:: img/geonode_oauth2_002.png
+     :align: center
+
+Create a new specific app or, better, edit the existing one (“GeoServer”) based on `OAuth2 Authorization Code Grant Type <https://oauth.net/2/grant-types/authorization-code/#:~:text=The%20Authorization%20Code%20grant%20type,to%20request%20an%20access%20token.>`_
+
+Click on “Edit” and add the Redirect URI :guilabel:`http://127.0.0.1:7070/qgis-client` as shown below
+
+.. note::
+     This is an example. The port and path of the URI can be customized. They must be the same on both GeoNode and QGis Client as shown later.
+
+.. figure:: img/geonode_oauth2_003.png
+     :align: center
+
+.. figure:: img/geonode_oauth2_004.png
+     :align: center
+
+Also you will need the :guilabel:`Client ID` and :guilabel:`Client Secret` keys later when configuring QGis.
+
+Configure QGis Desktop Client OAuth2 Authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Open the QGis Desktop Client and add a new OWS remote Layer configuration
+
+.. figure:: img/geonode_oauth2_005.png
+     :align: center
+
+Create a new service connection
+
+.. figure:: img/geonode_oauth2_006.png
+     :align: center
+
+Provide the connection details
+
+.. note::
+     *It is* :guilabel:`Important` *that the URL ends with* :guilabel:`/gs/ows`
+
+When finished click on “+” in order to add a new auth configuration
+
+.. figure:: img/geonode_oauth2_007.png
+     :align: center
+
+Provide the needed information as shown below:
+
+ - Name: *any descriptive string*
+ - Type: *OAuth2 authentication*
+ - Grant Flow: *Authorization Code*
+ - Request URL: *must end with* :guilabel:`/o/authorize/`
+ - Token URL and Refresh URL: *must end with* :guilabel:`/o/token/`
+ - Redirect URL: *must match with the one defined on GeoNode above*
+ - Client ID and Client Secret: *must match with the one defined on GeoNode above*
+ - Scopes: *openid write*
+ - Enable the persistent Token Session via Headers
+
+.. figure:: img/geonode_oauth2_008.png
+     :align: center
+
+Save and click on :guilabel:`“Connect”`. QGis will redirect you on a browser page asking to GeoNode to authenticate. Approve the Claims and go back to QGis.
+
+.. figure:: img/geonode_oauth2_009.png
+     :align: center
+
+Remove Saved Token Sessions From QGis and Login with another User
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Edit the QGis configuration
+
+.. figure:: img/geonode_oauth2_010.png
+     :align: center
+
+Click on the :guilabel:`“pencil”`
+
+.. figure:: img/geonode_oauth2_011.png
+     :align: center
+
+Clean up the saved :guilabel:`Tokens` and save
+
+.. figure:: img/geonode_oauth2_012.png
+     :align: center
+
+Try to connect again.

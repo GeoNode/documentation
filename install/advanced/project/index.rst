@@ -160,7 +160,7 @@ Run GeoNode Project for the first time in DEBUG Mode
 
   Be sure you have successfully completed all the steps of the section :ref:`install_dep_proj`.
 
-This command will run both GeoNode and GeoServer locally after having prepared the Spatialite database. The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, and it will start the following services:
+This command will run both GeoNode and GeoServer locally after having prepared the SQLite database. The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, and it will start the following services:
 
 #. GeoNode on ``http://localhost:8000/``
 #. GeoServer on ``http://localhost:8080/geoserver/``
@@ -169,7 +169,7 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 
 .. code-block:: shell
 
-  # Prepare the GeoNode Spatialite database (the first time only)
+  # Prepare the GeoNode SQLite database (the first time only)
   ./paver_dev.sh setup
   ./paver_dev.sh sync
 

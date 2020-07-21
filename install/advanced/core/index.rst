@@ -94,7 +94,7 @@ GeoNode Installation
 
 This is the most basic installation of GeoNode. It won't use any external server like ``Apache Tomcat``, ``PostgreSQL`` or ``HTTPD``.
 
-It will run locally against a file-system based ``SQLite`` database.
+It will run locally against a file-system based ``Spatialite`` database.
 
 
 First of all we need to prepare a new Python Virtual Environment
@@ -153,7 +153,7 @@ Run GeoNode for the first time in DEBUG Mode
 
   Be sure you have successfully completed all the steps of the section :ref:`install_dep`.
 
-This command will run both GeoNode and GeoServer locally after having prepared the SQLite database. The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, and it will start the following services:
+This command will run both GeoNode and GeoServer locally after having prepared the Spatialite database. The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, and it will start the following services:
 
 #. GeoNode on ``http://localhost:8000/``
 #. GeoServer on ``http://localhost:8080/geoserver/``
@@ -162,7 +162,7 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 
 .. code-block:: shell
 
-  # Prepare the GeoNode SQLite database (the first time only)
+  # Prepare the GeoNode Spatialite database (the first time only)
   paver setup
   paver sync
 
@@ -242,6 +242,7 @@ Next let's create PostGIS extensions
 
 .. code-block:: shell
 
+  sudo -u postgres psql -d geonode -c 'CREATE EXTENSION postgis;'
   sudo -u postgres psql -d geonode_data -c 'CREATE EXTENSION postgis;'
   sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
   sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
@@ -1072,7 +1073,7 @@ invoke==1.4.1
 
 .. code-block:: shell
 
-    # Prepare the GeoNode SQLite database (the first time only)
+    # Prepare the GeoNode Spatialite database (the first time only)
     paver setup
     paver sync
     python manage.py runserver

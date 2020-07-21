@@ -33,7 +33,7 @@ The steps to be followed are:
 Install GeoNode-Core for development
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-GeoNode-Core installation is considered the most basic form of GeoNode. It doesn't require any external server to be installed and it can run locally against a file-system based SQLite database.
+GeoNode-Core installation is considered the most basic form of GeoNode. It doesn't require any external server to be installed and it can run locally against a file-system based Spatialite database.
 
 Installation steps
 ..................

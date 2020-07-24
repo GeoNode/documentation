@@ -1,3 +1,5 @@
+.. _geonode-core:
+
 ============
 GeoNode Core
 ============

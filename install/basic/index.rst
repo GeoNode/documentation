@@ -1,3 +1,5 @@
+.. _geonode-project-basic:
+
 ==========================
 GeoNode Basic Installation
 ==========================

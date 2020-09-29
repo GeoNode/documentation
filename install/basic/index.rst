@@ -120,7 +120,7 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
   virtualenv -p python3 my_geonode
   source my_geonode/bin/activate
 
-  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode
+  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
   # If the previous command does not work for some reason, try the following one
   python -m django startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample -n monitoring-cron -n Dockerfile my_geonode

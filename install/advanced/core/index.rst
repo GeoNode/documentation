@@ -54,7 +54,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev libgdal20
   sudo apt install -y software-properties-common build-essential
   sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-  sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
+  sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev
 
   # Install Openjdk
   sudo -i apt update
@@ -70,6 +70,28 @@ First, we are going to install all the **system packages** needed for the GeoNod
   sudo apt autoclean -y
   sudo apt purge -y
   sudo apt clean -y
+
+.. warning:: GeoNode 3.x is not compatible with Python < 3.7
+    Check you current Python version with the following command
+
+    .. code-block:: shell
+
+        python --version
+    
+    If less than 3.7, please follow those additional steps below
+
+    .. code-block:: shell
+
+        sudo apt update
+        sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+        cd /tmp
+        wget https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
+        tar -xf Python-3.8.6.tar.xz
+        cd Python-3.8.6
+        ./configure --enable-optimizations --enable-loadable-sqlite-extensions
+        make -j 1
+        sudo make altinstall
+        python3.8 --version
 
 Create a Dedicated User
 .......................
@@ -91,6 +113,8 @@ Create User ``geonode`` **if not present**:
   # (out of the scope of this documentation) and switch to User geonode
   su geonode
 
+.. _install_venv:
+
 GeoNode Installation
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -103,11 +127,29 @@ First of all we need to prepare a new Python Virtual Environment
 
 Since geonode needs a large number of different python libraries and packages, its recommended to use a python virtual environment to avoid conflicts on dependencies with system wide python packages and other installed software. See also documentation of `Virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/stable/>`_ package for more information
 
+.. warning:: GeoNode 3.x is not compatible with Python < 3.7
+    Check you current Python version with the following command
+
+    .. code-block:: shell
+
+        python --version
+    
+    If less than 3.7, please follow those additional steps below
+
+    .. code-block:: shell
+
+      which python3.8  # copy the path of python executable
+      # Create the GeoNode Virtual Environment (first time only)
+      source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+      # Use the python path from above
+      mkvirtualenv --python=/usr/local/bin/python3.8 geonode
+
 .. code-block:: shell
 
   # Create the GeoNode Virtual Environment (first time only)
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv --python=/usr/bin/python3 geonode
+  
 
 At this point your command prompt shows a ``(geonode)`` prefix, this indicates that your virtualenv is active.
 
@@ -140,11 +182,31 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   cd /opt
   git clone https://github.com/GeoNode/geonode.git geonode
 
+.. warning:: If you have problems installing the Twisted dependencies
+
+    .. code-block:: shell
+
+        python --version
+    
+    If higher than 3.8.5, most probably there's no suitable version for your system.
+
+    Follow the instruction below to remove the dependencies
+
+    .. code-block:: shell
+
+        vim requirements.txt
+        # --> comment or remove Twisted
+
+        vim setup.cfg
+        # --> comment or remove Twisted
+
+.. code-block:: shell
   # Install the Python packages
   cd /opt/geonode
   pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
   pip install -e . --upgrade
 
+.. code-block:: shell
   # Install GDAL Utilities for Python
   pip install pygdal=="`gdal-config --version`.*"
 

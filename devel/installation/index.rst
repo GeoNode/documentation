@@ -40,6 +40,8 @@ Installation steps
 
 1- Install build tools and libraries
 
+.. warning:: Those instructions might be outdated. Please refer to :ref:`install_dep`
+
 .. code-block:: shell
     
     $ sudo apt-get install -y build-essential libxml2-dev libxslt1-dev libpq-dev zlib1g-dev
@@ -48,17 +50,23 @@ Installation steps
 
     Install python native libraries and tools
 
+.. warning:: Those instructions might be outdated. Please refer to :ref:`install_dep`
+
 .. code-block:: shell
     
     $ sudo apt-get install -y python3-dev python3-pil python3-lxml python3-pyproj python3-shapely python3-nose python3-httplib2 python3-pip software-properties-common
 
 Install python virtual environment
 
+.. warning:: Those instructions might be outdated. Please refer to :ref:`install_venv`
+
 .. code-block:: shell
     
     $ sudo pip install virtualenvwrapper
 
 Install postgresql and postgis
+
+.. warning:: Those instructions might be outdated. Please refer to :ref:`configure_dbs_core`
 
 .. code-block:: shell
     

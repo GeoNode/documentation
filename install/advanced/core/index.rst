@@ -181,6 +181,8 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   # Clone the GeoNode source code on /opt/geonode
   cd /opt
   git clone https://github.com/GeoNode/geonode.git geonode
+  cd /opt/geonode
+  pip install -r requirements.txt
 
 .. warning:: If you have problems installing the Twisted dependencies
 

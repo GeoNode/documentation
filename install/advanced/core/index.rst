@@ -93,6 +93,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
         sudo make altinstall
         python3.8 --version
 
+
 Create a Dedicated User
 .......................
 
@@ -143,6 +144,7 @@ Since geonode needs a large number of different python libraries and packages, i
       source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
       # Use the python path from above
       mkvirtualenv --python=/usr/local/bin/python3.8 geonode
+
 
 .. code-block:: shell
 
@@ -200,13 +202,17 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
         vim setup.cfg
         # --> comment or remove Twisted
 
+
 .. code-block:: shell
+
   # Install the Python packages
   cd /opt/geonode
   pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
   pip install -e . --upgrade
 
+
 .. code-block:: shell
+
   # Install GDAL Utilities for Python
   pip install pygdal=="`gdal-config --version`.*"
 
@@ -1256,19 +1262,22 @@ Start the Docker instances on ``localhost``
 
 .. warning:: The first time pulling the images will take some time. You will need a good internet connection.
 
+
 .. code-block:: shell
 
   cd /opt/geonode
   docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml pull
   docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up -d
 
+
 .. note:: If you want to re-build the docker images from scratch, instead of ``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to the up command, for instance:
 
   .. code-block:: shell
 
-    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
+      docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
 
   In this case you can of course skip the ``pull`` step to download the ``pre-built`` images.
+
 
 .. note:: To startup the containers daemonized, which means they will be started in the background (and keep running if you ``log out`` from the server or close the ``shell``) add the ``-d`` option to the ``up`` command as in the following. ``docker-compose`` will take care to restart the containers if necessary (e.g. after boot).
 
@@ -1278,6 +1287,7 @@ Start the Docker instances on ``localhost``
 
     # If you want to rebuild the images also
     docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build -d
+
 
 Test the instance and follow the logs
 .....................................
@@ -1437,6 +1447,7 @@ in order to update the files into the ``statics`` Docker volume.
 
 .. warning:: This is an external volume, and a simple restart won't update it. You have to be careful and keep it aligned with your changes.
 
+
 Whenever you need to change some settings or environment variable, the easiest thing to do is to:
 
 .. code-block:: shell
@@ -1476,13 +1487,16 @@ GeoServer is deployed on an Apache Tomcat instance which can be found here
 
 .. warning:: The GeoServer ``DATA_DIR`` is deployed on an external Docker Volume ``geonode_gsdatadir``. This data dir won’t be affected by changes to the GeoServer application since it is ``external``.
 
+
 Update the GeoServer instance inside the GeoServer Container
 
 .. warning:: The old configuration will be kept since it is ``external``
 
+
 .. code-block:: shell
 
 	docker exec -it geoserver4geonode bash
+
 
 .. code-block:: shell
 
@@ -1509,6 +1523,7 @@ Update the GeoServer instance inside the GeoServer Container
   GeoNode 2.8.2 / 2.10.x are **NOT** compatible with GeoServer < 2.14.x
 
   GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x
+
 
 Remove all data and bring your running GeoNode deployment to the initial stage
 ..............................................................................

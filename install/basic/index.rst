@@ -27,7 +27,7 @@ First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
 Ubuntu (18.0 +)
 ^^^^^^^^^^^^^^^
 
-.. note:: Recommended version 18.0.4 or higher.
+.. note:: Recommended version 18.0.4 (Bionic Beaver). 
 
 Packages Installation
 .....................

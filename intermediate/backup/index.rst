@@ -54,7 +54,7 @@ The usage of those commands is quite easy and straightforward.
 The first step is to ensure that everything is correctly configured and the requisites respected in order to successfully
 perform a backup and restore of GeoNode.
 
-.. warning:: It is worth to notice that this functionality requires the latest `GeoServer Extension <http://build.geonode.org/geoserver/latest/>`_ (2.9.x or greater) for GeoNode in order to correctly work.
+.. warning:: It is worth to notice that this functionality requires the latest `GeoServer Extension <https://build.geo-solutions.it/geonode/geoserver/latest/>`_ (2.9.x or greater) for GeoNode in order to correctly work.
 
 .. note:: GeoServer full documentation is also available here `GeoServer Docs <https://docs.geoserver.org/stable/en/user/community/backuprestore/index.html>`_
 

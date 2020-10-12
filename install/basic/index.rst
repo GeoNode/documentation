@@ -436,6 +436,13 @@ If for some reason you are not able to reach the server on the :guilabel:`HTTPS`
       2020/06/24 10:00:11 [notice] 112#112: signal process started
       /etc/nginx# exit
 
+6. It may be helpful to disable https to isolate the source of errors. After reverting the HTTPS-related changes in the `.env` file, repeat the above steps and ensure that the ``nginx.http.enabled.conf`` link has been correctly created.
+
+    .. code-block:: shell
+    
+      ln -s nginx.conf nginx.http.enabled.conf
+      nano nginx.http.enabled.conf
+
 Third Step: Customize :guilabel:`.env` to match your needs
 ===========================================================
 

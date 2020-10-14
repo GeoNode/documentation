@@ -114,7 +114,7 @@ Example configuration:
         os.getenv("LDAP_USER_SEARCH_FILTERSTR")
     )
     # should LDAP groups be used to spawn groups in GeoNode?
-    AUTH_LDAP_MIRROR_GROUPS = os.getenv("LDAP_MIRROR_GROUPS", True)
+    AUTH_LDAP_MIRROR_GROUPS = strtobool(os.getenv("LDAP_MIRROR_GROUPS", 'True'))
     AUTH_LDAP_GROUP_SEARCH = ldap_config.LDAPSearch(
         os.getenv("LDAP_GROUP_SEARCH_DN"),
         ldap.SCOPE_SUBTREE,

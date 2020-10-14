@@ -98,6 +98,12 @@ Example configuration:
     from django_auth_ldap import config as ldap_config
     from geonode_ldap.config import GeonodeNestedGroupOfNamesType
     import ldap
+    
+    # enable logging
+    import logging
+    logger = logging.getLogger('django_auth_ldap')
+    logger.addHandler(logging.StreamHandler())
+    logger.setLevel(logging.DEBUG)
 
     # add both standard ModelBackend auth and geonode.contrib.ldap auth
     AUTHENTICATION_BACKENDS += (

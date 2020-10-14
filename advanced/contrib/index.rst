@@ -167,7 +167,9 @@ exist yet. The geonode user is also made a member of these geonode groups.
 Upon each login, the user's geonode group memberships are re-evaluated
 according to the information extracted from LDAP. The
 ``AUTH_LDAP_MIRROR_GROUPS_EXCEPT`` setting can be used to specify groups
-whose memberships will not be re-evaluated. If no LDAP groups shall be mirrored ``LDAP_MIRROR_GROUPS`` must be set to ``False``.
+whose memberships will not be re-evaluated.
+
+If no LDAP groups shall be mirrored ``LDAP_MIRROR_GROUPS`` and ``LDAP_MIRROR_GROUPS_EXCEPT`` must be set to ``False``.
 
 .. note:: Users mapped from LDAP will be marked with an ``ldap`` tag. This will be used to keep them in sync.
 

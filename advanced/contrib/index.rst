@@ -113,6 +113,8 @@ Example configuration:
         ldap.SCOPE_SUBTREE,
         os.getenv("LDAP_USER_SEARCH_FILTERSTR")
     )
+    # should LDAP groups be used to spawn groups in GeoNode?
+    AUTH_LDAP_MIRROR_GROUPS = os.getenv("LDAP_MIRROR_GROUPS", True)
     AUTH_LDAP_GROUP_SEARCH = ldap_config.LDAPSearch(
         os.getenv("LDAP_GROUP_SEARCH_DN"),
         ldap.SCOPE_SUBTREE,
@@ -144,6 +146,7 @@ Example environment variables:
     LDAP_BIND_PASSWORD=<something_secret>
     LDAP_USER_SEARCH_DN=dc=ad,dc=example,dc=org
     LDAP_USER_SEARCH_FILTERSTR=(&(uid=%(user)s)(objectClass=person))
+    LDAP_MIRROR_GROUPS=True
     LDAP_GROUP_SEARCH_DN=cn=groups,dc=ad,dc=example,dc=org
     LDAP_GROUP_SEARCH_FILTERSTR=(|(cn=abt1)(cn=abt2)(cn=abt3)(cn=abt4)(cn=abt5)(cn=abt6))
     LDAP_GROUP_PROFILE_MEMBER_ATTR=uniqueMember
@@ -164,7 +167,7 @@ exist yet. The geonode user is also made a member of these geonode groups.
 Upon each login, the user's geonode group memberships are re-evaluated
 according to the information extracted from LDAP. The
 ``AUTH_LDAP_MIRROR_GROUPS_EXCEPT`` setting can be used to specify groups
-whose memberships will not be re-evaluated.
+whose memberships will not be re-evaluated. If no LDAP groups shall be mirrored ``LDAP_MIRROR_GROUPS`` must be set to ``False``.
 
 .. note:: Users mapped from LDAP will be marked with an ``ldap`` tag. This will be used to keep them in sync.
 
@@ -235,6 +238,7 @@ and the ``/opt/geonode/my-geonode/.env`` is something similar to the following o
     LDAP_BIND_PASSWORD=<something_secret>
     LDAP_USER_SEARCH_DN=dc=ad,dc=example,dc=org
     LDAP_USER_SEARCH_FILTERSTR=(&(uid=%(user)s)(objectClass=person))
+    LDAP_MIRROR_GROUPS=True
     LDAP_GROUP_SEARCH_DN=cn=groups,dc=ad,dc=example,dc=org
     LDAP_GROUP_SEARCH_FILTERSTR=(|(cn=abt1)(cn=abt2)(cn=abt3)(cn=abt4)(cn=abt5)(cn=abt6))
     LDAP_GROUP_PROFILE_MEMBER_ATTR=uniqueMember

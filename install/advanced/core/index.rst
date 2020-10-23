@@ -7,14 +7,22 @@ GeoNode Core
 Overview
 ========
 
-The following steps will guide you to a fresh setup of GeoNode. All guides will first install and configure the system to run it in ``DEBUG`` mode (also known as ``DEVELOPMENT`` mode) and then by configuring an HTTPD server to serve GeoNode through the standard ``HTTP`` (``80``) port.
+The following steps will guide you to a fresh setup of GeoNode.
 
-Those guides **are not** meant to be used on a production system. There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine. In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
+All guides will first install and configure the system to run it in ``DEBUG`` mode (also known as ``DEVELOPMENT`` mode) 
+and then by configuring an HTTPD server to serve GeoNode through the standard ``HTTP`` (``80``) port.
 
-Ubuntu 18.04
-============
+.. warning:: Those guides **are not** meant to be used on a production system.
+  There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine.
+  In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
 
-This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 18.04 64-bit clean environment (Desktop or Server). All examples use shell commands that you must enter on a local terminal or a remote shell.
+Ubuntu 20.04LTS
+===============
+
+This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 20.04LTS **64-bit** clean environment (Desktop or Server).
+
+All examples use shell commands that you must enter on a local terminal or a remote shell.
+
 - If you have a graphical desktop environment you can open the terminal application after login;
 - if you are working on a remote server the provider or sysadmin should has given you access through an ssh client.
 
@@ -23,7 +31,11 @@ This part of the documentation describes the complete setup process for GeoNode 
 Install the dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this section, we are going to install all the basic packages and tools needed for a complete GeoNode installation. To follow this guide, a basic knowledge about Ubuntu Server configuration and working with a shell is required. This guide uses ``vim`` as the editor; fill free to use ``nano``, ``gedit`` or others.
+In this section, we are going to install all the basic packages and tools needed for a complete GeoNode installation.
+
+.. warning:: To follow this guide, a basic knowledge about Ubuntu Server configuration and working with a shell is required.
+
+.. note:: This guide uses ``vim`` as the editor; fill free to use ``nano``, ``gedit`` or others.
 
 Upgrade system packages
 .......................
@@ -32,8 +44,8 @@ Check that your system is already up-to-date with the repository running the fol
 
 .. code-block:: shell
 
-   sudo apt update
-   sudo apt upgrade
+   sudo add-apt-repository ppa:ubuntugis/ppa
+   sudo apt update -y; sudo apt upgrade -y;
 
 
 Packages Installation
@@ -48,74 +60,42 @@ First, we are going to install all the **system packages** needed for the GeoNod
 .. code-block:: shell
 
   # Install packages from GeoNode core
-  sudo apt install -y gdal-bin
-  sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
-  sudo apt install -y libxml2 libxml2-dev gettext
-  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev
-  sudo apt install -y software-properties-common build-essential
-  sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-  sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev
-
-  # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
+  sudo apt install -y build-essential gdal-bin \
+      python3.8-dev python3.8-venv virtualenvwrapper \
+      libxml2 libxml2-dev gettext \
+      libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev \
+      software-properties-common build-essential \
+      git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
+      sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev
 
   # Install Openjdk
-  sudo -i apt update
   sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
   sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
+
+  # Verify GDAL version
+  gdalinfo --version
+    $> GDAL 3.0.4, released 2020/01/28
+
+  # Verify Python version
+  python3.8 --version
+    $> Python 3.8.5
+
+  which python3.8
+    $> /usr/bin/python3.8
+
+  # Verify Java version
+  java -version
+    $> openjdk version "1.8.0_265"
+    $> OpenJDK Runtime Environment (build 1.8.0_265-8u265-b01-0ubuntu2~20.04-b01)
+    $> OpenJDK 64-Bit Server VM (build 25.265-b01, mixed mode)
 
   # Install VIM
   sudo apt install -y vim
 
-  sudo apt update -y
-  sudo apt upgrade -y
-  sudo apt autoremove -y
-  sudo apt autoclean -y
-  sudo apt purge -y
-  sudo apt clean -y
+  # Cleanup the packages
+  sudo apt update -y; sudo apt upgrade -y; sudo apt autoremove --purge
 
 .. warning:: GeoNode 3.x is not compatible with Python < 3.7
-    Check you current Python version with the following command
-
-    .. code-block:: shell
-
-        python --version
-    
-    If less than 3.7, please follow those additional steps below
-
-    .. code-block:: shell
-
-        sudo apt update
-        sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
-        cd /tmp
-        wget https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
-        tar -xf Python-3.8.6.tar.xz
-        cd Python-3.8.6
-        ./configure --enable-optimizations --enable-loadable-sqlite-extensions
-        make -j 1
-        sudo make altinstall
-        python3.8 --version
-
-
-Create a Dedicated User
-.......................
-
-In the following steps a User named ``geonode`` is created (if needed) and used: to run installation commands the user must be in the ``sudo`` group.
-
-Create User ``geonode`` **if not present**:
-
-.. code-block:: shell
-
-  # Follow the prompts to set the new user's information.
-  # It is fine to accept the defaults to leave all of this information blank.
-  sudo adduser geonode
-
-  # The following command adds the user geonode to group sudo
-  sudo usermod -aG sudo geonode
-
-  # make sure the newly created user is allowed to login by ssh
-  # (out of the scope of this documentation) and switch to User geonode
-  su geonode
 
 .. _install_venv:
 
@@ -131,38 +111,22 @@ First of all we need to prepare a new Python Virtual Environment
 
 Since geonode needs a large number of different python libraries and packages, its recommended to use a python virtual environment to avoid conflicts on dependencies with system wide python packages and other installed software. See also documentation of `Virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/stable/>`_ package for more information
 
-.. warning:: GeoNode 3.x is not compatible with Python < 3.7
-    Check you current Python version with the following command
-
-    .. code-block:: shell
-
-        python --version
-    
-    If less than 3.7, please follow those additional steps below
-
-    .. code-block:: shell
-
-      which python3.8  # copy the path of python executable
-      # Create the GeoNode Virtual Environment (first time only)
-      source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-      # Use the python path from above
-      mkvirtualenv --python=/usr/local/bin/python3.8 geonode
-
-      Alterantively you can also create the virtual env like below
-      $ python3.8 -m venv /home/geonode/dev/.venvs/geonode
-      $ source /home/geonode/dev/.venvs/geonode/bin/activate
-
+.. note:: The GeoNode Virtual Environment must be created only the first time. You won't need to create it again everytime.
 
 .. code-block:: shell
 
-  # Create the GeoNode Virtual Environment (first time only)
-  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-  mkvirtualenv --python=/usr/bin/python3 geonode
+  which python3.8  # copy the path of python executable
 
-  Alterantively you can also create the virtual env like below
-  $ python3.8 -m venv /home/geonode/dev/.venvs/geonode
-  $ source /home/geonode/dev/.venvs/geonode/bin/activate
-  
+  # Create the GeoNode Virtual Environment (first time only)
+  export WORKON_HOME=~/.virtualenvs
+  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+  mkvirtualenv --python=/usr/bin/python3.8 geonode  # Use the python path from above
+
+  # Alterantively you can also create the virtual env like below
+  mkdir -p ~/.virtualenvs
+  python3.8 -m venv ~/.virtualenvs/geonode
+  source ~/.virtualenvs/geonode/bin/activate
+
 
 At this point your command prompt shows a ``(geonode)`` prefix, this indicates that your virtualenv is active.
 
@@ -173,46 +137,26 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     workon geonode
 
+    # Alterantively you can also create the virtual env like below
+    source ~/.virtualenvs/geonode/bin/activate
+
 .. note:: In order to save permanently the virtualenvwrapper environment
 
   .. code-block:: shell
 
-    nano ~/.bashrc
+    vim ~/.bashrc
 
     # Write to the bottom of the file the following lines
-    export WORKON_HOME=/home/geonode/.virtualenvs
+    export WORKON_HOME=~/.virtualenvs
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 .. code-block:: shell
 
   # Let's create the GeoNode core base folder and clone it
-  sudo mkdir -p /opt/geonode/
-  sudo usermod -a -G www-data geonode
-  sudo chown -Rf geonode:www-data /opt/geonode/
-  sudo chmod -Rf 775 /opt/geonode/
+  sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt
-  git clone https://github.com/GeoNode/geonode.git geonode
-
-.. warning:: If you have problems installing the Twisted dependencies
-
-    .. code-block:: shell
-
-        python --version
-    
-    If higher than 3.8.5, most probably there's no suitable version for your system.
-
-    Follow the instruction below to remove the dependencies
-
-    .. code-block:: shell
-
-        vim requirements.txt
-        # --> comment or remove Twisted
-
-        vim setup.cfg
-        # --> comment or remove Twisted
-
+  cd /opt; git clone https://github.com/GeoNode/geonode.git geonode
 
 .. code-block:: shell
 
@@ -220,26 +164,26 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   cd /opt/geonode
   pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
   pip install -e . --upgrade
-
-
-.. code-block:: shell
-
-  # Install GDAL Utilities for Python
   pip install pygdal=="`gdal-config --version`.*"
 
-Run GeoNode for the first time in DEBUG Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Test the GeoNode installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
 
   Be sure you have successfully completed all the steps of the section :ref:`install_dep`.
 
-This command will run both GeoNode and GeoServer locally after having prepared the SQLite database. The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, and it will start the following services:
+.. note::
+  This command will run both GeoNode and GeoServer locally after having prepared the **SQLite database**.
 
-#. GeoNode on ``http://localhost:8000/``
-#. GeoServer on ``http://localhost:8080/geoserver/``
+  **That way or running GeoNode is absolutely discouraged**. Nevertheless it is still usefull to double check you have been executed all the previous passages correctly.
 
-This modality is beneficial to debug issues and/or develop new features, but it cannot be used on a production system.
+The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, by running the following services:
+
+#. GeoNode at ``http://localhost:8000/``
+#. GeoServer at ``http://localhost:8080/geoserver/``
+
+.. warning:: This modality is beneficial to debug issues and/or develop new features, but it cannot be used on a production system.
 
 .. code-block:: shell
 
@@ -271,6 +215,12 @@ Sign-in with::
   user: admin
   password: admin
 
+Stop the server by running
+
+.. code-block:: shell
+
+  paver stop
+
 .. _configure_dbs_core:
 
 Postgis database Setup
@@ -292,12 +242,13 @@ In this section we are going to install the ``PostgreSQL`` packages along with t
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
-  sudo apt update
-  sudo apt install -y postgresql-11 postgresql-11-postgis-2.5 postgresql-11-postgis-2.5-scripts postgresql-contrib-11 postgresql-client-11
+  sudo apt update -y; sudo apt install -y postgresql-11 postgresql-11-postgis-2.5 postgresql-11-postgis-2.5-scripts postgresql-contrib-11 postgresql-client-11
 
 We now must create two databases, ``geonode`` and ``geonode_data``, belonging to the role ``geonode``.
 
-.. note:: This is our default configuration. You can use any database or role you need. The connection parameters must be correctly configured on ``settings``, as we will see later in this section.
+.. warning:: This is our default configuration.
+  You can use any database or role you need.
+  The connection parameters must be correctly configured on ``settings``, as we will see later in this section.
 
 Databases and Permissions
 .........................
@@ -306,9 +257,12 @@ First, create the geonode user. GeoNode is going to use this user to access the 
 
 .. code-block:: shell
 
+  sudo service postgresql start
   sudo -u postgres createuser -P geonode
 
-You will be prompted asked to set a password for the user. Enter ``geonode`` as password.
+  # Use the password: geonode
+
+You will be prompted asked to set a password for the user. **Enter geonode as password**.
 
 .. warning:: This is a sample password used for the sake of simplicity. This password is very **weak** and should be changed in a production environment.
 
@@ -323,6 +277,11 @@ Next let's create PostGIS extensions
 
 .. code-block:: shell
 
+  sudo -u postgres psql -d geonode -c 'CREATE EXTENSION postgis;'
+  sudo -u postgres psql -d geonode -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
+  sudo -u postgres psql -d geonode -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
+  sudo -u postgres psql -d geonode -c 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO geonode;'
+
   sudo -u postgres psql -d geonode_data -c 'CREATE EXTENSION postgis;'
   sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
   sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
@@ -334,13 +293,35 @@ Final step is to change user access policies for local connections in the file `
 
   sudo vim /etc/postgresql/11/main/pg_hba.conf
 
-Scroll down to the bottom of the document. We only need to edit one line.
+Scroll down to the bottom of the document. We want to make local connection ``trusted`` for the default user.
+
+Make sure your configuration looks like the one below.
 
 .. code-block:: shell
+  
+    ...
+    # DO NOT DISABLE!
+    # If you change this first entry you will need to make sure that the
+    # database superuser can access the database using some other method.
+    # Noninteractive access to all databases is required during automatic
+    # maintenance (custom daily cronjobs, replication, and similar tasks).
+    #
+    # Database administrative login by Unix domain socket
+    local   all             postgres                                trust
 
-  # "local" is for Unix domain socket connections only
-  # local   all             all                                     peer
-  local   all             all                                     trust
+    # TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+    # "local" is for Unix domain socket connections only
+    local   all             all                                     md5
+    # IPv4 local connections:
+    host    all             all             127.0.0.1/32            md5
+    # IPv6 local connections:
+    host    all             all             ::1/128                 md5
+    # Allow replication connections from localhost, by a user with the
+    # replication privilege.
+    local   replication     all                                     peer
+    host    replication     all             127.0.0.1/32            md5
+    host    replication     all             ::1/128                 md5
 
 .. warning:: If your ``PostgreSQL`` database resides on a **separate/remote machine**, you'll have to **allow** remote access to the databases in the ``/etc/postgresql/11/main/pg_hba.conf`` to the ``geonode`` user and tell PostgreSQL to **accept** non-local connections in your ``/etc/postgresql/11/main/postgresql.conf`` file
 
@@ -354,9 +335,16 @@ PostgreSQL is now ready. To test the configuration, try to connect to the ``geon
 
 .. code-block:: shell
 
-  psql -U geonode geonode
-  \q
+  psql -U postgres geonode
+  # This should not ask for any password
 
+  psql -U geonode geonode
+  # This should ask for the password geonode
+
+  # Repeat the test with geonode_data DB
+  psql -U postgres geonode_data
+  psql -U geonode geonode_data
+  
 
 Install GeoServer
 ^^^^^^^^^^^^^^^^^
@@ -370,6 +358,7 @@ When running the command ``paver start``, as we have seen before, the script run
     workon geonode
     cd /opt/geonode/
     paver stop
+    paver reset_hard
 
 This is not the optimal way to run ``GeoServer``. This is a fundamental component of ``GeoNode`` and we must be sure it is running on a stable and reliable manner.
 
@@ -382,83 +371,271 @@ We will also perform several optimizations to:
 
 .. note:: This is still a basic setup of those components. More details will be provided on sections of the documentation concerning the hardening of the system in a production environment. Nevertheless, you will need to tweak a bit those settings accordingly with your current system. As an instance, if your machine does not have enough memory, you will need to lower down the initial amount of available heap memory. **Warnings** and **notes** will be placed below the statements that will require your attention.
 
+**Install Apache Tomcat 9 (ref. https://yallalabs.com/linux/ubuntu/how-to-install-apache-tomcat-9-ubuntu-20-04/)**
+
+.. warning:: Apache Tomcat 9 requires Java 8 or newer to be installed on the server.
+  Check the steps before in order to be sure you have OpenJDK 8 correctly installed on your system.
+
+First, it is not recommended to run Apache Tomcat as user root, so we will create a new system user which will run the Apache Tomcat server
+
 .. code-block:: shell
 
-  # Install Openjdk
-  sudo -i apt update
-  sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
-  sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
-
-  # Check Java version
-  java -version
-    openjdk version "1.8.0_212"
-    OpenJDK Runtime Environment (build 1.8.0_212-8u212-b03-0ubuntu1.18.04.1-b03)
-    OpenJDK 64-Bit Server VM (build 25.212-b03, mixed mode)
-
-  # Install Apache Tomcat 8
-  sudo wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
-  sudo tar xzf apache-tomcat-8.5.58.tar.gz
-  sudo mv apache-tomcat-8.5.58 /usr/local/apache-tomcat8
-  sudo useradd -m -U -s /bin/false tomcat
-  sudo usermod -a -G www-data tomcat
-  sudo sed -i -e 's/xom-\*\.jar/xom-\*\.jar,bcprov\*\.jar/g' /usr/local/apache-tomcat8/conf/catalina.properties
-
-  export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
-  echo 'JAVA_HOME='$JAVA_HOME | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
-
-  # Add Tomcat user to www-data group !important!
+  sudo useradd -m -U -d /opt/tomcat -s /bin/bash tomcat
   sudo usermod -a -G www-data tomcat
 
-  sudo sh -c 'chmod +x /usr/local/apache-tomcat8/bin/*.sh'
-  sudo chown -Rf tomcat:www-data /usr/local/apache-tomcat8
-
-Let's create a system service to manage tomcat startup
+Now, go to the official Apache Tomcat `website <https://tomcat.apache.org/>`_ and download the most recent version of the software to your server.
 
 .. code-block:: shell
 
-  sudo vim /etc/systemd/system/tomcat.service
+  VERSION=9.0.39; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+
+
+Once the download is complete, extract the tar file to the /opt/tomcat directory:
 
 .. code-block:: shell
 
-  [Unit]
-  Description=Tomcat 8.5 servlet container
-  After=network.target
+  sudo tar -xf apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/; rm apache-tomcat-${VERSION}.tar.gz
 
-  [Service]
-  Type=forking
-
-  User=tomcat
-  Group=tomcat
-
-  Environment="JAVA_HOME=/usr/lib/jvm/default-java"
-  Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
-
-  Environment="CATALINA_BASE=/usr/local/apache-tomcat8"
-  Environment="CATALINA_HOME=/usr/local/apache-tomcat8"
-  Environment="CATALINA_PID=/usr/local/apache-tomcat8/temp/tomcat.pid"
-
-  ExecStart=/usr/local/apache-tomcat8/bin/startup.sh
-  ExecStop=/usr/local/apache-tomcat8/bin/shutdown.sh
-
-  [Install]
-  WantedBy=multi-user.target
-
-To test the service:
+Apache Tomcat is updated regulary. So, to have more control over versions and updates, we’ll create a symbolic link as below:
 
 .. code-block:: shell
 
-  sudo systemctl daemon-reload
-  sudo systemctl restart tomcat
-  sudo systemctl status tomcat.service
+  sudo ln -s /opt/tomcat/apache-tomcat-${VERSION} /opt/tomcat/latest
 
-To make it enabled by default
+Now, let’s change the ownership of all Apache Tomcat files as below:
 
 .. code-block:: shell
 
-  sudo systemctl enable tomcat
+  sudo chown -R tomcat:www-data /opt/tomcat/
 
-GeoServer Optimizations
-.......................
+Make the shell scripts inside the bin directory executable:
+
+.. code-block:: shell
+
+  sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
+
+Create the a systemd file with the following content:
+
+.. code-block:: shell
+
+  # Check the correct JAVA_HOME location
+  JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+  echo $JAVA_HOME
+    $> /usr/lib/jvm/java-8-openjdk-amd64/jre/
+
+  # Let's create a symbolic link to the JRE
+  sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/ /usr/lib/jvm/jre
+
+  # Let's create the tomcat service
+  sudo vim /etc/init.d/tomcat9
+
+.. code-block:: bash
+
+  #!/bin/bash
+
+  ### BEGIN INIT INFO
+  # Provides:             tomcat9
+  # Required-Start:       $local_fs $remote_fs $network $time
+  # Required-Stop:        $local_fs $remote_fs $network $time
+  # Should-Start:         $syslog
+  # Should-Stop:          $syslog
+  # Default-Start:        2 3 4 5
+  # Default-Stop:         0 1 6
+  # Short-Description:    Apache Tomcat init script
+  ### END INIT INFO
+
+  #Location of JAVA_HOME (bin files)
+  export JAVA_HOME=/usr/lib/jvm/jre
+  export JAVA_OPTS=-Djava.security.egd=file:///dev/urandom
+
+  #Add Java binary files to PATH
+  export PATH=$JAVA_HOME/bin:$PATH
+
+  #CATALINA_HOME is the location of the bin files of Tomcat
+  export CATALINA_HOME=/opt/tomcat/latest
+
+  #CATALINA_BASE is the location of the configuration files of this instance of Tomcat
+  export CATALINA_BASE=/opt/tomcat/latest
+  export CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid
+
+  #TOMCAT_USER is the default user of tomcat
+  export TOMCAT_USER=tomcat
+
+  #TOMCAT_USAGE is the message if this script is called without any options
+  TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;31mkill\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
+
+  #SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
+  SHUTDOWN_WAIT=20
+
+  tomcat_pid() {
+          echo `ps -fe | grep $CATALINA_BASE | grep -v grep | tr -s " "|cut -d" " -f2`
+  }
+
+  start() {
+    pid=$(tomcat_pid)
+    if [ -n "$pid" ]
+    then
+      echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
+    else
+      # Start tomcat
+      echo -e "\e[00;32mStarting tomcat\e[00m"
+      #ulimit -n 100000
+      #umask 007
+      #/bin/su -p -s /bin/sh $TOMCAT_USER
+          if [ `user_exists $TOMCAT_USER` = "1" ]
+          then
+                  /bin/su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
+          else
+                  echo -e "\e[00;31mTomcat user $TOMCAT_USER does not exists. Starting with $(id)\e[00m"
+                  sh $CATALINA_HOME/bin/startup.sh
+          fi
+          status
+    fi
+    return 0
+  }
+
+  status(){
+            pid=$(tomcat_pid)
+            if [ -n "$pid" ]
+              then echo -e "\e[00;32mTomcat is running with pid: $pid\e[00m"
+            else
+              echo -e "\e[00;31mTomcat is not running\e[00m"
+              return 3
+            fi
+  }
+
+  terminate() {
+          echo -e "\e[00;31mTerminating Tomcat\e[00m"
+          kill -9 $(tomcat_pid)
+  }
+
+  stop() {
+    pid=$(tomcat_pid)
+    if [ -n "$pid" ]
+    then
+      echo -e "\e[00;31mStoping Tomcat\e[00m"
+      #/bin/su -p -s /bin/sh $TOMCAT_USER
+          sh $CATALINA_HOME/bin/shutdown.sh
+
+      let kwait=$SHUTDOWN_WAIT
+      count=0;
+      until [ `ps -p $pid | grep -c $pid` = '0' ] || [ $count -gt $kwait ]
+      do
+        echo -n -e "\n\e[00;31mwaiting for processes to exit\e[00m";
+        sleep 1
+        let count=$count+1;
+      done
+
+      if [ $count -gt $kwait ]; then
+        echo -n -e "\n\e[00;31mkilling processes didn't stop after $SHUTDOWN_WAIT seconds\e[00m"
+        terminate
+      fi
+    else
+      echo -e "\e[00;31mTomcat is not running\e[00m"
+    fi
+
+    return 0
+  }
+
+  user_exists(){
+          if id -u $1 >/dev/null 2>&1; then
+          echo "1"
+          else
+                  echo "0"
+          fi
+  }
+
+  case $1 in
+          start)
+            start
+          ;;
+          stop)
+            stop
+          ;;
+          restart)
+            stop
+            start
+          ;;
+          status)
+                  status
+                  exit $?
+          ;;
+          kill)
+                  terminate
+          ;;
+          *)
+                  echo -e $TOMCAT_USAGE
+          ;;
+  esac
+  exit 0
+
+Now you can start the Apache Tomcat 9 server and enable it to start on boot time using the following command:
+
+.. code-block:: shell
+
+  sudo chmod +x /etc/init.d/tomcat9
+  sudo service tomcat9 start
+
+For verification, type the following ss command, which will show you the 8080 open port number, the default open port reserved for Apache Tomcat Server.
+
+.. code-block:: shell
+
+  ss -ltn
+
+If your server is protected by a firewall and you want to access Tomcat from the outside of your local network, you need to open port 8080.
+
+Use the following command to open the necessary port:
+
+.. code-block:: shell
+
+  sudo ufw allow 8080/tcp
+
+.. warning:: Generally, when running Tomcat in a production environment, you should use a load balancer or reverse proxy.
+  
+  It’s a best practice to allow access to port ``8080`` only from your internal network.
+
+  We will use ``NGINX`` in order to provide Apache Tomcat through the standard ``HTTP`` port.
+
+.. note:: Alternatively you can define the Tomcat Service as follow, in case you would like to use ``systemctl``
+
+  .. code-block:: shell
+
+    sudo vim /usr/lib/systemd/system/tomcat9.service
+
+  .. code-block:: ini
+
+    [Unit]
+    Description=Apache Tomcat Server
+    After=syslog.target network.target
+
+    [Service]
+    Type=forking
+    User=tomcat
+    Group=tomcat
+
+    Environment=JAVA_HOME=/usr/lib/jvm/jre
+    Environment=JAVA_OPTS=-Djava.security.egd=file:///dev/urandom
+    Environment=CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid
+    Environment=CATALINA_HOME=/opt/tomcat/latest
+    Environment=CATALINA_BASE=/opt/tomcat/latest
+
+    ExecStart=/opt/tomcat/latest/bin/startup.sh
+    ExecStop=/opt/tomcat/latest/bin/shutdown.sh
+
+    RestartSec=30
+    Restart=always
+
+    [Install]
+    WantedBy=multi-user.target
+
+  .. code-block:: shell
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable tomcat9.service
+    sudo systemctl start tomcat9.service
+
+Install GeoServer on Tomcat9
+............................
 
 Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
 
@@ -466,10 +643,10 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
 
   # Create the target folders
   sudo mkdir -p /opt/data
-  sudo chown -Rf geonode:www-data /opt/data
+  sudo chown -Rf $USER:www-data /opt/data
   sudo chmod -Rf 775 /opt/data
   sudo mkdir -p /opt/data/logs
-  sudo chown -Rf geonode:www-data /opt/data/logs
+  sudo chown -Rf $USER:www-data /opt/data/logs
   sudo chmod -Rf 775 /opt/data/logs
 
   # Download and extract the default GEOSERVER_DATA_DIR
@@ -490,23 +667,27 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
 
   # Download and install GeoServer
   sudo wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/latest/geoserver-2.17.2.war
-  sudo mv geoserver-2.17.2.war /usr/local/apache-tomcat8/webapps/geoserver.war
+  sudo mv geoserver-2.17.2.war /opt/tomcat/latest/webapps/geoserver.war
 
 Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Container, like heap memory, garbage collector and so on.
 
 .. code-block:: shell
 
-  sudo sed -i -e "s/JAVA_OPTS=/#JAVA_OPTS=/g" /usr/local/apache-tomcat8/bin/setenv.sh
+  sudo sed -i -e 's/xom-\*\.jar/xom-\*\.jar,bcprov\*\.jar/g' /opt/tomcat/latest/conf/catalina.properties
 
-  echo 'GEOSERVER_DATA_DIR="/opt/data/geoserver_data"' | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
-  echo 'GEOSERVER_LOG_LOCATION="/opt/data/geoserver_logs/geoserver.log"' | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
-  echo 'GEOWEBCACHE_CACHE_DIR="/opt/data/gwc_cache_dir"' | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
-  echo 'GEOFENCE_DIR="$GEOSERVER_DATA_DIR/geofence"' | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
-  echo 'TIMEZONE="UTC"' | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
+  export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+  echo 'JAVA_HOME='$JAVA_HOME | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
+  sudo sed -i -e "s/JAVA_OPTS=/#JAVA_OPTS=/g" /opt/tomcat/latest/bin/setenv.sh
 
-  echo 'JAVA_OPTS="-server -Djava.awt.headless=true -Dorg.geotools.shapefile.datetime=false -XX:+UseParallelGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Duser.timezone=$TIMEZONE -Xms512m -Xmx4096m -Djavax.servlet.request.encoding=UTF-8 -Djavax.servlet.response.encoding=UTF-8 -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf -DGEOSERVER_DATA_DIR=$GEOSERVER_DATA_DIR -Dgeofence.dir=$GEOFENCE_DIR -DGEOSERVER_LOG_LOCATION=$GEOSERVER_LOG_LOCATION -DGEOWEBCACHE_CACHE_DIR=$GEOWEBCACHE_CACHE_DIR"' | sudo tee --append /usr/local/apache-tomcat8/bin/setenv.sh
+  echo 'GEOSERVER_DATA_DIR="/opt/data/geoserver_data"' | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
+  echo 'GEOSERVER_LOG_LOCATION="/opt/data/geoserver_logs/geoserver.log"' | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
+  echo 'GEOWEBCACHE_CACHE_DIR="/opt/data/gwc_cache_dir"' | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
+  echo 'GEOFENCE_DIR="$GEOSERVER_DATA_DIR/geofence"' | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
+  echo 'TIMEZONE="UTC"' | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
 
-.. note:: After the execution of the above statements, you should be able to see the new options written at the bottom of the file ``/usr/local/apache-tomcat8/bin/setenv.sh``.
+  echo 'JAVA_OPTS="-server -Djava.awt.headless=true -Dorg.geotools.shapefile.datetime=false -XX:+UseParallelGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Duser.timezone=$TIMEZONE -Xms512m -Xmx4096m -Djavax.servlet.request.encoding=UTF-8 -Djavax.servlet.response.encoding=UTF-8 -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf -DGEOSERVER_DATA_DIR=$GEOSERVER_DATA_DIR -Dgeofence.dir=$GEOFENCE_DIR -DGEOSERVER_LOG_LOCATION=$GEOSERVER_LOG_LOCATION -DGEOWEBCACHE_CACHE_DIR=$GEOWEBCACHE_CACHE_DIR"' | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
+
+.. note:: After the execution of the above statements, you should be able to see the new options written at the bottom of the file ``/opt/tomcat/latest/bin/setenv.sh``.
 
   .. code-block:: shell
 
@@ -532,9 +713,7 @@ In order to make the changes effective, you'll need to restart the Servlet Conta
 .. code-block:: shell
 
   # Restart the server
-  sudo systemctl daemon-reload
-  sudo systemctl restart tomcat
-  sudo systemctl status tomcat.service
+  sudo service tomcat9 restart
 
   # Follow the startup logs
   sudo tail -F -n 300 /opt/data/geoserver_logs/geoserver.log
@@ -578,7 +757,7 @@ Your ``GeoServer`` should be up and running at
 
   .. code-block:: shell
 
-    sudo less /usr/local/apache-tomcat8/logs/catalina.out
+    sudo less /opt/tomcat/latest/logs/catalina.out
 
 It is possible to test the new running ``GeoServer`` with the ``GeoNode`` paver service (``DEBUG`` mode). To do that
 
@@ -586,9 +765,13 @@ It is possible to test the new running ``GeoServer`` with the ``GeoNode`` paver 
 
   workon geonode
   cd /opt/geonode/
+  paver setup
+  paver sync
   paver start_django
 
-.. warning:: The ``paver reset`` command from now on **won't** clean up ``GeoServer`` and its catalog anymore. Therefore, every data uploaded during those tests will remain on ``GeoServer`` even if ``GeoNode`` will be reset.
+.. note:: The ``paver reset`` command from now on **won't** clean up ``GeoServer`` and its catalog anymore.
+  
+    Therefore, every data uploaded during those tests will remain on ``GeoServer`` even if ``GeoNode`` will be reset.
 
 Web Server
 ^^^^^^^^^^
@@ -626,71 +809,100 @@ Serving {“geonode”, “geoserver”} via NGINX
   # Create the GeoNode UWSGI config
   sudo vim /etc/uwsgi/apps-available/geonode.ini
 
-.. code-block:: shell
+.. warning:: **!IMPORTANT!**
+
+    Change the line ``virtualenv = /home/<my_user>/.virtualenvs/geonode`` below with your current user home directory!
+
+    e.g.: If the user is ``afabiani`` then ``virtualenv = /home/afabiani/.virtualenvs/geonode``
+
+.. code-block:: ini
 
   [uwsgi]
-  socket = 0.0.0.0:8000
-  uid = geonode
+  uwsgi-socket = 0.0.0.0:8000
+  # http-socket = 0.0.0.0:8000
+
   gid = www-data
 
   plugins = python3
-  virtualenv = /home/geonode/.virtualenvs/geonode
+  virtualenv = /home/<my_user>/.virtualenvs/geonode
+
   env = DEBUG=False
-  env = DJANGO_SETTINGS_MODULE=geonode.settings
+
+  env = DJANGO_SETTINGS_MODULE=geonode.local_settings
+
   env = SECRET_KEY='RanD0m%3cr3tK3y'
+
   env = SITE_HOST_NAME=localhost
   env = SITEURL=http://localhost/
+  env = ALLOWED_HOSTS=['localhost',]
+
   env = LOCKDOWN_GEONODE=False
   env = SESSION_EXPIRED_CONTROL_ENABLED=True
-  env = FORCE_SCRIPT_NAME=
-  env = EMAIL_ENABLE=False
-  env = DJANGO_EMAIL_HOST_USER=
-  env = DJANGO_EMAIL_HOST_PASSWORD=
-  env = DJANGO_EMAIL_HOST=localhost
-  env = DJANGO_EMAIL_PORT=25
-  env = DJANGO_EMAIL_USE_TLS=False
-  env = DJANGO_EMAIL_USE_SSL=False
-  env = DEFAULT_FROM_EMAIL=GeoNode <no-reply@localhost>
-  env = MONITORING_ENABLED=True
+
+  env = MONITORING_ENABLED=False
+
+  env = ADMIN_USERNAME=admin
+  env = ADMIN_PASSWORD=admin
+  env = ADMIN_EMAIL=admin@localhost
+
   env = GEOSERVER_PUBLIC_HOST=localhost
   env = GEOSERVER_PUBLIC_PORT=
   env = GEOSERVER_ADMIN_PASSWORD=geoserver
+
   env = GEOSERVER_LOCATION=http://localhost/geoserver/
   env = GEOSERVER_PUBLIC_LOCATION=http://localhost/geoserver/
   env = GEOSERVER_WEB_UI_LOCATION=http://localhost/geoserver/
-  env = RESOURCE_PUBLISHING=False
-  env = ADMIN_MODERATE_UPLOADS=False
-  env = GROUP_PRIVATE_RESOURCES=False
-  env = GROUP_MANDATORY_RESOURCES=False
+
   env = OGC_REQUEST_TIMEOUT=60
   env = OGC_REQUEST_MAX_RETRIES=3
   env = OGC_REQUEST_POOL_MAXSIZE=100
   env = OGC_REQUEST_POOL_CONNECTIONS=100
-  env = EXIF_ENABLED=True
-  env = CREATE_LAYER=False
-  env = FAVORITE_ENABLED=True
+
+  logto = /opt/data/logs/geonode.log
+  pidfile = /tmp/geonode.pid
 
   chdir = /opt/geonode
   module = geonode.wsgi:application
 
-  processes = 4
-  threads = 2
-  enable-threads = true
+  strict = false
   master = true
+  enable-threads = true
+  vacuum = true                        ; Delete sockets during shutdown
+  single-interpreter = true
+  die-on-term = true                   ; Shutdown when receiving SIGTERM (default is respawn)
+  need-app = true
 
   # logging
   # path to where uwsgi logs will be saved
-  logto = /opt/data/logs/geonode.log
+  # logto = /opt/data/geonode_logs/geonode.log
+
   daemonize = /opt/data/logs/geonode.log
   touch-reload = /opt/geonode/geonode/wsgi.py
   buffer-size = 32768
-  max-requests = 500
-  harakiri = 300 # respawn processes taking more than 5 minutes (300 seconds)
-  max-requests = 500 # respawn processes after serving 5000 requests
-  # limit-as = 1024 # avoid Errno 12 cannot allocate memory
-  harakiri-verbose = true
-  vacuum = true
-  thunder-lock = true
+
+  harakiri = 60                        ; forcefully kill workers after 60 seconds
+  py-callos-afterfork = true           ; allow workers to trap signals
+
+  max-requests = 1000                  ; Restart workers after this many requests
+  max-worker-lifetime = 3600           ; Restart workers after this many seconds
+  reload-on-rss = 2048                 ; Restart workers after this much resident memory
+  worker-reload-mercy = 60             ; How long to wait before forcefully killing workers
+  
+  cheaper-algo = busyness
+  processes = 128                      ; Maximum number of workers allowed
+  cheaper = 8                          ; Minimum number of workers allowed
+  cheaper-initial = 16                 ; Workers created at startup
+  cheaper-overload = 1                 ; Length of a cycle in seconds
+  cheaper-step = 16                    ; How many workers to spawn at a time
+
+  cheaper-busyness-multiplier = 30     ; How many cycles to wait before killing workers
+  cheaper-busyness-min = 20            ; Below this threshold, kill workers (if stable for multiplier cycles)
+  cheaper-busyness-max = 70            ; Above this threshold, spawn new workers
+  cheaper-busyness-backlog-alert = 16  ; Spawn emergency workers if more than this many requests are waiting in the queue
+  cheaper-busyness-backlog-step = 2    ; How many emergency workers to create if there are too many requests in the queue
+
+  # daemonize = /var/log/uwsgi/geonode.log
+  # cron = -1 -1 -1 -1 -1 /usr/local/bin/python /usr/src/{{project_name}}/manage.py collect_metrics -n
 
 .. code-block:: shell
 
@@ -840,44 +1052,21 @@ Serving {“geonode”, “geoserver”} via NGINX
 
 .. code-block:: shell
 
+  # Prepare the uploaded folder
+  sudo mkdir -p /opt/geonode/geonode/uploaded
+  sudo chown -Rf tomcat:www-data /opt/geonode/geonode/uploaded
+  sudo chmod -Rf 777 /opt/geonode/geonode/uploaded/
+
+  sudo touch /opt/geonode/geonode/.celery_results
+  sudo chmod 777 /opt/geonode/geonode/.celery_results
+
   # Enable GeoNode NGINX config
   sudo ln -s /etc/nginx/sites-available/geonode /etc/nginx/sites-enabled/geonode
 
   # Restart the services
-  sudo systemctl restart tomcat
+  sudo service tomcat9 restart
   sudo service nginx restart
 
-Refresh ``GeoNode`` static data
-
-.. code-block:: shell
-
-  workon geonode
-  cd /opt/geonode
-  python manage.py collectstatic --no-input
-
-
-Refresh ``GeoNode`` and ``GeoServer`` **OAuth2** settings
-
-.. code-block:: shell
-
-  workon geonode
-  cd /opt/geonode
-
-  # This must be done the first time only
-  sudo cp package/support/geonode.binary /usr/bin/geonode
-  sudo cp package/support/geonode.updateip /usr/bin/geonode_updateip
-  sudo chmod +x /usr/bin/geonode
-  sudo chmod +x /usr/bin/geonode_updateip
-  pip install -e git+https://github.com/justquick/django-activity-stream.git#egg=django-activity-stream
-
-  # Update the GeoNode ip or hostname
-  sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.settings GEONODE_ETC=/opt/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -p localhost
-
-The ``GeoNode`` service should now run on ``http://localhost/``
-
-The ``GeoServer`` service should now run on ``http://localhost/geoserver/``
-
-You should be able to login with the default user ``admin`` (pwd ``admin``) and upload your layers.
 
 Update the settings in order to use the ``PostgreSQL`` Database
 ...............................................................
@@ -895,7 +1084,7 @@ Update the settings in order to use the ``PostgreSQL`` Database
   # sudo sed -i -e "s/'PASSWORD': 'geonode',/'PASSWORD': '<your_db_role_password>',/g" geonode/local_settings.py
 
   # Stop Tomcat
-  sudo systemctl stop tomcat
+  sudo service tomcat9 stop
 
   # Initialize GeoNode
   DJANGO_SETTINGS_MODULE=geonode.local_settings paver reset
@@ -905,28 +1094,43 @@ Update the settings in order to use the ``PostgreSQL`` Database
 
 Before finalizing the configuration we will need to update the ``UWSGI`` settings
 
-.. code-block:: shell
-
-  sudo vim /etc/uwsgi/apps-enabled/geonode.ini
-
-Change ``geonode.settings`` to ``geonode.local_settings``
-
-.. code-block:: shell
-
-  :%s/geonode.settings/geonode.local_settings/g
-  :wq
-
 Restart ``UWSGI`` and update ``OAuth2`` by using the new ``geonode.local_settings``
 
 .. warning:: **!IMPORTANT!** In the statement below make sure to use ``DJANGO_SETTINGS_MODULE=geonode.local_settings``
 
 .. code-block:: shell
 
+  # Restart Tomcat
+  sudo service tomcat9 restart
+
   # Restart UWSGI
-  sudo service uwsgi restart
+  sudo killall /usr/bin/uwsgi
+  sudo service uwsgi start
 
   # Update the GeoNode ip or hostname
-  sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -p localhost
+  cd /opt/geonode
+
+  # This must be done the first time only
+  sudo cp package/support/geonode.binary /usr/bin/geonode
+  sudo cp package/support/geonode.updateip /usr/bin/geonode_updateip
+  sudo chmod +x /usr/bin/geonode
+  sudo chmod +x /usr/bin/geonode_updateip
+
+  # Refresh GeoNode and GeoServer OAuth2 settings
+  sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -p localhost
+
+Check for any error with
+
+.. code-block:: shell
+
+  sudo tail -F -n 300 /var/log/uwsgi/app/geonode.log
+
+Reload the UWSGI configuration with
+
+.. code-block:: shell
+
+  touch /opt/geonode/geonode/wsgi.py
+
 
 Update the settings in order to update GeoNode and GeoServer services running on a public IP or hostname
 ........................................................................................................
@@ -970,7 +1174,7 @@ In particular the steps to do are:
     cd /opt/geonode
 
     # Update the GeoNode ip or hostname
-    sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+    sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
 
 4. Update the existing ``GeoNode`` links in order to hit the new hostname.
 

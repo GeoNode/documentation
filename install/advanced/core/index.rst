@@ -156,7 +156,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.x geonode
 
 .. code-block:: shell
 
@@ -1297,7 +1297,7 @@ Python Setup
 .. code-block:: shell
 
     cd your/working/directory
-    git clone https://github.com/GeoNode/geonode.git
+    git clone https://github.com/GeoNode/geonode.git -b 3.x
     
 Installation of Gdal
 ^^^^^^^^^^^^^^^^^^^^
@@ -1435,7 +1435,7 @@ Docker
 In this section we are going to list the passages needed to:
 
 1. Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host
-2. Deploy a vanilla ``GeoNode 3.0`` with ``Docker``
+2. Deploy a vanilla ``GeoNode 3.1`` with ``Docker``
 
   a. Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``
   b. Access the ``django4geonode`` Docker image to update the code-base and/or change internal settings
@@ -1456,7 +1456,7 @@ Logout and login again on shell and then execute:
 
   docker run -it hello-world
 
-Deploy a vanilla GeoNode 3.0 with Docker
+Deploy a vanilla GeoNode 3.1 with Docker
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
@@ -1471,7 +1471,7 @@ Clone the Project
 
   # Clone the GeoNode source code on /opt/geonode
   cd /opt
-  git clone https://github.com/GeoNode/geonode.git geonode
+  git clone https://github.com/GeoNode/geonode.git -b 3.x geonode
 
 Start the Docker instances on ``localhost``
 

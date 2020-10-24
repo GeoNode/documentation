@@ -178,7 +178,7 @@ To download the latest geonode version from github, the command "git clone" is u
 
 .. code-block:: shell
     
-    $ git clone https://github.com/GeoNode/geonode.git
+    $ git clone https://github.com/GeoNode/geonode.git -b 3.x
 
 Install Nodejs PPA and other tools required for static development
 
@@ -379,7 +379,7 @@ If you didn't install GeoNode-Core earlier and you wanted to install GeoNode-Pro
 
 .. code-block:: shell
 
-    $ git clone https://github.com/GeoNode/geonode-project.git
+    $ git clone https://github.com/GeoNode/geonode-project.git -b 3.x
 
 
 3- Install Django framework as follows

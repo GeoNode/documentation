@@ -104,7 +104,7 @@ GeoNode Installation
 
 This is the most basic installation of GeoNode. It won't use any external server like ``Apache Tomcat``, ``PostgreSQL`` or ``HTTPD``.
 
-It will run locally against a file-system based ``SQLite`` database.
+It will run locally against a file-system based ``Spatialite`` database.
 
 
 First of all we need to prepare a new Python Virtual Environment
@@ -174,7 +174,7 @@ Test the GeoNode installation
   Be sure you have successfully completed all the steps of the section :ref:`install_dep`.
 
 .. note::
-  This command will run both GeoNode and GeoServer locally after having prepared the **SQLite database**.
+  This command will run both GeoNode and GeoServer locally after having prepared the **Spatialite database**.
 
   **That way or running GeoNode is absolutely discouraged**. Nevertheless it is still usefull to double check you have been executed all the previous passages correctly.
 
@@ -187,7 +187,7 @@ The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, by running the fol
 
 .. code-block:: shell
 
-  # Prepare the GeoNode SQLite database (the first time only)
+  # Prepare the GeoNode Spatialite database (the first time only)
   paver setup
   paver sync
 
@@ -1360,7 +1360,7 @@ invoke==1.4.1
 
 .. code-block:: shell
 
-    # Prepare the GeoNode SQLite database (the first time only)
+    # Prepare the GeoNode Spatialite database (the first time only)
     paver setup
     paver sync
     python manage.py runserver

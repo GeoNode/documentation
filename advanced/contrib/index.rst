@@ -215,7 +215,7 @@ and the ``/opt/geonode/my-geonode/.env`` is something similar to the following o
 
     DEBUG=False
     DJANGO_ALLOWED_HOSTS=<geonode_public_host>,localhost,127.0.0.1
-    DJANGO_DATABASE_URL=postgresql://my_geonode:**********@localhost:5432/my_geonode_db
+    DJANGO_DATABASE_URL=postgis://my_geonode:**********@localhost:5432/my_geonode_db
     DEFAULT_BACKEND_UPLOADER=geonode.importer
     DEFAULT_FROM_EMAIL=geonode@example.org
     DJANGO_EMAIL_HOST=smtp.example.org
@@ -482,13 +482,13 @@ invocation polling (so the time range on which data should be aggregated).
 
 Other settings come with a default value:
 
-* **Db path** --> the local SQLite database to cache events between emitting and transmission to the Logstash server (log events are cached even across process restarts and crashes);
+* **Db path** --> the local Spatialite database to cache events between emitting and transmission to the Logstash server (log events are cached even across process restarts and crashes);
 * **Socket timeout** --> timeout in seconds for TCP connections;
 * **Queue check interval** --> interval in seconds to check the internal queue for new messages to be cached in the database;
 * **Queue events flush interval** --> interval in seconds to send cached events from the database to Logstash;
 * **Queue events flush count** --> count of cached events to send from the database to Logstash;
 * **Queue events batch size** --> maximum number of events to be sent to Logstash in one batch;
-* **Logstash db timeout** --> timeout in seconds to 'connect' the SQLite database.
+* **Logstash db timeout** --> timeout in seconds to 'connect' the Spatialite database.
 
 To better understand what these variables mean, it is recommended to read the `python-logstash-async options for the asynchronous processing and formatting <https://python-logstash-async.readthedocs.io/en/stable/config.html#options-for-the-asynchronous-processing-and-formatting>`_.
 

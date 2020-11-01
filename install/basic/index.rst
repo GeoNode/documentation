@@ -247,9 +247,9 @@ In the case you would like to deploy to, let's say, :guilabel:`https://my_geonod
     +GEONODE_GEODATABASE=my_geonode_data
     GEONODE_GEODATABASE_PASSWORD=geonode
     
-    -DATABASE_URL=postgres://{{project_name}}:geonode@db:5432/{{project_name}}
+    -DATABASE_URL=postgis://{{project_name}}:geonode@db:5432/{{project_name}}
     -GEODATABASE_URL=postgis://{{project_name}}_data:geonode@db:5432/{{project_name}}_data
-    +DATABASE_URL=postgres://my_geonode:geonode@db:5432/my_geonode
+    +DATABASE_URL=postgis://my_geonode:geonode@db:5432/my_geonode
     +GEODATABASE_URL=postgis://my_geonode_data:geonode@db:5432/my_geonode_data
     DEFAULT_BACKEND_DATASTORE=datastore
     BROKER_URL=amqp://guest:guest@rabbitmq:5672/

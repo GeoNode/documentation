@@ -1,3 +1,5 @@
+.. _geonode-project-basic:
+
 ==========================
 GeoNode Basic Installation
 ==========================
@@ -25,7 +27,7 @@ First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
 Ubuntu (18.0 +)
 ^^^^^^^^^^^^^^^
 
-.. note:: Recommended version 18.0.4 or higher.
+.. note:: Recommended version 18.0.4 (Bionic Beaver). 
 
 Packages Installation
 .....................
@@ -38,10 +40,13 @@ Login to the target machine and execute the following commands:
   sudo apt install -y gdal-bin
   sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
   sudo apt install -y libxml2 libxml2-dev gettext
-  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev libgdal20
+  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev
   sudo apt install -y software-properties-common build-essential
   sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
   sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
+
+  # If the following does not work, you can skip it
+  sudo apt install -y libgdal20
 
 Docker Setup (First time only)
 ..............................
@@ -87,8 +92,11 @@ Login to the target machine and execute the following commands:
   sudo pip3 install -U pip
   sudo pip3 install -U virtualenv
   sudo yum install -y libxml2 libxml2-dev gettext
-  sudo yum install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev libgdal20
+  sudo yum install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev
   sudo yum install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
+
+  # If the following does not work, you can skip it
+  sudo apt install -y libgdal20
 
 Docker Setup (First time only)
 ..............................
@@ -118,6 +126,11 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
   # Ubuntu
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
   mkvirtualenv --python=/usr/bin/python3 my_geonode
+
+  Alterantively you can also create the virtual env like below
+  python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
+  source /home/geonode/dev/.venvs/my_geonode/bin/activate
+
   pip install Django==2.2.12
 
   # CentOS
@@ -423,6 +436,13 @@ If for some reason you are not able to reach the server on the :guilabel:`HTTPS`
       2020/06/24 10:00:11 [notice] 112#112: signal process started
       /etc/nginx# exit
 
+6. It may be helpful to disable https to isolate the source of errors. After reverting the HTTPS-related changes in the `.env` file, repeat the above steps and ensure that the ``nginx.http.enabled.conf`` link has been correctly created.
+
+    .. code-block:: shell
+    
+      ln -s nginx.conf nginx.http.enabled.conf
+      nano nginx.http.enabled.conf
+
 Third Step: Customize :guilabel:`.env` to match your needs
 ===========================================================
 
@@ -636,7 +656,7 @@ The variable ``GEOSERVER_JAVA_OPTS`` allows you to tune-up the GeoServer contain
         -XX:SoftRefLRUPolicyMSPerMB=36000 -XX:-UseGCOverheadLimit -XX:+UseConcMarkSweepGC 
         -XX:+UseParNewGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Djavax.servlet.request.encoding=UTF-8 
         -Djavax.servlet.response.encoding=UTF-8 -Duser.timezone=GMT 
-        -Dorg.geotools.shapefile.datetime=false -DGEOSERVER_CSRF_DISABLED=true
+        -Dorg.geotools.shapefile.datetime=false -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf
 
 ``-Djava.awt.headless (true)``
 

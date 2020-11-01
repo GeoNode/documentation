@@ -115,6 +115,50 @@ It is possible to optionally **hide** the ``Jumbotron text`` and/or the ``Call t
 
     *Hide Jumbotron text and Call to action button*
 
+Slide show
+^^^^^^^^^^
+To switch between a slide show and a jumbotron, flip the value of the welcome theme from "slide show" to "jumbotron" and vice versa to either display a jumbotron with a "get started" link or a slide show in the home page
+
+For example, to display a slide show, change the welcome theme from jumbotron background
+
+.. figure:: img/theming/theme-def-0007a.png
+    :align: center
+
+to slide show
+
+.. figure:: img/theming/theme-def-0007b.png
+    :align: center
+
+Before creating a slide show, make sure you have slides to select from (in the multi-select widget) to make up the slide show.
+
+.. figure:: img/theming/theme-def-0007c.png
+    :align: center
+
+If no slides exist, click the plus (+) button beside the slide show multi-select widget to add a new slide.
+
+.. figure:: img/theming/theme-def-0007d.png
+    :align: center
+
+Fill in the slide name, slide content using markdown formatting, and upload a slide image (the image that will be displayed when the slide is in view).
+
+.. figure:: img/theming/theme-def-0007e.png
+    :align: center
+
+For slide images that already contain text, hide slide content by checking the checkbox labeled "Hide text in the jumbotron slide" as shown below, then save the slide.
+
+.. figure:: img/theming/theme-def-0007f.png
+    :align: center
+
+It is also possible to hide a slide from all slide show themes that use it by unchecking the checkbox labeled "Is enabled" as shown below.
+
+.. figure:: img/theming/theme-def-0007g.png
+    :align: center
+
+Selecting the above slide in a slide show and enabling slide show (using the "welcome theme" configuration) will create a slide show with a slide as shown below:
+
+.. figure:: img/theming/theme-def-0007h.png
+    :align: center
+
 Copyright and contact info footer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -602,16 +646,27 @@ You have to tweak the GeoNode settings accordingly.
 
 Please see the details of the following GeoNode ``Settings``:
 
+* `RESOURCE_PUBLISHING <../../basic/settings/index.html#resource-publishing>`_
+
 * `ADMIN_MODERATE_UPLOADS <../../basic/settings/index.html#admin-moderate-uploads>`_
 
 * `GROUP_PRIVATE_RESOURCES <../../basic/settings/index.html#group-private-resources>`_
 
-* `RESOURCE_PUBLISHING <../../basic/settings/index.html#resource-publishing>`_
+Summarizing, when all the options above of the Advanced Workflow are enabled, upon a new upload we will have:
+
+ - The **"unpublished"** resources will be **hidden** to **anonymous users only**. The **registered users** will be still able to access the resources (if they have the rights to do that, of course).
+
+ - The **"unpublished"** resources will remain hidden to users if the permission (see *Admin Guide section: 'Manage Permissions'*) will be explicitly removed
+
+ - During the upload, whenever the advanced workflow is enabled, the **owner's Groups** are automatically allowed to access the resource, even if the **"anonymous"** flag has been disabled. Those permissions can be removed later on
+
+ - During the upload, **"managers"** of the owner's Groups associated to the resource, are always allowed to edit the resource, the same as they are admin for that resource
+
+ - **"managers"** of the owner's Groups associated to the resource are allowed to **"publish"** also the resources, not only to **"approve"** them
 
 
-Change in owner rights in case of advanced workflow is on
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+Change the owner rights in case of advanced workflow is on
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 After switching ``ADMIN_MODERATE_UPLOADS`` to True and resource is approved owner is no longer able
 to modify it. He will see new button on the resource detail page: Request change. After clicking this, view with short
 form is shown.

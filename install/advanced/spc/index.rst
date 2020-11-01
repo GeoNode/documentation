@@ -1,3 +1,5 @@
+.. _spc-geonode:
+
 ==========
 SPCGeoNode
 ==========

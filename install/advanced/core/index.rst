@@ -1779,6 +1779,14 @@ suggested below:
 
         *OAuth2 Service Parameters*
 
+18. Using `letsencrypt`
+^^^^^^^^^^^^^^^^^^^^^^^
+
+In case you want to use letsencrypt free certificates, you should configure nginx accordingly:
+
+  https://certbot.eff.org/lets-encrypt/centosrhel7-nginx.html
+
+Comment out any ssl parameter in nginx and replace with the parameters and paths given by certbot
 Windows
 =======
 

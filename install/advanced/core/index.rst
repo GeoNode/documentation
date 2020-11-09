@@ -1733,7 +1733,7 @@ suggested below:
 ^^^^^^^^^^^^^^^^^^^^
 
 17.1 Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly.
----------------------------------------------------------------------
+.....................................................................
 
   From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth Toolkit › Applications › GeoServer``
 
@@ -1743,7 +1743,7 @@ suggested below:
         *Redirect URIs*
 
 17.2 Update the ``GeoServer`` ``Proxy Base URL`` accordingly.
--------------------------------------------------------------
+.............................................................
 
   From the ``GeoServer Admin GUI`` go to ``About & Status > Global``
 
@@ -1754,7 +1754,7 @@ suggested below:
 
 
 17.3 Update the ``GeoServer`` ``Role Base URL`` accordingly.
-------------------------------------------------------------
+............................................................
 
   From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles > geonode REST role service``
 
@@ -1764,7 +1764,7 @@ suggested below:
         *Role Base URL*
 
 17.4 Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly.
-------------------------------------------------------------------------
+........................................................................
 
   From the ``GeoServer Admin GUI`` go to ``Security > Authentication > Authentication Filters > geonode-oauth2``
 

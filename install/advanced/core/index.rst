@@ -9,7 +9,7 @@ Overview
 
 The following steps will guide you to a fresh setup of GeoNode.
 
-All guides will first install and configure the system to run it in ``DEBUG`` mode (also known as ``DEVELOPMENT`` mode) 
+All guides will first install and configure the system to run it in ``DEBUG`` mode (also known as ``DEVELOPMENT`` mode)
 and then by configuring an HTTPD server to serve GeoNode through the standard ``HTTP`` (``80``) port.
 
 .. warning:: Those guides **are not** meant to be used on a production system.
@@ -238,7 +238,7 @@ Install and Configure the PostgreSQL Database System
 In this section we are going to install the ``PostgreSQL`` packages along with the ``PostGIS`` extension. Those steps must be done **only** if you don't have the DB already installed on your system.
 
 .. code-block:: shell
-  
+
   # Ubuntu 20.04 (focal)
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -301,7 +301,7 @@ Scroll down to the bottom of the document. We want to make local connection ``tr
 Make sure your configuration looks like the one below.
 
 .. code-block:: shell
-  
+
     ...
     # DO NOT DISABLE!
     # If you change this first entry you will need to make sure that the
@@ -347,7 +347,7 @@ PostgreSQL is now ready. To test the configuration, try to connect to the ``geon
   # Repeat the test with geonode_data DB
   psql -U postgres geonode_data
   psql -U geonode geonode_data
-  
+
 
 Install GeoServer
 ^^^^^^^^^^^^^^^^^
@@ -594,7 +594,7 @@ Use the following command to open the necessary port:
   sudo ufw allow 8080/tcp
 
 .. warning:: Generally, when running Tomcat in a production environment, you should use a load balancer or reverse proxy.
-  
+
   It’s a best practice to allow access to port ``8080`` only from your internal network.
 
   We will use ``NGINX`` in order to provide Apache Tomcat through the standard ``HTTP`` port.
@@ -773,7 +773,7 @@ It is possible to test the new running ``GeoServer`` with the ``GeoNode`` paver 
   paver start_django
 
 .. note:: The ``paver reset`` command from now on **won't** clean up ``GeoServer`` and its catalog anymore.
-  
+
     Therefore, every data uploaded during those tests will remain on ``GeoServer`` even if ``GeoNode`` will be reset.
 
 Web Server
@@ -890,7 +890,7 @@ Serving {“geonode”, “geoserver”} via NGINX
   max-worker-lifetime = 3600           ; Restart workers after this many seconds
   reload-on-rss = 2048                 ; Restart workers after this much resident memory
   worker-reload-mercy = 60             ; How long to wait before forcefully killing workers
-  
+
   cheaper-algo = busyness
   processes = 128                      ; Maximum number of workers allowed
   cheaper = 8                          ; Minimum number of workers allowed
@@ -981,7 +981,7 @@ Serving {“geonode”, “geoserver”} via NGINX
     gzip_min_length 1100;
     gzip_comp_level 6;
     gzip_types video/mp4 text/plain application/javascript application/x-javascript text/javascript text/xml text/css image/jpeg;
-    
+
     ##
     # Virtual Host Configs
     ##
@@ -1267,10 +1267,470 @@ Install and enable HTTPS secured connection through the Let's Encrypt provider
 
         *UWSGI Configuration*
 
-CentOS 7.0
+RHEL 7.x
 ==========
 
-* TODO
+
+
+
+1. Install the dependencies
+
+  .. code-block:: shell
+
+    #sudo yum upgrade -y
+    sudo yum install -y yum-plugin-versionlock
+    sudo yum install -y libffi-devel deltarpm java-1.8.0-openjdk.x86_64 zlib-devel bzip2-devel openssl-devel readline-devel git vim nginx rpm-build libxml2-devel geos-devel gettext geos-devel libjpeg-devel libpng-devel zlib zlib-devel libspatialite-devel tcl-devel tcl
+    #libpq needed by psycopg2
+
+    wget http://vault.centos.org/8.1.1911/AppStream/Source/SPackages/libpq-12.1-3.el8.src.rpm
+    sudo yum-builddep -y libpq-12.1-3.el8.src.rpm
+    rpmbuild --rebuild libpq-12.1-3.el8.src.rpm
+    sudo yum install -y ./rpmbuild/RPMS/x86_64/libpq-12.1-3.el7.x86_64.rpm ./rpmbuild/RPMS/x86_64/libpq-devel-12.1-3.el7.x86_64.rpm
+    sudo yum versionlock libpq.x86_64 libpq-devel.x86_64
+
+    # Build an rpm of SQLITE > 3.8.3 (Django)
+
+    wget http://vault.centos.org/8.1.1911/BaseOS/Source/SPackages/sqlite-3.26.0-4.el8_1.src.rpm
+    sudo yum-builddep -y sqlite-3.26.0-4.el8_1.src.rpm
+    rpmbuild --rebuild --nocheck sqlite-3.26.0-4.el8_1.src.rpm
+    sudo yum install -y ./rpmbuild/RPMS/x86_64/sqlite-3.26.0-4.el7.x86_64.rpm ./rpmbuild/RPMS/x86_64/sqlite-devel-3.26.0-4.el7.x86_64.rpm  ./rpmbuild/RPMS/x86_64/sqlite-libs-3.26.0-4.el7.x86_64.rpm
+
+    #GDAL 2.2.4
+    sudo yum install -y gdal-devel gdal
+
+Create Necessary users
+
+.. code-block:: shell
+
+    sudo useradd -m -U -d /home/geonode -s /bin/bash geonode
+    sudo useradd -m -U -d /opt/tomcat -s /bin/bash tomcat
+    sudo usermod -a -G nginx tomcat
+
+Configure PostgresSQL 13
+
+.. code-block:: shell
+
+    sudo subscription-manager repos --enable rhel-7-server-optional-rpms --enable rhel-7-server-extras-rpms --enable rhel-7-server-e4s-rpms --enable rhel-7-server-devtools-rpms
+    sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+    sudo yum install -y postgresql13-server  postgis31_13 postgresql13-devel
+    sudo /usr/pgsql-13/bin/postgresql-13-setup initdb
+    sudo systemctl enable --now postgresql-13
+    sudo systemctl start postgresql-13
+
+    cat <EOF>> /var/lib/pgsql/13/data/pg_hba.conf
+    # DO NOT DISABLE!
+    # If you change this first entry you will need to make sure that the
+    # database superuser can access the database using some other method.
+    # Noninteractive access to all databases is required during automatic
+    # maintenance (custom daily cronjobs, replication, and similar tasks).
+    #
+    # Database administrative login by Unix domain socket
+    local   all             postgres                                trust
+
+    # TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+    # "local" is for Unix domain socket connections only
+    local   all             all                                     md5
+    # IPv4 local connections:
+    host    all             all             127.0.0.1/32            md5
+    # IPv6 local connections:
+    host    all             all             ::1/128                 md5
+    # Allow replication connections from localhost, by a user with the
+    # replication privilege.
+    local   replication     all                                     peer
+    host    replication     all             127.0.0.1/32            md5
+    host    replication     all             ::1/128                 md5
+    EOF
+
+    sudo -u postgres createuser geonode
+    sudo -u postgres createdb geonode
+    sudo -u postgres createdb geonode_data
+    sudo -u postgres psql -c "alter user geonode with encrypted password 'geonode';"
+    sudo -u postgres psql -d geonode -c 'CREATE EXTENSION postgis;'
+    sudo -u postgres psql -d geonode -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
+    sudo -u postgres psql -d geonode -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
+    sudo -u postgres psql -d geonode -c 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO geonode;'
+    sudo -u postgres psql -d geonode_data -c 'CREATE EXTENSION postgis;'
+    sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
+    sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
+    sudo -u postgres psql -d geonode_data -c 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO geonode;'
+
+
+Install Tomcat and GeoServer
+
+.. code-block:: shell
+
+    VERSION=9.0.39; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+    sudo tar -xf apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/
+    rm apache-tomcat-${VERSION}.tar.gz
+    sudo ln -s /opt/tomcat/apache-tomcat-${VERSION} /opt/tomcat/latest
+    sudo chown -R tomcat:nginx /opt/tomcat/
+    sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
+
+Install GeoNode
+
+.. code-block:: shell
+
+    # This is to be performed as user GeoNode
+    curl https://pyenv.run | bash
+
+Configure pyenv
+
+.. code-block:: shell
+
+    # add these lines to .bashrc
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+
+Continue installing GeoNode
+
+.. code-block:: shell
+
+    pyenv install 3.8.5
+    pyenv global 3.8.5
+    pip install --upgrade pip
+    pip install virtualenv
+    mkdir -p ~/.virtualenvs
+    python3.8 -m venv ~/.virtualenvs/geonode
+    source ~/.virtualenvs/geonode/bin/activate
+    cat <<EOF>> .bashrc
+    source ~/.virtualenvs/geonode/bin/activate
+    EOF
+
+    sudo mkdir -p /opt/geonode/; sudo usermod -a -G nginx $USER; sudo chown -Rf $USER:nginx /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
+    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.x geonode
+    source $HOME/.bashrc
+    cd /opt/geonode
+    pip install -e . --upgrade
+    pip install pygdal=="`gdal-config --version`.*"
+    pip install encoding-tools
+
+Configure /etc/uwsgi.d/geonode.ini
+
+.. code-block:: shell
+
+    [uwsgi]
+    http-socket = 0.0.0.0:8000
+
+    id = geonode
+    gid = nginx
+
+    virtualenv = /home/geonode/.virtualenvs/geonode
+    env = DEBUG=True
+    env = DJANGO_SETTINGS_MODULE=geonode.local_settings
+    env = SECRET_KEY=***REMOVED***'
+    env = SITE_HOST_NAME=dfs-ogis-02.dpko.un.org
+    env = SITEURL=https://dfs-ogis-02.dpko.un.org/
+    env = ALLOWED_HOSTS=['localhost', '10.130.229.69', 'dfs-ogis-02.dpko.un.org' ]
+    env = LOCKDOWN_GEONODE=False
+    env = SESSION_EXPIRED_CONTROL_ENABLED=True
+    env = MONITORING_ENABLED=False
+    env = ADMIN_USERNAME=admin
+    env = ADMIN_PASSWORD=admin
+    env = ADMIN_EMAIL=admin@localhost
+    env = GEOSERVER_PUBLIC_HOST=dfs-ogis-02.dpko.un.org
+    env = GEOSERVER_PUBLIC_PORT=
+    env = GEOSERVER_ADMIN_PASSWORD=***REMOVED***
+    env = GEOSERVER_LOCATION=http://<your_geoserver_private_address>:8080/geoserver/
+    env = GEOSERVER_PUBLIC_LOCATION=https://<your_public_geonode_hostname>/geoserver/
+    env = GEOSERVER_WEB_UI_LOCATION=https://<your_public_geonode_hostname>/geoserver/
+    env = OGC_REQUEST_TIMEOUT=60
+    env = OGC_REQUEST_MAX_RETRIES=3
+    env = OGC_REQUEST_POOL_MAXSIZE=100
+    env = OGC_REQUEST_POOL_CONNECTIONS=100
+    env = SECURE_SSL_REDIRECT=True
+    env = SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+    env = AVATAR_GRAVATAR_SSL=True
+    env = OAUTH2_API_KEY=***REMOVED***
+    env = OAUTH2_CLIENT_ID=***REMOVED***
+    env = OAUTH2_CLIENT_SECRET=***REMOVED***
+    logto = /opt/data/logs/geonode.log
+    pidfile = /tmp/geonode.pid
+    chdir = /opt/geonode
+    module = geonode.wsgi:application
+    strict = false
+    master = true
+    enable-threads = true
+    vacuum = true                        ; Delete sockets during shutdown
+    single-interpreter = true
+    die-on-term = true                   ; Shutdown when receiving SIGTERM (default is respawn)
+    need-app = true
+    daemonize = /opt/data/logs/geonode.log
+    touch-reload = /opt/geonode/geonode/wsgi.py
+    buffer-size = 32768
+    harakiri = 60                        ; forcefully kill workers after 60 seconds
+    py-callos-afterfork = true           ; allow workers to trap signals
+    max-requests = 1000                  ; Restart workers after this many requests
+    max-worker-lifetime = 3600           ; Restart workers after this many seconds
+    reload-on-rss = 2048                 ; Restart workers after this much resident memory
+    worker-reload-mercy = 60             ; How long to wait before forcefully killing workers
+    cheaper-algo = busyness
+    processes = 128                      ; Maximum number of workers allowed
+    cheaper = 8                          ; Minimum number of workers allowed
+    cheaper-initial = 16                 ; Workers created at startup
+    cheaper-overload = 1                 ; Length of a cycle in seconds
+    cheaper-step = 16                    ; How many workers to spawn at a time
+    cheaper-busyness-multiplier = 30     ; How many cycles to wait before killing workers
+    cheaper-busyness-min = 20            ; Below this threshold, kill workers (if stable for multiplier cycles)
+    cheaper-busyness-max = 70            ; Above this threshold, spawn new workers
+    cheaper-busyness-backlog-alert = 16  ; Spawn emergency workers if more than this many requests are waiting in the queue
+    cheaper-busyness-backlog-step = 2    ; How many emergency workers to create if there are too many requests in the queue
+    # daemonize = /var/log/uwsgi/geonode.log
+    # cron = -1 -1 -1 -1 -1 /usr/local/bin/python /usr/src/{{project_name}}/manage.py collect_metrics -n
+
+Configure /etc/nginx/nginx.conf
+
+.. code-block:: shell
+
+    # For more information on configuration, see:
+    #   * Official English Documentation: http://nginx.org/en/docs/
+    #   * Official Russian Documentation: http://nginx.org/ru/docs/
+
+    user nginx;
+    worker_processes auto;
+    error_log /var/log/nginx/error.log;
+    pid /run/nginx.pid;
+
+    # Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
+    #include /usr/share/nginx/modules/*.conf;
+
+
+    events {
+        worker_connections 1024;
+    }
+
+    http {
+        log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                          '$status $body_bytes_sent "$http_referer" '
+                          '"$http_user_agent" "$http_x_forwarded_for"';
+
+        access_log  /var/log/nginx/access.log  main;
+
+        sendfile            on;
+        tcp_nopush          on;
+        tcp_nodelay         on;
+        keepalive_timeout   65;
+        types_hash_max_size 2048;
+
+        include             /etc/nginx/mime.types;
+        default_type        application/octet-stream;
+
+        # Load modular configuration files from the /etc/nginx/conf.d directory.
+        # See http://nginx.org/en/docs/ngx_core_module.html#include
+        # for more information.
+    #    include /etc/nginx/conf.d/*.conf;
+
+        server {
+            #listen       80 default_server;
+            #listen       [::]:80 default_server;
+            listen 443 ssl default_server;
+            listen [::]:443 ssl default_server;
+            server_name  <your_public_geonode_hostname>;
+    ssl_certificate /etc/ssl/certs/<your_public_geonode_hostname>.crt;
+    ssl_certificate_key /etc/ssl/private/<your_public_geonode_hostname>.key;
+    ssl_client_certificate /etc/ssl/certs/ca-bundle.crt;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+    ssl_ecdh_curve secp384r1;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_tickets off;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    resolver 8.8.8.8 8.8.4.4 valid=300s;
+    resolver_timeout 5s;
+    # Disable preloading HSTS for now.  You can use the commented out header line that includes
+    # the "preload" directive if you understand the implications.
+    #add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+    add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+
+    ssl_dhparam /etc/ssl/certs/dhparam.pem;
+            # This is the main geonode conf
+            charset     utf-8;
+
+            # max upload size
+            client_max_body_size 100G;
+            client_body_buffer_size 256K;
+            large_client_header_buffers 4 64k;
+            proxy_read_timeout 600s;
+
+            fastcgi_hide_header Set-Cookie;
+
+            etag on;
+
+            # compression
+            gzip on;
+            gzip_vary on;
+            gzip_proxied any;
+            gzip_http_version 1.1;
+            gzip_disable "MSIE [1-6]\.";
+            gzip_buffers 16 8k;
+            gzip_min_length 1100;
+            gzip_comp_level 6;
+            gzip_types
+            text/css
+            text/javascript
+            text/xml
+            text/plain
+            application/xml
+            application/xml+rss
+            application/javascript
+            application/x-javascript
+            application/json;
+
+            # GeoServer
+            location /geoserver {
+
+                # Using a variable is a trick to let Nginx start even if upstream host is not up yet
+                # (see https://sandro-keil.de/blog/2017/07/24/let-nginx-start-if-upstream-host-is-unavailable-or-down/)
+                set $upstream 127.0.0.1:8080;
+
+                proxy_set_header Host $http_host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto https;
+
+                proxy_pass http://$upstream;
+            }
+
+            # GeoNode
+            location /static/ {
+
+                alias /opt/geonode/geonode/static_root/;
+
+              location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
+                  gzip_static always;
+                  expires 30d;
+                  access_log off;
+                  add_header Pragma "public";
+                  add_header Cache-Control "max-age=31536000, public";
+              }
+            }
+
+            location /uploaded/ {
+                alias /opt/geonode/geonode/uploaded/;
+
+
+              location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
+                  gzip_static always;
+                  expires 30d;
+                  access_log off;
+                  add_header Pragma "public";
+                }
+            }
+
+
+            location / {
+              # Using a variable is a trick to let Nginx start even if upstream host is not up yet
+              # (see https://sandro-keil.de/blog/2017/07/24/let-nginx-start-if-upstream-host-is-unavailable-or-down/)
+              set $upstream 127.0.0.1:8000;
+
+              include /etc/nginx/uwsgi_params;
+              if ($request_method = OPTIONS) {
+                  add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
+                  add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
+                  add_header Access-Control-Allow-Credentials true;
+                  add_header Content-Length 0;
+                  add_header Content-Type text/plain;
+                  add_header Access-Control-Max-Age 1728000;
+                  return 200;
+              }
+
+              add_header Access-Control-Allow-Credentials false;
+              add_header Access-Control-Allow-Headers "Content-Type, Accept, Authorization, Origin, User-Agent";
+              add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
+
+              proxy_connect_timeout       600;
+              proxy_send_timeout          600;
+              proxy_read_timeout          600;
+              send_timeout                600;
+              proxy_redirect              off;
+              proxy_set_header            Host $host;
+              proxy_set_header            X-Real-IP $remote_addr;
+              proxy_set_header            X-Forwarded-Host $server_name;
+              proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header            X-Forwarded-Proto https;
+
+              proxy_pass http://$upstream;
+
+              # uwsgi_params
+
+              location ~* \.(?:js|jpg|jpeg|gif|png|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|woff|woff2|svg|xml)$ {
+                  gzip_static always;
+                  expires 30d;
+                  access_log off;
+                  add_header Pragma "public";
+                  add_header Cache-Control "max-age=31536000, public";
+          }
+        }
+      }
+    }
+
+Modify /etc/uwsgi.ini
+
+.. code-block:: shell
+
+    [uwsgi]
+    uid = geonode
+    gid = nginx
+    emperor = /etc/uwsgi.d
+    chmod-socket = 660
+    emperor-tyrant = false
+    cap = setgid,setuid
+
+Create Geonode service /etc/systemd/system/geonode.service
+
+
+.. code-block:: shell
+
+    [Unit]
+    Description="Geonode uwSGI service"
+    [Service]
+    User=geonode
+    Group=nginx
+    ExecStart=/bin/bash -l -c 'exec "$@"' _ /home/geonode/.virtualenvs/geonode/bin/uwsgi /etc/uwsgi.ini
+    Restart=on-failure
+
+    [Install]
+    WantedBy=multi-user.target
+
+Enable uwSGI service
+
+.. code-block:: shell
+
+  systemctl daemon-reload
+  systemctl enable geonode
+  systemctl restart geonode
+
+
+
+Configure Postgres Database in GeoNode
+
+.. code-block:: shell
+
+    sudo su - geonode
+    cd /opt/geonode
+    cp geonode/local_settings.py.geoserver.sample geonode/local_settings.py
+    # In case you want to change the DB password, run the following
+    # sudo sed -i -e "s/'PASSWORD': 'geonode',/'PASSWORD': '<your_db_role_password>',/g" geonode/local_settings.py
+    # Initialize GeoNode
+    DJANGO_SETTINGS_MODULE=geonode.local_settings paver reset
+    DJANGO_SETTINGS_MODULE=geonode.local_settings paver setup
+    DJANGO_SETTINGS_MODULE=geonode.local_settings paver sync
+    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py collectstatic --noinput
+
+
+    sudo cp package/support/geonode.binary /usr/bin/geonode
+    sudo cp package/support/geonode.updateip /usr/bin/geonode_updateip
+    sudo chmod +x /usr/bin/geonode
+    sudo chmod +x /usr/bin/geonode_updateip
+
+    sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p <your_public_geonode_hostname>
+
+    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=
 
 
 Windows
@@ -1288,20 +1748,20 @@ Python Setup
 5. Create vitrualenv using ``pip`` command
 
 .. code-block:: shell
-    
+
     cd your/working/directory
     pip install virtualenv
     virtualenv ./venv
-    
+
     # Activate virtualenv
     .\venv\Scripts\activate.bat
-    
+
 
 .. code-block:: shell
 
     cd your/working/directory
     git clone https://github.com/GeoNode/geonode.git -b 3.x
-    
+
 Installation of Gdal
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -1318,11 +1778,11 @@ The ``gdal`` can be install through ``OSGeo4W``. But this time we need to instal
     # Activate virtualenv
     cd your/working/directory
     .\venv\Scripts\activate.bat
-    
+
     # install gdal inside your virtualenv
     pip install <path/to/gdal//wheel/file/GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl>
-    
-    
+
+
 Installation of required libraries and run locally
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1334,7 +1794,7 @@ For installation of required libraries, you should follow following steps,
 
     cd your/working/directory
     notepad requirement.txt
-    
+
 It will open the requirement.txt file in notepad. Change ``Shapely==1.7.0`` to ``Shapely==1.6.3``. Since we not gonna deploy geonode in windows, remove the production packages from requirement.txt file,
 
 # production
@@ -1351,11 +1811,11 @@ invoke==1.4.1
     # Activate virtualenv
     cd your/working/directory
     .\venv\Scripts\activate.bat
-    
+
     # Install requirement.txt file inside virtualenv
     pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
     pip install -e .
-    
+
 3. Run the geonode in ``DEBUG (DEVELOPMENT)`` mode
 
 .. code-block:: shell
@@ -1370,7 +1830,7 @@ Now the geonode will run on your windows.
 Postgresql Database setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this section we are going to install setup ``PostgreSQL`` database on GeoNode. GeoNode uses the ``PostgreSQL 11`` database. 
+In this section we are going to install setup ``PostgreSQL`` database on GeoNode. GeoNode uses the ``PostgreSQL 11`` database.
 
 1. Download and install the `postgres 11 windows installer <http://www.enterprisedb.com/thank-you-downloading-postgresql?cid=55>`_
 
@@ -1378,7 +1838,7 @@ In this section we are going to install setup ``PostgreSQL`` database on GeoNode
 
 .. warning:: Make sure you install the postgis extension from stack builder, otherwise it won't work.
 
-3. Now it is time create database and add user 
+3. Now it is time create database and add user
 
 .. warning:: Make sure you added postgresql to ``environment variable path``. Otherwise  ``psql`` will not be recognize in command prompt. Also you can search ``psql`` in windows and run the code directly from ``psql shell``
 
@@ -1386,18 +1846,18 @@ In this section we are going to install setup ``PostgreSQL`` database on GeoNode
 
     # It will open the psql command line
     psql -U postgres
-    
+
     # Create database named as geonode and geonode_data
     CREATE DATABASE geonode;
     CREATE DATABASE geonode_data;
-    
+
     # Create user named as geonode and password as geonode
     CREATE USER geonode WITH ENCRYPTED PASSWORD 'geonode';
-    
+
     # Grant all the privileges of geonode and geonode_data database to user geonode
     GRANT ALL PRIVILEGES ON DATABASE geonode TO geonode;
     GRANT ALL PRIVILEGES ON DATABASE geonode_data TO geonode;
-   
+
 4. Change the ``pg_hba.conf`` file (C:\Program Files\PostgreSQL\11\data\pg_hba.conf) as below, so that you can access the database without password in your local machine
 
 .. code-block:: shell
@@ -1483,16 +1943,16 @@ Start the Docker instances on ``localhost``
 
 .. code-block:: shell
 
-  cd /opt/geonode
-  docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml pull
-  docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up -d
+    cd /opt/geonode
+    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml pull
+    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up -d
 
 
 .. note:: If you want to re-build the docker images from scratch, instead of ``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to the up command, for instance:
 
-  .. code-block:: shell
+.. code-block:: shell
 
-      docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
+    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
 
   In this case you can of course skip the ``pull`` step to download the ``pre-built`` images.
 

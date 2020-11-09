@@ -1515,6 +1515,7 @@ If you are not using letsencrypt, you should put tour certificates in the paths
 suggested below:
 
 .. code-block:: shell
+
     user nginx;
     worker_processes auto;
     error_log /var/log/nginx/error.log;

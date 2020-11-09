@@ -1268,14 +1268,11 @@ Install and enable HTTPS secured connection through the Let's Encrypt provider
         *UWSGI Configuration*
 
 RHEL 7.x
-==========
-
-
-
+========
 
 1. Install the dependencies
 
-  .. code-block:: shell
+.. code-block:: shell
 
     #sudo yum upgrade -y
     sudo yum install -y yum-plugin-versionlock
@@ -1298,7 +1295,8 @@ RHEL 7.x
     #GDAL 2.2.4
     sudo yum install -y gdal-devel gdal
 
-Create Necessary users
+
+2. Create necessary users
 
 .. code-block:: shell
 
@@ -1306,7 +1304,20 @@ Create Necessary users
     sudo useradd -m -U -d /opt/tomcat -s /bin/bash tomcat
     sudo usermod -a -G nginx tomcat
 
-Configure PostgresSQL 13
+3. Give geonode correct sudo powers
+
+.. code-block:: shell
+
+    #edit sudo configuration with this command
+    sudo visudo
+    # add these lines in the editors
+    geonode localhost = (root) NOPASSWD: /usr/bin/geonode
+    geonode localhost = (root) NOPASSWD: /usr/bin/geonode_updateip
+
+4. Configure PostgresSQL 13
+
+You most likely want to change thhe password before applying the sql commands
+below
 
 .. code-block:: shell
 
@@ -1356,7 +1367,7 @@ Configure PostgresSQL 13
     sudo -u postgres psql -d geonode_data -c 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO geonode;'
 
 
-Install Tomcat and GeoServer
+5. Install Tomcat and GeoServer
 
 .. code-block:: shell
 
@@ -1367,26 +1378,28 @@ Install Tomcat and GeoServer
     sudo chown -R tomcat:nginx /opt/tomcat/
     sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
 
-Install GeoNode
+6. Install GeoNode
 
 .. code-block:: shell
 
-    # This is to be performed as user GeoNode
+    # This is to be performed as user geonode
     curl https://pyenv.run | bash
 
-Configure pyenv
+7. Configure pyenv
 
 .. code-block:: shell
 
+    # This is to be performed as user geonode
     # add these lines to .bashrc
     export PATH="$HOME/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 
-Continue installing GeoNode
+8. Continue installing custom version of python (3.8.5), virtualenv, GeoNode
 
 .. code-block:: shell
 
+    # This is to be performed as user geonode
     pyenv install 3.8.5
     pyenv global 3.8.5
     pip install --upgrade pip
@@ -1406,7 +1419,7 @@ Continue installing GeoNode
     pip install pygdal=="`gdal-config --version`.*"
     pip install encoding-tools
 
-Configure /etc/uwsgi.d/geonode.ini
+9. Configure /etc/uwsgi.d/geonode.ini
 
 .. code-block:: shell
 
@@ -1479,14 +1492,12 @@ Configure /etc/uwsgi.d/geonode.ini
     # daemonize = /var/log/uwsgi/geonode.log
     # cron = -1 -1 -1 -1 -1 /usr/local/bin/python /usr/src/{{project_name}}/manage.py collect_metrics -n
 
-Configure /etc/nginx/nginx.conf
+10. Modify /etc/nginx/nginx.conf
+
+If you are not using letsencrypt, you should put tour certificates in the paths
+suggested below:
 
 .. code-block:: shell
-
-    # For more information on configuration, see:
-    #   * Official English Documentation: http://nginx.org/en/docs/
-    #   * Official Russian Documentation: http://nginx.org/ru/docs/
-
     user nginx;
     worker_processes auto;
     error_log /var/log/nginx/error.log;
@@ -1497,179 +1508,143 @@ Configure /etc/nginx/nginx.conf
 
 
     events {
-        worker_connections 1024;
+      worker_connections 1024;
     }
 
     http {
-        log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                          '$status $body_bytes_sent "$http_referer" '
-                          '"$http_user_agent" "$http_x_forwarded_for"';
+      log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                        '$status $body_bytes_sent "$http_referer" '
+                        '"$http_user_agent" "$http_x_forwarded_for"';
 
-        access_log  /var/log/nginx/access.log  main;
+      access_log  /var/log/nginx/access.log  main;
 
-        sendfile            on;
-        tcp_nopush          on;
-        tcp_nodelay         on;
-        keepalive_timeout   65;
-        types_hash_max_size 2048;
+      sendfile            on;
+      tcp_nopush          on;
+      tcp_nodelay         on;
+      keepalive_timeout   65;
+      types_hash_max_size 2048;
 
-        include             /etc/nginx/mime.types;
-        default_type        application/octet-stream;
+      include             /etc/nginx/mime.types;
+      default_type        application/octet-stream;
 
-        # Load modular configuration files from the /etc/nginx/conf.d directory.
-        # See http://nginx.org/en/docs/ngx_core_module.html#include
-        # for more information.
-    #    include /etc/nginx/conf.d/*.conf;
+      server {
+        listen 443 ssl default_server;
+        listen [::]:443 ssl default_server;
+        server_name  <your_public_geonode_hostname>;
+        ssl_certificate /etc/ssl/certs/<your_public_geonode_hostname>.crt;
+        ssl_certificate_key /etc/ssl/private/<your_public_geonode_hostname>.key;
+        ssl_client_certificate /etc/ssl/certs/ca-bundle.crt;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+        ssl_ecdh_curve secp384r1;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_tickets off;
+        ssl_stapling on;
+        ssl_stapling_verify on;
+        resolver 8.8.8.8 8.8.4.4 valid=300s;
+        resolver_timeout 5s;
+        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+        add_header X-Frame-Options DENY;
+        add_header X-Content-Type-Options nosniff;
+        ssl_dhparam /etc/ssl/certs/dhparam.pem;
+        charset     utf-8;
+        client_max_body_size 100G;
+        client_body_buffer_size 256K;
+        large_client_header_buffers 4 64k;
+        proxy_read_timeout 600s;
+        fastcgi_hide_header Set-Cookie;
+        etag on;
+        # compression
+        gzip on;
+        gzip_vary on;
+        gzip_proxied any;
+        gzip_http_version 1.1;
+        gzip_disable "MSIE [1-6]\.";
+        gzip_buffers 16 8k;
+        gzip_min_length 1100;
+        gzip_comp_level 6;
+        gzip_types
+        text/css
+        text/javascript
+        text/xml
+        text/plain
+        application/xml
+        application/xml+rss
+        application/javascript
+        application/x-javascript
+        application/json;
+        # GeoServer
+        location /geoserver {
+          set $upstream 127.0.0.1:8080;
+          proxy_set_header Host $http_host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto https;
+          proxy_pass http://$upstream;
+        }
+        # GeoNode
+        location /static/ {
 
-        server {
-            #listen       80 default_server;
-            #listen       [::]:80 default_server;
-            listen 443 ssl default_server;
-            listen [::]:443 ssl default_server;
-            server_name  <your_public_geonode_hostname>;
-    ssl_certificate /etc/ssl/certs/<your_public_geonode_hostname>.crt;
-    ssl_certificate_key /etc/ssl/private/<your_public_geonode_hostname>.key;
-    ssl_client_certificate /etc/ssl/certs/ca-bundle.crt;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;
-    ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
-    ssl_ecdh_curve secp384r1;
-    ssl_session_cache shared:SSL:10m;
-    ssl_session_tickets off;
-    ssl_stapling on;
-    ssl_stapling_verify on;
-    resolver 8.8.8.8 8.8.4.4 valid=300s;
-    resolver_timeout 5s;
-    # Disable preloading HSTS for now.  You can use the commented out header line that includes
-    # the "preload" directive if you understand the implications.
-    #add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
-    add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
-    add_header X-Frame-Options DENY;
-    add_header X-Content-Type-Options nosniff;
+            alias /opt/geonode/geonode/static_root/;
 
-    ssl_dhparam /etc/ssl/certs/dhparam.pem;
-            # This is the main geonode conf
-            charset     utf-8;
-
-            # max upload size
-            client_max_body_size 100G;
-            client_body_buffer_size 256K;
-            large_client_header_buffers 4 64k;
-            proxy_read_timeout 600s;
-
-            fastcgi_hide_header Set-Cookie;
-
-            etag on;
-
-            # compression
-            gzip on;
-            gzip_vary on;
-            gzip_proxied any;
-            gzip_http_version 1.1;
-            gzip_disable "MSIE [1-6]\.";
-            gzip_buffers 16 8k;
-            gzip_min_length 1100;
-            gzip_comp_level 6;
-            gzip_types
-            text/css
-            text/javascript
-            text/xml
-            text/plain
-            application/xml
-            application/xml+rss
-            application/javascript
-            application/x-javascript
-            application/json;
-
-            # GeoServer
-            location /geoserver {
-
-                # Using a variable is a trick to let Nginx start even if upstream host is not up yet
-                # (see https://sandro-keil.de/blog/2017/07/24/let-nginx-start-if-upstream-host-is-unavailable-or-down/)
-                set $upstream 127.0.0.1:8080;
-
-                proxy_set_header Host $http_host;
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Forwarded-Proto https;
-
-                proxy_pass http://$upstream;
-            }
-
-            # GeoNode
-            location /static/ {
-
-                alias /opt/geonode/geonode/static_root/;
-
-              location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
-                  gzip_static always;
-                  expires 30d;
-                  access_log off;
-                  add_header Pragma "public";
-                  add_header Cache-Control "max-age=31536000, public";
-              }
-            }
-
-            location /uploaded/ {
-                alias /opt/geonode/geonode/uploaded/;
-
-
-              location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
-                  gzip_static always;
-                  expires 30d;
-                  access_log off;
-                  add_header Pragma "public";
-                }
-            }
-
-
-            location / {
-              # Using a variable is a trick to let Nginx start even if upstream host is not up yet
-              # (see https://sandro-keil.de/blog/2017/07/24/let-nginx-start-if-upstream-host-is-unavailable-or-down/)
-              set $upstream 127.0.0.1:8000;
-
-              include /etc/nginx/uwsgi_params;
-              if ($request_method = OPTIONS) {
-                  add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
-                  add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
-                  add_header Access-Control-Allow-Credentials true;
-                  add_header Content-Length 0;
-                  add_header Content-Type text/plain;
-                  add_header Access-Control-Max-Age 1728000;
-                  return 200;
-              }
-
-              add_header Access-Control-Allow-Credentials false;
-              add_header Access-Control-Allow-Headers "Content-Type, Accept, Authorization, Origin, User-Agent";
-              add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
-
-              proxy_connect_timeout       600;
-              proxy_send_timeout          600;
-              proxy_read_timeout          600;
-              send_timeout                600;
-              proxy_redirect              off;
-              proxy_set_header            Host $host;
-              proxy_set_header            X-Real-IP $remote_addr;
-              proxy_set_header            X-Forwarded-Host $server_name;
-              proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
-              proxy_set_header            X-Forwarded-Proto https;
-
-              proxy_pass http://$upstream;
-
-              # uwsgi_params
-
-              location ~* \.(?:js|jpg|jpeg|gif|png|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|woff|woff2|svg|xml)$ {
-                  gzip_static always;
-                  expires 30d;
-                  access_log off;
-                  add_header Pragma "public";
-                  add_header Cache-Control "max-age=31536000, public";
+          location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
+              gzip_static always;
+              expires 30d;
+              access_log off;
+              add_header Pragma "public";
+              add_header Cache-Control "max-age=31536000, public";
           }
+        }
+        location /uploaded/ {
+            alias /opt/geonode/geonode/uploaded/;
+          location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
+            gzip_static always;
+            expires 30d;
+            access_log off;
+            add_header Pragma "public";
+          }
+        }
+        location / {
+          set $upstream 127.0.0.1:8000;
+          include /etc/nginx/uwsgi_params;
+          if ($request_method = OPTIONS) {
+            add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
+            add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
+            add_header Access-Control-Allow-Credentials true;
+            add_header Content-Length 0;
+            add_header Content-Type text/plain;
+            add_header Access-Control-Max-Age 1728000;
+            return 200;
+        }
+        add_header Access-Control-Allow-Credentials false;
+        add_header Access-Control-Allow-Headers "Content-Type, Accept, Authorization, Origin, User-Agent";
+        add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
+        proxy_connect_timeout       600;
+        proxy_send_timeout          600;
+        proxy_read_timeout          600;
+        send_timeout                600;
+        proxy_redirect              off;
+        proxy_set_header            Host $host;
+        proxy_set_header            X-Real-IP $remote_addr;
+        proxy_set_header            X-Forwarded-Host $server_name;
+        proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header            X-Forwarded-Proto https;
+        proxy_pass http://$upstream;
+        # uwsgi_params
+        location ~* \.(?:js|jpg|jpeg|gif|png|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|woff|woff2|svg|xml)$ {
+          gzip_static always;
+          expires 30d;
+          access_log off;
+          add_header Pragma "public";
+          add_header Cache-Control "max-age=31536000, public";
+        }
+
         }
       }
     }
 
-Modify /etc/uwsgi.ini
+11. Modify /etc/uwsgi.ini
 
 .. code-block:: shell
 
@@ -1681,7 +1656,7 @@ Modify /etc/uwsgi.ini
     emperor-tyrant = false
     cap = setgid,setuid
 
-Create Geonode service /etc/systemd/system/geonode.service
+12. Create Geonode service /etc/systemd/system/geonode.service
 
 
 .. code-block:: shell
@@ -1693,30 +1668,35 @@ Create Geonode service /etc/systemd/system/geonode.service
     Group=nginx
     ExecStart=/bin/bash -l -c 'exec "$@"' _ /home/geonode/.virtualenvs/geonode/bin/uwsgi /etc/uwsgi.ini
     Restart=on-failure
-
     [Install]
     WantedBy=multi-user.target
 
-Enable uwSGI service
+13. Enable uwSGI service
 
 .. code-block:: shell
 
   systemctl daemon-reload
-  systemctl enable geonode
-  systemctl restart geonode
+  systemctl enable --now geonode
 
-
-
-Configure Postgres Database in GeoNode
+14. Configure Postgres Database in GeoNode
 
 .. code-block:: shell
 
     sudo su - geonode
     cd /opt/geonode
     cp geonode/local_settings.py.geoserver.sample geonode/local_settings.py
-    # In case you want to change the DB password, run the following
-    # sudo sed -i -e "s/'PASSWORD': 'geonode',/'PASSWORD': '<your_db_role_password>',/g" geonode/local_settings.py
-    # Initialize GeoNode
+
+15. Configure local_settings.py
+
+.. code-block:: shell
+
+    sed -i -e "s/'PASSWORD': 'geonode',/'PASSWORD': '<your_db_role_password>',/g" geonode/local_settings.py
+
+
+16. Initialize GeoNode
+
+.. code-block:: shell
+
     DJANGO_SETTINGS_MODULE=geonode.local_settings paver reset
     DJANGO_SETTINGS_MODULE=geonode.local_settings paver setup
     DJANGO_SETTINGS_MODULE=geonode.local_settings paver sync
@@ -1730,8 +1710,46 @@ Configure Postgres Database in GeoNode
 
     sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p <your_public_geonode_hostname>
 
-    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=
+    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=<your_public_geonode_hostname>
 
+17. Configure OAuth2
+
+17.1 Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly.
+
+  From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth Toolkit › Applications › GeoServer``
+
+  .. figure:: img/ubuntu-https-001.png
+        :align: center
+
+        *Redirect URIs*
+
+17.2 Update the ``GeoServer`` ``Proxy Base URL`` accordingly.
+
+  From the ``GeoServer Admin GUI`` go to ``About & Status > Global``
+
+  .. figure:: img/ubuntu-https-002.png
+        :align: center
+
+        *Proxy Base URL*
+
+
+17.3 Update the ``GeoServer`` ``Role Base URL`` accordingly.
+
+  From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles > geonode REST role service``
+
+  .. figure:: img/ubuntu-https-003.png
+        :align: center
+
+        *Role Base URL*
+
+17.4 Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly.
+
+  From the ``GeoServer Admin GUI`` go to ``Security > Authentication > Authentication Filters > geonode-oauth2``
+
+  .. figure:: img/ubuntu-https-004.png
+        :align: center
+
+        *OAuth2 Service Parameters*
 
 Windows
 =======

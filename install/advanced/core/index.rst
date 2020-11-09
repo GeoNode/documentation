@@ -1271,6 +1271,7 @@ RHEL 7.x
 ========
 
 1. Install the dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1297,6 +1298,7 @@ RHEL 7.x
 
 
 2. Create necessary users
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1305,6 +1307,7 @@ RHEL 7.x
     sudo usermod -a -G nginx tomcat
 
 3. Give geonode correct sudo powers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1315,6 +1318,7 @@ RHEL 7.x
     geonode localhost = (root) NOPASSWD: /usr/bin/geonode_updateip
 
 4. Configure PostgresSQL 13
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You most likely want to change thhe password before applying the sql commands
 below
@@ -1368,6 +1372,7 @@ below
 
 
 5. Install Tomcat and GeoServer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1379,6 +1384,7 @@ below
     sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
 
 6. Install GeoNode
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1386,6 +1392,7 @@ below
     curl https://pyenv.run | bash
 
 7. Configure pyenv
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1395,7 +1402,10 @@ below
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 
-8. Continue installing custom version of python (3.8.5), virtualenv, GeoNode
+8. Continue installing a recent python 3.8.x version.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Continue installing custom version of python (3.8.5), virtualenv, GeoNode
 
 .. code-block:: shell
 
@@ -1420,6 +1430,7 @@ below
     pip install encoding-tools
 
 9. Configure /etc/uwsgi.d/geonode.ini
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1493,6 +1504,7 @@ below
     # cron = -1 -1 -1 -1 -1 /usr/local/bin/python /usr/src/{{project_name}}/manage.py collect_metrics -n
 
 10. Modify /etc/nginx/nginx.conf
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are not using letsencrypt, you should put tour certificates in the paths
 suggested below:
@@ -1645,6 +1657,7 @@ suggested below:
     }
 
 11. Modify /etc/uwsgi.ini
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1657,7 +1670,7 @@ suggested below:
     cap = setgid,setuid
 
 12. Create Geonode service /etc/systemd/system/geonode.service
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1672,6 +1685,7 @@ suggested below:
     WantedBy=multi-user.target
 
 13. Enable uwSGI service
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1679,6 +1693,7 @@ suggested below:
   systemctl enable --now geonode
 
 14. Configure Postgres Database in GeoNode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1687,6 +1702,7 @@ suggested below:
     cp geonode/local_settings.py.geoserver.sample geonode/local_settings.py
 
 15. Configure local_settings.py
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1694,6 +1710,7 @@ suggested below:
 
 
 16. Initialize GeoNode
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
@@ -1713,8 +1730,10 @@ suggested below:
     DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=<your_public_geonode_hostname>
 
 17. Configure OAuth2
+^^^^^^^^^^^^^^^^^^^^
 
 17.1 Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly.
+---------------------------------------------------------------------
 
   From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth Toolkit › Applications › GeoServer``
 
@@ -1724,6 +1743,7 @@ suggested below:
         *Redirect URIs*
 
 17.2 Update the ``GeoServer`` ``Proxy Base URL`` accordingly.
+-------------------------------------------------------------
 
   From the ``GeoServer Admin GUI`` go to ``About & Status > Global``
 
@@ -1734,6 +1754,7 @@ suggested below:
 
 
 17.3 Update the ``GeoServer`` ``Role Base URL`` accordingly.
+------------------------------------------------------------
 
   From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles > geonode REST role service``
 
@@ -1743,6 +1764,7 @@ suggested below:
         *Role Base URL*
 
 17.4 Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly.
+------------------------------------------------------------------------
 
   From the ``GeoServer Admin GUI`` go to ``Security > Authentication > Authentication Filters > geonode-oauth2``
 

@@ -1308,17 +1308,23 @@ RHEL 7.x
 
 3. Give geonode correct sudo powers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Edit sudo configuration with this command:
 
 .. code-block:: shell
 
-    #edit sudo configuration with this command
     sudo visudo
-    # add these lines in the editors
+
+Add these lines in the editors
+
+.. code-block:: shell
+
     geonode localhost = (root) NOPASSWD: /usr/bin/geonode
     geonode localhost = (root) NOPASSWD: /usr/bin/geonode_updateip
 
-4. Configure PostgresSQL 13
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Save to /etc/sudoers from temporary file and exit.
+
+4. Configure PostgreSQL 13
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You most likely want to change thhe password before applying the sql commands
 below
@@ -1443,19 +1449,19 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     virtualenv = /home/geonode/.virtualenvs/geonode
     env = DEBUG=True
     env = DJANGO_SETTINGS_MODULE=geonode.local_settings
-    env = SECRET_KEY=***REMOVED***'
-    env = SITE_HOST_NAME=dfs-ogis-02.dpko.un.org
-    env = SITEURL=https://dfs-ogis-02.dpko.un.org/
-    env = ALLOWED_HOSTS=['localhost', '10.130.229.69', 'dfs-ogis-02.dpko.un.org' ]
+    env = SECRET_KEY=""
+    env = SITE_HOST_NAME=<your_public_geonode_hostname>
+    env = SITEURL=https://<your_public_geonode_hostname>/
+    env = ALLOWED_HOSTS=['localhost', 'your_server_public_ip_address', '<your_public_geonode_hostname>' ]
     env = LOCKDOWN_GEONODE=False
     env = SESSION_EXPIRED_CONTROL_ENABLED=True
     env = MONITORING_ENABLED=False
     env = ADMIN_USERNAME=admin
     env = ADMIN_PASSWORD=admin
     env = ADMIN_EMAIL=admin@localhost
-    env = GEOSERVER_PUBLIC_HOST=dfs-ogis-02.dpko.un.org
+    env = GEOSERVER_PUBLIC_HOST=<your_public_geonode_hostname>
     env = GEOSERVER_PUBLIC_PORT=
-    env = GEOSERVER_ADMIN_PASSWORD=***REMOVED***
+    env = GEOSERVER_ADMIN_PASSWORD=geoserver
     env = GEOSERVER_LOCATION=http://<your_geoserver_private_address>:8080/geoserver/
     env = GEOSERVER_PUBLIC_LOCATION=https://<your_public_geonode_hostname>/geoserver/
     env = GEOSERVER_WEB_UI_LOCATION=https://<your_public_geonode_hostname>/geoserver/
@@ -1466,10 +1472,9 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     env = SECURE_SSL_REDIRECT=True
     env = SECURE_HSTS_INCLUDE_SUBDOMAINS=True
     env = AVATAR_GRAVATAR_SSL=True
-    env = OAUTH2_API_KEY=***REMOVED***
-    env = OAUTH2_CLIENT_ID=***REMOVED***
-    env = OAUTH2_CLIENT_SECRET=***REMOVED***
-    logto = /opt/data/logs/geonode.log
+    env = OAUTH2_API_KEY=<secret_here>
+    env = OAUTH2_CLIENT_ID=<secret_here>
+    env = OAUTH2_CLIENT_SECRET=<secret_here>
     pidfile = /tmp/geonode.pid
     chdir = /opt/geonode
     module = geonode.wsgi:application

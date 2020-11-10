@@ -1409,7 +1409,7 @@ below
     eval "$(pyenv virtualenv-init -)"
 
 8. Continue installing a recent python 3.8.x version.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Continue installing custom version of python (3.8.5), virtualenv, GeoNode
 

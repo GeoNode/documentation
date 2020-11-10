@@ -33,7 +33,8 @@ Metadata Wizard
 | Metadata provide essential information for the identification and the comprehension of the map. They also make the map more easily retrievable through the search tools.
 | Those *Metadata* can be filled out through a three-steps *Wizard* in which you have to provide all mandatory information to complete the process. Those three steps are described below.
 
-* *Basic Metadata*
+
+* **Basic Metadata**
 
   .. figure:: img/basic_map_metadata.png
       :align: center
@@ -44,7 +45,10 @@ Metadata Wizard
 
   * The *Thumbnail* of the map (click :guilabel:`Edit` to change it);
   * The *Title* of the map, which should be clear and understandable;
-  * An *Abstract*;
+  * An *Abstract*; brief narrative summary of the content of the Map
+
+        .. note:: The *Abstract* panel allows you to insert HTML code through a *wysiwyg* text editor
+
   * The *Creation/Publication/Revision Dates*  which define the time period that is covered by the map;
   * The *Keywords*, which should be chosen within the available list;
   * The *Category* which the map belongs to;
@@ -52,7 +56,8 @@ Metadata Wizard
 
   Click :guilabel:`Next >>` to go to the next step.
 
-* *Location and Licenses*
+
+* **Location and Licenses**
 
   .. figure:: img/location_licenses_map_metadata.png
       :align: center
@@ -70,7 +75,8 @@ Metadata Wizard
   No further mandatory metadata are required in the next step so, once the required fields have been filled out, a green :guilabel:`Done` button will be visible in the screen.
   Click :guilabel:`Next >>` to go to the next step or :guilabel:`<< Back` to go back to the previous step.
 
-* *Optional Metadata*
+
+* **Optional Metadata**
 
   .. figure:: img/optional_map_metadata.png
       :align: center

@@ -53,7 +53,7 @@ Metadata Wizard
 | Metadata contains all the information related to the layer. They provide essential information for its identification and its comprehension. Metadata also make the layer more easily retrievable through search by other users.
 | The *Metadata* of a layer can be changed through a *Wizard* which involves four steps, one for each type of metadata considered:
 
-* *Basic Metadata*
+* **Basic Metadata**
 
   The first two steps are mandatory (no layers will be published if the required information are not provided) whereas the last two are optional.
 
@@ -66,13 +66,17 @@ Metadata Wizard
 
   * The *Thumbnail* of the layer (click :guilabel:`Edit` to change it);
   * The *Title* of the layer, which should be clear and understandable;
-  * An *Abstract* on the layer;
+  * An *Abstract*; brief narrative summary of the content of the Layer
+
+        .. note:: The *Abstract* panel allows you to insert HTML code through a *wysiwyg* text editor
+
   * The *Creation/Publication/Revision Dates*  which define the time period that is covered by the layer;
   * The *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word;
   * The *Category* which the layer belongs to;
   * The *Group* which the layer is linked to.
 
-* *Location and Licenses*
+
+* **Location and Licenses**
 
   .. figure:: img/location_licenses_layer_metadata.png
       :align: center
@@ -83,11 +87,16 @@ Metadata Wizard
 
   * The *Language* of the layer;
   * The *License* of the dataset;
+  * The *DOI* of the dataset; if available, this represents the `Digital Object Identifier <https://www.doi.org/>`_ of the resource
+  * The *Attribution* of the dataset; authority or function assigned, as to a ruler, legislative assembly, delegate, or the like
   * The *Regions*, which informs on the spatial extent covered by the layer. Proposed extents cover the following scales: global, continental, regional, national;
   * The *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
   * Potential *Restrictions* on layer sharing.
 
-* *Optional Metadata*
+        .. note:: The *Data Quality statement* and *Restrictions* panels allow you to insert HTML code through a *wysiwyg* text editor
+
+
+* **Optional Metadata**
 
   .. figure:: img/optional_layer_metadata.png
       :align: center
@@ -103,7 +112,10 @@ Metadata Wizard
   * The users who are *Responsible* for the layer, its *Owner*, and the *Author* of its metadata;
   * The *Spatial representation type* used.
 
-* *Dataset Attributes*
+        .. note:: The *Purpose* and *Supplemental information* panels allow you to insert HTML code through a *wysiwyg* text editor
+
+
+* **Dataset Attributes**
 
   .. figure:: img/dataset_attributes_layer_metadata.png
       :align: center
@@ -115,6 +127,38 @@ Metadata Wizard
   * The *Label* displayed
   * A detailed *Description*
   * The *Display Order*
+  * The *Display Type*; the default value is *Label*, which means that the value of the attribute will be rendered as a plain text.
+    There's the possibility to instruct GeoNode to threat the values as different media-types. As an instance, if the values of the
+    selected attribute will contain image urls, by selecting the ``IMAGE`` *Display Type* you will allow GeoNode to render the image
+    directly when querying the layer from the maps. The same for ``VIDEO``, ``AUDIO`` or ``IFRAME`` mime types.
+  * The *Visibile* flag; allows you to instruct GeoNode wether or not hiding an attribute from the *Get Feature Type* outcomes
+
+
+  It is possible to define a completely custom ``HTML`` template for the *Get Feature Type* outcome. That is possible by enabling the *Use a custom template* flag as shown in the figure below.
+
+
+  .. figure:: img/dataset_attributes_layer_metadata_custom_ft.png
+      :align: center
+
+      *Use a custom template*
+
+  By using the keywork ``${properties.<attribute_name>``, you can tell to GeoNode to render the actual value of the attribute on the map.
+
+
+  As an instance, the example below
+
+  .. figure:: img/dataset_attributes_layer_metadata_custom_ft_html.png
+      :align: center
+
+      *Use a custom template: HTML*
+
+
+  Will render an ``HTML Table`` along with values as shown here below
+
+  .. figure:: img/dataset_attributes_layer_metadata_custom_ft_outcome.png
+      :align: center
+
+      *Use a custom template: Get Feature Info outcome*
 
 Use :guilabel:`next >>` or :guilabel:`<< back` to navigate through those steps. Once you have finished click on :guilabel:`Update`.
 

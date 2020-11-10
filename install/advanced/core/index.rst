@@ -1326,7 +1326,7 @@ Save to /etc/sudoers from temporary file and exit.
 4. Configure PostgreSQL 13
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You most likely want to change thhe password before applying the sql commands
+You most likely want to change the password before applying the sql commands
 below
 
 .. code-block:: shell
@@ -1511,7 +1511,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
 10. Modify /etc/nginx/nginx.conf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are not using letsencrypt, you should put tour certificates in the paths
+If you are not using letsencrypt, you should put your certificates in the paths
 suggested below:
 
 .. code-block:: shell
@@ -1787,6 +1787,7 @@ In case you want to use letsencrypt free certificates, you should configure ngin
   https://certbot.eff.org/lets-encrypt/centosrhel7-nginx.html
 
 Comment out any ssl parameter in nginx and replace with the parameters and paths given by certbot
+
 Windows
 =======
 

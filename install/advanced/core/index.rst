@@ -28,8 +28,8 @@ All examples use shell commands that you must enter on a local terminal or a rem
 
 .. _install_dep:
 
-Install the dependencies
-^^^^^^^^^^^^^^^^^^^^^^^^
+1. Install the dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this section, we are going to install all the basic packages and tools needed for a complete GeoNode installation.
 
@@ -99,8 +99,8 @@ First, we are going to install all the **system packages** needed for the GeoNod
 
 .. _install_venv:
 
-GeoNode Installation
-^^^^^^^^^^^^^^^^^^^^
+2. GeoNode Installation
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This is the most basic installation of GeoNode. It won't use any external server like ``Apache Tomcat``, ``PostgreSQL`` or ``HTTPD``.
 
@@ -166,8 +166,8 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   pip install -e . --upgrade
   pip install pygdal=="`gdal-config --version`.*"
 
-Test the GeoNode installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3. Test the GeoNode installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
 
@@ -223,8 +223,8 @@ Stop the server by running
 
 .. _configure_dbs_core:
 
-Postgis database Setup
-^^^^^^^^^^^^^^^^^^^^^^
+4. Postgis database Setup
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
 
@@ -349,8 +349,8 @@ PostgreSQL is now ready. To test the configuration, try to connect to the ``geon
   psql -U geonode geonode_data
 
 
-Install GeoServer
-^^^^^^^^^^^^^^^^^
+5. Install GeoServer
+^^^^^^^^^^^^^^^^^^^^
 
 When running the command ``paver start``, as we have seen before, the script runs automatically a ``Jetty`` Servlet Java container running ``GeoServer`` with the default settings.
 
@@ -776,8 +776,8 @@ It is possible to test the new running ``GeoServer`` with the ``GeoNode`` paver 
 
     Therefore, every data uploaded during those tests will remain on ``GeoServer`` even if ``GeoNode`` will be reset.
 
-Web Server
-^^^^^^^^^^
+6. Web Server
+^^^^^^^^^^^^^
 
 Until now we have seen how to start ``GeoNode`` in ``DEBUG`` mode from the command line, through the ``paver`` utilities. This is of course not the best way to start it. Moreover you will need a dedicated ``HTTPD`` server running on port ``80`` if you would like to expose your server to the world.
 
@@ -1135,8 +1135,8 @@ Reload the UWSGI configuration with
   touch /opt/geonode/geonode/wsgi.py
 
 
-Update the settings in order to update GeoNode and GeoServer services running on a public IP or hostname
-........................................................................................................
+7. Update the settings in order to update GeoNode and GeoServer services running on a public IP or hostname
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: Before exposing your services to the Internet, **make sure** your system is **hardened** and **secure enough**. See the specific documentation section for more details.
 
@@ -1144,128 +1144,323 @@ Let's say you want to run your services on a public IP or domain, e.g. ``www.exa
 
 In particular the steps to do are:
 
-1. Update ``NGINX`` configuration in order to serve the new domain name.
+    1. Update ``NGINX`` configuration in order to serve the new domain name.
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-    sudo vim /etc/nginx/sites-enabled/geonode
+        sudo vim /etc/nginx/sites-enabled/geonode
 
-    # Update the 'server_name' directive
-    server_name example.org www.example.org;
+        # Update the 'server_name' directive
+        server_name example.org www.example.org;
 
-    # Restart the service
-    sudo service nginx restart
+        # Restart the service
+        sudo service nginx restart
 
-2. Update ``UWSGI`` configuration in order to serve the new domain name.
+    2. Update ``UWSGI`` configuration in order to serve the new domain name.
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-    sudo vim /etc/uwsgi/apps-enabled/geonode.ini
+        sudo vim /etc/uwsgi/apps-enabled/geonode.ini
 
-    # Change everywhere 'localhost' to the new hostname
-    :%s/localhost/www.example.org/g
-    :wq
+        # Change everywhere 'localhost' to the new hostname
+        :%s/localhost/www.example.org/g
+        :wq
 
-    # Restart the service
-    sudo service uwsgi restart
+        # Restart the service
+        sudo service uwsgi restart
 
-3. Update ``OAuth2`` configuration in order to hit the new hostname.
+    3. Update ``OAuth2`` configuration in order to hit the new hostname.
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-    workon geonode
-    cd /opt/geonode
+        workon geonode
+        cd /opt/geonode
 
-    # Update the GeoNode ip or hostname
-    sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+        # Update the GeoNode ip or hostname
+        sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
 
-4. Update the existing ``GeoNode`` links in order to hit the new hostname.
+    4. Update the existing ``GeoNode`` links in order to hit the new hostname.
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-    workon geonode
-    cd /opt/geonode
+        workon geonode
+        cd /opt/geonode
 
-    # Update the GeoNode ip or hostname
-    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
+        # Update the GeoNode ip or hostname
+        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
 
-Install and enable HTTPS secured connection through the Let's Encrypt provider
-..............................................................................
+8. Install and enable HTTPS secured connection through the Let's Encrypt provider
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
-  # Install Let's Encrypt Certbot
-  sudo add-apt-repository ppa:certbot/certbot
-  sudo apt update -y; sudo apt install python-certbot-nginx -y
+    # Install Let's Encrypt Certbot
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt update -y; sudo apt install python-certbot-nginx -y
 
-  # Reload NGINX config and make sure the firewall denies access to HTTP
-  sudo systemctl reload nginx
-  sudo ufw allow 'Nginx Full'
-  sudo ufw delete allow 'Nginx HTTP'
+    # Reload NGINX config and make sure the firewall denies access to HTTP
+    sudo systemctl reload nginx
+    sudo ufw allow 'Nginx Full'
+    sudo ufw delete allow 'Nginx HTTP'
 
-  # Create and dump the Let's Encrypt Certificates
-  sudo certbot --nginx -d example.org -d www.example.org
-  # ...choose the redirect option when asked for
+    # Create and dump the Let's Encrypt Certificates
+    sudo certbot --nginx -d example.org -d www.example.org
+    # ...choose the redirect option when asked for
 
-1. Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly.
+Next, the steps to do are:
 
-  From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth Toolkit › Applications › GeoServer``
+    1. Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly.
 
-  .. figure:: img/ubuntu-https-001.png
-        :align: center
+    From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth Toolkit › Applications › GeoServer``
 
-        *Redirect URIs*
+    .. figure:: img/ubuntu-https-001.png
+            :align: center
 
-2. Update the ``GeoServer`` ``Proxy Base URL`` accordingly.
+            *Redirect URIs*
 
-  From the ``GeoServer Admin GUI`` go to ``About & Status > Global``
+    2. Update the ``GeoServer`` ``Proxy Base URL`` accordingly.
 
-  .. figure:: img/ubuntu-https-002.png
-        :align: center
+    From the ``GeoServer Admin GUI`` go to ``About & Status > Global``
 
-        *Proxy Base URL*
+    .. figure:: img/ubuntu-https-002.png
+            :align: center
 
-
-3. Update the ``GeoServer`` ``Role Base URL`` accordingly.
-
-  From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles > geonode REST role service``
-
-  .. figure:: img/ubuntu-https-003.png
-        :align: center
-
-        *Role Base URL*
-
-4. Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly.
-
-  From the ``GeoServer Admin GUI`` go to ``Security > Authentication > Authentication Filters > geonode-oauth2``
-
-  .. figure:: img/ubuntu-https-004.png
-        :align: center
-
-        *OAuth2 Service Parameters*
+            *Proxy Base URL*
 
 
-5. Update the ``UWSGI`` configuration
+    3. Update the ``GeoServer`` ``Role Base URL`` accordingly.
 
-  .. code-block:: shell
+    From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles > geonode REST role service``
 
-    sudo vim /etc/uwsgi/apps-enabled/geonode.ini
+    .. figure:: img/ubuntu-https-003.png
+            :align: center
 
-    # Change everywhere 'http' to 'https'
-    %s/http/https/g
+            *Role Base URL*
 
-    # Add three more 'env' variables to the configuration
-    env = SECURE_SSL_REDIRECT=True
-    env = SECURE_HSTS_INCLUDE_SUBDOMAINS=True
-    env = AVATAR_GRAVATAR_SSL=True
+    4. Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly.
 
-    # Restart the service
-    sudo service uwsgi restart
+    From the ``GeoServer Admin GUI`` go to ``Security > Authentication > Authentication Filters > geonode-oauth2``
 
-  .. figure:: img/ubuntu-https-005.png
-        :align: center
+    .. figure:: img/ubuntu-https-004.png
+            :align: center
 
-        *UWSGI Configuration*
+            *OAuth2 Service Parameters*
+
+
+    5. Update the ``UWSGI`` configuration
+
+    .. code-block:: shell
+
+        sudo vim /etc/uwsgi/apps-enabled/geonode.ini
+
+        # Change everywhere 'http' to 'https'
+        %s/http/https/g
+
+        # Add three more 'env' variables to the configuration
+        env = SECURE_SSL_REDIRECT=True
+        env = SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+        env = AVATAR_GRAVATAR_SSL=True
+
+        # Restart the service
+        sudo service uwsgi restart
+
+    .. figure:: img/ubuntu-https-005.png
+            :align: center
+
+            *UWSGI Configuration*
+
+9. Enabling Fully Asynchronous Tasks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_
+...................................................................................................................
+
+.. warning:: Adapt the steps below accordingly to your Ubuntu distribution (see the `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_ links to the documentation).
+
+.. code-block:: shell
+
+    sudo apt update && sudo apt install wget -y
+    sudo apt install apt-transport-https -y
+    wget -O- https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc | sudo apt-key add -
+    wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
+
+    wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_20.1-1~ubuntu~xenial_amd64.deb
+    sudo dpkg -i esl-erlang_20.1-1\~ubuntu\~xenial_amd64.deb
+
+    echo "deb https://dl.bintray.com/rabbitmq/debian xenial main" | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
+
+    sudo apt-get update
+    sudo apt-get install rabbitmq-server
+
+    sudo systemctl start rabbitmq-server.service
+    sudo systemctl enable rabbitmq-server.service
+
+    systemctl is-enabled rabbitmq-server.service
+    sudo rabbitmq-plugins enable rabbitmq_management
+    sudo ufw allow proto tcp from any to any port 5672,15672
+
+    sudo rabbitmqctl delete_user guest
+    sudo rabbitmqctl add_user admin <your_rabbitmq_admin_password_here>
+    sudo rabbitmqctl change_password admin <your_rabbitmq_admin_password_here>
+    sudo rabbitmqctl set_user_tags admin administrator
+    sudo rabbitmqctl add_vhost /localhost
+    sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+    sudo rabbitmqctl set_permissions -p /localhost admin ".*" ".*" ".*"
+
+Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
+..........................................................................................................................................
+
+.. code-block:: shell
+
+    sudo apt install supervisor
+
+    sudo mkdir /etc/supervisor
+    echo_supervisord_conf > /etc/supervisor/supervisord.conf
+
+    sudo mkdir /etc/supervisor/conf.d
+
+
+.. code-block:: shell
+
+    sudo vim /etc/supervisor/supervisord.conf
+
+.. note::
+
+    **!IMPORTANT!**
+
+    Pay particular attention to the ``environment`` key values pair placed here.
+
+    They **must** match the values you have already set on the ``uwsgi.ini`` file.
+
+.. code-block:: ini
+
+    ; supervisor config file
+
+    [unix_http_server]
+    file=/var/run/supervisor.sock   ; (the path to the socket file)
+    chmod=0700                       ; sockef file mode (default 0700)
+
+    [supervisord]
+    nodaemon=true
+    logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
+    pidfile=/var/run/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
+    childlogdir=/var/log/supervisor            ; ('AUTO' child log dir, default $TEMP)
+    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",CACHE_BUSTING_MEDIA_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True" 
+
+    ; the below section must remain in the config file for RPC
+    ; (supervisorctl/web interface) to work, additional interfaces may be
+    ; added by defining them in separate rpcinterface: sections
+    [rpcinterface:supervisor]
+    supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+    [supervisorctl]
+    serverurl=unix:///var/run/supervisor.sock ; use a unix:// URL  for a unix socket
+
+    ; The [include] section can just contain the "files" setting.  This
+    ; setting can list multiple files (separated by whitespace or
+    ; newlines).  It can also contain wildcards.  The filenames are
+    ; interpreted as relative to this file.  Included files *cannot*
+    ; include files themselves.
+
+    [include]
+    files = /etc/supervisor/conf.d/*.conf
+
+
+.. code-block:: shell
+
+    sudo vim /etc/supervisor/conf.d/geonode-celery.conf
+
+.. code-block:: ini
+
+    [program:geonode-celery]
+    command = sh -c "/<full_path_to_the_virtuaenv>/bin/celery -A geonode.celery_app:app worker -B -E --loglevel=DEBUG --concurrency=10 -n worker1@%%h"
+    directory = /<full_path_to_the_geonode_source_code>
+    user=geosolutions
+    numproc=1
+    stdout_logfile=/var/logs/geonode-celery.log
+    stderr_logfile=/var/logs/geonode-celery.log
+    autostart = true
+    autorestart = true
+    startsecs = 10
+    stopwaitsecs = 600
+    priority = 998
+
+Reload and restart ``supervisor`` and the ``celery`` workers
+
+.. code-block:: shell
+
+    # Restart supervisor
+    sudo supervisorctl reload
+    sudo systemctl restart supervisor
+
+    # Kill old celery workers (if any)
+    sudo pkill -f celery
+
+Make sure everything is *green*
+
+.. code-block:: shell
+
+    # Check the supervisor service status
+    sudo systemctl status supervisor
+
+    # Check the celery workers logs
+    sudo tail -F -n 300 /var/logs/geonode-celery.log
+
+
+**The `environment` directive**
+
+The environment variables are places into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the service via the ``environment`` directive.
+
+The syntax of this directive is the following one:
+
+.. code-block:: python
+
+    environment=ENV_KEY_1="ENV_VALUE_1",ENV_KEY_2="ENV_VALUE_2",...,ENV_KEY_n="ENV_VALUE_n"
+
+The following are the minimum set of env key value pairs you will need for a standard GeoNode Celery instance:
+
+    - ``ASYNC_SIGNALS="True"``
+    - ``BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/"``
+    - ``DEBUG``
+    - ``CACHE_BUSTING_STATIC_ENABLED``
+    - ``CACHE_BUSTING_MEDIA_ENABLED``
+    - ``SITEURL``
+    - ``DJANGO_SETTINGS_MODULE``
+    - ``GEOSERVER_ADMIN_PASSWORD``
+    - ``GEOSERVER_LOCATION``
+    - ``GEOSERVER_PUBLIC_LOCATION``
+    - ``GEOSERVER_WEB_UI_LOCATION``
+    - ``MONITORING_ENABLED``
+
+You will also need to:
+
+    a. Add more variables accordingly to your custom ``tasks`` (if any)
+
+
+    b. Make **always** sure the values of the environment variables match the ones of the ``uwsgi.ini`` file
+
+
+Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
+...........................................................................................................................
+
+.. code-block:: shell
+
+    sudo apt install memcached
+
+    sudo systemctl start memcached
+    sudo systemctl enable memcached
+
+    workon <your_geonode_venv_name>
+    cd /<full_path_to_the_geonode_source_code>
+
+    sudo apt install libmemcached-dev zlib1g-dev
+
+    pip install pylibmc==1.6.1
+    pip install sherlock==0.3.2
+
+    sudo systemctl restart supervisor.service
+    sudo systemctl status supervisor.service
+
 
 RHEL 7.x
 ========
@@ -1793,8 +1988,8 @@ Windows
 
 In this section we are going to discuess installation process of geonode in windows. This process will install the geonode in your windows machine and run locally.
 
-Python Setup
-^^^^^^^^^^^^
+1. Python Setup
+^^^^^^^^^^^^^^^
 
 1. Download and install python 3.7 from `this link <https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64.exe>`_
 2. Make sure you added python to environment variable path. If you don't know how to add python to environment variable, you can check `this tutorial <https://datatofish.com/add-python-to-windows-path/>`_
@@ -1817,8 +2012,8 @@ Python Setup
     cd your/working/directory
     git clone https://github.com/GeoNode/geonode.git -b 3.x
 
-Installation of Gdal
-^^^^^^^^^^^^^^^^^^^^
+2. Installation of GDAL
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``gdal`` can be install through ``OSGeo4W``. But this time we need to install it manually. This time we need to install the gdal inside our ``virtual environment``.
 
@@ -1838,8 +2033,8 @@ The ``gdal`` can be install through ``OSGeo4W``. But this time we need to instal
     pip install <path/to/gdal//wheel/file/GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl>
 
 
-Installation of required libraries and run locally
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3. Installation of required libraries and run locally
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For installation of required libraries, you should follow following steps,
 
@@ -1882,8 +2077,8 @@ invoke==1.4.1
 
 Now the geonode will run on your windows.
 
-Postgresql Database setup
-^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Postgresql Database setup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this section we are going to install setup ``PostgreSQL`` database on GeoNode. GeoNode uses the ``PostgreSQL 11`` database.
 
@@ -1923,8 +2118,8 @@ In this section we are going to install setup ``PostgreSQL`` database on GeoNode
 
 5. Restart the ``PostgreSQL`` to make the chage effective
 
-Update Django setting
-^^^^^^^^^^^^^^^^^^^^^
+5. Update Django setting
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now it is time to connect the postgres database with django. You need to follow following steps,
 
@@ -1965,8 +2160,8 @@ In this section we are going to list the passages needed to:
 
 .. include:: docker/centos.rst
 
-Test Docker Compose Instance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3. Test Docker Compose Instance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Logout and login again on shell and then execute:
 
@@ -1974,8 +2169,8 @@ Logout and login again on shell and then execute:
 
   docker run -it hello-world
 
-Deploy a vanilla GeoNode 3.1 with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Deploy a vanilla GeoNode 3.1 with Docker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
 
@@ -1999,15 +2194,15 @@ Start the Docker instances on ``localhost``
 .. code-block:: shell
 
     cd /opt/geonode
-    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml pull
-    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up -d
+    docker-compose -f docker-compose.yml pull
+    docker-compose -f docker-compose.yml up -d
 
 
 .. note:: If you want to re-build the docker images from scratch, instead of ``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to the up command, for instance:
 
 .. code-block:: shell
 
-    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
+    docker-compose -f docker-compose.yml up --build
 
   In this case you can of course skip the ``pull`` step to download the ``pre-built`` images.
 
@@ -2016,10 +2211,10 @@ Start the Docker instances on ``localhost``
 
   .. code-block:: shell
 
-    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up -d
+    docker-compose -f docker-compose.yml up -d
 
     # If you want to rebuild the images also
-    docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build -d
+    docker-compose -f docker-compose.yml up --build -d
 
 
 Test the instance and follow the logs
@@ -2088,8 +2283,8 @@ Edit the ``ENV`` override file in order to deploy on ``www.example.org``
 
 .. code-block:: shell
 
-  # Make a copy of docker-compose.override.localhost.yml
-  cp docker-compose.override.localhost.yml docker-compose.override.example-org.yml
+  # Make sure the new host is correctly configured on the ``.env`` file
+  vim .env
 
 Replace everywhere ``localhost`` with ``www.example.org``
 
@@ -2270,8 +2465,8 @@ This procedure allows you to stop all the containers and reset all the data with
   # stop containers and remove volumes
   docker-compose down -v
 
-Passages to completely get rid of old Docker images and volumes (reset the environment completely)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+5. Passages to completely get rid of old Docker images and volumes (reset the environment completely)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: For more details on Docker commands, please refer to the official Docker documentation.
 

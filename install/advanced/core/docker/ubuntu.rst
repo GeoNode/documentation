@@ -1,5 +1,5 @@
-Install the Docker and docker-compose packages on a Ubuntu host
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Install the Docker and docker-compose packages on a Ubuntu host
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Docker Setup (First time only)
 ..............................

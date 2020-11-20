@@ -1,5 +1,5 @@
-Install the Docker and docker-compose packages on a CentOS host
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2. Install the Docker and docker-compose packages on a CentOS host
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Docker Setup (First time only)
 ..............................

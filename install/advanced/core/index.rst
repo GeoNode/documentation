@@ -1409,7 +1409,7 @@ Make sure everything is *green*
 
 **The `environment` directive**
 
-The environment variables are places into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the service via the ``environment`` directive.
+The environment variables are placed into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the service via the ``environment`` directive.
 
 The syntax of this directive is the following one:
 

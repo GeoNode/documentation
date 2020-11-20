@@ -1,13 +1,88 @@
-Upgrade from 2.8.x
-==================
+Upgrade from 2.10.x / 3.0
+=========================
 
+Upgrade the instance dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Check the :ref:`install_dep` and :ref:`install_venv` sections in order to upgrade your Python environment.
 
-Upgrade from 2.7.x
-==================
+Also, make sure the code is ``Python 3.8`` compatible and that you switched and aligned the **source code** and the **requirements.txt** to the ``3.x`` branch.
 
-Upgrade from 2.6.x
-==================
+This must be done manually and with particular attention.
+
+.. code-block:: shell
+
+    workon geonode3
+    cd /<full_path_to_geonode>
+
+    pip install pip --upgrade
+    pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+    pip install -e . --upgrade
+    pip install pygdal=="`gdal-config --version`.*"
+
+    ./manage.sh collectstatic --noinput
+
+Prepare the Database and Migrate to the new Schema
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Fix the tables in order to migrate to the new schema
+....................................................
+
+.. code-block:: shell
+
+    ./manage.sh dbshell
+
+.. code-block:: sql
+
+    ALTER TABLE base_resourcebase ADD COLUMN doi_bkp varchar;
+    UPDATE base_resourcebase SET doi_bkp = doi;
+    ALTER TABLE base_resourcebase DROP COLUMN doi;
+
+    CREATE TABLE base_backup(name varchar);
+
+    CREATE TABLE base_usergeolimit_bkp ( like base_usergeolimit including all);
+    CREATE TABLE base_groupgeolimit_bkp ( like base_usergeolimit including all);
+    CREATE TABLE base_resourcebase_users_geolimits_bkp ( like base_usergeolimit including all);
+    CREATE TABLE base_resourcebase_groups_geolimits_bkp ( like base_usergeolimit including all);
+
+    DROP TABLE base_usergeolimit CASCADE;
+    DROP TABLE base_groupgeolimit CASCADE;
+    DROP TABLE base_resourcebase_users_geolimits CASCADE;
+    DROP TABLE base_resourcebase_groups_geolimits CASCADE;
+
+    \q
+
+Migrate to the new schema
+.........................
+
+.. code-block:: shell
+
+    ./manage.sh makemigrations
+    ./manage.sh migrate
+
+Restore the old contents
+........................
+
+.. code-block:: shell
+
+    ./manage.sh dbshell
+
+.. code-block:: sql
+
+    UPDATE base_resourcebase SET doi = doi_bkp;
+    ALTER TABLE base_resourcebase DROP COLUMN doi_bkp;
+
+    INSERT INTO base_usergeolimit (SELECT * FROM base_usergeolimit_bkp);
+    INSERT INTO base_groupgeolimit (SELECT * FROM base_groupgeolimit_bkp);
+    INSERT INTO base_resourcebase_users_geolimits (SELECT * FROM base_resourcebase_users_geolimits_bkp);
+    INSERT INTO base_resourcebase_groups_geolimits (SELECT * FROM base_resourcebase_groups_geolimits_bkp);
+
+    DROP TABLE base_usergeolimit_bkp CASCADE;
+    DROP TABLE base_groupgeolimit_bkp CASCADE;
+    DROP TABLE base_resourcebase_users_geolimits_bkp CASCADE;
+    DROP TABLE base_resourcebase_groups_geolimits_bkp CASCADE;
+
+    \q
 
 Upgrade from 2.4.x
 ==================
@@ -17,7 +92,7 @@ These notes could possibly work also when migrating from 2.6.x, 2.7.x, 2.8.x but
 You should run this procedure on your local machine and once you successfully migrated the database move the backup to your GeoNode 2.10.1 production instance.
 
 PostgreSQL
-----------
+^^^^^^^^^^
 
 Create a role and a database for Django GeoNode 2.4:
 
@@ -35,7 +110,7 @@ Restore backup from your production backup:
     psql gn_24 < gn_24.sql
 
 Run GeoNode migrations
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 Activate your GeoNode virtualenv and set the env vars:
 
@@ -94,7 +169,7 @@ Upgrade psycopg2:
     pip install -r geonode/requirements.txt
 
 Create superuser
-----------------
+^^^^^^^^^^^^^^^^
 
 To create a superuser you should drop the following constraints (they can be re-enabled if needed):
 
@@ -107,7 +182,7 @@ To create a superuser you should drop the following constraints (they can be re-
     ./manage createsuperuser
 
 Fixes on database
------------------
+^^^^^^^^^^^^^^^^^
 
 For some reason some resources were unpublished:
 

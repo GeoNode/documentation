@@ -45,10 +45,11 @@ Fix the tables in order to migrate to the new schema
     CREATE TABLE base_resourcebase_users_geolimits_bkp ( like base_usergeolimit including all);
     CREATE TABLE base_resourcebase_groups_geolimits_bkp ( like base_usergeolimit including all);
 
-    DROP TABLE base_usergeolimit CASCADE;
-    DROP TABLE base_groupgeolimit CASCADE;
-    DROP TABLE base_resourcebase_users_geolimits CASCADE;
-    DROP TABLE base_resourcebase_groups_geolimits CASCADE;
+    DROP TABLE IF EXISTS base_configuration CASCADE;
+    DROP TABLE IF EXISTS base_usergeolimit CASCADE;
+    DROP TABLE IF EXISTS base_groupgeolimit CASCADE;
+    DROP TABLE IF EXISTS base_resourcebase_users_geolimits CASCADE;
+    DROP TABLE IF EXISTS base_resourcebase_groups_geolimits CASCADE;
 
     \q
 
@@ -77,10 +78,10 @@ Restore the old contents
     INSERT INTO base_resourcebase_users_geolimits (SELECT * FROM base_resourcebase_users_geolimits_bkp);
     INSERT INTO base_resourcebase_groups_geolimits (SELECT * FROM base_resourcebase_groups_geolimits_bkp);
 
-    DROP TABLE base_usergeolimit_bkp CASCADE;
-    DROP TABLE base_groupgeolimit_bkp CASCADE;
-    DROP TABLE base_resourcebase_users_geolimits_bkp CASCADE;
-    DROP TABLE base_resourcebase_groups_geolimits_bkp CASCADE;
+    DROP TABLE IF EXISTS base_usergeolimit_bkp CASCADE;
+    DROP TABLE IF EXISTS base_groupgeolimit_bkp CASCADE;
+    DROP TABLE IF EXISTS base_resourcebase_users_geolimits_bkp CASCADE;
+    DROP TABLE IF EXISTS base_resourcebase_groups_geolimits_bkp CASCADE;
 
     \q
 

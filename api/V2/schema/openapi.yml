@@ -1,0 +1,6569 @@
+openapi: 3.0.3
+info:
+  title: 'GeoNode REST API v2 - REST'
+  version: 3.2
+paths:
+  /api/v2/:
+    get:
+      operationId: api_v2_retrieve
+      description: ''
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - basicAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/documents/:
+    get:
+      operationId: api_v2_documents_list
+      description: API endpoint that allows documents to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDocumentList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedDocumentList'
+          description: ''
+    post:
+      operationId: api_v2_documents_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Document'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Document'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Document'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+    patch:
+      operationId: api_v2_documents_partial_update
+      description: API endpoint that allows documents to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedDocument'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedDocument'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedDocument'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+    delete:
+      operationId: api_v2_documents_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/documents/{id}/:
+    get:
+      operationId: api_v2_documents_retrieve
+      description: API endpoint that allows documents to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this document.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+    put:
+      operationId: api_v2_documents_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this document.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Document'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Document'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Document'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+    patch:
+      operationId: api_v2_documents_partial_update_2
+      description: API endpoint that allows documents to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this document.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedDocument'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedDocument'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedDocument'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+    delete:
+      operationId: api_v2_documents_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this document.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/documents/{id}/linked_resources/:
+    get:
+      operationId: api_v2_documents_linked_resources_retrieve
+      description: API endpoint that allows documents to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this document.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+  /api/v2/geoapps/:
+    get:
+      operationId: api_v2_geoapps_list
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGeoAppList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedGeoAppList'
+          description: ''
+    post:
+      operationId: api_v2_geoapps_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoApp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GeoApp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GeoApp'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+          description: ''
+    patch:
+      operationId: api_v2_geoapps_partial_update
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoApp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoApp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoApp'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+          description: ''
+    delete:
+      operationId: api_v2_geoapps_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/geoapps/{id}/:
+    get:
+      operationId: api_v2_geoapps_retrieve
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo app.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+          description: ''
+    put:
+      operationId: api_v2_geoapps_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo app.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoApp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GeoApp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GeoApp'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+          description: ''
+    patch:
+      operationId: api_v2_geoapps_partial_update_2
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo app.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoApp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoApp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoApp'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+          description: ''
+    delete:
+      operationId: api_v2_geoapps_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo app.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/geoapps/{id}/{field_name}/:
+    get:
+      operationId: api_v2_geoapps_retrieve_2
+      description: |-
+        Fetch related object(s), as if sideloaded (used to support
+        link objects).
+
+        This method gets mapped to `/<resource>/<pk>/<field_name>/` by
+        DynamicRouter for all DynamicRelationField fields. Generally,
+        this method probably shouldn't be overridden.
+
+        An alternative implementation would be to generate reverse queries.
+        For an exploration of that approach, see:
+            https://gist.github.com/ryochiji/54687d675978c7d96503
+      parameters:
+      - in: path
+        name: field_name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo app.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoApp'
+          description: ''
+  /api/v2/geostories/:
+    get:
+      operationId: api_v2_geostories_list
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGeoStoryList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedGeoStoryList'
+          description: ''
+    post:
+      operationId: api_v2_geostories_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoStory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GeoStory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GeoStory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+          description: ''
+    patch:
+      operationId: api_v2_geostories_partial_update
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoStory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoStory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoStory'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+          description: ''
+    delete:
+      operationId: api_v2_geostories_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/geostories/{id}/:
+    get:
+      operationId: api_v2_geostories_retrieve
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo story.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+          description: ''
+    put:
+      operationId: api_v2_geostories_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo story.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoStory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GeoStory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GeoStory'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+          description: ''
+    patch:
+      operationId: api_v2_geostories_partial_update_2
+      description: API endpoint that allows geoapps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo story.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoStory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoStory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGeoStory'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+          description: ''
+    delete:
+      operationId: api_v2_geostories_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo story.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/geostories/{id}/{field_name}/:
+    get:
+      operationId: api_v2_geostories_retrieve_2
+      description: |-
+        Fetch related object(s), as if sideloaded (used to support
+        link objects).
+
+        This method gets mapped to `/<resource>/<pk>/<field_name>/` by
+        DynamicRouter for all DynamicRelationField fields. Generally,
+        this method probably shouldn't be overridden.
+
+        An alternative implementation would be to generate reverse queries.
+        For an exploration of that approach, see:
+            https://gist.github.com/ryochiji/54687d675978c7d96503
+      parameters:
+      - in: path
+        name: field_name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this geo story.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GeoStory'
+          description: ''
+  /api/v2/groups/:
+    get:
+      operationId: api_v2_groups_list
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupProfileList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupProfileList'
+          description: ''
+    post:
+      operationId: api_v2_groups_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GroupProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GroupProfile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+    patch:
+      operationId: api_v2_groups_partial_update
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGroupProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGroupProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGroupProfile'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+    delete:
+      operationId: api_v2_groups_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/groups/{id}/:
+    get:
+      operationId: api_v2_groups_retrieve
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+    put:
+      operationId: api_v2_groups_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/GroupProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/GroupProfile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+    patch:
+      operationId: api_v2_groups_partial_update_2
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedGroupProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedGroupProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedGroupProfile'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+    delete:
+      operationId: api_v2_groups_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/groups/{id}/managers/:
+    get:
+      operationId: api_v2_groups_managers_retrieve
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+  /api/v2/groups/{id}/members/:
+    get:
+      operationId: api_v2_groups_members_retrieve
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+  /api/v2/groups/{id}/resources/:
+    get:
+      operationId: api_v2_groups_resources_retrieve
+      description: API endpoint that allows gropus to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this group profile.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/GroupProfile'
+          description: ''
+  /api/v2/layers/:
+    get:
+      operationId: api_v2_layers_list
+      description: API endpoint that allows layers to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedLayerList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedLayerList'
+          description: ''
+    post:
+      operationId: api_v2_layers_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Layer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Layer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Layer'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Layer'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Layer'
+          description: ''
+    patch:
+      operationId: api_v2_layers_partial_update
+      description: API endpoint that allows layers to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedLayer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedLayer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedLayer'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Layer'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Layer'
+          description: ''
+    delete:
+      operationId: api_v2_layers_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/layers/{id}/:
+    get:
+      operationId: api_v2_layers_retrieve
+      description: API endpoint that allows layers to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this layer.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Layer'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Layer'
+          description: ''
+    put:
+      operationId: api_v2_layers_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this layer.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Layer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Layer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Layer'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Layer'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Layer'
+          description: ''
+    patch:
+      operationId: api_v2_layers_partial_update_2
+      description: API endpoint that allows layers to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this layer.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedLayer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedLayer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedLayer'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Layer'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Layer'
+          description: ''
+    delete:
+      operationId: api_v2_layers_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this layer.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/layers/{id}/{field_name}/:
+    get:
+      operationId: api_v2_layers_retrieve_2
+      description: |-
+        Fetch related object(s), as if sideloaded (used to support
+        link objects).
+
+        This method gets mapped to `/<resource>/<pk>/<field_name>/` by
+        DynamicRouter for all DynamicRelationField fields. Generally,
+        this method probably shouldn't be overridden.
+
+        An alternative implementation would be to generate reverse queries.
+        For an exploration of that approach, see:
+            https://gist.github.com/ryochiji/54687d675978c7d96503
+      parameters:
+      - in: path
+        name: field_name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this layer.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Layer'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Layer'
+          description: ''
+  /api/v2/maps/:
+    get:
+      operationId: api_v2_maps_list
+      description: API endpoint that allows maps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedMapList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedMapList'
+          description: ''
+    post:
+      operationId: api_v2_maps_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Map'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Map'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Map'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+    patch:
+      operationId: api_v2_maps_partial_update
+      description: API endpoint that allows maps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMap'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMap'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMap'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+    delete:
+      operationId: api_v2_maps_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/maps/{id}/:
+    get:
+      operationId: api_v2_maps_retrieve
+      description: API endpoint that allows maps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+    put:
+      operationId: api_v2_maps_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Map'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Map'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Map'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+    patch:
+      operationId: api_v2_maps_partial_update_2
+      description: API endpoint that allows maps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMap'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedMap'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedMap'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+    delete:
+      operationId: api_v2_maps_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/maps/{id}/layers/:
+    get:
+      operationId: api_v2_maps_layers_retrieve
+      description: API endpoint that allows maps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+  /api/v2/maps/{id}/local_layers/:
+    get:
+      operationId: api_v2_maps_local_layers_retrieve
+      description: API endpoint that allows maps to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+  /api/v2/resources/:
+    get:
+      operationId: api_v2_resources_list
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedResourceBaseList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedResourceBaseList'
+          description: ''
+    post:
+      operationId: api_v2_resources_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+    patch:
+      operationId: api_v2_resources_partial_update
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedResourceBase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedResourceBase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedResourceBase'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+    delete:
+      operationId: api_v2_resources_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/resources/{id}/:
+    get:
+      operationId: api_v2_resources_retrieve
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this resource base.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+    put:
+      operationId: api_v2_resources_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this resource base.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+    patch:
+      operationId: api_v2_resources_partial_update_2
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this resource base.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedResourceBase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedResourceBase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedResourceBase'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+    delete:
+      operationId: api_v2_resources_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this resource base.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/resources/{id}/get_perms/:
+    get:
+      operationId: api_v2_resources_get_perms_retrieve
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this resource base.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+  /api/v2/resources/{id}/set_perms/:
+    put:
+      operationId: api_v2_resources_set_perms_update
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this resource base.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ResourceBase'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+  /api/v2/resources/approved/:
+    get:
+      operationId: api_v2_resources_approved_retrieve
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+  /api/v2/resources/featured/:
+    get:
+      operationId: api_v2_resources_featured_retrieve
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+  /api/v2/resources/published/:
+    get:
+      operationId: api_v2_resources_published_retrieve
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+  /api/v2/resources/resource_types/:
+    get:
+      operationId: api_v2_resources_resource_types_retrieve
+      description: API endpoint that allows base resources to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/ResourceBase'
+          description: ''
+  /api/v2/schema/:
+    get:
+      operationId: api_v2_schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - am
+          - ar
+          - bn
+          - de
+          - el
+          - en
+          - es
+          - fa
+          - fr
+          - id
+          - it
+          - ja
+          - km
+          - ko
+          - ne
+          - nl
+          - pl
+          - pt
+          - pt-br
+          - ru
+          - si
+          - sq
+          - sv
+          - sw
+          - ta
+          - th
+          - tl
+          - uk
+          - vi
+          - zh-cn
+      tags:
+      - api
+      security:
+      - basicAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v2/users/:
+    get:
+      operationId: api_v2_users_list
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUserProfileList'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/PaginatedUserProfileList'
+          description: ''
+    post:
+      operationId: api_v2_users_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+    patch:
+      operationId: api_v2_users_partial_update
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUserProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUserProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUserProfile'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+    delete:
+      operationId: api_v2_users_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/users/{id}/:
+    get:
+      operationId: api_v2_users_retrieve
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+    put:
+      operationId: api_v2_users_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+    patch:
+      operationId: api_v2_users_partial_update_2
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUserProfile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUserProfile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUserProfile'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+    delete:
+      operationId: api_v2_users_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/users/{id}/groups/:
+    get:
+      operationId: api_v2_users_groups_retrieve
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+  /api/v2/users/{id}/resources/:
+    get:
+      operationId: api_v2_users_resources_retrieve
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+          description: ''
+  /mapstore/rest/resources/:
+    get:
+      operationId: mapstore_rest_resources_retrieve
+      description: Only Authenticate User perform CRUD Operations on Respective Data
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    post:
+      operationId: mapstore_rest_resources_create
+      description: Only Authenticate User perform CRUD Operations on Respective Data
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          description: No response body
+  /mapstore/rest/resources/{id}/:
+    get:
+      operationId: mapstore_rest_resources_retrieve_2
+      description: Only Authenticate User perform CRUD Operations on Respective Data
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        description: A unique value identifying this map store resource.
+        required: true
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    put:
+      operationId: mapstore_rest_resources_update
+      description: Only Authenticate User perform CRUD Operations on Respective Data
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        description: A unique value identifying this map store resource.
+        required: true
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          description: No response body
+    patch:
+      operationId: mapstore_rest_resources_partial_update
+      description: Only Authenticate User perform CRUD Operations on Respective Data
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        description: A unique value identifying this map store resource.
+        required: true
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          description: No response body
+    delete:
+      operationId: mapstore_rest_resources_destroy
+      description: Only Authenticate User perform CRUD Operations on Respective Data
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        description: A unique value identifying this map store resource.
+        required: true
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /mapstore/rest/users/:
+    get:
+      operationId: mapstore_rest_users_list
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+            text/html:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          description: ''
+    post:
+      operationId: mapstore_rest_users_create
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - mapstore
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+  /mapstore/rest/users/{id}/:
+    get:
+      operationId: mapstore_rest_users_retrieve
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    put:
+      operationId: mapstore_rest_users_update
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - mapstore
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    patch:
+      operationId: mapstore_rest_users_partial_update
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - mapstore
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/html:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    delete:
+      operationId: mapstore_rest_users_destroy
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this user.
+        required: true
+      tags:
+      - mapstore
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /o/userinfo/:
+    get:
+      operationId: o_userinfo_retrieve
+      description: View used to show Claims about the authenticated End-User
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - api
+          - json
+      tags:
+      - o
+      security:
+      - basicAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  schemas:
+    AccessEnum:
+      enum:
+      - public
+      - public-invite
+      - private
+      type: string
+    BlankEnum:
+      enum:
+      - ''
+    Document:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        href:
+          type: string
+          readOnly: true
+        doc_type:
+          type: string
+          nullable: true
+          maxLength: 128
+        extension:
+          type: string
+          nullable: true
+          maxLength: 128
+        mime_type:
+          type: string
+          readOnly: true
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+      required:
+      - abstract
+      - alternate
+      - attribution
+      - bbox_polygon
+      - constraints_other
+      - created
+      - data_quality_statement
+      - date
+      - date_type
+      - detail_url
+      - doi
+      - edition
+      - featured
+      - href
+      - is_approved
+      - is_published
+      - language
+      - last_updated
+      - maintenance_frequency
+      - metadata_author
+      - mime_type
+      - name
+      - owner
+      - pk
+      - poc
+      - polymorphic_ctype_id
+      - popular_count
+      - purpose
+      - rating
+      - regions
+      - resource_type
+      - share_count
+      - srid
+      - supplemental_information
+      - temporal_extent_end
+      - temporal_extent_start
+      - thumbnail_url
+      - title
+      - uuid
+    GeoApp:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        zoom:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        projection:
+          type: string
+          nullable: true
+          maxLength: 32
+        center_x:
+          type: number
+          format: float
+          nullable: true
+        center_y:
+          type: number
+          format: float
+          nullable: true
+        urlsuffix:
+          type: string
+          nullable: true
+          maxLength: 255
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+      required:
+      - abstract
+      - alternate
+      - attribution
+      - bbox_polygon
+      - constraints_other
+      - created
+      - data_quality_statement
+      - date
+      - date_type
+      - detail_url
+      - doi
+      - edition
+      - featured
+      - is_approved
+      - is_published
+      - language
+      - last_updated
+      - maintenance_frequency
+      - metadata_author
+      - owner
+      - pk
+      - poc
+      - polymorphic_ctype_id
+      - popular_count
+      - purpose
+      - rating
+      - regions
+      - resource_type
+      - share_count
+      - srid
+      - supplemental_information
+      - temporal_extent_end
+      - temporal_extent_start
+      - thumbnail_url
+      - title
+      - uuid
+    GeoStory:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        app_type:
+          type: string
+          maxLength: 255
+        zoom:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        projection:
+          type: string
+          nullable: true
+          maxLength: 32
+        center_x:
+          type: number
+          format: float
+          nullable: true
+        center_y:
+          type: number
+          format: float
+          nullable: true
+        urlsuffix:
+          type: string
+          nullable: true
+          maxLength: 255
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+      required:
+      - abstract
+      - alternate
+      - attribution
+      - bbox_polygon
+      - constraints_other
+      - created
+      - data_quality_statement
+      - date
+      - date_type
+      - detail_url
+      - doi
+      - edition
+      - featured
+      - is_approved
+      - is_published
+      - language
+      - last_updated
+      - maintenance_frequency
+      - metadata_author
+      - owner
+      - pk
+      - poc
+      - polymorphic_ctype_id
+      - popular_count
+      - purpose
+      - rating
+      - regions
+      - resource_type
+      - share_count
+      - srid
+      - supplemental_information
+      - temporal_extent_end
+      - temporal_extent_start
+      - thumbnail_url
+      - title
+      - uuid
+    GroupProfile:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 1000
+        group:
+          type: string
+        slug:
+          type: string
+          maxLength: 1000
+          pattern: ^[-a-zA-Z0-9_]+$
+        logo:
+          type: string
+          format: uri
+        description:
+          type: string
+        email:
+          type: string
+          format: email
+          nullable: true
+          description: Email used to contact one or all group members, such as a mailing
+            list, shared email, or exchange group.
+          maxLength: 254
+        keywords:
+          type: array
+          items:
+            type: string
+          readOnly: true
+        access:
+          allOf:
+          - $ref: '#/components/schemas/AccessEnum'
+          description: 'Public: Any registered user can view and join a public group.<br>Public
+            (invite-only):Any registered user can view the group.  Only invited users
+            can join.<br>Private: Registered users cannot see any details about the
+            group, including membership.  Only invited users can join.'
+        categories:
+          type: array
+          items:
+            type: string
+      required:
+      - categories
+      - description
+      - group
+      - keywords
+      - pk
+      - slug
+      - title
+    Layer:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        workspace:
+          type: string
+          readOnly: true
+        store:
+          type: string
+          readOnly: true
+        storeType:
+          type: string
+          readOnly: true
+        charset:
+          type: string
+          readOnly: true
+        is_mosaic:
+          type: boolean
+        has_time:
+          type: boolean
+        has_elevation:
+          type: boolean
+        time_regex:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/TimeRegexEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        elevation_regex:
+          type: string
+          nullable: true
+          maxLength: 128
+        use_featureinfo_custom_template:
+          type: boolean
+          description: specifies wether or not use a custom GetFeatureInfo template.
+        featureinfo_custom_template:
+          type: string
+          nullable: true
+          description: the custom GetFeatureInfo template HTML contents.
+        default_style:
+          type: string
+          readOnly: true
+          nullable: true
+        styles:
+          type: string
+          readOnly: true
+        attribute_set:
+          type: string
+          readOnly: true
+          nullable: true
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+      required:
+      - abstract
+      - alternate
+      - attribute_set
+      - attribution
+      - bbox_polygon
+      - charset
+      - constraints_other
+      - created
+      - data_quality_statement
+      - date
+      - date_type
+      - default_style
+      - detail_url
+      - doi
+      - edition
+      - featured
+      - is_approved
+      - is_published
+      - language
+      - last_updated
+      - maintenance_frequency
+      - metadata_author
+      - name
+      - owner
+      - pk
+      - poc
+      - polymorphic_ctype_id
+      - popular_count
+      - purpose
+      - rating
+      - regions
+      - resource_type
+      - share_count
+      - srid
+      - store
+      - storeType
+      - styles
+      - supplemental_information
+      - temporal_extent_end
+      - temporal_extent_start
+      - thumbnail_url
+      - title
+      - uuid
+      - workspace
+    Map:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        zoom:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        projection:
+          type: string
+          maxLength: 32
+        center_x:
+          type: number
+          format: float
+        center_y:
+          type: number
+          format: float
+        urlsuffix:
+          type: string
+          maxLength: 255
+        featuredurl:
+          type: string
+          maxLength: 255
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+      required:
+      - abstract
+      - alternate
+      - attribution
+      - bbox_polygon
+      - center_x
+      - center_y
+      - constraints_other
+      - created
+      - data_quality_statement
+      - date
+      - date_type
+      - detail_url
+      - doi
+      - edition
+      - featured
+      - is_approved
+      - is_published
+      - language
+      - last_updated
+      - maintenance_frequency
+      - metadata_author
+      - owner
+      - pk
+      - poc
+      - polymorphic_ctype_id
+      - popular_count
+      - projection
+      - purpose
+      - rating
+      - regions
+      - resource_type
+      - share_count
+      - srid
+      - supplemental_information
+      - temporal_extent_end
+      - temporal_extent_start
+      - thumbnail_url
+      - title
+      - uuid
+      - zoom
+    NullEnum:
+      enum:
+      - null
+    PaginatedDocumentList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Document'
+    PaginatedGeoAppList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GeoApp'
+    PaginatedGeoStoryList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GeoStory'
+    PaginatedGroupProfileList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GroupProfile'
+    PaginatedLayerList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Layer'
+    PaginatedMapList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Map'
+    PaginatedResourceBaseList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResourceBase'
+    PaginatedUserProfileList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserProfile'
+    PatchedDocument:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        href:
+          type: string
+          readOnly: true
+        doc_type:
+          type: string
+          nullable: true
+          maxLength: 128
+        extension:
+          type: string
+          nullable: true
+          maxLength: 128
+        mime_type:
+          type: string
+          readOnly: true
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+    PatchedGeoApp:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        zoom:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        projection:
+          type: string
+          nullable: true
+          maxLength: 32
+        center_x:
+          type: number
+          format: float
+          nullable: true
+        center_y:
+          type: number
+          format: float
+          nullable: true
+        urlsuffix:
+          type: string
+          nullable: true
+          maxLength: 255
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+    PatchedGeoStory:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        app_type:
+          type: string
+          maxLength: 255
+        zoom:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        projection:
+          type: string
+          nullable: true
+          maxLength: 32
+        center_x:
+          type: number
+          format: float
+          nullable: true
+        center_y:
+          type: number
+          format: float
+          nullable: true
+        urlsuffix:
+          type: string
+          nullable: true
+          maxLength: 255
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+    PatchedGroupProfile:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 1000
+        group:
+          type: string
+        slug:
+          type: string
+          maxLength: 1000
+          pattern: ^[-a-zA-Z0-9_]+$
+        logo:
+          type: string
+          format: uri
+        description:
+          type: string
+        email:
+          type: string
+          format: email
+          nullable: true
+          description: Email used to contact one or all group members, such as a mailing
+            list, shared email, or exchange group.
+          maxLength: 254
+        keywords:
+          type: array
+          items:
+            type: string
+          readOnly: true
+        access:
+          allOf:
+          - $ref: '#/components/schemas/AccessEnum'
+          description: 'Public: Any registered user can view and join a public group.<br>Public
+            (invite-only):Any registered user can view the group.  Only invited users
+            can join.<br>Private: Registered users cannot see any details about the
+            group, including membership.  Only invited users can join.'
+        categories:
+          type: array
+          items:
+            type: string
+    PatchedLayer:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          readOnly: true
+        workspace:
+          type: string
+          readOnly: true
+        store:
+          type: string
+          readOnly: true
+        storeType:
+          type: string
+          readOnly: true
+        charset:
+          type: string
+          readOnly: true
+        is_mosaic:
+          type: boolean
+        has_time:
+          type: boolean
+        has_elevation:
+          type: boolean
+        time_regex:
+          nullable: true
+          oneOf:
+          - $ref: '#/components/schemas/TimeRegexEnum'
+          - $ref: '#/components/schemas/BlankEnum'
+          - $ref: '#/components/schemas/NullEnum'
+        elevation_regex:
+          type: string
+          nullable: true
+          maxLength: 128
+        use_featureinfo_custom_template:
+          type: boolean
+          description: specifies wether or not use a custom GetFeatureInfo template.
+        featureinfo_custom_template:
+          type: string
+          nullable: true
+          description: the custom GetFeatureInfo template HTML contents.
+        default_style:
+          type: string
+          readOnly: true
+          nullable: true
+        styles:
+          type: string
+          readOnly: true
+        attribute_set:
+          type: string
+          readOnly: true
+          nullable: true
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+    PatchedMap:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        zoom:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        projection:
+          type: string
+          maxLength: 32
+        center_x:
+          type: number
+          format: float
+        center_y:
+          type: number
+          format: float
+        urlsuffix:
+          type: string
+          maxLength: 255
+        featuredurl:
+          type: string
+          maxLength: 255
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        constraints_other:
+          type: string
+        language:
+          type: string
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        restriction_code_type:
+          type: string
+          nullable: true
+        license:
+          type: string
+          nullable: true
+        spatial_representation_type:
+          type: string
+          nullable: true
+    PatchedResourceBase:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        restriction_code_type:
+          type: string
+          nullable: true
+        constraints_other:
+          type: string
+        license:
+          type: string
+          nullable: true
+        language:
+          type: string
+        spatial_representation_type:
+          type: string
+          nullable: true
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+    PatchedUser:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        is_staff:
+          type: boolean
+          description: Designates whether the user can log into this admin site.
+        is_active:
+          type: boolean
+          description: Designates whether this user should be treated as active. Unselect
+            this instead of deleting accounts.
+        is_superuser:
+          type: boolean
+          description: Designates that this user has all permissions without explicitly
+            assigning them.
+    PatchedUserProfile:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: integer
+          readOnly: true
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        first_name:
+          type: string
+          maxLength: 30
+        last_name:
+          type: string
+          maxLength: 150
+        avatar:
+          type: string
+          readOnly: true
+    ResourceBase:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          readOnly: true
+        resource_type:
+          type: string
+          readOnly: true
+        polymorphic_ctype_id:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          nullable: true
+        poc:
+          type: string
+          readOnly: true
+        metadata_author:
+          type: string
+          readOnly: true
+        keywords:
+          type: string
+          nullable: true
+        regions:
+          type: string
+          readOnly: true
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        title:
+          type: string
+        abstract:
+          type: string
+        attribution:
+          type: string
+        doi:
+          type: string
+        alternate:
+          type: string
+          readOnly: true
+        bbox_polygon:
+          type: string
+        srid:
+          type: string
+        date:
+          type: string
+          format: date-time
+        date_type:
+          type: string
+        edition:
+          type: string
+        purpose:
+          type: string
+        maintenance_frequency:
+          type: string
+        restriction_code_type:
+          type: string
+          nullable: true
+        constraints_other:
+          type: string
+        license:
+          type: string
+          nullable: true
+        language:
+          type: string
+        spatial_representation_type:
+          type: string
+          nullable: true
+        temporal_extent_start:
+          type: string
+          format: date-time
+        temporal_extent_end:
+          type: string
+          format: date-time
+        supplemental_information:
+          type: string
+        data_quality_statement:
+          type: string
+        group:
+          type: string
+          nullable: true
+        popular_count:
+          type: string
+        share_count:
+          type: string
+        rating:
+          type: string
+        featured:
+          type: boolean
+        is_published:
+          type: boolean
+        is_approved:
+          type: boolean
+        thumbnail_url:
+          type: string
+        detail_url:
+          type: string
+          readOnly: true
+        created:
+          type: string
+          format: date-time
+          readOnly: true
+        last_updated:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - abstract
+      - alternate
+      - attribution
+      - bbox_polygon
+      - constraints_other
+      - created
+      - data_quality_statement
+      - date
+      - date_type
+      - detail_url
+      - doi
+      - edition
+      - featured
+      - is_approved
+      - is_published
+      - language
+      - last_updated
+      - maintenance_frequency
+      - metadata_author
+      - owner
+      - pk
+      - poc
+      - polymorphic_ctype_id
+      - popular_count
+      - purpose
+      - rating
+      - regions
+      - resource_type
+      - share_count
+      - srid
+      - supplemental_information
+      - temporal_extent_end
+      - temporal_extent_start
+      - thumbnail_url
+      - title
+      - uuid
+    TimeRegexEnum:
+      enum:
+      - '[0-9]{8}'
+      - '[0-9]{8}T[0-9]{6}'
+      - '[0-9]{8}T[0-9]{6}Z'
+      type: string
+    User:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+          readOnly: true
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        is_staff:
+          type: boolean
+          description: Designates whether the user can log into this admin site.
+        is_active:
+          type: boolean
+          description: Designates whether this user should be treated as active. Unselect
+            this instead of deleting accounts.
+        is_superuser:
+          type: boolean
+          description: Designates that this user has all permissions without explicitly
+            assigning them.
+      required:
+      - url
+      - username
+    UserProfile:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        pk:
+          type: integer
+          readOnly: true
+        username:
+          type: string
+          description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+            only.
+          pattern: ^[\w.@+-]+$
+          maxLength: 150
+        first_name:
+          type: string
+          maxLength: 30
+        last_name:
+          type: string
+          maxLength: 150
+        avatar:
+          type: string
+          readOnly: true
+      required:
+      - avatar
+      - pk
+      - username
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: Session
+    oauth2:
+      type: oauth2
+      flows: {}

@@ -30,6 +30,12 @@ Table of contents
     usage/index
 
 .. toctree::
+    :caption: API Schema
+    :maxdepth: 3
+
+    api/index
+
+.. toctree::
     :caption: Installing
     :maxdepth: 3
 

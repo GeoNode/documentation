@@ -1279,21 +1279,24 @@ Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-inst
 
 .. code-block:: shell
 
-    sudo apt update && sudo apt install wget -y
+    sudo apt update && sudo apt upgrade && sudo apt install wget -y
+    echo "deb https://packages.erlang-solutions.com/ubuntu focal contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+
+    sudo apt update
+    sudo apt install erlang
+
     sudo apt install apt-transport-https -y
     wget -O- https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc | sudo apt-key add -
     wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
+    echo "deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang-22.x" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
 
-    wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_20.1-1~ubuntu~xenial_amd64.deb
-    sudo dpkg -i esl-erlang_20.1-1\~ubuntu\~xenial_amd64.deb
-
-    echo "deb https://dl.bintray.com/rabbitmq/debian xenial main" | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
-
-    sudo apt-get update
-    sudo apt-get install rabbitmq-server
+    sudo apt update
+    sudo apt install rabbitmq-server
 
     sudo systemctl start rabbitmq-server.service
     sudo systemctl enable rabbitmq-server.service
+
+    sudo ufw allow proto tcp from any to any port 5672,15672
 
     systemctl is-enabled rabbitmq-server.service
     sudo rabbitmq-plugins enable rabbitmq_management

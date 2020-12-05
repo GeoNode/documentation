@@ -242,10 +242,7 @@ In this section we are going to install the ``PostgreSQL`` packages along with t
   # Ubuntu 20.04 (focal)
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-  sudo apt update -y; sudo apt install -y postgresql-11 postgresql-11-postgis-2.5 postgresql-11-postgis-2.5-scripts postgresql-contrib-11 postgresql-client-11
-
-  # Ubuntu 20.10 (groovy)
-  sudo apt update -y; sudo apt install -y postgresql-12 postgresql-12-postgis-3 postgresql-12-postgis-3-scripts postgresql-contrib-12 postgresql-client-12
+  sudo apt update -y; sudo apt install -y postgresql-13 postgresql-13-postgis-3 postgresql-13-postgis-3-scripts postgresql-13 postgresql-client-13
 
 We now must create two databases, ``geonode`` and ``geonode_data``, belonging to the role ``geonode``.
 
@@ -1295,8 +1292,6 @@ Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-inst
 
     sudo systemctl start rabbitmq-server.service
     sudo systemctl enable rabbitmq-server.service
-
-    sudo ufw allow proto tcp from any to any port 5672,15672
 
     systemctl is-enabled rabbitmq-server.service
     sudo rabbitmq-plugins enable rabbitmq_management

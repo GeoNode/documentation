@@ -291,7 +291,7 @@ Final step is to change user access policies for local connections in the file `
 
 .. code-block:: shell
 
-  sudo vim /etc/postgresql/11/main/pg_hba.conf
+  sudo vim /etc/postgresql/13/main/pg_hba.conf
 
 Scroll down to the bottom of the document. We want to make local connection ``trusted`` for the default user.
 
@@ -323,7 +323,7 @@ Make sure your configuration looks like the one below.
     host    replication     all             127.0.0.1/32            md5
     host    replication     all             ::1/128                 md5
 
-.. warning:: If your ``PostgreSQL`` database resides on a **separate/remote machine**, you'll have to **allow** remote access to the databases in the ``/etc/postgresql/11/main/pg_hba.conf`` to the ``geonode`` user and tell PostgreSQL to **accept** non-local connections in your ``/etc/postgresql/11/main/postgresql.conf`` file
+.. warning:: If your ``PostgreSQL`` database resides on a **separate/remote machine**, you'll have to **allow** remote access to the databases in the ``/etc/postgresql/13/main/pg_hba.conf`` to the ``geonode`` user and tell PostgreSQL to **accept** non-local connections in your ``/etc/postgresql/13/main/postgresql.conf`` file
 
 Restart PostgreSQL to make the change effective.
 

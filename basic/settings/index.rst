@@ -137,6 +137,15 @@ ADMIN_MODERATE_UPLOADS
     A ``Group Manager`` *can* approve the resource, but he cannot publish it whenever the setting ``RESOURCE_PUBLISHING`` is set to ``True``.
     Otherwise, if ``RESOURCE_PUBLISHING`` is set to ``False``, the resource becomes accessible as soon as it is approved.
 
+ADMINS_ONLY_NOTICE_TYPES
+------------------------
+
+    | Default: ``['monitoring_alert',]``
+
+    A list of notification labels that standard users should not either see or set.
+
+    Such notifications will be hidden from the notify settings page and automatically set to false for non-superusers.
+
 AGON_RATINGS_CATEGORY_CHOICES
 -----------------------------
 

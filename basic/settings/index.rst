@@ -489,7 +489,7 @@ CATALOGUE
     are managed in the PYCSW entry.
 
 CATALOGUE METADATA TEMPLATE
----------
+---------------------------
 
     Default : ``catalogue/full_metadata.xml``
 

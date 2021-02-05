@@ -33,6 +33,50 @@ If you only want to make sure that a thesaurus file will be properly parsed, giv
 
 Configure a thesaurus in GeoNode
 ================================
+Configuration from `Admin`
+
+After you loaded a thesaurus into GeoNode, it should be configured in the :guilabel:`Admin` panel.
+
+The panel can be reached from :guilabel:`Admin` link of the *User Menu* in the navigation bar or through this URL: ``http://<your_geonode_host>/admin/base/thesaurus``.
+
+Once you are on the Thesaurus lists, select one thesaurus to open the Edit page
+
+.. figure:: img/thesaurus_edit_page.png
+     :align: center
+
+     *The GeoNode Thesaurus edit Interface*
+
+
+- ``identifier``: (mandatory string) the identifier you used in the ``load_thesaurus`` commands.
+- ``title``: (mandatory string) The title of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``date``: (mandatory date) The Date of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``Description``: (mandatory string) The description of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``Slug``: (mandatory string) The slug of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``about``: (optional string) The about of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``Card Min``: (optional integer) Decide the minimun cardinality, default = 0
+- ``Card Max``: (optional integer) Decide the maximun cardinality, default = -1
+
+Cardinality:
+
+- `card_max=0` --> Disabled, The Thesaurus will not appear in the GUI
+- `card_max=1` & `card_min = 0` --> Single choice, optional.
+- `card_max=1` & `card_min = 1` --> Single choice, required
+- `card_max=-1` & `card_min = 0`  --> [0..N] Multiple choices, optional
+- `card_max=-1` & `card_min = 1` --> [1..N] Multiple choices, required
+
+After the setup, in `Editing Tools -> Metadata -> Wizard` the thesaurus block will be shown like the following image:
+
+
+.. figure:: img/thesaurus_choices.png
+     :align: center
+
+     *The metadata interface with the Thesaurus enabled*
+
+================================
+
+Configuration via `settings.py`
+
+.. warning:: *Deprecated* The Thesaurus configuration via settings is deprecated, will be removed in the future.
 
 After you loaded a thesaurus into GeoNode, it should be configured in the ``settings.py`` file (or in the ``local_settings``) in this way:
 

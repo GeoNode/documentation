@@ -50,11 +50,11 @@ Once you are on the Thesaurus lists, select one thesaurus to open the Edit page
 - ``identifier``: (mandatory string) the identifier you used in the ``load_thesaurus`` commands.
 - ``title``: (mandatory string) The title of the thesaurus, is ingested by the ``load_thesaurus`` command.
 - ``date``: (mandatory date) The Date of the thesaurus, is ingested by the ``load_thesaurus`` command.
-- ``Description``: (mandatory string) The description of the thesaurus, is ingested by the ``load_thesaurus`` command.
-- ``Slug``: (mandatory string) The slug of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``description``: (mandatory string) The description of the thesaurus, is ingested by the ``load_thesaurus`` command.
+- ``slug``: (mandatory string) The slug of the thesaurus, is ingested by the ``load_thesaurus`` command.
 - ``about``: (optional string) The about of the thesaurus, is ingested by the ``load_thesaurus`` command.
-- ``Card Min``: (optional integer) Decide the minimun cardinality, default = 0
-- ``Card Max``: (optional integer) Decide the maximun cardinality, default = -1
+- ``card min``: (optional integer) Decide the minimun cardinality, default = 0
+- ``card max``: (optional integer) Decide the maximun cardinality, default = -1
 
 Cardinality:
 

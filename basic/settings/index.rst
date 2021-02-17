@@ -2248,6 +2248,29 @@ USER_ANALYTICS_GZIP
     To be used with ``USER_ANALYTICS_ENABLED``.
     Compress ``gzip`` json messages before sending to ``logstash``.
 
+
+UUID HANDLER
+------------
+
+Is possible to define an own uuidhandler for the Layer.
+
+To start using your own handler, is needed to add the following configuration:
+
+`LAYER_UUID_HANDLER = "mymodule.myfile.MyObject"`
+
+The Object must accept as `init` the `instance` of the layer and have a method named `create_uuid()`
+
+here is an example:
+
+    | class MyObject():
+    |    def __init__(self, instance):
+    |        self.instance = instance
+    |
+    |    def create_uuid(self):
+    |        # here your code
+    |        pass
+
+
 X
 =
 

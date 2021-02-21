@@ -44,7 +44,7 @@ Check that your system is already up-to-date with the repository running the fol
 
 .. code-block:: shell
 
-   sudo add-apt-repository ppa:ubuntugis/ppa
+   sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
    sudo apt update -y; sudo apt upgrade -y;
 
 
@@ -1192,7 +1192,7 @@ In particular the steps to do are:
 .. code-block:: shell
 
     # Install Let's Encrypt Certbot
-    sudo add-apt-repository ppa:certbot/certbot
+    # sudo add-apt-repository ppa:certbot/certbot  # for ubuntu 18.04 and lower
     sudo apt update -y; sudo apt install python-certbot-nginx -y
 
     # Reload NGINX config and make sure the firewall denies access to HTTP

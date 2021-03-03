@@ -127,8 +127,8 @@ Identify the corresponding template file which is responsible for outputting the
 
 .. code-block:: shell
 
-	django-admin makemessages -l en -d django -e "html,txt,py" -i docs 
-	django-admin makemessages -l en -d djangojs -e "js" -i docs -i node_modules -i lib 
+	django-admin makemessages --no-location -l en -d django -e "html,txt,py" -i docs
+	django-admin makemessages --no-location -l en -d djangojs -e "js" -i docs -i node_modules -i lib
 	
 
 This will update the english .po file. also to update the language which should be edited by settings the ``-l fr`` parameter. Continue with updating the .po file as described above.

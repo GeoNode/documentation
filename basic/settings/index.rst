@@ -2189,16 +2189,9 @@ The fields that can be mandatory are:
 
 If at least one on the above ids is set in this configuration, the panel header will change from `Optional` to `Mandatory`
 
-With configuration disabled:
-
-    figure:: admin/admin_panel/img/ui_required_fields_disabled.png
-
     | Confiugration Example:
     | UI_REQUIRED_FIELDS = ['id_resource-edition']
 
-With configuration enabled:
-
-    figure:: admin/admin_panel/img/ui_required_fields_enabled.png
 
 UNOCONV_ENABLE
 --------------

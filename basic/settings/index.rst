@@ -2174,7 +2174,7 @@ U
 =
 
 UI_REQUIRED_FIELDS
---------------
+------------------
 If this option is enabled, the input selected (we are referring about the onece present in the Optional Metadata tab  on Metadata Wizard) will become Mandatory.
 
 The fields that can be mandatory are:

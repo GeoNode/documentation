@@ -77,7 +77,3 @@ The following tutorials will introduce the use of Docker community edition on:
 * :ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Basic Setup>`
 
 * :ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`
-
-GeoNode provides also an advanced stack of Docker containers for a more stable, production-like setup:
-
-* :doc:`SPCGeoNode </install/advanced/spc/index>`

@@ -2173,6 +2173,26 @@ TINYMCE_DEFAULT_CONFIG
 U
 =
 
+UI_REQUIRED_FIELDS
+------------------
+If this option is enabled, the input selected (we are referring to the one present in the optional Metadata-Tab on the Metadata-Wizard) will become mandatory.
+
+The fields that can be mandatory are:
+
+    | id_resource-edition => Label: Edition
+    | id_resource-purpose => Label: Purpose
+    | id_resource-supplemental_information =>  Label: Supplemental information 
+    | id_resource-temporal_extent_start_pickers => Label: temporal extent start
+    | id_resource-temporal_extent_end => Label:  temporal extent end
+    | id_resource-maintenance_frequency => Label:  Maintenance frequency
+    | id_resource-spatial_representation_type => Label:  Spatial representation type 
+
+If at least one on the above ids is set in this configuration, the panel header will change from `Optional` to `Mandatory`
+
+    | Confiugration Example:
+    | UI_REQUIRED_FIELDS = ['id_resource-edition']
+
+
 UNOCONV_ENABLE
 --------------
 

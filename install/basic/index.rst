@@ -822,10 +822,10 @@ In order to do that, follow the procedure below:
 .. code-block:: shell
 
     # Update the GeoServer WEB-INF/lib JARs accordingly
-    wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/latest/postgis-jdbc-1.3.3/postgis-jdbc-1.3.3.jar && \
-    wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/latest/hibernate-spatial-postgis-1.1.3.1/hibernate-spatial-postgis-1.1.3.1.jar && \
+    wget --no-check-certificate "https://www.dropbox.com/s/psolxleimaft0t7/postgis-jdbc-1.3.3.jar?dl=1" -O postgis-jdbc-1.3.3.jar && \
+    wget --no-check-certificate "https://www.dropbox.com/s/ilowu1vd27j2cs1/hibernate-spatial-postgis-1.1.3.2.jar?dl=1" -O hibernate-spatial-postgis-1.1.3.2.jar && \
     rm /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/hibernate-spatial-h2-geodb-1.1.3.1.jar && \
-    mv hibernate-spatial-postgis-1.1.3.1.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/ && \
+    mv hibernate-spatial-postgis-1.1.3.2.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/ && \
     mv postgis-jdbc-1.3.3.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/
 
 The container is ready to be restarted now.

@@ -237,7 +237,7 @@ The ``restore`` command has a number of arguments, modifying its execution:
 
 #. ``--skip-read-only``: the restore procedure will be conducted without setting `Read Only` mode during execution.
 
-#. ``--soft-reset``: the restore procedure will preserve geoserver table / resources mode during the restore. By default the procedure will drop tables and resources
+#. ``--soft-reset``: the restore procedure will preserve geoserver table / resources during the restore. By default the procedure will drop tables and resources
 
 In order to perform a default backup restoration just run the command:
 

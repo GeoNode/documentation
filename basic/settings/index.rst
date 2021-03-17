@@ -488,12 +488,19 @@ CATALOGUE
     pycsw is the default CSW enabled in GeoNode. pycsw configuration directives
     are managed in the PYCSW entry.
 
-CATALOGUE METADATA TEMPLATE
+CATALOGUE_METADATA_TEMPLATE
 ---------------------------
 
     Default : ``catalogue/full_metadata.xml``
 
     A string with the catalogue xml file needed for the metadata.
+
+CATALOGUE_METADATA_XSL
+----------------------
+
+    Default : ``'/static/metadataxsl/metadata.xsl``
+
+    A string pointing to the XSL used to transform the metadata XML into human readable HTML.
 
 CELERYD_POOL_RESTARTS
 ---------------------

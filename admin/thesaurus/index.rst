@@ -1,7 +1,44 @@
 Loading a thesaurus
 ===================
 
-You can add a thesaurus into you GeoNode using the ``load_thesaurus`` command:
+There are 2 possible ways to upload a Thesaurus in geonode:
+
+- Admin panel
+- Django command-line
+- settings.py (deprecated)
+
+
+Admin panel
+===========
+You can add a thesaurus into you GeoNode using the ``upload thesaurus`` available in the Admin panel
+
+Navigate to the thesaurus page in the admin panel ``http://<your_geonode_host>/admin/base/thesaurus``. On the top-right of the page a button named `Upload thesaurus` will be available:
+
+.. figure:: img/thesaurus_admin_1.png
+     :align: center
+
+After clicking on it, a simple form for the upload will be shown. In order to let the upload works, is required to choose an `RDF` file
+
+.. figure:: img/thesaurus_admin_2.png
+     :align: center
+
+By clicking on `Upload CSV`, the system will load the thesaurus by assigning to it a `slugify` name based on the file name.
+The name can be easily change later in the edit page.
+
+If everything goes fine, a successfull message will be shown:
+
+.. figure:: img/thesaurus_admin_success.png
+     :align: center
+
+Otherwise the UI will show the error message:
+
+.. figure:: img/thesaurus_admin_fail.png
+     :align: center
+
+Command line
+================
+
+A thesaurus can be loaded into GeoNode by using the ``load_thesaurus`` command:
 
 .. code-block:: shell
 
@@ -55,6 +92,7 @@ Once you are on the Thesaurus lists, select one thesaurus to open the Edit page
 - ``about``: (optional string) The about of the thesaurus, is ingested by the ``load_thesaurus`` command.
 - ``card min``: (optional integer) Decide the minimun cardinality, default = 0
 - ``card max``: (optional integer) Decide the maximun cardinality, default = -1
+- ``facet``: (boolean) Decide if the thesaurus will be shown in the facet list. default: True
 
 Cardinality:
 

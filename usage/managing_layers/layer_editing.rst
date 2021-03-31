@@ -65,6 +65,28 @@ We have replaced the *roads* dataset with the *railways* one. You can see the di
 
 .. _layer-data-editing:
 
+Append Data to Layer
+--------------------
+
+From the *Layer Editing* panel click on :guilabel:`Append` to append data to the layer source dataset. You will be driven to the *Append Layer* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
+
+.. figure:: img/layer_append.png
+     :align: center
+
+     *Append to a Layer*
+
+Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Append to Layer`. If no errors occur you will see a message like the one in the picture below.
+
+.. figure:: img/layer_append_success.png
+     :align: center
+
+     *Replace Layer success*
+
+We have append the *layer_name* dataset to the existing one. You can see the differences in the *Layer Preview*.
+
+
+.. _layer-data-editing:
+
 Editing the Layer Data
 ----------------------
 

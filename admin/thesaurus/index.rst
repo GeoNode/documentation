@@ -93,6 +93,7 @@ Once you are on the Thesaurus lists, select one thesaurus to open the Edit page
 - ``card min``: (optional integer) Decide the minimun cardinality, default = 0
 - ``card max``: (optional integer) Decide the maximun cardinality, default = -1
 - ``facet``: (boolean) Decide if the thesaurus will be shown in the facet list. default: True
+- ``order``: (integer) Decide the listing order of the thesaurus in the facet list and in the metadta editor. default: 0, asc order from 0 to N
 
 Cardinality:
 

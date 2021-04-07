@@ -146,6 +146,18 @@ ADMINS_ONLY_NOTICE_TYPES
 
     Such notifications will be hidden from the notify settings page and automatically set to false for non-superusers.
 
+
+ADVANCED_EDIT_EXCLUDE_FIELD
+---------------------------
+    | Default: ``[]``
+
+    A list of element (item name) to exclude from the Advanced Edit page.
+
+    Example:
+    
+    ``ADVANCED_EDIT_EXCLUDE_FIELD=['title', 'keywords', 'tkeywords']``
+
+
 AGON_RATINGS_CATEGORY_CHOICES
 -----------------------------
 

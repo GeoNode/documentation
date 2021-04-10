@@ -1,20 +1,12 @@
 openapi: 3.0.3
 info:
   title: 'GeoNode REST API v2 - REST'
-  version: 3.2
+  version: 3.2.0
 paths:
   /api/v2/:
     get:
       operationId: api_v2_retrieve
       description: ''
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -29,13 +21,6 @@ paths:
       operationId: api_v2_documents_list
       description: API endpoint that allows documents to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -70,9 +55,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedDocumentList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedDocumentList'
           description: ''
@@ -114,14 +96,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -145,21 +119,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Document'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Document'
           description: ''
     patch:
       operationId: api_v2_documents_partial_update
       description: API endpoint that allows documents to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -182,9 +145,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Document'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Document'
           description: ''
     delete:
       operationId: api_v2_documents_destroy
@@ -204,14 +164,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -225,13 +177,6 @@ paths:
       operationId: api_v2_documents_retrieve
       description: API endpoint that allows documents to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -248,9 +193,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Document'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Document'
           description: ''
@@ -310,13 +252,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -344,9 +279,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Document'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Document'
           description: ''
@@ -354,13 +286,6 @@ paths:
       operationId: api_v2_documents_partial_update_2
       description: API endpoint that allows documents to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -387,9 +312,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Document'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Document'
           description: ''
@@ -412,13 +334,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -438,13 +353,6 @@ paths:
       operationId: api_v2_documents_linked_resources_retrieve
       description: API endpoint that allows documents to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -463,22 +371,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Document'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Document'
           description: ''
   /api/v2/geoapps/:
     get:
       operationId: api_v2_geoapps_list
       description: API endpoint that allows geoapps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -513,9 +411,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedGeoAppList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedGeoAppList'
           description: ''
@@ -557,14 +452,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -588,21 +475,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeoApp'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GeoApp'
           description: ''
     patch:
       operationId: api_v2_geoapps_partial_update
       description: API endpoint that allows geoapps to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -625,9 +501,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeoApp'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GeoApp'
           description: ''
     delete:
       operationId: api_v2_geoapps_destroy
@@ -647,14 +520,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -668,13 +533,6 @@ paths:
       operationId: api_v2_geoapps_retrieve
       description: API endpoint that allows geoapps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -691,9 +549,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GeoApp'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GeoApp'
           description: ''
@@ -753,13 +608,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -787,9 +635,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GeoApp'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GeoApp'
           description: ''
@@ -797,13 +642,6 @@ paths:
       operationId: api_v2_geoapps_partial_update_2
       description: API endpoint that allows geoapps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -830,9 +668,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GeoApp'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GeoApp'
           description: ''
@@ -855,13 +690,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -896,13 +724,6 @@ paths:
         schema:
           type: string
         required: true
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -921,22 +742,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeoApp'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GeoApp'
           description: ''
   /api/v2/geostories/:
     get:
       operationId: api_v2_geostories_list
       description: API endpoint that allows geoapps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -971,9 +782,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedGeoStoryList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedGeoStoryList'
           description: ''
@@ -1015,14 +823,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -1046,21 +846,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeoStory'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
           description: ''
     patch:
       operationId: api_v2_geostories_partial_update
       description: API endpoint that allows geoapps to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -1083,9 +872,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeoStory'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
           description: ''
     delete:
       operationId: api_v2_geostories_destroy
@@ -1105,14 +891,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -1126,13 +904,6 @@ paths:
       operationId: api_v2_geostories_retrieve
       description: API endpoint that allows geoapps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1149,9 +920,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GeoStory'
           description: ''
@@ -1211,13 +979,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1245,9 +1006,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GeoStory'
           description: ''
@@ -1255,13 +1013,6 @@ paths:
       operationId: api_v2_geostories_partial_update_2
       description: API endpoint that allows geoapps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1288,9 +1039,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GeoStory'
           description: ''
@@ -1313,13 +1061,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1354,13 +1095,6 @@ paths:
         schema:
           type: string
         required: true
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1379,22 +1113,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeoStory'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
           description: ''
   /api/v2/groups/:
     get:
       operationId: api_v2_groups_list
       description: API endpoint that allows gropus to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -1422,9 +1146,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedGroupProfileList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedGroupProfileList'
           description: ''
@@ -1466,14 +1187,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -1497,21 +1210,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
           description: ''
     patch:
       operationId: api_v2_groups_partial_update
       description: API endpoint that allows gropus to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -1534,9 +1236,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
           description: ''
     delete:
       operationId: api_v2_groups_destroy
@@ -1556,14 +1255,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -1577,13 +1268,6 @@ paths:
       operationId: api_v2_groups_retrieve
       description: API endpoint that allows gropus to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1599,9 +1283,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
           description: ''
@@ -1661,13 +1342,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1695,9 +1369,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
           description: ''
@@ -1705,13 +1376,6 @@ paths:
       operationId: api_v2_groups_partial_update_2
       description: API endpoint that allows gropus to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1738,9 +1402,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
           description: ''
@@ -1763,13 +1424,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1789,13 +1443,6 @@ paths:
       operationId: api_v2_groups_managers_retrieve
       description: API endpoint that allows gropus to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1811,9 +1458,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
           description: ''
@@ -1822,13 +1466,6 @@ paths:
       operationId: api_v2_groups_members_retrieve
       description: API endpoint that allows gropus to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1844,9 +1481,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
           description: ''
@@ -1855,13 +1489,6 @@ paths:
       operationId: api_v2_groups_resources_retrieve
       description: API endpoint that allows gropus to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -1879,22 +1506,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/GroupProfile'
           description: ''
   /api/v2/layers/:
     get:
       operationId: api_v2_layers_list
       description: API endpoint that allows layers to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -1929,9 +1546,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedLayerList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedLayerList'
           description: ''
@@ -1973,14 +1587,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -2004,21 +1610,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Layer'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Layer'
           description: ''
     patch:
       operationId: api_v2_layers_partial_update
       description: API endpoint that allows layers to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -2041,9 +1636,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Layer'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Layer'
           description: ''
     delete:
       operationId: api_v2_layers_destroy
@@ -2063,14 +1655,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -2084,13 +1668,6 @@ paths:
       operationId: api_v2_layers_retrieve
       description: API endpoint that allows layers to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2107,9 +1684,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Layer'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Layer'
           description: ''
@@ -2169,13 +1743,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2203,9 +1770,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Layer'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Layer'
           description: ''
@@ -2213,13 +1777,6 @@ paths:
       operationId: api_v2_layers_partial_update_2
       description: API endpoint that allows layers to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2246,9 +1803,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Layer'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Layer'
           description: ''
@@ -2271,13 +1825,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2312,13 +1859,6 @@ paths:
         schema:
           type: string
         required: true
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2337,22 +1877,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Layer'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Layer'
           description: ''
   /api/v2/maps/:
     get:
       operationId: api_v2_maps_list
       description: API endpoint that allows maps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -2387,9 +1917,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedMapList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedMapList'
           description: ''
@@ -2431,14 +1958,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -2462,21 +1981,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Map'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Map'
           description: ''
     patch:
       operationId: api_v2_maps_partial_update
       description: API endpoint that allows maps to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -2499,9 +2007,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Map'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Map'
           description: ''
     delete:
       operationId: api_v2_maps_destroy
@@ -2521,14 +2026,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -2542,13 +2039,6 @@ paths:
       operationId: api_v2_maps_retrieve
       description: API endpoint that allows maps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2565,9 +2055,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Map'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Map'
           description: ''
@@ -2627,13 +2114,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2661,9 +2141,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Map'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Map'
           description: ''
@@ -2671,13 +2148,6 @@ paths:
       operationId: api_v2_maps_partial_update_2
       description: API endpoint that allows maps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2704,9 +2174,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Map'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Map'
           description: ''
@@ -2729,13 +2196,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2755,13 +2215,6 @@ paths:
       operationId: api_v2_maps_layers_retrieve
       description: API endpoint that allows maps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2778,9 +2231,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/Map'
-            text/html:
               schema:
                 $ref: '#/components/schemas/Map'
           description: ''
@@ -2789,13 +2239,6 @@ paths:
       operationId: api_v2_maps_local_layers_retrieve
       description: API endpoint that allows maps to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -2814,22 +2257,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Map'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Map'
           description: ''
   /api/v2/resources/:
     get:
       operationId: api_v2_resources_list
       description: API endpoint that allows base resources to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -2864,9 +2297,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedResourceBaseList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedResourceBaseList'
           description: ''
@@ -2908,14 +2338,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -2939,21 +2361,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
           description: ''
     patch:
       operationId: api_v2_resources_partial_update
       description: API endpoint that allows base resources to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -2976,9 +2387,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
           description: ''
     delete:
       operationId: api_v2_resources_destroy
@@ -2998,14 +2406,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -3019,13 +2419,6 @@ paths:
       operationId: api_v2_resources_retrieve
       description: API endpoint that allows base resources to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3042,9 +2435,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3104,13 +2494,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3138,9 +2521,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3148,13 +2528,6 @@ paths:
       operationId: api_v2_resources_partial_update_2
       description: API endpoint that allows base resources to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3181,9 +2554,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3206,13 +2576,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3232,13 +2595,6 @@ paths:
       operationId: api_v2_resources_get_perms_retrieve
       description: API endpoint that allows base resources to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3257,22 +2613,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
           description: ''
   /api/v2/resources/{id}/set_perms/:
     put:
       operationId: api_v2_resources_set_perms_update
       description: API endpoint that allows base resources to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3302,22 +2648,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
           description: ''
   /api/v2/resources/approved/:
     get:
       operationId: api_v2_resources_approved_retrieve
       description: API endpoint that allows base resources to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -3328,9 +2663,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3338,14 +2670,6 @@ paths:
     get:
       operationId: api_v2_resources_featured_retrieve
       description: API endpoint that allows base resources to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -3356,9 +2680,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3366,14 +2687,6 @@ paths:
     get:
       operationId: api_v2_resources_published_retrieve
       description: API endpoint that allows base resources to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -3384,9 +2697,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3394,14 +2704,6 @@ paths:
     get:
       operationId: api_v2_resources_resource_types_retrieve
       description: API endpoint that allows base resources to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -3412,9 +2714,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceBase'
-            text/html:
               schema:
                 $ref: '#/components/schemas/ResourceBase'
           description: ''
@@ -3496,18 +2795,410 @@ paths:
                 type: object
                 additionalProperties: {}
           description: ''
+  /api/v2/uploads/:
+    get:
+      operationId: api_v2_uploads_list
+      description: API endpoint that allows uploads to be viewed or edited.
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUploadList'
+          description: ''
+    post:
+      operationId: api_v2_uploads_create
+      description: |-
+        Either create a single or many model instances in bulk
+        using the Serializer's many=True ability from Django REST >= 2.2.5.
+
+        The data can be represented by the serializer name (single or plural
+        forms), dict or list.
+
+        Examples:
+
+        POST /dogs/
+        {
+          "name": "Fido",
+          "age": 2
+        }
+
+        POST /dogs/
+        {
+          "dog": {
+            "name": "Lucky",
+            "age": 3
+          }
+        }
+
+        POST /dogs/
+        {
+          "dogs": [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+          ]
+        }
+
+        POST /dogs/
+        [
+            {"name": "Fido", "age": 2},
+            {"name": "Lucky", "age": 3}
+        ]
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Upload'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Upload'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Upload'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
+    patch:
+      operationId: api_v2_uploads_partial_update
+      description: API endpoint that allows uploads to be viewed or edited.
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUpload'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUpload'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUpload'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
+    delete:
+      operationId: api_v2_uploads_destroy
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/uploads/{id}/:
+    get:
+      operationId: api_v2_uploads_retrieve
+      description: API endpoint that allows uploads to be viewed or edited.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
+    put:
+      operationId: api_v2_uploads_update
+      description: |-
+        Update one or more model instances.
+
+        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
+        may be updated in a single call, provided their IDs.
+
+        If ENABLE_PATCH_ALL is set, multiple records
+        may be updated in a single PATCH call, even without knowing their IDs.
+
+        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
+        and used with caution. This feature must be enabled at the viewset level
+        and must also be requested explicitly by the client
+        via the "patch-all" query parameter.
+
+        This parameter can have one of the following values:
+
+            true (or 1): records will be fetched and then updated in a transaction loop
+              - The `Model.save` method will be called and model signals will run
+              - This can be slow if there are too many signals or many records in the query
+              - This is considered the more safe and default behavior
+            query: records will be updated in a single query
+              - The `QuerySet.update` method will be called and model signals will not run
+              - This will be fast, but may break data constraints that are controlled by signals
+              - This is considered unsafe but useful in certain situations
+
+        The server's successful response to a patch-all request
+        will NOT include any individual records. Instead, the response content will contain
+        a "meta" object with an "updated" count of updated records.
+
+        Examples:
+
+        Update one dog:
+
+            PATCH /dogs/1/
+            {
+                'fur': 'white'
+            }
+
+        Update many dogs by ID:
+
+            PATCH /dogs/
+            [
+                {'id': 1, 'fur': 'white'},
+                {'id': 2, 'fur': 'black'},
+                {'id': 3, 'fur': 'yellow'}
+            ]
+
+        Update all dogs in a query:
+
+            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
+            {
+                'fur': 'gold'
+            }
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this upload.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Upload'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Upload'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Upload'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
+    patch:
+      operationId: api_v2_uploads_partial_update_2
+      description: API endpoint that allows uploads to be viewed or edited.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this upload.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUpload'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUpload'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUpload'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
+    delete:
+      operationId: api_v2_uploads_destroy_2
+      description: |-
+        Either delete a single or many model instances in bulk
+
+        DELETE /dogs/
+        {
+            "dogs": [
+                {"id": 1},
+                {"id": 2}
+            ]
+        }
+
+        DELETE /dogs/
+        [
+            {"id": 1},
+            {"id": 2}
+        ]
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v2/uploads/{id}/{field_name}/:
+    get:
+      operationId: api_v2_uploads_retrieve_2
+      description: |-
+        Fetch related object(s), as if sideloaded (used to support
+        link objects).
+
+        This method gets mapped to `/<resource>/<pk>/<field_name>/` by
+        DynamicRouter for all DynamicRelationField fields. Generally,
+        this method probably shouldn't be overridden.
+
+        An alternative implementation would be to generate reverse queries.
+        For an exploration of that approach, see:
+            https://gist.github.com/ryochiji/54687d675978c7d96503
+      parameters:
+      - in: path
+        name: field_name
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
+  /api/v2/uploads/upload/:
+    put:
+      operationId: api_v2_uploads_upload_update
+      description: API endpoint that allows uploads to be viewed or edited.
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Upload'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Upload'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Upload'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: ''
   /api/v2/users/:
     get:
       operationId: api_v2_users_list
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - name: ordering
         required: false
         in: query
@@ -3535,9 +3226,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedUserProfileList'
-            text/html:
               schema:
                 $ref: '#/components/schemas/PaginatedUserProfileList'
           description: ''
@@ -3579,14 +3267,6 @@ paths:
             {"name": "Fido", "age": 2},
             {"name": "Lucky", "age": 3}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -3610,21 +3290,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserProfile'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
           description: ''
     patch:
       operationId: api_v2_users_partial_update
       description: API endpoint that allows users to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       requestBody:
@@ -3647,9 +3316,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserProfile'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
           description: ''
     delete:
       operationId: api_v2_users_destroy
@@ -3669,14 +3335,6 @@ paths:
             {"id": 1},
             {"id": 2}
         ]
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - api
       security:
@@ -3690,13 +3348,6 @@ paths:
       operationId: api_v2_users_retrieve
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3712,9 +3363,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/UserProfile'
           description: ''
@@ -3774,13 +3422,6 @@ paths:
                 'fur': 'gold'
             }
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3808,9 +3449,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/UserProfile'
           description: ''
@@ -3818,13 +3456,6 @@ paths:
       operationId: api_v2_users_partial_update_2
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3851,9 +3482,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/UserProfile'
           description: ''
@@ -3876,13 +3504,6 @@ paths:
             {"id": 2}
         ]
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3902,13 +3523,6 @@ paths:
       operationId: api_v2_users_groups_retrieve
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3924,9 +3538,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
-            text/html:
               schema:
                 $ref: '#/components/schemas/UserProfile'
           description: ''
@@ -3935,13 +3546,6 @@ paths:
       operationId: api_v2_users_resources_retrieve
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -3959,22 +3563,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserProfile'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
           description: ''
   /mapstore/rest/resources/:
     get:
       operationId: mapstore_rest_resources_retrieve
       description: Only Authenticate User perform CRUD Operations on Respective Data
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - mapstore
       security:
@@ -3987,14 +3580,6 @@ paths:
     post:
       operationId: mapstore_rest_resources_create
       description: Only Authenticate User perform CRUD Operations on Respective Data
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - mapstore
       security:
@@ -4008,13 +3593,6 @@ paths:
       operationId: mapstore_rest_resources_retrieve_2
       description: Only Authenticate User perform CRUD Operations on Respective Data
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4037,13 +3615,6 @@ paths:
       operationId: mapstore_rest_resources_update
       description: Only Authenticate User perform CRUD Operations on Respective Data
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4065,13 +3636,6 @@ paths:
       operationId: mapstore_rest_resources_partial_update
       description: Only Authenticate User perform CRUD Operations on Respective Data
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4093,13 +3657,6 @@ paths:
       operationId: mapstore_rest_resources_destroy
       description: Only Authenticate User perform CRUD Operations on Respective Data
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4121,14 +3678,6 @@ paths:
     get:
       operationId: mapstore_rest_users_list
       description: API endpoint that allows users to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - mapstore
       security:
@@ -4142,23 +3691,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User'
-            text/html:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/User'
           description: ''
     post:
       operationId: mapstore_rest_users_create
       description: API endpoint that allows users to be viewed or edited.
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - mapstore
       requestBody:
@@ -4182,22 +3718,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/User'
           description: ''
   /mapstore/rest/users/{id}/:
     get:
       operationId: mapstore_rest_users_retrieve
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4213,9 +3739,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-            text/html:
               schema:
                 $ref: '#/components/schemas/User'
           description: ''
@@ -4223,13 +3746,6 @@ paths:
       operationId: mapstore_rest_users_update
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4257,9 +3773,6 @@ paths:
         '200':
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-            text/html:
               schema:
                 $ref: '#/components/schemas/User'
           description: ''
@@ -4267,13 +3780,6 @@ paths:
       operationId: mapstore_rest_users_partial_update
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4302,21 +3808,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
-            text/html:
-              schema:
-                $ref: '#/components/schemas/User'
           description: ''
     delete:
       operationId: mapstore_rest_users_destroy
       description: API endpoint that allows users to be viewed or edited.
       parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       - in: path
         name: id
         schema:
@@ -4335,14 +3831,6 @@ paths:
     get:
       operationId: o_userinfo_retrieve
       description: View used to show Claims about the authenticated End-User
-      parameters:
-      - in: query
-        name: format
-        schema:
-          type: string
-          enum:
-          - api
-          - json
       tags:
       - o
       security:
@@ -4444,6 +3932,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -4461,8 +3951,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -4474,6 +3962,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -4506,14 +4018,17 @@ components:
       - detail_url
       - doi
       - edition
+      - embed_url
       - featured
       - href
       - is_approved
       - is_published
       - language
       - last_updated
+      - ll_bbox_polygon
       - maintenance_frequency
       - metadata_author
+      - metadata_only
       - mime_type
       - name
       - owner
@@ -4521,8 +4036,14 @@ components:
       - poc
       - polymorphic_ctype_id
       - popular_count
+      - processed
       - purpose
       - rating
+      - raw_abstract
+      - raw_constraints_other
+      - raw_data_quality_statement
+      - raw_purpose
+      - raw_supplemental_information
       - regions
       - resource_type
       - share_count
@@ -4535,7 +4056,7 @@ components:
       - uuid
     GeoApp:
       type: object
-      description: DREST-compatible model-based serializer.
+      description: '- Deferred / not Embedded --> ?include[]=data'
       properties:
         pk:
           type: string
@@ -4563,6 +4084,7 @@ components:
         urlsuffix:
           type: string
           nullable: true
+          title: Site URL
           maxLength: 255
         resource_type:
           type: string
@@ -4618,6 +4140,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -4635,8 +4159,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -4648,6 +4170,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -4680,20 +4226,29 @@ components:
       - detail_url
       - doi
       - edition
+      - embed_url
       - featured
       - is_approved
       - is_published
       - language
       - last_updated
+      - ll_bbox_polygon
       - maintenance_frequency
       - metadata_author
+      - metadata_only
       - owner
       - pk
       - poc
       - polymorphic_ctype_id
       - popular_count
+      - processed
       - purpose
       - rating
+      - raw_abstract
+      - raw_constraints_other
+      - raw_data_quality_statement
+      - raw_purpose
+      - raw_supplemental_information
       - regions
       - resource_type
       - share_count
@@ -4716,6 +4271,7 @@ components:
           readOnly: true
         app_type:
           type: string
+          title: Apps Type
           maxLength: 255
         zoom:
           type: integer
@@ -4737,6 +4293,7 @@ components:
         urlsuffix:
           type: string
           nullable: true
+          title: Site URL
           maxLength: 255
         resource_type:
           type: string
@@ -4792,6 +4349,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -4809,8 +4368,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -4822,6 +4379,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -4854,20 +4435,29 @@ components:
       - detail_url
       - doi
       - edition
+      - embed_url
       - featured
       - is_approved
       - is_published
       - language
       - last_updated
+      - ll_bbox_polygon
       - maintenance_frequency
       - metadata_author
+      - metadata_only
       - owner
       - pk
       - poc
       - polymorphic_ctype_id
       - popular_count
+      - processed
       - purpose
       - rating
+      - raw_abstract
+      - raw_constraints_other
+      - raw_data_quality_statement
+      - raw_purpose
+      - raw_supplemental_information
       - regions
       - resource_type
       - share_count
@@ -4885,6 +4475,7 @@ components:
         pk:
           type: integer
           readOnly: true
+          title: ID
         title:
           type: string
           maxLength: 1000
@@ -4957,10 +4548,13 @@ components:
           readOnly: true
         is_mosaic:
           type: boolean
+          title: Is mosaic?
         has_time:
           type: boolean
+          title: Has time?
         has_elevation:
           type: boolean
+          title: Has elevation?
         time_regex:
           nullable: true
           oneOf:
@@ -4973,6 +4567,7 @@ components:
           maxLength: 128
         use_featureinfo_custom_template:
           type: boolean
+          title: Use featureinfo custom template?
           description: specifies wether or not use a custom GetFeatureInfo template.
         featureinfo_custom_template:
           type: string
@@ -5043,6 +4638,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -5060,8 +4657,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -5073,6 +4668,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -5108,21 +4727,30 @@ components:
       - detail_url
       - doi
       - edition
+      - embed_url
       - featured
       - is_approved
       - is_published
       - language
       - last_updated
+      - ll_bbox_polygon
       - maintenance_frequency
       - metadata_author
+      - metadata_only
       - name
       - owner
       - pk
       - poc
       - polymorphic_ctype_id
       - popular_count
+      - processed
       - purpose
       - rating
+      - raw_abstract
+      - raw_constraints_other
+      - raw_data_quality_statement
+      - raw_purpose
+      - raw_supplemental_information
       - regions
       - resource_type
       - share_count
@@ -5162,9 +4790,11 @@ components:
           format: float
         urlsuffix:
           type: string
+          title: Site URL
           maxLength: 255
         featuredurl:
           type: string
+          title: Featured Map URL
           maxLength: 255
         resource_type:
           type: string
@@ -5220,6 +4850,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -5237,8 +4869,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -5250,6 +4880,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -5284,21 +4938,30 @@ components:
       - detail_url
       - doi
       - edition
+      - embed_url
       - featured
       - is_approved
       - is_published
       - language
       - last_updated
+      - ll_bbox_polygon
       - maintenance_frequency
       - metadata_author
+      - metadata_only
       - owner
       - pk
       - poc
       - polymorphic_ctype_id
       - popular_count
+      - processed
       - projection
       - purpose
       - rating
+      - raw_abstract
+      - raw_constraints_other
+      - raw_data_quality_statement
+      - raw_purpose
+      - raw_supplemental_information
       - regions
       - resource_type
       - share_count
@@ -5425,6 +5088,22 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ResourceBase'
+    PaginatedUploadList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Upload'
     PaginatedUserProfileList:
       type: object
       properties:
@@ -5522,6 +5201,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -5539,8 +5220,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -5552,6 +5231,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -5573,7 +5276,7 @@ components:
           nullable: true
     PatchedGeoApp:
       type: object
-      description: DREST-compatible model-based serializer.
+      description: '- Deferred / not Embedded --> ?include[]=data'
       properties:
         pk:
           type: string
@@ -5601,7 +5304,10 @@ components:
         urlsuffix:
           type: string
           nullable: true
+          title: Site URL
           maxLength: 255
+        data:
+          type: string
         resource_type:
           type: string
           readOnly: true
@@ -5656,6 +5362,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -5673,8 +5381,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -5686,6 +5392,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -5717,6 +5447,7 @@ components:
           readOnly: true
         app_type:
           type: string
+          title: Apps Type
           maxLength: 255
         zoom:
           type: integer
@@ -5738,7 +5469,10 @@ components:
         urlsuffix:
           type: string
           nullable: true
+          title: Site URL
           maxLength: 255
+        data:
+          type: string
         resource_type:
           type: string
           readOnly: true
@@ -5793,6 +5527,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -5810,8 +5546,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -5823,6 +5557,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -5849,6 +5607,7 @@ components:
         pk:
           type: integer
           readOnly: true
+          title: ID
         title:
           type: string
           maxLength: 1000
@@ -5913,10 +5672,13 @@ components:
           readOnly: true
         is_mosaic:
           type: boolean
+          title: Is mosaic?
         has_time:
           type: boolean
+          title: Has time?
         has_elevation:
           type: boolean
+          title: Has elevation?
         time_regex:
           nullable: true
           oneOf:
@@ -5929,6 +5691,7 @@ components:
           maxLength: 128
         use_featureinfo_custom_template:
           type: boolean
+          title: Use featureinfo custom template?
           description: specifies wether or not use a custom GetFeatureInfo template.
         featureinfo_custom_template:
           type: string
@@ -5999,6 +5762,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -6016,8 +5781,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -6029,6 +5792,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -6073,9 +5860,11 @@ components:
           format: float
         urlsuffix:
           type: string
+          title: Site URL
           maxLength: 255
         featuredurl:
           type: string
+          title: Featured Map URL
           maxLength: 255
         resource_type:
           type: string
@@ -6131,6 +5920,8 @@ components:
           type: string
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         group:
@@ -6148,8 +5939,6 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
@@ -6161,6 +5950,30 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        embed_url:
+          type: string
+        thumbnail_url:
+          type: string
         keywords:
           type: string
           nullable: true
@@ -6229,6 +6042,8 @@ components:
           readOnly: true
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         date:
@@ -6280,11 +6095,11 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
+        embed_url:
+          type: string
         created:
           type: string
           format: date-time
@@ -6292,6 +6107,78 @@ components:
         last_updated:
           type: string
           format: date-time
+          readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        thumbnail_url:
+          type: string
+    PatchedUpload:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          nullable: true
+          maxLength: 64
+        date:
+          type: string
+          format: date-time
+        create_date:
+          type: string
+          format: date-time
+        user:
+          type: integer
+          nullable: true
+        state:
+          type: string
+          maxLength: 16
+        progress:
+          type: string
+          readOnly: true
+        complete:
+          type: boolean
+        import_id:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        uploadfile_set:
+          type: string
+          readOnly: true
+          nullable: true
+        resume_url:
+          type: string
+          readOnly: true
+        delete_url:
+          type: string
+          readOnly: true
+        import_url:
+          type: string
+          readOnly: true
+        detail_url:
+          type: string
           readOnly: true
     PatchedUser:
       type: object
@@ -6309,16 +6196,20 @@ components:
         email:
           type: string
           format: email
+          title: Email address
           maxLength: 254
         is_staff:
           type: boolean
+          title: Staff status
           description: Designates whether the user can log into this admin site.
         is_active:
           type: boolean
+          title: Active
           description: Designates whether this user should be treated as active. Unselect
             this instead of deleting accounts.
         is_superuser:
           type: boolean
+          title: Superuser status
           description: Designates that this user has all permissions without explicitly
             assigning them.
     PatchedUserProfile:
@@ -6328,6 +6219,7 @@ components:
         pk:
           type: integer
           readOnly: true
+          title: ID
         username:
           type: string
           description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
@@ -6392,6 +6284,8 @@ components:
           readOnly: true
         bbox_polygon:
           type: string
+        ll_bbox_polygon:
+          type: string
         srid:
           type: string
         date:
@@ -6443,11 +6337,11 @@ components:
           type: boolean
         is_approved:
           type: boolean
-        thumbnail_url:
-          type: string
         detail_url:
           type: string
           readOnly: true
+        embed_url:
+          type: string
         created:
           type: string
           format: date-time
@@ -6456,6 +6350,28 @@ components:
           type: string
           format: date-time
           readOnly: true
+        raw_abstract:
+          type: string
+          readOnly: true
+        raw_purpose:
+          type: string
+          readOnly: true
+        raw_constraints_other:
+          type: string
+          readOnly: true
+        raw_supplemental_information:
+          type: string
+          readOnly: true
+        raw_data_quality_statement:
+          type: string
+          readOnly: true
+        metadata_only:
+          type: boolean
+        processed:
+          type: boolean
+          readOnly: true
+        thumbnail_url:
+          type: string
       required:
       - abstract
       - alternate
@@ -6469,20 +6385,29 @@ components:
       - detail_url
       - doi
       - edition
+      - embed_url
       - featured
       - is_approved
       - is_published
       - language
       - last_updated
+      - ll_bbox_polygon
       - maintenance_frequency
       - metadata_author
+      - metadata_only
       - owner
       - pk
       - poc
       - polymorphic_ctype_id
       - popular_count
+      - processed
       - purpose
       - rating
+      - raw_abstract
+      - raw_constraints_other
+      - raw_data_quality_statement
+      - raw_purpose
+      - raw_supplemental_information
       - regions
       - resource_type
       - share_count
@@ -6499,6 +6424,65 @@ components:
       - '[0-9]{8}T[0-9]{6}'
       - '[0-9]{8}T[0-9]{6}Z'
       type: string
+    Upload:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          nullable: true
+          maxLength: 64
+        date:
+          type: string
+          format: date-time
+        create_date:
+          type: string
+          format: date-time
+        user:
+          type: integer
+          nullable: true
+        state:
+          type: string
+          maxLength: 16
+        progress:
+          type: string
+          readOnly: true
+        complete:
+          type: boolean
+        import_id:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        uploadfile_set:
+          type: string
+          readOnly: true
+          nullable: true
+        resume_url:
+          type: string
+          readOnly: true
+        delete_url:
+          type: string
+          readOnly: true
+        import_url:
+          type: string
+          readOnly: true
+        detail_url:
+          type: string
+          readOnly: true
+      required:
+      - delete_url
+      - detail_url
+      - id
+      - import_url
+      - progress
+      - resume_url
+      - state
+      - uploadfile_set
     User:
       type: object
       properties:
@@ -6515,16 +6499,20 @@ components:
         email:
           type: string
           format: email
+          title: Email address
           maxLength: 254
         is_staff:
           type: boolean
+          title: Staff status
           description: Designates whether the user can log into this admin site.
         is_active:
           type: boolean
+          title: Active
           description: Designates whether this user should be treated as active. Unselect
             this instead of deleting accounts.
         is_superuser:
           type: boolean
+          title: Superuser status
           description: Designates that this user has all permissions without explicitly
             assigning them.
       required:
@@ -6537,6 +6525,7 @@ components:
         pk:
           type: integer
           readOnly: true
+          title: ID
         username:
           type: string
           description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_

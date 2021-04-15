@@ -1268,7 +1268,7 @@ METADATA_PARSERS
 
 Is possible to define multiple XML parsers for ingest XML during the layer upload.
 
-The variable should be declared in this way:
+The variable should be declared in this way in `settings.py`:
 
 `METADATA_PARSERS = ['list', 'of', 'parsing', 'functions']`
 
@@ -1297,6 +1297,15 @@ If you want to use your parser after the default one, here is how the variable a
     | - keywords: List of dict of keywords already divided between free-text and thesarus
     | - custom: Custom varible
 
+NOTE: the keywords must be in a specific format, since layer this dict, will be ingested by the `KeywordHandler` which will assign the keywords to the layer.
+
+    .. code::
+        {
+            "keywords": [list_of_keyword_extracted],
+            "thesaurus": {"date": None, "datetype": None, "title": None}, # thesaurus informations
+            "type": theme,  #extracted theme if present
+        }
+        
 Here is an example of expected parser function
 
     .. code::

@@ -1297,7 +1297,7 @@ If you want to use your parser after the default one, here is how the variable a
     | - keywords: List of dict of keywords already divided between free-text and thesarus
     | - custom: Custom varible
 
-NOTE: the keywords must be in a specific format, since layer this dict, will be ingested by the `KeywordHandler` which will assign the keywords to the layer.
+NOTE: the keywords must be in a specific format, since later this dict, will be ingested by the `KeywordHandler` which will assign the keywords/thesaurus to the layer.
 
     .. code::
         {
@@ -1313,7 +1313,7 @@ Here is an example of expected parser function
             # Place here your code
             return uuid, vals, regions, keywords, custom
 
-For more information, please rely to `TestCustomMetadataParser`
+For more information, please rely to `TestCustomMetadataParser` which contain a smoke test to explain the functionality
 
             
 METADATA_STORER
@@ -1327,15 +1327,15 @@ The variable should be declared in this way:
 
 NOTE: By default the Layer is always saved with the default behaviour.
 
-The custom parsing function must be accept in input 6 parameter that are:
+The custom storer function must be accept in input 2 parameter that are:
     
     | - Layer (layer model instance)
     | - custom (dict)
 
-If you want to use your parser after the default one, here is how the variable are populated:
+Here is how the variable are populated by default:
     
-    | - Layer (layer model instance) that we wanto to change
-    | - custom: Custom varible
+    | - layer (layer model instance) that we wanto to change
+    | - custom: custom dict populated by the parser
 
 Here is an example of expected storer function
 
@@ -1344,7 +1344,7 @@ Here is an example of expected storer function
             # do something here
             pass
 
-For more information, please rely to `TestMetadataStorers`
+For more information, please rely to `TestMetadataStorers` which contain a smoke test to explain the functionality
 
 
 MISSING_THUMBNAIL

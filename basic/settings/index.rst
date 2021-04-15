@@ -1263,6 +1263,81 @@ MAX_DOCUMENT_SIZE
 
     Allowed size for documents in MB.
 
+METADATA_PARSERS
+----------------
+
+Is possible to define multiple XML parsers for ingest XML during the layer upload.
+
+The variable should be declared in this way:
+
+`METADATA_PARSERS = ['list', 'of', 'parsing', 'functions']`
+
+If you want to always use the default metadata parser and after use your own, the variable must be set with first value as `__DEFAULT__`
+Example:
+
+`METADATA_PARSERS = ['__DEFAULT__', 'custom_parsing_function]`
+
+If not set, the system will use the `__DEFAULT__` parser.
+
+The custom parsing function must be accept in input 6 parameter that are:
+    
+    | - exml (xmlfile)
+    | - uuid (str)
+    | - vals (dict)
+    | - regions (list)
+    | - keywords (list)
+    | - custom (dict)
+
+If you want to use your parser after the default one, here is how the variable are populated:
+    
+    | - exml: the XML file to parse
+    | - uuid: the UUID of the layer
+    | - vals: Dictionary of information that belong to ResourceBase
+    | - regions: List of regions extracted from the XML
+    | - keywords: List of dict of keywords already divided between free-text and thesarus
+    | - custom: Custom varible
+
+Here is an example of expected parser function
+
+    .. code::
+        def custom_parsing_function(exml, uuid, vals, regions, keywords, custom):
+            # Place here your code
+            return uuid, vals, regions, keywords, custom
+
+For more information, please rely to `TestCustomMetadataParser`
+
+            
+METADATA_STORER
+----------------
+
+Is possible to define multiple Layer storer during the layer upload.
+
+The variable should be declared in this way:
+
+`METADATA_STORER = ['custom_storer_function]`
+
+NOTE: By default the Layer is always saved with the default behaviour.
+
+The custom parsing function must be accept in input 6 parameter that are:
+    
+    | - Layer (layer model instance)
+    | - custom (dict)
+
+If you want to use your parser after the default one, here is how the variable are populated:
+    
+    | - Layer (layer model instance) that we wanto to change
+    | - custom: Custom varible
+
+Here is an example of expected storer function
+
+    .. code::
+        def custom_storer_function(layer, custom):
+            # do something here
+            pass
+
+For more information, please rely to `TestMetadataStorers`
+
+
 MISSING_THUMBNAIL
 -----------------
 

@@ -1,3 +1,12 @@
+Upgrade from 3.1.x
+==================
+
+1. Upgrade the dependencies
+2. Perform the ``migrations`` management command; in case some attribute is conflicting, remove it manually from the DB
+3. Proform the ``collectstatic`` management command
+4. Perform the ``set_all_layers_metadata -d`` management command
+5. Drop the ``rabbitmq`` image and volume and let GeoNode recreate the ``queues`` automatically
+
 Upgrade from 2.10.x / 3.0
 =========================
 

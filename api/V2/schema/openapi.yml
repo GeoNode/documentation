@@ -3169,7 +3169,29 @@ paths:
   /api/v2/uploads/upload/:
     put:
       operationId: api_v2_uploads_upload_update
-      description: API endpoint that allows uploads to be viewed or edited.
+      description:  |-
+        API endpoint that allows user to upload new layers into GeoNode.
+        The endpoint is protected via authentication and the request should always come from the same session.
+        The API accept the request with form-data. Is also possible to define some information via json.
+        Example:
+          client = requests.session()
+          response = client.put(
+                "http://localhost:8000/api/v2/uploads/upload/",
+                auth=HTTPBasicAuth(username, password),
+                data=params,
+                files=files,
+            )
+            Where:
+              params = {
+                  "permissions": '{ "users": {"AnonymousUser": ["view_resourcebase"]} , "groups":{}}',  # layer permissions
+                  "time": "false",
+                  "layer_title": "layer_title",
+                  "time": "false",
+                  "charset": "UTF-8",
+              }
+              files = {
+                "filename": <_io.BufferedReader name="filename">
+              }
       tags:
       - api
       requestBody:
@@ -3188,12 +3210,49 @@ paths:
       - cookieAuth: []
       - basicAuth: []
       responses:
-        '200':
+        '201':
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Upload'
           description: ''
+  /upload/final?id={import_id}:
+    put:
+      operationId: api_upload_upload_final
+      description:  |-
+        API endpoint that allows user to check the status of new layers into GeoNode.
+        The endpoint is protected via authentication and the request should always come from the same session.
+        Example:
+          client = requests.session()
+          response = client.get("http://localhost:8000/upload/final?id=1")
+          Where:
+            params = {
+                "permissions": '{ "users": {"AnonymousUser": ["view_resourcebase"]} , "groups":{}}',  # layer permissions
+                "time": "false",
+                "layer_title": "layer_title",
+                "time": "false",
+                "charset": "UTF-8",
+            }
+      tags:
+      - api
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Upload'
+          description: |-
+            {
+              "status": "finished",
+              "id": 131,
+              "url": "file_name_path",
+              "bbox": "-180.0000000,-90.0000000,180.0000000,90.0000000",
+              "crs": {
+                "type": "name",
+                "properties": "EPSG:4326"
+              },
+              "success": true
+            }          
   /api/v2/users/:
     get:
       operationId: api_v2_users_list

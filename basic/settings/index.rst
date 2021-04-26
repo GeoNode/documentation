@@ -1109,7 +1109,9 @@ LEAFLET_CONFIG
 LICENSES
 --------
 
-    | Default::
+    | Default:
+
+    .. code-block:: python
 
         {
             'ENABLED': True,

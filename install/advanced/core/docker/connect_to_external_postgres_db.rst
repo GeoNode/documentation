@@ -145,7 +145,6 @@ Connecting GeoNode Docker to an External Database
        >_ sudo service postgresql restart
 
 -  Allow GeoNode docker to connect to the external database:
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    -  At geonode project dir, edit ``.env`` file
    -  Replace with your ``username``, ``password``, ``ip_address``,

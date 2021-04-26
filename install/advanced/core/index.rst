@@ -166,64 +166,10 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   pip install -e . --upgrade
   pip install pygdal=="`gdal-config --version`.*"
 
-3. Test the GeoNode installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. warning::
-
-  Be sure you have successfully completed all the steps of the section :ref:`install_dep`.
-
-.. note::
-  This command will run both GeoNode and GeoServer locally after having prepared the **Spatialite database**.
-
-  **That way or running GeoNode is absolutely discouraged**. Nevertheless it is still usefull to double check you have been executed all the previous passages correctly.
-
-The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, by running the following services:
-
-#. GeoNode at ``http://localhost:8000/``
-#. GeoServer at ``http://localhost:8080/geoserver/``
-
-.. warning:: This modality is beneficial to debug issues and/or develop new features, but it cannot be used on a production system.
-
-.. code-block:: shell
-
-  # Prepare the GeoNode Spatialite database (the first time only)
-  paver setup
-  paver sync
-
-.. note::
-
-  In case you want to start again from a clean situation, just run
-
-  .. code:: shell
-
-    paver reset_hard
-
-.. warning:: This will blow up completely your ``local_settings``, delete the SQLlite database and remove the GeoServer data dir.
-
-.. code-block:: shell
-
-  # Run the server in DEBUG mode
-  paver start
-
-Once the server has finished the initialization and prints on the console the sentence ``GeoNode is now available.``, you can open a browser and go to::
-
-  http://localhost:8000/
-
-Sign-in with::
-
-  user: admin
-  password: admin
-
-Stop the server by running
-
-.. code-block:: shell
-
-  paver stop
 
 .. _configure_dbs_core:
 
-4. Postgis database Setup
+3. Postgis database Setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
@@ -348,7 +294,7 @@ PostgreSQL is now ready. To test the configuration, try to connect to the ``geon
   psql -U geonode geonode_data
 
 
-5. Install GeoServer
+4. Install GeoServer
 ^^^^^^^^^^^^^^^^^^^^
 
 When running the command ``paver start``, as we have seen before, the script runs automatically a ``Jetty`` Servlet Java container running ``GeoServer`` with the default settings.
@@ -389,7 +335,7 @@ Now, go to the official Apache Tomcat `website <https://tomcat.apache.org/>`_ an
 
 .. code-block:: shell
 
-  VERSION=9.0.44; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+  VERSION=9.0.45; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
 
 
 Once the download is complete, extract the tar file to the /opt/tomcat directory:
@@ -576,7 +522,7 @@ Now you can start the Apache Tomcat 9 server and enable it to start on boot time
 .. code-block:: shell
 
   sudo chmod +x /etc/init.d/tomcat9
-  sudo service tomcat9 start
+  sudo /etc/init.d/tomcat9 start
 
 For verification, type the following ss command, which will show you the 8080 open port number, the default open port reserved for Apache Tomcat Server.
 
@@ -775,7 +721,7 @@ It is possible to test the new running ``GeoServer`` with the ``GeoNode`` paver 
 
     Therefore, every data uploaded during those tests will remain on ``GeoServer`` even if ``GeoNode`` will be reset.
 
-6. Web Server
+5. Web Server
 ^^^^^^^^^^^^^
 
 Until now we have seen how to start ``GeoNode`` in ``DEBUG`` mode from the command line, through the ``paver`` utilities. This is of course not the best way to start it. Moreover you will need a dedicated ``HTTPD`` server running on port ``80`` if you would like to expose your server to the world.
@@ -1075,6 +1021,8 @@ Update the settings in order to use the ``PostgreSQL`` Database
 
 .. warning:: Make sure you already installed and configured the Database as explained in the previous sections.
 
+.. note:: Instead of using the ``local_settings.py``, you can drive the GeoNode behavior through the ``.env*`` variables; see as an instance the file ``./paver_dev.sh`` or ``./manage_dev.sh`` in order to understand how to use them. In that case **you don't need to create** the ``local_settings.py`` file; you can just stick with the decault one, which will take the values from the ENV. We tend to prefer this method in a production/dockerized system.
+
 .. code-block:: shell
 
   workon geonode
@@ -1093,6 +1041,17 @@ Update the settings in order to use the ``PostgreSQL`` Database
   DJANGO_SETTINGS_MODULE=geonode.local_settings paver setup
   DJANGO_SETTINGS_MODULE=geonode.local_settings paver sync
   DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py collectstatic --noinput
+
+.. note:: By using the ``.env_dev`` instead of ``local_settings.py``, the commands will change like below
+
+    .. code-block:: shell
+
+        ...
+        # Initialize GeoNode
+        ./paver_dev.sh reset
+        ./paver_dev.sh setup
+        ./paver_dev.sh sync
+        ./manage_dev.sh collectstatic --noinput
 
 Before finalizing the configuration we will need to update the ``UWSGI`` settings
 
@@ -1134,7 +1093,7 @@ Reload the UWSGI configuration with
   touch /opt/geonode/geonode/wsgi.py
 
 
-7. Update the settings in order to update GeoNode and GeoServer services running on a public IP or hostname
+6. Update the settings in order to update GeoNode and GeoServer services running on a public IP or hostname
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: Before exposing your services to the Internet, **make sure** your system is **hardened** and **secure enough**. See the specific documentation section for more details.
@@ -1188,7 +1147,7 @@ In particular the steps to do are:
         # Update the GeoNode ip or hostname
         DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
 
-8. Install and enable HTTPS secured connection through the Let's Encrypt provider
+7. Install and enable HTTPS secured connection through the Let's Encrypt provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
@@ -1268,7 +1227,7 @@ Next, the steps to do are:
 
             *UWSGI Configuration*
 
-9. Enabling Fully Asynchronous Tasks
+8. Enabling Fully Asynchronous Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_
@@ -2148,7 +2107,7 @@ Docker
 In this section we are going to list the passages needed to:
 
 1. Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host
-2. Deploy a vanilla ``GeoNode 3.1`` with ``Docker``
+2. Deploy a vanilla ``GeoNode 3.2.0`` with ``Docker``
 
   a. Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``
   b. Access the ``django4geonode`` Docker image to update the code-base and/or change internal settings
@@ -2169,8 +2128,8 @@ Logout and login again on shell and then execute:
 
   docker run -it hello-world
 
-4. Deploy a vanilla GeoNode 3.1 with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Deploy a vanilla GeoNode 3.2.0 with Docker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
 

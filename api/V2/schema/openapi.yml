@@ -2954,7 +2954,36 @@ paths:
   /api/v2/uploads/{id}/:
     get:
       operationId: api_v2_uploads_retrieve
-      description: API endpoint that allows uploads to be viewed or edited.
+      description:  |-
+        Authenticated API endpoint that will show details about the upload status.
+        Main informations available are:
+          - ID: upload id
+          - name: layer name
+          - date: start date of the import process
+          - state: the actual state of the import process. When the state is PROCESSED, means that the layer has been process by GeoNode and Geoserver
+          - progress: % of progress
+          - uploadfile_set: list of the uploaded files
+          - delete url: url to be called for delete the import
+          - import_url: to monitoring the import status in geoserver.
+        Example of still in progress import:
+          {
+            "upload": {
+                "id": 1119,
+                "name": "layer_name",
+                "date": "2021-04-26T09:50:41.233543Z",
+                "create_date": "2021-04-26T09:50:40.515866Z",
+                "user": 1167,
+                "state": "COMPLETE",
+                "progress": 80.0,
+                "complete": true,
+                "import_id": 1089,
+                "uploadfile_set": [],
+                "resume_url": null,
+                "delete_url": "/upload/delete/1119",
+                "import_url": "http://geoserver:8080/geoserver/rest/imports/1089",
+                "detail_url": null
+            }
+        }
       parameters:
       - in: path
         name: id
@@ -3173,6 +3202,10 @@ paths:
         API endpoint that allows user to upload new layers into GeoNode.
         The endpoint is protected via authentication and the request should always come from the same session.
         The API accept the request with form-data. Is also possible to define some information via json.
+        Behind the scene, geonode will:
+          - Create an upload session
+          - Save the layer into GeoNode
+          - Call async geoserver to save the layer
         Example:
           client = requests.session()
           response = client.put(

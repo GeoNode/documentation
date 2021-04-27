@@ -6,7 +6,7 @@ paths:
   /api/v2/:
     get:
       operationId: api_v2_retrieve
-      description: ''
+      description: Returns a list of available endpoints
       tags:
       - api
       security:
@@ -15,11 +15,11 @@ paths:
       - {}
       responses:
         '200':
-          description: No response body
+          description: A json with a list of available endpoints
   /api/v2/documents/:
     get:
       operationId: api_v2_documents_list
-      description: API endpoint that allows documents to be viewed or edited.
+      description: API endpoint that return all the documents available with detailed information (paginated).
       parameters:
       - name: ordering
         required: false
@@ -120,36 +120,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Document'
           description: ''
-    patch:
-      operationId: api_v2_documents_partial_update
-      description: API endpoint that allows documents to be viewed or edited.
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PatchedDocument'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/PatchedDocument'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/PatchedDocument'
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Document'
-          description: ''
     delete:
       operationId: api_v2_documents_destroy
       description: |-
-        Either delete a single or many model instances in bulk
+        Either delete a single or many model instances in bulk, by sending a json with the ID of the document to delete
 
         DELETE /dogs/
         {
@@ -175,7 +149,7 @@ paths:
   /api/v2/documents/{id}/:
     get:
       operationId: api_v2_documents_retrieve
-      description: API endpoint that allows documents to be viewed or edited.
+      description: API endpoint that return detailed information of a specific document.
       parameters:
       - in: path
         name: id
@@ -318,21 +292,7 @@ paths:
     delete:
       operationId: api_v2_documents_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
-
-        DELETE /dogs/
-        {
-            "dogs": [
-                {"id": 1},
-                {"id": 2}
-            ]
-        }
-
-        DELETE /dogs/
-        [
-            {"id": 1},
-            {"id": 2}
-        ]
+        Delete a single document.
       parameters:
       - in: path
         name: id
@@ -351,7 +311,7 @@ paths:
   /api/v2/documents/{id}/linked_resources/:
     get:
       operationId: api_v2_documents_linked_resources_retrieve
-      description: API endpoint that allows documents to be viewed or edited.
+      description: API endpoint that return all the linked resources of a specific id.
       parameters:
       - in: path
         name: id
@@ -375,7 +335,7 @@ paths:
   /api/v2/geoapps/:
     get:
       operationId: api_v2_geoapps_list
-      description: API endpoint that allows geoapps to be viewed or edited.
+      description: API endpoint that show all the geoapps available.
       parameters:
       - name: ordering
         required: false
@@ -531,7 +491,7 @@ paths:
   /api/v2/geoapps/{id}/:
     get:
       operationId: api_v2_geoapps_retrieve
-      description: API endpoint that allows geoapps to be viewed or edited.
+      description: API endpoint that show details of a specific geoapp.
       parameters:
       - in: path
         name: id
@@ -674,7 +634,7 @@ paths:
     delete:
       operationId: api_v2_geoapps_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
+        Delete a single instances
 
         DELETE /dogs/
         {
@@ -746,7 +706,7 @@ paths:
   /api/v2/geostories/:
     get:
       operationId: api_v2_geostories_list
-      description: API endpoint that allows geoapps to be viewed or edited.
+      description: API endpoint that return all the geostories available with detailed information (paginated).
       parameters:
       - name: ordering
         required: false
@@ -902,7 +862,7 @@ paths:
   /api/v2/geostories/{id}/:
     get:
       operationId: api_v2_geostories_retrieve
-      description: API endpoint that allows geoapps to be viewed or edited.
+      description: API endpoint that return detailed information of a specific geostory.
       parameters:
       - in: path
         name: id
@@ -1117,7 +1077,7 @@ paths:
   /api/v2/groups/:
     get:
       operationId: api_v2_groups_list
-      description: API endpoint that allows gropus to be viewed or edited.
+      description: API endpoint that return all groups available with detailed information (paginated).
       parameters:
       - name: ordering
         required: false
@@ -1266,7 +1226,7 @@ paths:
   /api/v2/groups/{id}/:
     get:
       operationId: api_v2_groups_retrieve
-      description: API endpoint that allows gropus to be viewed or edited.
+      description: API endpoint that return detailed information of a specific group.
       parameters:
       - in: path
         name: id
@@ -1408,21 +1368,7 @@ paths:
     delete:
       operationId: api_v2_groups_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
-
-        DELETE /dogs/
-        {
-            "dogs": [
-                {"id": 1},
-                {"id": 2}
-            ]
-        }
-
-        DELETE /dogs/
-        [
-            {"id": 1},
-            {"id": 2}
-        ]
+        Delete a single instance
       parameters:
       - in: path
         name: id
@@ -1441,7 +1387,7 @@ paths:
   /api/v2/groups/{id}/managers/:
     get:
       operationId: api_v2_groups_managers_retrieve
-      description: API endpoint that allows gropus to be viewed or edited.
+      description: API endpoint that show the managers for the selected group.
       parameters:
       - in: path
         name: id
@@ -1464,7 +1410,7 @@ paths:
   /api/v2/groups/{id}/members/:
     get:
       operationId: api_v2_groups_members_retrieve
-      description: API endpoint that allows gropus to be viewed or edited.
+      description: API endpoint that show either members and managers for the selected group.
       parameters:
       - in: path
         name: id
@@ -1487,7 +1433,7 @@ paths:
   /api/v2/groups/{id}/resources/:
     get:
       operationId: api_v2_groups_resources_retrieve
-      description: API endpoint that allows gropus to be viewed or edited.
+      description: API endpoint that show all the resources connected to the selected group.
       parameters:
       - in: path
         name: id
@@ -1510,7 +1456,7 @@ paths:
   /api/v2/layers/:
     get:
       operationId: api_v2_layers_list
-      description: API endpoint that allows layers to be viewed or edited.
+      description: API endpoint that return all the layers available with detailed information (paginated).
       parameters:
       - name: ordering
         required: false
@@ -1666,7 +1612,7 @@ paths:
   /api/v2/layers/{id}/:
     get:
       operationId: api_v2_layers_retrieve
-      description: API endpoint that allows layers to be viewed or edited.
+      description: API endpoint that return detailed information of a specific layer
       parameters:
       - in: path
         name: id
@@ -1809,7 +1755,7 @@ paths:
     delete:
       operationId: api_v2_layers_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
+        Delete a single model instance
 
         DELETE /dogs/
         {
@@ -1881,7 +1827,7 @@ paths:
   /api/v2/maps/:
     get:
       operationId: api_v2_maps_list
-      description: API endpoint that allows maps to be viewed or edited.
+      description: API endpoint that return all the maps available with detailed information (paginated).
       parameters:
       - name: ordering
         required: false
@@ -2037,7 +1983,7 @@ paths:
   /api/v2/maps/{id}/:
     get:
       operationId: api_v2_maps_retrieve
-      description: API endpoint that allows maps to be viewed or edited.
+      description: API endpoint that return detailed information of a specific map.
       parameters:
       - in: path
         name: id
@@ -2180,21 +2126,7 @@ paths:
     delete:
       operationId: api_v2_maps_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
-
-        DELETE /dogs/
-        {
-            "dogs": [
-                {"id": 1},
-                {"id": 2}
-            ]
-        }
-
-        DELETE /dogs/
-        [
-            {"id": 1},
-            {"id": 2}
-        ]
+        Delete a single instance.
       parameters:
       - in: path
         name: id
@@ -2213,7 +2145,9 @@ paths:
   /api/v2/maps/{id}/layers/:
     get:
       operationId: api_v2_maps_layers_retrieve
-      description: API endpoint that allows maps to be viewed or edited.
+      description: |-
+        Return the list of the layer that compose the map with some information like opacity, name, visibility.
+        In the layer_params field, are available the information regarding the layer
       parameters:
       - in: path
         name: id
@@ -2237,7 +2171,7 @@ paths:
   /api/v2/maps/{id}/local_layers/:
     get:
       operationId: api_v2_maps_local_layers_retrieve
-      description: API endpoint that allows maps to be viewed or edited.
+      description: API endpoint allowing to retrieve a detailed list of the local MapLayers
       parameters:
       - in: path
         name: id
@@ -2261,7 +2195,7 @@ paths:
   /api/v2/resources/:
     get:
       operationId: api_v2_resources_list
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: API endpoint that show all resources available in GeoNode, includes maps, layers, geostories and documents (paginated).
       parameters:
       - name: ordering
         required: false
@@ -2417,7 +2351,7 @@ paths:
   /api/v2/resources/{id}/:
     get:
       operationId: api_v2_resources_retrieve
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: API endpoint that return detailed information of a specific resource, including keywods, owner and bbox_polygon.
       parameters:
       - in: path
         name: id
@@ -2560,21 +2494,7 @@ paths:
     delete:
       operationId: api_v2_resources_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
-
-        DELETE /dogs/
-        {
-            "dogs": [
-                {"id": 1},
-                {"id": 2}
-            ]
-        }
-
-        DELETE /dogs/
-        [
-            {"id": 1},
-            {"id": 2}
-        ]
+        Delete a single instance
       parameters:
       - in: path
         name: id
@@ -2593,7 +2513,8 @@ paths:
   /api/v2/resources/{id}/get_perms/:
     get:
       operationId: api_v2_resources_get_perms_retrieve
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: |-
+        API endpoint that show all the permissions defined for a specific resource, splitted by groups and users.
       parameters:
       - in: path
         name: id
@@ -2617,7 +2538,7 @@ paths:
   /api/v2/resources/{id}/set_perms/:
     put:
       operationId: api_v2_resources_set_perms_update
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: API endpoint that allows the user to set the permissions to a specific resource.
       parameters:
       - in: path
         name: id
@@ -2652,7 +2573,7 @@ paths:
   /api/v2/resources/approved/:
     get:
       operationId: api_v2_resources_approved_retrieve
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: Will return a list of approved resource available.
       tags:
       - api
       security:
@@ -2669,7 +2590,7 @@ paths:
   /api/v2/resources/featured/:
     get:
       operationId: api_v2_resources_featured_retrieve
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: Will return a list of featured resource available.
       tags:
       - api
       security:
@@ -2686,7 +2607,7 @@ paths:
   /api/v2/resources/published/:
     get:
       operationId: api_v2_resources_published_retrieve
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: Will return a list of published resource available.
       tags:
       - api
       security:
@@ -2703,7 +2624,7 @@ paths:
   /api/v2/resources/resource_types/:
     get:
       operationId: api_v2_resources_resource_types_retrieve
-      description: API endpoint that allows base resources to be viewed or edited.
+      description: Will return a list of the resource types that are managed by GeoNode.
       tags:
       - api
       security:
@@ -2798,7 +2719,7 @@ paths:
   /api/v2/uploads/:
     get:
       operationId: api_v2_uploads_list
-      description: API endpoint that allows uploads to be viewed or edited.
+      description: List of the upload instances with their status.
       parameters:
       - name: ordering
         required: false
@@ -3289,7 +3210,7 @@ paths:
   /api/v2/users/:
     get:
       operationId: api_v2_users_list
-      description: API endpoint that allows users to be viewed or edited.
+      description: API endpoint that show the list of users registered in GeoNode. if the logged user is the administrator will show all the user available, otherwise only the information of his own account are provided
       parameters:
       - name: ordering
         required: false
@@ -3383,32 +3304,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserProfile'
           description: ''
-    patch:
-      operationId: api_v2_users_partial_update
-      description: API endpoint that allows users to be viewed or edited.
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PatchedUserProfile'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/PatchedUserProfile'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/PatchedUserProfile'
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
-          description: ''
     delete:
       operationId: api_v2_users_destroy
       description: |-
@@ -3438,7 +3333,7 @@ paths:
   /api/v2/users/{id}/:
     get:
       operationId: api_v2_users_retrieve
-      description: API endpoint that allows users to be viewed or edited.
+      description: API endpoint that return detailed information of a specific user.
       parameters:
       - in: path
         name: id
@@ -3544,43 +3439,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserProfile'
           description: ''
-    patch:
-      operationId: api_v2_users_partial_update_2
-      description: API endpoint that allows users to be viewed or edited.
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this user.
-        required: true
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PatchedUserProfile'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/PatchedUserProfile'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/PatchedUserProfile'
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UserProfile'
-          description: ''
     delete:
       operationId: api_v2_users_destroy_2
       description: |-
-        Either delete a single or many model instances in bulk
+        Delete a model instance.
 
         DELETE /dogs/
         {
@@ -3613,7 +3475,7 @@ paths:
   /api/v2/users/{id}/groups/:
     get:
       operationId: api_v2_users_groups_retrieve
-      description: API endpoint that allows users to be viewed or edited.
+      description: API endpoint that show the list of the groups that the user belong to.
       parameters:
       - in: path
         name: id
@@ -3636,7 +3498,7 @@ paths:
   /api/v2/users/{id}/resources/:
     get:
       operationId: api_v2_users_resources_retrieve
-      description: API endpoint that allows users to be viewed or edited.
+      description: API endpoint that show the list of the resources that belong to the user.
       parameters:
       - in: path
         name: id
@@ -3769,7 +3631,7 @@ paths:
   /mapstore/rest/users/:
     get:
       operationId: mapstore_rest_users_list
-      description: API endpoint that allows users to be viewed or edited.
+      description: API endpoint that show the users available with some details.
       tags:
       - mapstore
       security:
@@ -3814,7 +3676,7 @@ paths:
   /mapstore/rest/users/{id}/:
     get:
       operationId: mapstore_rest_users_retrieve
-      description: API endpoint that allows users to be viewed or edited.
+      description: API endpoint that show the users available with some details.
       parameters:
       - in: path
         name: id
@@ -3858,39 +3720,6 @@ paths:
             schema:
               $ref: '#/components/schemas/User'
         required: true
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-          description: ''
-    patch:
-      operationId: mapstore_rest_users_partial_update
-      description: API endpoint that allows users to be viewed or edited.
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this user.
-        required: true
-      tags:
-      - mapstore
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PatchedUser'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/PatchedUser'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/PatchedUser'
       security:
       - cookieAuth: []
       - basicAuth: []

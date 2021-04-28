@@ -58,6 +58,7 @@ We will use **example.org** as fictitious Domain Name.
 First, we are going to install all the **system packages** needed for the GeoNode setup. Login to the target machine and execute the following commands:
 
 .. code-block:: shell
+.. note:: Is necesary install sqlite3 packages if don't gonna be used?
 
   # Install packages from GeoNode core
   sudo apt install -y build-essential gdal-bin \
@@ -66,7 +67,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
       libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev \
       software-properties-common build-essential \
       git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
-      sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev
+      sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev 
 
   # Install Openjdk
   sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
@@ -103,9 +104,6 @@ First, we are going to install all the **system packages** needed for the GeoNod
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This is the most basic installation of GeoNode. It won't use any external server like ``Apache Tomcat``, ``PostgreSQL`` or ``HTTPD``.
-
-It will run locally against a file-system based ``Spatialite`` database.
-
 
 First of all we need to prepare a new Python Virtual Environment
 
@@ -174,7 +172,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
 
 .. warning::
 
-  Be sure you have successfully completed all the steps of the section :ref:`install_dep`.
+Be sure you have successfully completed all the steps of the section :ref:`install_dep`.
 
 In this section, we are going to setup users and databases for GeoNode in PostgreSQL.
 
@@ -182,6 +180,8 @@ Install and Configure the PostgreSQL Database System
 ....................................................
 
 In this section we are going to install the ``PostgreSQL`` packages along with the ``PostGIS`` extension. Those steps must be done **only** if you don't have the DB already installed on your system.
+
+.. warning:: PostgreSQL and PostGIS needs to be installed in the virtual envirorment? If don't, specify it.
 
 .. code-block:: shell
 
@@ -296,19 +296,7 @@ PostgreSQL is now ready. To test the configuration, try to connect to the ``geon
 
 4. Install GeoServer
 ^^^^^^^^^^^^^^^^^^^^
-
-When running the command ``paver start``, as we have seen before, the script runs automatically a ``Jetty`` Servlet Java container running ``GeoServer`` with the default settings.
-
-.. warning:: Before executing the next steps, be sure ``GeoNode`` and ``GeoServer`` paver services have been stopped. In order to do that
-
-  .. code-block:: shell
-
-    workon geonode
-    cd /opt/geonode/
-    paver stop
-    paver reset_hard
-
-This is not the optimal way to run ``GeoServer``. This is a fundamental component of ``GeoNode`` and we must be sure it is running on a stable and reliable manner.
+.. warning:: Apache Tomcat and Geoserver needs to be installed in the virtual envirorment? If don't, specify it.
 
 In this section, we are going to install the ``Apache Tomcat 8`` Servlet Java container, which will be started by default on the internal port ``8080``.
 
@@ -331,7 +319,7 @@ First, it is not recommended to run Apache Tomcat as user root, so we will creat
   sudo useradd -m -U -d /opt/tomcat -s /bin/bash tomcat
   sudo usermod -a -G www-data tomcat
 
-Now, go to the official Apache Tomcat `website <https://tomcat.apache.org/>`_ and download the most recent version of the software to your server.
+.. warning:: Now, go to the official Apache Tomcat `website <https://tomcat.apache.org/>`_ and download the most recent version of the software to your server. But don't use Tomcat10 because there are still some errors between Geoserver and Tomcat. 
 
 .. code-block:: shell
 
@@ -661,7 +649,7 @@ In order to make the changes effective, you'll need to restart the Servlet Conta
 .. code-block:: shell
 
   # Restart the server
-  sudo service tomcat9 restart
+  sudo /etc/init.d/tomcat9 restart
 
   # Follow the startup logs
   sudo tail -F -n 300 /opt/data/geoserver_logs/geoserver.log
@@ -707,22 +695,10 @@ Your ``GeoServer`` should be up and running at
 
     sudo less /opt/tomcat/latest/logs/catalina.out
 
-It is possible to test the new running ``GeoServer`` with the ``GeoNode`` paver service (``DEBUG`` mode). To do that
-
-.. code-block:: shell
-
-  workon geonode
-  cd /opt/geonode/
-  paver setup
-  paver sync
-  paver start_django
-
-.. note:: The ``paver reset`` command from now on **won't** clean up ``GeoServer`` and its catalog anymore.
-
-    Therefore, every data uploaded during those tests will remain on ``GeoServer`` even if ``GeoNode`` will be reset.
-
 5. Web Server
 ^^^^^^^^^^^^^
+
+.. warning:: NGINX need to be installed in the virtual envirorment? If don't, specify it.
 
 Until now we have seen how to start ``GeoNode`` in ``DEBUG`` mode from the command line, through the ``paver`` utilities. This is of course not the best way to start it. Moreover you will need a dedicated ``HTTPD`` server running on port ``80`` if you would like to expose your server to the world.
 
@@ -736,13 +712,7 @@ In this section we will see:
 Install and configure NGINX
 ...........................
 
-.. warning:: Before executing the next steps, be sure ``GeoNode`` paver services have been stopped. To do that
-
-  .. code-block:: shell
-
-    workon geonode
-    cd /opt/geonode/
-    paver stop_django
+.. warning:: Seems to be possible that NGINX works with Python 3.6 and not with 3.8.
 
 .. code-block:: shell
 

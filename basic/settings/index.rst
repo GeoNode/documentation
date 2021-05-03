@@ -1767,7 +1767,7 @@ PYCSW
 
     FILTER
     Optional settings in order to add a filter to the CSW filtering.
-    The filter follow the django orm structure and must be a `ResourceBase` field.
+    The filter follow the django orm structure and must be a `ResourceBase` field/related field.
     By default CSW will filter only for `layer` resource_type
 
     Example of PYCSW configuration.

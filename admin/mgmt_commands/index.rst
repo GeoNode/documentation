@@ -282,6 +282,12 @@ The options are:
 * **remove-duplicates**; Update the map styles and thumbnails.
 
 * **delete-orphaned-thumbs**; Removes duplicated Links.
+* 
+* **set-uuid**; will refresh the UUID based on the UUID_HANDLER if configured (Default False).
+* 
+* **set_attrib**; If set will refresh the attributes of the resource taken from Geoserver. (Default True).
+* 
+* **set_links**; If set will refresh the links of the resource. (Default True).
 
 First of all let's take a look at the :guilabel:`--help` option of the ``set_all_layers_metadata``
 management command in order to inspect all the command options and features.

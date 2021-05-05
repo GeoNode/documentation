@@ -1756,13 +1756,26 @@ PROXY_URL
 PYCSW
 -----
 
-    A dict with pycsw's configuration.  Of note are the sections
-    ``metadata:main`` to set CSW server metadata and ``metadata:inspire``
+    A dict with pycsw's configuration with two possible keys CONFIGURATION and FILTER.
+    
+    CONFIGURATION
+    Of note are the sections ``metadata:main`` to set CSW server metadata and ``metadata:inspire``
     to set INSPIRE options.  Setting ``metadata:inspire['enabled']`` to ``true``
     will enable INSPIRE support.   Server level configurations can be overridden
     in the ``server`` section.  See http://docs.pycsw.org/en/latest/configuration.html
     for full pycsw configuration details.
 
+    FILTER
+    Optional settings in order to add a filter to the CSW filtering.
+    The filter follow the django orm structure and must be a `ResourceBase` field/related field.
+    By default CSW will filter only for `layer` resource_type
+
+    Example of PYCSW configuration.
+    PYCSW: {
+        'CONFIGURATION': {...},
+        'FILTER': {'resource_type__in':['layer'] }
+    }
+    
 R
 =
 

@@ -1730,6 +1730,18 @@ PINAX_RATINGS_CATEGORY_CHOICES
             }
         }
 
+
+PROFILE_EDIT_EXCLUDE_FIELD
+---------------------------
+    | Default: ``[]``
+
+    A list of element (item name) to exclude from the Profile Edit page.
+
+    Example:
+    
+    ``PROFILE_EDIT_EXCLUDE_FIELD=['organization', 'language']``
+
+
 PROXY_ALLOWED_HOSTS
 -------------------
 

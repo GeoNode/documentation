@@ -58,7 +58,6 @@ We will use **example.org** as fictitious Domain Name.
 First, we are going to install all the **system packages** needed for the GeoNode setup. Login to the target machine and execute the following commands:
 
 .. code-block:: shell
-.. note:: Is necesary install sqlite3 packages if don't gonna be used?
 
   # Install packages from GeoNode core
   sudo apt install -y build-essential gdal-bin \
@@ -181,8 +180,6 @@ Install and Configure the PostgreSQL Database System
 
 In this section we are going to install the ``PostgreSQL`` packages along with the ``PostGIS`` extension. Those steps must be done **only** if you don't have the DB already installed on your system.
 
-.. warning:: PostgreSQL and PostGIS needs to be installed in the virtual envirorment? If don't, specify it.
-
 .. code-block:: shell
 
   # Ubuntu 20.04 (focal)
@@ -296,7 +293,6 @@ PostgreSQL is now ready. To test the configuration, try to connect to the ``geon
 
 4. Install GeoServer
 ^^^^^^^^^^^^^^^^^^^^
-.. warning:: Apache Tomcat and Geoserver needs to be installed in the virtual envirorment? If don't, specify it.
 
 In this section, we are going to install the ``Apache Tomcat 8`` Servlet Java container, which will be started by default on the internal port ``8080``.
 
@@ -697,8 +693,6 @@ Your ``GeoServer`` should be up and running at
 
 5. Web Server
 ^^^^^^^^^^^^^
-
-.. warning:: NGINX need to be installed in the virtual envirorment? If don't, specify it.
 
 Until now we have seen how to start ``GeoNode`` in ``DEBUG`` mode from the command line, through the ``paver`` utilities. This is of course not the best way to start it. Moreover you will need a dedicated ``HTTPD`` server running on port ``80`` if you would like to expose your server to the world.
 

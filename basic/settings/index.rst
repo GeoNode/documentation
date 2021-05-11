@@ -1318,14 +1318,14 @@ Here is an example of expected parser function
 For more information, please rely to `TestCustomMetadataParser` which contain a smoke test to explain the functionality
 
             
-METADATA_STORER
+METADATA_STORERS
 ----------------
 
 Is possible to define multiple Layer storer during the layer upload.
 
 The variable should be declared in this way:
 
-`METADATA_STORER = ['custom_storer_function]`
+`METADATA_STORERS = ['custom_storer_function']`
 
 NOTE: By default the Layer is always saved with the default behaviour.
 

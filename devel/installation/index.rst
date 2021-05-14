@@ -386,7 +386,7 @@ If you didn't install GeoNode-Core earlier and you wanted to install GeoNode-Pro
 
 .. code-block:: shell
     
-    $ pip install Django==2.2.9
+    $ pip install Django==3.2
 
 4- Use django-admin.py to create a project "my_geonode" from a GeoNode-Project template as follows:
 

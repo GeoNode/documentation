@@ -131,7 +131,7 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==2.2.12
+  pip install Django==3.2
 
   # CentOS
   virtualenv -p python3 my_geonode

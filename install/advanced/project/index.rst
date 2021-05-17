@@ -143,7 +143,7 @@ Make an instance out of the ``Django Template``
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==2.2.12
+  pip install Django==3.2
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
@@ -370,7 +370,7 @@ Make an instance out of the ``Django Template``
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==2.2.12
+  pip install Django==3.2
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
   cd /opt/geonode_custom/my_geonode

@@ -128,7 +128,7 @@ The authentication system in Django aims to be very generic and doesn’t provid
 #. Throttling of login attempts
 #. Authentication against third-parties (OAuth, for example)
 
-.. note:: For more details on installation and configuration of Django authentication system, please refer to the official guide https://docs.djangoproject.com/en/1.10/topics/auth/.
+.. note:: For more details on installation and configuration of Django authentication system, please refer to the official guide https://docs.djangoproject.com/en/3.2/topics/auth/.
 
 GeoNode communicates with GeoServer through Basic Authentication under the hood, in order to configure the data and the GeoServer catalog.
 

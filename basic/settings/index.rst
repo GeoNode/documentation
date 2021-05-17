@@ -450,11 +450,11 @@ CACHES
         }
 
     A dictionary containing the settings for all caches to be used with Django.
-    This is a `Django setting <https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-CACHES>`__
+    This is a `Django setting <https://docs.djangoproject.com/en/3.2/ref/settings/#std:setting-CACHES>`__
 
     The ``'default'`` cache is disabled because we don't have a mechanism to discriminate between client sessions right now, and we don't want all users fetch the same api results.
 
-    The ``'resources'`` is not currently used. It might be helpful for `caching Django template fragments <https://docs.djangoproject.com/en/2.2/topics/cache/#template-fragment-caching>`__ and/or `Tastypie API Caching <https://django-tastypie.readthedocs.io/en/latest/caching.html>`__.
+    The ``'resources'`` is not currently used. It might be helpful for `caching Django template fragments <https://docs.djangoproject.com/en/3.2/topics/cache/#template-fragment-caching>`__ and/or `Tastypie API Caching <https://django-tastypie.readthedocs.io/en/latest/caching.html>`__.
 
 
 CACHE_BUSTING_MEDIA_ENABLED
@@ -463,7 +463,7 @@ CACHE_BUSTING_MEDIA_ENABLED
     | Default: ``False``
     | Env: ``CACHE_BUSTING_MEDIA_ENABLED``
 
-    This is a `Django ManifestStaticFilesStorage storage setting <https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__
+    This is a `Django ManifestStaticFilesStorage storage setting <https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__
     A boolean allowing you to enable the ``ManifestStaticFilesStorage storage``. This works only on a production system.
 
     .. warning:: This works only if ``DEBUG = False``
@@ -704,7 +704,7 @@ CSRF_COOKIE_HTTPONLY
     | Default: ``False``
     | Env: ``CSRF_COOKIE_HTTPONLY``
 
-    Whether to use HttpOnly flag on the CSRF cookie. If this is set to True, client-side JavaScript will not be able to access the CSRF cookie. This is a `Django Setting <https://docs.djangoproject.com/en/2.1/ref/settings/#csrf-cookie-httponly>`__
+    Whether to use HttpOnly flag on the CSRF cookie. If this is set to True, client-side JavaScript will not be able to access the CSRF cookie. This is a `Django Setting <https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-httponly>`__
 
 CSRF_COOKIE_SECURE
 ------------------
@@ -712,7 +712,7 @@ CSRF_COOKIE_SECURE
     | Default: ``False``
     | Env: ``CSRF_COOKIE_SECURE``
 
-    Whether to use a secure cookie for the CSRF cookie. If this is set to True, the cookie will be marked as “secure,” which means browsers may ensure that the cookie is only sent with an HTTPS connection. This is a `Django Setting <https://docs.djangoproject.com/en/2.1/ref/settings/#csrf-cookie-secure>`__
+    Whether to use a secure cookie for the CSRF cookie. If this is set to True, the cookie will be marked as “secure,” which means browsers may ensure that the cookie is only sent with an HTTPS connection. This is a `Django Setting <https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-secure>`__
 
 D
 =
@@ -731,7 +731,7 @@ DEBUG
     | Env: ``DEBUG``
 
     One of the main features of debug mode is the display of detailed error pages. If your app raises an exception when DEBUG is True, Django will display a detailed traceback, including a lot of metadata about your environment, such as all the currently defined Django settings (from settings.py).
-    This is a `Django Setting <https://docs.djangoproject.com/en/2.1/ref/settings/#debug>`__
+    This is a `Django Setting <https://docs.djangoproject.com/en/3.2/ref/settings/#debug>`__
 
 
 DEBUG_STATIC
@@ -749,12 +749,20 @@ DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION
 
     Whether the uploaded resources should downloadable by default.
 
-DEFAULT_ANONYMOUS_VIEW_PERMISSION
----------------------------------
+    DEFAULT_ANONYMOUS_VIEW_PERMISSION
+    ---------------------------------
+    
+        Default: ``True``
+    
+        Whether the uploaded resources should be public by default.
 
-    Default: ``True``
+DEFAULT_AUTO_FIELD
+------------------
 
-    Whether the uploaded resources should be public by default.
+    Default: ``django.db.models.AutoField``
+
+    Default primary key field type to use for models that don’t have a field with primary_key=True.
+    Django documentation https://docs.djangoproject.com/it/3.2/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 
 DEFAULT_LAYER_FORMAT
 --------------------
@@ -1356,6 +1364,21 @@ MISSING_THUMBNAIL
 
     The path to an image used as thumbnail placeholder.
 
+
+MEMCACHED_BACKEND
+-----------------
+    Default: ``django.core.cache.backends.memcached.PyMemcacheCache``
+
+    Define which backend of memcached will be used
+
+
+MEMCACHED_ENABLED
+-----------------
+    Default: ``False``
+
+    If True, will use MEMCACHED_BACKEND as default backend in CACHES
+
+
 MODIFY_TOPICCATEGORY
 --------------------
 
@@ -1950,7 +1973,7 @@ SECURE_BROWSER_XSS_FILTER
     | Env: ``SECURE_BROWSER_XSS_FILTER``
 
     If True, the SecurityMiddleware sets the X-XSS-Protection: 1; mode=block header on all responses that do not already have it.
-    This is `<Django settings. https://docs.djangoproject.com/en/2.1/ref/settings/#secure-browser-xss-filter>`__
+    This is `<Django settings. https://docs.djangoproject.com/en/3.2/ref/settings/#secure-browser-xss-filter>`__
 
 SECURE_CONTENT_TYPE_NOSNIFF
 ---------------------------
@@ -1959,7 +1982,7 @@ SECURE_CONTENT_TYPE_NOSNIFF
     | Env: ``SECURE_CONTENT_TYPE_NOSNIFF``
 
     If True, the SecurityMiddleware sets the X-Content-Type-Options: nosniff header on all responses that do not already have it.
-    This is `Django settings: <https://docs.djangoproject.com/en/2.1/ref/settings/#secure-content-type-nosniff>`__
+    This is `Django settings: <https://docs.djangoproject.com/en/3.2/ref/settings/#secure-content-type-nosniff>`__
 
 
 SECURE_HSTS_INCLUDE_SUBDOMAINS
@@ -1968,7 +1991,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS
     | Default: ``True``
     | Env: ``SECURE_HSTS_INCLUDE_SUBDOMAINS``
 
-    This is Django settings: https://docs.djangoproject.com/en/2.1/ref/settings/#secure-hsts-include-subdomains
+    This is Django settings: https://docs.djangoproject.com/en/3.2/ref/settings/#secure-hsts-include-subdomains
 
 SECURE_HSTS_SECONDS
 -------------------
@@ -1976,14 +1999,14 @@ SECURE_HSTS_SECONDS
     | Default: ``3600``
     | Env: ``SECURE_HSTS_SECONDS``
 
-    This is `Django settings: <https://docs.djangoproject.com/en/2.1/ref/settings/#secure-hsts-seconds>`__
+    This is `Django settings: <https://docs.djangoproject.com/en/3.2/ref/settings/#secure-hsts-seconds>`__
     If set to a non-zero integer value, the SecurityMiddleware sets the HTTP Strict Transport Security header on all responses that do not already have it.
 
 SECURE_SSL_REDIRECT
 -------------------
 
     If True, the SecurityMiddleware redirects all non-HTTPS requests to HTTPS (except for those URLs matching a regular expression listed in SECURE_REDIRECT_EXEMPT).
-    This is `Django settings: <https://docs.djangoproject.com/en/2.1/ref/settings/#secure-ssl-redirect>`__
+    This is `Django settings: <https://docs.djangoproject.com/en/3.2/ref/settings/#secure-ssl-redirect>`__
 
 SERVICE_UPDATE_INTERVAL
 -----------------------
@@ -1998,7 +2021,7 @@ SESSION_COOKIE_SECURE
     | Default: ``False``
     | Env: ``SESSION_COOKIE_SECURE``
 
-    This is a `Django setting: <https://docs.djangoproject.com/en/2.1/ref/settings/#session-cookie-secure>`__
+    This is a `Django setting: <https://docs.djangoproject.com/en/3.2/ref/settings/#session-cookie-secure>`__
 
 SESSION_EXPIRED_CONTROL_ENABLED
 -------------------------------
@@ -2429,4 +2452,4 @@ X_FRAME_OPTIONS
 
 Default: ``'ALLOW-FROM %s' % SITEURL``
 
-This is a `Django setting <https://docs.djangoproject.com/en/2.2/ref/clickjacking/#setting-x-frame-options-for-all-responses>`__
+This is a `Django setting <https://docs.djangoproject.com/en/3.2/ref/clickjacking/#setting-x-frame-options-for-all-responses>`__

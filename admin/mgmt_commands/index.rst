@@ -2012,7 +2012,7 @@ The JSON configuration file should contain a single `filters` object, which cons
 Each list specifies the filter conditions applied to a corresponding queryset, defining which items will be deleted.
 The filters are evaluated and directly inserted into Django .filter() method, which means the filters occurring as
 separated list items are treated as AND condition. To create OR query ``|`` operator should be used. For more info please check Django
-[documentation](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)).
+[documentation](https://docs.djangoproject.com/en/3.2/topics/db/queries/#complex-lookups-with-q-objects)).
 The only exception is passing a list with ``'*'`` which will cause deleting all the queryset of the resource.
 
 * **Example 4**: Example content of the configuration file, which will delete layers with ID's 1, 2, and 3, those owned by `admin` user, along with all defined maps.

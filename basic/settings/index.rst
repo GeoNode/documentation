@@ -2335,7 +2335,7 @@ UPLOADER
     Default::
 
         {
-            'BACKEND' : 'geonode.rest',
+            'BACKEND' : 'geonode.importer',
             'OPTIONS' : {
                 'TIME_ENABLED': False,
             }
@@ -2345,12 +2345,7 @@ UPLOADER
 
     * BACKEND
 
-        Default: ``'geonode.rest'``
-
-        The uploader backend to use.  The backend choices are:
-
-         ``'geonode.importer'``
-         ``'geonode.rest'``
+        Default: ``'geonode.importer'``
 
         The importer backend requires the GeoServer importer extension to be enabled.
 

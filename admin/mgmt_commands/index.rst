@@ -407,7 +407,7 @@ This will produce output that looks like the following
                                   [--force-color] [--skip-checks]
                                   [path [path ...]]
 
-    Brings aa directory full of data files into a GeoNode site.
+    Brings a directory full of data files into a GeoNode site.
     Layers are added to the Django database, the GeoServer configuration, and the
     pycsw metadata index.
     In order to perform the import, GeoNode must be up and running.

@@ -1,11 +1,13 @@
-How to Develop
-==============
+API Schema
+==========
 
 .. toctree::
-    :caption: API Schema
     :maxdepth: 3
 
     api/index
+
+How to Develop
+==============
 
 .. toctree::
     :maxdepth: 3

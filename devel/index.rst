@@ -2,6 +2,12 @@ How to Develop
 ==============
 
 .. toctree::
+    :caption: API Schema
+    :maxdepth: 3
+
+    api/index
+
+.. toctree::
     :maxdepth: 3
 
     docker/index

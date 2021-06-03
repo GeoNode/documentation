@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../admin/index.rst:17 ../../admin/index.rst:19
+#: 3d291d1f4d39457e9f049c6925ba3c4f f57b056f6f534a02870756892eaf70f5
+msgid "GeoNode Management Commands"
+msgstr ""
+
+#: ../../admin/index.rst:26 ../../admin/index.rst:28
+#: 55fc2cbb40cd428fbabb71f215aa1ff6 677c1ed0832d4f2689cb02ee9f3c9c77
+msgid "Changing the default Languages"
+msgstr ""
+
+#: ../../admin/index.rst:35 ../../admin/index.rst:37
+#: 3e4a223971d44fcc9f1075012d45f021 a2661ccc25124e4b97b1f98335a58105
+msgid "GeoNode Upgrade from older versions"
+msgstr ""
+
+#: ../../admin/index.rst:44 ../../admin/index.rst:46
+#: 3999493ff699425dbf081e1342613d84 f853aa873f304a689dbf88331503ea62
+msgid "GeoNode Async Signals"
+msgstr ""
+
+#: ../../admin/index.rst:2 88e4d19a38c840068396f434b0773640
+msgid "GeoNode Admins Guide"
+msgstr ""
+
+#: ../../admin/index.rst:4 1ab7d28e27194fd08549d7f6e02e5e17
+msgid ""
+"GeoNode has an administration panel, based on the Django admin, which can"
+" be used to do some database operations. Although most of the operations "
+"can and should be done through the normal GeoNode interface, the admin "
+"panel provides a quick overview and management tool over the database."
+msgstr ""
+
+#: ../../admin/index.rst:8 4dbf0540255f4c3db907f7b7ac1f02c9
+msgid ""
+"The following sections will explain more in depth what functionalities "
+"the admin panel makes you available. It should be highlighted that the "
+"sections not covered in this guide are meant to be managed through "
+"GeoNode UI."
+msgstr ""
+
+#: ../../admin/index.rst:53 1c8ac967f74b4a69a3c3471cb7e94a59
+msgid "GeoNode add a thesaurus"
+msgstr ""
+

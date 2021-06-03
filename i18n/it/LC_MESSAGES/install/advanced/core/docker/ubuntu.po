@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../install/advanced/core/docker/ubuntu.rst:2
+#: 75e53cff1a164f7dae2282d8a0220774
+msgid "1. Install the Docker and docker-compose packages on a Ubuntu host"
+msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:5
+#: 630d2ee26e4745b6bdc260f414dceb91
+msgid "Docker Setup (First time only)"
+msgstr ""
+

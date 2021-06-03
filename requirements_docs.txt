@@ -1,4 +1,5 @@
 sphinx==2.4.3
+sphinx-intl==2.0.1
 sphinx_rtd_theme==0.4.3
 readthedocs-sphinx-ext==1.0.1
 m2r==0.2.1

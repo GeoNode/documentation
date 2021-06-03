@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../intermediate/viewer/index.rst:2 7ea6008b9c73406ca133a348514401a2
+msgid "GXP"
+msgstr ""
+
+#: ../../intermediate/viewer/index.rst:5 12464872d1cd48208a468046a37e63df
+msgid "MapStore 2"
+msgstr ""
+
+#: ../../intermediate/viewer/index.rst:8 840f7e7f9c66413d9b79c5ab6fdf0802
+msgid "Leaflet"
+msgstr ""
+

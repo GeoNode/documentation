@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-03 16:23+0000\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../usage/managing_maps/creating_maps.rst:4
+#: bcfa85add03f44919bf5670b58c9e9d0
+msgid "Creating Maps"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:6
+#: a9a4d9b7682c44afa5df8fdea19f6cde
+msgid ""
+"In this section, we’ll create a *Map* using some uploaded layers, combine "
+"them with some other layers from remote web services, and then share the "
+"resulting map for public viewing."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:8
+#: dd724a6a0ef64a618cb42198b345d342
+msgid "In order to create new maps you can use:"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:10
+#: 2dfd45811b494af69682c5c61295bd99
+msgid ""
+"the :guilabel:`Create Map` link of the *Maps* menu in the navigation bar"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:15
+#: 594d41bfd3c842c788110728657e15af
+msgid "*The Create Map link*"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:17
+#: f33f45212b0e4d718699333da1cec11b
+msgid ""
+"the :guilabel:`Create Map` button in the *Layer Page* (it creates a map "
+"using a specific layer)"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:22
+#: 688dd2d99f9645f7ae9b6c16f3ac8744
+msgid "*The Create Map button*"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:24
+#: ae2827a8ef204ca0821c7d912554bc4d
+msgid "the :guilabel:`Create New Map` button in the *Explore Maps* page"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:29
+#: f06198abb0334e8aae1ae1e4a5e1ec7a
+msgid "*The Create New Map button*"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:31
+#: 7d33d75fedb54f2b98a739cc50166ad6
+msgid ""
+"The new *Map* will open in a *Map Viewer* like the one in the picture below."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:36
+#: 7e5d0c325dc34f3396c27169477745e5
+msgid "*The Map Viewer*"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:68
+#: dae004d0fb8e418cae84cd26d1fbe0de
+msgid ""
+"In the upper left corner the |toc_button| button opens the :ref:`toc` of the"
+" *Map*. It allows to manage all the layers associated with the map and to "
+"add new ones from the *Catalog*."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:69
+#: 4c81e533a5ed42a093d5cf53f53f02a7
+msgid ""
+"The *TOC* component makes possible to manage layers overlap on the map by "
+"shifting their relative positions in the list (drag and drop them up or down"
+" in the list)."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:70
+#: ff0a80d33c664cb88cd4a22bf8372636
+msgid ""
+"It also allows to hide/show layers ( |show_button| and |hide_button| ), to "
+"zoom to layers extents ( |zoom_to_layer_extent_button| ) and to manage their"
+" properties ( |layer_settings_button| )."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:71
+#: 1824146f07664491bdc65de15b879b8d
+msgid ""
+"Once the map layers have been settled it is possible to save the *Map* by "
+"clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:76
+#: d9feb70e7de446ea8668e30bd33889fe
+msgid "*Creating new Maps*"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:78
+#: 22666d96d1cc4a37b187dcdbd2db7081
+msgid ""
+"If you followed the steps above, you have just created your first *Map*. Now"
+" you should see it in the *Explore Maps* page, see :ref:`map-info` for "
+"further details."
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:81
+#: c506bdd56130446aa4d9567ac42a67d6
+msgid ""
+"We will take a closer look at the *Map Viewer* tools in the :ref:`exploring-"
+"maps` section."
+msgstr ""

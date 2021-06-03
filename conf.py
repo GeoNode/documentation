@@ -94,7 +94,7 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-locale_dirs = ['i18n/']
+locale_dirs = ['locale/']
 gettext_uuid = True
 gettext_compact = False
 

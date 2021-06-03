@@ -1,0 +1,325 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-03 16:22+0000\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../usage/managing_layers/layer_info.rst:4
+#: d34b001de8ed4c68b6e4745fdf2d0c98
+msgid "Layer Information"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:6
+#: a5dc1986afcf4c749224eddbaf8097ba
+msgid ""
+"In this section you will learn more about layers. In the :ref:`finding-"
+"layers` section we explain how to find layers, now we want to go more in "
+"depth showing you how to explore detailed information about that."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:7
+#: 521aa70742bd4e0bb1cee1173b13513f
+msgid ""
+"From the layers list page, click on the layer you are interested in. The "
+"*Layer Page* will open."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:12
+#: 81fbc34ec9794349834d90b850e18723
+msgid "*Layer Information*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:14
+#: 1375347c6b0e49a9b64b4f76fe530dbf
+msgid ""
+"As shown in the picture above, the *Layer Page* is divided into three main "
+"sections:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:16
+#: d90880674282419eb68a36a428fe1325
+msgid "the *Layer Preview* section, under the title"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:17
+#: ac9729984e124e5583122d4a4e7a223f
+msgid "the *Tabs* section, under the layer preview"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:18
+#: 2644e1c6ed8e4b66b836200ca94cda12
+msgid "the *Tools* section, on the right side of the page"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:21
+#: b7e252a5effe4bca995a6db9e8c599c5
+msgid "Layer Preview"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:23
+#: 60f36fa09b5d4c36996603c3d80c56e4
+msgid ""
+"The *Layer Preview* shows the layer in a map with very basic "
+"functionalities:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:25
+#: ea2d04b759ff43c2bcb60b19581e6f58
+msgid "the *Base Map Switcher* that allows you to change the base map;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:26
+#: 70aeed53172f4f02890ec6f33167b113
+msgid "the *Zoom in/out* tool to enlarge and decrease the view;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:27
+#: cc3fc6e9a0cf47d4ad53c6d3a4b4e3d3
+msgid "the *Zoom to max extent* tool for the zoom to fit the layer size;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:28
+#: 78840efced2b44e7a6b65d51dffdaf63
+msgid ""
+"the *Query Objects* tool to retrieve information about the map objects by "
+"clicking on the map;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:29
+#: c5968b5403684c02adafb392ea4693e5
+msgid "the *Print* tool to print the preview."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:34
+#: 7f8bcdf20c9843a399fe0fb5df3f6881
+msgid "*Layer Preview*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:36
+#: 3e82ee95f36242909fe8f4c186c7519c
+msgid ""
+"The GeoNode map viewer is `MapStore <https://mapstore2.geo-"
+"solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation "
+"<https://mapstore2.readthedocs.io/en/latest/>`_ to learn more."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:39
+#: c99fbe31aeec438fa93447c6d21a395d
+msgid "Tabs Sections"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:41
+#: 6e1d8a491e3142ada0e8d9940865b658
+msgid ""
+"The *Layer Page* shows you some tabs sections containing different "
+"information about the layer:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:43
+#: dec96ab6e30c45b5acf0a428aeba5174
+msgid ""
+"The tab *Info* is active by default. This tab section shows some layer "
+"metadata such as its title, the abstract, date of publication etc. The "
+"metadata also indicates the layer owner, what are the topic categories the "
+"layer belongs to and which regions are affected."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:48
+#: 95cfc6dd028b401a9f4848990b78c60e
+msgid "*Layer Info tab*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:50
+#: f10bd136b8884bbe8bac2b5d47244d07
+msgid ""
+"The *Attributes* tab shows the data structure behind the layer. All the "
+"attributes are listed and for each of them some statistics (e.g. the range "
+"of values) are estimated (if possible)."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:55
+#: c1e81c59c067446e83c0802aeb69fcaa
+msgid "*Layer Attributes tab*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:57
+#: 84313428585d4e0cb95b42605b96fe26
+msgid ""
+"The *Share* tab provides the links for the layer to share through social "
+"media or email."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:62
+#: dd41960b97864ebbb1db59b0fcfe7626
+msgid "*Layer Sharing*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:64
+#: 5a2c412a6fa44cc4b179418a36561674
+msgid "You can *Rate* the layer through the *Rating system*."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:69
+#: da867afe84904a31abfd3582b228de9e
+msgid "*Rate the Layer*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:71
+#: b48fbaaea9c84d138df75090e0fb6da1
+msgid ""
+"In the *Comments* tab section you can post your comment. Click on "
+":guilabel:`Add Comment`, insert your comment and click :guilabel:`Submit "
+"Comment` to post it."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:76
+#: d90103b14e34413a86aa6612a7227fa6
+msgid "*Layer Comments*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:78
+#: 22c4c6806fab427f85d663384b245c9d
+msgid ""
+"Your comment will be added next to the last already existing comment. If you"
+" want to remove it click on the red :guilabel:`Delete` button."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:80
+#: a15705cb03664c5bb73f6e1463c55dcd
+msgid ""
+"If you want this layer in your *Favorites* (see :ref:`editing-profile`), "
+"open the *Favorite* tab and click on :guilabel:`Add to Favorites`."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:85
+#: 4fa1abdbc24740ed94186bdb12f13e00
+msgid "*Your Favorite Layer*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:88
+#: fc30a471c3bb4ef89cff9132de0c7c08
+msgid "Layer Tools"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:90
+#: 3f77f6f466084be994eb08be2ae3bbaa
+msgid ""
+"In the right side of the *Layer Page* there are some buttons and information"
+" that can help you to manage your layer. This paragraph will cover only "
+"those tools which show layers information. The *Editing Tools* will be "
+"explored in the :ref:`layer-editing` section."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:92
+#: 7d8eafcde6464780b7ef2180dab041a8
+msgid ""
+"through the :guilabel:`Download Layer` button you can download your layer "
+"with some options, see :ref:`layer-download`;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:93
+#: de14b3d4784642ababaa1bb05bf1e78b
+msgid ""
+"the :guilabel:`Metadata Detail` button to see the layer metadata, see :ref"
+":`layer-metadata` to read more;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:94
+#: e166152759d8415a8e28d972ccac0fd9
+msgid ""
+"the :guilabel:`Editing Tools` button allows you to access to many editing "
+"tools. Those functionalities will be explained in the :ref:`layer-editing` "
+"section;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:95
+#: 5d837598d56948cdaed80d0af059ffaa
+msgid ""
+"the :guilabel:`View Layer` button opens the layer loaded in a map, see the "
+":ref:`map-info` for more details;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:96
+#: 24e13fcc8732469696bfcdb18684bb35
+msgid ""
+"the :guilabel:`Download Metadata` button allows you to download the layer "
+"metadata in various formats;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:97
+#: 6042cbed4b134079b68b7de0930110f1
+msgid ""
+"the *Legend* shows what the symbols and styles on the map are referring to;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:98
+#: 0268483e056d46dcaeb6f753916f3819
+msgid ""
+"in the *Map using this layer* section all the map which uses the layer are "
+"listed;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:99
+#: e41c57a64f8a4b93afa2a09fbf418257
+msgid ""
+"in the *Create a map using this layer*, the :guilabel:`Create a Map` button "
+"allows you to create a map from scratch using the layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:100
+#: 0894f0d9bfd74698b90d36af9bd10fc0
+msgid ""
+"the section *Add the layer to an existing map* shows you a dropdown menu in "
+"which all the maps the user can view are listed. The button :guilabel:`Add "
+"to Map` allows you to add the layer to the map you have selected in the "
+"previous menu;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:101
+#: f95856a574fd40eeacb8e8deaf27ed46
+msgid ""
+"the *Styles* section shows all the styles associated with the layer. Click "
+"on the checkbox corresponding to one of the styles listed to apply it the "
+"preview;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:106
+#: 8199c7a1a5e047379004a486e9f7d7b0
+msgid "*Change the Layer Style in preview*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:108
+#: 2d165b1506ec464097f0d5dda6f7c866
+msgid ""
+"in the *Refresh Attributes and Statistics of this layer* section the "
+":guilabel:`Refresh Attributes and Statistics` allows GeoNode to refresh the "
+"list of available Layer Attributes. If the option 'WPS_ENABLED' has been "
+"also set on the backend, it will recalculate their statistics too;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:109
+#: 4ab54168b18447179e34e13eb76bfc1b
+msgid ""
+"in the *Clear the Server Cache of this layer* section the :guilabel:`Empty "
+"Tiled-Layer Cache` allows to wipe the tile-cache of this layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_info.rst:110
+#: 28f0af7b60fd43339ee09d2727f542e0
+msgid ""
+"the *About* section shows you the layer *Owner*, the *Contact* user and the "
+"*Metadata Author*."
+msgstr ""

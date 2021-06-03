@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-03 16:23+0000\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../usage/managing_layers/uploading_layers.rst:4
+#: 22ad8fbd690b4ec380fd1bdeedfd73c8
+msgid "Layers Uploading"
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:6
+#: 65e8ea895370431b9606fd585f309b5e
+msgid ""
+"The most important resource type in GeoNode is the *Layer*. A layer "
+"represents spatial information so it can be displayed inside a map."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:7
+#: 57af5f5105fc4750bc1d1068e0dd65cf
+msgid ""
+"To better understand what we are talking about lets upload your first layer."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:9
+#: af7552dbbf8f403f80ddd3f7a73b770f
+msgid ""
+"The *Layer Uploading* page can be reached from the :guilabel:`Upload Layer` "
+"link of the :guilabel:`Data` menu in the navigation bar."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:14
+#: 2a2be25f6f2c4444a58b557699d1b374
+msgid "*Link for Layers Uploading*"
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:16
+#: 4c998cb26ea34b348d1be07ad3c292a6
+msgid ""
+"There is also an :guilabel:`Upload Layers` button in the *Layers Page*."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:21
+#: dcb2c1bd659a48968308b1b6a691d4f8
+msgid "*Button for Layers Uploading*"
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:23
+#: 4d4fdcd0cd6a4b8dbdc6904a0d6ee66c
+msgid "The *Layers Uploading* page looks like the one in the picture below."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:28
+#: bc26a9d0533248b49230bd5ed72f9dca
+msgid "*The Layers Uploading page*"
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:30
+#: 8ad952d6d2614002bc89d77559ad0f78
+msgid ""
+"Through the :guilabel:`Choose Files` button you can select files from your "
+"disk, make sure they are valid raster or vector spatial data. You can also "
+"change the default *Permissions* settings (see :ref:`layer-permissions` for "
+"further information on how to set permissions)."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:31
+#: a86dec41e9074a279d989295df724fcd
+msgid ""
+"Select the *charset*, then click on :guilabel:`Upload files` to start the "
+"process or click :guilabel:`Clear` to remove all the loaded files form the "
+"page."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:36
+#: 676b9c4888f74bca9f8ba12e608208b2
+msgid "*Shapefile Uploading*"
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:38
+#: b30d04cf09bf4f04998505a716798dba
+msgid ""
+"In this example the ``roads`` ESRI Shapefile, with all its mandatory files "
+"(`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen. A progress bar shows "
+"the operation made during the layer upload and alerts you when the process "
+"is over. When the process ends click the :guilabel:`Layer Info` to check the"
+" layer has been correctly uploaded."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:42
+#: a05f102df7594c019954509d59c4cf4b
+msgid ""
+"There are lot of free spatial dataset available in the Internet. In this "
+"example, an extract of the Berlin city center roads map from the `BBBike "
+"extracts OpenStreetMap <https://extract.bbbike.org>`_ dataset has been used."
+msgstr ""
+
+#: ../../usage/managing_layers/uploading_layers.rst:44
+#: c313c3ae1da2461aa463113467234cae
+msgid ""
+"In the next paragraphs you will learn how to create a layer from scratch, "
+"how to set permissions, how to explore the layer properties and how to edit "
+"them."
+msgstr ""

@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-03 16:19+0000\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:2
+#: bde3c822f075422994942f09cf9617ae
+msgid "Connecting GeoNode Docker to an External Database"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:5
+#: 9305c98a4bab4639b5f78a52d5e8a8fe
+msgid "1. Make sure docker components are down"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:12
+#: fdcf4e59c1744788a70afafaa52853eb
+msgid "2. Disable GeoNode docker database and related commands"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:14
+#: 2fe371115d304f8591c4ca1198408c89
+msgid "``@docker-compose.yml`` comment out the ``db`` section"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:33
+#: 89edbf4bb7284fc58ebfd67a97f0e61d
+msgid "``@docker-compose.yml`` comment out the related ``volumes`` section"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:42
+#: a2e946792bb34b2ea627cc6358382912
+msgid ""
+"``@entrypoint.sh`` comment out the related ``\"waitfordbs task done\"`` "
+"section"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:45
+#: 8b6d6edcf65943fd87ecf17646c51bb5
+msgid ""
+"Note 1: **It is expected to have the external database up running before "
+"running, So no need to wait for the databases**"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:47
+#: 385b2ee55e474dbb9d1f77a1cb13b5a6
+msgid ""
+"Note 2: **Please check how the script for ``wait for databases`` could be "
+"improved at the end on the file**"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:55
+#: 085cfc29eae644aa9e28da12b0df92ac
+msgid "Rebuild django docker service"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:62
+#: 4d0b71d80d3542d2968d420e00cfa901
+msgid ""
+"3. As for the external PostgreSQL database it is expected to have the "
+"following parameters:"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:64
+#: ddab4a5fffdc4c4eac704573c326609e
+msgid "database user with password for connection"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:65
+#: 6d7c5284f4b742fea4956c465e9d5248
+msgid "database name for geonode django tables"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:66
+#: 23df874a964c434d8eed747f542a0615
+msgid "database name for geonode data tables"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:67
+#: d2ac47016755431f9197673dc55df703
+msgid "exposed database IP address"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:68
+#: 971a4de77e684e42b88b4542515bd316
+msgid "exposed database port"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:69
+#: 97a2029976264bb09cb126cd2ca1655b
+msgid "Docker containers network IP address"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:72
+#: cd3bcc1eba814f13978a7df749c39581
+msgid "4. Prepare The External PostgreSQL Database:"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:74
+#: ddde135e6ce74884ab1bf1d086dba1c2
+msgid "Skip this part if it is already prepared"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:76
+#: 9dcdecb386464e4ba61faca18ed1f6a2
+msgid "Create database user ``<username>`` with ``<your_strong_password>``"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:82
+#: e0c77568f39e4475a647faeb79b4ab39
+msgid "Create databases for ``geonode django tables`` with name ``geonode``"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:88
+#: 9c5863026794413682d2208969a43dbb
+msgid ""
+"Create databases for ``geonode django tables`` with name ``geonode_data``"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:95
+#: abe4f6cdbbb44e32a113d5ee3c860930
+msgid ""
+"Use ``PostGIS`` extension for the created databases > Replace ``<username>``"
+" with your username"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:110
+#: 55507113c19044eb995bf795202fc5a9
+msgid ""
+"Scenario 1: PostgreSQL service with docker service on the same host machine"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:113
+#: c62e725c04154aff8ac1f326f0c3e891
+msgid "Get the geonode docker network IP address:"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:121
+#: 440aa06b572e4fa38dd6efa0f51dca9b
+msgid "Scenario 2: PostgreSQL is running on separate host machine:"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:123
+#: 96b05777be8f4789a29244e96464e608
+msgid "Get the host machine IP address:"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:129
+#: 03751a16166c44e9a4bc6b14afbc710a
+msgid ""
+"Now, Having the IP address, Add two rules for both databases at "
+"``/etc/postgres/<postgres_version_number>/pg_hba.conf``"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:141
+#: b40dca7f29b2409396421fe2b3fe9928
+msgid "Restart postgresql database service"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:147
+#: 2e29b941fad94d57a525a07b5c8fd550
+msgid "Allow GeoNode docker to connect to the external database:"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:149
+#: ee39adfc1ab34b30872d059395e328f7
+msgid "At geonode project dir, edit ``.env`` file"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:150
+#: 941a5de2c75442569b4ac53f44d66706
+msgid "Replace with your ``username``, ``password``, ``ip_address``, ``port``"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:152
+#: d66cd2706655443fb23c850991f6de6a
+msgid "Replace database names if changed than ``geonode & geonode_data``"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:165
+#: 40618d68d2f34c28bf73a418c90272af
+msgid "Start the docker containers"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:167
+#: 35519f64f8cc425d8234e685981914c6
+msgid "Expected to see the migrations running again"
+msgstr ""
+
+#: ../../install/advanced/core/docker/connect_to_external_postgres_db.rst:173
+#: 10c615e1345947cd896d1eab63ac57de
+msgid "**Done!**"
+msgstr ""

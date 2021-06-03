@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-03 16:23+0000\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:2
+#: 1e4709d8e9e2432fbe2a316c77058612
+msgid "Creating a Layer from scratch"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:4
+#: a0235fdc15ba43f8b4383973b0838ff2
+msgid ""
+"An interesting tool that GeoNode makes available to you is the *Create "
+"Layer*. It allows you to create a new vector layer from scratch. The *Layer "
+"Creation Form* is reachable through the :guilabel:`Create Layer` link shown "
+"in the picture below."
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:9
+#: 18494102ecf945aab258ac09a148dae2
+msgid "*Create layer link*"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:11
+#: ca332c2b83e142409b0924421adc1136
+msgid ""
+"In order to create the new Layer you have to fill out the required fields:"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:13
+#: 0e1bf1308cf34d3abe72bfefc0aea821
+msgid "*Name*"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:14
+#: 16fa30e978a046eb9bccbf2a90c408b1
+msgid "*Title*"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:15
+#: 97a06aaeb79545cbb9970904b2ef7244
+msgid "*Geometry type*"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:20
+#: c9171ee687ce44c0b330507ccd51ff0b
+msgid "*Geometry types*"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:22
+#: e90195a2096a46ff892592a44a6b0304
+msgid ""
+"Usually the layers features should have some *Attributes* that enrich the "
+"amount of information associated with each of them. Through the "
+":guilabel:`Add Attribute` button you can add new attributes."
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:27
+#: 360f3bf5ebdd40138247e3fc72b82f6b
+msgid "*New Layer creation from scratch*"
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:29
+#: df0be4c65c26479da27f370250af327b
+msgid ""
+"At this time you can also change the default *Permissions* settings, see "
+":ref:`layer-permissions` to learn how."
+msgstr ""
+
+#: ../../usage/managing_layers/new_layer_from_scratch.rst:31
+#: e654bb5a7889481cba7da3d81da45c4c
+msgid ""
+"Once the form has been filled out, click on :guilabel:`Create`. You will be "
+"redirected to the *Layer Page* (see :ref:`layer-info`). Now your Layer is "
+"created but is still empty, no features have been added yet. See the :ref"
+":`layer-editing` section to learn how to add new features."
+msgstr ""

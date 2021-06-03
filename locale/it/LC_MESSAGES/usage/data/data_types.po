@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-03 16:21+0000\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../usage/data/data_types.rst:4 a81341ecac7447ddb24e6a5bca92a65e
+msgid "Data Types"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:6 836f8683effd4f8c86e124bfa6a9d6c2
+msgid ""
+"GeoNode welcome page shows a variety of information about the current "
+"GeoNode instance."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:7 0e1938fea91243e4b9cee35a2d7b7810
+msgid ""
+"You can explore the existing data using many search tools and filters (see "
+":ref:`finding-data`) or through the links of the navigation bar at the top "
+"of the page."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:8 b9da50f1b04a42129990dd314491a694
+msgid "There are three main types of resources that GeoNode can manage:"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:10 ../../usage/data/data_types.rst:31
+#: 7e0e51980c074705b81528e2beee1bb6 734802d5c0234839b3665c2358a780f2
+msgid "Documents"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:11 ../../usage/data/data_types.rst:39
+#: c40e110438474af6907eb7c218355f2b e51a8172005e44489c600da7a2b74d42
+msgid "Layers"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:12 ../../usage/data/data_types.rst:50
+#: 3f319239a0cd4e0287e8822fa28f5f8c b8ca844fdcdb4edba476b873b8ff672d
+msgid "Maps"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:14 e72614733b9a42918f3a3ba0ca7360bd
+msgid ""
+"Documents and layers can be accessed from the :guilabel:`Data` menu of the "
+"navigation bar."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:19 e74cb89af9ee4e1caca2df25a8d847a9
+msgid "*Data menu*"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:21 1b630b234f2644048be81209115a8b08
+msgid "The :guilabel:`Maps` menu let you to manage maps."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:26 e04392c3ba16481687009e174bb54d7a
+msgid "*Maps menu*"
+msgstr ""
+
+#: ../../usage/data/data_types.rst:33 78394bdfa82e489f8d48bab1406904da
+msgid ""
+"GeoNode allows to publish tabular and text data and to manage metadata and "
+"associated documents."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:34 b7b7cf18cab34fe5a05d37dda1590e99
+msgid ""
+"Documents can be uploaded directly from your disk (see :ref:`uploading-"
+"documents` for further information)."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:35 85da0bd6de2246f6b9f9b0606c99f434
+msgid ""
+"The following documents types are allowed: `.doc, .docx, .gif, .jpg, .jpeg, "
+".ods, .odt, .odp, .pdf, .png, .ppt, .pptx, .rar, .sld, .tif, .tiff, .txt, "
+".xls, .xlsx, .xml, .zip, .gz, .qml`."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:36 305b185570ab48378fd8e4a46b6b0575
+msgid ""
+"Through the document detailed page is possible to view, download and manage "
+"a document."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:41 a6a9c5f14b4e427e8e8c91854d30941a
+msgid "Layers are a primary component of GeoNode."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:42 a01f0a458fc0403fa517c18f8532c23b
+msgid ""
+"Layers are publishable resources representing a raster or vector spatial "
+"data source. Layers also can be associated with metadata, ratings, and "
+"comments."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:44 830e1f2efd9d48e1bcfb163cec4d5bd3
+msgid ""
+"By clicking the Layers link you will get a list of all published layers. If "
+"logged in as an administrator, you will also see the unpublished layers in "
+"the same list."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:45 b11928a1af924d4caddda829dd678211
+msgid ""
+"GeoNode allows the user to upload vector and raster data in their original "
+"projections using a web form."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:47 d24fc9fdc11449afa61e69b7e05705bd
+msgid ""
+"Vector data can be uploaded in many different formats (ESRI Shapefile, KML "
+"and so on...). Satellite imagery and other kinds of raster data can be "
+"uploaded as GeoTIFFs."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:52 db4921f44da04710b88fa036090ef15a
+msgid "Maps are a primary component of GeoNode."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:53 cf05429f1bcd4d838a0456a931379311
+msgid ""
+"Maps are comprised of various layers and their styles. Layers can be both "
+"local layers in GeoNode as well as remote layers either served from other "
+"WMS servers or by web service layers such as Google or MapQuest."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:55 c16099fe2fe145158b1bcfa9512fa8b7
+msgid ""
+"GeoNode maps also contain other information such as map zoom and extent, "
+"layer ordering, and style."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:57 bf0018679fac4329b13217adfb7c9bde
+msgid ""
+"You can create a map based on uploaded layers, combine them with some "
+"existing layers and a remote web service layer, share the resulting map for "
+"public viewing. Once the data has been uploaded, GeoNode lets the user "
+"search for it geographically or via keywords and create maps. All the layers"
+" are automatically reprojected to web mercator for maps display, making it "
+"possible to use popular base maps such as `OpenStreetMap "
+"<https://www.openstreetmap.org>`_."
+msgstr ""

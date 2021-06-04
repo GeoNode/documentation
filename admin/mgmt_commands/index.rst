@@ -377,8 +377,8 @@ GeoNode from GeoServer, from the command-line or programmatically.
 Management Command ``importlayers``
 -----------------------------------
 
-The ``geonode.layers`` Django app includes 2 management commands that you can use to
-load or configure data in your GeoNode.
+The ``geonode.geoserver`` Django app includes 2 management commands that you can use to
+load data in your GeoNode.
 
 Both of them can be invoked by using the ``manage.py`` script.
 
@@ -401,17 +401,16 @@ This will produce output that looks like the following
 
 .. code-block:: shell
 
-    usage: manage.py importlayers [-h] [--version] [-v {0,1,2,3}]
-                                [--settings SETTINGS] [--pythonpath PYTHONPATH]
-                                [--traceback] [--no-color] [-u USER] [-i] [-o]
-                                [-k KEYWORDS] [-l LICENSE] [-c CATEGORY]
-                                [-r REGIONS] [-n LAYERNAME] [-t TITLE]
-                                [-a ABSTRACT] [-d DATE] [-p] [-m] [-C CHARSET]
-                                [path [path ...]]
+    usage: manage.py importlayers [-h] [-hh HOST] [-u USERNAME] [-p PASSWORD] 
+                                  [--version] [-v {0,1,2,3}] [--settings SETTINGS] 
+                                  [--pythonpath PYTHONPATH] [--traceback] [--no-color]
+                                  [--force-color] [--skip-checks]
+                                  [path [path ...]]
 
-    Brings a data file or a directory full of data files into a GeoNode site.
+    Brings a directory full of data files into a GeoNode site.
     Layers are added to the Django database, the GeoServer configuration, and the
     pycsw metadata index.
+    In order to perform the import, GeoNode must be up and running.
 
     positional arguments:
     path                  path [path...]
@@ -429,154 +428,72 @@ This will produce output that looks like the following
     --pythonpath PYTHONPATH
                             A directory to add to the Python path, e.g.
                             "/home/djangoprojects/myproject".
-    --traceback           Raise on CommandError exceptions
-    --no-color            Don't colorize the command output.
-    -u USER, --user USER  Name of the user account which should own the imported
-                            layers
-    -i, --ignore-errors   Stop after any errors are encountered.
-    -o, --overwrite       Overwrite existing layers if discovered (defaults
-                            False)
-    -k KEYWORDS, --keywords KEYWORDS
-                            The default keywords, separated by comma, for the
-                            imported layer(s). Will be the same for all imported
-                            layers if multiple imports are done in one command
-    -l LICENSE, --license LICENSE
-                            The license for the imported layer(s). Will be the
-                            same for all imported layers if multiple imports are
-                            done in one command
-    -c CATEGORY, --category CATEGORY
-                            The category for the imported layer(s). Will be the
-                            same for all imported layers if multiple imports are
-                            done in one command
-    -r REGIONS, --regions REGIONS
-                            The default regions, separated by comma, for the
-                            imported layer(s). Will be the same for all imported
-                            layers if multiple imports are done in one command
-    -n LAYERNAME, --name LAYERNAME
-                            The name for the imported layer(s). Can not be used
-                            with multiple imports
-    -t TITLE, --title TITLE
-                            The title for the imported layer(s). Will be the same
-                            for all imported layers if multiple imports are done
-                            in one command
-    -a ABSTRACT, --abstract ABSTRACT
-                            The abstract for the imported layer(s). Will be the
-                            same for all imported layers if multiple imports are
-                            done in one command
-    -d DATE, --date DATE  The date and time for the imported layer(s). Will be
-                            the same for all imported layers if multiple imports
-                            are done in one command. Use quotes to specify both
-                            the date and time in the format 'YYYY-MM-DD HH:MM:SS'.
-    -p, --private         Make layer viewable only to owner
-    -m, --metadata_uploaded_preserve
-                            Force metadata XML to be preserved
-    -C CHARSET, --charset CHARSET
-                            Specify the charset of the data
+    -hh HOST, --host HOST
+                            Geonode host url
+    -u USERNAME, --username USERNAME
+                            Geonode username
+    -p PASSWORD, --password PASSWORD
+                            Geonode password
 
 While the description of most of the options should be self explanatory, its worth
 reviewing some of the key options a bit more in details.
 
-- The :guilabel:`-i` option will force the command to stop when it first encounters an error. Without this option specified, the process will skip over errors that have layers and continue loading the other layers.
-- The :guilabel:`-o` option specifies that layers with the same name as the base name will be loaded and overwrite the existing layer.
-- The :guilabel:`-u` option specifies which will be the user that owns the imported layers. The same user will be the point of contact and the metadata author as well for that layer
-- The :guilabel:`-k` option is used to add keywords for all of the layers imported.
-- The :guilabel:`-C` option specifies the character encoding of the data.
+- The :guilabel:`-hh` Identifies the GeoNode server where we want to upload our layers. The default value is :guilabel:`http://localhost:8000`.
+- The :guilabel:`-u` Identifies the username for the login. The default value is :guilabel:`admin`.
+- The :guilabel:`-p` Identifies the password for the login. The default value is :guilabel:`admin`.
 
 The import layers management command is invoked by specifying options as described
-above and specifying the path to a single layer file or to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing layers that ship with geonode.
+above and specifying the path to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing layers that ship with geonode.
 You can replace this path with the directory to your own shapefiles.
 
 .. code-block:: shell
+    First let's run the GeoNode server:
+    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py runserver
 
-    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py importlayers -v 3 /var/lib/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/
+    Then let's import the files:
+    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py importlayers /home/user/.virtualenvs/geonode/lib/python3.8/site-packages/gisdata/data/good/vector/
 
 This command will produce the following output to your terminal
 
 .. code-block:: shell
 
-    Verifying that GeoNode is running ...
-    Found 8 potential layers.
-    No handlers could be found for logger "pycsw"
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_administrative.shp' (1/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_coastline.shp' (2/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_highway.shp' (3/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_location.shp' (4/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_natural.shp' (5/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_poi.shp' (6/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_water.shp' (7/8)
-    [created] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/single_point.shp' (8/8)
+    san_andres_y_providencia_poi.shp: 201
+    san_andres_y_providencia_location.shp: 201
+    san_andres_y_providencia_administrative.shp: 201
+    san_andres_y_providencia_coastline.shp: 201
+    san_andres_y_providencia_highway.shp: 201
+    single_point.shp: 201
+    san_andres_y_providencia_water.shp: 201
+    san_andres_y_providencia_natural.shp: 201
 
-    Detailed report of failures:
+    1.7456605294117646 seconds per layer
 
-    Finished processing 8 layers in 30.0 seconds.
+    Output data: {
+        "success": [
+            "san_andres_y_providencia_poi.shp",
+            "san_andres_y_providencia_location.shp",
+            "san_andres_y_providencia_administrative.shp",
+            "san_andres_y_providencia_coastline.shp",
+            "san_andres_y_providencia_highway.shp",
+            "single_point.shp",
+            "san_andres_y_providencia_water.shp",
+            "san_andres_y_providencia_natural.shp"
+        ],
+        "errors": []
+    }
 
-    8 Created layers
-    0 Updated layers
-    0 Skipped layers
-    0 Failed layers
-    3.750000 seconds per layer
-
-If you encounter errors while running this command, you can use the :guilabel:`-v`
-option to increase the verbosity of the output so you can debug the problem.
-
-The verbosity level can be set from :guilabel:`0-3` with :guilabel:`0` being the default.
-
-An example of what the output looks like when an error is encountered and the verbosity
-is set to :guilabel:`3` is shown below:
+As output the command will print:
 
 .. code-block:: shell
+    layer_name: status code for each Layer
+    
+    upload_time spent of each layer
 
-    Verifying that GeoNode is running ...
-    Found 8 potential layers.
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_administrative.shp' (1/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_coastline.shp' (2/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_highway.shp' (3/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_location.shp' (4/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_natural.shp' (5/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_poi.shp' (6/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_water.shp' (7/8)
-    [failed] Layer for '/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/single_point.shp' (8/8)
+    A json with the representation of the layers uploaded or with some errors.
 
-    Detailed report of failures:
+The status code, is the response coming from GeoNode. For example 201 means that the layer has been correctly uploaded
 
-    /Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/gisdata/data/good/vector/san_andres_y_providencia_administrative.shp
-    ================
-    Traceback (most recent call last):
-      File "/Users/geosolutions/projects/geonode/geonode/layers/utils.py", line 682, in upload
-        keywords=keywords,
-      File "/Users/geosolutions/projects/geonode/geonode/layers/utils.py", line 602, in file_upload
-        keywords=keywords, title=title)
-      File "/Users/geosolutions/projects/geonode/geonode/layers/utils.py", line 305, in save
-        store = cat.get_store(name)
-      File "/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/geoserver/catalog.py", line 176, in get_store
-        for ws in self.get_workspaces():
-      File "/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/geoserver/catalog.py", line 489, in get_workspaces
-        description = self.get_xml("%s/workspaces.xml" % self.service_url)
-      File "/Users/geosolutions/.venvs/geonode/lib/python2.7/site-packages/geoserver/catalog.py", line 136, in get_xml
-        response, content = self.http.request(rest_url)
-      File "/Library/Python/2.7/site-packages/httplib2/__init__.py", line 1445, in request
-        (response, content) = self._request(conn, authority, uri, request_uri, method, body, headers, redirections, cachekey)
-      File "/Library/Python/2.7/site-packages/httplib2/__init__.py", line 1197, in _request
-        (response, content) = self._conn_request(conn, request_uri, method, body, headers)
-      File "/Library/Python/2.7/site-packages/httplib2/__init__.py", line 1133, in _conn_request
-        conn.connect()
-      File "/Library/Python/2.7/site-packages/httplib2/__init__.py", line 799, in connect
-        raise socket.error, msg
-    error: [Errno 61] Connection refused
-
-.. note:: This last section of output will be repeated for all layers, and only the first one is show above.
-
-This error indicates that GeoNode was unable to connect to GeoServer to load the layers.
-To solve this, you should make sure GeoServer is running and re-run the command.
-
-If you encounter errors with this command that you cannot solve,
-you should bring them up on the geonode users mailing list.
-
-You should now have the knowledge necessary to import layers into your GeoNode project
-from a directory on the servers filesystem and can use this to load many layers into
-your GeoNode at once.
-
-.. note:: If you do not use the :guilabel:`-u` command option, the ownership of the imported layers will be assigned to the primary superuser in your system. You can use GeoNodes Django Admin interface to modify this after the fact if you want them to be owned by another user.
+If you encounter errors while running this command, please check the GeoNode logs for more information.
 
 .. _updatelayers:
 

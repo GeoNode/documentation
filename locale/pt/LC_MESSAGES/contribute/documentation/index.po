@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../contribute/documentation/index.rst:5 61d9564a5f5b4e05aabd65a4a0e0a7c6
+msgid "How to contribute to GeoNode's Documentation"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:8 60dd69496ebf4c048d2e7b3f60625809
+msgid ""
+"If you feel like adding or changing something in the GeoNode "
+"documentation you are very welcome to do so. The documentation always "
+"needs improvement as the development of the software is going quite fast."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:10 9631dde0ee274b8293f004b431abb31e
+msgid "To contribute to the GeoNode documentation you should:"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:12 3762102beb5e4f398b3725122616061a
+msgid "Read the GeoServer Style Guidelines"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:13
+#: ../../contribute/documentation/index.rst:25 32c4549a36b441ef9ba06dfc59691259
+#: 6c521223f8914c49b4e583f570ffa8e0
+msgid "Create an account on GitHub"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:14 0b47227d990f43239db05fd2ce80edf3
+msgid "Fork the GeoNode repository"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:15 a73cb5c8faa1472287fcf3aa612d52c2
+msgid "Edit the files"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:16 ca237ef712cb4510a6d837e5d12c575a
+msgid "Submit pull requests"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:18 eb048f96cfc74bd7b9eb9099c974dde5
+msgid ""
+"All these things can generally be done within your browser, you won't "
+"need to download anything. However, if you need to add images or planning"
+" bigger changes working locally is recommended."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:21 13b4cd5ec9454971b37febd9e06e627d
+msgid "Style Guidelines"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:22 eda844c58e044711838f7e7369e69e8d
+msgid ""
+"While we do not have strict rules for writing docs, we encourage you to "
+"read GeoServer Style Guidelines before you start writing: "
+"https://docs.geoserver.org/latest/en/docguide/style.html"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:27 9527d10f82784d5bb6264c425aaa4ca7
+msgid ""
+"The first step is to create an account on GitHub. Just go to `Github "
+"<https://github.com>`_, find a username that suits you, enter your email "
+"and a password and hit *Sign up for GitHub*. After you've signed in, "
+"visit the geonode_documentation repository "
+"https://github.com/geonode/documentation."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:31 7f87e7d9d781471daf62477a30aaacd1
+msgid "Fork the documentation repository"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:33 1f6528f7af7b4cf09b6c2f317f0a01c3
+msgid ""
+"In order to make changes, you first have to fork the repository. On the "
+"top right of the website, you will find a button named \"fork\" to do so."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:35 8fc762ae68a6498f85d0a6d6148acf1e
+msgid ""
+"If you want to read more about forking please visit the official GitHub "
+"docs: https://help.github.com/articles/fork-a-repo."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:39 68b55e156e3e4464887be360c2456af0
+msgid "Edit files on Github"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:41 16338a59d13c485ea9c2c3eab4e88342
+msgid ""
+"For smaller changes you can use the GitHub website. Navigate your Browser"
+" to your forked repository. To make changes to files, navigate to the "
+"file in question and hit the *edit* button on the right top."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:44 87f8a24192bc49c4bca1e5853b4d88a3
+msgid ""
+"The documentation is written in *reStructeredText*, a lightweight markup "
+"language. To learn how to use it see: "
+"https://docutils.sourceforge.net/docs/user/rst/quickref.html."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:46 4747e4ad26284b4bb7610741d7a81432
+msgid ""
+"By hitting the *preview* button you will be able to see how your changes "
+"will look like. To save your changes, click on *Commit Changes* at the "
+"bottom of the site."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:48 ac3fc2ed561c42c2bc7cbb4b0362b3a5
+msgid ""
+"To ask the documentation maintainers to integrate your changes the "
+"creation of a *Pull Request* is needed. Therefore use the *new pull "
+"request* button to start the process. Find more about Pull requests at "
+"the official GitHub documentation: https://help.github.com/en/github"
+"/collaborating-with-issues-and-pull-requests/about-pull-requests ."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:53 fff9a5de75f94d2280242f4754fc6b37
+msgid "Edit files locally"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:55 fa37ffc7aed84f528be7840e3fd5e210
+msgid ""
+"If you're planning bigger changes on the structure of the documentation, "
+"it is advisable to make your changes locally. Further, while you can work"
+" on your master branch, it is recommended to create a dedicated branch "
+"for your changes."
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:57 09414e5e50814bf19f7aa28ec6f24c9d
+msgid ""
+"Start by navigating to a folder where you like to keep your repository "
+"locally and install the needed dependencies ::"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:76 08f5520a02084eb1965fbaa50204e0a3
+msgid ""
+"Your repository should now be up to date! For more information on those "
+"commands go to https://git-scm.com/docs. Let's install the dependencies "
+"::"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:84 a79659f6e71f4a8c8f4e22303ff32fc8
+msgid ""
+"You can now start the sphinx development server which will serve and "
+"live-reload your docs at https://localhost:8000 ::"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:88 ef1b89c860d043d0849d86a2fc7a150c
+msgid "When finished create a build with following command ::"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:95 1e54649a374342af9ca1d5a61e7b5962
+msgid "Create a pull request"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:97 58b630c52db24358bee2d205cb6be5c2
+msgid ""
+"As with directly editing files in your browser, you will need to create a"
+" Pull request to ask for integrating your changes into the main "
+"repository. ::"
+msgstr ""
+
+#: ../../contribute/documentation/index.rst:111
+#: a9f4586503ea4988b5fda3d3ce1e4222
+msgid ""
+"After running these commands, navigate your browser to your GitHub "
+"repository and create a pull request as explained above."
+msgstr ""
+

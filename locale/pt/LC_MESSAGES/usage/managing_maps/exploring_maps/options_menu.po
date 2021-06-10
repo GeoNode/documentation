@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:4
+#: 57d517a82fd1485db1b94619a452e110
+msgid "Options Menu Tools"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:11
+#: a2a5755bb2d340e6ad25c4834be7473d
+msgid ""
+"At the top-right corner of the *Map* there is a *Burger Menu* button "
+"|burger_menu_button|. Click on it to open the *Map Options* panel."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:16
+#: f5e7cc597e0a4b57a2edceaf4d5ac885
+msgid "*The Map Options Menu*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:18
+#: 0d54e3ac77fd4a4698892e32f1085fd4
+msgid "We will explain those tools more in depth in the next paragraphs."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:21
+#: 46d01c72a08b4232a6d5b66f75145efd
+msgid "Printing a Map"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:23
+#: 8c8fa3c7330b4ded9152e4307511da19
+msgid ""
+"The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based "
+"map viewer of GeoNode allows you to print your map with a customizable "
+"layout."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:24
+#: d857e9884cf94dfc899d7150e8dfb67f
+msgid ""
+"Click the :guilabel:`PRINT` option from the *Map Options Menu*, the "
+"**Printing Window** will open."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:29
+#: 34199fc57d484e428211157598d81759
+msgid "*The Printing Window*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:31
+#: d8e47f74dc6a47fd9e88078a07589e02
+msgid "From this window you can:"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:33
+#: 83d8749f9f404b4a81ac96bcb5d70799
+msgid "enter *Title* and *Description*;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:34
+#: aa2a77bd97044f348c206e0abe9a77f2
+msgid "choose the *Resolution* in dpi;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:35
+#: bd585dd78bcc4be78a1b72a445b229c1
+msgid "customize the *Layout*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:37
+#: 032fe2067b67442c886f5731c01a969b
+msgid "the *Sheet size* (A3, A4);"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:38
+#: 485ec4a9f66c42278bb410d2dd9251c0
+msgid "if include the legend or not;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:39
+#: 176f36e1ccf54eb9a3247b3458200505
+msgid "if to put the legend in a separate page;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:40
+#: 6d7209e5e17c44c894b594033f1931bf
+msgid "the page *Orientation* (Landscape or Portrait);"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:42
+#: 7c480ce537fe43db97cc04e10a4e3946
+msgid "customize the *Legend*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:44
+#: b92013c5e03b4e388bdb5ec0a49c69ec
+msgid "the *Label Font*;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:45
+#: f043dc1107514d8885025fd010c09402
+msgid "the *Font Size*;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:46
+#: 3810e8c109764c94b12cb53c888660a3
+msgid "the *Font Emphasis* (bold, italic);"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:47
+#: 659c0563183e4705999b6f1778499cea
+msgid "if *Force Labels*;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:48
+#: f47218e9a0ef49599781ad2e15983b95
+msgid "if use *Anti Aliasing Font*;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:49
+#: 72dbf43e218a4f68b52fa1860e14ba5d
+msgid "the *Icon Size*;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:50
+#: 392844cc59aa4d2282edb19bb50c6139
+msgid "the *Legend Resolution* in dpi."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:52
+#: 536398e4ffcd42098ca053a3e98892eb
+msgid "To print the map click on :guilabel:`Print`."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:55
+#: 50b9d5f3b60c48e7b8333cce7a76ed74
+msgid "The Layers Catalog"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:57
+#: c5d141c8939d4134b9741cd9551eb951
+msgid ""
+"All the layers available in GeoNode, both uploaded and remote, can be "
+"loaded on the map through the *Catalog*. Click on the :guilabel:`CATALOG`"
+" option of the *Map Options Menu* to take a look at the catalog panel."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:63
+#: eb96dc273d9c44b4894282a3219c9a44
+msgid "*The Layers Catalog*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:65
+#: f80d36227f394d2ebb4479785a8aae08
+msgid ""
+"You can navigate through layers and look at their *Thumbnail* images, "
+"*Title*, *Description* and *Abstract*. Click on :guilabel:`Add To Map` to"
+" load a layer into the map, it will be also visible in the :ref:`toc`."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:69
+#: afb0cfb2811b4a5aba01b282ca8694e3
+msgid "Performing Measurements"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:71
+#: f5d1176527174c9d87378cd75339b9a2
+msgid ""
+"Click on the :guilabel:`MEASURE` option of the *Map Options Menu* to "
+"perform a measurement. As you can see in the picture below, this tool "
+"allows you to measure *Distances*, *Areas* and the *Bearing* of lines."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:77
+#: c491f0d7635a42f2b0e6a077bd0924d7
+msgid "*The Measure Tool*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:79
+#: 8cf96617b0374e29bf142239e4d0d920
+msgid ""
+"To perform a measure draw on the map the geometry you are interested in, "
+"the result will be displayed on the left of the unit of measure select "
+"menu (this tool allows you to change the unit of measure also)."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:84
+#: 70a902718b794bb9ad6cc9cc2a272f41
+msgid "*Measuring Areas*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:87
+#: 19edfded13474e29a48253ef4db804ec
+msgid "Saving a map"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:89
+#: ff0e032dea9b45a1a3d0e3ff0b7462ba
+msgid ""
+"Once all the customizations have been carried out, you can *Save* your "
+"map by clicking on the :guilabel:`SAVE AS` option of the *Map Options "
+"Menu*."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:90
+#: 579816b12206436cb0ab48d888ee293b
+msgid "A new popup window will open."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:95
+#: bcea11265a1b40a991f7b8a933a37f0c
+msgid "*Saving Maps*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:97
+#: d6adc66551f74e30bbff89bd17b6447b
+msgid ""
+"You have to fill out a *Title* and an optional *Description*, then click "
+"on :guilabel:`Save`. The page will reload and your map should be visible "
+"in the :ref:`finding-maps` list."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:102
+#: 2cbc422d56e44f50826dbe9cf15d3e43
+msgid "*Your Map into the List*"
+msgstr ""
+

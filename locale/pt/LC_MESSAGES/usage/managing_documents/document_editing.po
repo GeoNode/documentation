@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../usage/managing_documents/document_editing.rst:4
+#: 6e07757ecc1748f5af76ecfa8976963b
+msgid "Document Editing"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:6
+#: 64c123068efa49a39f00e7cc2ebaa785
+msgid ""
+"The :ref:`document-info` page makes available useful tools for document "
+"editing. Click on the :guilabel:`Edit Document` button to see what you "
+"can do to make changes. The picture below shows you the *Editing Panel* "
+"that will appear on the screen."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:11
+#: 7a2ce78dccb94276bbe10d8f75009daf
+msgid "*Document Editing panel*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:13
+#: 03a0aafbc3a1482a919482cf7f070f18
+msgid ""
+"You can *Replace* the document file with another one by clicking on "
+":guilabel:`Replace`. It will drive you to the *Document Upload* page (see"
+" :ref:`uploading-documents`) where you can upload a new file."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:15
+#: 73982e9e41a74ee79a757d433496d170
+msgid ""
+"The :guilabel:`Remove` button allows you to delete the document. You will"
+" have to confirm that choice."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:20
+#: 1a791275b1184d25aa4d851015d0d2a8
+msgid "*Document Removal confirmation*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:22
+#: 59864dd01bb14156b681d4a2c4796e89
+msgid ""
+"The *Editing Panel* shows you also some links for editing the metadata "
+"and the thumbnail. These actions will be explained more in depth in the "
+"next paragraphs."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:25
+#: 04bb5253e547459a88332b627805a5b9
+msgid "Setting the Document Thumbnail"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:27
+#: b652f09473ec48bf955ad1a7de7d0236
+msgid ""
+"From the *Editing Panel*, it is also possible to *Set the Thumbnail* of "
+"the document. Click on :guilabel:`Set` to open the *Thumbnail Uploading* "
+"page and chose the image that will illustrate your document. You can "
+"either drag and drop it in the *Drop files here* box or selecting from "
+"your folders by clicking on *Choose Files*. Once this is done, click on "
+"the red button :guilabel:`Upload files`. If the thumbnail has been "
+"successfully uploaded you can see it by coming back to the document list."
+" Click on the :guilabel:`Explore Documents` button to check that."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:32
+#: a64362d1d12046ee986ebc2e4dcd9218
+msgid "*Upload Document's Thumbnail*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:34
+#: 3860136fe89a47e4b9765c63162d4ad6
+msgid "If no errors occur the following message will be shown."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:39
+#: baedf17606924452b7f4450a18783bb0
+msgid "*Uploading success*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:42
+#: eec6524da8934cf3be170840af3922fc
+msgid "Editing the Document Metadata"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:44
+#: 889f5958e02a459aa3400a56966026d6
+msgid ""
+"You can edit the metadata of your document through the buttons shown in "
+"the red rectangle in below picture."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:49
+#: ../../usage/managing_documents/document_editing.rst:57
+#: aa1ff9a5a9654a6da6b97b667ab53a23 e1a21effa7e24e95b1d1a542a432f892
+msgid "*Editing Metadata*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:51
+#: 874b8edf52f54b9eb9bfc753e9f7ac52
+msgid ""
+"The :guilabel:`Wizard` button drive you to the wizard described in the "
+":ref:`document-metadata` section. The :guilabel:`Advanced Edit` button "
+"takes you to a big form where all the available metadata of the document "
+"can be edited."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:52
+#: 685c2939c8bf449a97d078525327b6b5
+msgid ""
+"Some information are mandatory such as the *Title* or the *Category* the "
+"document belongs to, some others are optional."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:59
+#: 5723681399f441d996323d5d5da83b0c
+msgid ""
+"In the example shown in the picture above, the information inside the red"
+" rectangles have been changed. To save the changes click on "
+":guilabel:`Update`, you will be redirected to the document page."
+msgstr ""
+

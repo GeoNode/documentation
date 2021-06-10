@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../basic/theme/index.rst:2 9a3d960f22e1436dafb2f0baa7a8792d
+msgid "GeoNode Themes"
+msgstr ""
+
+#: ../../basic/theme/index.rst:5 e776da78172b4865b2cbba8f9843398e
+msgid ""
+"We have already explained in :ref:`simple-theming` how to change the "
+"GeoNode theme directly from the *Admin Interface*. This is an easy way "
+"for customizing GeoNode appearance but, in some cases, you might want to "
+"have more control on it."
+msgstr ""
+
+#: ../../basic/theme/index.rst:7 379bb1bb5e024990bc95dbbc1dc0c92a
+msgid ""
+"In those cases, you have to venture into the code and it is highly "
+"recommended to use a GeoNode Project and customize it instead of the "
+"GeoNode default HTML/CSS code. See the following sections to learn more "
+"about that."
+msgstr ""
+
+#: ../../basic/theme/index.rst:10 ff9fd278bd674d8ab7de74fa9f47d38f
+msgid "Theming your GeoNode Project"
+msgstr ""
+
+#: ../../basic/theme/index.rst:12 722a8dc63a1d42a7873e207b012b28da
+msgid ""
+"There are a range of options available to you if you want to change the "
+"default look and feel of your :ref:`geonode-project`. Since GeoNode’s "
+"style is based on `Bootstrap <https://getbootstrap.com/>`_ you will be "
+"able to make use of all that Bootstrap has to offer in terms of theme "
+"customization. You should consult Bootstrap’s documentation as your "
+"primary guide once you are familiar with how GeoNode implements Bootstrap"
+" and how you can override GeoNode’s theme and templates in your own "
+"project."
+msgstr ""
+
+#: ../../basic/theme/index.rst:17 0e0dabae50c04b4892a3c53f6941af95
+msgid "Logos and graphics"
+msgstr ""
+
+#: ../../basic/theme/index.rst:19 93f1bfa9c30e4b4eb6b1f91ab28f0327
+msgid ""
+"GeoNode intentionally does not include a large number of graphics files "
+"in its interface. This keeps page loading time to a minimum and makes for"
+" a more responsive interface. That said, you are free to customize your "
+"GeoNode’s interface by simply changing the default logo, or by adding "
+"your own images and graphics to deliver a GeoNode experience the way you "
+"envision it."
+msgstr ""
+
+#: ../../basic/theme/index.rst:23 e03232403d86413c97a5b3673ed6880e
+msgid ""
+"Your GeoNode project has a directory already set up for storing your own "
+"images at ``<my_geonode>/static/img``. You should place any image files "
+"that you intend to use for your project in this directory."
+msgstr ""
+
+#: ../../basic/theme/index.rst:26 4b59b56bb9d343879db4fc94b3c8812d
+msgid ""
+"Let’s walk through an example of the steps necessary to change the "
+"default logo."
+msgstr ""
+
+#: ../../basic/theme/index.rst:28 a0a1fc6d915f47e3941e0d5da1e68da0
+msgid "Change to the :file:`img` directory:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:34 78d19ac13fca417b9259e405235c75fd
+msgid ""
+"If you haven't already, obtain your logo image. The URL below is just an "
+"example, so you will need to change this URL to match the location of "
+"your file or copy it to this location:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:41 d9243d08548e4bec8a9a554cfa87e830
+msgid "Change to the :file:`css` directory:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:47 62188b35ddfc4e74bbcf284b26eb9f73
+msgid ""
+"Override the CSS that displays the logo by editing "
+":file:`<my_geonode>/static/css/site_base.css` with your favorite editor "
+"and adding the following lines, making sure to update the width, height, "
+"and URL to match the specifications of your image."
+msgstr ""
+
+#: ../../basic/theme/index.rst:63 0a8f2080b6234a7e87394fd055fef0b5
+msgid "Restart your GeoNode project and look at the page in your browser:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:73 84267568fefe44539769dcaec952a1f3
+msgid ""
+"It is a good practice to cleanup the **static_folder** and the Browser "
+"Cache before reloading in order to be sure that the changes have been "
+"correctly taken and displayed on the screen."
+msgstr ""
+
+#: ../../basic/theme/index.rst:75 126542ee46434c9a9571913f5d298e5f
+msgid "Visit your site at http://localhost/ or the remote URL for your site."
+msgstr ""
+
+#: ../../basic/theme/index.rst:80 24076ae11c7544c1839a40c4df728fbd
+msgid "*Custom logo*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:82 20e6df8a08ec430f964e57045c048abd
+msgid ""
+"You can see that the header has been expanded to fit your graphic. In the"
+" following sections you will learn how to customize this header to make "
+"it as you want."
+msgstr ""
+
+#: ../../basic/theme/index.rst:85 b8e4b121382f4408b8ba2c06b088d149
+msgid ""
+"You should commit these changes to your repository as you progress "
+"through this section, and get in the habit of committing early and often "
+"so that you and others can track your project on GitHub. Making many "
+"atomic commits and staying in sync with a remote repository makes it "
+"easier to collaborate with others on your project."
+msgstr ""
+
+#: ../../basic/theme/index.rst:89 7bb21eb291c44c35b15cdfc5c94a808c
+msgid "Cascading Style Sheets"
+msgstr ""
+
+#: ../../basic/theme/index.rst:91 9e655eabe0974a4b93d276f9c7975516
+msgid ""
+"In the last section you already learned how to override GeoNode’s default"
+" CSS rules to include your own logo. You are able to customize any aspect"
+" of GeoNode’s appearance this way. In the last screenshot, you saw that "
+"the main area in the homepage is covered up by the expanded header."
+msgstr ""
+
+#: ../../basic/theme/index.rst:95 bd3839ea06ee4bf682a760e220de86e5
+msgid ""
+"First, we’ll walk through the steps necessary to displace it downward so "
+"it is no longer hidden, then change the background color of the header to"
+" match the color in our logo graphic."
+msgstr ""
+
+#: ../../basic/theme/index.rst:97 d278af8b01f147f1bfbda130ed911d08
+msgid "Reopen :file:`<my_geonode>/static/css/site_base.css` in your editor:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:104 fd77aabc27604469a63c6345f7c2a206
+msgid "Add the following CSS rules to consider the expanded header height:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:113 654427632c604af798a3902b10b240b2
+msgid ""
+"Add a rule to change the background color of the header to match the logo"
+" graphic:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:121 7f54931e000c4727a5b41bca1e6a573c
+msgid "Add a background image for the *hero* section:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:130 c2e5d7c8da274f9b9fe217a74f4719a1
+msgid "Your project CSS file should now look like this:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:156 ../../basic/theme/index.rst:305
+#: 6da3cbbfcd4b47fba64e839c9d027777 7e060e43ad6e4ec187194ace08a67c6f
+msgid ""
+"Collect the static files into STATIC_ROOT, restart the development server"
+" and reload the page:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:166 bc0d302128304cb4bff10aa011e2b1b1
+msgid "*CSS override*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:168 4b734b81431f461c9723ee946f0cde59
+msgid ""
+"You can continue adding rules to this file to override the styles that "
+"are in the GeoNode base CSS file which is built from `base.less "
+"<https://github.com/GeoNode/geonode/blob/master/geonode/static/geonode/less/base.less>`_."
+msgstr ""
+
+#: ../../basic/theme/index.rst:170 9c04475e1edc4eecb629942ae71cd945
+msgid ""
+"You may find it helpful to use your browser's development tools to "
+"inspect elements of your site that you want to override to determine "
+"which rules are already applied. See the screenshot below."
+msgstr ""
+
+#: ../../basic/theme/index.rst:175 0a41ad4270584942a0a0e87046ab4bc4
+msgid "*Screenshot of using browser debugger to inspect the CSS overrides*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:178 83cf4cbe705848559af3574173a5010d
+msgid "Templates and static pages"
+msgstr ""
+
+#: ../../basic/theme/index.rst:180 dc33c47cabdc43f78471e60f2abc6fb8
+msgid ""
+"Now that we have changed the default logo and adjusted our main content "
+"area to fit the expanded header, the next step is to update the content "
+"of the homepage itself. Your GeoNode project includes two basic templates"
+" that you will use to change the content of your pages."
+msgstr ""
+
+#: ../../basic/theme/index.rst:183 7902169443b84d33be1151827de7cfc7
+msgid ""
+"The file :file:`site_base.html` (in :file:`<my_geonode>/templates/`) is "
+"the basic template that all other templates inherit from and you will use"
+" it to update things like the header, navbar, site-wide announcement, "
+"footer, and also to include your own JavaScript or other static content "
+"included in every page in your site. It's worth taking a look at "
+"`GeoNode's base file on GitHub "
+"<https://github.com/GeoNode/geonode/blob/master/geonode/templates/base.html>`_."
+" You have several blocks available to you for overriding, but since we "
+"will be revisiting this file in future sections of this guide, let's just"
+" look at it for now and leave it unmodified."
+msgstr ""
+
+#: ../../basic/theme/index.rst:187 dbce6c9840dc43538861b08aba9cae15
+msgid "Open :file:`<my_geonode>/templates/site_base.html` in your editor:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:194 efde2405ec1e4c83a14919b94d74cd9d
+msgid ""
+"You will see that it extends from :file:`base.html`, which is the GeoNode"
+" template referenced above and it currently only overrides the "
+"``extra_head`` block to include our project's :file:`site_base.css` which"
+" we have modified in the previous section."
+msgstr ""
+
+#: ../../basic/theme/index.rst:203 f275cdf937654163b8058fabedac41d8
+msgid ""
+"You can see on `line 189 of the GeoNode base.html template "
+"<https://github.com/GeoNode/geonode/blob/master/geonode/templates/base.html#L189>`_"
+" that this block is included in an empty state and is set up specifically"
+" for you to include extra CSS files as your project is already set up to "
+"do."
+msgstr ""
+
+#: ../../basic/theme/index.rst:206 ea6705dafce440e0bdfe2cd2df625b4e
+msgid ""
+"The file :file:`site_index.html` is the template used to define your "
+"GeoNode project's homepage. Let's actually override this template."
+msgstr ""
+
+#: ../../basic/theme/index.rst:208 9556d8502b6e4063b6433427142892e5
+msgid ""
+"It extends GeoNode's default :file:`index.html` template and gives you "
+"the option to override specific areas of the homepage like the *hero "
+"area*, but it also allows you leave other sections as they are. You are "
+"of course free to override the sections which you prefer, the following "
+"steps give you an example."
+msgstr ""
+
+#: ../../basic/theme/index.rst:210 992993980d4b4dbcaa38b0da9110c790
+msgid "Open :file:`<my_geonode>/templates/site_index.html` in your editor."
+msgstr ""
+
+#: ../../basic/theme/index.rst:212 fe01ebbc26494f0a994ad68c9d954fec
+msgid ""
+"Edit the first ``<h1>`` element inside the ``<div class=\"container\">`` "
+"to say something other than \"Welcome\":"
+msgstr ""
+
+#: ../../basic/theme/index.rst:218 3b8f740ed83d433eb339652db146f77d
+msgid ""
+"Pay attention to the ``custom_theme.jumbotron_welcome_title`` part, if "
+"you delete it you will cannot use the \"admin-based\" theme customization"
+" option (see :ref:`simple-theming`)"
+msgstr ""
+
+#: ../../basic/theme/index.rst:220 33ce7505cf5b4a9f832fe1342da41dda
+msgid ""
+"Edit the introductory paragraph to say something about your GeoNode "
+"project:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:228 05a9919b7dc148e6a3ecb4b33badf1c3
+msgid ""
+"Take care of the ``custom_theme.jumbotron_welcome_content`` if you are "
+"using the \"admin-based\" theme customization option (see :ref:`simple-"
+"theming`)"
+msgstr ""
+
+#: ../../basic/theme/index.rst:230 245982d20e274478afd8760a7d8dca86
+msgid "Your edited ``site_index.html`` file should now look like this:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:259 9f140b1199fa402f8263ff3ad773bd27
+msgid ""
+"Collect the static files into STATIC_ROOT, restart the development server"
+" and reload the page to see the changes:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:269 5f47a208d9bb4f1a82533c448c7cca63
+msgid "*Customized Geonode Project Home Page*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:272 b50e936cc5c0465b9be97ab289032e66
+msgid "Other theming options"
+msgstr ""
+
+#: ../../basic/theme/index.rst:274 9f65b7b49e8c4cb68857ce8451861ee3
+msgid ""
+"You are able to change any specific piece of your GeoNode project’s style"
+" by adding CSS rules to site_base.css, but since GeoNode is based on "
+"Bootstrap, there are many pre-defined themes that you can simply drop "
+"into your project to get a whole new look. This is very similar to "
+"`WordPress <https://wordpress.com/>`_ themes and it is a powerful and "
+"easy way to change the look of your site without much effort."
+msgstr ""
+
+#: ../../basic/theme/index.rst:278 138466d8521a4f8dbc49fea9f12b09c5
+msgid "Bootswatch"
+msgstr ""
+
+#: ../../basic/theme/index.rst:280 05bf1aae5e1a4698aa7178bdabe51186
+msgid ""
+"From `Bootswatch <https://bootswatch.com/>`_ you can download ready-to-"
+"use themes for Bootstrap-based website."
+msgstr ""
+
+#: ../../basic/theme/index.rst:282 2889c8758be64e3ea0ae013d8ce0a32e
+msgid ""
+"Currently GeoNode uses the 3.3.7 version of Bootstrap, so `suitable "
+"Bootswatch themes "
+"<https://github.com/thomaspark/bootswatch/releases/tag/v3.3.7>`_ should "
+"have been built for the same version."
+msgstr ""
+
+#: ../../basic/theme/index.rst:284 9fe90ee8386d42359f955495b62a76b9
+msgid ""
+"The following steps will show you how to use a theme from Bootswatch in "
+"your own GeoNode Project."
+msgstr ""
+
+#: ../../basic/theme/index.rst:286 29484881d2354200b2f8cc703f75773d
+msgid ""
+"Download the `Bootswatch themes for Bootstrap v3.3.7 archive "
+"<https://github.com/thomaspark/bootswatch/releases/tag/v3.3.7>`_ and "
+"extract it on some folder in your disk."
+msgstr ""
+
+#: ../../basic/theme/index.rst:288 462e3b5e053b42a187504f65773ef351
+msgid ""
+"Select a theme (in this example we will use *Sandstone*) and copy the "
+"``bootstrap.css`` file inside the theme folder to the "
+"``<my_geonode>/static/css`` (the static folder of your GeoNode Project)."
+msgstr ""
+
+#: ../../basic/theme/index.rst:290 aab708d295f444ffad915a81c40cd20c
+msgid ""
+"Update the ``site_base.html`` template to include this file. It should "
+"now look like this:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:315 f4d7a902c31d4724b6ec741340e77149
+msgid "*Bootswatch Theme for the Geonode Project*"
+msgstr ""
+

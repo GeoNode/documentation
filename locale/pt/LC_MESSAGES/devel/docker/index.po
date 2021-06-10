@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../devel/docker/index.rst:2 aeccb9813a43497cba3cc539a831d580
+msgid "Start to develop with Docker"
+msgstr ""
+
+#: ../../devel/docker/index.rst:5 3ad2d0baa93d46d1802e614ec849d4a4
+msgid "How to run the instance for development"
+msgstr ""
+
+#: ../../devel/docker/index.rst:8 fb713afd2da64e63b6e45976ab088018
+msgid "Set the variable SET_DOCKER_ENV for development"
+msgstr ""
+
+#: ../../devel/docker/index.rst:14 3bac3443d9ca4d5dbbfd81a5dba28a93
+msgid "Change to"
+msgstr ""
+
+#: ../../devel/docker/index.rst:21 27993c71d3524d1a9a1139d90d3380e3
+msgid "Use dedicated docker-compose files while developing"
+msgstr ""
+
+#: ../../devel/docker/index.rst:23 e08f479124d44fde890d5c7c677dfa07
+msgid ""
+"In this example we are going to keep ``localhost`` as the target IP for "
+"GeoNode"
+msgstr ""
+
+#: ../../devel/docker/index.rst:30 d95197823ee745ec8665297d8ee06a2d
+msgid "How to debug"
+msgstr ""
+
+#: ../../devel/docker/index.rst:32 63324d30869348ada20f047d4dca05e4
+msgid ""
+"We are supposing to use ``ipdb`` for debugging which is already available"
+" as package from the container"
+msgstr ""
+
+#: ../../devel/docker/index.rst:34 bfbd123e1e03498080fcfec4ea5603da
+msgid "Stop the container for the ``django`` service:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:40 778ce84334a04adb83e6e19b3c120bdd
+msgid "Run the container again with the option for *service ports*:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:56 7c9284d05e61461083f2bd8727ea8800
+msgid "Access the site on http://localhost/"
+msgstr ""
+
+#: ../../devel/docker/index.rst:58 b89c36b6d0944a208538b96dd82b0ff2
+msgid ""
+"If you set an ``ipdb`` debug point with import ``ipdb ; "
+"ipdb.set_trace()`` then you should be facing its console and you can see "
+"the django server which is restarting at any change of your code from "
+"your local machine."
+msgstr ""
+

@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../usage/managing_layers/layer_metadata.rst:4
+#: 99de44aa970046078ffc0f208d45011d
+msgid "Layers Metadata"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:6
+#: 7acddf7e804b409c88a4fe87e2258955
+msgid ""
+"In GeoNode special importance is given to *Metadata* and their standard "
+"formats. You can explore the *Metadata* of a *Layer* by clicking the "
+":guilabel:`Metadata Detail` button from the *Layer Page*."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:12
+#: ba51307834e544a79557b43c7f8ea8ac
+msgid "*The Layer Metadata Detail button*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:14
+#: 45e536cbfe914b4db67b1e3fa145d4b6
+msgid "The *Layer Metadata* page will be displayed."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:19
+#: d0401aa89d73438f8d0f8bf285a01915
+msgid "*The Layer Metadata Details*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:21
+#: b2f05554683348388146d3df945363cb
+msgid ""
+"In that page you can see the whole set of available metadata about the "
+"layer. Metadata are grouped in order to show the following types of "
+"information:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:24
+#: b57f39c8c3054e4f9e69acc8bc9927da
+msgid ""
+"*Identification* to uniquely identify the layer (Title, Abstract, "
+"Publication Date etc.);"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:25
+#: 1ba967da22324fe7b38d32b7a8c091f1
+msgid "*Owner*, the user who owns the layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:26
+#: a2beab975f67421c8b2c347eb0a958a5
+msgid ""
+"*Information*, the Identification Image, the Spatial Extent, Projection "
+"System and so on;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:27
+#: 4b5df69760e842f08b6d5cf5020e4544
+msgid "*Features*, Language, Supplemental and other Information;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:28
+#: 5004c6ac8ea6457d80e9c712c7b74a03
+msgid "*Contact Points*, the available user to get in contact;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:29
+#: 3f2e13fb376e4825b31b7d166eab223c
+msgid "*References*, various links to the resource information and data;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:30
+#: 110c81399f50429c91f10f8b9a5cf99e
+msgid "*Metadata Author*, information about the author of the metadata."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:33
+#: dad3096c1e0a486e84c58efbe853433a
+msgid "Downloading Metadata"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:35
+#: c685aac51c554c8eb70b3a5ef9611301
+msgid ""
+"The :guilabel:`Download Metadata` button of the *Layer Page* allows you "
+"to download the layer metadata in various formats."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:40
+#: c42054c8c25e44e19272609b9d24491b
+msgid "*How to Download Metadata*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:42
+#: b02dec3bf8144c78b3be8180833c5390
+msgid "The available download formats are grouped in three categories:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:44
+#: 1a1296d0af1546a6b4f2ee9cb45c8aa4
+msgid "*Full metadata*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:45
+#: 0121510d4bfe490298fe7e4e41e9a102
+msgid "*Standard Metadata - XML format*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:46
+#: c7d4793476064a2aa631ef6df3188704
+msgid "*Attribute Information*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:48
+#: 90112c2a593d4bf2bd5811ea774747bd
+msgid "Click on the format name that you prefer to start the download."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:51
+#: 92d14909e5e244f4800e85aaca2d533e
+msgid "Metadata Wizard"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:53
+#: 79d519a5c7f64465a88befbd3916b11e
+msgid ""
+"Metadata contains all the information related to the layer. They provide "
+"essential information for its identification and its comprehension. "
+"Metadata also make the layer more easily retrievable through search by "
+"other users."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:54
+#: a0420139855445f2a17a0621c7f8f57f
+msgid ""
+"The *Metadata* of a layer can be changed through a *Wizard* which "
+"involves four steps, one for each type of metadata considered:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:56
+#: 7f28b0ffda8f4ea683d011f61174b8f5
+msgid "**Basic Metadata**"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:58
+#: 7e7fb9b161d54b78aeb62936fc470b24
+msgid ""
+"The first two steps are mandatory (no layers will be published if the "
+"required information are not provided) whereas the last two are optional."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:63
+#: b78ef21520324d809500aa67a7c4f6a1
+msgid "*Basic Layer Metadata*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:65
+#: 9ffa7ca349db4355bc09fb139543bc59
+msgid "In the first step the system asks you to insert the following metadata:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:67
+#: dbd6e289784e43df93cabf747f1add7e
+msgid "The *Thumbnail* of the layer (click :guilabel:`Edit` to change it);"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:68
+#: c6b952e4d8d549ab82b75cf538e33089
+msgid "The *Title* of the layer, which should be clear and understandable;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:69
+#: 5f8fc54f59e246d49e39141459dd356e
+msgid "An *Abstract*; brief narrative summary of the content of the Layer"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:71
+#: b49b6ffebc4b4ce69e9ea2fdd68eff90
+msgid ""
+"The *Abstract* panel allows you to insert HTML code through a *wysiwyg* "
+"text editor"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:73
+#: 358bf61fd18d484bb3015fe15911b8ca
+msgid ""
+"The *Creation/Publication/Revision Dates*  which define the time period "
+"that is covered by the layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:74
+#: 5dd5ae5104114988aa75e92be2e22ee0
+msgid ""
+"The *Keywords*, which should be chosen within the available list. The "
+"contributor search for available keywords by clicking on the searching "
+"bar, or on the folder logo representing, or by entering the first letters"
+" of the desired word;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:75
+#: e65df7b680f04871a1cd61e8dd18da86
+msgid "The *Category* which the layer belongs to;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:76
+#: d54715d2e9c64278aa6d4ba7d404711d
+msgid "The *Group* which the layer is linked to."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:79
+#: 471e76ad07f34e1a9246acf407e0a88b
+msgid "**Location and Licenses**"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:84
+#: fbb4ce976e1e41fbb13ff3c33a9e3511
+msgid "*Location and Licenses Metadata for Layers*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:86
+#: 3d57543710144dd7922fc66bdb7069de
+msgid ""
+"The following list shows what kinds of metadata you are required to enter"
+" (see also the picture below):"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:88
+#: d286244d28814bd99ddf9232b173110e
+msgid "The *Language* of the layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:89
+#: d1605c478946419782ead178b9ed539b
+msgid "The *License* of the dataset;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:90
+#: 8e5bbd33d124418aba316fcded0c5f66
+msgid ""
+"The *DOI* of the dataset; if available, this represents the `Digital "
+"Object Identifier <https://www.doi.org/>`_ of the resource"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:91
+#: dd2774fe245b4060baa61a9775c5c587
+msgid ""
+"The *Attribution* of the dataset; authority or function assigned, as to a"
+" ruler, legislative assembly, delegate, or the like"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:92
+#: 8846b55c42cd4150a41a9f9b8fb4a6ba
+msgid ""
+"The *Regions*, which informs on the spatial extent covered by the layer. "
+"Proposed extents cover the following scales: global, continental, "
+"regional, national;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:93
+#: b25457e2736b4c03a9c411ef62ee7a2d
+msgid ""
+"The *Data Quality statement* (general explanation of the data producer's "
+"knowledge about the lineage of a dataset);"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:94
+#: b28d05f894c2490ca309c3f777b6fbe9
+msgid "Potential *Restrictions* on layer sharing."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:96
+#: 4121aaa9355b433cbfcb5d6d19fd9392
+msgid ""
+"The *Data Quality statement* and *Restrictions* panels allow you to "
+"insert HTML code through a *wysiwyg* text editor"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:99
+#: 9ecf3d1793d048c6a8429e7346ecdebc
+msgid "**Optional Metadata**"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:104
+#: 0a94046911e84f5cb78242b29ac39383
+msgid "*Optional Layer Metadata*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:106
+#: b306a2fdb5f44944bebec9d74e8bbcfa
+msgid "Complementary information are:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:108
+#: 34101360578441c986b0111de02b48de
+msgid "The *Edition* to indicate the reference or the source of the layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:109
+#: e02f7bb0fb234d07bb831dc62157c473
+msgid "The *Purpose* of the layer and its objectives;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:110
+#: ee9d6bb77d65445298e48542fbc29579
+msgid ""
+"Any *Supplemental information* that can provide a better understanding of"
+" the uploaded layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:111
+#: 6c11b1de486b4a20b5ab2ed35e3e9640
+msgid "The *Maintenance frequency* of the layer;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:112
+#: a7406f9dda044e70a4f1f02424fc5d40
+msgid ""
+"The users who are *Responsible* for the layer, its *Owner*, and the "
+"*Author* of its metadata;"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:113
+#: 3646cd05f6874d08b30a1a4fa77bb06b
+msgid "The *Spatial representation type* used."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:115
+#: 7b79b33ea8da493982ffeee88c968b4e
+msgid ""
+"The *Purpose* and *Supplemental information* panels allow you to insert "
+"HTML code through a *wysiwyg* text editor"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:118
+#: 82b18385a70c4d25980e41b7c1b1bb61
+msgid "**Dataset Attributes**"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:123
+#: e7c0c838ecfa4f60abda189e6f0d8567
+msgid "*Dataset Attributes Metadata for Layers*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:125
+#: 15cf201382c14160a7ef12b2dd050c07
+msgid ""
+"At this step you can enrich the dataset attributes with useful "
+"information like the following:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:127
+#: e45d35c0de7e4b7aab03455b70b6fae8
+msgid "The *Label* displayed"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:128
+#: 3aa9fa2d035c409684bf48d3e2ba97bb
+msgid "A detailed *Description*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:129
+#: 52f7a1e5b04e4fc59951a24f470caa51
+msgid "The *Display Order*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:130
+#: c693c750fa204e1dbdcc410cf3bcee93
+msgid ""
+"The *Display Type*; the default value is *Label*, which means that the "
+"value of the attribute will be rendered as a plain text. There's the "
+"possibility to instruct GeoNode to threat the values as different media-"
+"types. As an instance, if the values of the selected attribute will "
+"contain image urls, by selecting the ``IMAGE`` *Display Type* you will "
+"allow GeoNode to render the image directly when querying the layer from "
+"the maps. The same for ``VIDEO``, ``AUDIO`` or ``IFRAME`` mime types."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:134
+#: 44db560cc50b4e689dafbc5f9a6d72ed
+msgid ""
+"The *Visibile* flag; allows you to instruct GeoNode wether or not hiding "
+"an attribute from the *Get Feature Type* outcomes"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:137
+#: ed049f5d4ca24fcb9696ebf213bd1663
+msgid ""
+"It is possible to define a completely custom ``HTML`` template for the "
+"*Get Feature Type* outcome. That is possible by enabling the *Use a "
+"custom template* flag as shown in the figure below."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:143
+#: da1c0b41c65c4b119c753c6b13e6e20f
+msgid "*Use a custom template*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:145
+#: 8e05f59e94f8406d812b08fd95b53c64
+msgid ""
+"By using the keywork ``${properties.<attribute_name>``, you can tell to "
+"GeoNode to render the actual value of the attribute on the map."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:148
+#: 1661d2bd062240f4bee833cd4844efff
+msgid "As an instance, the example below"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:153
+#: 142dc356ecaf41f08fb5c9f3a1c32070
+msgid "*Use a custom template: HTML*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:156
+#: c70416555f1e412d8371a8debd2f7038
+msgid "Will render an ``HTML Table`` along with values as shown here below"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:161
+#: 740c9e803af24a588a730b58e072b760
+msgid "*Use a custom template: Get Feature Info outcome*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:163
+#: 0b6e4d0cff6d490daa66b07a685ea4d4
+msgid ""
+"Use :guilabel:`next >>` or :guilabel:`<< back` to navigate through those "
+"steps. Once you have finished click on :guilabel:`Update`."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:165
+#: 5ef07688517c42989f0c9c51a63e0822
+msgid ""
+"Some metadata are mandatory, if you miss any of that metadata the "
+"*Completeness* bar shows you a red message like the one in the picture "
+"below."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:171
+#: 9b6f0cadddc549ef8d13531094df66ff
+msgid "*Completeness Progress Bar*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:174
+#: df51afb0466d4a9696b4622538193aa8
+msgid "Metadata Advanced Editing"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:176
+#: 0402c853d0a84ebbb769aecc5e7b3dd7
+msgid ""
+"In the *Layer Editing* panel the :guilabel:`Advanced Edit` is also "
+"available."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:181
+#: 4fe08c09f5a94d14bec2afae2e269e0e
+msgid "*The Advanced Edit button*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:183
+#: 8305a26b0cc84f4898c429f808deaf92
+msgid ""
+"Click on it to display the *Metadata Advanced Editing Page*. That page "
+"allows you to edit all the layer metadata described in the previous "
+"paragraph. Once you have finished to edit them click on "
+":guilabel:`Update` to save your changes."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:186
+#: d3952056a1c44a71ab2ab946a3b1de69
+msgid "Uploading Metadata"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:188
+#: 007b2e4423e449399f381a664b49c50c
+msgid ""
+"Users may also upload a metadata XML document (in ISO, FGDC, or Dublin "
+"Core format) to fill in key GeoNode metadata elements automatically. The "
+"picture below shows you how the page looks like."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:194
+#: cca140b7507446f5a58ebb3d2f1aced7
+msgid "*The Metadata Advanced Editing page*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_metadata.rst:196
+#: f73e20867d27498c82305a155a5e4641
+msgid ""
+"Click on :guilabel:`Choose Files` to select the document from your disk, "
+"then click on :guilabel:`Upload files` to trigger the uploading process."
+msgstr ""
+

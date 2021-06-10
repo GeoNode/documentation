@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../usage/managing_documents/uploading_documents.rst:4
+#: f6219558f7a74518909e3399d9a0fc91
+msgid "Uploading Documents"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:6
+#: 93407b8abffd4505ba7ee267e4ede323
+msgid ""
+"GeoNode allows to share reports, conceptual notes, posters, spreadsheets,"
+" etc. A wide range of documents files can be hosted on the platform, "
+"including text files (.doc, .docx, .txt, .odt), spreadsheets (.xls, "
+".xlsx, .ods), presentations (.ppt, .pptx, .odp), images (.gif, .jpg, "
+".png, .tif, .tiff), PDF, zip files (.rar, .zip, .gz), SLD, XML or QML "
+"files."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:8
+#: 3733082b1283400295b353a01cee9701
+msgid "Only authenticated users can upload data into GeoNode."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:10
+#: 22f8ec14ffbd42259b0f5f6ddced50bc
+msgid "*Documents* uploading is accessible from two positions:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:12
+#: c0fdc475b81749e8947290fca982a9b1
+msgid ""
+"the :guilabel:`Upload Documents` button of the *Documents Search* page "
+"(see :ref:`finding-documents`)"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:17
+#: 278bcd3b3c8542ecba79a1b3898b746c
+msgid "*Documents Upload button*"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:19
+#: a6526a69363f4a72b4806c7df57603b5
+msgid ""
+"the :guilabel:`Upload Document` link of the :guilabel:`Data` menu in the "
+"navigation bar"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:24
+#: aa3100c8b65c475e84f42347c03d9ed0
+msgid "*Document Upload link*"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:26
+#: c82385a49cf84004a118ca4bcf97ef58
+msgid "The *Document Upload* page looks like the one shown in the picture below."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:31
+#: ee1302af53064a998be5a9c5bfb6e6c5
+msgid "*Document Upload page*"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:33
+#: 6a89b219938b4f35b47c01e405508cee
+msgid "In order to upload a document:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:35
+#: 0194bf07f74a419299226c6102c478a1
+msgid ""
+"select a file from your disk or enter a URL address if the document is "
+"stored on the internet"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:36
+#: ea6d1dce53db439f8d6a8a4bac49ba93
+msgid "insert the title of the document"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:37
+#: 122b491829804e86b233230827fd58cb
+msgid ""
+"select one or more published resources the document can be linked to "
+"(optional)"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:38
+#: 8e111b41e6ab464586b2210572b91060
+msgid "click the red :guilabel:`Upload` button"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:40
+#: e808f5390beb4646a0e6f21927a6ebdc
+msgid ""
+"At the end of the uploading process you will be driven to the *Metadata* "
+"page to fill out other information about the document. See the next "
+"section to know more about that."
+msgstr ""
+

@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../usage/managing_layers/layer_styling.rst:4
+#: 9a9449f5d2db4f92b4d2517e8c72da6d
+msgid "Layer Styling"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:6
+#: 5f4eb423a7f34c519ae9379dc62a3a11
+msgid ""
+"Maps are helpful because they allow you gain a deeper understanding of "
+"your data by allowing you to visualize it in many different ways. So you "
+"can tell different stories depending on how the data is presented. For "
+"any given data or layer, you should explore different styling options and"
+" choose the best style for that."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:10
+#: b66ece7679354824b5da333d3d801708
+msgid ""
+"In GeoNode each layer has a *Default Style* which is determined by the "
+"nature of the data you're mapping. When uploading a new layer (see :ref"
+":`uploading-layers`) a new default style will be associated to it."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:15
+#: 7988ae9b6046452a8a5e164864eb3211
+msgid "*Default Style for Layers*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:17
+#: e8430d0812ac403a97eeac473f23769a
+msgid ""
+"Referring to the example above, dark orange lines are not very good to "
+"represent waterways so we would need to change this style. In the "
+"following paragraphs you will learn how to create a new style starting "
+"from given templates, how to edit a style, how to upload styles from file"
+" and how to manage them."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:20
+#: 0f35a0b92c25412abad73173889bd2e1
+msgid "Creating new Styles"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:22
+#: 57846e524ebc49068f604079f5128c29
+msgid ""
+"In order to create a new style, open the *Layer Page* (see :ref:`layer-"
+"info`) and click on :guilabel:`Editing Tools`. Then click the "
+":guilabel:`Edit` button in the *Styles* section of the *Layer Editing* "
+"panel (see the picture below)."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:27
+#: e1fc94ecffb9417c9a91e51879ea6512
+msgid "*Edit Styles button*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:29
+#: 5b06d237489445b4adaa11efe290bc6e
+msgid ""
+"The *Layer* will open in a new *Map*. The *Styles Panel* will show you "
+"all the available styles for the layer and some useful tools."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:34
+#: bbb0682186e948c8b6fce07613b5409f
+msgid "*The Styles Panel in the Map*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:36
+#: 0e978e89cadd452f95284a43c34937ba
+msgid "Now follow the steps below:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:38
+#: 4a34b0733bbe4e15a2d02cedd329596f
+msgid ""
+"Click the |create_new_style_button| button. The *Style Templates Panel* "
+"will open."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:48
+#: ece64532a5fb4adca6284e604b282365
+msgid "*Create new Styles*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:50
+#: 89c86d14143f4b2ab43bcaa1ee724530
+msgid ""
+"Choose a *Style Template* from the list (both *CSS* and *SLD* styles are "
+"available)."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:55
+#: c314c88f399d4dc0b941f042e58e42e4
+msgid "*Style Templates*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:57
+#: d6927a3a6d0f463ba1af51ea689518c2
+msgid ""
+"Click the |add_style_button| button to add the *Style Template* to the "
+"styles list."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:64
+#: c7a4d749e97e41f2b23ab00cfc7e19fc
+msgid ""
+"Insert a *Title* and an *Abstract* (optional), then click on "
+":guilabel:`Save`."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:70
+#: d99bc2b7878b4cd29ea1fa34f9fcf9e3
+msgid "*Title and Abstract for new Styles*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:72
+#: b2367bf12db243d7984018bde72647af
+msgid "The style you have created is now added to the *Styles List*."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:77
+#: 9e622207bc0440fca2889bce128b0c2b
+msgid "*New Styles into the list*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:79
+#: af9a5cffac2749759c1f576fb6aae884
+msgid "You will also see this new style in the *Layer Page*."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:84
+#: b58ab128139d4960be0b71ff274cc42a
+msgid "*The Layer Page with the new Style*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:86
+#: 3c03e6683a8e42339169582b01fd3187
+msgid "Now you can switch the style by clicking on the corresponding checkbox."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:88
+#: 1954956f6f7743efa30c3bcdc6c627ce
+msgid ""
+"It would be nice to change the style in order to decrease the opacity of "
+"the filling color as well as to reduce the lines width. The embedded "
+"`MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ makes "
+"available a powerful *Style Editor* to accomplish that tasks. In the next"
+" paragraph we will explain how."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:92
+#: 3e794ac4173045babe2f1956ae4092e9
+msgid "Editing the Layer Style"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:94
+#: 98b4cf9a7884471ca86fbc1da4f993a1
+msgid "The following steps show you how to edit styles:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:131
+#: 142e8c8654b24bd49efbca88481b6bdd
+msgid ""
+"From inside the map open the *TOC (Table Of Content)* by clicking the "
+"|toc_button| button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:132
+#: 7cd99988502c471a83e5490846f721b6
+msgid "Click on |layer_settings_button|"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:133
+#: 6e2b647be5944bf7a70f147a46d8a60b
+msgid "Open the *Style* tab |style_tab|"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:135
+#: 16e8fefbac1b4577ad334f97799ea7fc
+msgid ""
+"Styles editing is allowed only to those users who have the needed "
+"permission. See :ref:`layer-permissions` to read more)"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:137
+#: db927844dda244e58dd745c01a2be14c
+msgid "Select the *Style* and click on |style_editor_button|"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:138
+#: e51cb5458c614b14abacf0a6b440635d
+msgid ""
+"Edit the style. The *Style Editor* helps you to write valid styles "
+"through the *Syntax Validator* which shows you a popup in case of errors "
+"(see the picture below)."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:143
+#: eb150137a8914bb9a2efed7b01f6a900
+msgid "*The Style Editor Syntax Validation*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:145
+#: 0b8d5a2f7d534b9d929fbb7b3f7e11df
+msgid "Click on |save_style_button| to save your changes."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:147
+#: bdeec0bb43c5498ca3895e7cd8c34e93
+msgid "See the following gif to recap the whole process."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:152
+#: e1a289de3e7244a39cc7d601bc997b54
+msgid "*The Style Editor*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:154
+#: 1907c1263bb0410ab4e366dd6c198074
+msgid ""
+"You can also decide to make your new style the *Default Style* of that "
+"layer. Click on |set_style_as_default_button| to do that."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:155
+#: 51417ae338614199b8a5cc3c0538aa2d
+msgid "Click on |delete_style_button| to delete the style."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:158
+#: d0e1ec607ca642c7a5148a6d417360d4
+msgid "Uploading Styles"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:160
+#: b178b8fe6c874ec48f90beda6eae3bbc
+msgid "In GeoNode it is also possible to upload an existing style from file."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:162
+#: c6658eaa650c4aa3b8a7a8c00c254bdc
+msgid ""
+"Currently only styles in **SLD (Style Layer Descriptor 1.0, 1.1)** format"
+" can be uploaded in GeoNode."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:164
+#: 35dcf8e49530477bbf1a60d3452b4d84
+msgid ""
+"From the *Layer Page* click on *Editing Tools* to open the *Editing "
+"Tools* panel and follow the steps below:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:166
+#: 3d10ab21703f4144b60b696727343426
+msgid "Click the :guilabel:`Upload` button of the *Styles* section"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:172
+#: 9c96ac07e53143f597a12744956be5c1
+msgid "*Upload Styles button*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:174
+#: c1946495bd514d4f9c7e55ee8b31048b
+msgid "Click on :guilabel:`Choose Files` and select your style from your disk"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:179
+#: 65506a0d1e6b40bda3f2e9e8a30477c2
+msgid "*Upload Styles*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:181
+#: 733ad6cd6b7b48c9aa1f824041c99515
+msgid "Click on :guilabel:`Upload files`"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:183
+#: a0ef98e98a5b488cb9b6bc449effcdc8
+msgid ""
+"Once the process has been finished the new *Style* will be visible in the"
+" *Layer Page*."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:186
+#: c4f0e0141a44467895107ec11ee0cc4e
+msgid "Managing Styles"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:188
+#: 04e0f2ddaeaf4dcc9119e71a3a22ecd3
+msgid ""
+"Given a layer, you can manage all its styles in the *Styles Management "
+"Page* accessible from the :guilabel:`Manage` button of the *Layer "
+"Editing* panel."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:193
+#: 629ac0cd1ea3417e916d75b8397ad36a
+msgid "*Managing Styles*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:195
+#: 2be0da20ed374902afd4f9aa4d1920ec
+msgid "In that page you can:"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:197
+#: a68efb718b384689971fc6141ffb0115
+msgid "See the *Layer Name*"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:198
+#: 1c57473bb6b946a99fb5f0962883879c
+msgid "Add/remove styles to/from the *Available styles* list"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:199
+#: 4c42b5bc7f824f55818af7a634ee35df
+msgid "Choose the *Layer Default Style* from the *Available styles* list"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:201
+#: 417979d05ccd411291747757ac9f0f85
+msgid "Click on :guilabel:`Update Available Styles` to save your changes."
+msgstr ""
+

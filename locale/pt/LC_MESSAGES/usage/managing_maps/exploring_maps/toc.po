@@ -3,107 +3,123 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 20:59+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:4
 #: 14435f8a872e48ffb17cda803214b315
 msgid "Table of Contents (TOC)"
-msgstr ""
+msgstr "Índice (TOC)"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:6
 #: 1d93cddffbb3497e8a00ec912e8ac817
 msgid ""
 "In the upper left corner, click on |toc_button| to open the *Table Of "
-"Contents*, briefly *TOC* from now on, of the map. The *TOC* shows all the"
-" layers involved with the *Map* and allows to manage their properties and"
-" representations on the map."
+"Contents*, briefly *TOC* from now on, of the map. The *TOC* shows all the "
+"layers involved with the *Map* and allows to manage their properties and "
+"representations on the map."
 msgstr ""
+"No canto superior esquerdo, clique em |botão_toc| para abrir o *Índice*, "
+"abreviadamente *TOC* de agora em diante, do mapa. O *TOC* mostra todas as "
+"camadas envolvidas com o *Mapa* e permite gerir as suas propriedades e "
+"representações no mapa."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:28
 #: 85d856cbf7c14dd5a95487532b3cc64a
 msgid "*The Table Of Contents (TOC)*"
-msgstr ""
+msgstr "*O Índice (TOC)*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:30
 #: 469c1f580d8643c98e308321c06490d6
 msgid "From the *TOC* you can:"
-msgstr ""
+msgstr "A partir do *TOC* você pode:"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:32
 #: c2cda92241164252b2c9bd588855b400
 msgid "manage the layers *Overlap*;"
-msgstr ""
+msgstr "gerir a *Sobreposição* das camadas ;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:33
 #: 95a54c7ce11c4e3a90ef22bea55b60a2
 msgid "filter the layers list by typing text in the *Filter Layers* field;"
-msgstr ""
+msgstr "filtre a lista de camadas digitando texto no campo *Camadas de filtro*;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:34
 #: 60547c95074e4e9abf94087aba326d30
 msgid ""
-"add new layers from the *Catalog* by clicking the :guilabel:`Add Layer` "
-"button;"
+"add new layers from the *Catalog* by clicking the :guilabel:`Add Layer` button;"
 msgstr ""
+"adicione novas camadas do *Catálogo* clicando no botão :guilabel:`Adicionar "
+"Camada`;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:35
 #: cdfcf3d63f854f45add8366cc3a4d1d0
 msgid ""
-"manage the layers properties such as *Opacity* (scroll the opacity "
-"cursor), *Visibility* (click on |hide_button| to make the layer not "
-"visible, click on |show_button| to show it on map);"
+"manage the layers properties such as *Opacity* (scroll the opacity cursor), "
+"*Visibility* (click on |hide_button| to make the layer not visible, click on |"
+"show_button| to show it on map);"
 msgstr ""
+"gerir as propriedades das camadas como *Opacidade* (role o cursor de "
+"opacidade), *Visibilidade* (clique em |botão_ocultar| para tornar a camada "
+"invisível, clique em |botão_mostrar| para mostrá-la no mapa);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:36
 #: 1b3b6d09c79d43afb4a5657bc1347b7a
 msgid "manage the *Layer Settings*, see the next paragraph."
-msgstr ""
+msgstr "gerir as *Configurações de Camada*, consulte o próximo parágrafo."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:42
 #: 6f04076d0e35420b9c265f85590ce4ca
 msgid "*Scrolling the Layer Opacity*"
-msgstr ""
+msgstr "*Rolagem da Camada de Opacidade*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:44
 #: b0755c58e3eb4821adc4cda99aa13466
 msgid ""
-"Select a *Layer* from the list and click on it, the *Layer Toolbar* "
-"should appear in the *TOC*."
+"Select a *Layer* from the list and click on it, the *Layer Toolbar* should "
+"appear in the *TOC*."
 msgstr ""
+"Seleccione uma *Camada* da lista e clique nela, a *Barra de Ferramentas da "
+"Camada* deve aparecer no *TOC*."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:50
 #: bd384a7bf1e44c479d893c46c244484a
 msgid "*The Layer Toolbar*"
-msgstr ""
+msgstr "*A Barra de Ferramentas da Camada*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:77
 #: 9ac037762bd247ccbfc96c8d6bc51cdc
 msgid "The *Toolbar* shows you many buttons:"
-msgstr ""
+msgstr "A *Barra de Ferramentas* mostra muitos botões:"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:79
 #: 196dd65161174e4f99d966238ea1edab
 msgid "|zoom_to_layer_extent_button| allows you to zoom to the layer extent;"
 msgstr ""
+"|botão_fazer_zoom_para_extensão_da_camada| permite que você amplie até a "
+"extensão da camada;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:80
 #: 654cf11caabf4bf99f15be92124023ec
 msgid ""
-"|layer_settings_button| drives you through the layer settings "
-"customization (see the next paragraph);"
+"|layer_settings_button| drives you through the layer settings customization "
+"(see the next paragraph);"
 msgstr ""
+"|botão_definições_da_camada| o conduz através da personalização de "
+"configurações de camada (consulte o próximo parágrafo);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:81
 #: e7bb720ae2014cf7a8dd0f6c3377d5f9
@@ -111,105 +127,118 @@ msgid ""
 "|attribute_table_button| to explore the features of the layer and their "
 "attributes (more information at :ref:`attributes-table`);"
 msgstr ""
+"|botão_tabela_de_atributos| para explorar os recursos da camada e seus "
+"atributos (mais informações em :ref:`tabela-de-atributos`);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:82
 #: e6583acf1ba44864a24809354a8a09d9
 msgid ""
-"|delete_layer_button| to delete layers (click on :guilabel:`Delete Layer`"
-" to confirm your choice);"
+"|delete_layer_button| to delete layers (click on :guilabel:`Delete Layer` to "
+"confirm your choice);"
 msgstr ""
+"|botão_excluir_camada| para excluir camadas (clique em :guilabel:`Excluir "
+"Camada` para confirmar a sua escolha);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:87
 #: 50115e832d5947c380aa404155d76209
 msgid "*Deleting Layers*"
-msgstr ""
+msgstr "*Excluindo Camadas*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:89
 #: 1a5b32fc60024306b382a9f4f9268da9
 msgid "|create_widgets_button| to create *Widgets* (see :ref:`creating-widgets`)."
-msgstr ""
+msgstr "|botão criar_widgets| para criar *Widgets* (veja :ref:`criando-widgets`)."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:92
 #: 0a497ba78e864cb29124cbe6464cad9c
 msgid "Managing Layer Settings"
-msgstr ""
+msgstr "Fazendo a Gestão de Configurações de Camada"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:94
 #: c5d48f72d07c47e2a291faefc4294843
 msgid "The *Layer Settings* panel looks like the one below."
-msgstr ""
+msgstr "O painel *Configurações de Camada* é semelhante ao painel abaixo."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:100
 #: 25d02d1273c74a31b62d1a6c515c80e9
 msgid "*The Layer Settings Panel*"
-msgstr ""
+msgstr "*O Painel de Configurações de Camada*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:102
 #: fad013e2a79e4b4db24d7e164b72f625
 msgid "The *Layer Settings* are divided in three groups:"
-msgstr ""
+msgstr "As *Configurações de Camada* são divididas em três grupos:"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:104
 #: 6d319523721c49b3b173ccca782e9b16
 msgid "*General* settings"
-msgstr ""
+msgstr "Configurações *Gerais*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:105
 #: 2b226b8c56914690922e87f5f568c5cb
 msgid "*Display* settings"
-msgstr ""
+msgstr "Configurações do *Visualizador*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:106
 #: de872cc5491d40229e9289fc3b612b33
 msgid "*Style* settings"
-msgstr ""
+msgstr "Configurações de *Estilo*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:108
 #: cb05e8a137804590976aaa08c3080913
 msgid ""
-"In the **General** tab of the *Settings Panel* you can customize the "
-"layer *Title*, insert a *Description* and change/create the *Layer "
-"Group*."
+"In the **General** tab of the *Settings Panel* you can customize the layer "
+"*Title*, insert a *Description* and change/create the *Layer Group*."
 msgstr ""
+"Na guia **Geral** do *Painel de Configurações*, pode personalizar a camada "
+"*Título*, inserir uma *Descrição* e alterar/criar o *Grupo de Camadas*."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:110
 #: c8fd5c33c2d049f9ac4230f65657d32c
 msgid ""
-"Click on the **Display** tab to see what are the layer appearance "
-"properties you can configure."
+"Click on the **Display** tab to see what are the layer appearance properties "
+"you can configure."
 msgstr ""
+"Clique na guia **Display** para ver quais são as propriedades de aparência da "
+"camada que você pode configurar."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:116
 #: 1b50ec37c396486fa527b322f8acfafd
 msgid "*The Layer Display Settings Panel*"
-msgstr ""
+msgstr "*O Painel de Configurações de Exibição da Camada*"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:118
 #: 6360b92652e54a698b855fcce98dd801
 msgid ""
-"The *Format* field allows you to change the output format of the WMS "
-"requests."
+"The *Format* field allows you to change the output format of the WMS requests."
 msgstr ""
+"O campo *Formato* permite que você altere o formato de saída das solicitações "
+"WMS."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:119
 #: bf4da27f61a44148bc6173598ca37424
 msgid ""
-"You can set a numeric value of *Opacity* using the corresponding input "
-"field."
+"You can set a numeric value of *Opacity* using the corresponding input field."
 msgstr ""
+"Você pode definir um valor numérico de *Opacidade* usando o campo de entrada "
+"correspondente."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:120
 #: 86848a7d6b054c338323daaa5c1f11ac
 msgid ""
-"You can also set the layer as *Transparent*, decide to *Use cache "
-"options* and to use *Single Tile*."
+"You can also set the layer as *Transparent*, decide to *Use cache options* and "
+"to use *Single Tile*."
 msgstr ""
+"Você pode, também, definir a camada como *Transparente*, decidir *Usar opções "
+"de cache* e usar *Bloco Único*."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:122
 #: 42c17274a0534f9692d1a8b459c5fc6c
 msgid ""
-"The third tab is the **Style** one. By clicking on it, an advanced *Style"
-" Editor* allows you to create new styles and to modify or delete an "
-"existing one. See the :ref:`layer-style` section to read more."
+"The third tab is the **Style** one. By clicking on it, an advanced *Style "
+"Editor* allows you to create new styles and to modify or delete an existing "
+"one. See the :ref:`layer-style` section to read more."
 msgstr ""
-
+"A terceira guia é **Estilo**. Ao clicar nela, um *Editor de Estilos* avançado "
+"permite criar novos estilos e modificar ou excluir um existente. Veja a seção :"
+"ref:`estilo-de-camada` para ler mais."

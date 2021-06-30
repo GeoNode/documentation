@@ -3,64 +3,76 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 20:55+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:4
 #: a12cc3b93e8246aca223bf931e2b2574
 msgid "Exploring Maps"
-msgstr ""
+msgstr "Exploração de Mapas"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:6
 #: 183414db3b2d4e34a4ff04ff8d921054
 msgid ""
-"From the :guilabel:`Explore Maps` link of the navigation bar you can "
-"reach the *Maps List* page (see :ref:`finding-maps`). Select a map you "
-"are interested in and click on it, the *Map Page* will open."
+"From the :guilabel:`Explore Maps` link of the navigation bar you can reach "
+"the *Maps List* page (see :ref:`finding-maps`). Select a map you are "
+"interested in and click on it, the *Map Page* will open."
 msgstr ""
+"A partir do link :guilabel:`Explorar Mapas` da barra de navegação você pode "
+"acessar a página *Lista de Mapas* (veja :ref:`encontrando-mapas`). "
+"Seleccione um mapa de seu interesse e clique nele, a *Página do Mapa* será "
+"aberta."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:12
 #: c9046546f9464c058d9bc86f2b8b09bf
 msgid "*The View Map button*"
-msgstr ""
+msgstr "*O botão Exibir Mapa*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:14
 #: 870cbde5a4394406957b4c69c414c5ec
 msgid "Click on the :guilabel:`View Map` button to open the *Map Viewer*."
 msgstr ""
+"Clique no botão :guilabel:`Visualizar Mapa` para abrir o *Visualizador de "
+"Mapas*."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:19
 #: 27513a5ad6fa4df2a53cd9911e249f68
 msgid "*The Map View*"
-msgstr ""
+msgstr "*A Visualização do Mapa*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:21
 #: 25586452496c4a8cb48e43cb4e642425
 msgid ""
-"The Map Viewer (based on `MapStore <https://mapstore2.geo-"
-"solutions.it/mapstore/#/>`_) provides the following tools:"
+"The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/"
+"mapstore/#/>`_) provides the following tools:"
 msgstr ""
+"O Visualizador de Mapas (baseado em `MapStore <https://mapstore2.geo-"
+"solutions.it/mapstore/#/>`_) fornece as seguintes ferramentas:"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:23
 #: 35439999dd3640f8961e1a03ca97216e
 msgid "the :ref:`toc` to manage the map contents;"
-msgstr ""
+msgstr "o :ref:`toc` para gerir o conteúdo do mapa;"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:24
 #: bb07b391488a4a32bea99539fe5885ce
 msgid "the *Basemap Switcher* to change the basemap (see the next paragraphs);"
 msgstr ""
+"o *Comutador de mapa Base* para mudar o mapa base (veja os próximos "
+"parágrafos);"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:25
 #: ccaf3c9628be4cf3b707f907869d129a
@@ -68,20 +80,26 @@ msgid ""
 "the *Search Bar* to search by location, name and coordinates (see the "
 "paragraph below);"
 msgstr ""
+"a *Barra de Pesquisa* para pesquisar por localização, nome e coordenadas "
+"(veja o parágrafo abaixo);"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:26
 #: dbbcdb1c58824f1bbef99387c8baffdb
 msgid ""
-"the :ref:`options-menu-tools` which contains the link to the *Print* "
-"tool, to the layers *Catalog* and to the *Measure* tool;"
+"the :ref:`options-menu-tools` which contains the link to the *Print* tool, "
+"to the layers *Catalog* and to the *Measure* tool;"
 msgstr ""
+"o :ref:`ferramentas-do-menu-de-opções` que contém o link para a ferramenta "
+"*Imprimir*, para as camadas *Catálogo* e para a ferramenta *Medir*;"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:27
 #: b2fe074cf8a44029a24daa1b5cf3a705
 msgid ""
-"the *Sidebar* and its tools such as the *Zoom* tools and the *Get "
-"Features Info* tool;"
+"the *Sidebar* and its tools such as the *Zoom* tools and the *Get Features "
+"Info* tool;"
 msgstr ""
+"a *Barra lateral* e suas ferramentas, como as ferramentas *Zoom* e *Obter "
+"Informações sobre Recursos*;"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:28
 #: 589ae6edfb94485fabee3dfeb59238b2
@@ -89,11 +107,13 @@ msgid ""
 "the *Footer Tools* to manage the scale of the map, to track the mouse "
 "coordinates and change the CRS (Coordinates Reference System)."
 msgstr ""
+"as *Ferramentas de Rodapé* para gerir a escala do mapa, rastrear as "
+"coordenadas do mouse e alterar o CRS (Sistema de Referência de Coordenadas)."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:42
 #: 2b8ea3721bff4bc1b2053b53b7ca9687
 msgid "Search Bar"
-msgstr ""
+msgstr "Barra de Pesquisa"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:44
 #: e503e41bbc864c88bd89bbbbf9a3a5ec
@@ -101,34 +121,39 @@ msgid ""
 "The *Search Bar* of the map viewer allows you to find point of interests "
 "(POIs), streets or locations by name."
 msgstr ""
+"A *Barra de Pesquisa* do visualizador do mapa permite que você encontre "
+"pontos de interesse (POIs), ruas ou locais por nome."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:45
 #: 365fcadac2754f2884de801e6ae4f464
 msgid "Lets type the name of some place then select the first record."
-msgstr ""
+msgstr "Vamos digitar o nome de algum lugar e seleccionar o primeiro registro."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:50
 #: 6ad846a79b1448a98a9df775b7b8b4c5
 msgid "*The Search Bar*"
-msgstr ""
+msgstr "*A barra de Pesquisa*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:52
 #: ee7d31efed7f4aad90f1065e5808a595
 msgid ""
-"The map will automatically re-center on that area delimiting it by a "
-"polygon in the case of an area, by a line in the case of a linear shape "
-"(e.g. streets, streams) and by a marker in the case of a point."
+"The map will automatically re-center on that area delimiting it by a polygon "
+"in the case of an area, by a line in the case of a linear shape (e.g. "
+"streets, streams) and by a marker in the case of a point."
 msgstr ""
+"O mapa será automaticamente centralizado nessa área, delimitando-a por um "
+"polígono no caso de uma área, por uma linha no caso de uma forma linear (por "
+"exemplo, ruas, riachos) e por um marcador no caso de um ponto."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:57
 #: a31cd04fd6c34d92b33a07c461f9f44d
 msgid "*Result of a Search*"
-msgstr ""
+msgstr "*Resultado de uma Pesquisa*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:62
 #: 47b21aeb408d4c5b9c5786a7c23e90d4
 msgid "Sidebar Tools"
-msgstr ""
+msgstr "Ferramentas da Barra Lateral"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:110
 #: 927897370aea4f8385c6378710abf73c
@@ -137,43 +162,53 @@ msgid ""
 "panel containing various tools that help you to explore the map such as "
 "tools for zooming, changing the extent and querying objects on the map."
 msgstr ""
+"O *Visualizador de Mapas* disponibiliza também a *Barra Lateral*. É um "
+"painel de navegação que contém várias ferramentas que o ajudam a explorar o "
+"mapa, como ferramentas de zoom, alteração de extensão e consulta de objectos "
+"no mapa."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:111
 #: d8f8ed6769264fb097f05252b4083dc2
 msgid ""
-"By default the *Sidebar* shows you the zooming buttons |zoom_in_button| "
-"and |zoom_out_button|, other options can be explored by clicking on "
-"|sidebar_expand_button| which expands/collapses the toolbar."
+"By default the *Sidebar* shows you the zooming buttons |zoom_in_button| and |"
+"zoom_out_button|, other options can be explored by clicking on |"
+"sidebar_expand_button| which expands/collapses the toolbar."
 msgstr ""
+"Por padrão, a *Barra Lateral* mostra os botões de zoom |botão_zoom_in| e |"
+"botão_zoom_out|, outras opções podem ser exploradas clicando em |"
+"botão_expandir_barra_lateral| que expande/colapsa a barra de ferramentas."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:117
 #: b3259a66d0ce4ad9a3b3b9acd96383c4
 msgid "*The Default Sidebar*"
-msgstr ""
+msgstr "*A Barra lateral Padrão*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:123
 #: 428ec239eb35480a8c38d8c1bf721052
 msgid "*The Expanded Sidebar*"
-msgstr ""
+msgstr "*A Barra lateral Expandida*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:125
 #: 555955666f694765aab01cb1b41c7f46
 msgid "The *Sidebar* contains the following tools:"
-msgstr ""
+msgstr "A *Barra lateral* contém as seguintes ferramentas:"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:127
 #: d82731d2f0d443f1aeb30cc1aaf806a3
 msgid ""
-"The *Query Objects on map* allows you to get feature information through "
-"the |query_objects_on_map_button| button. It allows you to retrieve "
-"information about the features of some layers by clicking them directly "
-"on the map."
+"The *Query Objects on map* allows you to get feature information through the "
+"|query_objects_on_map_button| button. It allows you to retrieve information "
+"about the features of some layers by clicking them directly on the map."
 msgstr ""
+"A *Consulta de Objectos no Mapa* permite que você obtenha informações de "
+"características através do botão |botão_consultar_objectos_no_mapa| . Ele "
+"permite que você recupere informações sobre os recursos de algumas camadas "
+"clicando nelas diretamente no mapa."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:133
 #: 132069702a5846e7a245d6cae88f4754
 msgid "*Querying Objects on map*"
-msgstr ""
+msgstr "*Consultando Objectos no mapa*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:135
 #: 21e2679addc84ce1ab011145adaa0748
@@ -181,19 +216,24 @@ msgid ""
 "When clicking on map a new panel opens. That panel will show you all the "
 "information about the clicked features for each active loaded layer."
 msgstr ""
+"Ao clicar no mapa, um novo painel é aberto. Esse painel mostrará todas as "
+"informações sobre os recursos clicados para cada camada activa carregada."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:137
 #: 5b6730b9599c41e3b1e35250a3bcbab5
 msgid "You can *Zoom To Max Extent* by clicking |zoom_to_max_extent_button|."
 msgstr ""
+"Você pode fazer *Zoom na Extensão Máxima* clicando em |"
+"botão_zoom_para_extenção_máxima|."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:139
 #: a5b353e5bc2049baa93660b033d635c4
 msgid ""
-"You can switch between the previous and the next zoom level through the "
-"*Go Back* button |go_back_button| and the *Go Forward* one "
-"|go_forward_button|."
+"You can switch between the previous and the next zoom level through the *Go "
+"Back* button |go_back_button| and the *Go Forward* one |go_forward_button|."
 msgstr ""
+"Você pode alternar entre o nível de zoom anterior e o próximo por meio do "
+"botão *Voltar* |botão_voltar| e o *Avançar* |botão_avançar|."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:141
 #: 6275382c8ea94be8a122f0cf60069676
@@ -201,74 +241,82 @@ msgid ""
 "The *Switch to Full Screen* |full_screen_button| button allows to have a "
 "full screen map."
 msgstr ""
+"O botão *Mudar para Tela Inteira* |botão_tela_inteira| permite ter um mapa "
+"em tela cheia."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:146
 #: 5422c2f54ce64f41870344c29fd36863
 msgid "Basemap Switcher"
-msgstr ""
+msgstr "Comutador de Mapa base"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:148
 #: 45869caf43c345c99d9076a5d084224d
 msgid "By default, GeoNode allows to enrich maps with many world backgrounds:"
 msgstr ""
+"Por padrão, o GeoNode permite enriquecer mapas com muitos fundos do tipo "
+"mundo:"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:150
 #: 481174f52a044c828522201f204d65ec
 msgid "*OpenStreetMap*"
-msgstr ""
+msgstr "*OpenStreetMap*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:151
 #: c6f786db361141e8ba11f9479577519d
 msgid "*OpenTopoMap*"
-msgstr ""
+msgstr "*OpenTopoMap*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:152
 #: 1bcdab6147804651b71f644f343279ed
 msgid "*Sentinel-2-cloudless*"
-msgstr ""
+msgstr "*Sentinel-2-cloudless*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:158
 #: 513cef04c22d4805a749f48faf156d8c
 msgid "*The Basemap Switcher Tool*"
-msgstr ""
+msgstr "*A Ferramenta Basemap Switcher*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:160
 #: 661fd2da926c432583aa9ecf168a92b2
 msgid "You can also decide to have an *Empty Background*."
-msgstr ""
+msgstr "Você pode, também, decidir ter um *Fundo vazio*."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:166
 #: 89cb94627da84ffa93da24d89b3ea87f
 msgid "*Switching the Basemap*"
-msgstr ""
+msgstr "*Mudando o Mapa Base*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:169
 #: 15c43a54f27c43159d842544bd4f2fcf
 msgid "Footer Tools"
-msgstr ""
+msgstr "Ferramentas de Rodapé"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:171
 #: a2df4739f6d147ac9d5c94a368b15442
 msgid ""
-"At the bottom of the map, the *Footer* shows you the *Scale* of the map "
-"and allows you to change it."
+"At the bottom of the map, the *Footer* shows you the *Scale* of the map and "
+"allows you to change it."
 msgstr ""
+"Na parte inferior do mapa, o *Rodapé* mostra a *Escala* do mapa e permite "
+"que você a altere."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:177
 #: 8f32b30ac25d4583991242f7a576e140
 msgid "*The Map Scale*"
-msgstr ""
+msgstr "*A Escala do Mapa*"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:179
 #: 9aa45ae3654d4853bbb75b8be23f43af
 msgid ""
 "The |show_hide_coordinates_button| button allows you to see the pointer "
-"*Coordinates* and to change the Coordinates Reference System (CRS), WGS "
-"84 by default."
+"*Coordinates* and to change the Coordinates Reference System (CRS), WGS 84 "
+"by default."
 msgstr ""
+"O botão |botão_ocultar_mostrar_coordenadas| permite que veja o ponteiro "
+"*Coordenadas* e altere o Sistema de Referência de Coordenadas (CRS), WGS 84 "
+"por padrão."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:184
 #: f67244318eeb4869bc98aa6f257a3d00
 msgid "*The Pointer Coordinates and the CRS*"
-msgstr ""
-
+msgstr "*As Coordenadas do Ponteiro e o CRS *"

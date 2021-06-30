@@ -3,265 +3,311 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 19:29+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/managing_documents/document_info.rst:4
 #: c5e19edff325497987377649baafeda9
 msgid "Document Information"
-msgstr ""
+msgstr "Informação do Documento"
 
 #: ../../usage/managing_documents/document_info.rst:6
 #: 30f9dbd16f214265bb10cdf5cbe720a5
 msgid ""
-"From the *Documents Search Page* (see :ref:`finding-documents`) you can "
-"select the document you are interested in and see some basic information "
-"about it. You can access the document details page by clicking on its "
-"name. That page looks like the one shown in the picture below."
+"From the *Documents Search Page* (see :ref:`finding-documents`) you can select "
+"the document you are interested in and see some basic information about it. "
+"You can access the document details page by clicking on its name. That page "
+"looks like the one shown in the picture below."
 msgstr ""
+"Na *Página de Pesquisa de Documentos* (veja :ref:`pesquisando-documentos`) "
+"você pode seleccionar o documento no qual está interessado e ver algumas "
+"informações básicas sobre ele. Você pode acessar a página de detalhes do "
+"documento clicando em seu nome. Essa página se parece com a mostrada na imagem "
+"abaixo."
 
 #: ../../usage/managing_documents/document_info.rst:12
 #: 91690eab6a9b41e18901ed290ca131f9
 msgid "*Document Information page*"
-msgstr ""
+msgstr "*Página de Informações do documento*"
 
 #: ../../usage/managing_documents/document_info.rst:14
 #: 3c08eb50b74e40388aefd9668d9d13ff
 msgid ""
-"On the page of a document, the resource is either directly displayed on "
-"the page or accessible by clicking on the link provided under the title."
+"On the page of a document, the resource is either directly displayed on the "
+"page or accessible by clicking on the link provided under the title."
 msgstr ""
+"Na página de um documento, o recurso é exibido directamente na página ou "
+"acessível clicando no link fornecido sob o título."
 
 #: ../../usage/managing_documents/document_info.rst:17
 #: 0c9fa7b4fc484c4ca895c5f81860a830
 msgid "Exploring the Tabs Sections"
-msgstr ""
+msgstr "Explorando as Secções das Guias"
 
 #: ../../usage/managing_documents/document_info.rst:19
 #: e34dfb3703f74cf3ad3b66b6dca35104
 msgid ""
-"There is a *Tab Section* below the document, where you can first view "
-"*Info* about the document."
+"There is a *Tab Section* below the document, where you can first view *Info* "
+"about the document."
 msgstr ""
+"Há uma *Secção de Guia* abaixo do documento, onde você pode primeiro ver "
+"*Informações* sobre o documento."
 
 #: ../../usage/managing_documents/document_info.rst:21
 #: 4aaad5b8c84c43d193b84b593f7736c8
 msgid ""
 "The **Info Tab** section shows the document metadata such as its title, "
-"abstract, date of publication etc. The metadata also indicates the user "
-"who is responsible for uploading and managing this content, as well as "
-"the group to which it is linked."
+"abstract, date of publication etc. The metadata also indicates the user who is "
+"responsible for uploading and managing this content, as well as the group to "
+"which it is linked."
 msgstr ""
+"A secção **Guia de Informações** mostra os metadados do documento, como "
+"título, resumo, data de publicação, etc. Os metadados também indicam o usuário "
+"responsável por enviar e fazer a gestão desse conteúdo, bem como o grupo ao "
+"qual ele está vinculado ."
 
 #: ../../usage/managing_documents/document_info.rst:23
 #: f4e311ce7cbb43819a404dac9faf3824
 msgid ""
-"The **Share Tab** provides the social media links for the document to "
-"share. There is also a link to share the document through email."
+"The **Share Tab** provides the social media links for the document to share. "
+"There is also a link to share the document through email."
 msgstr ""
+"A **Guia Compartilhar** fornece os links de mídia social para o documento por "
+"compartilhar. Também existe um link para compartilhar o documento por e-mail."
 
 #: ../../usage/managing_documents/document_info.rst:28
 #: 56b197458445429989b71e01b0092ceb
 msgid "*Document Sharing*"
-msgstr ""
+msgstr "*Partilha de Documentos*"
 
 #: ../../usage/managing_documents/document_info.rst:30
 #: 5ab1a316dbaa45d29ec8f366beb1bb27
 msgid "You can **Rate** the document through the *Ratings system*."
 msgstr ""
+"Você pode **Classificar** o documento por meio do *Sistema de Classificações*."
 
 #: ../../usage/managing_documents/document_info.rst:35
 #: d4ab49de818748ed866b2fb113d11902
 msgid "*Rate the Document*"
-msgstr ""
+msgstr "*Classifique o Documento*"
 
 #: ../../usage/managing_documents/document_info.rst:37
 #: a6d4efecaadf4dd39c775fa19abd52fe
 msgid ""
-"In the **Comments Tab** section you can post your comment. Click on "
-":guilabel:`Add Comment`, insert your comment and click :guilabel:`Submit "
-"Comment` to post it."
+"In the **Comments Tab** section you can post your comment. Click on :guilabel:"
+"`Add Comment`, insert your comment and click :guilabel:`Submit Comment` to "
+"post it."
 msgstr ""
+"Na secção **Guia de Comentários** você pode postar seu comentário. Clique em :"
+"guilabel:`Adicionar Comentário`, insira seu comentário e clique em :guilabel:"
+"`Submeter Comentário` para postá-lo."
 
 #: ../../usage/managing_documents/document_info.rst:42
 #: 0abe2e2461654936a3a98ca2ab0fa8d7
 msgid "*Document Comments*"
-msgstr ""
+msgstr "*Comentários do Documento*"
 
 #: ../../usage/managing_documents/document_info.rst:44
 #: 646495274d2c420abaead869edb7b38a
 msgid ""
-"Your comment will be added next to the last already existing comment. If "
-"you want to remove it click on the red :guilabel:`Delete` button."
+"Your comment will be added next to the last already existing comment. If you "
+"want to remove it click on the red :guilabel:`Delete` button."
 msgstr ""
+"Seu comentário será adicionado ao lado do último comentário já existente. Se "
+"você deseja removê-lo, clique no botão vermelho :guilabel:`Excluir`."
 
 #: ../../usage/managing_documents/document_info.rst:49
 #: 33a88cf22c9a484eae9937d8bede711e
 msgid "*Your Comment*"
-msgstr ""
+msgstr "*Seu Comentário*"
 
 #: ../../usage/managing_documents/document_info.rst:51
 #: 6def1c6cefc344cb8206d23866841bff
 msgid ""
-"If you want this document in your *Favorites* (see :ref:`editing-"
-"profile`), open the **Favorite Tab** and click on :guilabel:`Add to "
-"Favorites`."
+"If you want this document in your *Favorites* (see :ref:`editing-profile`), "
+"open the **Favorite Tab** and click on :guilabel:`Add to Favorites`."
 msgstr ""
+"Se você deseja este documento nos seus *Favoritos* (veja :ref:`edição-de-"
+"perfil`), abra a **Guia Favoritos** e clique em :guilabel:`Adicionar aos "
+"Favoritos`."
 
 #: ../../usage/managing_documents/document_info.rst:56
 #: f3fab9a5307747dea3c86dbd9c909e58
 msgid "*Your Favorite Comment*"
-msgstr ""
+msgstr "*Seu Comentário Favorito*"
 
 #: ../../usage/managing_documents/document_info.rst:58
 #: 7e8c933fd8a2408a894188cfb433087a
 msgid ""
-"GeoNode also supports the *EXIF (EXchangeable Image Format)* for ``jpeg``"
-" and ``tiff`` image documents. The *EXIF* means that additional "
-"information (metadata) are stored within the image, so GeoNode allows you"
-" to see those information in the **Exif Tab**."
+"GeoNode also supports the *EXIF (EXchangeable Image Format)* for ``jpeg`` and "
+"``tiff`` image documents. The *EXIF* means that additional information "
+"(metadata) are stored within the image, so GeoNode allows you to see those "
+"information in the **Exif Tab**."
 msgstr ""
+"GeoNode também suporta o *EXIF (EXchangeable Image Format)* para documentos de "
+"imagem ``jpeg`` e `` tiff``. O *EXIF* significa que informações adicionais "
+"(metadados) são armazenadas na imagem, então o GeoNode permite que você veja "
+"essas informações na **Guia Exif**."
 
 #: ../../usage/managing_documents/document_info.rst:64
 #: af88ef35c7504cafb291e07879e8ffef
 msgid "*The EXIF tab*"
-msgstr ""
+msgstr "*A guia EXIF*"
 
 #: ../../usage/managing_documents/document_info.rst:67
 #: 479582dacc4443aa8605974669fa0b35
 msgid "The Tools Section"
-msgstr ""
+msgstr "A Secção Ferramentas"
 
 #: ../../usage/managing_documents/document_info.rst:69
 #: 48fb0bde6bae4f68b9a1b3df492c4f15
 msgid ""
-"On the right side of the *Document Page* you can see other useful "
-"information such as the links to the resources linked to the document, "
-"the document *Owner*, the *Point of Contact* and the *Metadata Author*."
+"On the right side of the *Document Page* you can see other useful information "
+"such as the links to the resources linked to the document, the document "
+"*Owner*, the *Point of Contact* and the *Metadata Author*."
 msgstr ""
+"No lado direito da *Página do Documento* você pode ver outras informações "
+"úteis, como os links para os recursos vinculados ao documento, o documento "
+"*Proprietário*, o *Ponto de Contacto* e o *Autor de Metadados*."
 
 #: ../../usage/managing_documents/document_info.rst:74
 #: d61f6b766eec4eb6843afeeb9325ae79
 msgid "*Document useful tool*"
-msgstr ""
+msgstr "*Documentar ferramenta útil*"
 
 #: ../../usage/managing_documents/document_info.rst:76
 #: b74f35c592ae4066a48c4b99ca2b9175
 msgid ""
-"In the same section of the *Document Page* you can find the following "
-"useful tool:"
+"In the same section of the *Document Page* you can find the following useful "
+"tool:"
 msgstr ""
+"Na mesma secção da *Página do Documento*, você pode encontrar a seguinte "
+"ferramenta útil:"
 
 #: ../../usage/managing_documents/document_info.rst:78
 #: f041d8e432624beead4987d72b8fa486
 msgid ""
-":guilabel:`Metadata Detail` to explore in detail the document metadata "
-"(see the next paragraph)"
+":guilabel:`Metadata Detail` to explore in detail the document metadata (see "
+"the next paragraph)"
 msgstr ""
+":guilabel:`Detalhe de Metadados` para explorar em detalhes os metadados do "
+"documento (veja o próximo parágrafo)"
 
 #: ../../usage/managing_documents/document_info.rst:79
 #: 398f4e893af145ed817bfc453b09a4f8
 msgid ":guilabel:`Download Document` to download the document"
-msgstr ""
+msgstr ":guilabel:`Baixar Documento` para baixar o documento"
 
 #: ../../usage/managing_documents/document_info.rst:80
 #: f4a1515c876d4a6fb736c2848007b0da
 msgid ""
-":guilabel:`Edit Document` to change the document metadata, replace the "
-"file etc (see :ref:`document-editing`)"
+":guilabel:`Edit Document` to change the document metadata, replace the file "
+"etc (see :ref:`document-editing`)"
 msgstr ""
+":guilabel:`Editar Documento` para alterar os metadados do documento, "
+"substituir o arquivo etc (veja :ref:`edição-de-documento`)"
 
 #: ../../usage/managing_documents/document_info.rst:81
 #: 89fc49e2e507499c9abfb1532375b21e
 msgid ""
-":guilabel:`Download Metadata` to download the whole set of metadata in "
-"various formats"
+":guilabel:`Download Metadata` to download the whole set of metadata in various "
+"formats"
 msgstr ""
+":guilabel:`Baixar Metadados` para baixar todo o conjunto de metadados em "
+"vários formatos"
 
 #: ../../usage/managing_documents/document_info.rst:86
 #: 380155ae194248bfaeb9b0cf5e368045
 msgid "*Document Metadata download*"
-msgstr ""
+msgstr "*Baixar Metadados de Documentos*"
 
 #: ../../usage/managing_documents/document_info.rst:88
 #: b8c42022500140f4a4dd39607a3fde0b
 msgid ""
-":guilabel:`Change Document Permissions` to assign permissions on the "
-"document to users and groups (see :ref:`edit-document-permissions`)."
+":guilabel:`Change Document Permissions` to assign permissions on the document "
+"to users and groups (see :ref:`edit-document-permissions`)."
 msgstr ""
+":guilabel:`Alterar Permissões do Documento` para atribuir permissões no "
+"documento a usuários e grupos (veja :ref:`editar-permissões-do-documento`)."
 
 #: ../../usage/managing_documents/document_info.rst:91
 #: 29d98d66997845d5bde3a9056726ac77
 msgid "Exploring Metadata Details"
-msgstr ""
+msgstr "Explorando Detalhes de Metadados"
 
 #: ../../usage/managing_documents/document_info.rst:93
 #: 44df75813ffb4f58b4666b5fd0439716
 msgid ""
-"When clicking on the :guilabel:`Metadata Detail` button the *Metadata "
-"Details Page* will open."
+"When clicking on the :guilabel:`Metadata Detail` button the *Metadata Details "
+"Page* will open."
 msgstr ""
+"Ao clicar no botão :guilabel: `Detalhe de Metadados` a *Página de Detalhes de "
+"Metadados* será aberta."
 
 #: ../../usage/managing_documents/document_info.rst:98
 #: 413b9a9b15dc440f9f093a9c87c8b11f
 msgid "*Document Metadata Details page*"
-msgstr ""
+msgstr "*Página de Detalhes de Metadados do Documento *"
 
 #: ../../usage/managing_documents/document_info.rst:100
 #: ac9658c86d8d4e91a7f27c459348d7c3
 msgid "It displays the whole set of available metadata about the document."
-msgstr ""
+msgstr "Ele exibe todo o conjunto de metadados disponíveis sobre o documento."
 
 #: ../../usage/managing_documents/document_info.rst:101
 #: 4e824926f65746fea5cf009fd7e97df3
 msgid "Metadata are grouped in order to show the following types of information:"
 msgstr ""
+"Os metadados são agrupados para mostrar os seguintes tipos de informações:"
 
 #: ../../usage/managing_documents/document_info.rst:103
 #: 4f94dd6d47c64bb69b157ae88ed8e337
 msgid "*Identification* to uniquely identify the document"
-msgstr ""
+msgstr "*Identificação* para identificar exclusivamente o documento"
 
 #: ../../usage/managing_documents/document_info.rst:104
 #: 882e1762d13244309929e31a6502fe1d
 msgid "*Owner*, the user who own the document"
-msgstr ""
+msgstr "*Proprietário*, o usuário que proprietário do documento"
 
 #: ../../usage/managing_documents/document_info.rst:105
 #: 53a1c2b3d25e484098ca930e554f43ab
 msgid ""
-"*Information*, the identification image, the Spatial Extent, Projection "
-"System and so on"
+"*Information*, the identification image, the Spatial Extent, Projection System "
+"and so on"
 msgstr ""
+"*Informações*, a imagem de identificação, a extensão espacial, sistema de "
+"projecção e assim por diante"
 
 #: ../../usage/managing_documents/document_info.rst:106
 #: 321890732794482f996cd2f625da84d4
 msgid "*Features*, Restrictions, Language and so on"
-msgstr ""
+msgstr "*Recursos*, restrições, Idioma e assim por diante"
 
 #: ../../usage/managing_documents/document_info.rst:107
 #: e0f4a9c586e64c358ce2d2fdc742d1d3
 msgid "*Contact Points*, the user available to have a contact"
-msgstr ""
+msgstr "*Pontos de Contacto*, o usuário disponível para ter um contacto"
 
 #: ../../usage/managing_documents/document_info.rst:108
 #: 1bb98e46454f4efb91507980daa1c184
 msgid "*References*, various links to the resource information"
-msgstr ""
+msgstr "*Referências*, vários links para as informações de recurso"
 
 #: ../../usage/managing_documents/document_info.rst:109
 #: c72ac1f204be450dadf295928a6c31f7
 msgid "*Metadata Author*, the metadata author information"
-msgstr ""
-
+msgstr "*Autor de Metadados*, as informações do autor de metadados"

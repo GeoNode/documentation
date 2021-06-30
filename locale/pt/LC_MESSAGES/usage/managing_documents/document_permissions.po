@@ -3,24 +3,26 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-27 15:01+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/managing_documents/document_permissions.rst:4
 #: 6ad77e1a850349b59f503fcd29620fe0
 msgid "Changing the Document Permissions"
-msgstr ""
+msgstr "Alterando as Permissões do Documento"
 
 #: ../../usage/managing_documents/document_permissions.rst:6
 #: 9e31a4425d6a4291b66906216eeb3cad
@@ -30,6 +32,11 @@ msgid ""
 "download a document. However, the document responsible can choose to "
 "limit access to the document to some contributors and/or groups."
 msgstr ""
+"GeoNode incentiva publicamente, compartilhar e disponibilizar para "
+"download as informações carregadas na plataforma. Por padrão, qualquer "
+"pessoa pode ver e baixar um documento. No entanto, o responsável pelo "
+"documento pode optar por limitar o acesso ao documento a alguns "
+"colaboradores e/ou grupos."
 
 #: ../../usage/managing_documents/document_permissions.rst:8
 #: 79914b8089bf48088c82230fa836e740
@@ -37,11 +44,13 @@ msgid ""
 "Through the button shown in the picture below it is possible to manage "
 "the document permissions."
 msgstr ""
+"Através do botão mostrado na figura abaixo é possível fazer a gestão das "
+"permissões do documento."
 
 #: ../../usage/managing_documents/document_permissions.rst:13
 #: 2fbc62ea169846cabf1ff6ffad55aea7
 msgid "*The button to change permissions*"
-msgstr ""
+msgstr "*O botão para alterar as permissões*"
 
 #: ../../usage/managing_documents/document_permissions.rst:15
 #: 1b3e6601961543fc880f433beec159ff
@@ -49,36 +58,40 @@ msgid ""
 "The :guilabel:`Change Document Permissions` button on the right side of "
 "the document page allows to set up who can:"
 msgstr ""
+"O botão :guilabel:`Alterar Permissões do Documento` no lado direito da "
+"página do documento permite definir quem pode:"
 
 #: ../../usage/managing_documents/document_permissions.rst:17
 #: cd3b2fe3a864466c8140ac625bdcb885
 msgid "View the document;"
-msgstr ""
+msgstr "Ver o documento;"
 
 #: ../../usage/managing_documents/document_permissions.rst:18
 #: 6510b7f2b7b841038a04fa5710ed0d02
 msgid "Download it;"
-msgstr ""
+msgstr "Baixá-lo;"
 
 #: ../../usage/managing_documents/document_permissions.rst:19
 #: 6db46588e0644c7a99475eb502a52da3
 msgid "Edit its metadata;"
-msgstr ""
+msgstr "Editar os seus metadados;"
 
 #: ../../usage/managing_documents/document_permissions.rst:20
 #: e94f72fd0527403b95f5fb5b5eb6fe40
 msgid "Manage it (update, delete, change permissions, publish/unpublish)."
 msgstr ""
+"Fazer a gestão (actualizar, excluir, alterar permissões, publicar/"
+"cancelar publicação)."
 
 #: ../../usage/managing_documents/document_permissions.rst:22
 #: 564d20d72fe743f693078a8c44a7694d
 msgid "See an example in the picture below."
-msgstr ""
+msgstr "Veja um exemplo na imagem abaixo."
 
 #: ../../usage/managing_documents/document_permissions.rst:27
 #: 539991c7c7834278b0d372dadb1c0544
 msgid "*Changing the Document permissions*"
-msgstr ""
+msgstr "*Alterando as Permissões do documento*"
 
 #: ../../usage/managing_documents/document_permissions.rst:29
 #: 1af38902a8c0473192977cfc50349c3b
@@ -87,6 +100,9 @@ msgid ""
 "charge of the responsible of the document, i.e. the contributor who "
 "uploaded it and who has those permissions by default."
 msgstr ""
+"Normalmente, a edição de metadados e a gestão de um documento ficam a "
+"cargo do responsável pelo documento, ou seja, o colaborador que o "
+"carregou e quem tem essas permissões por defeito."
 
 #: ../../usage/managing_documents/document_permissions.rst:31
 #: 886e6843d40a440cbb9897fc06a84be1
@@ -94,4 +110,5 @@ msgid ""
 "Once the permissions are set, click :guilabel:`Apply changes` to save "
 "them."
 msgstr ""
-
+"Depois de definir as permissões, clique em :guilabel:`Aplicar "
+"alterações` para salvá-las."

@@ -3,24 +3,26 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 18:33+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:2
 #: e40d55137173485186cd51d4fe48b022
 msgid "Creating a New Account"
-msgstr ""
+msgstr "Criação de uma Nova Conta"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:4
 #: c036ad9cb03d45c583528b218396fbfd
@@ -28,6 +30,9 @@ msgid ""
 "To take full advantage of all the GeoNode features you need an user "
 "account. Follow these step to create a new one."
 msgstr ""
+"Para tirar o máximo proveito de todos os recursos do GeoNode, você "
+"precisa de uma conta de utilizador. Siga estes passos para criar uma "
+"nova conta."
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:6
 #: ce63292220b4435d8c62ed1be10bb323
@@ -35,19 +40,24 @@ msgid ""
 "From any page in the web interface, you will see a :guilabel:`Register` "
 "link. Click that link, and the register form will appear"
 msgstr ""
+"Em qualquer página da interface da web, você verá um link :guilabel:"
+"`Registar`. Clique nesse link e o formulário de registo irá aparecer"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:8
 #: 0d3930b76a4e4fb0ad26de41f93c4406
 msgid ""
 "The registrations in GeoNode must be open, in case you don't see the "
-"register link then it's not possible to register unless the administrator"
-" of the site does that for you."
+"register link then it's not possible to register unless the "
+"administrator of the site does that for you."
 msgstr ""
+"Os registos no GeoNode devem ser abertos, caso não veja o link de "
+"registo, então não é possível se registar a menos que o administrador do "
+"site o faça para si."
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:13
 #: 7c97fa49d7024352aae812015d9b0e20
 msgid "*Sign in screen*"
-msgstr ""
+msgstr "*Tela de login*"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:15
 #: 6cdf78933f6f49e3b15f49b0b355ba1f
@@ -55,11 +65,14 @@ msgid ""
 "On the next page, fill out the form. Enter a user name and password in "
 "the fields. Also, enter your email address for verification."
 msgstr ""
+"Na próxima página, preencha o formulário. Insira um nome de utilizador e "
+"senha nos campos. Além disso, insira seu endereço de e-mail para "
+"verificação."
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:20
 #: 03f297a3030b4608945367ed8ce4f730
 msgid "*Registering for a new account*"
-msgstr ""
+msgstr "*Registando-se para uma nova conta*"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:22
 #: 87829541ceb64fcda172e5db661d1923
@@ -69,29 +82,32 @@ msgid ""
 "occur during the registration, the following alerts will appear on the "
 "screen:"
 msgstr ""
+"Você será automaticamente conectado e redirecionado para a página de "
+"Perfil. Um e-mail será enviado a confirmar a sua inscrição. Se nenhum "
+"erro ocorrer durante o registo, os seguintes alertas irão aparecer na "
+"tela:"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:27
 #: ef8f9ff2746f4e4682c2dbfcd81c97b2
 msgid "*Alerts*"
-msgstr ""
+msgstr "*Alertas*"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:29
 #: 2a177f32ab2941c498b3dc2fdbae51b2
 msgid "To logout click on the :guilabel:`Log out` link of the user menu."
-msgstr ""
+msgstr "Para sair, clique no link :guilabel:`Sair` do menu do utilizador."
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:34
 #: 2e3cd0211486407a956f5248809513c3
 msgid "*Logout link*"
-msgstr ""
+msgstr "*Link de logout*"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:36
 #: 8c410bc330b248ed8967de1a1a7e5803
 msgid "You have to confirm this action as described in the picture below."
-msgstr ""
+msgstr "Você deve confirmar esta acção conforme descrito na imagem abaixo."
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:41
 #: 6816ac72dcfc461c8082a7e54d0d7c5b
 msgid "*Confirm Log out*"
-msgstr ""
-
+msgstr "*Confirmar Sair*"

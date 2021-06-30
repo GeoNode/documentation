@@ -3,37 +3,43 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 20:37+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/managing_layers/using_remote_services.rst:2
 #: 2eb7d02d802e4d2ca159c262b737a566
 msgid "Using Remote Services"
-msgstr ""
+msgstr "Usando Serviços Remotos"
 
 #: ../../usage/managing_layers/using_remote_services.rst:4
 #: a39e9950cffc4473bce0f705ca59b902
 msgid ""
-"In GeoNode you can add new layers not only by loading them from your disk"
-" but also using *Remote Services*. In this section you will learn how to "
+"In GeoNode you can add new layers not only by loading them from your disk "
+"but also using *Remote Services*. In this section you will learn how to "
 "add a new service and how to load resources in GeoNode through that."
 msgstr ""
+"No GeoNode você pode adicionar novas camadas não apenas carregando-as do "
+"seu disco, mas também usando *Serviços Remotos*. Nesta secção, você "
+"aprenderá como adicionar um novo serviço e como carregar recursos no "
+"GeoNode através dele."
 
 #: ../../usage/managing_layers/using_remote_services.rst:7
 #: 5114f59a80cc4dec8fae501fc0f4b66c
 msgid "Let's try it!"
-msgstr ""
+msgstr "Vamos experimentar!"
 
 #: ../../usage/managing_layers/using_remote_services.rst:9
 #: eb4cc7af814f47f9a4355acdbc015150
@@ -41,74 +47,85 @@ msgid ""
 "Click on the :guilabel:`Remote Services` link of the :guilabel:`Data` "
 "menu in the navigation bar."
 msgstr ""
+"Clique no link :guilabel:`Serviços Remotos` do menu :guilabel:`Dados` na "
+"barra de navegação."
 
 #: ../../usage/managing_layers/using_remote_services.rst:14
 #: 4008f55b6e0043aa90f3b3af9ab9229f
 msgid "*Remote Services link*"
-msgstr ""
+msgstr "*Link de Serviços Remotos*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:16
 #: e69331b0155348dcb097a11ae44cb858
 msgid "The page that opens will contain the list of the available services."
-msgstr ""
+msgstr "A página que se abre irá conter a lista dos serviços disponíveis."
 
 #: ../../usage/managing_layers/using_remote_services.rst:21
 #: 5f9a780b62bd4c92bd2ed7e53bc361cb
 msgid "*Remote Services*"
-msgstr ""
+msgstr "*Serviços Remotos*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:23
 #: 106ac59df8c140e0956457c4675f2c5b
 msgid "To configure a new service:"
-msgstr ""
+msgstr "Para configurar um novo serviço:"
 
 #: ../../usage/managing_layers/using_remote_services.rst:25
 #: db26869c6cb64dde9fcb185c833336cb
 msgid "click on :guilabel:`Register a new Service`"
-msgstr ""
+msgstr "clique em :guilabel:`Registar um novo Serviço`"
 
 #: ../../usage/managing_layers/using_remote_services.rst:26
 #: 3f42210f41e24ee591773cf0561eafc4
 msgid "type the *Service URL*"
-msgstr ""
+msgstr "digite o *URL do Serviço*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:27
 #: 44e568c7852544b28be7032bc9584e34
 msgid "select the *Service Type*"
-msgstr ""
+msgstr "seleccione o *Tipo de Serviço*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:32
 #: a16f7a412df242c39d7ebe4ea0ebfa7a
 msgid "*Service Types*"
-msgstr ""
+msgstr "*Tipos de Serviço*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:34
 #: 0a8cc52fee29452ca5255f3a76e1a914
 msgid "click on :guilabel:`Create`"
-msgstr ""
+msgstr "clique em :guilabel:`Criar`"
 
 #: ../../usage/managing_layers/using_remote_services.rst:36
 #: 12f85a9c80254dbb9a7f78b42bcd0074
 msgid "GeoNode supports three **types of remote services**:"
-msgstr ""
+msgstr "O GeoNode oferece suporte a três **tipos de serviços remotos**:"
 
 #: ../../usage/managing_layers/using_remote_services.rst:38
 #: 10216bd6fc924d1fa8d81e2d37003148
 msgid "*Web Map Service*"
-msgstr ""
+msgstr "*Serviço de Mapas da Web*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:40
 #: 77dfd4aec12445e4a810c626f2f47500
 msgid ""
 "Generic Web Map Service (WMS) based on a standard protocol for serving "
 "georeferenced map images over the Internet. These images are typically "
-"produced by a map server (like `GeoServer <http://geoserver.org/>`_) from"
-" data provided by one or more distributed geospatial databases. Common "
+"produced by a map server (like `GeoServer <http://geoserver.org/>`_) from "
+"data provided by one or more distributed geospatial databases. Common "
 "operations performed by a WMS service are: *GetCapabilities* (to "
 "retrieves metadata about the service, including supported operations and "
 "parameters, and a list of the available layers) and *GetMap* (to "
 "retrieves a map image for a specified area and content)."
 msgstr ""
+"Serviço Web Genérico de Mapas (WMS) baseado em um protocolo padrão para "
+"servir imagens de mapas georreferenciados pela Internet. Essas imagens "
+"são normalmente produzidas por um servidor de mapas (como `GeoServer "
+"<http://geoserver.org/>`_) a partir de dados fornecidos por um ou mais "
+"bancos de dados geoespaciais distribuídos. As operações comuns realizadas "
+"por um serviço WMS são: *GetCapabilities* (para recuperar metadados sobre "
+"o serviço, incluindo operações e parâmetros suportados e uma lista das "
+"camadas disponíveis) e *GetMap* (para recuperar uma imagem de mapa para "
+"uma área e conteúdo especificados)"
 
 #: ../../usage/managing_layers/using_remote_services.rst:44
 #: 5be81d96a2144e97acb802315baeb669
@@ -116,11 +133,13 @@ msgid ""
 "Lots of WMS services are available on the internet, in this example we "
 "used the ``https://demo.geo-solutions.it/geoserver/wms``."
 msgstr ""
+"Muitos serviços WMS estão disponíveis na internet, neste exemplo usamos o "
+"``https://demo.geo-solutions.it/geoserver/wms``."
 
 #: ../../usage/managing_layers/using_remote_services.rst:46
 #: b3a216f87a23405d8ae477c83779d6b7
 msgid "*GeoNode Web Map Service*"
-msgstr ""
+msgstr "*Serviço Web de Mapas do GeoNode*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:48
 #: 9b271fcb807e41fdb80689c3be8b2fd0
@@ -130,6 +149,10 @@ msgid ""
 "controls. A GeoNode WMS automatically performs some operations and lets "
 "you to immediately retrieve resources."
 msgstr ""
+"Geralmente, um WMS não é invocado directamente; aplicativos cliente, como "
+"GIS-Desktop ou WEB-GIS, são usados para fornecer ao usuário controles "
+"interactivos. Um WMS GeoNode executa automaticamente algumas operações e "
+"permite que você obtenha recursos imediatamente."
 
 #: ../../usage/managing_layers/using_remote_services.rst:51
 #: a4f3dd5af5d045e684ebbf5ca1e6b5b2
@@ -137,11 +160,13 @@ msgid ""
 "An example of GeoNode WMS is available at ``http://dev.geonode.geo-"
 "solutions.it/geoserver/wms``."
 msgstr ""
+"Um exemplo de WMS GeoNode está disponível em ``http://dev.geonode.geo-"
+"solutions.it/geoserver/wms``."
 
 #: ../../usage/managing_layers/using_remote_services.rst:53
 #: 935927af5ee84a919b651aad7e3dbf30
 msgid "*ArcGIS REST MapServer*"
-msgstr ""
+msgstr "*ArcGIS REST MapServer*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:55
 #: b4aeacf592f84029a16d8a3bc23fabca
@@ -151,16 +176,27 @@ msgid ""
 "reference, initial and full extents, whether the service is allowed to "
 "export tiles and max tiles export count, etc. A set of operations that "
 "manage the state and contents of the service are allowed: Edit Service, "
-"Refresh, Update Tiles. The URL should follow this pattern: ``https"
-"://<servicecatalog-url>/services/<serviceName>/MapServer``."
+"Refresh, Update Tiles. The URL should follow this pattern: ``https://"
+"<servicecatalog-url>/services/<serviceName>/MapServer``."
 msgstr ""
+"Este serviço de mapas fornece informações básicas sobre o mapa, incluindo "
+"as camadas que ele contém, se o mapa está armazenado em cache ou não, sua "
+"referência espacial, extensões iniciais e completas, se o serviço tem "
+"permissão para exportar blocos e contagem máxima de exportação de blocos "
+"etc. Um conjunto de operações que fazem a gestão do estado e do conteúdo "
+"do serviço é permitido: Editar serviço, Actualizar, Actualizar blocos. A "
+"URL deve seguir este padrão: ``https://<servicecatalog-url>/serviços/"
+"<serviceName>/MapServer``."
 
 #: ../../usage/managing_layers/using_remote_services.rst:59
 #: fc44c682255d4bddac9ea22b04717c6f
 msgid ""
-"Try the following service to better understand how it works: "
-"``https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer``."
+"Try the following service to better understand how it works: ``https://"
+"sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer``."
 msgstr ""
+"Experimente o seguinte serviço para entender melhor como ele funciona: `` "
+"https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/"
+"MapServer``."
 
 #: ../../usage/managing_layers/using_remote_services.rst:61
 #: 18dde3843d3640ecb5e4866024b64431
@@ -170,11 +206,15 @@ msgid ""
 "automatically redirected to. Take a look at the gif below to see the "
 "whole process."
 msgstr ""
+"Depois de configurar o serviço, você pode carregar os recursos de seu "
+"interesse por meio da página *Importar Recursos*, para a qual será "
+"redirecionado automaticamente. Dê uma olhada no gif abaixo para ver todo "
+"o processo."
 
 #: ../../usage/managing_layers/using_remote_services.rst:67
 #: 6ba650f076304fb4af472c90dbe67d05
 msgid "*A new Remote Service*"
-msgstr ""
+msgstr "*Um novo Serviço Remoto*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:69
 #: cc9c988dde1749269b16a66172db8c42
@@ -182,18 +222,24 @@ msgid ""
 "From the page where the services are listed, it is possible to click on "
 "the *Title* of a service. It opens the *Service Details* page."
 msgstr ""
+"Na página onde estão listados os serviços, é possível clicar no *Título* "
+"de um serviço. Ele abre a página de *Detalhes do Serviço*."
 
 #: ../../usage/managing_layers/using_remote_services.rst:71
 #: bff70091a3e342d59991bf8c68833c1b
 msgid ""
 "Each service has its own metadata such as the *Service Type*, the *URL*, "
-"an *Abstract*, some *Keywords* and the *Contact* user. You can edit those"
-" metadata through the form available from the :guilabel:`Edit Service "
+"an *Abstract*, some *Keywords* and the *Contact* user. You can edit those "
+"metadata through the form available from the :guilabel:`Edit Service "
 "Metadata` button of the *Service Details* page (see the picture below)."
 msgstr ""
+"Cada serviço tem seus próprios metadados, como *Tipo de Serviço*, *URL*, "
+"um *Resumo*, algumas *Palavras-chave* e o usuário de *Contacto*. Você "
+"pode editar esses metadados através do formulário disponível no botão :"
+"guilabel:`Editar Metadados de Serviço` da página *Detalhes do Serviço* "
+"(veja a imagem abaixo)."
 
 #: ../../usage/managing_layers/using_remote_services.rst:76
 #: 2ddb5072cb8647f790668fb85779f90c
 msgid "*Remote Service metadata*"
-msgstr ""
-
+msgstr "*Metadados de Serviço Remoto*"

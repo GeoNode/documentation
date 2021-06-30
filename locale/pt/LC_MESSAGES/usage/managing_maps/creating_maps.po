@@ -3,130 +3,153 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 20:41+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/managing_maps/creating_maps.rst:4
 #: bcfa85add03f44919bf5670b58c9e9d0
 msgid "Creating Maps"
-msgstr ""
+msgstr "Criação de Mapas"
 
 #: ../../usage/managing_maps/creating_maps.rst:6
 #: a9a4d9b7682c44afa5df8fdea19f6cde
 msgid ""
-"In this section, we’ll create a *Map* using some uploaded layers, combine"
-" them with some other layers from remote web services, and then share the"
-" resulting map for public viewing."
+"In this section, we’ll create a *Map* using some uploaded layers, combine "
+"them with some other layers from remote web services, and then share the "
+"resulting map for public viewing."
 msgstr ""
+"Nesta secção, vamos criar um *Mapa* usando algumas camadas carregadas, "
+"combiná-las com algumas outras camadas de serviços remotos da web e, em "
+"seguida, compartilhar o mapa resultante para visualização pública."
 
 #: ../../usage/managing_maps/creating_maps.rst:8
 #: dd724a6a0ef64a618cb42198b345d342
 msgid "In order to create new maps you can use:"
-msgstr ""
+msgstr "Para criar novos mapas, você pode usar:"
 
 #: ../../usage/managing_maps/creating_maps.rst:10
 #: 2dfd45811b494af69682c5c61295bd99
 msgid "the :guilabel:`Create Map` link of the *Maps* menu in the navigation bar"
-msgstr ""
+msgstr "o link :guilabel:`Criar Mapa` do menu *Mapas* na barra de navegação"
 
 #: ../../usage/managing_maps/creating_maps.rst:15
 #: 594d41bfd3c842c788110728657e15af
 msgid "*The Create Map link*"
-msgstr ""
+msgstr "*O link Criar Mapa*"
 
 #: ../../usage/managing_maps/creating_maps.rst:17
 #: f33f45212b0e4d718699333da1cec11b
 msgid ""
-"the :guilabel:`Create Map` button in the *Layer Page* (it creates a map "
-"using a specific layer)"
+"the :guilabel:`Create Map` button in the *Layer Page* (it creates a map using "
+"a specific layer)"
 msgstr ""
+"o botão :guilabel:`Criar Mapa` na *Página de Camadas* (cria um mapa usando "
+"uma camada específica)"
 
 #: ../../usage/managing_maps/creating_maps.rst:22
 #: 688dd2d99f9645f7ae9b6c16f3ac8744
 msgid "*The Create Map button*"
-msgstr ""
+msgstr "*O botão Criar Mapa*"
 
 #: ../../usage/managing_maps/creating_maps.rst:24
 #: ae2827a8ef204ca0821c7d912554bc4d
 msgid "the :guilabel:`Create New Map` button in the *Explore Maps* page"
-msgstr ""
+msgstr "o botão :guilabel:`Criar Novo Mapa` na página *Explorar Mapas*"
 
 #: ../../usage/managing_maps/creating_maps.rst:29
 #: f06198abb0334e8aae1ae1e4a5e1ec7a
 msgid "*The Create New Map button*"
-msgstr ""
+msgstr "*O botão Criar Novo Mapa*"
 
 #: ../../usage/managing_maps/creating_maps.rst:31
 #: 7d33d75fedb54f2b98a739cc50166ad6
 msgid ""
-"The new *Map* will open in a *Map Viewer* like the one in the picture "
-"below."
+"The new *Map* will open in a *Map Viewer* like the one in the picture below."
 msgstr ""
+"O novo *Mapa* será aberto em um *Visualizador de Mapas* como o da imagem "
+"abaixo."
 
 #: ../../usage/managing_maps/creating_maps.rst:36
 #: 7e5d0c325dc34f3396c27169477745e5
 msgid "*The Map Viewer*"
-msgstr ""
+msgstr "*O Visualizador de Mapas*"
 
 #: ../../usage/managing_maps/creating_maps.rst:68
 #: dae004d0fb8e418cae84cd26d1fbe0de
 msgid ""
-"In the upper left corner the |toc_button| button opens the :ref:`toc` of "
-"the *Map*. It allows to manage all the layers associated with the map and"
-" to add new ones from the *Catalog*."
+"In the upper left corner the |toc_button| button opens the :ref:`toc` of the "
+"*Map*. It allows to manage all the layers associated with the map and to add "
+"new ones from the *Catalog*."
 msgstr ""
+"No canto superior esquerdo, o botão |botão_toc| abre o :ref:`toc` do *Mapa*. "
+"Permite gerir todas as camadas associadas ao mapa e adicionar novas a partir "
+"do *Catálogo*."
 
 #: ../../usage/managing_maps/creating_maps.rst:69
 #: 4c81e533a5ed42a093d5cf53f53f02a7
 msgid ""
-"The *TOC* component makes possible to manage layers overlap on the map by"
-" shifting their relative positions in the list (drag and drop them up or "
-"down in the list)."
+"The *TOC* component makes possible to manage layers overlap on the map by "
+"shifting their relative positions in the list (drag and drop them up or down "
+"in the list)."
 msgstr ""
+"O componente *TOC* torna possível gerir a sobreposição de camadas no mapa, "
+"mudando suas posições relativas na lista (arraste e solte-as para cima ou "
+"para baixo na lista)."
 
 #: ../../usage/managing_maps/creating_maps.rst:70
 #: ff0a80d33c664cb88cd4a22bf8372636
 msgid ""
-"It also allows to hide/show layers ( |show_button| and |hide_button| ), "
-"to zoom to layers extents ( |zoom_to_layer_extent_button| ) and to manage"
-" their properties ( |layer_settings_button| )."
+"It also allows to hide/show layers ( |show_button| and |hide_button| ), to "
+"zoom to layers extents ( |zoom_to_layer_extent_button| ) and to manage their "
+"properties ( |layer_settings_button| )."
 msgstr ""
+"Também permite ocultar/mostrar camadas ( |botão_mostrar| e |botão_ocultar|), "
+"ampliar as extensões das camadas (|botão_zoom_para_extenção_da_camada|) e "
+"gerir suas propriedades (|botão_definições_de_camada|)."
 
 #: ../../usage/managing_maps/creating_maps.rst:71
 #: 1824146f07664491bdc65de15b879b8d
 msgid ""
-"Once the map layers have been settled it is possible to save the *Map* by"
-" clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
+"Once the map layers have been settled it is possible to save the *Map* by "
+"clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
 msgstr ""
+"Uma vez que as camadas do mapa foram definidas, é possível salvar o *Mapa* "
+"clicando em |botão_menu_burger| e escolhendo :guilabel:`Salvar como`."
 
 #: ../../usage/managing_maps/creating_maps.rst:76
 #: d9feb70e7de446ea8668e30bd33889fe
 msgid "*Creating new Maps*"
-msgstr ""
+msgstr "*Criação de novos Mapas*"
 
 #: ../../usage/managing_maps/creating_maps.rst:78
 #: 22666d96d1cc4a37b187dcdbd2db7081
 msgid ""
-"If you followed the steps above, you have just created your first *Map*. "
-"Now you should see it in the *Explore Maps* page, see :ref:`map-info` for"
-" further details."
+"If you followed the steps above, you have just created your first *Map*. Now "
+"you should see it in the *Explore Maps* page, see :ref:`map-info` for further "
+"details."
 msgstr ""
+"Se seguiu as etapas acima, acabou de criar o seu primeiro *Mapa*. Agora deve "
+"vê-lo na página *Explorar Mapas*, consulte :ref:`informações-do-mapa` para "
+"mais detalhes."
 
 #: ../../usage/managing_maps/creating_maps.rst:81
 #: c506bdd56130446aa4d9567ac42a67d6
 msgid ""
-"We will take a closer look at the *Map Viewer* tools in the :ref"
-":`exploring-maps` section."
+"We will take a closer look at the *Map Viewer* tools in the :ref:`exploring-"
+"maps` section."
 msgstr ""
-
+"Vamos dar uma olhada mais de perto nas ferramentas do *Visualizador de Mapas* "
+"na secção :ref:`explorando-mapas`."

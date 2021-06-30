@@ -3,52 +3,62 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-29 16:34+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../usage/users_groups/contacting_users.rst:2
 #: 1e3f0babcd88477b9382d7c616022218
 msgid "Contacting other users"
-msgstr ""
+msgstr "Contacto com outros usuários"
 
 #: ../../usage/users_groups/contacting_users.rst:4
 #: f9c33cdc1a3d479da1e7f9d24541a24b
 msgid ""
-"GeoNode allows you to communicate by message with other registered users "
-"and groups."
+"GeoNode allows you to communicate by message with other registered users and "
+"groups."
 msgstr ""
+"O GeoNode permite que você se comunique por mensagem com outros usuários e "
+"grupos registados."
 
 #: ../../usage/users_groups/contacting_users.rst:5
 #: e5d4bd7438cd405083b0d92c3d61ec75
 msgid ""
-"To send a message to some user and/or groups you can follow the link "
-":guilabel:`Message User` from your *Profile* page (see :ref:`editing-"
-"profile`) or from the *Profile* details page (see the previous section "
-":ref:`user-info`) of that user."
+"To send a message to some user and/or groups you can follow the link :guilabel:"
+"`Message User` from your *Profile* page (see :ref:`editing-profile`) or from "
+"the *Profile* details page (see the previous section :ref:`user-info`) of that "
+"user."
 msgstr ""
+"Para enviar uma mensagem para algum usuário e/ou grupos, você pode seguir o "
+"link :guilabel:`Mensagem para o Usuário` da sua página de *Perfil* (veja :ref:"
+"`perfil-de-edição`) ou da página de detalhes de *Perfil* (veja a secção "
+"anterior :ref:`informação-do-usuário`) desse usuário."
 
 #: ../../usage/users_groups/contacting_users.rst:10
 #: ee11fa01ee4542c1b8b369909d7c1dda
 msgid "*Send message to users and groups*"
-msgstr ""
+msgstr "*Envie uma mensagem para usuários e grupos*"
 
 #: ../../usage/users_groups/contacting_users.rst:12
 #: e1d342f646d64054943d339762097834
 msgid ""
-"Insert your content, type a subject and click on :guilabel:`Send message`"
-" to send the message to the users and groups you have selected."
+"Insert your content, type a subject and click on :guilabel:`Send message` to "
+"send the message to the users and groups you have selected."
 msgstr ""
+"Insira seu conteúdo, digite um assunto e clique em :guilabel:`Enviar mensagem` "
+"para enviar a mensagem aos usuários e grupos que você seleccionou."
 
 #: ../../usage/users_groups/contacting_users.rst:13
 #: 4fce10064a064842915f1e11ea0d8ff0
@@ -56,87 +66,104 @@ msgid ""
 "You will be redirected to the *Conversation* details page related to the "
 "subject."
 msgstr ""
+"Você será redireccionado para a página de detalhes da *Conversa* relacionada ao "
+"assunto."
 
 #: ../../usage/users_groups/contacting_users.rst:18
 #: 1774ea7ebec746b39176e2ef6184d1a9
 msgid "*Your message*"
-msgstr ""
+msgstr "*Sua mensagem*"
 
 #: ../../usage/users_groups/contacting_users.rst:21
 #: 5ca7c8701d004f5fbcec36968a35bb88
 msgid "The Inbox page"
-msgstr ""
+msgstr "A página da caixa de Entrada"
 
 #: ../../usage/users_groups/contacting_users.rst:23
 #: 7b8662e6adc8472ab5d199f44d42b74a
 msgid ""
-"You can view your conversations in your *Inbox* page, reachable through "
-"the :guilabel:`Back to inbox` button (see the picture above) or from the "
-":guilabel:`Inbox` link of the user menu."
+"You can view your conversations in your *Inbox* page, reachable through the :"
+"guilabel:`Back to inbox` button (see the picture above) or from the :guilabel:"
+"`Inbox` link of the user menu."
 msgstr ""
+"Você pode ver suas conversas na página *Caixa de Entrada*, acessível através do "
+"botão :guilabel:`Voltar para a caixa de entrada` (veja a imagem acima) ou do "
+"link :guilabel:`Caixa de Entrada` do menu do usuário."
 
 #: ../../usage/users_groups/contacting_users.rst:28
 #: eeabdf7552a643d7a5de2712ab472d03
 msgid "*Inbox link*"
-msgstr ""
+msgstr "*Link da caixa de entrada*"
 
 #: ../../usage/users_groups/contacting_users.rst:30
 #: 94035869e275478db2a91766ffa22c48
 msgid "The picture below shows how your *Inbox* page should look like."
 msgstr ""
+"A imagem abaixo mostra como deve ser a aparência da sua página *Caixa de "
+"Entrada*."
 
 #: ../../usage/users_groups/contacting_users.rst:35
 #: d5381e6a2efa4a519d5a3661c21246f7
 msgid "*Inbox page*"
-msgstr ""
+msgstr "*Página da caixa de entrada*"
 
 #: ../../usage/users_groups/contacting_users.rst:37
 #: c27b57c994824bf69a58541d90497cde
 msgid ""
-"In *Inbox* all the unread messages are listed. You haven't received any "
-"message yet so your *Inbox* is empty. If you switch to the *All* tab you "
-"can see all the conversations you are involved in."
+"In *Inbox* all the unread messages are listed. You haven't received any message "
+"yet so your *Inbox* is empty. If you switch to the *All* tab you can see all "
+"the conversations you are involved in."
 msgstr ""
+"Na *Caixa de entrada* todas as mensagens não lidas são listadas. Você ainda não "
+"recebeu nenhuma mensagem, então sua *Caixa de entrada* está vazia. Se você "
+"alternar para a guia *Todas*, poderá ver todas as conversas nas quais está "
+"envolvido."
 
 #: ../../usage/users_groups/contacting_users.rst:42
 #: 82534ef7dad444118ebbf4483304a7f2
 msgid "*All your conversations*"
-msgstr ""
+msgstr "*Todas as suas conversas*"
 
 #: ../../usage/users_groups/contacting_users.rst:44
 #: 12be0d67d87c42b5a6766257bbe3c564
 msgid ""
-"When some user send a reply to your message your *Inbox* shows it, see "
-"the picture below for an example."
+"When some user send a reply to your message your *Inbox* shows it, see the "
+"picture below for an example."
 msgstr ""
+"Quando algum usuário envia uma resposta à sua mensagem, sua *Caixa de Entrada* "
+"mostra-a, veja a imagem abaixo para um exemplo."
 
 #: ../../usage/users_groups/contacting_users.rst:49
 #: 180aa2a0d9574c2394d2f64712f31027
 msgid "*A reply to your message*"
-msgstr ""
+msgstr "*Uma resposta à sua mensagem*"
 
 #: ../../usage/users_groups/contacting_users.rst:51
 #: 34a47385581f43ee9db012a87d591eb1
 msgid "You can open the *Conversation* details by clicking on the *Subject* link."
-msgstr ""
+msgstr "Você pode abrir os detalhes da *Conversa* clicando no link *Assunto*."
 
 #: ../../usage/users_groups/contacting_users.rst:56
 #: bc6a06cbb9aa453f82c68e15abbb6f0c
 msgid "*Conversation details*"
-msgstr ""
+msgstr "*Detalhes da conversa*"
 
 #: ../../usage/users_groups/contacting_users.rst:58
 #: bef37946dd3d4cac960c52e897fbbf89
 msgid ""
-"As you can see in the picture above, in the *Conversation* page you have "
-"the ability to write a quick reply. Type your message in the text box and"
-" click on :guilabel:`Send Reply` to do that."
+"As you can see in the picture above, in the *Conversation* page you have the "
+"ability to write a quick reply. Type your message in the text box and click on :"
+"guilabel:`Send Reply` to do that."
 msgstr ""
+"Como você pode ver na imagem acima, na página *Conversa* você pode escrever uma "
+"resposta rápida. Digite sua mensagem na caixa de texto e clique em :guilabel:"
+"`Enviar Resposta` para fazer isso."
 
 #: ../../usage/users_groups/contacting_users.rst:60
 #: b8662e399a8e43678b4d590f60882661
 msgid ""
-"In the *Inbox* page there is also the :guilabel:`Create Message` button "
-"that provides you a quick link to the message creation form."
+"In the *Inbox* page there is also the :guilabel:`Create Message` button that "
+"provides you a quick link to the message creation form."
 msgstr ""
-
+"Na página *Caixa de Entrada* há também o botão :guilabel:`Criar Mensagem` que "
+"fornece um link rápido para o formulário de criação de mensagem."

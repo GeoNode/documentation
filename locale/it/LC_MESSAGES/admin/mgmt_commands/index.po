@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-10 11:49+0200\n"
+"POT-Creation-Date: 2021-06-30 11:39+0200\n"
 "PO-Revision-Date: 2021-06-03 16:16+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -1233,9 +1233,9 @@ msgid ""
 msgstr ""
 
 #: ../../admin/mgmt_commands/index.rst:1746
-#: ../../admin/mgmt_commands/index.rst:1763 587934da399c47949658bb4c089b080a
-#: 6b023cb145ce427d96c8b38b7fc9d9c2
-msgid "Todo"
+#: ../../admin/mgmt_commands/index.rst:1763 2305e251f4d04b958f17622fa0250770
+#: 4e57ebdc49b84caabe35f69718870fb2
+msgid "Por fazer"
 msgstr ""
 
 #: ../../admin/mgmt_commands/index.rst:1746 38c95633dd9144f28f99dd504f89cb88
@@ -1570,5 +1570,8 @@ msgstr ""
 #~ "Django Admin interface to modify this"
 #~ " after the fact if you want "
 #~ "them to be owned by another user."
+#~ msgstr ""
+
+#~ msgid "Todo"
 #~ msgstr ""
 

@@ -7,64 +7,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:53+0200\n"
-"PO-Revision-Date: 2021-06-08 14:16+0200\n"
+"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"PO-Revision-Date: 2021-06-26 10:26+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: pt\n"
-"X-Generator: Poedit 2.4.3\n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
-#: ../../index.rst:14 7260d100d93943b5a82ddf737e9f4f19
+#: ../../index.rst:14 1fbf8ee7dbdc4c7586e788204edc9be6
 msgid "About"
 msgstr "Sobre"
 
-#: ../../index.rst:20 b0cb022c1de340ababc1c6597d50922f
+#: ../../index.rst:20 041ff18c99984ba68268517ded421c49
 msgid "Getting Started"
-msgstr "Começando"
+msgstr "Início"
 
-#: ../../index.rst:26 d2658bcb6c1842daa6b2fd74e59fa333
+#: ../../index.rst:26 b12dbc2770c04b68b123a1e32da73e88
 msgid "Using"
-msgstr "Usando"
+msgstr "Utilização"
 
-#: ../../index.rst:32 3e75bc027c3f468aa00fc10d85ee4823
+#: ../../index.rst:32 31c6ca1b3c484c709e2528da2f0f4623
 msgid "Installing"
-msgstr "Instalando"
+msgstr "Instalação"
 
-#: ../../index.rst:38 9b8a40ea4fbc45acb812c1c23619a3f9
+#: ../../index.rst:38 01eb853bb23c4aec89c809b0c42c8803
 msgid "Configuring (Basic)"
 msgstr "Configuração (Básico)"
 
-#: ../../index.rst:44 f0e188b6457d46119199d91fcd45b0c7
+#: ../../index.rst:44 eaac54558a5646f2a61a746babaedbf7
 msgid "Configuring (Intermediate)"
-msgstr "Configuração (Intermediária)"
+msgstr "Configuração (Intermediário)"
 
-#: ../../index.rst:50 cd2079e0c3a44788b4625842aca08502
+#: ../../index.rst:50 c90b5c6d050c484f99c424be15776909
 msgid "Configuring (Advanced)"
-msgstr ""
+msgstr "Configuração (Avançado)"
 
-#: ../../index.rst:56 10b4376cca4e427ca83b7bd47e8a7b7f
+#: ../../index.rst:56 2021fcc6ce3c4087a759bbf818b73fba
 msgid "Administering"
-msgstr ""
+msgstr "Administração"
 
-#: ../../index.rst:62 65cde571d7cb426e9b7571fe5a2d5c11
+#: ../../index.rst:62 fc3acbc4501e462db9062ce8e284ea3d
 msgid "Contributing"
-msgstr ""
+msgstr "Contribuição"
 
-#: ../../index.rst:68 e64c0e11eb9f4e158f1111dd9e725c9b
+#: ../../index.rst:68 8f30be4a0275425ebfc5876e2c518d90
 msgid "Developing"
-msgstr ""
+msgstr "Em desenvolvimento"
 
 #: ../../index.rst:5 3bdca12530e846bdbc06c42b24465372
 msgid "GeoNode's Documentation"
-msgstr ""
+msgstr "Documentação do GeoNode"
 
 #: ../../index.rst:7 85f5ebf240c84a86abb19511550cddd0
 msgid "Welcome to GeoNode's Documentation."
-msgstr ""
+msgstr "Bem-vindo à documentação do GeoNode."
 
 #: ../../index.rst:9 972d5c743b6d4e1e945e877b2d668a98
 msgid ""
@@ -73,7 +74,11 @@ msgid ""
 "developing geospatial information systems (GIS) and for deploying "
 "spatial data infrastructures (SDI)."
 msgstr ""
+"GeoNode é um sistema de gestão de conteúdo (CMS) de código aberto para "
+"dados geoespaciais. É uma aplicação e plataforma baseada na web para o "
+"desenvolvimento de sistemas de informação geoespaciais (SIG) e para "
+"implantação de infraestruturas de dados espaciais (SDI)."
 
 #: ../../index.rst:12 64685551a5114811b9a34409af198155
 msgid "Table of contents"
-msgstr ""
+msgstr "Índice"

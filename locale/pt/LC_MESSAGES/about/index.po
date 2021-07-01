@@ -3,23 +3,25 @@
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-06-30 22:06+0200\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../about/index.rst:2 c5585533f50f437da1fa1bb7bf0ccf8a
 msgid "What is GeoNode"
-msgstr ""
+msgstr "O que é GeoNode"
 
 #: ../../about/index.rst:6 e63bcdb39822427e898edb1b474ef9c4
 msgid ""
@@ -29,143 +31,184 @@ msgid ""
 "use interface allowing non-specialized users to share data and create "
 "interactive maps."
 msgstr ""
+"GeoNode é um sistema de gestão de conteúdo geoespacial , uma plataforma "
+"para a gestão e publicação de dados geoespaciais. Reúne projectos de "
+"software de código aberto maduros e estáveis em uma interface consistente "
+"e fácil de usar, permitindo aos utilizadores não especializados partilhar "
+"dados e criar mapas interactivos."
 
 #: ../../about/index.rst:8 b8a2568981f94b71914a2134f42709e9
 msgid ""
-"Data management tools built into GeoNode allow for integrated creation of"
-" data, metadata, and map visualization. Each dataset in the system can be"
-" shared publicly or restricted to allow access to only specific users. "
+"Data management tools built into GeoNode allow for integrated creation of "
+"data, metadata, and map visualization. Each dataset in the system can be "
+"shared publicly or restricted to allow access to only specific users. "
 "Social features like user profiles and commenting and rating systems "
 "allow for the development of communities around each platform to "
 "facilitate the use, management, and quality control of the data the "
 "GeoNode instance contains."
 msgstr ""
+"As ferramentas de gestão de dados incorporadas no GeoNode permitem a "
+"criação integrada de dados, metadados e visualização de mapas. Cada "
+"conjunto de dados no sistema pode ser partilhado publicamente ou "
+"restringido para permitir o acesso a apenas utilizadores específicos. "
+"Funcionalidades sociais como perfis de utilizador e sistemas de "
+"comentários e classificação permitem o desenvolvimento de comunidades em "
+"cada plataforma para facilitar o uso, gestão e controlo de qualidade dos "
+"dados que a instância do GeoNode contém."
 
 #: ../../about/index.rst:10 54495e8f69f44740a8f03c431cf7f34f
 msgid ""
 "It is also designed to be a flexible platform that software developers "
-"can extend, modify or integrate against to meet requirements in their own"
-" applications."
+"can extend, modify or integrate against to meet requirements in their own "
+"applications."
 msgstr ""
+"É também projetado para ser uma plataforma flexível, que os "
+"desenvolvedores de software podem estender, modificar ou integrar para "
+"atender aos requisitos em seus próprios aplicativos."
 
 #: ../../about/index.rst:13 edddc396e73040f8b964cdf1a4852861
 msgid "Showcase"
-msgstr ""
+msgstr "Mostruário"
 
 #: ../../about/index.rst:15 9ea2354e533044eca3a56e0ca6454119
 msgid ""
-"A handful of other Open Source projects extend GeoNode’s functionality by"
-" tapping into the re-usability of Django applications. Visit our gallery "
-"to see how the community uses GeoNode: `GeoNode Showcase "
-"<http://geonode.org/gallery/>`_."
+"A handful of other Open Source projects extend GeoNode’s functionality by "
+"tapping into the re-usability of Django applications. Visit our gallery "
+"to see how the community uses GeoNode: `GeoNode Showcase <http://geonode."
+"org/gallery/>`_."
 msgstr ""
+"Vários outros projectos de código aberto estendem a funcionalidade do "
+"GeoNode, aproveitando a capacidade de reutilização de aplicativos Django. "
+"Visite a nossa galeria para ver como a comunidade usa o GeoNode: "
+"`Mostruário GeoNode <http://geonode.org/gallery/>`_."
 
 #: ../../about/index.rst:19 ce13b74c71344724a7364294c2d6f588
 msgid ""
 "The development community is very supportive of new projects and "
 "contributes ideas and guidance for newcomers."
 msgstr ""
+"A comunidade de desenvolvimento dá muito apoio a novos projectos e "
+"contribui com ideias e orientações para os recém-chegados."
 
 #: ../../about/index.rst:21 79643afcfbca49fe9ee6098aecc82a07
 msgid "For a live demo see also :ref:`online_demo`"
-msgstr ""
+msgstr "Para uma demonstração em tempo real, veja também :ref:`online_demo`"
 
 #: ../../about/index.rst:24 e36227101ebe4d9c93dcd75b41463ae6
 msgid "Most useful links"
-msgstr ""
+msgstr "Links mais úteis"
 
 #: ../../about/index.rst:26 03a7e4bf7313454c90365cb07554b16c
 msgid "**General**"
-msgstr ""
+msgstr "**Geral**"
 
 #: ../../about/index.rst:28 77b97275057e40998205bb02260c5f7c
 msgid "Project homepage: https://geonode.org"
-msgstr ""
+msgstr "Página inicial do projecto: https://geonode.org"
 
 #: ../../about/index.rst:29 34e34926b99046c9915a52e306e3e962
 msgid "Repository: https://github.com/GeoNode/geonode"
-msgstr ""
+msgstr "Repositório: https://github.com/GeoNode/geonode"
 
 #: ../../about/index.rst:30 7b093ab82e924f289acf6258ccb64fc0
 msgid "Official Demo: http://master.demo.geonode.org"
-msgstr ""
+msgstr "Demonstração oficial: http://master.demo.geonode.org"
 
 #: ../../about/index.rst:31 ad93f548713f4e468b9d533bbc7091ba
 msgid "GeoNode Wiki: https://github.com/GeoNode/geonode/wiki"
-msgstr ""
+msgstr "Wiki do GeoNode: https://github.com/GeoNode/geonode/wiki"
 
 #: ../../about/index.rst:32 9ec94653f5fc473581734ae7d0aaf575
 msgid "Issue tracker: https://github.com/GeoNode/geonode-project/issues"
 msgstr ""
+"Rastreador de problemas: https://github.com/GeoNode/geonode-project/issues"
 
 #: ../../about/index.rst:34 8f7dcf7bdc7542e9bc69c9e482348bbb
 msgid ""
-"In case of sensitive bugs like security vulnerabilities, please contact a"
-" GeoNode Core Developer directly instead of using issue tracker. We value"
-" your effort to improve the security and privacy of this project!"
+"In case of sensitive bugs like security vulnerabilities, please contact a "
+"GeoNode Core Developer directly instead of using issue tracker. We value "
+"your effort to improve the security and privacy of this project!"
 msgstr ""
+"No caso de bugs sensíveis como vulnerabilidades de segurança, por favor, "
+"entre em contacto com um Desenvolvedor Principal do GeoNode directamente, "
+"ao invés de usar o rastreador de problemas. Valorizamos seu esforço para "
+"melhorar a segurança e a privacidade deste projecto!"
 
 #: ../../about/index.rst:39 f1ed30b4915d4ce9b228a7df18cf746f
 msgid "**Related projects**"
-msgstr ""
+msgstr "**Projectos relacionados**"
 
 #: ../../about/index.rst:41 328c7e8d6d184fe9b7ad7ce1738f64cd
 msgid "GeoNode Project: https://github.com/GeoNode/geonode-project"
-msgstr ""
+msgstr "Projecto GeoNode: https://github.com/GeoNode/geonode-project"
 
 #: ../../about/index.rst:42 1afb309572b441d08a86e8c8b6f190e8
 msgid "GeoNode at Docker: https://hub.docker.com/u/geonode"
-msgstr ""
+msgstr "GeoNode no Docker: https://hub.docker.com/u/geonode"
 
 #: ../../about/index.rst:43 42960cf21ea24e8caa12ae7b2334c40e
 msgid "GeoNode OSGeo-Live: https://live.osgeo.org/en/"
-msgstr ""
+msgstr "OSGeo-Live GeoNode: https://live.osgeo.org/en/"
 
 #: ../../about/index.rst:47 2b88c150fdc24f2783f5e5792ae12fe2
 msgid "Licensing"
-msgstr ""
+msgstr "Licenciamento"
 
 #: ../../about/index.rst:49 240075eaf63c4674beaf4c15d64f1030
 msgid "GeoNode is Copyright 2018 Open Source Geospatial Foundation (OSGeo)."
-msgstr ""
+msgstr "GeoNode é Copyright 2018 Open Source Geospatial Foundation (OSGeo)."
 
 #: ../../about/index.rst:51 e9d1141a19d644838ae40ad21b0a569e
 msgid ""
 "GeoNode is free software: you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option)"
-" any later version. GeoNode is distributed in the hope that it will be "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version. GeoNode is distributed in the hope that it will be "
 "useful, but WITHOUT ANY WARRANTY; without even the implied warranty of "
 "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General "
 "Public License for more details."
 msgstr ""
+"GeoNode é um software livre: você pode redistribuí-lo e/u modificá-lo sob "
+"os termos da GNU General Public License (Licença Pública Geral GNU) "
+"conforme publicado pela Free Software Foundation, seja a versão 3 da "
+"Licença, ou (por sua opção) qualquer versão posterior. O GeoNode é "
+"distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; sem "
+"mesmo a garantia implícita de COMERCIALIDADE ou ADEQUABILIDADE A UM "
+"DETERMINADO FIM. Consulte a Licença Pública Geral GNU para obter mais "
+"detalhes."
 
 #: ../../about/index.rst:59 5c2cc4e5fddb4f599be0452c336dc5cb
 msgid ""
 "You should have received a copy of the GNU General Public License along "
 "with GeoNode. If not, see http://www.gnu.org/licenses."
 msgstr ""
+"Você deveria ter recebido uma cópia da Licença Pública Geral GNU junto "
+"com o GeoNode. Caso contrário, consulte http://www.gnu.org/licenses."
 
 #: ../../about/index.rst:63 83458fce863b4eefadf78d04ada55265
 msgid "Current Version and Features"
-msgstr ""
+msgstr "Versão Actual e Recursos"
 
 #: ../../about/index.rst:65 bca66e1977bd4254aa4fdea5d5c9084f
 msgid ""
-"GeoNode current version: `3.2.0 "
-"<https://github.com/GeoNode/geonode/releases/tag/3.2.0>`_"
+"GeoNode current version: `3.2.0 <https://github.com/GeoNode/geonode/"
+"releases/tag/3.2.0>`_"
 msgstr ""
+"Versão actual do GeoNode: `3.2.0 <https://github.com/GeoNode/geonode/"
+"releases/tag/3.2.0>`_"
 
 #: ../../about/index.rst:67 8774df88c811446f9a506100cc6f44f7
 #, python-format
 msgid ""
-"Main Features: `State of GeoNode "
-"<https://www.dropbox.com/s/r7ftt38mleadzo6/State%20of%20GeoNode%203.2.0%20-%20v1.2.pdf?dl=1>`_"
+"Main Features: `State of GeoNode <https://www.dropbox.com/s/"
+"r7ftt38mleadzo6/State%20of%20GeoNode%203.2.0%20-%20v1.2.pdf?dl=1>`_"
 msgstr ""
+"Principais Recursos: `Estado do GeoNode <https://www.dropbox.com/s/"
+"r7ftt38mleadzo6/State%20of%20GeoNode%203.2.0%20-%20v1.2.pdf?dl=1>`_"
 
 #: ../../about/index.rst:72 29c242c2cc1548c5a546c106cba51c18
 msgid "Get in touch with the community"
-msgstr ""
+msgstr "Entre em contacto com a comunidade"
 
 #: ../../about/index.rst:74 a6f358ff1cb44cb38848ddcfed5ab9d3
 msgid ""
@@ -174,34 +217,45 @@ msgid ""
 "`Community Bylaws <https://github.com/GeoNode/geonode/wiki/Community-"
 "Bylaws>`_."
 msgstr ""
+"GeoNode é um projecto de código aberto e colaboradores são necessários "
+"para manter este projecto em andamento. Saiba mais sobre como contribuir, "
+"no nosso `Estatuto da Comunidade <https://github.com/GeoNode/geonode/wiki/"
+"Community-Bylaws>`_."
 
 #: ../../about/index.rst:77 435ad9757dab4d18a2df79705ba1cb98
 msgid ""
-"User Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo"
-"/geonode-users"
+"User Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo/"
+"geonode-users"
 msgstr ""
+"Lista de Distribuição de Usuário: https://lists.osgeo.org/cgi-bin/mailman/"
+"listinfo/geonode-users"
 
 #: ../../about/index.rst:78 786f5d880c054d6eb99ac03e7462c086
 msgid ""
-"Developer Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo"
-"/geonode-devel"
+"Developer Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo/"
+"geonode-devel"
 msgstr ""
+"Lista de Distribuição de Desenvolvedor: https://lists.osgeo.org/cgi-bin/"
+"mailman/listinfo/geonode-devel"
 
 #: ../../about/index.rst:79 4c508e0f67274e75aff63e2727a4432e
 msgid "Gitter Chat: https://gitter.im/GeoNode/general"
-msgstr ""
+msgstr "Chat do Gitter: https://gitter.im/GeoNode/general"
 
 #: ../../about/index.rst:82 4a21ca7902b042cb8b85a2f4daa2f48e
 msgid "Roadmap"
-msgstr ""
+msgstr "Roteiro"
 
 #: ../../about/index.rst:84 9743707b57f94ffcafae8cd4a88b788a
 msgid ""
 "GeoNode's development roadmap is documented in a series of GeoNode "
 "Improvement Projects (GNIPS). They are documented at `GeoNode Wiki "
-"<https://github.com/GeoNode/geonode/wiki/GeoNode-Improvement-"
-"Proposals>`_."
+"<https://github.com/GeoNode/geonode/wiki/GeoNode-Improvement-Proposals>`_."
 msgstr ""
+"O roteiro de desenvolvimento do GeoNode está documentado em uma série de "
+"Projectos de Melhoria GeoNode (GNIPS). Eles estão documentados no `Wiki "
+"do GeoNode <https://github.com/GeoNode/geonode/wiki/GeoNode-Improvement-"
+"Proposals>`_."
 
 #: ../../about/index.rst:87 301cc9d9605b490db27fdcd376fc4fdc
 msgid ""
@@ -209,10 +263,14 @@ msgid ""
 "amount of features to the project. As such they are the topic of "
 "community discussion and guidance."
 msgstr ""
+"GNIPS são considerados grandes empreendimentos que irão adicionar uma "
+"grande quantidade de recursos ao projeto. Como tal, são o tópico de "
+"discussão e orientação da comunidade."
 
 #: ../../about/index.rst:90 992b5be66a67438eaf31ffeb17831c64
 msgid ""
-"The community discusses these on the developer mailing list: "
-"http://lists.osgeo.org/pipermail/geonode-devel/"
+"The community discusses these on the developer mailing list: http://lists."
+"osgeo.org/pipermail/geonode-devel/"
 msgstr ""
-
+"A comunidade discute isso na lista de discussão do desenvolvedor: http://"
+"lists.osgeo.org/pipermail/geonode-devel/"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:37+0200\n"
+"PO-Revision-Date: 2021-07-01 21:33+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,9 +31,9 @@ msgid ""
 "but also using *Remote Services*. In this section you will learn how to "
 "add a new service and how to load resources in GeoNode through that."
 msgstr ""
-"No GeoNode você pode adicionar novas camadas não apenas carregando-as do "
-"seu disco, mas também usando *Serviços Remotos*. Nesta secção, você "
-"aprenderá como adicionar um novo serviço e como carregar recursos no "
+"No GeoNode, você pode adicionar novas camadas não apenas carregando-as do "
+"seu disco, mas também usando *Serviços Remotos*. Nesta secção, irá "
+"aprender como adicionar um novo serviço e como carregar recursos no "
 "GeoNode através dele."
 
 #: ../../usage/managing_layers/using_remote_services.rst:7
@@ -47,7 +47,7 @@ msgid ""
 "Click on the :guilabel:`Remote Services` link of the :guilabel:`Data` "
 "menu in the navigation bar."
 msgstr ""
-"Clique no link :guilabel:`Serviços Remotos` do menu :guilabel:`Dados` na "
+"Clique no link :guilabel:`Remote Services` do menu :guilabel:`Data` na "
 "barra de navegação."
 
 #: ../../usage/managing_layers/using_remote_services.rst:14
@@ -73,7 +73,7 @@ msgstr "Para configurar um novo serviço:"
 #: ../../usage/managing_layers/using_remote_services.rst:25
 #: db26869c6cb64dde9fcb185c833336cb
 msgid "click on :guilabel:`Register a new Service`"
-msgstr "clique em :guilabel:`Registar um novo Serviço`"
+msgstr "clique em :guilabel:`Register a new Service`"
 
 #: ../../usage/managing_layers/using_remote_services.rst:26
 #: 3f42210f41e24ee591773cf0561eafc4
@@ -93,7 +93,7 @@ msgstr "*Tipos de Serviço*"
 #: ../../usage/managing_layers/using_remote_services.rst:34
 #: 0a8cc52fee29452ca5255f3a76e1a914
 msgid "click on :guilabel:`Create`"
-msgstr "clique em :guilabel:`Criar`"
+msgstr "clique em :guilabel:`Create`"
 
 #: ../../usage/managing_layers/using_remote_services.rst:36
 #: 12f85a9c80254dbb9a7f78b42bcd0074
@@ -103,7 +103,7 @@ msgstr "O GeoNode oferece suporte a três **tipos de serviços remotos**:"
 #: ../../usage/managing_layers/using_remote_services.rst:38
 #: 10216bd6fc924d1fa8d81e2d37003148
 msgid "*Web Map Service*"
-msgstr "*Serviço de Mapas da Web*"
+msgstr "*Serviço Web de Mapas*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:40
 #: 77dfd4aec12445e4a810c626f2f47500
@@ -194,8 +194,8 @@ msgid ""
 "Try the following service to better understand how it works: ``https://"
 "sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer``."
 msgstr ""
-"Experimente o seguinte serviço para entender melhor como ele funciona: `` "
-"https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/"
+"Experimente o seguinte serviço para entender melhor como ele funciona: "
+"``https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/"
 "MapServer``."
 
 #: ../../usage/managing_layers/using_remote_services.rst:61
@@ -234,10 +234,10 @@ msgid ""
 "Metadata` button of the *Service Details* page (see the picture below)."
 msgstr ""
 "Cada serviço tem seus próprios metadados, como *Tipo de Serviço*, *URL*, "
-"um *Resumo*, algumas *Palavras-chave* e o usuário de *Contacto*. Você "
-"pode editar esses metadados através do formulário disponível no botão :"
-"guilabel:`Editar Metadados de Serviço` da página *Detalhes do Serviço* "
-"(veja a imagem abaixo)."
+"um *Resumo*, algumas *Palavras-chave* e o usuário de *Contacto*. Pode "
+"editar esses metadados através do formulário disponível no botão :"
+"guilabel:`Edit Service Metadata` da página *Detalhes do Serviço* (veja a "
+"imagem abaixo)."
 
 #: ../../usage/managing_layers/using_remote_services.rst:76
 #: 2ddb5072cb8647f790668fb85779f90c

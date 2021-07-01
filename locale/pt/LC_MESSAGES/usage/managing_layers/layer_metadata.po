@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:07+0200\n"
+"PO-Revision-Date: 2021-07-01 23:13+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "No GeoNode é dada especial importância aos *Metadados* e seus formatos "
 "padrão. Você pode explorar os *Metadados* de uma *Camada* clicando no botão :"
-"guilabel:`Detalhe dos metadados` na *Página da Camada*."
+"guilabel:`Metadata Detail` na *Página da Camada*."
 
 #: ../../usage/managing_layers/layer_metadata.rst:12
 #: ba51307834e544a79557b43c7f8ea8ac
@@ -115,7 +115,7 @@ msgid ""
 "The :guilabel:`Download Metadata` button of the *Layer Page* allows you to "
 "download the layer metadata in various formats."
 msgstr ""
-"O botão :guilabel:`Baixar Metadados` da *Página da Camada* permite que você "
+"O botão :guilabel:`Download Metadata` da *Página da Camada* permite que você "
 "baixe os metadados da camada em vários formatos."
 
 #: ../../usage/managing_layers/layer_metadata.rst:40
@@ -204,7 +204,7 @@ msgstr ""
 #: ../../usage/managing_layers/layer_metadata.rst:67
 #: dbd6e289784e43df93cabf747f1add7e
 msgid "The *Thumbnail* of the layer (click :guilabel:`Edit` to change it);"
-msgstr "A *Miniatura* da camada (clique :guilabel:`Editar` para alterá-la);"
+msgstr "A *Miniatura* da camada (clique :guilabel:`Edit` para alterá-la);"
 
 #: ../../usage/managing_layers/layer_metadata.rst:68
 #: c6b952e4d8d549ab82b75cf538e33089
@@ -293,7 +293,7 @@ msgid ""
 "Identifier <https://www.doi.org/>`_ of the resource"
 msgstr ""
 "O *DOI* do conjunto de dados; se disponível, representa o `Digital Object "
-"Identifier <https://www.doi.org/>` _ do recurso"
+"Identifier <https://www.doi.org/>`_ do recurso"
 
 #: ../../usage/managing_layers/layer_metadata.rst:91
 #: dd2774fe245b4060baa61a9775c5c587
@@ -447,11 +447,11 @@ msgid ""
 msgstr ""
 "O *Tipo de Exibição*; o valor padrão é *Rótulo*, o que significa que o valor "
 "do atributo será renderizado como um texto simples. Existe a possibilidade "
-"de instruir GeoNode a ameaçar os valores como diferentes tipos de mídia. Por "
-"exemplo, se os valores do atributo seleccionado irão conter urls de imagem, "
-"seleccionando `` IMAGE`` *Tipo de Exibição* você permitirá que GeoNode "
-"renderize a imagem directamente ao consultar a camada dos mapas. O mesmo "
-"para os tipos MIME ``VIDEO``, ``AUDIO`` ou ``IFRAME``."
+"de instruir o GeoNode a tratar os valores como diferentes tipos de mídia. "
+"Por exemplo, se os valores do atributo seleccionado irão conter urls de "
+"imagem, seleccionando ``IMAGE`` *Tipo de Exibição* você permitirá que "
+"GeoNode renderize a imagem directamente ao consultar a camada dos mapas. O "
+"mesmo para os tipos MIME ``VIDEO``, ``AUDIO`` ou ``IFRAME``."
 
 #: ../../usage/managing_layers/layer_metadata.rst:134
 #: 44db560cc50b4e689dafbc5f9a6d72ed
@@ -484,8 +484,8 @@ msgid ""
 "By using the keywork ``${properties.<attribute_name>``, you can tell to "
 "GeoNode to render the actual value of the attribute on the map."
 msgstr ""
-"Usando o keywork ``$ {properties.<attribute_name>``, você pode dizer ao "
-"GeoNode para renderizar o valor real do atributo no mapa."
+"Usando o keywork ``$ {properties.<attribute_name>``, você pode instruir o "
+"GeoNode a renderizar o valor real do atributo no mapa."
 
 #: ../../usage/managing_layers/layer_metadata.rst:148
 #: 1661d2bd062240f4bee833cd4844efff
@@ -516,8 +516,8 @@ msgid ""
 "Use :guilabel:`next >>` or :guilabel:`<< back` to navigate through those "
 "steps. Once you have finished click on :guilabel:`Update`."
 msgstr ""
-"Use :guilabel:`próximo >>` ou :guilabel:`<< voltar` para navegar por essas "
-"etapas. Assim que terminar, clique em :guilabel:`Actualizar`."
+"Use :guilabel:`next >>` ou :guilabel:`<< back` para navegar por essas "
+"etapas. Assim que terminar, clique em :guilabel:`Update`."
 
 #: ../../usage/managing_layers/layer_metadata.rst:165
 #: 5ef07688517c42989f0c9c51a63e0822
@@ -543,7 +543,7 @@ msgstr "Edição Avançada de Metadados"
 msgid ""
 "In the *Layer Editing* panel the :guilabel:`Advanced Edit` is also available."
 msgstr ""
-"No painel *Edição de Camadas* o :guilabel:`Edição Avançada` também está "
+"No painel *Edição de Camadas* o :guilabel:`Advanced Edit` também está "
 "disponível."
 
 #: ../../usage/managing_layers/layer_metadata.rst:181
@@ -562,7 +562,7 @@ msgstr ""
 "Clique nele para exibir a *Página de Edição Avançada de Metadados*. Essa "
 "página permite que você edite todos os metadados da camada descritos no "
 "parágrafo anterior. Assim que terminar de editá-los, clique em :guilabel:"
-"`Actualizar` para salvar suas alterações."
+"`Update` para salvar suas alterações."
 
 #: ../../usage/managing_layers/layer_metadata.rst:186
 #: d3952056a1c44a71ab2ab946a3b1de69
@@ -592,6 +592,6 @@ msgid ""
 "Click on :guilabel:`Choose Files` to select the document from your disk, "
 "then click on :guilabel:`Upload files` to trigger the uploading process."
 msgstr ""
-"Clique em :guilabel:`Seleccionar Ficheiros` para seleccionar o documento do "
-"seu disco, em seguida clique em :guilabel:`Carregar ficheiros` para iniciar "
-"o processo de upload."
+"Clique em :guilabel:`Choose Files` para seleccionar o documento do seu "
+"disco, em seguida clique em :guilabel:`Upload files` para iniciar o processo "
+"de upload."

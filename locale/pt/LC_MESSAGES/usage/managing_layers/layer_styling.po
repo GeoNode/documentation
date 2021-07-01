@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:24+0200\n"
+"PO-Revision-Date: 2021-07-01 23:29+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,7 +37,7 @@ msgstr ""
 "seus dados, permitindo-lhe visualizá-lo de muitas maneiras diferentes. "
 "Assim, pode contar histórias diferentes dependendo da forma como os dados "
 "são apresentados. Para qualquer dado ou camada, você deve explorar "
-"diferentes opções de estilo e escolher o melhor estilo para isso."
+"diferentes opções de estilo e escolher o melhor estilo."
 
 #: ../../usage/managing_layers/layer_styling.rst:10
 #: b66ece7679354824b5da333d3d801708
@@ -47,8 +47,8 @@ msgid ""
 "`uploading-layers`) a new default style will be associated to it."
 msgstr ""
 "No GeoNode cada camada tem um *Estilo Predefinido* que é determinado pela "
-"natureza dos dados que está a mapear. Ao carregar uma nova camada (veja :"
-"ref:'carregando-camadas\") será associado um novo estilo predefinido."
+"natureza dos dados que está a mapear. Ao carregar uma nova camada (veja :ref:"
+"`uploading-layers`) será associado um novo estilo predefinido."
 
 #: ../../usage/managing_layers/layer_styling.rst:15
 #: 7988ae9b6046452a8a5e164864eb3211
@@ -67,7 +67,7 @@ msgstr ""
 "Referindo-se ao exemplo acima, as linhas laranja escuras não são muito boas "
 "para representar as vias navegáveis, pelo que teríamos de mudar este estilo. "
 "Nos parágrafos seguintes, você irá aprender a criar um novo estilo a partir "
-"de modelos dados, como editar um estilo, como carregar estilos a partir de "
+"de modelos, como editar um estilo, como carregar estilos a partir de "
 "arquivos e como geri-los."
 
 #: ../../usage/managing_layers/layer_styling.rst:20
@@ -83,10 +83,10 @@ msgid ""
 "`Edit` button in the *Styles* section of the *Layer Editing* panel (see the "
 "picture below)."
 msgstr ""
-"Para criar um novo estilo, abra a *Página Camada* (veja :ref:`informação-da-"
-"camada`) e clique em :guilabel:`Ferramentas de Edição`. Em seguida, clique "
-"no botão :guilabel:`Editar` na secção *Estilos* do painel *Edição de "
-"Camadas* (veja a imagem abaixo)."
+"Para criar um novo estilo, abra a *Página Camada* (veja :ref:`layer-info`) e "
+"clique em :guilabel:`Editing Tools`. Em seguida, clique no botão :guilabel:"
+"`Edit` na secção *Estilos* do painel *Edição de Camadas* (veja a imagem "
+"abaixo)."
 
 #: ../../usage/managing_layers/layer_styling.rst:27
 #: e1fc94ecffb9417c9a91e51879ea6512
@@ -118,7 +118,7 @@ msgid ""
 "Click the |create_new_style_button| button. The *Style Templates Panel* will "
 "open."
 msgstr ""
-"Clique no botão |botão_criar_novo_estilo|. O *Painel de Modelos de Estilo* "
+"Clique no botão |create_new_style_button|. O *Painel de Modelos de Estilo* "
 "será aberto."
 
 #: ../../usage/managing_layers/layer_styling.rst:48
@@ -146,8 +146,8 @@ msgid ""
 "Click the |add_style_button| button to add the *Style Template* to the "
 "styles list."
 msgstr ""
-"Clique no botão |botão_adicionar_estilo| para adicionar o *Modelo de Estilo* "
-"à lista de estilos."
+"Clique no botão |add_style_button| para adicionar o *Modelo de Estilo* à "
+"lista de estilos."
 
 #: ../../usage/managing_layers/layer_styling.rst:64
 #: c7a4d749e97e41f2b23ab00cfc7e19fc
@@ -156,7 +156,7 @@ msgid ""
 "`Save`."
 msgstr ""
 "Insira um *Título* e um *Resumo* (opcional), a seguir clique em :guilabel:"
-"`Salvar`."
+"`Save`."
 
 #: ../../usage/managing_layers/layer_styling.rst:70
 #: d99bc2b7878b4cd29ea1fa34f9fcf9e3
@@ -221,17 +221,17 @@ msgid ""
 "toc_button| button"
 msgstr ""
 "De dentro do mapa, abra a *TOC (Tabela de Conteúdo)* clicando no botão |"
-"botão_toc|"
+"toc_button|"
 
 #: ../../usage/managing_layers/layer_styling.rst:132
 #: 7cd99988502c471a83e5490846f721b6
 msgid "Click on |layer_settings_button|"
-msgstr "Clique em |botão_configurações_de_camada|"
+msgstr "Clique em |layer_settings_button|"
 
 #: ../../usage/managing_layers/layer_styling.rst:133
 #: 6e2b647be5944bf7a70f147a46d8a60b
 msgid "Open the *Style* tab |style_tab|"
-msgstr "Abra a guia *Estilo* |guia_estilo|"
+msgstr "Abra a guia *Estilo* |style_tab|"
 
 #: ../../usage/managing_layers/layer_styling.rst:135
 #: 16e8fefbac1b4577ad334f97799ea7fc
@@ -240,12 +240,12 @@ msgid ""
 "permission. See :ref:`layer-permissions` to read more)"
 msgstr ""
 "A edição de estilos é permitida apenas para os usuários que possuem a "
-"permissão necessária. Veja :ref:`permissões-de-camada` para ler mais)"
+"permissão necessária. Veja :ref:`layer-permissions` para ler mais)"
 
 #: ../../usage/managing_layers/layer_styling.rst:137
 #: db927844dda244e58dd745c01a2be14c
 msgid "Select the *Style* and click on |style_editor_button|"
-msgstr "Seleccione o *Estilo* e clique em |botão_editor_de_estilo|"
+msgstr "Seleccione o *Estilo* e clique em |style_editor_button|"
 
 #: ../../usage/managing_layers/layer_styling.rst:138
 #: e51cb5458c614b14abacf0a6b440635d
@@ -266,7 +266,7 @@ msgstr "*Validação de Sintaxe do Editor de Estilos*"
 #: ../../usage/managing_layers/layer_styling.rst:145
 #: 0b8d5a2f7d534b9d929fbb7b3f7e11df
 msgid "Click on |save_style_button| to save your changes."
-msgstr "Clique em |botão_salvar_estilo| para salvar as suas alterações."
+msgstr "Clique em |save_style_button| para salvar as suas alterações."
 
 #: ../../usage/managing_layers/layer_styling.rst:147
 #: bdeec0bb43c5498ca3895e7cd8c34e93
@@ -285,12 +285,12 @@ msgid ""
 "layer. Click on |set_style_as_default_button| to do that."
 msgstr ""
 "Pode, também, decidir tornar seu novo estilo o *Estilo Padrão* dessa camada. "
-"Clique em |botão_definir_estilo_padrão| para fazer isso."
+"Clique em |set_style_as_default_button| para fazer isso."
 
 #: ../../usage/managing_layers/layer_styling.rst:155
 #: 51417ae338614199b8a5cc3c0538aa2d
 msgid "Click on |delete_style_button| to delete the style."
-msgstr "Clique em |botão_excluir_estilo| para excluir o estilo."
+msgstr "Clique em |delete_style_button| para excluir o estilo."
 
 #: ../../usage/managing_layers/layer_styling.rst:158
 #: d0e1ec607ca642c7a5148a6d417360d4
@@ -325,7 +325,7 @@ msgstr ""
 #: ../../usage/managing_layers/layer_styling.rst:166
 #: 3d10ab21703f4144b60b696727343426
 msgid "Click the :guilabel:`Upload` button of the *Styles* section"
-msgstr "Clique no botão :guilabel:`Carregar` da secção *Estilos*"
+msgstr "Clique no botão :guilabel:`Upload` da secção *Estilos*"
 
 #: ../../usage/managing_layers/layer_styling.rst:172
 #: 9c96ac07e53143f597a12744956be5c1
@@ -335,8 +335,7 @@ msgstr "*Botão Carregar Estilos*"
 #: ../../usage/managing_layers/layer_styling.rst:174
 #: c1946495bd514d4f9c7e55ee8b31048b
 msgid "Click on :guilabel:`Choose Files` and select your style from your disk"
-msgstr ""
-"Clique em :guilabel:`Seleccionar Ficheiros` e seleccione seu estilo no disco"
+msgstr "Clique em :guilabel:`Choose Files` e seleccione seu estilo no disco"
 
 #: ../../usage/managing_layers/layer_styling.rst:179
 #: 65506a0d1e6b40bda3f2e9e8a30477c2
@@ -346,7 +345,7 @@ msgstr "*Estilos de Upload*"
 #: ../../usage/managing_layers/layer_styling.rst:181
 #: 733ad6cd6b7b48c9aa1f824041c99515
 msgid "Click on :guilabel:`Upload files`"
-msgstr "Clique em :guilabel:`Carregar arquivos`"
+msgstr "Clique em :guilabel:`Upload files`"
 
 #: ../../usage/managing_layers/layer_styling.rst:183
 #: a0ef98e98a5b488cb9b6bc449effcdc8
@@ -369,7 +368,7 @@ msgid ""
 "accessible from the :guilabel:`Manage` button of the *Layer Editing* panel."
 msgstr ""
 "Dada uma camada, você pode fazer a gestão de todos os seus estilos na "
-"*Página de Gestão de Estilos* acessível a partir do botão :guilabel:`Gerir` "
+"*Página de Gestão de Estilos* acessível a partir do botão :guilabel:`Manage` "
 "do painel *Edição de Camadas*."
 
 #: ../../usage/managing_layers/layer_styling.rst:193
@@ -401,5 +400,4 @@ msgstr "Escolha o *Estilo Padrão da Camada* na lista *Estilos disponíveis*"
 #: 417979d05ccd411291747757ac9f0f85
 msgid "Click on :guilabel:`Update Available Styles` to save your changes."
 msgstr ""
-"Clique em :guilabel:`Actualizar Estilos Disponíveis` para salvar as suas "
-"alterações."
+"Clique em :guilabel:`Update Available Styles` para salvar as suas alterações."

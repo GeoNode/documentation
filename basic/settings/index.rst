@@ -1832,6 +1832,8 @@ RECAPTCHA_ENABLED
     Allows enabling reCaptcha field on signup form.
     Valid Captcha Public and Private keys will be needed as specified here https://pypi.org/project/django-recaptcha/#installation
 
+    You will need to generate a keys pair for ``reCaptcha v2`` for your domain from https://www.google.com/recaptcha/admin/create
+
     More options will be available by enabling this setting:
 
     * **ACCOUNT_SIGNUP_FORM_CLASS**
@@ -1857,7 +1859,9 @@ RECAPTCHA_ENABLED
         | Default: ``geonode_RECAPTCHA_PUBLIC_KEY``
         | Env: ``RECAPTCHA_PUBLIC_KEY``
 
-        In order to generate reCaptcha keys, please see:
+        You will need to generate a keys pair for ``reCaptcha v2`` for your domain from https://www.google.com/recaptcha/admin/create
+
+        For mode details on the reCaptcha package, please see:
 
         #. https://pypi.org/project/django-recaptcha/#installation
         #. https://pypi.org/project/django-recaptcha/#local-development-and-functional-testing
@@ -1867,7 +1871,9 @@ RECAPTCHA_ENABLED
         | Default: ``geonode_RECAPTCHA_PRIVATE_KEY``
         | Env: ``RECAPTCHA_PRIVATE_KEY``
 
-        In order to generate reCaptcha keys, please see:
+        You will need to generate a keys pair for ``reCaptcha v2`` for your domain from https://www.google.com/recaptcha/admin/create
+
+        For mode details on the reCaptcha package, please see:
 
         #. https://pypi.org/project/django-recaptcha/#installation
         #. https://pypi.org/project/django-recaptcha/#local-development-and-functional-testing
@@ -1878,6 +1884,8 @@ RECAPTCHA_PUBLIC_KEY
     | Default: ``geonode_RECAPTCHA_PUBLIC_KEY``
     | Env: ``RECAPTCHA_PUBLIC_KEY``
 
+    You will need to generate a keys pair for ``reCaptcha v2`` for your domain from https://www.google.com/recaptcha/admin/create
+
     Ref. to :ref:`recaptcha_enabled`
 
 RECAPTCHA_PRIVATE_KEY
@@ -1885,6 +1893,8 @@ RECAPTCHA_PRIVATE_KEY
 
     | Default: ``geonode_RECAPTCHA_PRIVATE_KEY``
     | Env: ``RECAPTCHA_PRIVATE_KEY``
+
+    You will need to generate a keys pair for ``reCaptcha v2`` for your domain from https://www.google.com/recaptcha/admin/create
 
     Ref. to :ref:`recaptcha_enabled`
 

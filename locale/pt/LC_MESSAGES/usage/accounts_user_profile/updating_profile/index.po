@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 18:48+0200\n"
+"PO-Revision-Date: 2021-07-01 08:53+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,8 +56,8 @@ msgid ""
 "settings page."
 msgstr ""
 "Então, clique em seu nome de utilizador no canto superior direito da "
-"tela. Uma lista suspensa será exibida. Clique em :guilabel:`Perfil` para "
-"entrar na página de configurações do *Perfil*."
+"tela. Uma lista suspensa será exibida. Clique em :guilabel:`Profile` "
+"para entrar na página de configurações do *Perfil*."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:16
 #: a0b9ac90eeb945609b1d211a668691df
@@ -67,7 +67,7 @@ msgstr "*Link para o seu perfil*"
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:18
 #: 072a522636f646fbb2862eec0cee14e5
 msgid "The *Profile* page looks like the one shown in the picture below."
-msgstr "A página *Perfil* se parece com a mostrada na imagem abaixo."
+msgstr "A página de *Perfil* se parece com a mostrada na imagem abaixo."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:23
 #: 62fb6f7ab8324a57943738b6664caca4
@@ -93,9 +93,8 @@ msgid ""
 "Through the link ``User layers WMS GetCapabilities document`` you can "
 "retrieve an XML document with the list of the available layers."
 msgstr ""
-"Através do link ``Documento WMS GetCapabilities de camadas de usuário`` "
-"é possível recuperar um documento XML com a lista das camadas "
-"disponíveis."
+"Através do link ``User layers WMS GetCapabilities document`` é possível "
+"recuperar um documento XML com a lista das camadas disponíveis."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:29
 #: 272b0d1afdc0485d92e59f5f674ce50f
@@ -115,7 +114,7 @@ msgid ""
 "The :guilabel:`Favorites` link, also accessible from the user menu, "
 "drive you to the list of the resources marked as your favorites."
 msgstr ""
-"O link :guilabel:`Favoritos`, também acessível a partir do menu do "
+"O link :guilabel:`Favorites`, também acessível a partir do menu do "
 "usuário, leva à lista de recursos marcados como seus favoritos."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:36
@@ -129,7 +128,7 @@ msgid ""
 "Click the :guilabel:`Delete from Favorites` button to remove the "
 "resource from the list."
 msgstr ""
-"Clique no botão :guilabel:`Excluir dos favoritos` para remover o recurso "
+"Clique no botão :guilabel:`Delete from Favorites` para remover o recurso "
 "da lista."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:40
@@ -138,9 +137,8 @@ msgid ""
 "The :guilabel:`My Activities` link allows to see all your recent "
 "activities on GeoNode such as layers uploading and maps creation."
 msgstr ""
-"O link :guilabel:`Minhas Actividades` permite ver todas as suas "
-"actividades recentes no GeoNode, como upload de camadas e criação de "
-"mapas."
+"O link :guilabel:`My Activities` permite ver todas as suas actividades "
+"recentes no GeoNode, como upload de camadas e criação de mapas."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:45
 #: 075bdb8e8e4241b0b7702577c517bd6e

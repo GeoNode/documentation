@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 16:34+0200\n"
+"PO-Revision-Date: 2021-07-01 13:49+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,9 +42,9 @@ msgid ""
 "user."
 msgstr ""
 "Para enviar uma mensagem para algum usuário e/ou grupos, você pode seguir o "
-"link :guilabel:`Mensagem para o Usuário` da sua página de *Perfil* (veja :ref:"
-"`perfil-de-edição`) ou da página de detalhes de *Perfil* (veja a secção "
-"anterior :ref:`informação-do-usuário`) desse usuário."
+"link :guilabel:`Message User` da sua página de *Perfil* (veja :ref:`editing-"
+"profile`) ou da página de detalhes de *Perfil* (veja a secção anterior :ref:"
+"`user-info`) desse usuário."
 
 #: ../../usage/users_groups/contacting_users.rst:10
 #: ee11fa01ee4542c1b8b369909d7c1dda
@@ -57,7 +57,7 @@ msgid ""
 "Insert your content, type a subject and click on :guilabel:`Send message` to "
 "send the message to the users and groups you have selected."
 msgstr ""
-"Insira seu conteúdo, digite um assunto e clique em :guilabel:`Enviar mensagem` "
+"Insira seu conteúdo, digite um assunto e clique em :guilabel:`Send message` "
 "para enviar a mensagem aos usuários e grupos que você seleccionou."
 
 #: ../../usage/users_groups/contacting_users.rst:13
@@ -87,8 +87,8 @@ msgid ""
 "`Inbox` link of the user menu."
 msgstr ""
 "Você pode ver suas conversas na página *Caixa de Entrada*, acessível através do "
-"botão :guilabel:`Voltar para a caixa de entrada` (veja a imagem acima) ou do "
-"link :guilabel:`Caixa de Entrada` do menu do usuário."
+"botão :guilabel:`Back to inbox` (veja a imagem acima) ou do link :guilabel:"
+"`Inbox` do menu do usuário."
 
 #: ../../usage/users_groups/contacting_users.rst:28
 #: eeabdf7552a643d7a5de2712ab472d03
@@ -157,7 +157,7 @@ msgid ""
 msgstr ""
 "Como você pode ver na imagem acima, na página *Conversa* você pode escrever uma "
 "resposta rápida. Digite sua mensagem na caixa de texto e clique em :guilabel:"
-"`Enviar Resposta` para fazer isso."
+"`Send Reply` para fazer isso."
 
 #: ../../usage/users_groups/contacting_users.rst:60
 #: b8662e399a8e43678b4d590f60882661
@@ -165,5 +165,5 @@ msgid ""
 "In the *Inbox* page there is also the :guilabel:`Create Message` button that "
 "provides you a quick link to the message creation form."
 msgstr ""
-"Na página *Caixa de Entrada* há também o botão :guilabel:`Criar Mensagem` que "
+"Na página *Caixa de Entrada* há também o botão :guilabel:`Create Message` que "
 "fornece um link rápido para o formulário de criação de mensagem."

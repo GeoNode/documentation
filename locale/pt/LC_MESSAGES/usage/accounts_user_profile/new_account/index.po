@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 18:33+0200\n"
+"PO-Revision-Date: 2021-07-01 08:21+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,7 +41,7 @@ msgid ""
 "link. Click that link, and the register form will appear"
 msgstr ""
 "Em qualquer página da interface da web, você verá um link :guilabel:"
-"`Registar`. Clique nesse link e o formulário de registo irá aparecer"
+"`Register`. Clique nesse link e o formulário de registo irá aparecer"
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:8
 #: 0d3930b76a4e4fb0ad26de41f93c4406
@@ -82,7 +82,7 @@ msgid ""
 "occur during the registration, the following alerts will appear on the "
 "screen:"
 msgstr ""
-"Você será automaticamente conectado e redirecionado para a página de "
+"Você será automaticamente conectado e redireccionado para a página de "
 "Perfil. Um e-mail será enviado a confirmar a sua inscrição. Se nenhum "
 "erro ocorrer durante o registo, os seguintes alertas irão aparecer na "
 "tela:"
@@ -95,7 +95,8 @@ msgstr "*Alertas*"
 #: ../../usage/accounts_user_profile/new_account/index.rst:29
 #: 2a177f32ab2941c498b3dc2fdbae51b2
 msgid "To logout click on the :guilabel:`Log out` link of the user menu."
-msgstr "Para sair, clique no link :guilabel:`Sair` do menu do utilizador."
+msgstr ""
+"Para sair, clique no link :guilabel:`Log out` do menu do utilizador."
 
 #: ../../usage/accounts_user_profile/new_account/index.rst:34
 #: 2e3cd0211486407a956f5248809513c3
@@ -110,4 +111,4 @@ msgstr "Você deve confirmar esta acção conforme descrito na imagem abaixo."
 #: ../../usage/accounts_user_profile/new_account/index.rst:41
 #: 6816ac72dcfc461c8082a7e54d0d7c5b
 msgid "*Confirm Log out*"
-msgstr "*Confirmar Sair*"
+msgstr "*Confirmar Log out*"

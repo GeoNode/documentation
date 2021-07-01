@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 16:51+0200\n"
+"PO-Revision-Date: 2021-07-01 13:44+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,11 +33,11 @@ msgid ""
 "`People` link of the :guilabel:`About` menu in *Home* page."
 msgstr ""
 "Para ver informações sobre outros usuários no sistema, clique no link :"
-"guilabel:`Pessoas` do menu :guilabel:`Sobre` na página *Home*."
+"guilabel:`People` do menu :guilabel:`About` na página *Home*."
 
 #: ../../usage/users_groups/users_info.rst:12 f894ff842aa34225a3b9cea2da43c413
 msgid "*About menu - People link*"
-msgstr "*Menu Sobre - link Pessoas*"
+msgstr "*Menu About - link People*"
 
 #: ../../usage/users_groups/users_info.rst:14 c38054ab275247f588d7dfd4e3420415
 msgid "You will see a list of users registered on the system."
@@ -83,8 +83,8 @@ msgid ""
 "Through the :guilabel:`User Activities` link, in right side of the page, it "
 "is possible to visualize all the activities the user has been done."
 msgstr ""
-"Através do link :guilabel:`Actividades do Usuário`, no lado direito da "
-"página, é possível visualizar todas as actividades realizadas pelo usuário."
+"Através do link :guilabel:`User Activities`, no lado direito da página, é "
+"possível visualizar todas as actividades realizadas pelo usuário."
 
 #: ../../usage/users_groups/users_info.rst:36 9615f7f047464c81ab832f182cdaa031
 msgid "*User activities*"
@@ -104,7 +104,7 @@ msgid ""
 "through the :guilabel:`Recent Activities` link of the user menu."
 msgstr ""
 "É também possível, no GeoNode, ver as actividades recentes de todos os "
-"usuários através do link :guilabel:`Actividades Recentes` do menu do usuário."
+"usuários através do link :guilabel:`Recent Activities` do menu do usuário."
 
 #: ../../usage/users_groups/users_info.rst:45 c13b47c716d742058b3b9a32fd0e9efd
 msgid "*Recent Activities link*"

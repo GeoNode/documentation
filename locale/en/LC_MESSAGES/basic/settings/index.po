@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2021-06-10 11:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,7 +90,7 @@ msgstr ""
 #: ../../basic/settings/index.rst:1385 ../../basic/settings/index.rst:1400
 #: ../../basic/settings/index.rst:1680 ../../basic/settings/index.rst:1686
 #: ../../basic/settings/index.rst:1917 ../../basic/settings/index.rst:1924
-#: ../../basic/settings/index.rst:2046 ../../basic/settings/index.rst:2390
+#: ../../basic/settings/index.rst:2046 ../../basic/settings/index.rst:2385
 #: 026736a07765488092470abf1471944b 034c4682dbb3441594170ad77642e3d5
 #: 0ded0544705d4936832dc51536b44256 100ccbf6e4ff4032baa7fa1c822b83f4
 #: 186fdf1083784d28be936ca349155cef 1f0a107ad36b4b98a4513e7494e2bb3f
@@ -101,18 +101,17 @@ msgstr ""
 #: 5074d00042f14f6ca4c2b12db409c39d 55cbbf7a15854a60be3733464a3dbd78
 #: 5a9bef987fef424ca76b5f464775688e 60f50516c4594f8bbaec547de650a27e
 #: 655fd492e1aa40f2acd61561343e3cf5 65bf9e27b6aa411b8c5149b4836c7744
-#: 69138cab79c1478b97d14c8ebf481f2a 6a0a9a0a449f4c8c8f1e4fab052fa495
-#: 6ae87b8250de49439aef7be1b886d369 6d7cdc93ae934a66a2244a1929d9835d
-#: 6e128fe04bf4493f8af71ff1c522f48b 732a09c91c1e48fbac9f1444b49e261f
-#: 760b43c798e54c78b44cc47d941ebb1d 7f3612ac21164ea798f1ac8332277907
-#: 7fd5f8c6d2084f1991d04c8d5b33764e 82a84b4e973543ee9991529be291cc39
-#: ab7246f028974578a449aa5ea4444366 ad60eeea90c14c298d95fe8d4c5caf29
-#: adbfd2c95abe4f54a22a2586907a189c b5fa8ac1a9364dd3b9511037cee3b7c1
-#: ba86905bd1f3486ba337d1172c94f0b3 c58ab881fb694929b7219ea13cd6dea6
-#: c7410fc252f74489a4556ee21ee25082 cff5a177353c42518654a734e5d127ae
-#: d0600e946aa6428080da299bf55da344 db79e9ed73084a7daa7399a8fff9f1c9
-#: dec99c9c58ff464cba4598feb3fe218d e2881bd8689f4022be8d9976679e4384
-#: f520f98630b946489115bd8f78493c7f fb0bb92bf802465bb9c0866e2b82736f
+#: 69138cab79c1478b97d14c8ebf481f2a 6ae87b8250de49439aef7be1b886d369
+#: 6d7cdc93ae934a66a2244a1929d9835d 6e128fe04bf4493f8af71ff1c522f48b
+#: 732a09c91c1e48fbac9f1444b49e261f 760b43c798e54c78b44cc47d941ebb1d
+#: 7f3612ac21164ea798f1ac8332277907 7fd5f8c6d2084f1991d04c8d5b33764e
+#: 82a84b4e973543ee9991529be291cc39 ab7246f028974578a449aa5ea4444366
+#: ad60eeea90c14c298d95fe8d4c5caf29 adbfd2c95abe4f54a22a2586907a189c
+#: b5fa8ac1a9364dd3b9511037cee3b7c1 ba86905bd1f3486ba337d1172c94f0b3
+#: c58ab881fb694929b7219ea13cd6dea6 c7410fc252f74489a4556ee21ee25082
+#: cff5a177353c42518654a734e5d127ae d0600e946aa6428080da299bf55da344
+#: db79e9ed73084a7daa7399a8fff9f1c9 dec99c9c58ff464cba4598feb3fe218d
+#: e2881bd8689f4022be8d9976679e4384 fb0bb92bf802465bb9c0866e2b82736f
 #: fb93fc0ec6114604a6eed9f177cef6d6
 msgid "Default: ``False``"
 msgstr ""
@@ -298,7 +297,7 @@ msgstr ""
 #: ../../basic/settings/index.rst:1954 ../../basic/settings/index.rst:2101
 #: ../../basic/settings/index.rst:2151 ../../basic/settings/index.rst:2171
 #: ../../basic/settings/index.rst:2203 ../../basic/settings/index.rst:2277
-#: ../../basic/settings/index.rst:2358 ../../basic/settings/index.rst:2382
+#: ../../basic/settings/index.rst:2358 ../../basic/settings/index.rst:2377
 #: 03709d3ffbd5438f83161cb3a774f23a 092de9e0ed9e4ce8aae8f8ce4747e5e0
 #: 0b31123ebb824794ab5aa6a4b6cabda3 12d3fa83b18240b782cf757e662c304f
 #: 2028ae1caefa40ffb281bfea98510df7 20e43187f33542cf8980a374b3a15649
@@ -3377,38 +3376,30 @@ msgid "A dictionary of Uploader settings and their values."
 msgstr ""
 
 #: ../../basic/settings/index.rst:2371 c89fdce3696e4b998aee4aa0ea1a0d76
-msgid "Default: ``'geonode.rest'``"
+msgid "Default: ``'geonode.importer'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2373 6ae4d7bcaaaa4658805eba59f4fcfcb1
-msgid "The uploader backend to use.  The backend choices are:"
-msgstr ""
-
-#: ../../basic/settings/index.rst:2375 f1c35674ab4d4793baf467f8b7d0a0f9
-msgid "``'geonode.importer'`` ``'geonode.rest'``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:2378 e163636d10b940a7b04660714be9415b
+#: ../../basic/settings/index.rst:2373 e163636d10b940a7b04660714be9415b
 msgid ""
 "The importer backend requires the GeoServer importer extension to be "
 "enabled."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2380 b1aaaa6787324b7d8496b0affba7bb4e
+#: ../../basic/settings/index.rst:2375 b1aaaa6787324b7d8496b0affba7bb4e
 msgid "OPTIONS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2388 743f440a40eb4e96b086eeb93c926092
+#: ../../basic/settings/index.rst:2383 743f440a40eb4e96b086eeb93c926092
 msgid "TIME_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2392 435ed098419e4df7adfe5dcd04f4771e
+#: ../../basic/settings/index.rst:2387 435ed098419e4df7adfe5dcd04f4771e
 msgid ""
 "A boolean that specifies whether the upload should allow the user to "
 "enable time support when uploading data."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2395 dbdf6a7856c841fca31d3ef7a9e026dd
+#: ../../basic/settings/index.rst:2390 dbdf6a7856c841fca31d3ef7a9e026dd
 msgid "USER_MESSAGES_ALLOW_MULTIPLE_RECIPIENTS"
 msgstr ""
 
@@ -3416,11 +3407,11 @@ msgstr ""
 msgid "Env: ``USER_MESSAGES_ALLOW_MULTIPLE_RECIPIENTS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2400 d62c1a2a981b4836a73ae73cffe0cfb1
+#: ../../basic/settings/index.rst:2395 d62c1a2a981b4836a73ae73cffe0cfb1
 msgid "Set to true to have multiple recipients in /message/create/"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2405 e9d6c499b606490db76351be5d785746
+#: ../../basic/settings/index.rst:2400 e9d6c499b606490db76351be5d785746
 msgid "USER_ANALYTICS_ENABLED"
 msgstr ""
 
@@ -3428,18 +3419,18 @@ msgstr ""
 msgid "Env: ``USER_ANALYTICS_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2410 8ba6e14c83d44ac38bf45ba94a50ee9f
+#: ../../basic/settings/index.rst:2405 8ba6e14c83d44ac38bf45ba94a50ee9f
 msgid ""
 "Set to true to anonymously collect user data for analytics. If true you "
 "have to set :ref:`monitoring-data-aggregation` and :ref:`monitoring-skip-"
 "paths`."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2413 9e790ec9fd7949a387ce3f86f108d1c0
+#: ../../basic/settings/index.rst:2408 9e790ec9fd7949a387ce3f86f108d1c0
 msgid "See :ref:`geonode_monitoring` to learn more about it."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2416 623438a388af4a218d09474c4bcefe8f
+#: ../../basic/settings/index.rst:2411 623438a388af4a218d09474c4bcefe8f
 msgid "USER_ANALYTICS_GZIP"
 msgstr ""
 
@@ -3447,37 +3438,37 @@ msgstr ""
 msgid "Env: ``USER_ANALYTICS_GZIP``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2421 feb4bbd07fa84bf7a900cc34bfaaee43
+#: ../../basic/settings/index.rst:2416 feb4bbd07fa84bf7a900cc34bfaaee43
 msgid ""
 "To be used with ``USER_ANALYTICS_ENABLED``. Compress ``gzip`` json "
 "messages before sending to ``logstash``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2426 e5a3653fe27f42b6b0b165cdb34e7c9c
+#: ../../basic/settings/index.rst:2421 e5a3653fe27f42b6b0b165cdb34e7c9c
 msgid "UUID HANDLER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2428 80f2463c383445c5a743486066740332
+#: ../../basic/settings/index.rst:2423 80f2463c383445c5a743486066740332
 msgid "Is possible to define an own uuidhandler for the Layer."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2430 6b8a9304f9904730a65805aadd30adbc
+#: ../../basic/settings/index.rst:2425 6b8a9304f9904730a65805aadd30adbc
 msgid ""
 "To start using your own handler, is needed to add the following "
 "configuration:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2432 1aca69481b504f9c99d089c1318db79f
+#: ../../basic/settings/index.rst:2427 1aca69481b504f9c99d089c1318db79f
 msgid "`LAYER_UUID_HANDLER = \"mymodule.myfile.MyObject\"`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2434 1e1932e475b14a55951bee39e577e6f4
+#: ../../basic/settings/index.rst:2429 1e1932e475b14a55951bee39e577e6f4
 msgid ""
 "The Object must accept as `init` the `instance` of the layer and have a "
 "method named `create_uuid()`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2436 c057463f52954e67b960134313e08ebe
+#: ../../basic/settings/index.rst:2431 c057463f52954e67b960134313e08ebe
 msgid "here is an example:"
 msgstr ""
 
@@ -3505,23 +3496,32 @@ msgstr ""
 msgid "pass"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2448 a37e05f6a15f4720b649fcf1ea4ba322
+#: ../../basic/settings/index.rst:2443 a37e05f6a15f4720b649fcf1ea4ba322
 msgid "X"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2451 d5f3aa4b53da40d0b47e83cf62a32f02
+#: ../../basic/settings/index.rst:2446 d5f3aa4b53da40d0b47e83cf62a32f02
 msgid "X_FRAME_OPTIONS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2453 07e54d600e164a128a7e02b077b25135
+#: ../../basic/settings/index.rst:2448 07e54d600e164a128a7e02b077b25135
 #, python-format
 msgid "Default: ``'ALLOW-FROM %s' % SITEURL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2455 65613eb46d344433a9684e996397013a
+#: ../../basic/settings/index.rst:2450 65613eb46d344433a9684e996397013a
 msgid ""
 "This is a `Django setting "
 "<https://docs.djangoproject.com/en/3.2/ref/clickjacking/#setting-x-frame-"
 "options-for-all-responses>`__"
 msgstr ""
+
+#~ msgid "Default: ``'geonode.rest'``"
+#~ msgstr ""
+
+#~ msgid "The uploader backend to use.  The backend choices are:"
+#~ msgstr ""
+
+#~ msgid "``'geonode.importer'`` ``'geonode.rest'``"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 18:29+0200\n"
+"PO-Revision-Date: 2021-06-30 23:00+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -126,7 +126,7 @@ msgstr "Hardware de 64 bits **fortemente** recomendado."
 
 #: ../../start/quick/index.rst:31 bee806fe419f489b87e58f857ff09116
 msgid "OSGEO Live CD"
-msgstr "CD OSGEO ao Vivo"
+msgstr "CD OSGEO Executável"
 
 #: ../../start/quick/index.rst:36 78741026fb7d4a418d34d4891a572757
 msgid ""
@@ -266,13 +266,13 @@ msgid ""
 "The following tutorials will introduce the use of Docker community "
 "edition on:"
 msgstr ""
-"Os seguintes tutoriais irão apresentar o uso da edição da comunidade "
-"Docker em:"
+"Os seguintes tutoriais irão apresentar o uso do Docker community edition "
+"em:"
 
 #: ../../start/quick/index.rst:77 71865bdeeadf4019acaf7afa211a5409
 msgid ":ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Basic Setup>`"
-msgstr ":ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Configuração Básica>`"
+msgstr ":ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Basic Setup>`"
 
 #: ../../start/quick/index.rst:79 d6cbc94564c64627a9e307845fc961f3
 msgid ":ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`"
-msgstr ":ref:`CentOS 7.0 <CentOS (7.0 +) Configuração Básica>`"
+msgstr ":ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`"

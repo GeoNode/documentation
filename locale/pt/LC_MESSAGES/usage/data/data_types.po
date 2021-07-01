@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 19:01+0200\n"
+"PO-Revision-Date: 2021-07-01 13:57+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,8 +38,8 @@ msgid ""
 "the top of the page."
 msgstr ""
 "Você pode explorar os dados existentes usando muitas ferramentas de "
-"pesquisa e filtros (veja :ref:`pesquisando-dados`) ou através dos links "
-"da barra de navegação no topo da página."
+"pesquisa e filtros (veja :ref:`finding-data`) ou através dos links da "
+"barra de navegação no topo da página."
 
 #: ../../usage/data/data_types.rst:8 b9da50f1b04a42129990dd314491a694
 msgid "There are three main types of resources that GeoNode can manage:"
@@ -68,7 +68,7 @@ msgid ""
 "the navigation bar."
 msgstr ""
 "Documentos e camadas podem ser acessados a partir do menu :guilabel:"
-"`Dados` da barra de navegação."
+"`Data` da barra de navegação."
 
 #: ../../usage/data/data_types.rst:19 e74cb89af9ee4e1caca2df25a8d847a9
 msgid "*Data menu*"
@@ -76,7 +76,7 @@ msgstr "*Menu de dados*"
 
 #: ../../usage/data/data_types.rst:21 1b630b234f2644048be81209115a8b08
 msgid "The :guilabel:`Maps` menu let you to manage maps."
-msgstr "O menu :guilabel:`Mapas` permite que você faça a gestão dos mapas."
+msgstr "O menu :guilabel:`Maps` permite que você faça a gestão dos mapas."
 
 #: ../../usage/data/data_types.rst:26 e04392c3ba16481687009e174bb54d7a
 msgid "*Maps menu*"
@@ -96,7 +96,7 @@ msgid ""
 "documents` for further information)."
 msgstr ""
 "Documentos podem ser carregados directamente do seu disco (veja :ref:"
-"`carregando-documentos` para mais informações)."
+"`uploading-documents` para mais informações)."
 
 #: ../../usage/data/data_types.rst:35 85da0bd6de2246f6b9f9b0606c99f434
 msgid ""

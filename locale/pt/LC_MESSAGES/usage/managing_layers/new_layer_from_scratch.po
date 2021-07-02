@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:26+0200\n"
+"PO-Revision-Date: 2021-07-02 19:49+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -90,7 +90,7 @@ msgid ""
 "`layer-permissions` to learn how."
 msgstr ""
 "Neste momento, você pode também, alterar as configurações padrão de "
-"*Permissões*, consulte :ref:`permissões-de-camada` para saber como."
+"*Permissões*, consulte :ref:`layer-permissions` para saber como."
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:31
 #: e654bb5a7889481cba7da3d81da45c4c

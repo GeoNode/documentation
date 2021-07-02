@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:41+0200\n"
+"PO-Revision-Date: 2021-07-01 23:42+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "Para criar novos mapas, você pode usar:"
 #: ../../usage/managing_maps/creating_maps.rst:10
 #: 2dfd45811b494af69682c5c61295bd99
 msgid "the :guilabel:`Create Map` link of the *Maps* menu in the navigation bar"
-msgstr "o link :guilabel:`Criar Mapa` do menu *Mapas* na barra de navegação"
+msgstr "o link :guilabel:`Create Map` do menu *Maps* na barra de navegação"
 
 #: ../../usage/managing_maps/creating_maps.rst:15
 #: 594d41bfd3c842c788110728657e15af
@@ -56,7 +56,7 @@ msgid ""
 "the :guilabel:`Create Map` button in the *Layer Page* (it creates a map using "
 "a specific layer)"
 msgstr ""
-"o botão :guilabel:`Criar Mapa` na *Página de Camadas* (cria um mapa usando "
+"o botão :guilabel:`Create Map` na *Página de Camadas* (cria um mapa usando "
 "uma camada específica)"
 
 #: ../../usage/managing_maps/creating_maps.rst:22
@@ -67,7 +67,7 @@ msgstr "*O botão Criar Mapa*"
 #: ../../usage/managing_maps/creating_maps.rst:24
 #: ae2827a8ef204ca0821c7d912554bc4d
 msgid "the :guilabel:`Create New Map` button in the *Explore Maps* page"
-msgstr "o botão :guilabel:`Criar Novo Mapa` na página *Explorar Mapas*"
+msgstr "o botão :guilabel:`Create New Map` na página *Explorar Mapas*"
 
 #: ../../usage/managing_maps/creating_maps.rst:29
 #: f06198abb0334e8aae1ae1e4a5e1ec7a
@@ -94,7 +94,7 @@ msgid ""
 "*Map*. It allows to manage all the layers associated with the map and to add "
 "new ones from the *Catalog*."
 msgstr ""
-"No canto superior esquerdo, o botão |botão_toc| abre o :ref:`toc` do *Mapa*. "
+"No canto superior esquerdo, o botão |toc_button| abre o :ref:`toc` do *Mapa*. "
 "Permite gerir todas as camadas associadas ao mapa e adicionar novas a partir "
 "do *Catálogo*."
 
@@ -116,9 +116,9 @@ msgid ""
 "zoom to layers extents ( |zoom_to_layer_extent_button| ) and to manage their "
 "properties ( |layer_settings_button| )."
 msgstr ""
-"Também permite ocultar/mostrar camadas ( |botão_mostrar| e |botão_ocultar|), "
-"ampliar as extensões das camadas (|botão_zoom_para_extenção_da_camada|) e "
-"gerir suas propriedades (|botão_definições_de_camada|)."
+"Também permite ocultar/mostrar camadas ( |show_button| e |hide_button|), "
+"ampliar as extensões das camadas (|zoom_to_layer_extent_button|) e gerir suas "
+"propriedades (|layer_settings_button|)."
 
 #: ../../usage/managing_maps/creating_maps.rst:71
 #: 1824146f07664491bdc65de15b879b8d
@@ -127,7 +127,7 @@ msgid ""
 "clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
 msgstr ""
 "Uma vez que as camadas do mapa foram definidas, é possível salvar o *Mapa* "
-"clicando em |botão_menu_burger| e escolhendo :guilabel:`Salvar como`."
+"clicando em |burger_menu_button| e escolhendo :guilabel:`Save as`."
 
 #: ../../usage/managing_maps/creating_maps.rst:76
 #: d9feb70e7de446ea8668e30bd33889fe
@@ -142,8 +142,7 @@ msgid ""
 "details."
 msgstr ""
 "Se seguiu as etapas acima, acabou de criar o seu primeiro *Mapa*. Agora deve "
-"vê-lo na página *Explorar Mapas*, consulte :ref:`informações-do-mapa` para "
-"mais detalhes."
+"vê-lo na página *Explorar Mapas*, consulte :ref:`map-info` para mais detalhes."
 
 #: ../../usage/managing_maps/creating_maps.rst:81
 #: c506bdd56130446aa4d9567ac42a67d6
@@ -152,4 +151,4 @@ msgid ""
 "maps` section."
 msgstr ""
 "Vamos dar uma olhada mais de perto nas ferramentas do *Visualizador de Mapas* "
-"na secção :ref:`explorando-mapas`."
+"na secção :ref:`exploring-maps`."

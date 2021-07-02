@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:46+0200\n"
+"PO-Revision-Date: 2021-07-01 23:57+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +31,7 @@ msgid ""
 "Detail` button from the *Map Information* page."
 msgstr ""
 "*Os Metadados de Mapas* podem ser explorados clicando no botão :guilabel:"
-"`Detalhe de Metadados` na página *Informações do Mapa*."
+"`Metadata Detail` na página *Informações do Mapa*."
 
 #: ../../usage/managing_maps/map_metadata.rst:11
 #: 10f908a172a44a64b9cd85735428116b
@@ -153,8 +153,7 @@ msgstr ""
 #: ../../usage/managing_maps/map_metadata.rst:46
 #: 463f494fc291421891239d9b57d76c0e
 msgid "The *Thumbnail* of the map (click :guilabel:`Edit` to change it);"
-msgstr ""
-"A *Miniatura* do mapa (clique em :guilabel:`Editar` para alterá-lo);"
+msgstr "A *Miniatura* do mapa (clique em :guilabel:`Edit` para alterá-lo);"
 
 #: ../../usage/managing_maps/map_metadata.rst:47
 #: 988e8157b20d489da6c9292255d38ec7
@@ -203,7 +202,7 @@ msgstr "O *Grupo* ao qual o mapa está vinculado."
 #: ../../usage/managing_maps/map_metadata.rst:57
 #: 0c25b5aa7a574f279c54da994f8da833
 msgid "Click :guilabel:`Next >>` to go to the next step."
-msgstr "Clique em :guilabel:`Próximo >>` para ir para a próxima etapa."
+msgstr "Clique em :guilabel:`Next >>` para ir para a próxima etapa."
 
 #: ../../usage/managing_maps/map_metadata.rst:60
 #: 7bb9a81d3d1e44119a33eaee2b8d2839
@@ -265,11 +264,11 @@ msgid ""
 "will be visible in the screen. Click :guilabel:`Next >>` to go to the "
 "next step or :guilabel:`<< Back` to go back to the previous step."
 msgstr ""
-"Nenhum outro metadado obrigatório é requerido na próxima etapa, então, "
-"uma vez que os campos requeridos tenham sido preenchidos, um botão "
-"verde :guilabel:`Concluído` ficará visível na tela. Clique em :guilabel:"
-"`Próximo >>` para ir para a próxima etapa ou :guilabel:`<< Voltar` para "
-"voltar à etapa anterior."
+"Nenhum outro metadado obrigatório é necessário na próxima etapa, então, "
+"uma vez que os campos necessários tenham sido preenchidos, um botão "
+"verde :guilabel:`Done` ficará visível na tela. Clique em :guilabel:`Next "
+">>` para ir para a próxima etapa ou :guilabel:`<< Back` para voltar à "
+"etapa anterior."
 
 #: ../../usage/managing_maps/map_metadata.rst:79
 #: 43f2c07052ad45c183e6c64534e6d071
@@ -353,7 +352,7 @@ msgid ""
 "The :guilabel:`Advanced Edit` editing tool allows to change the map "
 "metadata. You can find this button into the map *Editing Tools*."
 msgstr ""
-"A ferramenta de edição :guilabel:`Edição Avançada` permite alterar os "
+"A ferramenta de edição :guilabel:`Advanced Edit` permite alterar os "
 "metadados do mapa. Você pode encontrar este botão no mapa *Ferramentas "
 "de Edição*."
 
@@ -373,4 +372,4 @@ msgstr ""
 "Clique nele para exibir a *Página de Edição Avançada de Metadados*. Essa "
 "página permite que você edite todos os metadados da camada descritos no "
 "parágrafo anterior. Assim que terminar de editá-los, clique em :guilabel:"
-"`Actualizar` para salvar suas alterações."
+"`Update` para salvar suas alterações."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:58+0200\n"
+"PO-Revision-Date: 2021-07-02 00:31+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,13 +47,13 @@ msgid ""
 "user-guide/timeline/>`_ for further details)."
 msgstr ""
 "O visualizador de mapa baseado em `MapStore <https://mapstore2.geo-"
-"solutions.it/mapstore/#/>` _ usado no Geonode, disponibiliza a "
-"ferramenta **Linha de Tempo** que permite observar a evolução das "
-"camadas ao longo do tempo, para inspecionar a configuração da camada em "
-"um instante de tempo específico e para visualizar as diferentes "
-"configurações de camada dinamicamente por meio de animações (consulte a "
-"`Documentação do MapStore <https://mapstore2.readthedocs.io/en/latest/"
-"user-guide/timeline/>`_ para mais detalhes)."
+"solutions.it/mapstore/#/>`_ usado no Geonode, disponibiliza a ferramenta "
+"**Linha de Tempo** que permite observar a evolução das camadas ao longo "
+"do tempo, para inspecionar a configuração da camada em um instante de "
+"tempo específico e para visualizar as diferentes configurações de camada "
+"dinamicamente por meio de animações (consulte a `Documentação do "
+"MapStore <https://mapstore2.readthedocs.io/en/latest/user-guide/timeline/"
+">`_ para mais detalhes)."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:49
 #: 5110e717f5e8487689ba42ae8b94f769
@@ -111,9 +111,9 @@ msgid ""
 "animation by clicking |stop_button|."
 msgstr ""
 "Em particular, você pode *Reproduzir* a animação clicando em |"
-"botão_reproduzir|, voltar ao instante anterior através de |"
-"botão_recuar_no_tempo|, avançar para a próxima etapa usando |"
-"botão_avançar_no_tempo| e pare a animação clicando em |botão_parar|."
+"play_button|, voltar ao instante anterior através de |"
+"time_go_backward_button|, avançar para a próxima etapa usando |"
+"time_go_forward_button| e pare a animação clicando em |stop_button|."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:71
 #: acdd5d1ecdb7421f99cf8ae245b91273
@@ -127,7 +127,7 @@ msgid ""
 "expand_timeline_button| button."
 msgstr ""
 "O painel *Linha do Tempo* pode ser expandido por meio do botão |"
-"botão_expandir_linha_do_tempo|."
+"expand_timeline_button|."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:78
 #: fcaf3cc05e404464b78c14b27b957912
@@ -170,7 +170,7 @@ msgid ""
 "show_hide_layers_list_button| (it is active by default)."
 msgstr ""
 "Você pode mostrar/ocultar a lista de camadas clicando em |"
-"botão_mostrar_ocultar_lista_de_camadas| (está activo por padrão)."
+"show_hide_layers_list_button| (está activo por padrão)."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:98
 #: bdfa85b7c97444948159039b2a9e78df
@@ -180,8 +180,8 @@ msgid ""
 "the final times to use it."
 msgstr ""
 "Por meio da função *Intervalo de Tempo*, você pode observar os dados em "
-"um intervalo temporal finito. Clique em |botão_intervalo_de_tempo| e "
-"defina os tempos inicial e final para usá-lo."
+"um intervalo temporal finito. Clique em |time_range_button| e defina os "
+"tempos inicial e final para usá-lo."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:104
 #: 9df08fccdb43444d897a3f3df45d1955
@@ -211,8 +211,8 @@ msgid ""
 "accordingly to the time reach by the cursor on the *Histogram*."
 msgstr ""
 "Como dito antes, você pode reproduzir a *Animação* resultante clicando "
-"no botão reproduzir |botão_reproduzir|. Os dados da camada exibidos no "
-"mapa serão alterados de acordo com o tempo alcançado pelo cursor no "
+"no botão reproduzir |play_button|. Os dados da camada exibidos no mapa "
+"serão alterados de acordo com o tempo alcançado pelo cursor no "
 "*Histograma*."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:113
@@ -221,7 +221,7 @@ msgid ""
 "By clicking on |animation_settings_button| you can manage some "
 "*Animation Settings*."
 msgstr ""
-"Clicando em |botão_definições_de_animação| você pode gerir algumas "
+"Clicando em |animation_settings_button| você pode gerir algumas "
 "*Configurações de Animação*."
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:119

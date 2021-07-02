@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:59+0200\n"
+"PO-Revision-Date: 2021-07-02 00:15+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,7 +32,7 @@ msgid ""
 "layers involved with the *Map* and allows to manage their properties and "
 "representations on the map."
 msgstr ""
-"No canto superior esquerdo, clique em |botão_toc| para abrir o *Índice*, "
+"No canto superior esquerdo, clique em |toc_button| para abrir o *Índice*, "
 "abreviadamente *TOC* de agora em diante, do mapa. O *TOC* mostra todas as "
 "camadas envolvidas com o *Mapa* e permite gerir as suas propriedades e "
 "representações no mapa."
@@ -62,8 +62,7 @@ msgstr "filtre a lista de camadas digitando texto no campo *Camadas de filtro*;"
 msgid ""
 "add new layers from the *Catalog* by clicking the :guilabel:`Add Layer` button;"
 msgstr ""
-"adicione novas camadas do *Catálogo* clicando no botão :guilabel:`Adicionar "
-"Camada`;"
+"adicione novas camadas do *Catálogo* clicando no botão :guilabel:`Add Layer`;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:35
 #: cdfcf3d63f854f45add8366cc3a4d1d0
@@ -73,8 +72,8 @@ msgid ""
 "show_button| to show it on map);"
 msgstr ""
 "gerir as propriedades das camadas como *Opacidade* (role o cursor de "
-"opacidade), *Visibilidade* (clique em |botão_ocultar| para tornar a camada "
-"invisível, clique em |botão_mostrar| para mostrá-la no mapa);"
+"opacidade), *Visibilidade* (clique em |hide_button| para tornar a camada "
+"invisível, clique em |show_button| para mostrá-la no mapa);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:36
 #: 1b3b6d09c79d43afb4a5657bc1347b7a
@@ -109,8 +108,7 @@ msgstr "A *Barra de Ferramentas* mostra muitos botões:"
 #: 196dd65161174e4f99d966238ea1edab
 msgid "|zoom_to_layer_extent_button| allows you to zoom to the layer extent;"
 msgstr ""
-"|botão_fazer_zoom_para_extensão_da_camada| permite que você amplie até a "
-"extensão da camada;"
+"|zoom_to_layer_extent_button| permite que você amplie até a extensão da camada;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:80
 #: 654cf11caabf4bf99f15be92124023ec
@@ -118,8 +116,8 @@ msgid ""
 "|layer_settings_button| drives you through the layer settings customization "
 "(see the next paragraph);"
 msgstr ""
-"|botão_definições_da_camada| o conduz através da personalização de "
-"configurações de camada (consulte o próximo parágrafo);"
+"|layer_settings_button| o conduz através da personalização de configurações de "
+"camada (consulte o próximo parágrafo);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:81
 #: e7bb720ae2014cf7a8dd0f6c3377d5f9
@@ -127,8 +125,8 @@ msgid ""
 "|attribute_table_button| to explore the features of the layer and their "
 "attributes (more information at :ref:`attributes-table`);"
 msgstr ""
-"|botão_tabela_de_atributos| para explorar os recursos da camada e seus "
-"atributos (mais informações em :ref:`tabela-de-atributos`);"
+"|attribute_table_button| para explorar os recursos da camada e seus atributos "
+"(mais informações em :ref:`tabela-de-atributos`);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:82
 #: e6583acf1ba44864a24809354a8a09d9
@@ -136,8 +134,8 @@ msgid ""
 "|delete_layer_button| to delete layers (click on :guilabel:`Delete Layer` to "
 "confirm your choice);"
 msgstr ""
-"|botão_excluir_camada| para excluir camadas (clique em :guilabel:`Excluir "
-"Camada` para confirmar a sua escolha);"
+"|delete_layer_button| para excluir camadas (clique em :guilabel:`Delete Layer` "
+"para confirmar a sua escolha);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:87
 #: 50115e832d5947c380aa404155d76209
@@ -147,7 +145,8 @@ msgstr "*Excluindo Camadas*"
 #: ../../usage/managing_maps/exploring_maps/toc.rst:89
 #: 1a5b32fc60024306b382a9f4f9268da9
 msgid "|create_widgets_button| to create *Widgets* (see :ref:`creating-widgets`)."
-msgstr "|botão criar_widgets| para criar *Widgets* (veja :ref:`criando-widgets`)."
+msgstr ""
+"|create_widgets_button| para criar *Widgets* (veja :ref:`creating-widgets`)."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:92
 #: 0a497ba78e864cb29124cbe6464cad9c
@@ -240,5 +239,5 @@ msgid ""
 "one. See the :ref:`layer-style` section to read more."
 msgstr ""
 "A terceira guia é **Estilo**. Ao clicar nela, um *Editor de Estilos* avançado "
-"permite criar novos estilos e modificar ou excluir um existente. Veja a seção :"
-"ref:`estilo-de-camada` para ler mais."
+"permite criar novos estilos e modificar ou excluir um existente. Veja a secção :"
+"ref:`layer-style` para ler mais."

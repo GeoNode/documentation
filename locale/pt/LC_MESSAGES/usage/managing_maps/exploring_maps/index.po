@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:55+0200\n"
+"PO-Revision-Date: 2021-07-02 00:10+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,10 +31,9 @@ msgid ""
 "the *Maps List* page (see :ref:`finding-maps`). Select a map you are "
 "interested in and click on it, the *Map Page* will open."
 msgstr ""
-"A partir do link :guilabel:`Explorar Mapas` da barra de navegação você pode "
-"acessar a página *Lista de Mapas* (veja :ref:`encontrando-mapas`). "
-"Seleccione um mapa de seu interesse e clique nele, a *Página do Mapa* será "
-"aberta."
+"A partir do link :guilabel:`Explore Maps` da barra de navegação você pode "
+"acessar a página *Lista de Mapas* (veja :ref:`finding-maps`). Seleccione um "
+"mapa de seu interesse e clique nele, a *Página do Mapa* será aberta."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:12
 #: c9046546f9464c058d9bc86f2b8b09bf
@@ -45,8 +44,7 @@ msgstr "*O botão Exibir Mapa*"
 #: 870cbde5a4394406957b4c69c414c5ec
 msgid "Click on the :guilabel:`View Map` button to open the *Map Viewer*."
 msgstr ""
-"Clique no botão :guilabel:`Visualizar Mapa` para abrir o *Visualizador de "
-"Mapas*."
+"Clique no botão :guilabel:`View Map` para abrir o *Visualizador de Mapas*."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:19
 #: 27513a5ad6fa4df2a53cd9911e249f68
@@ -89,8 +87,8 @@ msgid ""
 "the :ref:`options-menu-tools` which contains the link to the *Print* tool, "
 "to the layers *Catalog* and to the *Measure* tool;"
 msgstr ""
-"o :ref:`ferramentas-do-menu-de-opções` que contém o link para a ferramenta "
-"*Imprimir*, para as camadas *Catálogo* e para a ferramenta *Medir*;"
+"o :ref:`options-menu-tools` que contém o link para a ferramenta *Imprimir*, "
+"para as camadas *Catálogo* e para a ferramenta *Medir*;"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:27
 #: b2fe074cf8a44029a24daa1b5cf3a705
@@ -174,9 +172,9 @@ msgid ""
 "zoom_out_button|, other options can be explored by clicking on |"
 "sidebar_expand_button| which expands/collapses the toolbar."
 msgstr ""
-"Por padrão, a *Barra Lateral* mostra os botões de zoom |botão_zoom_in| e |"
-"botão_zoom_out|, outras opções podem ser exploradas clicando em |"
-"botão_expandir_barra_lateral| que expande/colapsa a barra de ferramentas."
+"Por padrão, a *Barra Lateral* mostra os botões de zoom |zoom_in_button| e |"
+"zoom_out_button|, outras opções podem ser exploradas clicando em |"
+"sidebar_expand_button| que expande/colapsa a barra de ferramentas."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:117
 #: b3259a66d0ce4ad9a3b3b9acd96383c4
@@ -201,9 +199,9 @@ msgid ""
 "about the features of some layers by clicking them directly on the map."
 msgstr ""
 "A *Consulta de Objectos no Mapa* permite que você obtenha informações de "
-"características através do botão |botão_consultar_objectos_no_mapa| . Ele "
-"permite que você recupere informações sobre os recursos de algumas camadas "
-"clicando nelas diretamente no mapa."
+"características através do botão |query_objects_on_map_button| . Ele permite "
+"que você recupere informações sobre os recursos de algumas camadas clicando "
+"nelas diretamente no mapa."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:133
 #: 132069702a5846e7a245d6cae88f4754
@@ -224,7 +222,7 @@ msgstr ""
 msgid "You can *Zoom To Max Extent* by clicking |zoom_to_max_extent_button|."
 msgstr ""
 "Você pode fazer *Zoom na Extensão Máxima* clicando em |"
-"botão_zoom_para_extenção_máxima|."
+"zoom_to_max_extent_button|."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:139
 #: a5b353e5bc2049baa93660b033d635c4
@@ -233,7 +231,7 @@ msgid ""
 "Back* button |go_back_button| and the *Go Forward* one |go_forward_button|."
 msgstr ""
 "Você pode alternar entre o nível de zoom anterior e o próximo por meio do "
-"botão *Voltar* |botão_voltar| e o *Avançar* |botão_avançar|."
+"botão *Voltar* |go_back_button| e o *Avançar* |go_forward_button|."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:141
 #: 6275382c8ea94be8a122f0cf60069676
@@ -241,7 +239,7 @@ msgid ""
 "The *Switch to Full Screen* |full_screen_button| button allows to have a "
 "full screen map."
 msgstr ""
-"O botão *Mudar para Tela Inteira* |botão_tela_inteira| permite ter um mapa "
+"O botão *Mudar para Tela Inteira* |full_screen_button| permite ter um mapa "
 "em tela cheia."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:146
@@ -312,7 +310,7 @@ msgid ""
 "*Coordinates* and to change the Coordinates Reference System (CRS), WGS 84 "
 "by default."
 msgstr ""
-"O botão |botão_ocultar_mostrar_coordenadas| permite que veja o ponteiro "
+"O botão |show_hide_coordinates_button| permite que veja o ponteiro "
 "*Coordenadas* e altere o Sistema de Referência de Coordenadas (CRS), WGS 84 "
 "por padrão."
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:53+0200\n"
+"PO-Revision-Date: 2021-07-02 00:42+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,7 +68,7 @@ msgid ""
 "Currently, GeoNode allows a very simple mechanism to customize the "
 "“GetFeatureInfo Template” of a Layer."
 msgstr ""
-"Atualmente, o GeoNode permite um mecanismo muito simples para personalizar "
+"Actualmente, o GeoNode permite um mecanismo muito simples para personalizar "
 "o “Template GetFeatureInfo” de uma camada."
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:18
@@ -132,7 +132,7 @@ msgstr ""
 "A maneira mais fácil de renderizar um tipo-de-mídia diferente (:guilabel: "
 "`imagem`, :guilabel:`audio`, :guilabel:`video` ou :guilabel:`iframe`) para "
 "um valor de propriedade, é alterá-lo do painel de atributos :guilabel:"
-"`Assistente do Editor de Metadados`."
+"`Metadata Editor Wizard`."
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:40
 #: 28dc88feef82420daa70a42057dcfbdf
@@ -140,8 +140,8 @@ msgid ""
 "By changing the :guilabel:`Display Type` of an attribute from this panel as "
 "shown in Fig. 4"
 msgstr ""
-"Alterando o :guilabel:`Tipo de Exibição` de um atributo deste painel, "
-"conforme mostrado na Fig. 4"
+"Alterando o :guilabel:`Display Type` de um atributo deste painel, conforme "
+"mostrado na Fig. 4"
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:45
 #: 249b4e3ff30a477f8d9ae72fbbd77a08
@@ -177,7 +177,7 @@ msgstr "*Fig. 5*"
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:56
 #: e803e5c688334163b705d76836868ecd
 msgid "Selecting :guilabel:`image` as media-type (Fig. 6)"
-msgstr "Seleccionando :guilabel:`imagem` como tipo-de-mídia (Fig. 6)"
+msgstr "Seleccionando :guilabel:`image` como tipo-de-mídia (Fig. 6)"
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:61
 #: fc3fdc4edbac4c889e755d5a3c190af2
@@ -215,8 +215,8 @@ msgid ""
 "By selecting the option :guilabel:`Use a custom template?` as shown in Fig. "
 "9"
 msgstr ""
-"Seleccionando a opção :guilabel:`Usar um modelo personalizado?` Como "
-"mostrado na Fig. 9"
+"Seleccionando a opção :guilabel:`Use a custom template?` Como mostrado na "
+"Fig. 9"
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:87
 #: f68c8645edbe42eaa123d3017a6e0471
@@ -240,8 +240,8 @@ msgid ""
 "`NAME` values, through the use of the keyword ``${properties.NAME}``"
 msgstr ""
 "O exemplo abaixo mostra como é possível criar uma boa saída HTML com uma :"
-"guilabel:`imagem` tomando o``src`` dos valores do atributo :guilabel:"
-"`NAME`, através do uso da palavra-chave ``${properties.NAME}``"
+"guilabel:`image` tomando o``src`` dos valores do atributo :guilabel:`NAME`, "
+"através do uso da palavra-chave ``${properties.NAME}``"
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:96
 #: 4d12b72e2e9c4e788f5b41b03860e1d0
@@ -276,9 +276,9 @@ msgid ""
 "on :guilabel:`settings.py` (see :ref:`tinyMCE Default Config Settings`)"
 msgstr ""
 "O :guilabel:`Barra de Menu` e :guilabel:`Barra de Ferramentas` do Editor de "
-"HTML, pode ser facilmente personalizado substituindo a variável `` "
-"TINYMCE_DEFAULT_CONFIG`` em :guilabel:`settings.py` (veja :ref:`tinyMCE "
-"Definições de Configuração Padrão`)"
+"HTML, pode ser facilmente personalizado substituindo a variável "
+"``TINYMCE_DEFAULT_CONFIG`` em :guilabel:`settings.py` (veja :ref:`tinyMCE "
+"Default Config Settings`)"
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:117
 #: 033ca40acfcb4b27b55f768e56aa534d

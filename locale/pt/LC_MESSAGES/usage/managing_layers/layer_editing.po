@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 19:57+0200\n"
+"PO-Revision-Date: 2021-07-01 22:42+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,8 +30,8 @@ msgid ""
 "The :guilabel:`Editing Tools` button of the *Layer Page* (see :ref:"
 "`layer-info`) opens a panel like the one shown in the picture below."
 msgstr ""
-"O botão :guilabel:`Ferramentas de Edição` da *Página Camada* (veja :ref:"
-"`informação-da-camada`) abre um painel como o mostrado na imagem abaixo."
+"O botão :guilabel:`Editing Tools` da *Página Camada* (veja :ref:`layer-"
+"info`) abre um painel como o mostrado na imagem abaixo."
 
 #: ../../usage/managing_layers/layer_editing.rst:11
 #: ../../usage/managing_layers/layer_editing.rst:31
@@ -75,10 +75,10 @@ msgid ""
 "covered in a dedicated section, see :ref:`layer-style`."
 msgstr ""
 "Nesta secção, você aprenderá como editar uma *Camada*, como substituir e "
-"editar seus dados. Veja :ref:`metadados-da-camada` para aprender como "
+"editar seus dados. Veja :ref:`layer-metadata` para aprender como "
 "explorar a camada *Metadados*, como carregá-los e editá-los. Os "
-"*Estilos* serão abordados em uma secção dedicada, consulte :ref:`estilo-"
-"de-camada`."
+"*Estilos* serão abordados em uma secção dedicada, consulte :ref:`layer-"
+"style`."
 
 #: ../../usage/managing_layers/layer_editing.rst:23
 #: 721734abdf70477eae983e44015395c9
@@ -96,7 +96,7 @@ msgstr ""
 "A Miniatura da camada que será exibida na página de lista de *Camadas* "
 "pode ser alterada arrastando e ampliando a visualização da camada para "
 "seleccionar qual parte será exibida e, em seguida, clicando no botão :"
-"guilabel:`Definir` do *Painel de Edição de Camadas *."
+"guilabel:`Set` do *Painel de Edição de Camadas*."
 
 #: ../../usage/managing_layers/layer_editing.rst:26
 #: b6096c42275c4797b6f016449037e93f
@@ -111,15 +111,15 @@ msgid ""
 "\"Upload Thumbnail\" page it is possible to enable the automatically "
 "generated thumbnail or upload an image to be used in place of it."
 msgstr ""
-"Também é possível carregar manualmente uma miniatura usando o botão :"
-"guilabel:`Carregar` do painel *Edição de Camadas*. Usando a página "
+"É também possível carregar manualmente uma miniatura usando o botão :"
+"guilabel:`Upload` do painel *Edição de Camadas*. Usando a página "
 "\"Carregar Miniatura\", é possível habilitar a miniatura gerada "
 "automaticamente ou carregar uma imagem para ser usada no lugar dela."
 
 #: ../../usage/managing_layers/layer_editing.rst:39
 #: 26c26e2d7916420a8ca7acb06605d230
 msgid "*The Upload Thumbnail panel*"
-msgstr "*O painel Carregar Miniatura *"
+msgstr "*O painel Carregar Miniatura*"
 
 #: ../../usage/managing_layers/layer_editing.rst:43
 #: 7e6de53c44754e39a9072df87a84f092
@@ -134,10 +134,10 @@ msgid ""
 "in which :guilabel:`Choose Files` button allows you to select files from "
 "your disk."
 msgstr ""
-"No painel *Edição de Camada*, clique em: guilabel: `Substituir` para "
-"alterar o conjunto de dados de origem da camada. Você será direccionado "
-"para a página *Substituir Camada* na qual o botão :guilabel:`Escolher "
-"Arquivos` permite que você seleccione arquivos do seu disco."
+"No painel *Edição de Camada*, clique em: guilabel:`Replace` para alterar "
+"o conjunto de dados de origem da camada. Você será direccionado para a "
+"página *Substituir Camada* na qual o botão :guilabel:`Choose Files` "
+"permite que você seleccione arquivos do seu disco."
 
 #: ../../usage/managing_layers/layer_editing.rst:50
 #: 2831e35f735a4bf78824d88b33fac0d5
@@ -152,8 +152,8 @@ msgid ""
 "message like the one in the picture below."
 msgstr ""
 "Assim que o *Charset* for seleccionado, o processo de upload pode ser "
-"accionado clicando em :guilabel:`Substitua a Camada`. Se nenhum erro "
-"ocorrer, você irá ver uma mensagem como a da imagem abaixo."
+"accionado clicando em :guilabel:`Replace Layer`. Se nenhum erro ocorrer, "
+"irá ver uma mensagem como a da imagem abaixo."
 
 #: ../../usage/managing_layers/layer_editing.rst:57
 #: ../../usage/managing_layers/layer_editing.rst:83
@@ -168,7 +168,7 @@ msgid ""
 "see the differences in the *Layer Preview*."
 msgstr ""
 "Substituímos o conjunto de dados *estradas* pelo conjunto de "
-"*ferrovias*. Você pode ver as diferenças na *Pré-visualização da Camada*."
+"*ferrovias*. Pode ver as diferenças na *Pré-visualização da Camada*."
 
 #: ../../usage/managing_layers/layer_editing.rst:64
 #: 3d41915ee3124f8dbe1834d7a0413ff6
@@ -188,10 +188,10 @@ msgid ""
 "Layer* page in which :guilabel:`Choose Files` button allows you to "
 "select files from your disk."
 msgstr ""
-"No painel *Edição de Camada*, clique em :guilabel:`Anexar` para anexar "
+"No painel *Edição de Camada*, clique em :guilabel:`Append` para anexar "
 "dados ao conjunto de dados de origem da camada. Você será direccionado "
-"para a página *Anexar Camada* na qual o botão :guilabel:`Escolher "
-"Ficheiros` permite que você seleccione arquivos do seu disco."
+"para a página *Anexar Camada* na qual o botão :guilabel:`Choose Files` "
+"permite que seleccione arquivos do seu disco."
 
 #: ../../usage/managing_layers/layer_editing.rst:76
 #: a7cce25dbb5444f2aa8bb5bbb48dd2e1
@@ -206,8 +206,8 @@ msgid ""
 "a message like the one in the picture below."
 msgstr ""
 "Uma vez selecionado o *Charset*, o processo de upload pode ser accionado "
-"clicando em :guilabel:`Anexar à Camada`. Se nenhum erro ocorrer, você "
-"verá uma mensagem como a da imagem abaixo."
+"clicando em :guilabel:`Append to Layer`. Se nenhum erro ocorrer, irá ver "
+"uma mensagem como a da imagem abaixo."
 
 #: ../../usage/managing_layers/layer_editing.rst:85
 #: 30444f7b2c8d4c15ba33a3006aedf20c
@@ -215,8 +215,8 @@ msgid ""
 "We have append the *layer_name* dataset to the existing one. You can see "
 "the differences in the *Layer Preview*."
 msgstr ""
-"Anexamos o conjunto de dados *nome_da_camada* ao existente. Você pode "
-"ver as diferenças na *Pré-visualização da Camada*."
+"Anexamos o dataset *nome_da_camada* ao existente. Você pode ver as "
+"diferenças na *Pré-visualização da Camada*."
 
 #: ../../usage/managing_layers/layer_editing.rst:91
 #: 9ab6daea27d7457b8a7c56f09ea57b49
@@ -229,7 +229,7 @@ msgid ""
 "The :guilabel:`Edit data` button of the *Layer Editing* panel opens the "
 "*Layer* within a *Map*."
 msgstr ""
-"O botão :guilabel:`Editar dados` do painel *Edição de Camadas* abre a "
+"O botão :guilabel:`Edit data` do painel *Edição de Camadas* abre a "
 "*Camada* dentro de um *Mapa*."
 
 #: ../../usage/managing_layers/layer_editing.rst:98
@@ -247,11 +247,11 @@ msgid ""
 "row, you can also observe which values the feature assumes for each "
 "attribute."
 msgstr ""
-"O painel *Tabela de Atributos* da *Camada* aparecerá automaticamente na "
-"parte inferior do *Mapa*. Neste painel, todos os recursos são listados. "
-"Para cada recurso, você pode aumentar o zoom clicando no ícone da *lupa* "
-"correspondente |ícone_lupa| no início da linha, você também pode "
-"observar quais valores o recurso assume para cada atributo."
+"O painel *Tabela de Atributos* da *Camada* irá aparecer automaticamente "
+"na parte inferior do *Mapa*. Neste painel, todos os recursos são "
+"listados. Para cada recurso, você pode aumentar o zoom clicando no ícone "
+"da *lupa* correspondente |magnifying_glass_icon| no início da linha, "
+"pode também observar quais valores o recurso assume para cada atributo."
 
 #: ../../usage/managing_layers/layer_editing.rst:107
 #: 0bf1388d834a4711a76c4b6d1133c97c
@@ -259,7 +259,7 @@ msgid ""
 "Click the *Edit Mode* |edit_mode_button| button to start an editing "
 "session."
 msgstr ""
-"Clique no botão *Modo de Edição* |botão_modo_edição| botão para iniciar "
+"Clique no botão *Modo de Edição* |edit_mode_button| botão para iniciar "
 "uma sessão de edição."
 
 #: ../../usage/managing_layers/layer_editing.rst:114
@@ -282,13 +282,12 @@ msgid ""
 "add_shape_to_geometry_button| to draw its shape directly on the *Map* "
 "then click on |save_changes_button| to save it."
 msgstr ""
-"Através do botão *Adicionar Novo Recurso* |botão_adicionar_novo_recurso| "
-"é possível configurar um novo recurso para sua camada. Preencha os "
-"campos de atributos e clique em |botão_salvar_alterações| para salvar a "
-"sua alteração. Seu novo recurso ainda não tem forma, clique em |"
-"botão_adicionar_forma_para_geometria| para desenhar sua forma "
-"directamente no *Mapa* e clique em |botão_salvar_alterações| para salvá-"
-"lo."
+"Através do botão *Adicionar Novo Recurso* |add_new_feature_button| é "
+"possível configurar um novo recurso para sua camada. Preencha os campos "
+"de atributos e clique em |save_changes_button| para salvar a sua "
+"alteração. Seu novo recurso ainda não tem forma, clique em |"
+"add_shape_to_geometry_button| para desenhar sua forma directamente no "
+"*Mapa* e clique em |save_changes_button| para salvá-lo."
 
 #: ../../usage/managing_layers/layer_editing.rst:140
 #: 569a1b23854d424d910f389581e9fcd3
@@ -316,7 +315,7 @@ msgid ""
 "Table* and click on |delete_feature_button|."
 msgstr ""
 "Se você deseja excluir um elemento, você deve selecioná-lo na *Tabela de "
-"Atributos* e clicar em |botão_excluir_recurso|."
+"Atributos* e clicar em |delete_feature_button|."
 
 #: ../../usage/managing_layers/layer_editing.rst:156
 #: fba70c15834b4185a030003fde0ea2d8
@@ -383,7 +382,7 @@ msgid ""
 "the |end_editing_session_button| button."
 msgstr ""
 "Assim que terminar, você pode encerrar a *Sessão de Edição* clicando no "
-"botão |botão_terminar_sessão_de_edição|."
+"botão |end_editing_session_button|."
 
 #: ../../usage/managing_layers/layer_editing.rst:190
 #: 43563ac00f814c42a7d0d52115da0e20

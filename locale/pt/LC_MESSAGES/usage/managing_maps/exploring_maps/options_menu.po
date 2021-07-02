@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:56+0200\n"
+"PO-Revision-Date: 2021-07-02 00:35+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +31,7 @@ msgid ""
 "burger_menu_button|. Click on it to open the *Map Options* panel."
 msgstr ""
 "No canto superior direito do *Mapa* há um botão *Menu Burger* |"
-"botão_menu_burger|. Clique nele para abrir o painel *Opções do Mapa*."
+"burger_menu_button|. Clique nele para abrir o painel *Opções do Mapa*."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:16
 #: f5e7cc597e0a4b57a2edceaf4d5ac885
@@ -66,7 +66,7 @@ msgid ""
 "Click the :guilabel:`PRINT` option from the *Map Options Menu*, the "
 "**Printing Window** will open."
 msgstr ""
-"Clique na opção :guilabel:`IMPRIMIR` do *Menu de Opções do Mapa*, a "
+"Clique na opção :guilabel:`PRINT` do *Menu de Opções do Mapa*, a "
 "**Janela de Impressão** será aberta."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:29
@@ -157,7 +157,7 @@ msgstr "a *Resolução de Legenda* em ppp."
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:52
 #: 536398e4ffcd42098ca053a3e98892eb
 msgid "To print the map click on :guilabel:`Print`."
-msgstr "Para imprimir o mapa clique em :guilabel:`Imprimir`."
+msgstr "Para imprimir o mapa clique em :guilabel:`Print`."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:55
 #: 50b9d5f3b60c48e7b8333cce7a76ed74
@@ -174,7 +174,7 @@ msgid ""
 msgstr ""
 "Todas as camadas disponíveis no GeoNode, carregadas e remotas, podem ser "
 "carregadas no mapa através do *Catálogo*. Clique na opção :guilabel:"
-"`CATÁLOGO` do *Menu de Opções do Mapa* para dar uma olhada no painel do "
+"`CATALOG` do *Menu de Opções do Mapa* para dar uma olhada no painel do "
 "catálogo."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:63
@@ -190,9 +190,8 @@ msgid ""
 "to load a layer into the map, it will be also visible in the :ref:`toc`."
 msgstr ""
 "Você pode navegar pelas camadas e ver suas imagens em *Miniatura*, "
-"*Título*, *Descrição* e *Resumo*. Clique em :guilabel:`Adicionar ao "
-"Mapa` para carregar uma camada no mapa, ela também estará visível em :"
-"ref:`toc`."
+"*Título*, *Descrição* e *Resumo*. Clique em :guilabel:`Add To Map` para "
+"carregar uma camada no mapa, ela também estará visível em :ref:`toc`."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:69
 #: afb0cfb2811b4a5aba01b282ca8694e3
@@ -206,7 +205,7 @@ msgid ""
 "perform a measurement. As you can see in the picture below, this tool "
 "allows you to measure *Distances*, *Areas* and the *Bearing* of lines."
 msgstr ""
-"Clique na opção :guilabel:`MEDIÇÃO` do *Menu de Opções do Mapa* para "
+"Clique na opção :guilabel:`MEASURE` do *Menu de Opções do Mapa* para "
 "realizar uma medição. Como você pode ver na imagem abaixo, esta "
 "ferramenta permite medir *Distâncias*, *Áreas* e o *Rumo* das linhas."
 
@@ -244,7 +243,7 @@ msgid ""
 "Menu*."
 msgstr ""
 "Uma vez que todas as personalizações tenham sido realizadas, você pode "
-"*Salvar* seu mapa clicando na opção :guilabel:`SALVAR COMO` do *Menu de "
+"*Salvar* seu mapa clicando na opção :guilabel:`SAVE AS` do *Menu de "
 "Opções do Mapa*."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:90
@@ -265,8 +264,8 @@ msgid ""
 "in the :ref:`finding-maps` list."
 msgstr ""
 "Você deve preencher um *Título* e uma *Descrição* opcional, a seguir "
-"clicar em :guilabel:`Salvar`. A página será recarregada e seu mapa "
-"deverá estar visível na lista :ref:`mapas-encontrados`."
+"clicar em :guilabel:`Save`. A página será recarregada e seu mapa deverá "
+"estar visível na lista :ref:`finding-maps`."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:102
 #: 2cbc422d56e44f50826dbe9cf15d3e43

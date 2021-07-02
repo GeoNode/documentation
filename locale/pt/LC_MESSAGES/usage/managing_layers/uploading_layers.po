@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-29 20:32+0200\n"
+"PO-Revision-Date: 2021-07-01 21:21+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,7 +49,7 @@ msgid ""
 "link of the :guilabel:`Data` menu in the navigation bar."
 msgstr ""
 "A página de *Carregamento de Camada* pode ser acessada a partir do link :"
-"guilabel:`Carregar Camada` do menu :guilabel:`Dados` na barra de navegação."
+"guilabel:`Upload Layer` do menu :guilabel:`Data` na barra de navegação."
 
 #: ../../usage/managing_layers/uploading_layers.rst:14
 #: 2a2be25f6f2c4444a58b557699d1b374
@@ -59,8 +59,7 @@ msgstr "*Link para Carregar Camadas*"
 #: ../../usage/managing_layers/uploading_layers.rst:16
 #: 4c998cb26ea34b348d1be07ad3c292a6
 msgid "There is also an :guilabel:`Upload Layers` button in the *Layers Page*."
-msgstr ""
-"Há também um botão \"guilabel:'Carregar Camadas\" na *Página de Camadas*."
+msgstr "Há também um botão :guilabel:`Upload Layers` na *Página de Camadas*."
 
 #: ../../usage/managing_layers/uploading_layers.rst:21
 #: dcb2c1bd659a48968308b1b6a691d4f8
@@ -85,11 +84,11 @@ msgid ""
 "change the default *Permissions* settings (see :ref:`layer-permissions` for "
 "further information on how to set permissions)."
 msgstr ""
-"Através do botão \"guilabel:'Seleccione Ficheiros\" pode seleccionar "
-"ficheiros do seu disco, certifique-se de que são dados espaciais raster ou "
-"vectores válidos. Pode também, alterar as definições de *Permissões* "
-"predefinidas  (veja :ref:`permissões-de-camada` para obter mais informações "
-"sobre como definir permissões)."
+"Através do botão :guilabel:`Choose Files` pode seleccionar ficheiros do seu "
+"disco, certifique-se de que são dados espaciais raster ou vectores válidos. "
+"Pode também, alterar as definições de *Permissões* predefinidas (veja :ref:"
+"`layer-permissions` para obter mais informações sobre como definir "
+"permissões)."
 
 #: ../../usage/managing_layers/uploading_layers.rst:31
 #: a86dec41e9074a279d989295df724fcd
@@ -98,8 +97,8 @@ msgid ""
 "process or click :guilabel:`Clear` to remove all the loaded files form the "
 "page."
 msgstr ""
-"Selecione o *charset* e clique em :guilabel:`Carregar arquivos` para iniciar "
-"o processo ou clique em :guilabel:`Limpar` para remover todos os arquivos "
+"Selecione o *charset* e clique em :guilabel:`Upload files` para iniciar o "
+"processo ou clique em :guilabel:`Clear` para remover todos os arquivos "
 "carregados da página."
 
 #: ../../usage/managing_layers/uploading_layers.rst:36
@@ -116,12 +115,11 @@ msgid ""
 "is over. When the process ends click the :guilabel:`Layer Info` to check the "
 "layer has been correctly uploaded."
 msgstr ""
-"Neste exemplo, o arquivo modelo ESRI ``roads``, com todos os seus arquivos "
-"obrigatórios (`.shp`,` .shx`, `.dbf` e` .prj`), foi escolhido. Uma barra de "
+"Neste exemplo, o Shapefile ESRI ``roads``, com todos os seus arquivos "
+"obrigatórios (`.shp`, `.shx`, `.dbf` e `.prj`), foi escolhido. Uma barra de "
 "progresso mostra a operação feita durante o upload da camada e alerta quando "
-"o processo termina. Quando o processo terminar, clique em :guilabel:"
-"`Informação de Camada` para verificar se a camada foi carregada "
-"correctamente."
+"o processo termina. Quando o processo terminar, clique em :guilabel:`Layer "
+"Info` para verificar se a camada foi carregada correctamente."
 
 #: ../../usage/managing_layers/uploading_layers.rst:42
 #: a05f102df7594c019954509d59c4cf4b

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 20:42+0200\n"
+"PO-Revision-Date: 2021-07-02 23:31+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_documents/document_metadata.rst:4
 #: 7127c83898a64040b481bc81863747ee
@@ -35,7 +35,7 @@ msgstr ""
 "Os metadados contêm todas as informações relativas ao documento: são o seu "
 "cartão de identificação. Eles fornecem informações essenciais para sua "
 "identificação e compreensão. Os metadados também tornam o documento mais "
-"facilmente recuperável por meio de pesquisas por outros usuários."
+"facilmente recuperável por meio de pesquisas por outros utilizadores."
 
 #: ../../usage/managing_documents/document_metadata.rst:8
 #: 26eff77412c44f8c9d7f646ba4352e95
@@ -67,7 +67,7 @@ msgstr "O *Título* do documento, que deve ser claro e compreensível;"
 #: ../../usage/managing_documents/document_metadata.rst:13
 #: 9135d7d710af4f68ae844ca2b7df93a7
 msgid "The *Resources* the document should be linked to;"
-msgstr "Os *Recursos* aos quais o documento deve estar vinculado;"
+msgstr "Os *Recursos* aos quais o documento deve estar relacionado;"
 
 #: ../../usage/managing_documents/document_metadata.rst:14
 #: e9d283110c10422fa390b328072f3bb3
@@ -92,8 +92,8 @@ msgid ""
 "desired word. Key-words should be relevant to the imported document;"
 msgstr ""
 "As *Palavras-chave*, que devem ser escolhidas dentro da lista disponível. O "
-"colaborador busca as palavras-chave disponíveis clicando na barra de busca, ou "
-"no logotipo da pasta que representa, ou digitando as primeiras letras da "
+"contribuinte pesquisa as palavras-chave disponíveis clicando na barra de busca, "
+"ou no logótipo da pasta que representa, ou digitando as primeiras letras da "
 "palavra desejada. As palavras-chave devem ser relevantes para o documento "
 "importado;"
 
@@ -127,8 +127,8 @@ msgid ""
 "When a document is linked to some resources, you can see that link on the "
 "*Resource Page*."
 msgstr ""
-"Quando um documento está vinculado a alguns recursos, você pode ver esse link "
-"na *Página de Recursos*."
+"Quando um documento está vinculado a alguns recursos, pode ver essa ligação na "
+"*Página de Recursos*."
 
 #: ../../usage/managing_documents/document_metadata.rst:33
 #: b2e94c64812b4c0ebf64156dec72259d
@@ -184,8 +184,8 @@ msgid ""
 "Potential *Restrictions* to sharing the document should be provided in the "
 "Restrictions box."
 msgstr ""
-"Potenciais *Restrições* ao compartilhamento do documento devem ser fornecidas "
-"na caixa Restrições."
+"Potenciais *Restrições* à partilha do documento devem ser fornecidas na caixa "
+"Restrições."
 
 #: ../../usage/managing_documents/document_metadata.rst:53
 #: c72f6023448d42d1a1e74d3ba42b2264
@@ -263,4 +263,4 @@ msgstr ""
 msgid ""
 "Click on the blue button :guilabel:`Update` to save information on the system."
 msgstr ""
-"Clique no botão azul :guilabel:`Update` para salvar as informações no sistema."
+"Clique no botão azul :guilabel:`Update` para guardar as informações no sistema."

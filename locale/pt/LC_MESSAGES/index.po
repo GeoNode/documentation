@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-26 10:26+0200\n"
+"PO-Revision-Date: 2021-07-02 16:07+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../index.rst:14 1fbf8ee7dbdc4c7586e788204edc9be6
 msgid "About"
@@ -41,7 +41,7 @@ msgstr "Configuração (Básico)"
 
 #: ../../index.rst:44 eaac54558a5646f2a61a746babaedbf7
 msgid "Configuring (Intermediate)"
-msgstr "Configuração (Intermediário)"
+msgstr "Configuração (Intermédio)"
 
 #: ../../index.rst:50 c90b5c6d050c484f99c424be15776909
 msgid "Configuring (Advanced)"
@@ -53,11 +53,11 @@ msgstr "Administração"
 
 #: ../../index.rst:62 fc3acbc4501e462db9062ce8e284ea3d
 msgid "Contributing"
-msgstr "Contribuição"
+msgstr "Contribuindo"
 
 #: ../../index.rst:68 8f30be4a0275425ebfc5876e2c518d90
 msgid "Developing"
-msgstr "Em desenvolvimento"
+msgstr "Desenvolvendo"
 
 #: ../../index.rst:5 3bdca12530e846bdbc06c42b24465372
 msgid "GeoNode's Documentation"

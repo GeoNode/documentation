@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 23:50+0200\n"
+"PO-Revision-Date: 2021-07-03 14:09+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_maps/map_info.rst:4 bf8037b42d26414da7f372895ff6f23f
 msgid "Map Information"
@@ -29,8 +29,8 @@ msgid ""
 "maps and all the published maps through the :guilabel:`Explore Maps` link of "
 "the navigation bar."
 msgstr ""
-"Conforme mencionado na secção :ref:`finding-maps`, no GeoNode você pode ver "
-"seus mapas e todos os mapas publicados através do link :guilabel:`Explore "
+"Conforme mencionado na secção :ref:`finding-maps`, no GeoNode pode ver os "
+"seus mapas e todos os mapas publicados através da ligação :guilabel:`Explore "
 "Maps` da barra de navegação."
 
 #: ../../usage/managing_maps/map_info.rst:7 7d3e7ba65cec44a4b7a9e1f6cdfae53b
@@ -38,7 +38,7 @@ msgid ""
 "Click on the title of the *Map* you are interested in to open its "
 "*Information* page, it should looks like the following."
 msgstr ""
-"Clique no título do *Mapa* do seu interesse para abrir sua página de "
+"Clique no título do *Mapa* do seu interesse para abrir a página de "
 "*Informações*, que deve ser semelhante a esta."
 
 #: ../../usage/managing_maps/map_info.rst:12 f492c16412e942c3aa5984baa1d16911
@@ -51,11 +51,11 @@ msgstr "A *Página do Mapa* está dividida em três secções principais:"
 
 #: ../../usage/managing_maps/map_info.rst:16 f349e637ca22408e94fc57a4bf85e6a5
 msgid "the *Map Preview* section, under the title"
-msgstr "a seção *Pré-visualização do Mapa*, sob o título"
+msgstr "a secção *Pré-visualização do Mapa*, sob o título"
 
 #: ../../usage/managing_maps/map_info.rst:17 c4252ad9cbe24f7bb95ee1e7ae9279b4
 msgid "the *Tabs* section, under the layer preview"
-msgstr "a seção *Guias*, sob a pré-visualização da camada"
+msgstr "a secção *Guias*, sob a pré-visualização da camada"
 
 #: ../../usage/managing_maps/map_info.rst:18 601246e1b97948779fbb969bd798322b
 msgid "the *Tools* section, on the right side of the page"
@@ -90,7 +90,7 @@ msgid ""
 "the *Query Objects* tool to retrieve information about the map objects by "
 "clicking on the map;"
 msgstr ""
-"a ferramenta *Consulta de Objectos* para recuperar informações sobre os "
+"a ferramenta *Consulta de Objectos* para inquirir informações sobre os "
 "objectos do mapa clicando no mapa;"
 
 #: ../../usage/managing_maps/map_info.rst:29 8d3d4bc59f5f4ebe9947f505c33f4f5e
@@ -142,12 +142,12 @@ msgid ""
 "The *Share* tab provides the links for the map to share through social media "
 "or email."
 msgstr ""
-"A guia *Share* fornece os links para o mapa compartilhar por meio da mídia "
-"social ou e-mail."
+"A guia *Partilhar* fornece as ligações para partilhar o mapa nas redes "
+"sociais ou email."
 
 #: ../../usage/managing_maps/map_info.rst:55 cf12feed113448639dc2a631a77b36bc
 msgid "*Map Sharing*"
-msgstr "*Compartilhamento de Mapa*"
+msgstr "*Partilhar Mapa*"
 
 #: ../../usage/managing_maps/map_info.rst:57 7becdf0631d146b582e7c0f2b3e059af
 msgid "You can *Rate* the map through the *Rating system*."
@@ -163,8 +163,8 @@ msgid ""
 "`Add Comment`, insert your comment and click :guilabel:`Submit Comment` to "
 "post it."
 msgstr ""
-"Na secção da guia *Comments*, você pode postar seu comentário. Clique em :"
-"guilabel:`Add Comment`, insira seu comentário e clique em :guilabel:`Submit "
+"Na secção da guia *Comentários*, pode postar seu comentário. Clique em :"
+"guilabel:`Add Comment`, insira o seu comentário e clique em :guilabel:`Submit "
 "Comment` para postá-lo."
 
 #: ../../usage/managing_maps/map_info.rst:69 2a9f2e8d257e45f3906bfe1579db2218
@@ -176,20 +176,20 @@ msgid ""
 "Your comment will be added next to the last already existing comment. If you "
 "want to remove it click on the red :guilabel:`Delete` button."
 msgstr ""
-"Seu comentário será adicionado ao lado do último comentário já existente. Se "
-"você deseja removê-lo, clique no botão vermelho :guilabel:`Delete`."
+"O seu comentário será adicionado após o último comentário já existente. Se "
+"desejar removê-lo, clique no botão vermelho :guilabel:`Delete`."
 
 #: ../../usage/managing_maps/map_info.rst:73 20cf583c3d74422595fa4ea93e95937a
 msgid ""
 "If you want this map in your *Favorites* (see :ref:`editing-profile`), open "
 "the *Favorite* tab and click on :guilabel:`Add to Favorites`."
 msgstr ""
-"Se deseja este mapa nos seus *Favoritos* (veja :ref:`editing-profile`), abra "
-"a aba *Favoritos* e clique em :guilabel:`Add to Favorites`."
+"Se desejar ter este mapa nos seus *Favoritos* (veja :ref:`editing-profile`), "
+"abra a aba *Favoritos* e clique em :guilabel:`Add to Favorites`."
 
 #: ../../usage/managing_maps/map_info.rst:78 f003ec36f3734d808fe470d227e797a9
 msgid "*Your Favorite Maps*"
-msgstr "*Seus Mapas Favoritos*"
+msgstr "*Os seus Mapas Favoritos*"
 
 #: ../../usage/managing_maps/map_info.rst:81 ae9a965d8d1640fb84b6aaafa38a3e7f
 msgid "Map Tools"
@@ -203,19 +203,19 @@ msgid ""
 msgstr ""
 "No lado direito da página *Informações do Mapa*, existem algumas ferramentas "
 "que podem ajudá-lo a gerir seus mapas. Neste parágrafo, irá aprender como "
-"descobrir e recuperar informações sobre mapas."
+"encontrar e recuperar informações sobre mapas."
 
 #: ../../usage/managing_maps/map_info.rst:85 0df621a291de4e8e9ee206dd5554a234
 msgid ""
 "The following is a list of actions you can take in order to accomplish this "
 "task:"
 msgstr ""
-"A seguir está uma lista de acções que pode tomar para completar esta tarefa:"
+"O seguinte é uma lista de acções que pode executar para completar esta tarefa:"
 
 #: ../../usage/managing_maps/map_info.rst:87 47b280abc0d049ea9fa33df0fa62e469
 msgid "click the :guilabel:`Download Map` button, to download the map as image;"
 msgstr ""
-"clique no botão :guilabel:`Download Map`, para baixar o mapa como imagem;"
+"clique no botão :guilabel:`Download Map`, para descarregar o mapa como imagem;"
 
 #: ../../usage/managing_maps/map_info.rst:88 56df2bdf241c4017bdcd4f4b67634e3f
 msgid ""
@@ -230,7 +230,7 @@ msgid ""
 "click the :guilabel:`Editing Tools` button to access to many editing tools. "
 "Those functionalities will be explained in the :ref:`exploring-maps` section;"
 msgstr ""
-"clique no botão :guilabel:`Editing Tools` para acessar muitas ferramentas de "
+"clique no botão :guilabel:`Editing Tools` para aceder a muitas ferramentas de "
 "edição. Essas funcionalidades serão explicadas na secção :ref:`exploring-"
 "maps`;"
 
@@ -273,5 +273,5 @@ msgid ""
 "see the *About* section to know the map *Owner*, the *Contact* user and the "
 "*Metadata Author*."
 msgstr ""
-"consulte a secção *Sobre* para conhecer o *Proprietário* do mapa, o usuário "
-"de *Contacto* e o *Autor de Metadados*."
+"consulte a secção *Sobre* para conhecer o *Proprietário* do mapa, o "
+"utilizador de *Contacto* e o *Autor de Metadados*."

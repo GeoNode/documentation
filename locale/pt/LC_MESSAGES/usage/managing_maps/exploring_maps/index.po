@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-02 00:10+0200\n"
+"PO-Revision-Date: 2021-07-03 12:23+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:4
 #: a12cc3b93e8246aca223bf931e2b2574
@@ -31,9 +31,9 @@ msgid ""
 "the *Maps List* page (see :ref:`finding-maps`). Select a map you are "
 "interested in and click on it, the *Map Page* will open."
 msgstr ""
-"A partir do link :guilabel:`Explore Maps` da barra de navegação você pode "
-"acessar a página *Lista de Mapas* (veja :ref:`finding-maps`). Seleccione um "
-"mapa de seu interesse e clique nele, a *Página do Mapa* será aberta."
+"A partir do link :guilabel:`Explore Maps` da barra de navegação pode aceder "
+"a página *Lista de Mapas* (veja :ref:`finding-maps`). Seleccione um mapa de "
+"seu interesse e clique nele, a *Página do Mapa* será aberta."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:12
 #: c9046546f9464c058d9bc86f2b8b09bf
@@ -106,7 +106,7 @@ msgid ""
 "coordinates and change the CRS (Coordinates Reference System)."
 msgstr ""
 "as *Ferramentas de Rodapé* para gerir a escala do mapa, rastrear as "
-"coordenadas do mouse e alterar o CRS (Sistema de Referência de Coordenadas)."
+"coordenadas do rato e alterar o CRS (Sistema de Referência de Coordenadas)."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:42
 #: 2b8ea3721bff4bc1b2053b53b7ca9687
@@ -119,13 +119,13 @@ msgid ""
 "The *Search Bar* of the map viewer allows you to find point of interests "
 "(POIs), streets or locations by name."
 msgstr ""
-"A *Barra de Pesquisa* do visualizador do mapa permite que você encontre "
-"pontos de interesse (POIs), ruas ou locais por nome."
+"A *Barra de Pesquisa* do visualizador do mapa permite que localizar pontos "
+"de interesse (POIs), ruas ou locais por nome."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:45
 #: 365fcadac2754f2884de801e6ae4f464
 msgid "Lets type the name of some place then select the first record."
-msgstr "Vamos digitar o nome de algum lugar e seleccionar o primeiro registro."
+msgstr "Vamos digitar o nome de um lugar e seleccionar o primeiro registo."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:50
 #: 6ad846a79b1448a98a9df775b7b8b4c5
@@ -198,10 +198,10 @@ msgid ""
 "|query_objects_on_map_button| button. It allows you to retrieve information "
 "about the features of some layers by clicking them directly on the map."
 msgstr ""
-"A *Consulta de Objectos no Mapa* permite que você obtenha informações de "
+"A *Consulta de Objectos no Mapa* permite obter informações de "
 "características através do botão |query_objects_on_map_button| . Ele permite "
-"que você recupere informações sobre os recursos de algumas camadas clicando "
-"nelas diretamente no mapa."
+"recuperar informações sobre os recursos de algumas camadas clicando nelas "
+"directamente no mapa."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:133
 #: 132069702a5846e7a245d6cae88f4754
@@ -214,15 +214,14 @@ msgid ""
 "When clicking on map a new panel opens. That panel will show you all the "
 "information about the clicked features for each active loaded layer."
 msgstr ""
-"Ao clicar no mapa, um novo painel é aberto. Esse painel mostrará todas as "
+"Ao clicar no mapa, abre um novo painel. Esse painel mostrará todas as "
 "informações sobre os recursos clicados para cada camada activa carregada."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:137
 #: 5b6730b9599c41e3b1e35250a3bcbab5
 msgid "You can *Zoom To Max Extent* by clicking |zoom_to_max_extent_button|."
 msgstr ""
-"Você pode fazer *Zoom na Extensão Máxima* clicando em |"
-"zoom_to_max_extent_button|."
+"Pode fazer *Zoom na Extensão Máxima* clicando em |zoom_to_max_extent_button|."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:139
 #: a5b353e5bc2049baa93660b033d635c4
@@ -230,8 +229,8 @@ msgid ""
 "You can switch between the previous and the next zoom level through the *Go "
 "Back* button |go_back_button| and the *Go Forward* one |go_forward_button|."
 msgstr ""
-"Você pode alternar entre o nível de zoom anterior e o próximo por meio do "
-"botão *Voltar* |go_back_button| e o *Avançar* |go_forward_button|."
+"Pode alternar entre o nível de zoom anterior e o próximo por meio do botão "
+"*Voltar* |go_back_button| e o *Avançar* |go_forward_button|."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:141
 #: 6275382c8ea94be8a122f0cf60069676
@@ -277,7 +276,7 @@ msgstr "*A Ferramenta Basemap Switcher*"
 #: ../../usage/managing_maps/exploring_maps/index.rst:160
 #: 661fd2da926c432583aa9ecf168a92b2
 msgid "You can also decide to have an *Empty Background*."
-msgstr "Você pode, também, decidir ter um *Fundo vazio*."
+msgstr "Pode, também, decidir ter um *Fundo vazio*."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:166
 #: 89cb94627da84ffa93da24d89b3ea87f
@@ -296,7 +295,7 @@ msgid ""
 "allows you to change it."
 msgstr ""
 "Na parte inferior do mapa, o *Rodapé* mostra a *Escala* do mapa e permite "
-"que você a altere."
+"que esta seja alterada."
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:177
 #: 8f32b30ac25d4583991242f7a576e140

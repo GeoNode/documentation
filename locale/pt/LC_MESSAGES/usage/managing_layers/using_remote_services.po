@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:33+0200\n"
+"PO-Revision-Date: 2021-07-03 15:20+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_layers/using_remote_services.rst:2
 #: 2eb7d02d802e4d2ca159c262b737a566
@@ -31,10 +31,10 @@ msgid ""
 "but also using *Remote Services*. In this section you will learn how to "
 "add a new service and how to load resources in GeoNode through that."
 msgstr ""
-"No GeoNode, você pode adicionar novas camadas não apenas carregando-as do "
-"seu disco, mas também usando *Serviços Remotos*. Nesta secção, irá "
-"aprender como adicionar um novo serviço e como carregar recursos no "
-"GeoNode através dele."
+"No GeoNode pode adicionar novas camadas não apenas carregando-as do seu "
+"disco, mas também usando *Serviços Remotos*. Nesta secção irá aprender "
+"como adicionar um novo serviço e como carregar recursos no GeoNode "
+"através deles."
 
 #: ../../usage/managing_layers/using_remote_services.rst:7
 #: 5114f59a80cc4dec8fae501fc0f4b66c
@@ -47,13 +47,13 @@ msgid ""
 "Click on the :guilabel:`Remote Services` link of the :guilabel:`Data` "
 "menu in the navigation bar."
 msgstr ""
-"Clique no link :guilabel:`Remote Services` do menu :guilabel:`Data` na "
+"Clique na ligação :guilabel:`Remote Services` do menu :guilabel:`Data` na "
 "barra de navegação."
 
 #: ../../usage/managing_layers/using_remote_services.rst:14
 #: 4008f55b6e0043aa90f3b3af9ab9229f
 msgid "*Remote Services link*"
-msgstr "*Link de Serviços Remotos*"
+msgstr "*Ligação de Serviços Remotos*"
 
 #: ../../usage/managing_layers/using_remote_services.rst:16
 #: e69331b0155348dcb097a11ae44cb858
@@ -150,9 +150,9 @@ msgid ""
 "you to immediately retrieve resources."
 msgstr ""
 "Geralmente, um WMS não é invocado directamente; aplicativos cliente, como "
-"GIS-Desktop ou WEB-GIS, são usados para fornecer ao usuário controles "
+"GIS-Desktop ou WEB-GIS, são usados para fornecer ao utilizador controles "
 "interactivos. Um WMS GeoNode executa automaticamente algumas operações e "
-"permite que você obtenha recursos imediatamente."
+"permite que obtenha recursos imediatamente."
 
 #: ../../usage/managing_layers/using_remote_services.rst:51
 #: a4f3dd5af5d045e684ebbf5ca1e6b5b2
@@ -208,8 +208,8 @@ msgid ""
 msgstr ""
 "Depois de configurar o serviço, você pode carregar os recursos de seu "
 "interesse por meio da página *Importar Recursos*, para a qual será "
-"redirecionado automaticamente. Dê uma olhada no gif abaixo para ver todo "
-"o processo."
+"redirecionado automaticamente. Veja a animação em baixo para ver todo o "
+"processo."
 
 #: ../../usage/managing_layers/using_remote_services.rst:67
 #: 6ba650f076304fb4af472c90dbe67d05
@@ -234,7 +234,7 @@ msgid ""
 "Metadata` button of the *Service Details* page (see the picture below)."
 msgstr ""
 "Cada serviço tem seus próprios metadados, como *Tipo de Serviço*, *URL*, "
-"um *Resumo*, algumas *Palavras-chave* e o usuário de *Contacto*. Pode "
+"um *Resumo*, algumas *Palavras-chave* e o utilizador de *Contacto*. Pode "
 "editar esses metadados através do formulário disponível no botão :"
 "guilabel:`Edit Service Metadata` da página *Detalhes do Serviço* (veja a "
 "imagem abaixo)."

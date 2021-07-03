@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:10+0200\n"
+"PO-Revision-Date: 2021-07-03 10:13+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_documents/document_permissions.rst:4
 #: 6ad77e1a850349b59f503fcd29620fe0
 msgid "Changing the Document Permissions"
-msgstr "Alterando as Permissões do Documento"
+msgstr "Alterar as Permissões do Documento"
 
 #: ../../usage/managing_documents/document_permissions.rst:6
 #: 9e31a4425d6a4291b66906216eeb3cad
@@ -32,11 +32,11 @@ msgid ""
 "download a document. However, the document responsible can choose to "
 "limit access to the document to some contributors and/or groups."
 msgstr ""
-"GeoNode incentiva publicamente, compartilhar e disponibilizar para "
-"download as informações carregadas na plataforma. Por padrão, qualquer "
-"pessoa pode ver e baixar um documento. No entanto, o responsável pelo "
-"documento pode optar por limitar o acesso ao documento a alguns "
-"colaboradores e/ou grupos."
+"O GeoNode incentiva a publicar, partilhar e disponibilizar para "
+"descarregamento as informações carregadas na plataforma. Por padrão, "
+"qualquer pessoa pode ver e descarregar um documento. No entanto, o "
+"responsável pelo documento pode optar por limitar o acesso ao documento "
+"a alguns colaboradores e/ou grupos."
 
 #: ../../usage/managing_documents/document_permissions.rst:8
 #: 79914b8089bf48088c82230fa836e740
@@ -44,8 +44,8 @@ msgid ""
 "Through the button shown in the picture below it is possible to manage "
 "the document permissions."
 msgstr ""
-"Através do botão mostrado na figura abaixo é possível fazer a gestão das "
-"permissões do documento."
+"Através do botão mostrado na figura em baixo é possível fazer a gestão "
+"das permissões do documento."
 
 #: ../../usage/managing_documents/document_permissions.rst:13
 #: 2fbc62ea169846cabf1ff6ffad55aea7
@@ -69,12 +69,12 @@ msgstr "Ver o documento;"
 #: ../../usage/managing_documents/document_permissions.rst:18
 #: 6510b7f2b7b841038a04fa5710ed0d02
 msgid "Download it;"
-msgstr "Baixá-lo;"
+msgstr "Descarregá-lo;"
 
 #: ../../usage/managing_documents/document_permissions.rst:19
 #: 6db46588e0644c7a99475eb502a52da3
 msgid "Edit its metadata;"
-msgstr "Editar os seus metadados;"
+msgstr "Editar os metadados;"
 
 #: ../../usage/managing_documents/document_permissions.rst:20
 #: e94f72fd0527403b95f5fb5b5eb6fe40
@@ -86,7 +86,7 @@ msgstr ""
 #: ../../usage/managing_documents/document_permissions.rst:22
 #: 564d20d72fe743f693078a8c44a7694d
 msgid "See an example in the picture below."
-msgstr "Veja um exemplo na imagem abaixo."
+msgstr "Veja um exemplo na imagem em baixo."
 
 #: ../../usage/managing_documents/document_permissions.rst:27
 #: 539991c7c7834278b0d372dadb1c0544
@@ -111,4 +111,4 @@ msgid ""
 "them."
 msgstr ""
 "Depois de definir as permissões, clique em :guilabel:`Apply changes` "
-"para salvá-las."
+"para guardá-las."

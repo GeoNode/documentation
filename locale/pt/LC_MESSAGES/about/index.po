@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-30 22:06+0200\n"
+"PO-Revision-Date: 2021-07-02 16:06+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../about/index.rst:2 c5585533f50f437da1fa1bb7bf0ccf8a
 msgid "What is GeoNode"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../../about/index.rst:13 edddc396e73040f8b964cdf1a4852861
 msgid "Showcase"
-msgstr "Mostruário"
+msgstr "Galeria"
 
 #: ../../about/index.rst:15 9ea2354e533044eca3a56e0ca6454119
 msgid ""
@@ -79,8 +79,8 @@ msgid ""
 msgstr ""
 "Vários outros projectos de código aberto estendem a funcionalidade do "
 "GeoNode, aproveitando a capacidade de reutilização de aplicativos Django. "
-"Visite a nossa galeria para ver como a comunidade usa o GeoNode: "
-"`Mostruário GeoNode <http://geonode.org/gallery/>`_."
+"Visite a nossa galeria para ver como a comunidade usa o GeoNode: `Galeria "
+"GeoNode <http://geonode.org/gallery/>`_."
 
 #: ../../about/index.rst:19 ce13b74c71344724a7364294c2d6f588
 msgid ""
@@ -121,7 +121,7 @@ msgstr "Wiki do GeoNode: https://github.com/GeoNode/geonode/wiki"
 #: ../../about/index.rst:32 9ec94653f5fc473581734ae7d0aaf575
 msgid "Issue tracker: https://github.com/GeoNode/geonode-project/issues"
 msgstr ""
-"Rastreador de problemas: https://github.com/GeoNode/geonode-project/issues"
+"Centro de suporte: https://github.com/GeoNode/geonode-project/issues"
 
 #: ../../about/index.rst:34 8f7dcf7bdc7542e9bc69c9e482348bbb
 msgid ""
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 "No caso de bugs sensíveis como vulnerabilidades de segurança, por favor, "
 "entre em contacto com um Desenvolvedor Principal do GeoNode directamente, "
-"ao invés de usar o rastreador de problemas. Valorizamos seu esforço para "
+"ao invés de usar o centro de suporte. Valorizamos seu esforço para "
 "melhorar a segurança e a privacidade deste projecto!"
 
 #: ../../about/index.rst:39 f1ed30b4915d4ce9b228a7df18cf746f
@@ -227,7 +227,7 @@ msgid ""
 "User Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo/"
 "geonode-users"
 msgstr ""
-"Lista de Distribuição de Usuário: https://lists.osgeo.org/cgi-bin/mailman/"
+"Mailing list de Utilizadores: https://lists.osgeo.org/cgi-bin/mailman/"
 "listinfo/geonode-users"
 
 #: ../../about/index.rst:78 786f5d880c054d6eb99ac03e7462c086
@@ -235,8 +235,8 @@ msgid ""
 "Developer Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo/"
 "geonode-devel"
 msgstr ""
-"Lista de Distribuição de Desenvolvedor: https://lists.osgeo.org/cgi-bin/"
-"mailman/listinfo/geonode-devel"
+"Mailing list de Desenvolvedores: https://lists.osgeo.org/cgi-bin/mailman/"
+"listinfo/geonode-devel"
 
 #: ../../about/index.rst:79 4c508e0f67274e75aff63e2727a4432e
 msgid "Gitter Chat: https://gitter.im/GeoNode/general"
@@ -272,5 +272,5 @@ msgid ""
 "The community discusses these on the developer mailing list: http://lists."
 "osgeo.org/pipermail/geonode-devel/"
 msgstr ""
-"A comunidade discute isso na lista de discussão do desenvolvedor: http://"
+"A comunidade discute isto na mailing list de desenvolvedores: http://"
 "lists.osgeo.org/pipermail/geonode-devel/"

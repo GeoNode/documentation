@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 08:53+0200\n"
+"PO-Revision-Date: 2021-07-02 23:06+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:4
 #: a869e6c5fcdf4e1a8afe64659b624cd1
@@ -33,11 +33,10 @@ msgid ""
 "addresses to it and manage many options such as preferences about "
 "notifications."
 msgstr ""
-"Depois de ter uma conta, você pode enriquecer o seu perfil com "
-"informações úteis, você pode também editar ou excluir as existentes. "
-"Você pode conectar a conta à sua rede social, associar muitos endereços "
-"de e-mail a ela e fazer a gestão de várias opções, como preferências "
-"sobre notificações."
+"Depois de ter uma conta, pode completar o seu perfil com informações "
+"úteis. Pode também editar ou excluir as existentes. Pode conectar a "
+"conta à sua rede social, associar muitos endereços de e-mail a ela e "
+"fazer a gestão de várias opções, como preferências sobre notificações."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:9
 #: 0ce6dbd61c4c42308747353fe1779bbb
@@ -45,8 +44,8 @@ msgid ""
 "You can update these information anytime from your *Profile* page, it is "
 "accessible from the user menu."
 msgstr ""
-"Você pode actualizar essas informações a qualquer momento na página de "
-"*Perfil*, que pode ser acessada a partir do menu do utilizador."
+"Pode actualizar essas informações a qualquer momento na página de "
+"*Perfil*, que pode ser acedida a partir do menu do utilizador."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:11
 #: 22278c14f7cc4cb984ce9b94a1e850e0
@@ -55,8 +54,8 @@ msgid ""
 "list will show. Click on :guilabel:`Profile` to enter the *Profile* "
 "settings page."
 msgstr ""
-"Então, clique em seu nome de utilizador no canto superior direito da "
-"tela. Uma lista suspensa será exibida. Clique em :guilabel:`Profile` "
+"Então, clique em seu nome de utilizador no canto superior direito do "
+"ecrã. Uma lista suspensa será exibida. Clique em :guilabel:`Profile` "
 "para entrar na página de configurações do *Perfil*."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:16
@@ -67,7 +66,7 @@ msgstr "*Link para o seu perfil*"
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:18
 #: 072a522636f646fbb2862eec0cee14e5
 msgid "The *Profile* page looks like the one shown in the picture below."
-msgstr "A página de *Perfil* se parece com a mostrada na imagem abaixo."
+msgstr "A página de *Perfil* é similar à imagem em baixo."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:23
 #: 62fb6f7ab8324a57943738b6664caca4
@@ -82,9 +81,9 @@ msgid ""
 "can decide to view only layers or maps or documents by clicking on the "
 "corresponding tab."
 msgstr ""
-"Suas informações pessoais são mostradas sob o nome de utilizador. Na "
+"As suas informações pessoais são mostradas sob o nome de utilizador. Na "
 "parte inferior da página estão listados todos os recursos associados ao "
-"seu *Perfil*, você pode decidir visualizar apenas camadas ou mapas ou "
+"seu *Perfil*. Pode decidir visualizar apenas camadas ou mapas ou "
 "documentos clicando na aba correspondente."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:27
@@ -106,7 +105,7 @@ msgstr ""
 "No lado direito da página, há muitos links úteis para editar informações "
 "pessoais, fazer upload e criar camadas ou mapas, actualizar as suas "
 "configurações de *Perfil* e entrar em contacto com outros utilizadores "
-"GeoNode."
+"do GeoNode."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:31
 #: 495414d5413b4ef2b3e2f222cca68cb1
@@ -114,8 +113,8 @@ msgid ""
 "The :guilabel:`Favorites` link, also accessible from the user menu, "
 "drive you to the list of the resources marked as your favorites."
 msgstr ""
-"O link :guilabel:`Favorites`, também acessível a partir do menu do "
-"usuário, leva à lista de recursos marcados como seus favoritos."
+"O link :guilabel:`Favorites`, também acessível a partir do menu de "
+"utilizador, leva à lista de recursos marcados como seus favoritos."
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:36
 #: 6d824d0c3f1e45a0be75e5f61db48466

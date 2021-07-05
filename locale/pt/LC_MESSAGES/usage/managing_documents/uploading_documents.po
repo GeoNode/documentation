@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 20:36+0200\n"
+"PO-Revision-Date: 2021-07-03 10:17+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_documents/uploading_documents.rst:4
 #: f6219558f7a74518909e3399d9a0fc91
@@ -33,9 +33,9 @@ msgid ""
 "presentations (.ppt, .pptx, .odp), images (.gif, .jpg, .png, .tif, .tiff), "
 "PDF, zip files (.rar, .zip, .gz), SLD, XML or QML files."
 msgstr ""
-"GeoNode permite compartilhar relatórios, notas conceituais, pôsteres, "
-"planilhas, etc. Uma grande variedade de arquivos de documentos podem ser "
-"hospedados na plataforma, incluindo arquivos de texto (.doc, .docx, .txt, ."
+"O GeoNode permite compartilhar relatórios, notas de concepção, posteres, "
+"folhas de cálculo, etc. Uma grande variedade de arquivos de documentos podem "
+"ser hospedados na plataforma, incluindo arquivos de texto (.doc, .docx, .txt, ."
 "odt), planilhas (.xls, .xlsx, .ods), apresentações (.ppt, .pptx, .odp), "
 "imagens (.gif, .jpg, .png, .tif, .tiff), PDF, arquivos zip (.rar, .zip, .gz ), "
 "Arquivos SLD, XML ou QML."
@@ -43,12 +43,12 @@ msgstr ""
 #: ../../usage/managing_documents/uploading_documents.rst:8
 #: 3733082b1283400295b353a01cee9701
 msgid "Only authenticated users can upload data into GeoNode."
-msgstr "Apenas usuários autenticados podem carregar dados no GeoNode."
+msgstr "Apenas utilizadores autenticados podem carregar dados no GeoNode."
 
 #: ../../usage/managing_documents/uploading_documents.rst:10
 #: 22f8ec14ffbd42259b0f5f6ddced50bc
 msgid "*Documents* uploading is accessible from two positions:"
-msgstr "O carregamento de *Documentos* pode ser acessado de duas posições:"
+msgstr "O carregamento de *Documentos* pode ser acedido de duas formas:"
 
 #: ../../usage/managing_documents/uploading_documents.rst:12
 #: c0fdc475b81749e8947290fca982a9b1
@@ -82,8 +82,8 @@ msgstr "*Link Carregar Documento*"
 #: c82385a49cf84004a118ca4bcf97ef58
 msgid "The *Document Upload* page looks like the one shown in the picture below."
 msgstr ""
-"A página de *Carregamento de Documentos* se parece com a mostrada na imagem "
-"abaixo."
+"A página de *Carregamento de Documentos* é parecida com a mostrada na imagem "
+"em baixo."
 
 #: ../../usage/managing_documents/uploading_documents.rst:31
 #: ee1302af53064a998be5a9c5bfb6e6c5
@@ -129,6 +129,6 @@ msgid ""
 "to fill out other information about the document. See the next section to know "
 "more about that."
 msgstr ""
-"No final do processo de carregamento, você será direccionado para a página "
+"No final do processo de carregamento, será direccionado para a página "
 "*Metadados* para preencher outras informações sobre o documento. Veja a "
-"próxima secção para saber mais sobre isso."
+"próxima secção para saber mais sobre isto."

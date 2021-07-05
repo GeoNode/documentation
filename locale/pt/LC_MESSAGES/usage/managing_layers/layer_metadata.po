@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 23:13+0200\n"
+"PO-Revision-Date: 2021-07-03 10:59+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_layers/layer_metadata.rst:4
 #: 99de44aa970046078ffc0f208d45011d
@@ -32,7 +32,7 @@ msgid ""
 "guilabel:`Metadata Detail` button from the *Layer Page*."
 msgstr ""
 "No GeoNode é dada especial importância aos *Metadados* e seus formatos "
-"padrão. Você pode explorar os *Metadados* de uma *Camada* clicando no botão :"
+"padrão. Pode explorar os *Metadados* de uma *Camada* clicando no botão :"
 "guilabel:`Metadata Detail` na *Página da Camada*."
 
 #: ../../usage/managing_layers/layer_metadata.rst:12
@@ -57,9 +57,8 @@ msgid ""
 "layer. Metadata are grouped in order to show the following types of "
 "information:"
 msgstr ""
-"Nessa página, você pode ver todo o conjunto de metadados disponíveis sobre a "
-"camada. Os metadados são agrupados para mostrar os seguintes tipos de "
-"informações:"
+"Nesta página, pode ver todo o conjunto de metadados disponíveis da camada. "
+"Os metadados são agrupados para mostrar os seguintes tipos de informações:"
 
 #: ../../usage/managing_layers/layer_metadata.rst:24
 #: b57f39c8c3054e4f9e69acc8bc9927da
@@ -73,7 +72,7 @@ msgstr ""
 #: ../../usage/managing_layers/layer_metadata.rst:25
 #: 1ba967da22324fe7b38d32b7a8c091f1
 msgid "*Owner*, the user who owns the layer;"
-msgstr "*Proprietário*, o usuário a quem pertence a camada;"
+msgstr "*Proprietário*, o utilizador a quem pertence a camada;"
 
 #: ../../usage/managing_layers/layer_metadata.rst:26
 #: a2beab975f67421c8b2c347eb0a958a5
@@ -82,7 +81,7 @@ msgid ""
 "System and so on;"
 msgstr ""
 "*Informações*, a Imagem de Identificação, Extensão Espacial, Sistema de "
-"Projeção e assim por diante;"
+"Projecção e assim por diante;"
 
 #: ../../usage/managing_layers/layer_metadata.rst:27
 #: 4b5df69760e842f08b6d5cf5020e4544
@@ -92,7 +91,7 @@ msgstr "*Recursos*, Idioma, Informações suplementares e outras Informações;"
 #: ../../usage/managing_layers/layer_metadata.rst:28
 #: 5004c6ac8ea6457d80e9c712c7b74a03
 msgid "*Contact Points*, the available user to get in contact;"
-msgstr "*Pontos de Contacto*, o usuário disponível para entrar em contacto;"
+msgstr "*Pontos de Contacto*, o utilizador disponível para entrar em contacto;"
 
 #: ../../usage/managing_layers/layer_metadata.rst:29
 #: 3f2e13fb376e4825b31b7d166eab223c
@@ -107,7 +106,7 @@ msgstr "*Autor dos Metadados*, informações sobre o autor dos metadados."
 #: ../../usage/managing_layers/layer_metadata.rst:33
 #: dad3096c1e0a486e84c58efbe853433a
 msgid "Downloading Metadata"
-msgstr "Baixando Metadados"
+msgstr "Descarregando Metadados"
 
 #: ../../usage/managing_layers/layer_metadata.rst:35
 #: c685aac51c554c8eb70b3a5ef9611301
@@ -115,19 +114,20 @@ msgid ""
 "The :guilabel:`Download Metadata` button of the *Layer Page* allows you to "
 "download the layer metadata in various formats."
 msgstr ""
-"O botão :guilabel:`Download Metadata` da *Página da Camada* permite que você "
-"baixe os metadados da camada em vários formatos."
+"O botão :guilabel:`Download Metadata` da *Página da Camada* permite que "
+"descarregar os metadados da camada em vários formatos."
 
 #: ../../usage/managing_layers/layer_metadata.rst:40
 #: c42054c8c25e44e19272609b9d24491b
 msgid "*How to Download Metadata*"
-msgstr "*Como fazer Download de Metadados*"
+msgstr "*Como Descarregar Metadados*"
 
 #: ../../usage/managing_layers/layer_metadata.rst:42
 #: b02dec3bf8144c78b3be8180833c5390
 msgid "The available download formats are grouped in three categories:"
 msgstr ""
-"Os formatos de download disponíveis estão agrupados em três categorias:"
+"Os formatos para descarregamento disponíveis estão agrupados em três "
+"categorias:"
 
 #: ../../usage/managing_layers/layer_metadata.rst:44
 #: 1a1296d0af1546a6b4f2ee9cb45c8aa4
@@ -147,7 +147,8 @@ msgstr "*Informação de Atributo*"
 #: ../../usage/managing_layers/layer_metadata.rst:48
 #: 90112c2a593d4bf2bd5811ea774747bd
 msgid "Click on the format name that you prefer to start the download."
-msgstr "Clique no nome do formato de sua preferência para iniciar o download."
+msgstr ""
+"Clique no nome do formato da sua preferência para iniciar o descarregamento."
 
 #: ../../usage/managing_layers/layer_metadata.rst:51
 #: 92d14909e5e244f4800e85aaca2d533e
@@ -163,8 +164,8 @@ msgid ""
 msgstr ""
 "Os metadados contêm todas as informações relacionadas à camada. Eles "
 "fornecem informações essenciais para sua identificação e compreensão. Os "
-"metadados também tornam a camada mais facilmente recuperável por meio da "
-"pesquisa por outros usuários."
+"metadados também tornam a camada mais visível por meio da pesquisa por "
+"outros utilizadores."
 
 #: ../../usage/managing_layers/layer_metadata.rst:54
 #: a0420139855445f2a17a0621c7f8f57f
@@ -173,7 +174,7 @@ msgid ""
 "four steps, one for each type of metadata considered:"
 msgstr ""
 "Os *Metadados* de uma camada podem ser alterados através de um *Assistente* "
-"que envolve quatro etapas, uma para cada tipo de metadado considerado:"
+"que envolve quatro etapas, uma para cada tipo de metadados considerado:"
 
 #: ../../usage/managing_layers/layer_metadata.rst:56
 #: 7f28b0ffda8f4ea683d011f61174b8f5
@@ -273,8 +274,8 @@ msgid ""
 "The following list shows what kinds of metadata you are required to enter "
 "(see also the picture below):"
 msgstr ""
-"A lista a seguir mostra quais tipos de metadados você deve inserir (veja "
-"também a imagem abaixo):"
+"A lista a seguir mostra quais tipos de metadados que deve inserir (veja "
+"também a imagem em baixo):"
 
 #: ../../usage/managing_layers/layer_metadata.rst:88
 #: d286244d28814bd99ddf9232b173110e
@@ -327,7 +328,7 @@ msgstr ""
 #: ../../usage/managing_layers/layer_metadata.rst:94
 #: b28d05f894c2490ca309c3f777b6fbe9
 msgid "Potential *Restrictions* on layer sharing."
-msgstr "Potenciais *Restrições* no compartilhamento de camadas."
+msgstr "Potenciais *Restrições* na partilha de camadas."
 
 #: ../../usage/managing_layers/layer_metadata.rst:96
 #: 4121aaa9355b433cbfcb5d6d19fd9392
@@ -361,7 +362,7 @@ msgstr "A *Edição* para indicar a referência ou a origem da camada;"
 #: ../../usage/managing_layers/layer_metadata.rst:109
 #: e02f7bb0fb234d07bb831dc62157c473
 msgid "The *Purpose* of the layer and its objectives;"
-msgstr "O *Propósito* da camada e seus objetivos;"
+msgstr "O *Propósito* da camada e os seus objetivos;"
 
 #: ../../usage/managing_layers/layer_metadata.rst:110
 #: ee9d6bb77d65445298e48542fbc29579
@@ -383,13 +384,13 @@ msgid ""
 "The users who are *Responsible* for the layer, its *Owner*, and the *Author* "
 "of its metadata;"
 msgstr ""
-"Os usuários que são *Responsáveis* pela camada, seu *Proprietário* e o "
+"Os utilizadores que são *Responsáveis* pela camada, seu *Proprietário* e o "
 "*Autor* de seus metadados;"
 
 #: ../../usage/managing_layers/layer_metadata.rst:113
 #: 3646cd05f6874d08b30a1a4fa77bb06b
 msgid "The *Spatial representation type* used."
-msgstr "O *Tipo de representação espacial* usado."
+msgstr "O *Tipo de representação espacial* utilizada."
 
 #: ../../usage/managing_layers/layer_metadata.rst:115
 #: 7b79b33ea8da493982ffeee88c968b4e
@@ -416,7 +417,7 @@ msgid ""
 "At this step you can enrich the dataset attributes with useful information "
 "like the following:"
 msgstr ""
-"Nesta etapa, você pode enriquecer os atributos do conjunto de dados com "
+"Nesta etapa pode enriquecer os atributos do conjunto de dados com "
 "informações úteis como as seguintes:"
 
 #: ../../usage/managing_layers/layer_metadata.rst:127
@@ -447,11 +448,11 @@ msgid ""
 msgstr ""
 "O *Tipo de Exibição*; o valor padrão é *Rótulo*, o que significa que o valor "
 "do atributo será renderizado como um texto simples. Existe a possibilidade "
-"de instruir o GeoNode a tratar os valores como diferentes tipos de mídia. "
+"de instruir o GeoNode a tratar os valores como diferentes tipos de media. "
 "Por exemplo, se os valores do atributo seleccionado irão conter urls de "
-"imagem, seleccionando ``IMAGE`` *Tipo de Exibição* você permitirá que "
-"GeoNode renderize a imagem directamente ao consultar a camada dos mapas. O "
-"mesmo para os tipos MIME ``VIDEO``, ``AUDIO`` ou ``IFRAME``."
+"imagem, seleccionando ``IMAGE`` *Tipo de Exibição* permitirá que o GeoNode "
+"renderize a imagem directamente ao consultar a camada dos mapas. O mesmo "
+"para os tipos MIME ``VIDEO``, ``AUDIO`` ou ``IFRAME``."
 
 #: ../../usage/managing_layers/layer_metadata.rst:134
 #: 44db560cc50b4e689dafbc5f9a6d72ed
@@ -459,8 +460,8 @@ msgid ""
 "The *Visibile* flag; allows you to instruct GeoNode wether or not hiding an "
 "attribute from the *Get Feature Type* outcomes"
 msgstr ""
-"O sinalizador *Visível*; permite que você instrua o GeoNode a ocultar ou não "
-"um atributo dos resultados de *Obter Tipo de Recurso*"
+"O sinalizador *Visível*; permite instruir o GeoNode a ocultar ou não um "
+"atributo dos resultados de *Obter Tipo de Recurso*"
 
 #: ../../usage/managing_layers/layer_metadata.rst:137
 #: ed049f5d4ca24fcb9696ebf213bd1663
@@ -471,7 +472,7 @@ msgid ""
 msgstr ""
 "É possível definir um template ``HTML`` completamente customizado para o "
 "resultado *Obter Tipo de Recurso*. Isso é possível activando o sinalizador "
-"*Usar um modelo personalizado* conforme mostrado na figura abaixo."
+"*Usar um modelo personalizado* conforme mostrado na figura em baixo."
 
 #: ../../usage/managing_layers/layer_metadata.rst:143
 #: da1c0b41c65c4b119c753c6b13e6e20f
@@ -484,13 +485,13 @@ msgid ""
 "By using the keywork ``${properties.<attribute_name>``, you can tell to "
 "GeoNode to render the actual value of the attribute on the map."
 msgstr ""
-"Usando o keywork ``$ {properties.<attribute_name>``, você pode instruir o "
+"Usando uma keywork ``$ {properties.<attribute_name>``, pode instruir o "
 "GeoNode a renderizar o valor real do atributo no mapa."
 
 #: ../../usage/managing_layers/layer_metadata.rst:148
 #: 1661d2bd062240f4bee833cd4844efff
 msgid "As an instance, the example below"
-msgstr "Como uma instância, o exemplo abaixo"
+msgstr "Como uma instância, o exemplo em baixo"
 
 #: ../../usage/managing_layers/layer_metadata.rst:153
 #: 142dc356ecaf41f08fb5c9f3a1c32070
@@ -525,8 +526,8 @@ msgid ""
 "Some metadata are mandatory, if you miss any of that metadata the "
 "*Completeness* bar shows you a red message like the one in the picture below."
 msgstr ""
-"Alguns metadados são obrigatórios, se você perder algum desses metadados, a "
-"barra *Completude* mostra uma mensagem em vermelho como a da imagem abaixo."
+"Alguns metadados são obrigatórios, se algum desses metadados faltarem, a "
+"barra *Completude* mostra uma mensagem em vermelho como a da imagem em baixo."
 
 #: ../../usage/managing_layers/layer_metadata.rst:171
 #: 9b6f0cadddc549ef8d13531094df66ff
@@ -559,10 +560,10 @@ msgid ""
 "paragraph. Once you have finished to edit them click on :guilabel:`Update` "
 "to save your changes."
 msgstr ""
-"Clique nele para exibir a *Página de Edição Avançada de Metadados*. Essa "
-"página permite que você edite todos os metadados da camada descritos no "
-"parágrafo anterior. Assim que terminar de editá-los, clique em :guilabel:"
-"`Update` para salvar suas alterações."
+"Clique nele para exibir a *Página de Edição Avançada de Metadados*. Esta "
+"página permite editar todos os metadados da camada descritos no parágrafo "
+"anterior. Assim que terminar de editá-los, clique em :guilabel:`Update` para "
+"guardar as suas alterações."
 
 #: ../../usage/managing_layers/layer_metadata.rst:186
 #: d3952056a1c44a71ab2ab946a3b1de69
@@ -576,10 +577,10 @@ msgid ""
 "format) to fill in key GeoNode metadata elements automatically. The picture "
 "below shows you how the page looks like."
 msgstr ""
-"Os usuários também podem fazer upload de um documento XML de metadados (em "
-"formato ISO, FGDC ou Dublin Core) para preencher os principais elementos de "
-"metadados do GeoNode automaticamente. A imagem abaixo mostra a aparência da "
-"página."
+"Os utilizadores também podem fazer upload de um documento XML de metadados "
+"(em formato ISO, FGDC ou Dublin Core) para preencher os principais elementos "
+"de metadados do GeoNode automaticamente. A imagem em baixo mostra a "
+"aparência da página."
 
 #: ../../usage/managing_layers/layer_metadata.rst:194
 #: cca140b7507446f5a58ebb3d2f1aced7

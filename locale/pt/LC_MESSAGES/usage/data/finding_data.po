@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 20:27+0200\n"
+"PO-Revision-Date: 2021-07-02 23:06+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/data/finding_data.rst:4 5aaae345fb7648ee9e5e0c3da6ab99e2
 msgid "Finding Data"
-msgstr "Encontrando Dados"
+msgstr "Procurando Dados"
 
 #: ../../usage/data/finding_data.rst:6 c72c9d2880de4394bbe075ca780a57e1
 msgid ""
@@ -33,7 +33,8 @@ msgstr ""
 
 #: ../../usage/data/finding_data.rst:7 56439f1a648448859b06b596f6ca3405
 msgid "In *Home* page you can find some quick search tool."
-msgstr "Na página *Home* poderá encontrar algumas ferramentas de busca rápida."
+msgstr ""
+"Na página *Home* poderá encontrar algumas ferramentas de pesquisa rápida."
 
 #: ../../usage/data/finding_data.rst:9 7cced80975a7414bb0f9210ab447ef99
 msgid ""
@@ -41,7 +42,8 @@ msgid ""
 "text and find all the data which have to deal with that text."
 msgstr ""
 "A caixa *Pesquisar* na barra de navegação (veja a imagem abaixo) permite que "
-"digite um texto e encontre todos os dados que têm que lidar com aquele texto."
+"digite umas palavras e encontre todos os dados que têm semelhança com esse "
+"texto."
 
 #: ../../usage/data/finding_data.rst:14 da8d27735cf04048a6de4b395346d8d3
 msgid "*Search tool in GeoNode welcome page*"
@@ -52,8 +54,8 @@ msgid ""
 "When you trigger a search you are brought to the *Search* page which shows you "
 "the search result through all data types."
 msgstr ""
-"Ao iniciar uma pesquisa, você é levado à página *Pesquisar*, que mostra o "
-"resultado da pesquisa em todos os tipos de dados."
+"Ao iniciar uma pesquisa, é levado à página *Pesquisar*, que mostra o resultado "
+"da pesquisa em todos os tipos de dados."
 
 #: ../../usage/data/finding_data.rst:21 89ec85e7c37e409095d92fc15c54dabd
 msgid "*The Search page*"
@@ -86,9 +88,9 @@ msgid ""
 "below."
 msgstr ""
 "Tente definir algum filtro e ver como a lista de dados resultante muda de "
-"acordo. Um tipo interessante de filtro é *EXTENSÃO*: você pode aplicar um "
-"filtro espacial movendo ou ampliando um mapa dentro de uma caixa, conforme "
-"mostrado na imagem abaixo."
+"acordo. Um tipo interessante de filtro é *EXTENSÃO*: pode aplicar um filtro "
+"espacial movendo ou ampliando um mapa dentro de uma caixa, conforme mostrado "
+"na imagem abaixo."
 
 #: ../../usage/data/finding_data.rst:31 e06092f5a2b04999a4c151cd17b99c13
 msgid "*Search filter by EXTENT*"
@@ -123,11 +125,10 @@ msgid ""
 "below). If you want to reach the *Search page* directly, without any input "
 "text, you can click the :guilabel:`Advanced Search` link."
 msgstr ""
-"A página *Search*, para a qual você será redireccionado, já terá o filtro de "
-"TEXTO configurado com o nome que você digitou na caixa de busca (veja a imagem "
-"abaixo). Se você deseja acessar a *Página de pesquisa* directamente, sem "
-"qualquer entrada de texto, você pode clicar no link :guilabel:`Advanced "
-"Search`."
+"A página *Search*, para a qual será redireccionado, já terá o filtro de TEXTO "
+"configurado com o nome que digitou na caixa de busca (veja a imagem abaixo). "
+"Se desejar aceder à *Página de pesquisa* directamente, sem qualquer entrada de "
+"texto, pode clicar no link :guilabel:`Advanced Search`."
 
 #: ../../usage/data/finding_data.rst:55 dfd489984ab547b1bfbf6940ed483954
 msgid "*Results of searching made by name*"
@@ -140,8 +141,8 @@ msgid ""
 "clicking on it."
 msgstr ""
 "Na secção da página *Home* mostrada abaixo, estão listadas todas as categorias "
-"disponíveis na instância GeoNode que você está a usar. Você pode pesquisar "
-"dados por categoria clicando nela."
+"disponíveis na instância GeoNode que está a usar. Pode pesquisar dados por "
+"categoria clicando nela."
 
 #: ../../usage/data/finding_data.rst:62 93f3fe59e234413fad9f386995bc27f4
 msgid "*Searching for datasets by category*"
@@ -164,10 +165,10 @@ msgid ""
 "*Search* page with no filter on data types."
 msgstr ""
 "A secção *Featured Datasets* (veja a imagem abaixo) mostra dados agregados "
-"sobre *Camadas*, *Mapas*, *Documentos* e *Usuários*. Você pode accionar uma "
+"sobre *Camadas*, *Mapas*, *Documentos* e *Utilizadores*. Pode accionar uma "
 "busca por camadas clicando no ícone *Layers*, o mesmo acontece para *Mapas*, "
-"*Documentos* e *Usuários*. O :guilabel:`Explore all datasets` o leva para a "
-"página *Pesquisar* sem filtro nos tipos de dados."
+"*Documentos* e *Utilizadores*. O :guilabel:`Explore all datasets` o leva para "
+"a página *Pesquisar* sem filtro nos tipos de dados."
 
 #: ../../usage/data/finding_data.rst a08c90a526fb446e80215b7e4884136e
 msgid ""
@@ -177,9 +178,9 @@ msgid ""
 "guide you to the map creation."
 msgstr ""
 "Nesta secção, também, há links rápidos úteis para adicionar novos recursos: o :"
-"guilabel:`Add layers` o leva para a página de envio de camadas, o :guilabel:"
+"guilabel:`Add layers` leva-o para a página de envio de camadas, o :guilabel:"
 "`Add documents` para a página de envio de documentos e o :guilabel:`Create "
-"maps` o guiam à criação do mapa."
+"maps` para a criação do mapa."
 
 #: ../../usage/data/finding_data.rst:77 d967c65ac39d480599c7e053af80cd7f
 msgid "*Featured Datasets*"
@@ -192,7 +193,7 @@ msgid ""
 msgstr ""
 "Para cada tipo de dados, o GeoNode disponibiliza uma página de *Pesquisa* "
 "individual, os próximos parágrafos irão explicar isso em profundidade. Para "
-"*Usuários* veja :ref:`user-info`."
+"*Utilizadores* veja :ref:`user-info`."
 
 #: ../../usage/data/finding_data.rst:85 1e7337924a734d908c23a9e7cf9bd7df
 msgid "Documents"
@@ -200,7 +201,7 @@ msgstr "Documentos"
 
 #: ../../usage/data/finding_data.rst:87 3735f86a54b344138934d7f5ff3d6779
 msgid "When you are searching for *Documents* you can:"
-msgstr "Ao pesquisar por *Documentos*, você pode:"
+msgstr "Ao pesquisar por *Documentos*, pode:"
 
 #: ../../usage/data/finding_data.rst:89 78d7beb9ff0b4667a1fec0c3d6175d8e
 msgid ""
@@ -208,7 +209,7 @@ msgid ""
 "above"
 msgstr ""
 "usar o link rápido de *Documentos* da secção *Featured Datasets* conforme "
-"descrito acima"
+"descrito em cima"
 
 #: ../../usage/data/finding_data.rst:91 acdb88b0359940d09e59f4281e9e0c99
 msgid ""
@@ -230,9 +231,9 @@ msgid ""
 "filter at the same time."
 msgstr ""
 "A página de pesquisa *Documentos* parece genérica, mas apenas *Documento* é "
-"considerado um tipo de dados. Você pode filtrar documentos por CATEGORIAS, "
-"como no exemplo abaixo, ou por TEXTO, PALAVRAS-CHAVE e assim por diante. Você "
-"também pode usar mais de um filtro ao mesmo tempo."
+"considerado um tipo de dados. Pode filtrar documentos por CATEGORIAS, como no "
+"exemplo em baixo, ou por TEXTO, PALAVRAS-CHAVE e assim por diante. Também pode "
+"usar mais de um filtro ao mesmo tempo."
 
 #: ../../usage/data/finding_data.rst:104 3b71ec8950ae49b5afdfc4209d90866e
 msgid "*Documents filtered by categories*"
@@ -244,7 +245,7 @@ msgstr "Camadas"
 
 #: ../../usage/data/finding_data.rst:111 a8ebc798e7594afe8061f872db1d0b61
 msgid "To find *Layers* you can:"
-msgstr "Para encontrar *Camadas*, você pode:"
+msgstr "Para encontrar *Camadas*, pode:"
 
 #: ../../usage/data/finding_data.rst:113 f6f4365e9a144544972c4223f6d1c7b9
 msgid "use the *Layers* quick link of the *Featured Datasets*"
@@ -269,8 +270,8 @@ msgid ""
 "layers have been filtered by EXTENT and CATEGORIES."
 msgstr ""
 "Na página de pesquisa *Layers*, apenas *Camada* será considerado como tipo de "
-"dado. Você pode definir um ou mais filtros para refinar a pesquisa. No exemplo "
-"abaixo, as camadas foram filtradas por EXTENSÃO e CATEGORIAS."
+"dado. Pode definir um ou mais filtros para refinar a pesquisa. No exemplo em "
+"baixo, as camadas foram filtradas por EXTENSÃO e CATEGORIAS."
 
 #: ../../usage/data/finding_data.rst:127 dbdf15cd11974c16aece08644a9a50f2
 msgid "*Layers filtered by extent*"
@@ -282,14 +283,14 @@ msgstr "Mapas"
 
 #: ../../usage/data/finding_data.rst:134 4a76c214b40d4e95a197d54c4562bcef
 msgid "If you are searching for *Maps* you can:"
-msgstr "Se você estiver procurando por *Mapas*, poderá:"
+msgstr "Se estiver a procurar por *Mapas*, poderá:"
 
 #: ../../usage/data/finding_data.rst:136 40be6dcb1c2c4b48b4c091302c6e0a99
 msgid ""
 "use the *Maps* quick link of the *Featured Datasets* section as described above"
 msgstr ""
-"usar o link rápido *Mapas* da secção *Featured Datasets* conforme descrito "
-"acima"
+"usar o link rápido *Mapas* da secção *Featured Datasets* conforme descrito em "
+"cima"
 
 #: ../../usage/data/finding_data.rst:138 3bb30376b2884dc4a6a7cdbd6c2971e2
 msgid ""
@@ -310,7 +311,7 @@ msgid ""
 "by REGIONS."
 msgstr ""
 "Como visto para os outros tipos de dados, a página de pesquisa *Mapas* permite "
-"que você filtre seus mapas por uma combinação de critérios. O exemplo abaixo "
+"que filtre os seus mapas por uma combinação de critérios. O exemplo em baixo "
 "mostra mapas filtrados por REGIÕES."
 
 #: ../../usage/data/finding_data.rst:150 d424f19f4c204eddb0698b42543c17eb

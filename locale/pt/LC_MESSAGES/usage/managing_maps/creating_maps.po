@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 23:42+0200\n"
+"PO-Revision-Date: 2021-07-03 11:40+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_maps/creating_maps.rst:4
 #: bcfa85add03f44919bf5670b58c9e9d0
@@ -33,12 +33,12 @@ msgid ""
 msgstr ""
 "Nesta secção, vamos criar um *Mapa* usando algumas camadas carregadas, "
 "combiná-las com algumas outras camadas de serviços remotos da web e, em "
-"seguida, compartilhar o mapa resultante para visualização pública."
+"seguida, partilhar o mapa resultante para visualização pública."
 
 #: ../../usage/managing_maps/creating_maps.rst:8
 #: dd724a6a0ef64a618cb42198b345d342
 msgid "In order to create new maps you can use:"
-msgstr "Para criar novos mapas, você pode usar:"
+msgstr "Para criar novos mapas pode utilizar:"
 
 #: ../../usage/managing_maps/creating_maps.rst:10
 #: 2dfd45811b494af69682c5c61295bd99
@@ -79,8 +79,8 @@ msgstr "*O botão Criar Novo Mapa*"
 msgid ""
 "The new *Map* will open in a *Map Viewer* like the one in the picture below."
 msgstr ""
-"O novo *Mapa* será aberto em um *Visualizador de Mapas* como o da imagem "
-"abaixo."
+"O novo *Mapa* será aberto em um *Visualizador de Mapas* como o da imagem em "
+"baixo."
 
 #: ../../usage/managing_maps/creating_maps.rst:36
 #: 7e5d0c325dc34f3396c27169477745e5
@@ -150,5 +150,5 @@ msgid ""
 "We will take a closer look at the *Map Viewer* tools in the :ref:`exploring-"
 "maps` section."
 msgstr ""
-"Vamos dar uma olhada mais de perto nas ferramentas do *Visualizador de Mapas* "
-"na secção :ref:`exploring-maps`."
+"Vamos verificar com mais detalhe as ferramentas do *Visualizador de Mapas* na "
+"secção :ref:`exploring-maps`."

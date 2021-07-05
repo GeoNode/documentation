@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-02 00:15+0200\n"
+"PO-Revision-Date: 2021-07-03 12:39+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:4
 #: 14435f8a872e48ffb17cda803214b315
@@ -45,7 +45,7 @@ msgstr "*O Índice (TOC)*"
 #: ../../usage/managing_maps/exploring_maps/toc.rst:30
 #: 469c1f580d8643c98e308321c06490d6
 msgid "From the *TOC* you can:"
-msgstr "A partir do *TOC* você pode:"
+msgstr "A partir do *TOC* pode:"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:32
 #: c2cda92241164252b2c9bd588855b400
@@ -107,8 +107,7 @@ msgstr "A *Barra de Ferramentas* mostra muitos botões:"
 #: ../../usage/managing_maps/exploring_maps/toc.rst:79
 #: 196dd65161174e4f99d966238ea1edab
 msgid "|zoom_to_layer_extent_button| allows you to zoom to the layer extent;"
-msgstr ""
-"|zoom_to_layer_extent_button| permite que você amplie até a extensão da camada;"
+msgstr "|zoom_to_layer_extent_button| permite ampliar até a extensão da camada;"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:80
 #: 654cf11caabf4bf99f15be92124023ec
@@ -116,7 +115,7 @@ msgid ""
 "|layer_settings_button| drives you through the layer settings customization "
 "(see the next paragraph);"
 msgstr ""
-"|layer_settings_button| o conduz através da personalização de configurações de "
+"|layer_settings_button| guia-o através da personalização de configurações de "
 "camada (consulte o próximo parágrafo);"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:81
@@ -199,7 +198,7 @@ msgid ""
 "you can configure."
 msgstr ""
 "Clique na guia **Display** para ver quais são as propriedades de aparência da "
-"camada que você pode configurar."
+"camada que pode configurar."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:116
 #: 1b50ec37c396486fa527b322f8acfafd
@@ -211,15 +210,14 @@ msgstr "*O Painel de Configurações de Exibição da Camada*"
 msgid ""
 "The *Format* field allows you to change the output format of the WMS requests."
 msgstr ""
-"O campo *Formato* permite que você altere o formato de saída das solicitações "
-"WMS."
+"O campo *Formato* permite que altere o formato de saída das solicitações WMS."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:119
 #: bf4da27f61a44148bc6173598ca37424
 msgid ""
 "You can set a numeric value of *Opacity* using the corresponding input field."
 msgstr ""
-"Você pode definir um valor numérico de *Opacidade* usando o campo de entrada "
+"Pode definir um valor numérico de *Opacidade* usando o campo de entrada "
 "correspondente."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:120
@@ -228,8 +226,8 @@ msgid ""
 "You can also set the layer as *Transparent*, decide to *Use cache options* and "
 "to use *Single Tile*."
 msgstr ""
-"Você pode, também, definir a camada como *Transparente*, decidir *Usar opções "
-"de cache* e usar *Bloco Único*."
+"Pode, também, definir a camada como *Transparente*, decidir *Usar opções de "
+"cache* e usar *Bloco Único*."
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:122
 #: 42c17274a0534f9692d1a8b459c5fc6c

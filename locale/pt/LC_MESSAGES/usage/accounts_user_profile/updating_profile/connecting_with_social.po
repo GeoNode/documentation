@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-26 10:05+0200\n"
+"PO-Revision-Date: 2021-07-02 23:06+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/accounts_user_profile/updating_profile/connecting_with_social.rst:2
 #: aa87fed96fd841f1a33f43da468b5de7
 msgid "Connecting your Account with Social Networks"
-msgstr "Conectando sua Conta com Redes Sociais"
+msgstr "Ligando a sua Conta com Redes Sociais"
 
 #: ../../usage/accounts_user_profile/updating_profile/connecting_with_social.rst:4
 #: ca13fd86dedb4b938e1c6ca72f3660a4
 msgid "You currently have no social network accounts connected to this account."
-msgstr "De momento, você não possui contas de redes sociais conectadas a esta conta."
+msgstr "De momento, não possui contas de redes sociais associadas a esta conta."

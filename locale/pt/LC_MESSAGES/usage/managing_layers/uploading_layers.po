@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:21+0200\n"
+"PO-Revision-Date: 2021-07-03 11:28+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_layers/uploading_layers.rst:4
 #: 22ad8fbd690b4ec380fd1bdeedfd73c8
 msgid "Layers Uploading"
-msgstr "Upload de Camadas"
+msgstr "Carregamento de Camadas"
 
 #: ../../usage/managing_layers/uploading_layers.rst:6
 #: 65e8ea895370431b9606fd585f309b5e
@@ -31,8 +31,7 @@ msgid ""
 "represents spatial information so it can be displayed inside a map."
 msgstr ""
 "O tipo de recurso mais importante no GeoNode é a *Camada*. Uma camada "
-"representa informações espaciais para que possam ser exibidas dentro de um "
-"mapa."
+"representa informações espaciais para que possam ser exibidas num mapa."
 
 #: ../../usage/managing_layers/uploading_layers.rst:7
 #: 57af5f5105fc4750bc1d1068e0dd65cf
@@ -48,13 +47,13 @@ msgid ""
 "The *Layer Uploading* page can be reached from the :guilabel:`Upload Layer` "
 "link of the :guilabel:`Data` menu in the navigation bar."
 msgstr ""
-"A página de *Carregamento de Camada* pode ser acessada a partir do link :"
+"A página de *Carregamento de Camada* pode ser acedida a partir do link :"
 "guilabel:`Upload Layer` do menu :guilabel:`Data` na barra de navegação."
 
 #: ../../usage/managing_layers/uploading_layers.rst:14
 #: 2a2be25f6f2c4444a58b557699d1b374
 msgid "*Link for Layers Uploading*"
-msgstr "*Link para Carregar Camadas*"
+msgstr "*Ligação para Carregar Camadas*"
 
 #: ../../usage/managing_layers/uploading_layers.rst:16
 #: 4c998cb26ea34b348d1be07ad3c292a6
@@ -69,7 +68,7 @@ msgstr "*Botão para Carregamento de Camadas*"
 #: ../../usage/managing_layers/uploading_layers.rst:23
 #: 4d4fdcd0cd6a4b8dbdc6904a0d6ee66c
 msgid "The *Layers Uploading* page looks like the one in the picture below."
-msgstr "A página *Carregamento de Camadas* se parece com a da imagem abaixo."
+msgstr "A página *Carregamento de Camadas* parece-se com a da imagem em baixo."
 
 #: ../../usage/managing_layers/uploading_layers.rst:28
 #: bc26a9d0533248b49230bd5ed72f9dca
@@ -115,11 +114,11 @@ msgid ""
 "is over. When the process ends click the :guilabel:`Layer Info` to check the "
 "layer has been correctly uploaded."
 msgstr ""
-"Neste exemplo, o Shapefile ESRI ``roads``, com todos os seus arquivos "
-"obrigatórios (`.shp`, `.shx`, `.dbf` e `.prj`), foi escolhido. Uma barra de "
-"progresso mostra a operação feita durante o upload da camada e alerta quando "
-"o processo termina. Quando o processo terminar, clique em :guilabel:`Layer "
-"Info` para verificar se a camada foi carregada correctamente."
+"Neste exemplo foi escolhido o Shapefile ESRI ``roads``, com todos os seus "
+"arquivos obrigatórios (`.shp`, `.shx`, `.dbf` e `.prj`). Uma barra de "
+"progresso mostra a operação feita durante o carregamento da camada e alerta "
+"quando o processo termina. Quando o processo terminar, clique em :guilabel:"
+"`Layer Info` para verificar se a camada foi carregada correctamente."
 
 #: ../../usage/managing_layers/uploading_layers.rst:42
 #: a05f102df7594c019954509d59c4cf4b
@@ -129,9 +128,9 @@ msgid ""
 "extracts OpenStreetMap <https://extract.bbbike.org>`_ dataset has been used."
 msgstr ""
 "Existem muitos conjuntos de dados espaciais gratuitos disponíveis na "
-"Internet. Neste exemplo, um extracto do mapa das estradas do centro da "
-"cidade de Berlim do conjunto de dados `BBBike extract OpenStreetMap <https://"
-"extract.bbbike.org>`_ foi usado."
+"Internet. Neste exemplo foi utilizador um extracto do mapa das estradas do "
+"centro da cidade de Berlim do conjunto de dados `BBBike extract "
+"OpenStreetMap <https://extract.bbbike.org>`_ ."
 
 #: ../../usage/managing_layers/uploading_layers.rst:44
 #: c313c3ae1da2461aa463113467234cae
@@ -140,5 +139,5 @@ msgid ""
 "how to set permissions, how to explore the layer properties and how to edit "
 "them."
 msgstr ""
-"Nos próximos parágrafos, você aprenderá como criar uma camada do zero, como "
-"definir permissões, como explorar as propriedades da camada e como editá-las."
+"Nos próximos parágrafos  aprenderá a criar uma camada do nada, como definir "
+"permissões, como explorar as propriedades da camada e como editá-las."

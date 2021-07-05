@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 10:16+0200\n"
+"PO-Revision-Date: 2021-07-02 23:06+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:4
 #: d6bfd31812264a6282cc2281cdbc9e68
 msgid "Associating your Account with an e-mail"
-msgstr "Associando a sua conta a um e-mail"
+msgstr "Associando a sua conta a um email"
 
 #: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:6
 #: 36a36fa9d54b49e095e70ee33aa42e0e
@@ -30,13 +30,13 @@ msgid ""
 "Your account is automatically associated with the e-mail that you used "
 "to register yourself on the platform."
 msgstr ""
-"Sua conta é automaticamente associada ao e-mail que você utilizou para "
-"se cadastrar na plataforma."
+"A sua conta é automaticamente associada ao email que você utilizou para "
+"se registar na plataforma."
 
 #: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:11
 #: dbac6e94bd394c07808bdcccfc0ebe04
 msgid "*Accounts e-mail*"
-msgstr "*Contas de e-mail*"
+msgstr "*Contas de email*"
 
 #: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:13
 #: c530912cbfa54a84914aa0da97223474
@@ -47,8 +47,8 @@ msgid ""
 "click on :guilabel:`Add E-mail` to perform a new association."
 msgstr ""
 "Ao clicar em :guilabel:`Associated e-mails` da página *Perfil* (veja :"
-"ref:`editing-profile`), você terá a possibilidade de preencher um novo "
-"endereço de e-mail. Digite no campo :guilabel:`E-mail` e clique em :"
+"ref:`editing-profile`), terá a possibilidade de preencher um novo "
+"endereço de email. Digite no campo :guilabel:`E-mail` e clique em :"
 "guilabel:`Add E-mail` para fazer uma nova associação."
 
 #: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:18
@@ -63,11 +63,11 @@ msgid ""
 "notification on this address. To do that, select the e-mail that you "
 "want, then click on :guilabel:`Make Primary`."
 msgstr ""
-"Você pode torná-lo primário, se necessário, para que receba a "
-"notificação neste endereço. Para isso, seleccione o e-mail que deseja e "
-"clique em :guilabel:`Make Primary`."
+"Pode torná-lo primário se necessário, para que receba a notificação "
+"neste endereço. Para isso, seleccione o email que deseja e clique em :"
+"guilabel:`Make Primary`."
 
 #: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:25
 #: 9c32b058d3c74991aa7772eb90c32a1c
 msgid "*Primary e-mail address*"
-msgstr "*Endereço de e-mail primário*"
+msgstr "*Endereço de email primário*"

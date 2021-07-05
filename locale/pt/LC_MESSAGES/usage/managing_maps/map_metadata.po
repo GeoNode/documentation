@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 23:57+0200\n"
+"PO-Revision-Date: 2021-07-03 14:39+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_maps/map_metadata.rst:4
 #: 9a0c5bf9bfbf48e1b7c4e2175b13dad4
@@ -41,7 +41,7 @@ msgstr "*O botão Detalhe de Metadados do Mapa*"
 #: ../../usage/managing_maps/map_metadata.rst:13
 #: 7f3318229cad4be3a84fc7397a9af4b7
 msgid "The *Map Metadata* page will open."
-msgstr "A página *Metadados do Mapa* será aberta."
+msgstr "A página *Metadados do Mapa* abrirá."
 
 #: ../../usage/managing_maps/map_metadata.rst:18
 #: 4767768398f0432eb60a8619f96c8bca
@@ -54,8 +54,8 @@ msgid ""
 "Lots of information are displayed in this page. Those information are "
 "grouped as follow:"
 msgstr ""
-"Muitas informações são exibidas nesta página. Essas informações são "
-"agrupadas da seguinte forma:"
+"Muita informação é exibida nesta página. Estas informações são agrupadas "
+"da seguinte forma:"
 
 #: ../../usage/managing_maps/map_metadata.rst:22
 #: 2dd454bce1e04d9abcf9912fd7962762
@@ -80,7 +80,7 @@ msgid ""
 "Projection System and the Extent;"
 msgstr ""
 "*Informação*, a Imagem de Identificação, Extensão Espacial, Sistema de "
-"Projeção e Extensão;"
+"Projecção e Extensão;"
 
 #: ../../usage/managing_maps/map_metadata.rst:25
 #: 4482a0218a4747ccb996faf65633522f
@@ -92,12 +92,12 @@ msgstr ""
 #: 90607888bd4f4496a30a443ec7895e71
 msgid "*Contact Points*, the available user to get in contact;"
 msgstr ""
-"*Pontos de Contacto*, o usuário disponível para entrar em contacto;"
+"*Pontos de Contacto*, o utilizador disponível para entrar em contacto;"
 
 #: ../../usage/managing_maps/map_metadata.rst:27
 #: 7e6f74a8698e4f75b1e204705f0d6496
 msgid "*References*, links to the map and its metadata;"
-msgstr "*Referências*, links para o mapa e seus metadados;"
+msgstr "*Referências*, ligações para o mapa e seus metadados;"
 
 #: ../../usage/managing_maps/map_metadata.rst:28
 #: 3b97aa44fa2341ad8bafda9df1038107
@@ -220,7 +220,7 @@ msgid ""
 "The following list shows what kinds of metadata you are required to "
 "enter (see also the picture below):"
 msgstr ""
-"A lista a seguir mostra quais tipos de metadados você deve inserir (veja "
+"A lista a seguir mostra quais tipos de metadados que deve inserir (veja "
 "também a imagem abaixo):"
 
 #: ../../usage/managing_maps/map_metadata.rst:69
@@ -254,7 +254,7 @@ msgstr ""
 #: ../../usage/managing_maps/map_metadata.rst:73
 #: 83c1510b1adb47a0a57a71a4a7a43e21
 msgid "Potential *Restrictions* on layer sharing."
-msgstr "Potenciais *Restrições* no compartilhamento de camadas."
+msgstr "Potenciais *Restrições* na partilha de camadas."
 
 #: ../../usage/managing_maps/map_metadata.rst:75
 #: 48e71213e14440379c7905694d3e855f
@@ -315,8 +315,8 @@ msgid ""
 "The *Spatial representation type*, the method used to represent "
 "geographic information in the dataset;"
 msgstr ""
-"O *Tipo de Representação Espacial*, o método usado para representar a "
-"informação geográfica no conjunto de dados;"
+"O *Tipo de Representação Espacial*, o método utilizado para representar "
+"a informação geográfica no conjunto de dados;"
 
 #: ../../usage/managing_maps/map_metadata.rst:93
 #: 29c212a23b2d41cb95252eebe668fcf0
@@ -324,8 +324,8 @@ msgid ""
 "The users who are *Responsible* for the layer, its *Owner*, and the "
 "*Author* of its metadata;"
 msgstr ""
-"Os usuários que são *Responsáveis* pela camada, seu *Proprietário* e o "
-"*Autor* de seus metadados;"
+"Os utilizadores que são *Responsáveis* pela camada, seu *Proprietário* e "
+"o *Autor* de seus metadados;"
 
 #: ../../usage/managing_maps/map_metadata.rst:95
 #: 7d74276950e2499488d5681dd1b104c6
@@ -333,8 +333,8 @@ msgid ""
 "If you miss some mandatory metadata the *Completeness* bar shows you a "
 "red message like the one in the picture below."
 msgstr ""
-"Se alguns metadados obrigatórios escaparem, a barra *Completude* mostra "
-"uma mensagem em vermelho como a da imagem abaixo."
+"Se alguns metadados obrigatórios não forem preenchidos, a barra "
+"*Completude* mostra uma mensagem em vermelho como a da imagem em baixo."
 
 #: ../../usage/managing_maps/map_metadata.rst:101
 #: a1cc0003ecb54725a62460a90bc8dea2
@@ -353,8 +353,8 @@ msgid ""
 "metadata. You can find this button into the map *Editing Tools*."
 msgstr ""
 "A ferramenta de edição :guilabel:`Advanced Edit` permite alterar os "
-"metadados do mapa. Você pode encontrar este botão no mapa *Ferramentas "
-"de Edição*."
+"metadados do mapa. Pode encontrar este botão no mapa *Ferramentas de "
+"Edição*."
 
 #: ../../usage/managing_maps/map_metadata.rst:111
 #: c6362f4d23714f7a9f10b7d1edc5c14e
@@ -369,7 +369,7 @@ msgid ""
 "paragraph. Once you have finished to edit them click on :guilabel:"
 "`Update` to save your changes."
 msgstr ""
-"Clique nele para exibir a *Página de Edição Avançada de Metadados*. Essa "
-"página permite que você edite todos os metadados da camada descritos no "
+"Clique no botão para exibir a *Página de Edição Avançada de Metadados*. "
+"Essa página permite que edite todos os metadados da camada descritos no "
 "parágrafo anterior. Assim que terminar de editá-los, clique em :guilabel:"
-"`Update` para salvar suas alterações."
+"`Update` para guardar suas alterações."

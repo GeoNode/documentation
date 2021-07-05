@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-02 00:35+0200\n"
+"PO-Revision-Date: 2021-07-03 12:29+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:4
 #: 57d517a82fd1485db1b94619a452e110
@@ -30,7 +30,7 @@ msgid ""
 "At the top-right corner of the *Map* there is a *Burger Menu* button |"
 "burger_menu_button|. Click on it to open the *Map Options* panel."
 msgstr ""
-"No canto superior direito do *Mapa* há um botão *Menu Burger* |"
+"No canto superior direito do *Mapa* existe o botão *Menu Burger* |"
 "burger_menu_button|. Clique nele para abrir o painel *Opções do Mapa*."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:16
@@ -42,7 +42,7 @@ msgstr "*O Menu de Opções do Mapa*"
 #: 0d54e3ac77fd4a4698892e32f1085fd4
 msgid "We will explain those tools more in depth in the next paragraphs."
 msgstr ""
-"Explicaremos essas ferramentas com mais detalhes nos próximos parágrafos."
+"Explicaremos estas ferramentas com mais detalhes nos próximos parágrafos."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:21
 #: 46d01c72a08b4232a6d5b66f75145efd
@@ -102,12 +102,12 @@ msgstr "o *Tamanho da folha* (A3, A4);"
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:38
 #: 485ec4a9f66c42278bb410d2dd9251c0
 msgid "if include the legend or not;"
-msgstr "se inclui a legenda ou não;"
+msgstr "se inclui ou não a legenda;"
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:39
 #: 176f36e1ccf54eb9a3247b3458200505
 msgid "if to put the legend in a separate page;"
-msgstr "se colocar a legenda em uma página separada;"
+msgstr "se colocar a legenda numa página separada;"
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:40
 #: 6d7209e5e17c44c894b594033f1931bf
@@ -173,8 +173,8 @@ msgid ""
 "panel."
 msgstr ""
 "Todas as camadas disponíveis no GeoNode, carregadas e remotas, podem ser "
-"carregadas no mapa através do *Catálogo*. Clique na opção :guilabel:"
-"`CATALOG` do *Menu de Opções do Mapa* para dar uma olhada no painel do "
+"adicionadas ao mapa através do *Catálogo*. Clique na opção :guilabel:"
+"`CATALOG` do *Menu de Opções do Mapa* para visualizar o painel do "
 "catálogo."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:63
@@ -189,14 +189,14 @@ msgid ""
 "*Title*, *Description* and *Abstract*. Click on :guilabel:`Add To Map` "
 "to load a layer into the map, it will be also visible in the :ref:`toc`."
 msgstr ""
-"Você pode navegar pelas camadas e ver suas imagens em *Miniatura*, "
-"*Título*, *Descrição* e *Resumo*. Clique em :guilabel:`Add To Map` para "
-"carregar uma camada no mapa, ela também estará visível em :ref:`toc`."
+"Pode navegar pelas camadas e ver suas imagens em *Miniatura*, *Título*, "
+"*Descrição* e *Resumo*. Clique em :guilabel:`Add To Map` para carregar "
+"uma camada no mapa, ela também estará visível em :ref:`toc`."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:69
 #: afb0cfb2811b4a5aba01b282ca8694e3
 msgid "Performing Measurements"
-msgstr "Fazendo Medições"
+msgstr "Executando Medições"
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:71
 #: f5d1176527174c9d87378cd75339b9a2
@@ -206,8 +206,8 @@ msgid ""
 "allows you to measure *Distances*, *Areas* and the *Bearing* of lines."
 msgstr ""
 "Clique na opção :guilabel:`MEASURE` do *Menu de Opções do Mapa* para "
-"realizar uma medição. Como você pode ver na imagem abaixo, esta "
-"ferramenta permite medir *Distâncias*, *Áreas* e o *Rumo* das linhas."
+"realizar uma medição. Como pode ver na imagem em baixo, esta ferramenta "
+"permite medir *Distâncias*, *Áreas* e o *Rumo* das linhas."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:77
 #: c491f0d7635a42f2b0e6a077bd0924d7
@@ -242,7 +242,7 @@ msgid ""
 "map by clicking on the :guilabel:`SAVE AS` option of the *Map Options "
 "Menu*."
 msgstr ""
-"Uma vez que todas as personalizações tenham sido realizadas, você pode "
+"Uma vez que todas as personalizações tenham sido realizadas, pode "
 "*Salvar* seu mapa clicando na opção :guilabel:`SAVE AS` do *Menu de "
 "Opções do Mapa*."
 
@@ -263,11 +263,11 @@ msgid ""
 "on :guilabel:`Save`. The page will reload and your map should be visible "
 "in the :ref:`finding-maps` list."
 msgstr ""
-"Você deve preencher um *Título* e uma *Descrição* opcional, a seguir "
-"clicar em :guilabel:`Save`. A página será recarregada e seu mapa deverá "
-"estar visível na lista :ref:`finding-maps`."
+"Deve preencher um *Título* e uma *Descrição* opcional, a seguir clicar "
+"em :guilabel:`Save`. A página será recarregada e o seu mapa deverá estar "
+"visível na lista :ref:`finding-maps`."
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:102
 #: 2cbc422d56e44f50826dbe9cf15d3e43
 msgid "*Your Map into the List*"
-msgstr "*Seu Mapa na lista*"
+msgstr "*O seu Mapa na lista*"

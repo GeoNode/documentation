@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:36+0200\n"
+"PO-Revision-Date: 2021-07-03 11:02+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_layers/layer_permissions.rst:4
 #: 5e7c3e19fd15480a90e7b487bb78834a
@@ -63,7 +63,7 @@ msgstr ""
 #: ../../usage/managing_layers/layer_permissions.rst:20
 #: 46c489f528b54d178023534635f61542
 msgid "*Layer Permissions settings for users and groups*"
-msgstr "*Configurações de Permissões de Camada para usuários e grupos*"
+msgstr "*Configurações de Permissões de Camada para utilizadores e grupos*"
 
 #: ../../usage/managing_layers/layer_permissions.rst:22
 #: 2d3721755f464e4e9bc3db0f35cb81d2
@@ -121,4 +121,4 @@ msgstr ""
 #: a1a52142b7914f7e940b91bac9d274ee
 msgid "Click on :guilabel:`Apply Changes` to save these settings."
 msgstr ""
-"Clique em :guilabel:`Apply Changes` para salvar essas configurações."
+"Clique em :guilabel:`Apply Changes` para guardar essas configurações."

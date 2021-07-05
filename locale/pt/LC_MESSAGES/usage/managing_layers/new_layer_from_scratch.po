@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:26+0200\n"
+"PO-Revision-Date: 2021-07-03 11:23+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
+"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:2
 #: 1e4709d8e9e2432fbe2a316c77058612
 msgid "Creating a Layer from scratch"
-msgstr "Criação de uma camada do zero"
+msgstr "Criação de uma camada do nada"
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:4
 #: a0235fdc15ba43f8b4383973b0838ff2
@@ -33,14 +33,14 @@ msgid ""
 "picture below."
 msgstr ""
 "Uma ferramenta interessante que o GeoNode disponibiliza para si é a *Criar "
-"Camada*. Permite criar uma nova camada vectorial do zero. O *Formulário de "
+"Camada*. Permite criar uma nova camada vectorial do nada. O *Formulário de "
 "Criação de Camada* é alcançável através do link :guilabel:`Create Layer` "
-"mostrado na imagem abaixo."
+"mostrado na imagem em baixo."
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:9
 #: 18494102ecf945aab258ac09a148dae2
 msgid "*Create layer link*"
-msgstr "*Link criar camada*"
+msgstr "*Ligação criar camada*"
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:11
 #: ca332c2b83e142409b0924421adc1136
@@ -89,8 +89,8 @@ msgid ""
 "At this time you can also change the default *Permissions* settings, see :ref:"
 "`layer-permissions` to learn how."
 msgstr ""
-"Neste momento, você pode também, alterar as configurações padrão de "
-"*Permissões*, consulte :ref:`permissões-de-camada` para saber como."
+"Neste momento pode também alterar as configurações padrão de *Permissões*, "
+"consulte :ref:`permissões-de-camada` para saber como."
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:31
 #: e654bb5a7889481cba7da3d81da45c4c
@@ -100,7 +100,7 @@ msgid ""
 "created but is still empty, no features have been added yet. See the :ref:"
 "`layer-editing` section to learn how to add new features."
 msgstr ""
-"Uma vez preenchido o formulário, clique em :guilabel:`Create`. Você será "
+"Uma vez preenchido o formulário, clique em :guilabel:`Create`. Será "
 "redireccionado para a *Página de Camadas* (veja :ref:`layer-info`). Agora a sua "
 "camada foi criada, mas ainda está vazia, nenhum recurso foi adicionado ainda. "
 "Veja a secção :ref:`layer-editing` para aprender como adicionar novos recursos."

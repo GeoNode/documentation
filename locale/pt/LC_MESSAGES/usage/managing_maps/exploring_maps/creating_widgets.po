@@ -7,51 +7,55 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2021-07-19 17:42+0100\n"
 "PO-Revision-Date: 2021-07-03 12:09+0100\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
-"Language-Team: \n"
 "Language: pt_PT\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:4
-#: 61b1de4898274436ae5cbd179689c783
+#: f4f94c379ad04fb5ade7ed0fdfe563ef
 msgid "Creating Widgets"
 msgstr "Criação de Widgets"
 
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:6
+#: e2f77ac890304cd19c21826274247ca2 efa0050c52e3416ea46a38ac374a5090
+msgid "create_widgets_button"
+msgstr ""
+
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:11
-#: a33faef2d8e24848961163c718a7e34d
+#: c98ca00f0f9b4110b9568c6510566ecb
 msgid ""
 "*Widgets* are graphical elements that describe the layers data. They can "
-"be of different types such as *Charts*, *Texts*, *Tables* and "
-"*Counters*. Through the |create_widgets_button| button of the :ref:`toc` "
-"you can open the *Widgets* panel."
+"be of different types such as *Charts*, *Texts*, *Tables* and *Counters*."
+" Through the |create_widgets_button| button of the :ref:`toc` you can "
+"open the *Widgets* panel."
 msgstr ""
-"*Widgets* são elementos gráficos que descrevem os dados das camadas. "
-"Eles podem ser de diferentes tipos, como *Gráficos*, *Textos*, *Tabelas* "
-"e *Contadores*. Por meio do |create_widgets_button| do :ref:`toc` pode "
+"*Widgets* são elementos gráficos que descrevem os dados das camadas. Eles"
+" podem ser de diferentes tipos, como *Gráficos*, *Textos*, *Tabelas* e "
+"*Contadores*. Por meio do |create_widgets_button| do :ref:`toc` pode "
 "abrir o painel *Widgets*."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:17
-#: 0e826f8b517c44908e80737021685505
+#: dbca2e6bb00f4eaa97ffe0ae1c5426ba
 msgid "*Creating Widgets*"
 msgstr "*Criação de Widgets*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:20
-#: 48c4e7fad47a4c9db20f332f1cb6a88d
+#: e0c267b9509e45e6852e331cec219667
 msgid "Chart Widgets"
 msgstr "Widgets de Gráfico"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:22
-#: 276c21f355954a7483d2affba819a430
+#: 34441407820744ddb8980a4863a5f65f
 msgid ""
-"*Chart Widgets* are graphical representations of the layer data. They "
-"can be *Bar Chart*, *Pie Chart* or *Line Chart* as shown in the picture "
+"*Chart Widgets* are graphical representations of the layer data. They can"
+" be *Bar Chart*, *Pie Chart* or *Line Chart* as shown in the picture "
 "below."
 msgstr ""
 "*Chart Widgets* são representações gráficas dos dados da camada. Podem "
@@ -59,17 +63,40 @@ msgstr ""
 "Linhas* conforme mostrado na imagem em baixo."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:27
-#: 8b6200a19c8e40aea1f2a96925d01cb7
+#: 9bfbdd8842b6458a85481e08a57d8af6
 msgid "*Chart Widgets*"
 msgstr "*Widgets de Gráfico*"
 
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:29
+#: 8d2dc4c972f04cf9ae5fb28c9ffc64ff 8f077d123e3547988f0501f90090357d
+msgid "advanced_search_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:34
+#: 078cd620f96e488db9b7663c13334607 1b0eb92e7f4c49e4b3cac757cd9d5431
+#: 1ff337cb8f6f46d89e2d4fda085b1518 2e5bd6bc477e4f0d8a5e14f025745b70
+msgid "configure_widgets_options_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:39
+#: 402266f9180c43319c58a512eb316e84 4da88b1d3b444047986ced569ae207f3
+#: bf6c1c0236df4dae8f578c66b9eae5ae cbad1512506c4a96b30a5e20c59a7818
+#: e664f9c1920f4bad8882812d2398e85e
+msgid "save_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:44
+#: afdd55d866bd4630a2e9b079f5e3c28c b6ceb8a9426d45daaa11b2fd6e782ca7
+msgid "connect_to_viewport"
+msgstr ""
+
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:49
-#: c4c9acf7638c4011896643958db85f16
+#: 64942862e089444dacd3855b750c6729
 msgid "Lets create a new **Bar Chart**."
 msgstr "Vamos criar um novo **Gráfico de Barras**."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:51
-#: 6cd086ca5a6a40f18bb32f1b74bdba45
+#: b7650571bf0f4e41b2056aa89864b864
 msgid ""
 "Click on *Bar Chart* then select the *X Attribute*, the *Y Attribute*, "
 "the *Operation* and the *Color* do you prefer. You can also display the "
@@ -78,15 +105,15 @@ msgid ""
 msgstr ""
 "Clique em *Gráfico de Barras* e seleccione o *Atributo X*, o *Atributo "
 "Y*, a *Operação* e a *Cor* de sua preferência. Pode também, exibir a "
-"*Legenda*, *Ocultar o eixo Y*, *Ocultar a tabela* e decidir qual "
-"*Rótulo* será exibido na legenda."
+"*Legenda*, *Ocultar o eixo Y*, *Ocultar a tabela* e decidir qual *Rótulo*"
+" será exibido na legenda."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:53
-#: f8bf29b936374963a8ce8a4cc2bc4e4b
+#: fbb0a37a47de4c5c866e5884aac0bfad
 msgid ""
-"Now you can filter the data to be considered for the chart by clicking "
-"on |advanced_search_button|. We don't need any filter so click |"
-"configure_widgets_options_button| to configure other widget options. "
+"Now you can filter the data to be considered for the chart by clicking on"
+" |advanced_search_button|. We don't need any filter so click "
+"|configure_widgets_options_button| to configure other widget options. "
 "Insert a *Title* and a *Description* and click on *Save* |save_button|."
 msgstr ""
 "Agora pode filtrar os dados a serem considerados para o gráfico clicando "
@@ -96,73 +123,73 @@ msgstr ""
 "*Guardar* |save_button|."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:58
-#: 5503c8a192c74ccdae405c2ae0bc7327
+#: 1530a7656764450799cbbc66e72dbb7f
 msgid "*Chart Widgets Creation*"
 msgstr "*Criação de Gráficos de Widgets*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:60
-#: 36e2296bc70946f19a52deb36850d8ec
+#: de377f681b5b4ab88d8449a7a41af4cb
 msgid ""
-"The green |connect_to_viewport| icon means that the chart is connected "
-"to the viewport."
+"The green |connect_to_viewport| icon means that the chart is connected to"
+" the viewport."
 msgstr ""
 "O ícone verde |connect_to_viewport| significa que o gráfico está ligado "
 "ao ecrã de visualização."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:62
-#: 1898e2f46c0e497c9d042755127f1e15
+#: 1f17657861f54d9c9d7462f88ef6bb91
 msgid ""
-"Expanding the options menu of the widget you can *Show the plotted "
-"data*, *Edit* the widget or *Delete* it, *Download* the data as a CSV "
-"file or *Export* the image of the graph."
+"Expanding the options menu of the widget you can *Show the plotted data*,"
+" *Edit* the widget or *Delete* it, *Download* the data as a CSV file or "
+"*Export* the image of the graph."
 msgstr ""
 "Expandindo o menu de opções do widget, você pode *Mostrar os dados "
-"renderizados*, *Editar* o widget ou *Excluir*, *Guardar* os dados como "
-"um arquivo CSV ou *Exportar* a imagem do gráfico."
+"renderizados*, *Editar* o widget ou *Excluir*, *Guardar* os dados como um"
+" arquivo CSV ou *Exportar* a imagem do gráfico."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:68
-#: cd2298167d554e59bc9a58bc7f5e8d73
+#: 72a78296bb744b2e8919c7e176bc267b
 msgid "*Chart Widgets Options*"
 msgstr "*Opções de Widgets de Gráfico*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:71
-#: 0e32f01e10fc4ff0a5fd1ec2ba4045f8
+#: e5a816ec24fd407ca691202f298217f8
 msgid "Text Widgets"
 msgstr "Widgets de Texto"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:73
-#: d34785c4119d46169f19bc6a184de872
+#: 7a697c8598b4443aa6a94ecd4a08f66b
 msgid ""
 "If you select *Text* on the *Widgets* panel you can create *Text "
-"Widgets*. Add a *Title* and the desired descriptive text, then click on |"
-"save_button|."
+"Widgets*. Add a *Title* and the desired descriptive text, then click on "
+"|save_button|."
 msgstr ""
 "Se seleccionou *Texto* no painel *Widgets*, poderá criar *Widgets de "
-"texto*. Adicione um *Título* e o texto descritivo desejado e clique em |"
-"save_button|."
+"texto*. Adicione um *Título* e o texto descritivo desejado e clique em "
+"|save_button|."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:79
-#: 56d0a3dbdb5c4aee8c39df75abefca3d
+#: 7ebec5d760f647a19fbd0fd877eb93b0
 msgid "*Text Widgets Creation*"
 msgstr "*Criação de Widgets de Texto*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:81
-#: 6fa7835ef79843d39a22992d6801eb05
+#: 2f07239708dd47fb9a06c8ebc40d4f9c
 msgid "The resulting widget looks like the following."
 msgstr "O widget resultante se parece com o seguinte."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:86
-#: 3f7febef83ae411dab81564461e8b5fe
+#: 9cde1f472e264d35bca971e2d57857fd
 msgid "*My Text Widget*"
 msgstr "*O meu Widget de Texto*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:89
-#: cb2e5c1bd9af4f0a883136e56743201e
+#: f3b78261558042d197bc637ddb2b0741
 msgid "Table Widgets"
 msgstr "Widgets de Tabela"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:91
-#: e1a3ec8f9432497c9325589c55d714a6
+#: 3403d509f23b4c61a8a36e27a2b0752a
 msgid ""
 "Through the *Table Widgets* you can add the :ref:`attributes-table` of "
 "the layer to the map. You can decide to show a subset of the features, "
@@ -170,25 +197,25 @@ msgid ""
 msgstr ""
 "Através dos *Widgets de Tabela* pode adicionar a :ref:`tabela-de-"
 "atributos` da camada ao mapa. Pode decidir mostrar um subconjunto dos "
-"recursos, por meio de filtros, e pode seleccionar uma ou mais colunas/"
-"atributos."
+"recursos, por meio de filtros, e pode seleccionar uma ou mais "
+"colunas/atributos."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:92
-#: 652502823d57494a8fe98771bdaa747d
+#: bb02855d1a2e4532a5b1668c9a3d55ec
 msgid ""
-"So, choose what attributes you are interested in and click on |"
-"configure_widgets_options_button|."
+"So, choose what attributes you are interested in and click on "
+"|configure_widgets_options_button|."
 msgstr ""
-"Portanto, escolha em quais atributos está interessado e clique em |"
-"configure_widgets_options_button|."
+"Portanto, escolha em quais atributos está interessado e clique em "
+"|configure_widgets_options_button|."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:97
-#: 905f26c2fa4c40dca7600bd34d41de9b
+#: 5989981c34eb4662bd841792486298c3
 msgid "*Table Widgets Columns*"
 msgstr "*Colunas de Widgets de Tabela*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:99
-#: 1c586c8e63ea463985cf08cfe206db95
+#: 9b3a293ffd904b5f96f30ea4e719c094
 msgid ""
 "Insert *Title* and *Description* (optional) and click on |save_button|. "
 "The example below shows the *Table Widget* on the map."
@@ -197,17 +224,17 @@ msgstr ""
 "exemplo em baixo mostra o *Widget de Tabela* no mapa."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:104
-#: 430181a778504e69ab4986ba19cd4daf
+#: af66252d063643488940b977d8ede91f
 msgid "*Table Widget*"
 msgstr "*Widget de Tabela*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:107
-#: 5eee2852e99d41a5bd347a936cb8b5bb
+#: 1ea053353cb642e5a78996790ad0fe68
 msgid "Counter Widgets"
 msgstr "Widgets de Contador"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:109
-#: 1a0cd345c8d84e2f9c71b8950c115bb5
+#: 65fe31089acd4512b15cc136d814ec76
 msgid ""
 "*Counter Widgets* are numeric representations of some attributes. For "
 "example you can represent the average speed limit on a road network."
@@ -217,12 +244,12 @@ msgstr ""
 "rodoviária."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:115
-#: 57538c52d4594fa0a2a968ea84a7ef05
+#: 5b3d34deea314b4f82f127cac18289c9
 msgid "*Counter Widget Creation*"
 msgstr "*Criação de Widget de Contador*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:117
-#: 52ef767e217e44439d4cdda604bdaa37
+#: e92b1579dc4e4affb188736e9ac3d2d9
 msgid ""
 "Click on |configure_widgets_options_button|, insert *Title* and "
 "*Description* then click on |save_button|."
@@ -231,18 +258,20 @@ msgstr ""
 "*Descrição* e clique em |save_button|."
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:122
-#: 4f9bbdbc29df42629b483f0c74bf26e2
+#: fc054debef454b48a36b0a0fc8b39bd5
 msgid "*Counter Widget*"
 msgstr "*Widget de Contador*"
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:124
-#: 482d676283984597942eae69f8a76ab6
+#: d68f6b16642140d28e6c6923f0f8f6a3
 msgid ""
-"The GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/"
-"mapstore/#/>`_ based, see the `MapStore Documentation <https://mapstore2."
-"readthedocs.io/en/latest/user-guide/widgets/>`_ for further information."
+"The GeoNode map viewer is `MapStore <https://mapstore2.geo-"
+"solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation "
+"<https://mapstore2.readthedocs.io/en/latest/user-guide/widgets/>`_ for "
+"further information."
 msgstr ""
-"O visualizador de mapas GeoNode é baseado em `MapStore <https://"
-"mapstore2.geo-solutions.it/mapstore/#/>`_, veja `MapStore Documentation "
+"O visualizador de mapas GeoNode é baseado em `MapStore <https://mapstore2"
+".geo-solutions.it/mapstore/#/>`_, veja `MapStore Documentation "
 "<https://mapstore2.readthedocs.io/en/latest/user-guide/widgets/>`_ para "
 "mais informações."
+

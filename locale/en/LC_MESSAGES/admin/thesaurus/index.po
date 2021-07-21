@@ -8,289 +8,293 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2021-07-19 17:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../admin/thesaurus/index.rst:2 4f7bd2db56dc417b9bea1ef1ac033d93
+#: ../../admin/thesaurus/index.rst:2 fa223d5a4a4948c58271b4aeb548c1e2
 msgid "Loading a thesaurus"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:4 31e10c2250354641bbd59bba5c4f9800
+#: ../../admin/thesaurus/index.rst:4 e1eb5bd16a3447458a4f5fa913b2aef7
 msgid "There are 2 possible ways to upload a Thesaurus in geonode:"
 msgstr ""
 
 #: ../../admin/thesaurus/index.rst:6 ../../admin/thesaurus/index.rst:12
-#: 42e907af233a4c61ae0f676635e21ad3 7530cc49d7ef428e899e5e1d2bb5d3d1
+#: aa6603d3d7dd4d6784111d9d940afd8d abe4b4f8915a4211900a9f732c78109c
 msgid "Admin panel"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:7 b3090dffa3d64cfebab6de01a6d5da86
+#: ../../admin/thesaurus/index.rst:7 a8c5288cd7234797a08103d5148afa00
 msgid "Django command-line"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:8 1ed8bb1b1b0749968ad617a4acb0eb4d
+#: ../../admin/thesaurus/index.rst:8 7e0e8c76a2cf428c907323d2c6a4bbb9
 msgid "settings.py (deprecated)"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:13 b002f8736f6742378a58260fe27a61ec
+#: ../../admin/thesaurus/index.rst:13 13418fe013bd48e19110e299a13a5190
 msgid ""
 "You can add a thesaurus into you GeoNode using the ``upload thesaurus`` "
 "available in the Admin panel"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:15 7aa08797b61f42afa8313e21795b51f1
+#: ../../admin/thesaurus/index.rst:15 0df14fc0249a4ddc9c6be51efd7c5066
 msgid ""
 "Navigate to the thesaurus page in the admin panel "
 "``http://<your_geonode_host>/admin/base/thesaurus``. On the top-right of "
 "the page a button named `Upload thesaurus` will be available:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:20 1185a65a9c074ffb9785d21bfe398a16
+#: ../../admin/thesaurus/index.rst:20 23db1f941bb549698e920a96bdb005dd
 msgid ""
 "After clicking on it, a simple form for the upload will be shown. In "
 "order to let the upload works, is required to choose an `RDF` file"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:25 3f781d9be0b4424aa4aea86b87dcf48d
+#: ../../admin/thesaurus/index.rst:25 016887b18f104aa29cc33b617addf9c1
 msgid ""
 "By clicking on `Upload CSV`, the system will load the thesaurus by "
 "assigning to it a `slugify` name based on the file name. The name can be "
 "easily change later in the edit page."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:28 57cdf32e2a9d4468bce9488cb96c1a66
+#: ../../admin/thesaurus/index.rst:28 2d542a63f0b84c0ab51cebf9f61aafee
 msgid "If everything goes fine, a successfull message will be shown:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:33 3636816216864db89d969f2cbe9390ad
+#: ../../admin/thesaurus/index.rst:33 93c0181d56c2411e82cdcbb5d7cf313d
 msgid "Otherwise the UI will show the error message:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:39 20a849b3bc2447c7a627de30c2936036
+#: ../../admin/thesaurus/index.rst:39 672b02f719804fe39f4703ec59b1be51
 msgid "Command line"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:41 16b28b0cd0a54110956877b215191e43
+#: ../../admin/thesaurus/index.rst:41 75785337fdd44c52a86033c552c99a6a
 msgid ""
 "A thesaurus can be loaded into GeoNode by using the ``load_thesaurus`` "
 "command:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:51 ba470f1dd84d45eaa51ab1990482f1da
+#: ../../admin/thesaurus/index.rst:51 14c7a614f42249df9c42318c7b9ae75d
 msgid ""
 "In order add the inspire-themes thesaurus into a geonode instance, "
 "download it as file ``inspire-theme.rdf``  with the command:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:57 b4b0cdd8f69240f783a02e682d162c52
+#: ../../admin/thesaurus/index.rst:57 795219a6e03542fdadc2b9f438a2b873
 msgid "and then issue the command:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:63 7fb4c3d122934f6598ca8fdb2bf9529c
+#: ../../admin/thesaurus/index.rst:63 c883dd9b3b714459aee6e9f2b1495b9d
 msgid ""
 "The ``name`` is the identifier you'll use to refer to this thesaurus in "
 "your GeoNode instance."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:66 ec472abcb632430c9f3e5a7dd2748413
+#: ../../admin/thesaurus/index.rst:66 e2b3500fd4ac41b19614735170d93d1f
 msgid ""
 "If you only want to make sure that a thesaurus file will be properly "
 "parsed, give the ``--dry-run`` parameter, so that nothing will be added "
 "to the DB."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:68 53e65b9b3a4e428a94ae57baf792abd0
+#: ../../admin/thesaurus/index.rst:68 e05d6dd161a34c248d8f32706e462150
 msgid ""
 "*Note*: if the ``name`` starts with the string ``fake``, the file will "
 "not be accessed at all, and some test keywords will be added to a fake "
 "new thesaurus. In this case the ``dry-run`` param will not be used."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:72 4213da4f884c4058a2f3ea0e6ee75b57
+#: ../../admin/thesaurus/index.rst:72 55d8b423c2274f2ab8b9b4331340e963
 msgid "Configure a thesaurus in GeoNode"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:73 3b6681974eb84be5814ae2c0fa7b9524
+#: ../../admin/thesaurus/index.rst:73 a75ca67189d5499bb75f21c1e10a569c
 msgid "Configuration from `Admin`"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:75 509c97f6d03f4323a92a484ec6f174e1
+#: ../../admin/thesaurus/index.rst:75 f5560548b6d847cb8bd0330d7e9c88f2
 msgid ""
 "After you loaded a thesaurus into GeoNode, it should be configured in the"
 " :guilabel:`Admin` panel."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:77 e89b14b77f9848609409b7dc37fc9efc
+#: ../../admin/thesaurus/index.rst:77 df59aa6269ac4bdd95649c98d5c28695
 msgid ""
 "The panel can be reached from :guilabel:`Admin` link of the *User Menu* "
 "in the navigation bar or through this URL: "
 "``http://<your_geonode_host>/admin/base/thesaurus``."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:79 2c41615eeca14019aa7527ccf31617ee
+#: ../../admin/thesaurus/index.rst:79 ff447fe6b1b44b0fb26eb087ca064941
 msgid ""
 "Once you are on the Thesaurus lists, select one thesaurus to open the "
 "Edit page"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:84 12b97c132a76447391b1b2f007c38e08
+#: ../../admin/thesaurus/index.rst:84 6538bef7bf434243a9e747b759d3d012
 msgid "*The GeoNode Thesaurus edit Interface*"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:87 5e1dcebfb1d84e94a1c84c031a50f5ee
+#: ../../admin/thesaurus/index.rst:87 182afc0411614312a8fc916c83d9beaa
 msgid ""
 "``identifier``: (mandatory string) the identifier you used in the "
 "``load_thesaurus`` commands."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:88 6ecd8c7218f54209910ad0490f0cf506
+#: ../../admin/thesaurus/index.rst:88 46f980e65b0342528eca9e1ec809b862
 msgid ""
 "``title``: (mandatory string) The title of the thesaurus, is ingested by "
 "the ``load_thesaurus`` command."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:89 a52407b45fe54e32b2e6a2c7bc416592
+#: ../../admin/thesaurus/index.rst:89 f3ed7e8786b34cb1bb3520091d337916
 msgid ""
 "``date``: (mandatory date) The Date of the thesaurus, is ingested by the "
 "``load_thesaurus`` command."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:90 c847603e73404cd0aea1b9d1a1d692bc
+#: ../../admin/thesaurus/index.rst:90 ad659b824319400ab12b997cbde5d2ea
 msgid ""
 "``description``: (mandatory string) The description of the thesaurus, is "
 "ingested by the ``load_thesaurus`` command."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:91 7e7da334233747178f7b95415d65c7e6
+#: ../../admin/thesaurus/index.rst:91 aa9cd150184840b39bd86fd5025833ee
 msgid ""
 "``slug``: (mandatory string) The slug of the thesaurus, is ingested by "
 "the ``load_thesaurus`` command."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:92 3233c0af4d854713af16a48ee98583b3
+#: ../../admin/thesaurus/index.rst:92 60111fe7599c45958b5cf143c6968c6a
 msgid ""
 "``about``: (optional string) The about of the thesaurus, is ingested by "
 "the ``load_thesaurus`` command."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:93 7d61695eeb124cf98ad861596d1ace01
+#: ../../admin/thesaurus/index.rst:93 f377b765dd3a4a4ca995fcb0816092a2
 msgid ""
 "``card min``: (optional integer) Decide the minimun cardinality, default "
 "= 0"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:94 d283936cfa3543a0b383b1024ac1fa72
+#: ../../admin/thesaurus/index.rst:94 cb82beab706049c7b598080b8f4b8d76
 msgid ""
 "``card max``: (optional integer) Decide the maximun cardinality, default "
 "= -1"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:95 185f4afd7ce54c73b1ec5b50de327ea2
+#: ../../admin/thesaurus/index.rst:95 40a6b5a8f46a4189ba985bd0aa3dd5b0
 msgid ""
 "``facet``: (boolean) Decide if the thesaurus will be shown in the facet "
 "list. default: True"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:96 56c3827fbf124c69942932f1d1eeeb26
+#: ../../admin/thesaurus/index.rst:96 a63d175e1c8f447b976d6c8d06500a00
 msgid ""
 "``order``: (integer) Decide the listing order of the thesaurus in the "
 "facet list and in the metadta editor. default: 0, asc order from 0 to N"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:98 5d03ed8f81e3478e941474540b0e17ed
+#: ../../admin/thesaurus/index.rst:98 0323902a3b80481b826f10ffea83f515
 msgid "Cardinality:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:100 9956ecec77cf434f8b07c34c79be5b06
+#: ../../admin/thesaurus/index.rst:100 e7c688374a0149f384e892044d855789
 msgid "`card_max=0` --> Disabled, The Thesaurus will not appear in the GUI"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:101 fdf2b00200704ebfa290a3d0febffc88
+#: ../../admin/thesaurus/index.rst:101 07211ae0c4ff4ce38c583d846841830a
 msgid "`card_max=1` & `card_min = 0` --> Single choice, optional."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:102 0fd635d60c09499d9f1a239cbe506b93
+#: ../../admin/thesaurus/index.rst:102 061f921c395e488094a664e0b6b5c9de
 msgid "`card_max=1` & `card_min = 1` --> Single choice, required"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:103 d304f737cb3a48c7a73242dffab1c4a7
+#: ../../admin/thesaurus/index.rst:103 86832ba635f74eb19db37c9b1ff6e169
 msgid "`card_max=-1` & `card_min = 0`  --> [0..N] Multiple choices, optional"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:104 db7037bea32640949c313de124da7438
+#: ../../admin/thesaurus/index.rst:104 2265b5d34c7943549c9cf35b21dc32bd
 msgid "`card_max=-1` & `card_min = 1` --> [1..N] Multiple choices, required"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:106 ace888b42fd849418080753c29348a97
+#: ../../admin/thesaurus/index.rst:106 22531e57da8248798c516a6b0079bfe6
 msgid ""
 "After the setup, in `Editing Tools -> Metadata -> Wizard` the thesaurus "
 "block will be shown like the following image:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:112 d61177b24039479fbd88bcec381ac94a
+#: ../../admin/thesaurus/index.rst:112 0ccb2878667148deb9706574ab508554
 msgid "*The metadata interface with the Thesaurus enabled*"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:116 3dd5a3fc176849fcad11a0f418151345
+#: ../../admin/thesaurus/index.rst:116 49ab5b9cbeac4f4d9ce53ddc324ec6a1
 msgid "Configuration via `settings.py`"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:118 050a3a7b6d84474498ef442f86195a1e
+#: ../../admin/thesaurus/index.rst:118 bf854d4e06cd442ca088b11cc82c1597
 msgid ""
 "*Deprecated* The Thesaurus configuration via settings is deprecated, will"
 " be removed in the future."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:120 c4eb3d60d894412bb105ad5b8531ffe1
+#: ../../admin/thesaurus/index.rst:120 bede261e9023478e9cae6bba45c2b26c
 msgid ""
 "After you loaded a thesaurus into GeoNode, it should be configured in the"
 " ``settings.py`` file (or in the ``local_settings``) in this way:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:126 2a668522841849168f5ac2558c3adbbe
+#: ../../admin/thesaurus/index.rst:126 c7c4449b417e42ab9a814ad2c6843551
 msgid ""
 "``name``: (mandatory string) the identifier you used in the "
 "``load_thesaurus`` commands."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:127 c26618ac414a4f0390da3001781bffa6
+#: ../../admin/thesaurus/index.rst:127 392b57af159047969d260e7376cc312f
 msgid ""
 "``required``: (optional boolean) if ``True``, a keyword of this thesaurus"
 " is mandatory to complete the metadata. *Currently not implemented.*"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:128 885e44f51ef4410ca4b3d567cc5ee29c
+#: ../../admin/thesaurus/index.rst:128 e0ef4854be64465f9ca51d8be5937468
 msgid ""
 "``filter``: (optional boolean) if ``True``, a faceted list of keywords of"
 " this thesaurus will be presented on the search page."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:130 1f001a1db91b4f11a9c879555e551f7d
+#: ../../admin/thesaurus/index.rst:130 bfa42e3a8aec4c5c8c24955360af415d
 msgid ""
 "So, in order to set up the INSPIRE themes thesaurus you may set the "
 "THESAURUS value as:"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:137 06d4e97549c744118cb8bd74b4f9ed89
+#: ../../admin/thesaurus/index.rst:137 a89015049c1f4de5b0076a2c2519aa1a
 msgid "Apply a thesaurus to a resource"
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:139 8967eaba27294583bb7468c6a5322e7f
+#: ../../admin/thesaurus/index.rst:139 47fea967d773434596247bd7836de904
 msgid ""
 "After you've finished the setup you should find a new input widget in "
 "each resource metadata wizard allowing you to choose a thesaurus for your"
 " resource."
 msgstr ""
 
-#: ../../admin/thesaurus/index.rst:141 7a2295787a5d445da00d97c74646c995
+#: ../../admin/thesaurus/index.rst:141 7336e50e4f184f45a0dfe2f357b0f13c
 msgid ""
 "After applying a thesaurus to resources those should be listed in the "
 "filter section in GeoNodes resource list views."
+msgstr ""
+
+#: 8919cd32bbe54aee8cdfe43441c1b403
+msgid "thesauarus"
 msgstr ""
 

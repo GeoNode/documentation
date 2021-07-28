@@ -1,39 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2021-07-19 17:42+0100\n"
 "PO-Revision-Date: 2021-06-03 16:23+0000\n"
-"Language-Team: Italian (https://www.transifex.com/geonode-documentation/teams/121366/it/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: Italian (https://www.transifex.com/geonode-"
+"documentation/teams/121366/it/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../usage/managing_layers/layer_styling.rst:4
-#: 9a9449f5d2db4f92b4d2517e8c72da6d
+#: 3af3666f701c4b3fbaeaea1f222be1f6
 msgid "Layer Styling"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:6
-#: 5f4eb423a7f34c519ae9379dc62a3a11
+#: e6d444bee4a848bfa0fbc1167da6a0a1
 msgid ""
-"Maps are helpful because they allow you gain a deeper understanding of your "
-"data by allowing you to visualize it in many different ways. So you can tell"
-" different stories depending on how the data is presented. For any given "
-"data or layer, you should explore different styling options and choose the "
-"best style for that."
+"Maps are helpful because they allow you gain a deeper understanding of "
+"your data by allowing you to visualize it in many different ways. So you "
+"can tell different stories depending on how the data is presented. For "
+"any given data or layer, you should explore different styling options and"
+" choose the best style for that."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:10
-#: b66ece7679354824b5da333d3d801708
+#: 71cdbd9ec09844e79966b1f5c23e9810
 msgid ""
 "In GeoNode each layer has a *Default Style* which is determined by the "
 "nature of the data you're mapping. When uploading a new layer (see :ref"
@@ -41,308 +44,354 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:15
-#: 7988ae9b6046452a8a5e164864eb3211
+#: cf049aae6ae742e08ca0a1c48adea9f2
 msgid "*Default Style for Layers*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:17
-#: e8430d0812ac403a97eeac473f23769a
+#: 2efcdc6bc5664a12a8a0962841ecc641
 msgid ""
 "Referring to the example above, dark orange lines are not very good to "
-"represent waterways so we would need to change this style. In the following "
-"paragraphs you will learn how to create a new style starting from given "
-"templates, how to edit a style, how to upload styles from file and how to "
-"manage them."
+"represent waterways so we would need to change this style. In the "
+"following paragraphs you will learn how to create a new style starting "
+"from given templates, how to edit a style, how to upload styles from file"
+" and how to manage them."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:20
-#: 0f35a0b92c25412abad73173889bd2e1
+#: cab57b081bef45d7a10d07e8e7380dab
 msgid "Creating new Styles"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:22
-#: 57846e524ebc49068f604079f5128c29
+#: ced4e235b7a84bcd84bc6ae3097f4491
 msgid ""
 "In order to create a new style, open the *Layer Page* (see :ref:`layer-"
 "info`) and click on :guilabel:`Editing Tools`. Then click the "
-":guilabel:`Edit` button in the *Styles* section of the *Layer Editing* panel"
-" (see the picture below)."
+":guilabel:`Edit` button in the *Styles* section of the *Layer Editing* "
+"panel (see the picture below)."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:27
-#: e1fc94ecffb9417c9a91e51879ea6512
+#: bb15b1b1cb2244608f1357816bb91571
 msgid "*Edit Styles button*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:29
-#: 5b06d237489445b4adaa11efe290bc6e
+#: 3b78225c1d084d6a96369e985fdc29af
 msgid ""
-"The *Layer* will open in a new *Map*. The *Styles Panel* will show you all "
-"the available styles for the layer and some useful tools."
+"The *Layer* will open in a new *Map*. The *Styles Panel* will show you "
+"all the available styles for the layer and some useful tools."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:34
-#: bbb0682186e948c8b6fce07613b5409f
+#: 3be0c03ec4764d31ba06db662edafec9
 msgid "*The Styles Panel in the Map*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:36
-#: 0e978e89cadd452f95284a43c34937ba
+#: bad142895952485c8bfc23e8a6558045
 msgid "Now follow the steps below:"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:38
-#: 4a34b0733bbe4e15a2d02cedd329596f
+#: 6fb2f66e69844318878f23385b0bd43e
 msgid ""
-"Click the |create_new_style_button| button. The *Style Templates Panel* will"
-" open."
+"Click the |create_new_style_button| button. The *Style Templates Panel* "
+"will open."
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:40
+#: 40b3f534c35f43d7a6e41eb3723d9d80 b70f92f54f77408a9a782043d1d6c36c
+msgid "create_new_style_button"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:48
-#: ece64532a5fb4adca6284e604b282365
+#: 020551b52159493590d8d602ebe12f58
 msgid "*Create new Styles*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:50
-#: 89c86d14143f4b2ab43bcaa1ee724530
+#: 4d9d7bcb825b4a0f865ced4da3e763ec
 msgid ""
 "Choose a *Style Template* from the list (both *CSS* and *SLD* styles are "
 "available)."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:55
-#: c314c88f399d4dc0b941f042e58e42e4
+#: eff42f0abbdc4c15a2685bba17c7a59b
 msgid "*Style Templates*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:57
-#: d6927a3a6d0f463ba1af51ea689518c2
+#: 92c7f2be547b4f1ca6a6e1e6efaa5cb2
 msgid ""
 "Click the |add_style_button| button to add the *Style Template* to the "
 "styles list."
 msgstr ""
 
+#: ../../usage/managing_layers/layer_styling.rst:59
+#: 603093224bb84edeb637106a3efbc19e 7dee0cd443214ff0886deae4b18f40b5
+msgid "add_style_button"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_styling.rst:64
-#: c7a4d749e97e41f2b23ab00cfc7e19fc
+#: 1c50ef897704498a866d2f9a9bf1adf0
 msgid ""
 "Insert a *Title* and an *Abstract* (optional), then click on "
 ":guilabel:`Save`."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:70
-#: d99bc2b7878b4cd29ea1fa34f9fcf9e3
+#: 748c9482851248a59d4223e31cf95443
 msgid "*Title and Abstract for new Styles*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:72
-#: b2367bf12db243d7984018bde72647af
+#: 3adaa148f63844ff9a6a14701542e862
 msgid "The style you have created is now added to the *Styles List*."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:77
-#: 9e622207bc0440fca2889bce128b0c2b
+#: f0da754a2abe4560b31efc3ad400e2c3
 msgid "*New Styles into the list*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:79
-#: af9a5cffac2749759c1f576fb6aae884
+#: 1ad95fc7d8774f09abed5ed4a0c0d80b
 msgid "You will also see this new style in the *Layer Page*."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:84
-#: b58ab128139d4960be0b71ff274cc42a
+#: ed6f64a951014f3dbace0f9b33906c60
 msgid "*The Layer Page with the new Style*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:86
-#: 3c03e6683a8e42339169582b01fd3187
-msgid ""
-"Now you can switch the style by clicking on the corresponding checkbox."
+#: 0bfc2a26c646409aa88c8ddc7deab055
+msgid "Now you can switch the style by clicking on the corresponding checkbox."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:88
-#: 1954956f6f7743efa30c3bcdc6c627ce
+#: 547e71bcd0974966a51cbfccd5341739
 msgid ""
-"It would be nice to change the style in order to decrease the opacity of the"
-" filling color as well as to reduce the lines width. The embedded `MapStore "
-"<https://mapstore2.geo-solutions.it/mapstore/#/>`_ makes available a "
-"powerful *Style Editor* to accomplish that tasks. In the next paragraph we "
-"will explain how."
+"It would be nice to change the style in order to decrease the opacity of "
+"the filling color as well as to reduce the lines width. The embedded "
+"`MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ makes "
+"available a powerful *Style Editor* to accomplish that tasks. In the next"
+" paragraph we will explain how."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:92
-#: 3e794ac4173045babe2f1956ae4092e9
+#: 9c72f085d2b74735bbe06875733958c1
 msgid "Editing the Layer Style"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:94
-#: 98b4cf9a7884471ca86fbc1da4f993a1
+#: 92e5feb8f0684494986f2534bb10447a
 msgid "The following steps show you how to edit styles:"
 msgstr ""
 
+#: ../../usage/managing_layers/layer_styling.rst:96
+#: 849aecc8494a4011aebe0ab8488bb0e5 b066ee462b97409caa6838220ba6eb17
+msgid "toc_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:101
+#: ba4216cf838b4e7fba0687f932fc7107 cd0b0e9c992943c09846332804904607
+msgid "layer_settings_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:106
+#: 04e62cd15e4348c0b1b852db9a03c085 1e0885e1dd1d4bca98018a3f427dcb98
+msgid "style_tab"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:111
+#: cf1a003bed7141b5af323f9d66a8b2cf dbe4eae379df4e05a5a86ca7b9f15092
+msgid "style_editor_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:116
+#: 3ea97f31d1e64f55b30761dadc2294a4 dad115b1aff2420bbd39a9da5de7198f
+msgid "save_style_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:121
+#: 442c79d2d3ef4135adaffc3a7ea6b6b1 c7f544334fbe4a718abce5e21c7b6d97
+msgid "set_style_as_default_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_styling.rst:126
+#: 1d7c539186cf42e4be6aab177cef8e53 bbc0be40c500416db44e41a5ed7dcb4f
+msgid "delete_style_button"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_styling.rst:131
-#: 142e8c8654b24bd49efbca88481b6bdd
+#: 34c295b21e4e4754af5f6c0cbb7bf105
 msgid ""
 "From inside the map open the *TOC (Table Of Content)* by clicking the "
 "|toc_button| button"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:132
-#: 7cd99988502c471a83e5490846f721b6
+#: fc047659e96a45b3be7e86de6aa43e91
 msgid "Click on |layer_settings_button|"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:133
-#: 6e2b647be5944bf7a70f147a46d8a60b
+#: 93e97440cccb4e5d925da565279f0fb7
 msgid "Open the *Style* tab |style_tab|"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:135
-#: 16e8fefbac1b4577ad334f97799ea7fc
+#: 02fd56c61eeb4520ba921ab7e509e2c3
 msgid ""
 "Styles editing is allowed only to those users who have the needed "
 "permission. See :ref:`layer-permissions` to read more)"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:137
-#: db927844dda244e58dd745c01a2be14c
+#: 430e9b04707b4560bca14f5c7309cc3f
 msgid "Select the *Style* and click on |style_editor_button|"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:138
-#: e51cb5458c614b14abacf0a6b440635d
+#: ff76cc62754748c2b6cdee49d0ea0760
 msgid ""
-"Edit the style. The *Style Editor* helps you to write valid styles through "
-"the *Syntax Validator* which shows you a popup in case of errors (see the "
-"picture below)."
+"Edit the style. The *Style Editor* helps you to write valid styles "
+"through the *Syntax Validator* which shows you a popup in case of errors "
+"(see the picture below)."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:143
-#: eb150137a8914bb9a2efed7b01f6a900
+#: eab22ec369d04c57a43be0e3f4429a65
 msgid "*The Style Editor Syntax Validation*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:145
-#: 0b8d5a2f7d534b9d929fbb7b3f7e11df
+#: a82834aa628c4f71865cec4e84f68de0
 msgid "Click on |save_style_button| to save your changes."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:147
-#: bdeec0bb43c5498ca3895e7cd8c34e93
+#: ae3e1c4e09954ec4b326ae3de5a1c126
 msgid "See the following gif to recap the whole process."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:152
-#: e1a289de3e7244a39cc7d601bc997b54
+#: 06a1951b2bc54bb0864e03f268c1c39a
 msgid "*The Style Editor*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:154
-#: 1907c1263bb0410ab4e366dd6c198074
+#: cd0d2551fda14919a8da3ffd508a4251
 msgid ""
 "You can also decide to make your new style the *Default Style* of that "
 "layer. Click on |set_style_as_default_button| to do that."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:155
-#: 51417ae338614199b8a5cc3c0538aa2d
+#: 65a4eeaa907049969b9e7e6f4dbfb970
 msgid "Click on |delete_style_button| to delete the style."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:158
-#: d0e1ec607ca642c7a5148a6d417360d4
+#: 7408479e54ec46de9fb2fb6fc4e48b71
 msgid "Uploading Styles"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:160
-#: b178b8fe6c874ec48f90beda6eae3bbc
+#: 581bd0132b894d3490eb93992fc1e73b
 msgid "In GeoNode it is also possible to upload an existing style from file."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:162
-#: c6658eaa650c4aa3b8a7a8c00c254bdc
+#: d8b5c91f3e97432bb082faaac10f0ded
 msgid ""
-"Currently only styles in **SLD (Style Layer Descriptor 1.0, 1.1)** format "
-"can be uploaded in GeoNode."
+"Currently only styles in **SLD (Style Layer Descriptor 1.0, 1.1)** format"
+" can be uploaded in GeoNode."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:164
-#: 35dcf8e49530477bbf1a60d3452b4d84
+#: 17557df2b4404b4393d5e6b701444eb7
 msgid ""
-"From the *Layer Page* click on *Editing Tools* to open the *Editing Tools* "
-"panel and follow the steps below:"
+"From the *Layer Page* click on *Editing Tools* to open the *Editing "
+"Tools* panel and follow the steps below:"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:166
-#: 3d10ab21703f4144b60b696727343426
+#: 3cb2bfcbf51a4da69794a3015c6cef69
 msgid "Click the :guilabel:`Upload` button of the *Styles* section"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:172
-#: 9c96ac07e53143f597a12744956be5c1
+#: 84b7bbeb47cb402490d9a28b809688e8
 msgid "*Upload Styles button*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:174
-#: c1946495bd514d4f9c7e55ee8b31048b
+#: 3035ac91bbc44acbb5f65783e26db26b
 msgid "Click on :guilabel:`Choose Files` and select your style from your disk"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:179
-#: 65506a0d1e6b40bda3f2e9e8a30477c2
+#: ed906d0f589f405680c67e32168551ab
 msgid "*Upload Styles*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:181
-#: 733ad6cd6b7b48c9aa1f824041c99515
+#: 36548df1ceb24051a03629f9e60eff47
 msgid "Click on :guilabel:`Upload files`"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:183
-#: a0ef98e98a5b488cb9b6bc449effcdc8
+#: b0f9afc8f5664a1fa3eb17d1d7ae452d
 msgid ""
-"Once the process has been finished the new *Style* will be visible in the "
-"*Layer Page*."
+"Once the process has been finished the new *Style* will be visible in the"
+" *Layer Page*."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:186
-#: c4f0e0141a44467895107ec11ee0cc4e
+#: da0ba089cd59485890e9343ef923fe15
 msgid "Managing Styles"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:188
-#: 04e0f2ddaeaf4dcc9119e71a3a22ecd3
+#: 76e1db9d5e614888beec313347972ff1
 msgid ""
-"Given a layer, you can manage all its styles in the *Styles Management Page*"
-" accessible from the :guilabel:`Manage` button of the *Layer Editing* panel."
+"Given a layer, you can manage all its styles in the *Styles Management "
+"Page* accessible from the :guilabel:`Manage` button of the *Layer "
+"Editing* panel."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:193
-#: 629ac0cd1ea3417e916d75b8397ad36a
+#: 0dad1d36cc8444a2b8c4d1f7e5b5143a
 msgid "*Managing Styles*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:195
-#: 2be0da20ed374902afd4f9aa4d1920ec
+#: f1b1383ea72e44a7a16c706b45cff66a
 msgid "In that page you can:"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:197
-#: a68efb718b384689971fc6141ffb0115
+#: 3092ec7891fa4910b75b277fc17f9818
 msgid "See the *Layer Name*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:198
-#: 1c57473bb6b946a99fb5f0962883879c
+#: b3be688059f54d328ca803ae0fe752c0
 msgid "Add/remove styles to/from the *Available styles* list"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:199
-#: 4c42b5bc7f824f55818af7a634ee35df
+#: a284031cbb934aa0875fca990731e781
 msgid "Choose the *Layer Default Style* from the *Available styles* list"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:201
-#: 417979d05ccd411291747757ac9f0f85
+#: 5f24c3f7127f49cca4da2ca1496c9362
 msgid "Click on :guilabel:`Update Available Styles` to save your changes."
 msgstr ""
+

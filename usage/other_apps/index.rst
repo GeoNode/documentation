@@ -7,3 +7,4 @@ Your GeoNode project is based on core components which are interoperable and as 
     :maxdepth: 1
 
     qgis/index
+    geostory/index

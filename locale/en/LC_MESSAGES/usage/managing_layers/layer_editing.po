@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2021-07-19 17:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../usage/managing_layers/layer_editing.rst:4
-#: 0c70df4271f84075aac8d88b3fc052a1
+#: 2ade39552556445db9e1f186f2e3c055
 msgid "Layer Editing"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:6
-#: 3e8b634f4f4b417199731526b4957bc9
+#: a331cc24c61e41c6bd29487cbfe3a733
 msgid ""
 "The :guilabel:`Editing Tools` button of the *Layer Page* (see :ref"
 ":`layer-info`) opens a panel like the one shown in the picture below."
@@ -31,37 +31,37 @@ msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:11
 #: ../../usage/managing_layers/layer_editing.rst:31
-#: 5515cee5dc1a4238926cca0601a259b1 6314a130b1d4406bad38b077ab4a8765
+#: 33e7fcfa2f814d3f8723ce33011ab7cb 6bcd9f6dc84f4201b47d8d390ebacc91
 msgid "*The Layer Editing panel*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:13
-#: a3dfbba1e2a54c4eb5410963557644b7
+#: 165df719ce3a485992560e6a72b565f2
 msgid "In that panel you can see many options grouped by four categories:"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:15
-#: 20a04503ce4d41a1909d47c563f46c4c
+#: 50184a378837427faf5dad223d820bdc
 msgid "*Metadata*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:16
-#: 35a4e4a1f97e4d3eb9ed7cd087d85cfe
+#: c92595af50b8473d8a0dda3d09b1ea3e
 msgid "*Styles*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:17
-#: ff3901ada35b4cce8e2a4fc9b7c6aa86
+#: f2d6b2e247cb49e2bc38c880536702da
 msgid "*Thumbnail*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:18
-#: 7e3b1f37aacb4ce490d8e0ee272be871
+#: 090fa523f4dc485d9c5e364ec39fcf26
 msgid "*Layer*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:20
-#: 3a44ac701bef418a8f1cf5cbad681531
+#: 2f38da1709664018ad7871f98ea21f3f
 msgid ""
 "In this section you will learn how to edit a *Layer*, how to replace and "
 "edit its data. See :ref:`layer-metadata` to learn how to explore the "
@@ -70,12 +70,12 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:23
-#: 721734abdf70477eae983e44015395c9
+#: 67d9f6853a564c25a290eae8118ebd21
 msgid "Setting the Layer Thumbnail"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:25
-#: 642bf3ecc0034de3afaa0bc7ae29c7b9
+#: 4735653f3f594c1693e28a4b47cc6339
 msgid ""
 "The Thumbnail of the layer that will be displayed on the *Layers* list "
 "page can be changed by dragging and zooming on the layer preview to "
@@ -84,12 +84,12 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:26
-#: b6096c42275c4797b6f016449037e93f
+#: 428329f825e44e7096663ac6e54238b9
 msgid "A message will confirm the thumbnail has been correctly changed."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:33
-#: 61805b3010d847119d41abf74413a764
+#: f7d9893deaad4319b8889180c78763b3
 msgid ""
 "It is also possible to manually upload a thumbnail by using the "
 ":guilabel:`Upload` button of the *Layer Editing* panel. Using the "
@@ -98,17 +98,17 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:39
-#: 26c26e2d7916420a8ca7acb06605d230
+#: ab0c5d41ab2c456eaf3db561e8c74af1
 msgid "*The Upload Thumbnail panel*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:43
-#: 7e6de53c44754e39a9072df87a84f092
+#: 628be4d763c542a2be48c109d68ff645
 msgid "Replacing the Layer"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:45
-#: 89db22fd4f9c4fb99b6758b64601108b
+#: 48ff3b3522344018a006fae1451d0d44
 msgid ""
 "From the *Layer Editing* panel click on :guilabel:`Replace` to change the"
 " layer source dataset. You will be driven to the *Replace Layer* page in "
@@ -117,12 +117,12 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:50
-#: 2831e35f735a4bf78824d88b33fac0d5
+#: a362e93d66ba4794972297a4251cabe8
 msgid "*Replace a Layer*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:52
-#: 8cb893825494498dbd81501885c8611a
+#: 6d141f60888e4cfca76aac87438f753d
 msgid ""
 "Once the *Charset* selected the upload process can be triggered by "
 "clicking on :guilabel:`Replace Layer`. If no errors occur you will see a "
@@ -131,29 +131,29 @@ msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:57
 #: ../../usage/managing_layers/layer_editing.rst:83
-#: 7e53b7ea54fd4aaaa9b953b78c4050bb bd4ee1cb725c4612883fda2fa0256e1c
+#: 6be13ef3eab04bbeacb4530a9c943706 f39968572396470a89a21937e6922592
 msgid "*Replace Layer success*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:59
-#: 194fa415a87546dfb4398243f6bcd6a0
+#: 8efa0093813e4886805585fdb37fc2c9
 msgid ""
 "We have replaced the *roads* dataset with the *railways* one. You can see"
 " the differences in the *Layer Preview*."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:64
-#: 3d41915ee3124f8dbe1834d7a0413ff6
+#: 1cd30a40ef2a4626805a7e04f531a997
 msgid "*Result of the Layer Replacement*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:69
-#: 0706c0fc1b0340b7b386aaf1c4c0d8eb
+#: 7435c6827668464cb51c6944c3ed4778
 msgid "Append Data to Layer"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:71
-#: f3fde08301294c7c85c5660004093c20
+#: 94749abfe1e742e7b04c8d6503e35571
 msgid ""
 "From the *Layer Editing* panel click on :guilabel:`Append` to append data"
 " to the layer source dataset. You will be driven to the *Append Layer* "
@@ -162,12 +162,12 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:76
-#: a7cce25dbb5444f2aa8bb5bbb48dd2e1
+#: 5f7576bc5fc9431694a91041f51377fb
 msgid "*Append to a Layer*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:78
-#: ac57665211754fe683938e2370986d25
+#: dd26fab0392c44519b357e1679856f48
 msgid ""
 "Once the *Charset* selected the upload process can be triggered by "
 "clicking on :guilabel:`Append to Layer`. If no errors occur you will see "
@@ -175,31 +175,31 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:85
-#: 30444f7b2c8d4c15ba33a3006aedf20c
+#: c1f12d86e78b4106bdca3ca9e0766a1b
 msgid ""
 "We have append the *layer_name* dataset to the existing one. You can see "
 "the differences in the *Layer Preview*."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:91
-#: 9ab6daea27d7457b8a7c56f09ea57b49
+#: 05026fee8838403b82163d0ed6fbf41d
 msgid "Editing the Layer Data"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:93
-#: 59ded04e35504542ad0e4568ef3b8bf0
+#: 45566c75bbd145e18e3dedb0a77d634d
 msgid ""
 "The :guilabel:`Edit data` button of the *Layer Editing* panel opens the "
 "*Layer* within a *Map*."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:98
-#: 1fae0b8fcd694dc4af8a3991a11a6388
+#: 05785d4ee5fb415da1a6ef34e2dd3712
 msgid "*Editing the Layer Data*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:100
-#: 573ca1babf994d07ae726a4ca51ba584
+#: 51ad80b81ae846039f8034c3596f27b1
 msgid ""
 "The *Attribute Table* panel of the *Layer* will automatically appear at "
 "the bottom of the *Map*. In that panel all the features are listed. For "
@@ -209,25 +209,35 @@ msgid ""
 "attribute."
 msgstr ""
 
+#: ../../usage/managing_layers/layer_editing.rst:102
+#: 962964a65eb3478ab4fe7768231eb47d ee681cf52c9b41af949f7222b097c963
+msgid "magnifying_glass_icon"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_editing.rst:107
-#: 0bf1388d834a4711a76c4b6d1133c97c
+#: 491dec7466fd4d95b7463c7887756620
 msgid ""
 "Click the *Edit Mode* |edit_mode_button| button to start an editing "
 "session."
 msgstr ""
 
+#: ../../usage/managing_layers/layer_editing.rst:109
+#: 2fd1fa1ee6414e7b8c70377fab659e31 4c86bc16f2e940a6b89b2d906b50e3bf
+msgid "edit_mode_button"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_editing.rst:114
-#: 004b51e18bc5411d859a7e4183f10581
+#: 4c3023c28d5b4f1babb8daa8a05d3bca
 msgid "Now you can:"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:116
-#: 3bc8f3d5b91a4952a47063cbb9a89236
+#: c28537f420cd49209de6b63f08da596b
 msgid "*Add new Features*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:118
-#: b5569a8cc4b746758b002b4c7829b16a
+#: 678cc148292e4a6bafb5f28cc5e2806f
 msgid ""
 "Through the *Add New Feature* button |add_new_feature_button| it is "
 "possible to set up a new feature for your layer. Fill the attributes "
@@ -237,90 +247,116 @@ msgid ""
 "|save_changes_button| to save it."
 msgstr ""
 
+#: ../../usage/managing_layers/layer_editing.rst:122
+#: 0fce85f9fef64562b7e25bf4ecd1473e 5675b508ad034ff19b7fff0b9c74769a
+msgid "add_new_feature_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_editing.rst:127
+#: 18b66770a8b94b439fe32678b65858bf 2f5319e751b54d339fcfde04c2ca69e5
+#: 78e90ffb09b34927ad334eadb8e902e4
+msgid "save_changes_button"
+msgstr ""
+
+#: ../../usage/managing_layers/layer_editing.rst:132
+#: 08f73b6532cc4f01afcc8ca9a58d1fa8 3b693b34812f4d91b834c630984fe6b2
+msgid "add_shape_to_geometry_button"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_editing.rst:140
-#: 569a1b23854d424d910f389581e9fcd3
+#: dca7786bbae947978c2bae520bc4ff37
 msgid "*Add a New Feature to the Layer*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:142
-#: a31e22e822654b2fb8c712cbf7a9199e
+#: 612f03f58951401d8a1cb783a5412427
 msgid ""
 "When your new feature has a multi-vertex shape you have to double-click "
 "the last vertex to finish the drawing."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:144
-#: cf7ee404e82e4b73997952c6c96ce6fb
+#: 362cce870a4d43e08ff5f7510f5a0249
 msgid "*Delete Features*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:146
-#: 09f8fe293e64448c85b399171366ca41
+#: d5af3f381e12441f9d3d0ab6072b89dc
 msgid ""
 "If you want to delete a feature you have to select it on the *Attribute "
 "Table* and click on |delete_feature_button|."
 msgstr ""
 
+#: ../../usage/managing_layers/layer_editing.rst:148
+#: f4a921e06d384ff59b7038ff47105c1b fbd8f49b35ed4203af62e6af3fada2d0
+msgid "delete_feature_button"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_editing.rst:156
-#: fba70c15834b4185a030003fde0ea2d8
+#: e0245aa6d30e43e28043413560f383a5
 msgid "*Delete a Feature*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:158
-#: 19ace475c82c4567a311c566b5794d4c
+#: 90d6ce5569714476ac81acf396dafb7c
 msgid "*Change the Feature Shape*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:160
-#: 74dd9a04c0f04e0ba8baf74dc81a4879
+#: 19112e03fa0f4f7a8f9835a63cdd746b
 msgid ""
 "You can edit the shape of an existing geometry dragging its vertices with"
 " the mouse. A blue circle lets you know what vertex you are moving."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:165
-#: 5d46674533d44612a114d439dbeb6ea7
+#: 5155a49e8ebd40ada42881460bc762cc
 msgid "*Feature Shape Editing - Change the existing shape*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:167
-#: d1602abc2ea04e2b87f53e490c2ba893
+#: 7464966e67d74f05b6be5c58d1e44879
 msgid ""
 "Features can have *multipart shapes*. You can add parts to the shape when"
 " editing it."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:172
-#: 85e1b236ab744814bc5368ccdcf1893a
+#: b654b5a2be1946dc80f68b6169357842
 msgid "*Feature Shape Editing -  Add parts to the existing shape*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:174
-#: 6581e5da568447e697bfa5f0a00a47ac
+#: f7503b7caf18420ea88a93afe6278d75
 msgid "*Change the Feature Attributes*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:176
-#: 88eb67c2cfeb4030a7555a16b3983f92
+#: 2705422c3c4d4cf7bef7c01701956cea
 msgid ""
 "When you are in *Edit Mode* you can also edit the attributes values "
 "changing them directly in the corresponding text fields."
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:181
-#: 3ec292ffab644a83bdb2130a08b0c240
+#: 1d5761625d6944ad87a05db6c7a749f4
 msgid "*Feature Attributes Editing*"
 msgstr ""
 
 #: ../../usage/managing_layers/layer_editing.rst:183
-#: c07f39664ad240a1971424bf29fba495
+#: 5725de1c9ba8406facd2937a4060dbb7
 msgid ""
 "Once you have finished you can end the *Editing Session* by clicking on "
 "the |end_editing_session_button| button."
 msgstr ""
 
+#: ../../usage/managing_layers/layer_editing.rst:185
+#: 6033e1f193fb4a59b0d6b781a52bdcb6 9bd9aa7039a142b78a8cc607c52656eb
+msgid "end_editing_session_button"
+msgstr ""
+
 #: ../../usage/managing_layers/layer_editing.rst:190
-#: 43563ac00f814c42a7d0d52115da0e20
+#: 115a688e60ce4ed1aaf34a47944982ec
 msgid ""
 "By default the GeoNode map viewer is `MapStore <https://mapstore2.geo-"
 "solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation "

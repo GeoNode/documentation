@@ -16,3 +16,4 @@ Managing Layers
     layer_editing
     layer_metadata
     layer_styling
+    layer_advanced

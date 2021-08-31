@@ -583,7 +583,7 @@ Update the passwords and keys on :guilabel:`.env` file
     
     # #################
 
-    .. warning:: **Be careful!** The env GEOSERVER_ADMIN_PASSWORD is not actually used to change the GeoServer admin password. You need to login on GeoServer UI and change it manually!
+.. warning:: **Be careful!** The env GEOSERVER_ADMIN_PASSWORD is not actually used to change the GeoServer admin password. You need to login on GeoServer UI and change it manually!
 
 [Optional] Update your SSH Certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

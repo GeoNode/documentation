@@ -514,6 +514,14 @@ For verification, type the following ss command, which will show you the 8080 op
 
   ss -ltn
 
+In a clean Ubuntu 20.04, the ss command may not be found and the iproute2 library should be installed first.
+
+.. code-block:: shell
+
+  sudo apt install iproute2
+  # Then run the ss command
+  ss -ltn
+
 If your server is protected by a firewall and you want to access Tomcat from the outside of your local network, you need to open port 8080.
 
 Use the following command to open the necessary port:

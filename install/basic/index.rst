@@ -779,7 +779,7 @@ GeoWebCache DiskQuota should be always enabled on a production system. In the ca
      :width: 350px
      :align: center
 
-     *Tile Caching: Tiled Layers*
+     *Tile Caching: Tiled Datasets*
 
  - Configure :guilabel:`Disk Quota` by providing the connection string to the DB Docker Container as specified in the :guilabel:`.env` file
 
@@ -848,8 +848,8 @@ You will need to :ref:`fixup_geonode_layers_permissions` in order to regenerate 
 
 .. _fixup_geonode_layers_permissions:
 
-Fixup GeoNode Layers Permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Fixup GeoNode Datasets Permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The list of the GeoFence Security Rules is available from the :guilabel:`GeoFence Data Rules` section.
 
@@ -868,24 +868,37 @@ In order to re-sync the GeoFence security rules, follow the procedure below:
     # Enter the GeoNode Docker Container
     docker-compose exec django bash
 
-    # Run the `sync_geonode_layers` management command
-    ./manage.sh sync_geonode_layers --updatepermissions
+    # Run the `sync_geonode_datasets` management command
+    ./manage.sh sync_geonode_datasets --updatepermissions
 
-Regenerate GeoNode Layers Thumbnails
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Regenerate GeoNode Datasets Thumbnails
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following procedure allows you to *batch* regenerate all Layers Thumbnails:
+The following procedure allows you to *batch* regenerate all Datasets Thumbnails:
 
 .. code-block:: shell
 
     # Enter the GeoNode Docker Container
     docker-compose exec django bash
 
-    # Run the `sync_geonode_layers` management command
-    ./manage.sh sync_geonode_layers --updatethumbnails
+    # Run the `sync_geonode_datasets` management command
+    ./manage.sh sync_geonode_datasets --updatethumbnails
 
-Fixup GeoNode Layers Metadata And Download Links
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Regenerate GeoNode Datasets BBOXES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following procedure allows you to *batch* regenerate all Datasets BBOXES:
+
+.. code-block:: shell
+
+    # Enter the GeoNode Docker Container
+    docker-compose exec django bash
+
+    # Run the `sync_geonode_datasets` management command
+    ./manage.sh sync_geonode_datasets --updatebbox
+
+Fixup GeoNode Datasets Metadata And Download Links
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following procedure allows you to fix-up broken or incorrect Metadata Links:
 

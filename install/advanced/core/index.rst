@@ -911,7 +911,7 @@ Serving {“geonode”, “geoserver”} via NGINX
   env = FAVORITE_ENABLED=True
 
   logto = /opt/data/logs/geonode.log
-  pidfile = /tmp/geonode.pid
+  # pidfile = /tmp/geonode.pid
 
   chdir = /opt/geonode
   module = geonode.wsgi:application
@@ -1719,7 +1719,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     env = OAUTH2_API_KEY=<secret_here>
     env = OAUTH2_CLIENT_ID=<secret_here>
     env = OAUTH2_CLIENT_SECRET=<secret_here>
-    pidfile = /tmp/geonode.pid
+    # pidfile = /tmp/geonode.pid
     chdir = /opt/geonode
     module = geonode.wsgi:application
     strict = false

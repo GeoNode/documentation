@@ -46,7 +46,7 @@ Login to the target machine and execute the following commands:
   sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
 
   # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
+  sudo apt install -y libgdal-dev
 
 Docker Setup (First time only)
 ..............................
@@ -96,7 +96,7 @@ Login to the target machine and execute the following commands:
   sudo yum install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
 
   # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
+  sudo apt install -y libgdal-dev
 
 Docker Setup (First time only)
 ..............................

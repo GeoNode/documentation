@@ -75,7 +75,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
 
   # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
+  sudo apt install -y libgdal-dev
 
   # Install Openjdk
   sudo -i apt update

@@ -22,12 +22,12 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
 ======================================================================
 
-.. _Ubuntu (18.0 +) Basic Setup:
+.. _Ubuntu (20.04) Basic Setup:
 
-Ubuntu (18.0 +)
-^^^^^^^^^^^^^^^
+Ubuntu (20.04)
+^^^^^^^^^^^^^^
 
-.. note:: Recommended version 18.0.4 (Bionic Beaver). 
+.. note:: Recommended version 20.04 (Focal Fossa). 
 
 Packages Installation
 .....................

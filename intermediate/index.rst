@@ -8,6 +8,14 @@ Read-Only and Maintenance Mode
 
     modes/index
 
+Harvesting resources from remote services
+=========================================
+
+.. toctree::
+    :maxdepth: 3
+
+    harvesting/index
+
 Monitoring
 ==========
 

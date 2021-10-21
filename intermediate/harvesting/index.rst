@@ -263,14 +263,52 @@ Periodic harvesting
 Standard harvester workers
 ==========================
 
+.. note::
+    Remember that, as stated above, a harvester worker is configured by means of setting the ``harvester_type`` and
+    ``harvester_type_specific_configuration`` attributes on the :ref:`harvester <harvester-label>`.
+
+    Moreover, the format of the ``harvester_type_specific_configuration`` attribute must be a JSON object.
+
 .. _geonode-harvester-worker-label:
 
 GeoNode
 -------
 
-Configuration value: ``geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``
+This worker is able to harvest remote GeoNode deployments. In addition to creating local resources by retrieving
+the remote metadata, this harvester is also able to copy remote datasets over to the local GeoNode. This means
+that this harvester can even be used in order to generate replicated GeoNode instances.
 
-This is appropriate for harvesting from remote GeoNode deployments
+This harvester can be used by setting ``harvester_type=geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``
+in the harvester configuration.
+
+It recognizes the following ``harvester_type_specific_configuration`` parameters:
+
+harvest_datasets
+    Whether to harvest remote resources of type ``dataset`` or not. Acceptable values: ``true`` (the default) or ``false``.
+
+copy_datasets
+    Whether to copy remote resources of type ``dataset`` over to the local GeoNode. Acceptable values: ``true`` or ``false`` (the default).
+
+harvest_documents
+    Whether to harvest remote resources of type ``document`` or not. Acceptable values: ``true`` (the default) or ``false``.
+
+copy_documents
+    Whether to copy remote resources of type ``document`` over to the local GeoNode. Acceptable values: ``true`` or ``false`` (the default).
+
+resource_title_filter
+    A string that must be present in the remote resources' ``title`` in order for them to be acknowledged as
+    harvestable resources. This allows filtering out resources that are not relevant. Acceptable values: any
+    alphanumeric value.
+
+    Example: setting this to a value of ``"water"`` would mean that the harvester would generate harvestable resources
+    for remote resources that are titled *water basins*, *Water territories*, etc. The harvester would not generate
+    harvestable resources for remote resources whose title does not contain the word *water*.
+
+start_date_filter
+end_date_filter
+keywords_filter
+categories_filter
+
 
 
 

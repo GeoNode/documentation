@@ -2,9 +2,7 @@
 Harvesting resources from remote services
 =========================================
 
-{explain the harvesting in terms of GeoNode}
-
-Generally speaking, harvesting is a process by which a metadata catalogue is able to connect to remote catalogues and
+harvesting is a process by which a metadata catalogue is able to connect to remote catalogues and
 retrieve information about their resources. This process is usually performed periodically, in order to keep the
 local catalogue in sync with the remote.
 
@@ -16,24 +14,25 @@ with the remote service by means of periodic refresh operations.
 
 Out of the box, GeoNode ships with support for harvesting from:
 
-#. Other remote GeoNode instances;
-#. OGC WMS servers;
-#. ArcGIS REST services of type MapServer;
-#. ArcGIS REST services of type ImageServer.
+#. :ref:`Other remote GeoNode instances <geonode-harvester-worker-label>`;
+#. :ref:`OGC WMS servers <wms-harvester-worker-label>`;
+#. :ref:`ArcGIS REST services <arcgis-harvester-worker-label>`;
 
-Adding support for additional harvesting sources is also possible.
+Adding support for :ref:`additional harvesting sources <creating-new-workers-label>` is also possible.
 
 
 GeoNode harvesting concepts
 ===========================
 
-When a suitable **harvester** is configured, GeoNode is able to use its corresponding **harvester worker** to contact
+When a **harvester** is configured, GeoNode is able to use its corresponding **harvester worker** to contact
 the remote service and generate a list of **harvestable resources**. The user is then able to select which of those
 resources are of interest. Depending on its configured update frequency, sometime later, the **harvesting scheduler**
 will create new **harvesting sessions** in order to create local GeoNode resources from the remote harvestable resources
 that had been marked as relevant by the user.
 
 The above description uses the following key concepts:
+
+.. _harvester-label:
 
 harvester
     This is the configuration object that is used to parametrize harvesting of a remote service. It is configurable
@@ -49,23 +48,27 @@ harvester
 
     harvester_type
         Type of harvester worker that will be used to perform harvesting. See the
-        :ref:`Harvester worker <harvester-worker-label>` section below for more detail.
+        :ref:`Harvester worker concept <harvester-worker-label>` and the :ref:`standard harvester workers
+        <standard-harvester-workers-label>` sections below for more detail.
 
     scheduling_enabled
         Whether harvesting shall be performed periodically by the
         :ref:`harvesting scheduler <harvesting-scheduler-label>` or not.
 
     harvesting_session_update_frequency
-        How often (in minutes) should new harvesting sessions be automatically scheduled?
+        How often (in minutes) should new :ref:`harvesting sessions <harvesting-session-label>` be
+        automatically scheduled?
 
     refresh_harvestable_resources_update_frequency
-        How often (in minutes) should new refresh sessions be automatically scheduled?
+        How often (in minutes) should new :ref:`refresh sessions <harvesting-session-label>` be automatically scheduled?
 
     default_owner
         Which GeoNode user shall be made the owner of harvested resources
 
     harvest_new_resources_by_default
-        Should new remote resources be harvested automatically?
+        Should new remote resources be harvested automatically? When this option is selected, the user does not
+        need to specify which :ref:`harvestable resources <harvestable-resource-label>` should be harvested,
+        as all of them will be automatically marked for harvesting by GeoNode.
 
     delete_orphan_resources_automatically
         Orphan resources are those that have previously been created by means of a harvesting operation but that
@@ -80,20 +83,32 @@ harvester worker
     depending on the type of remote service that it gets data from. Harvester workers may accept their own additional
     configuration parameters.
 
+    Harvester workers are set as the ``harvester_type`` attribute on a :ref:`harvester <harvester-label>`. Their configuration is set as a JSON
+    object on the ``harvester_type_specific_configuration`` attribute of the harvester.
+
     GeoNode ships with the following harvester workers:
 
-        GeoNode (geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker)
-            This is appropriate for harvesting from remote GeoNode deployments
+    #. :ref:`GeoNode <geonode-harvester-worker-label>` (geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker) - This is appropriate for harvesting from remote GeoNode deployments
 
-        WMS (geonode.harvesting.harvesters.wms.OgcWmsHarvester)
-            This is appropriate for harvesting from remote OGC WMS servers
+    #. :ref:`WMS <wms-harvester-worker-label>` (geonode.harvesting.harvesters.wms.OgcWmsHarvester) - This is appropriate for harvesting from remote OGC WMS servers
 
-        ArcGIS (geonode.harvesting.harvesters.arcgis.ArcgisHarvesterworker)
-            This is appropriate for harvesting from ArcGIS REST services
+    #. :ref:`ArcGIS REST services <arcgis-harvester-worker-label> (geonode.harvesting.harvesters.arcgis.ArcgisHarvesterworker) - This is appropriate for harvesting from ArcGIS REST services
 
 
 harvestable resource
-    A resource that is available on the remote server. It can be harvested if
+    A resource that is available on the remote server. Harvestable resources are persisted in the GeoNode DB. They are
+    created during :ref:`refresh operations <update-harvestable-resources-action-label>`, when the harvester worker
+    interacts with the remote service in order to discover which remote resources can be harvested.
+
+    Harvestable resources can be managed by visiting the ``harvesting/harvestable resources`` section of the
+    GeoNode admin area, or by visiting the ``api/v2/harvesters/{harvester-id}/harvestable_resources`` API endpoint
+    with an admin user.
+
+    In order to be harvested by the :ref:`harvesting scheduler <harvesting-scheduler-label>`, a harvestable resource
+    must have its ``should_be_harvested`` attribute set to ``True``. This attribute can be set manually by the user
+    or it can be set automatically by the harvester worker, in case the corresponding harvester is configured with
+    ``harvest_new_resources_by_default = True``
+
 
 .. _harvesting-session-label:
 
@@ -110,6 +125,8 @@ harvesting session
 harvesting scheduler
     The scheduler is responsible for periodically spawining new harvesting sessions
 
+
+.. _harvesting-operations-label:
 
 Harvester operations
 ====================
@@ -133,12 +150,17 @@ If the harvester has any status other than ``READY``, then it is currently busy.
 execute other operations, you'll need to wait until the current operation finishes.
 
 
+.. _check-remote-available-action-label:
+
 Check if the remote service is available
 ----------------------------------------
 
 This action causes the harvester to perform a simple health check on the remote service, in order to check whether it
 responds successfully. The response is stored in the harvester's ``remote_available`` property. This action is performed
 in the same process of the main GeoNode (*i.e.* it runs synchronously).
+
+
+.. _update-harvestable-resources-action-label:
 
 Update the list of harvestable resources
 ----------------------------------------
@@ -160,6 +182,9 @@ Invocation via the GeoNode admin is performed by selecting the ``Update harvesta
 
 Invocation via the GeoNode REST API is performed by issuing an HTTP PATCH request with a payload that sets the harvester status
 
+
+.. _perform-harvesting-action-label:
+
 Perform harvesting
 ------------------
 
@@ -173,6 +198,12 @@ the operation. The session will eventually transition to its ``finished`` state.
 Additionally, while the harvester is performing this operation, its own status is set to
 ``performing harvesting``. The harvester cannot perform other actions until its status transitions back
 to ``ready``.
+
+
+.. _reset-harvester-action-label:
+
+Reset harvester
+---------------
 
 
 Harvesting workflows
@@ -227,15 +258,75 @@ Periodic harvesting
 {how to add new harvesters}
 
 
+.. _standard-harvester-workers-label:
+
+Standard harvester workers
+==========================
+
+.. _geonode-harvester-worker-label:
+
+GeoNode
+-------
+
+Configuration value: ``geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``
+
+This is appropriate for harvesting from remote GeoNode deployments
+
+
+
+
+.. _wms-harvester-worker-label:
+
+WMS
+---
+
+Configuration value: ``geonode.harvesting.harvesters.wms.OgcWmsHarvester``
+
+This is appropriate for harvesting from remote OGC WMS servers
+
+
+.. _arcgis-harvester-worker-label:
+
+ArcGIS REST Services
+--------------------
+
+Configuration value: ``geonode.harvesting.harvesters.arcgis.ArcgisHarvesterworker``
+
+This is appropriate for harvesting from ArcGIS REST services
+
+
 Troubleshooting
 ===============
 
 {mention the reset status action}
 
 
+
+.. _creating-new-workers-label:
+
 Creating new harvesting workers
 ===============================
 
-
 New harvesting workers can be created by writing classes derived from ``geonode.harvesting.harvesters.base.BaseGeonodeHarvesterWorker``. This class
 implements an abstract interface...
+
+
+Implementation details
+======================
+
+.. note::
+  This section is only relevant for GeoNode developers - or if you are very curious about the internal implementation
+  of the GeoNode harvesting
+
+
+Most :ref:`harvesting operations <harvesting-operations-label>` are implemented as celery tasks and are meant to be ran
+asynchronously. They use the django DB as a means to communicate the state of each operation, most notably a harvester's
+``status`` attribute is used to implement a simple state machine, whereby a state has predefined fixed transitions.
+
+The :ref:`harvesting scheduler <harvesting-scheduler-label>` is also implemented as a celery task and also runs
+asynchronously. Moreover, it is triggered by means of a celery beat schedule that has a fixed periodicity - this is
+configurable in the ``HARVESTER_SCHEDULER_FREQUENCY_MINUTES`` setting (the default value is to trigger this task
+every 30 seconds). This has some implications on the timeliness of scheduled harvesting sessions. Since the harvesting
+scheduler only checks if there is work to do once every 30 seconds, there can be some small delay between the time a
+harvesting operation is supposed to be scheduled and the actual time when it is indeed scheduled. If the celery worker is
+busy that may also cause a delay in the harvesting scheduler, as its task may not be triggered immediately.

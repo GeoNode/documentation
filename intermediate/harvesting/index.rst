@@ -16,7 +16,7 @@ Out of the box, GeoNode ships with support for harvesting from:
 
 #. :ref:`Other remote GeoNode instances <geonode-harvester-worker-label>`;
 #. :ref:`OGC WMS servers <wms-harvester-worker-label>`;
-#. :ref:`ArcGIS REST services <arcgis-harvester-worker-label>`;
+#. :ref:`ArcGIS REST services <arcgis-harvester-worker-label>`.
 
 Adding support for :ref:`additional harvesting sources <creating-new-workers-label>` is also possible.
 
@@ -49,7 +49,7 @@ harvester
     harvester_type
         Type of harvester worker that will be used to perform harvesting. See the
         :ref:`Harvester worker concept <harvester-worker-label>` and the :ref:`standard harvester workers
-        <standard-harvester-workers-label>` sections below for more detail. Example: ``geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``
+        <standard-harvester-workers-label>` sections below for more detail. Example: ``geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``.
 
     scheduling_enabled
         Whether harvesting shall be performed periodically by the
@@ -125,6 +125,7 @@ harvesting session
 
 
     .. _refresh-session-label:
+
     refresh session
         This session is created during the :ref:`update of harvestable resources operation <update-harvestable-resources-action-label>`.
         It has ``type=discover-harvestable-resources``. During a refresh session, the harvester worker discovers remote
@@ -133,6 +134,7 @@ harvesting session
         are relevant with ``should_be_harvester=True``.
 
     .. _harvesting-session-label:
+
     harvesting session
         This session is created during the :ref:`perform harvesting operation <perform-harvesting-action-label>`. It has
         ``type=harvesting``. During a harvesting session, the harvester worker creates or updates new GeoNode resources
@@ -411,12 +413,18 @@ resource_title_filter
     harvestable resources for remote resources whose title does not contain the word *water*.
 
 start_date_filter
+    A string specifying a datetime that is used to filter out resources by their start_date. This is parsed with
+    :ref:`dateutil.parser.parse() <https://dateutil.readthedocs.io/en/stable/parser.html#dateutil.parser.parse>`,
+    which means that it accepts many different formats (e.g. `2021-06-31T13:04:05Z`)
+
 end_date_filter
+    Similar to ``start_date_filter`` but uses resources' `end_date` as a filter parameter.
+
 keywords_filter
+    A list of keywords that are used to filter remote resources.
+
 categories_filter
-
-
-
+    A list of categories that are used to filter remote resources.
 
 
 .. _wms-harvester-worker-label:
@@ -424,9 +432,16 @@ categories_filter
 WMS harvester worker
 --------------------
 
-Configuration value: ``geonode.harvesting.harvesters.wms.OgcWmsHarvester``
+This worker is able to harvest from remote OGC WMS servers.
 
-This is appropriate for harvesting from remote OGC WMS servers
+This harvester can be used by setting ``harvester_type=geonode.harvesting.harvesters.wms.OgcWmsHarvester``
+in the harvester configuration.
+
+It recognizes the following ``harvester_type_specific_configuration`` parameters:
+
+dataset_title_filter
+    A string that is used to filter remote WMS layers by their ``title`` property. If a remote layer's title contains
+    the string defined by this parameter, then the layer is recognized by the harvester worker.
 
 
 .. _arcgis-harvester-worker-label:
@@ -434,16 +449,37 @@ This is appropriate for harvesting from remote OGC WMS servers
 ArcGIS REST Services harvester worker
 -------------------------------------
 
-Configuration value: ``geonode.harvesting.harvesters.arcgis.ArcgisHarvesterworker``
+This worker is able to harvest from remote ArcGIS REST Services catalogs.
 
-This is appropriate for harvesting from ArcGIS REST services
+This worker is able to recognize two types of ``remote_url``:
 
+#. URL of the ArcGIS REST services catalog. This URL usually ends in ``rest/services``. A catalog may expose several
+   different services. This harvester worker is able to descend into the available ArcGIS Rest services and retrieve
+   their respective resources. Example::
 
-Troubleshooting
-===============
+       https://sampleserver6.arcgisonline.com/arcgis/rest/services
 
-{mention the reset status action}
+#. URL of the ArcGIS REST services Service. This URL usually takes the form ``{base-url}/rest/services/{service-name}/{service-type}``. Example::
 
+       https://sampleserver6.arcgisonline.com/arcgis/rest/services/CharlotteLAS/ImageServer
+
+This harvester worker can be used by setting ``harvester_type=geonode.harvesting.harvesters.arcgis.ArcgisHarvesterWorker``
+in the harvester configuration.
+
+It recognizes the following ``harvester_type_specific_configuration`` parameters:
+
+harvest_map_services
+    Whether services of type `MapServer` ought to be harvested. Defaults to ``True``.
+
+harvest_image_services
+    Whether services of type `ImageServer` ought to be harvested. Defaults to ``True``.
+
+resource_name_filter
+    A string that is used to filter remote WMS layers by their ``title`` property. If a remote layer's name contains
+    the string defined by this parameter, then the layer is recognized by the harvester worker.
+
+service_names_filter
+    A list of names that are used to filter the remote ArcGIS catalog.
 
 
 .. _creating-new-workers-label:
@@ -451,5 +487,21 @@ Troubleshooting
 Creating new harvesting workers
 ===============================
 
-New harvesting workers can be created by writing classes derived from ``geonode.harvesting.harvesters.base.BaseGeonodeHarvesterWorker``. This class
-implements an abstract interface...
+New harvesting workers can be created by writing classes derived from
+:ref:`geonode.harvesting.harvesters.base.BaseGeonodeHarvesterWorker <https://github.com/GeoNode/geonode/blob/master/geonode/harvesting/harvesters/base.py#L66>`.
+This class defines an abstract interface that must be implemented. All methods decorated with ``abc.abstractmethod``
+must be implemented in the custom harvester worker class. Study the implementation of the standard GeoNode harvester worker
+classes in order to gain insight on how to implement custom ones.
+
+After writing a custom harvester worker class, it can be added to the list of known harvester workers by defining
+the ``HARVESTER_CLASSES`` GeoNode setting. This setting is a list of strings, containing the Python class path to each
+harvester worker class. It has a default value of::
+
+    HARVESTER_CLASSES = [
+        "geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker",
+        "geonode.harvesting.harvesters.wms.OgcWmsHarvester",
+        "geonode.harvesting.harvesters.arcgis.ArcgisHarvesterWorker",
+    ]
+
+These are the standard harvester worker classes shipped by GeoNode. If this setting is defined, its value will simply
+extend the default list. This means that it is not possible to disable the standard worker classes, only to add new ones.

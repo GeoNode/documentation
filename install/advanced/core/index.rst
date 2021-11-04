@@ -1480,6 +1480,8 @@ The following are the minimum set of env key value pairs you will need for a sta
     - ``GEOSERVER_PUBLIC_LOCATION``
     - ``GEOSERVER_WEB_UI_LOCATION``
     - ``MONITORING_ENABLED``
+    - ``DATABASE_URL``
+    - ``GEODATABASE_URL``
 
 You will also need to:
 

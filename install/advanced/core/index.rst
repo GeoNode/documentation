@@ -1351,6 +1351,8 @@ Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-inst
 Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
 ..........................................................................................................................................
 
+**Install supervisor**
+
 .. code-block:: shell
 
     sudo apt install supervisor
@@ -1360,18 +1362,11 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
 
     sudo mkdir /etc/supervisor/conf.d
 
+**Configure supervisor**
 
 .. code-block:: shell
 
     sudo vim /etc/supervisor/supervisord.conf
-
-.. note::
-
-    **!IMPORTANT!**
-
-    Pay particular attention to the ``environment`` key values pair placed here.
-
-    They **must** match the values you have already set on the ``uwsgi.ini`` file.
 
 .. code-block:: ini
 
@@ -1386,7 +1381,7 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
     pidfile=/var/run/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
     childlogdir=/var/log/supervisor            ; ('AUTO' child log dir, default $TEMP)
-    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",CACHE_BUSTING_MEDIA_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True" 
+    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",CACHE_BUSTING_MEDIA_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True"
 
     ; the below section must remain in the config file for RPC
     ; (supervisorctl/web interface) to work, additional interfaces may be
@@ -1406,6 +1401,51 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     [include]
     files = /etc/supervisor/conf.d/*.conf
 
+Note the last line which includes the ``geonode-celery.conf`` file that is described below.
+
+**Set the `environment` directive**
+
+Environment variables are placed directly into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the
+service via the ``environment`` directive.
+
+The syntax of this directive can either be all on one line like this (shown above):
+
+.. code-block:: python
+
+    environment=ENV_KEY_1="ENV_VALUE_1",ENV_KEY_2="ENV_VALUE_2",...,ENV_KEY_n="ENV_VALUE_n"
+
+or broken into multiple **indented** lines like this:
+
+.. code-block:: python
+
+    environment=
+        ENV_KEY_1="ENV_VALUE_1",
+        ENV_KEY_2="ENV_VALUE_2",
+        ENV_KEY_n="ENV_VALUE_n"
+
+The following are the minimum set of env key value pairs you will need for a standard GeoNode Celery instance:
+
+    - ``ASYNC_SIGNALS="True"``
+    - ``BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/"``
+    - ``DATABASE_URL``
+    - ``GEODATABASE_URL``
+    - ``DEBUG``
+    - ``CACHE_BUSTING_STATIC_ENABLED``
+    - ``CACHE_BUSTING_MEDIA_ENABLED``
+    - ``SITEURL``
+    - ``DJANGO_SETTINGS_MODULE``
+    - ``GEOSERVER_ADMIN_PASSWORD``
+    - ``GEOSERVER_LOCATION``
+    - ``GEOSERVER_PUBLIC_LOCATION``
+    - ``GEOSERVER_WEB_UI_LOCATION``
+    - ``MONITORING_ENABLED``
+
+.. warning::
+
+    + These key value pairs **must** match the values you have already set on the ``uwsgi.ini`` file.
+    + If you have custom ``tasks`` that use any other variables from  ``django.conf.settings`` (like ``MEDIA_ROOT``), these variables must also be added to the environment directive.
+
+**Configure celery**
 
 .. code-block:: shell
 
@@ -1425,6 +1465,10 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     startsecs = 10
     stopwaitsecs = 600
     priority = 998
+
+----
+
+**Manage supervisor and celery**
 
 Reload and restart ``supervisor`` and the ``celery`` workers
 
@@ -1446,40 +1490,6 @@ Make sure everything is *green*
 
     # Check the celery workers logs
     sudo tail -F -n 300 /var/logs/geonode-celery.log
-
-
-**The `environment` directive**
-
-The environment variables are placed into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the service via the ``environment`` directive.
-
-The syntax of this directive is the following one:
-
-.. code-block:: python
-
-    environment=ENV_KEY_1="ENV_VALUE_1",ENV_KEY_2="ENV_VALUE_2",...,ENV_KEY_n="ENV_VALUE_n"
-
-The following are the minimum set of env key value pairs you will need for a standard GeoNode Celery instance:
-
-    - ``ASYNC_SIGNALS="True"``
-    - ``BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/"``
-    - ``DEBUG``
-    - ``CACHE_BUSTING_STATIC_ENABLED``
-    - ``CACHE_BUSTING_MEDIA_ENABLED``
-    - ``SITEURL``
-    - ``DJANGO_SETTINGS_MODULE``
-    - ``GEOSERVER_ADMIN_PASSWORD``
-    - ``GEOSERVER_LOCATION``
-    - ``GEOSERVER_PUBLIC_LOCATION``
-    - ``GEOSERVER_WEB_UI_LOCATION``
-    - ``MONITORING_ENABLED``
-
-You will also need to:
-
-    a. Add more variables accordingly to your custom ``tasks`` (if any)
-
-
-    b. Make **always** sure the values of the environment variables match the ones of the ``uwsgi.ini`` file
-
 
 Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
 ...........................................................................................................................

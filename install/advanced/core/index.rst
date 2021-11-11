@@ -1312,41 +1312,70 @@ Next, the steps to do are:
 8. Enabling Fully Asynchronous Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_
-...................................................................................................................
+Install and configure `"rabbitmq-server" <https://lindevs.com/install-rabbitmq-on-ubuntu/>`_
+............................................................................................
 
-.. warning:: Adapt the steps below accordingly to your Ubuntu distribution (see the `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_ links to the documentation).
+.. seealso::
 
-.. code-block:: shell
+    A `March 2021 blog post <https://blog.rabbitmq.com/posts/2021/03/migrate-off-of-bintray/>`_ from RabbitMQ provides alternative installations for other systems.
+
+**Install rabbitmq-server**
+
+Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install-rabbitmq-on-ubuntu/>`_
+
+.. code-block:: bash
 
     sudo apt update && sudo apt upgrade && sudo apt install wget -y
-    echo "deb https://packages.erlang-solutions.com/ubuntu focal contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+    
+    # add the erlang repository
+    sudo add-apt-repository -y ppa:rabbitmq/rabbitmq-erlang
 
-    sudo apt update
-    sudo apt install erlang
+    # add the rabbitmq repository
+    wget -qO - https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
 
-    sudo apt install apt-transport-https -y
-    wget -O- https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc | sudo apt-key add -
-    wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
-    echo "deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang-22.x" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+    # install rabbitmq
+    sudo apt install -y rabbitmq-server
 
-    sudo apt update
-    sudo apt install rabbitmq-server
+    # check the status (it should already be running)
+    sudo systemctl status rabbitmq-server
 
-    sudo systemctl start rabbitmq-server.service
-    sudo systemctl enable rabbitmq-server.service
+    # check the service is enabled (it should already be enabled)
+    sudo systemctl is-enabled rabbitmq-server.service
 
-    systemctl is-enabled rabbitmq-server.service
+    # enable the web frontend and allow access through firewall
+    # view this interface at http://<your ip>:15672
     sudo rabbitmq-plugins enable rabbitmq_management
     sudo ufw allow proto tcp from any to any port 5672,15672
 
+**Create admin user**
+
+This is the user that GeoNode will use to communicate with rabbitmq-server.
+
+.. code-block::
+
     sudo rabbitmqctl delete_user guest
     sudo rabbitmqctl add_user admin <your_rabbitmq_admin_password_here>
-    sudo rabbitmqctl change_password admin <your_rabbitmq_admin_password_here>
     sudo rabbitmqctl set_user_tags admin administrator
     sudo rabbitmqctl add_vhost /localhost
     sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
     sudo rabbitmqctl set_permissions -p /localhost admin ".*" ".*" ".*"
+
+**Managing RabbitMQ**
+
+You can manage the rabbitmq-server service like any other service::
+
+    sudo systemctl stop rabbitmq-server
+    sudo systemctl start rabbitmq-server
+    sudo systemctl restart rabbitmq-server
+
+You can manage the rabbitmq-server node with `rabbitmqctl <https://www.rabbitmq.com/rabbitmqctl.8.html>`_.
+For example, to fully reset the server, use these commands::
+
+    sudo rabbitmqctl stop_app
+    sudo rabbitmqctl reset
+    sudo rabbitmqctl start_app
+
+After reset, you'll need to recreate the ``admin`` user (see above).
 
 Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
 ..........................................................................................................................................

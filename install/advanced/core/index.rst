@@ -1129,7 +1129,10 @@ Update the settings in order to use the ``PostgreSQL`` Database
 
   workon geonode
   cd /opt/geonode
-
+  
+  # Initialize local_setting.py with sample configuration data if desired
+  cp /opt/geonode/geonode/local_settings.py.geoserver.sample /opt/geonode/geonode/local_settings.py
+  
   # Initialize GeoNode
   chmod +x *.sh
   ./paver_local.sh reset

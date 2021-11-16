@@ -49,8 +49,8 @@ Data mixing, maps creation
 
 Once the data has been uploaded, GeoNode lets the user search for it geographically or via keywords in order to create fancy maps.
 
-All the layers are automatically re-projected to web Mercator for maps display, making it possible to use different popular base layers, 
-like Open Street Map, Google Satellite or Bing layers.
+All the datasets are automatically re-projected to web Mercator for maps display, making it possible to use different popular base datasets, 
+like Open Street Map, Google Satellite or Bing datasets.
 
 Once the maps are saved, it is possible to embed them in any web page or get a PDF version for printing.
 
@@ -95,45 +95,8 @@ This list includes (but is not limited to):
 - `Apple Safari <https://www.apple.com/safari/>`_.
 - `Mozilla Firefox <https://www.mozilla.org/en-US/firefox/new/>`_.
 - `Microsoft Edge <https://developer.microsoft.com/en-us/microsoft-edge/>`_.
-- Microsoft Internet Explorer.
 
 .. note:: The vast majority of GeoNode developers prefer using Google Chrome.
-
-Internet Explorer
-^^^^^^^^^^^^^^^^^
-
-Versions of Microsoft Internet Explorer older than 10, exhibit known issues when used to browse a GeoNode site.
-As such a message is displayed warning the user that they should upgrade their browser.
-
-  .. figure:: img/ie_message.png
-        :align: center
-
-        *Internet Explorer error message*
-
-Testing on Internet Explorer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-When working on front end code, developers should take care to test carefully with Microsoft Internet Explorer to ensure that the features 
-they are working on do indeed work correctly and on this browser. 
-It is good practice to test on all browsers available, but the use of modern front end libraries like bootstrap and jQuery make it much 
-more likely code will work across browsers seamlessly.
-
-In order to test on Internet Explorer, developers can use the `Modern IE <https://www.modern.ie/en-us>`_ site to download virtual machines 
-for use in `Oracle VM Virtual Box <https://www.virtualbox.org/>`_. 
-
-  .. figure:: img/modern_ie.png
-        :align: center
-
-        *Testing on Internet Explorer*
-
-Once the VM is downloaded, follow the instructions to configure it in your VirtualBox setup.
-
-    .. figure:: img/virtualbox.png
-        :align: center
-
-        *Oracle VirtualBox admin interface*
-
-After the VM is setup, you can access your development instance of GeoNode by visiting the IP address of your host machine or on the bridged interface (usually 10.0.2.2) and begin your testing. 
 
 .. _online_demo:
 

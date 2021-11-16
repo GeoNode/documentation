@@ -22,11 +22,11 @@ The *Profile* page looks like the one shown in the picture below.
 
      *User profile page*
 
-Your personal information are shown under the username. At the bottom of the page are listed all the resources associated to your *Profile*, you can decide to view only layers or maps or documents by clicking on the corresponding tab.
+Your personal information are shown under the username. At the bottom of the page are listed all the resources associated to your *Profile*, you can decide to view only datasets or maps or documents by clicking on the corresponding tab.
 
-Through the link ``User layers WMS GetCapabilities document`` you can retrieve an XML document with the list of the available layers.
+Through the link ``User datasets WMS GetCapabilities document`` you can retrieve an XML document with the list of the available datasets.
 
-On the right side of the page there are many useful links to edit personal information, to upload and create layers or maps, to update your *Profile* settings and to get in touch with other GeoNode users.
+On the right side of the page there are many useful links to edit personal information, to upload and create datasets or maps, to update your *Profile* settings and to get in touch with other GeoNode users.
 
 The :guilabel:`Favorites` link, also accessible from the user menu, drive you to the list of the resources marked as your favorites.
 
@@ -37,7 +37,7 @@ The :guilabel:`Favorites` link, also accessible from the user menu, drive you to
 
 Click the :guilabel:`Delete from Favorites` button to remove the resource from the list.
 
-The :guilabel:`My Activities` link allows to see all your recent activities on GeoNode such as layers uploading and maps creation.
+The :guilabel:`My Activities` link allows to see all your recent activities on GeoNode such as datasets uploading and maps creation.
 
 .. figure:: img/user_activities.png
      :align: center

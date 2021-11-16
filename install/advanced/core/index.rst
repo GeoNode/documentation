@@ -1235,6 +1235,17 @@ In particular the steps to do are:
     .. code-block:: shell
 
         workon geonode
+	
+	# To avoid spatialite conflict if using postgresql
+	vim $VIRTUAL_ENV/bin/postactivate
+	
+	# Add these to make available. Change user, password and server information to yours
+	export DATABASE_URL='postgresql://<postgresqluser>:<postgresqlpass>@localhost:5432/geonode'
+
+	#Close virtual environmetn and aopen it again to update variables
+	deactivate
+	
+	workon geonode
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname

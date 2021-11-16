@@ -1251,7 +1251,7 @@ In particular the steps to do are:
         # Update the GeoNode ip or hostname
         DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
 	
-.. note:: If at the end you get a "bad gateway" erro when accessing yours geonode site, check uwsgi log with ``sudo tail -f /var/log/uwsgi/app/geonode.log`` and if theres is an error related with port 5432 check the listening configuration of the postgresql server and allow incoming traffic from geonode.
+.. note:: If at the end you get a "bad gateway" error when accessing your geonode site, check uwsgi log with ``sudo tail -f /var/log/uwsgi/app/geonode.log`` and if theres is an error related with port 5432 check the listening configuration from the postgresql server and allow the incoming traffic from geonode.
 
 7. Install and enable HTTPS secured connection through the Let's Encrypt provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

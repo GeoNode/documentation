@@ -11,3 +11,4 @@ Managing Documents
     document_metadata
     document_info
     document_editing
+    document_permissions

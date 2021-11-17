@@ -3,7 +3,7 @@
 Layer Information
 =================
 
-| In this section you will learn more about layers. In the :ref:`finding-layers` section we explain how to find layers, now we want to go more in depth showing you how to explore detailed information about that.
+| In this section you will learn more about layers. In the :ref:`finding-data` section we explain how to find layers, now we want to go more in depth showing you how to explore detailed information about that.
 | From the layers list page, click on the layer you are interested in. The *Layer Page* will open.
 
 .. figure:: img/layer_info.png

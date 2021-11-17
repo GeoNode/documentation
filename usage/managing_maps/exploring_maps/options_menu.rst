@@ -94,7 +94,7 @@ Saving a map
 
      *Saving Maps*
 
-You have to fill out a *Title* and an optional *Description*, then click on :guilabel:`Save`. The page will reload and your map should be visible in the :ref:`finding-maps` list.
+You have to fill out a *Title* and an optional *Description*, then click on :guilabel:`Save`. The page will reload and your map should be visible in the :ref:`finding-data` list.
 
 .. figure:: img/my_map.png
      :align: center

@@ -26,7 +26,7 @@ You will see a list of users registered on the system.
 
      *User details*
 
-In this page the main information about the user are shown: personal information (name, surname, organization and so on...) and the resources the user owns (layers, maps and documents).
+In this page the main information about the user are shown: personal information (name, surname, organization and so on...) and the resources the user owns (datasets, maps and documents).
 
 Through the :guilabel:`User Activities` link, in right side of the page, it is possible to visualize all the activities the user has been done.
 
@@ -51,4 +51,4 @@ In the picture below an example.
 
      *Recent Activities*
 
-As you can see, you can decide whether to see only the activities related to layers or those related to maps or comments by switching the tabs.
+As you can see, you can decide whether to see only the activities related to datasets or those related to maps or comments by switching the tabs.

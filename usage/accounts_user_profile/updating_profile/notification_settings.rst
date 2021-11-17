@@ -9,8 +9,8 @@ You can adjust your notification settings by clicking on the :guilabel:`Notifica
 Now check/uncheck the notification types you wish to receive or not receive. It is possible to be notified for the events shown in the picture below.
 
 .. figure:: img/notifications_settings.png
-.. figure:: img/notifications_settings2.png
-.. figure:: img/notifications_settings3.png
+     :align: center
+.. figure:: img/notifications_settings1.png
      :align: center
 
      *Notifications settings*

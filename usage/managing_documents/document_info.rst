@@ -3,7 +3,7 @@
 Document Information
 ====================
 
-From the *Documents Search Page* (see :ref:`finding-documents`) you can select the document you are interested in and see some basic information about it. You can access the document details page by clicking on its name.
+From the *Documents Search Page* (see :ref:`finding-data`) you can select the document you are interested in and see some basic information about it. You can access the document details page by clicking on its name.
 That page looks like the one shown in the picture below.
 
 .. figure:: img/document_info.png

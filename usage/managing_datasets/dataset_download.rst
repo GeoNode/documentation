@@ -1,26 +1,31 @@
-.. _layer-download:
+.. _dataset-download:
 
-Downloading Layers
+Downloading Datasets
 ==================
 
-| At the top of the *Layer Page* there is the :guilabel:`Download Layer` button (see :ref:`layer-info`). It provides access to the ability to extract geospatial data from within GeoNode.
-| You will see a list of options of the supported export formats. You can choose the *Images* formats ``PNG``, ``PDF``, ``JPEG`` if you want to save a "screenshot-like" image of the layer.
+| At the top of the *Dataset Menu* there is an :guilabel:`Export` link . It provides access to the ability to extract geospatial data from within GeoNode.
+| You will be able to select from a list of options of the supported export file formats.
 
-.. figure:: img/download_layer_image.png
+.. figure:: img/export_dataset_form.png
      :align: center
 
-     *Downloading Layers as Images*
+     *Downloading Datasets*
 
-You can also download the layer data, the supported export formats will be listed in the *Data* tab. Click on your desired format to trigger the download.
+As shown in the image above, GeoNode allows you to download a subset of data. Click on :guilabel:`Download filtered dataset` to download filtered data.
 
-.. figure:: img/download_layer_data.png
+On clicking Export, the file is prepared and a notification is showed when file is ready
+
+.. figure:: img/export_notification.png
      :align: center
 
-     *Downloading the Layer Data*
+     *Export Ready*
 
-As shown in the image above, GeoNode allows you to download a subset of data. Click on :guilabel:`Do you want to filter it?` to filter the layer data before the download.
+To download the file to your machine, click on the export dataset icon. This opens the prepared export files and you can save the files on your by clicking on the save icon on each item.
 
-.. figure:: img/download_filtered_data.gif
+.. figure:: img/export_icon.png
      :align: center
 
-     *Downloading the Layer Data*
+     *Export Results Icon *
+
+.. figure:: img/export_list.png
+     :align: center

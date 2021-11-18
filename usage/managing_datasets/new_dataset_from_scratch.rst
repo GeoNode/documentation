@@ -1,14 +1,14 @@
-Creating a Layer from scratch
+Creating a Dataset from scratch
 =============================
 
-An interesting tool that GeoNode makes available to you is the *Create Layer*. It allows you to create a new vector layer from scratch. The *Layer Creation Form* is reachable through the :guilabel:`Create Layer` link shown in the picture below.
+An interesting tool that GeoNode makes available to you is the *Create dataset*. It allows you to create a new vector dataset from scratch. The *Dataset Creation Form* is reachable through the :guilabel:`Create dataset` link shown in the picture below.
 
-.. figure:: img/create_layer_link.png
+.. figure:: img/create_dataset_link.png
      :align: center
 
-     *Create layer link*
+     *Create dataset link*
 
-In order to create the new Layer you have to fill out the required fields:
+In order to create the new Dataset you have to fill out the required fields:
 
 * *Name*
 * *Title*
@@ -19,13 +19,13 @@ In order to create the new Layer you have to fill out the required fields:
 
       *Geometry types*
 
-Usually the layers features should have some *Attributes* that enrich the amount of information associated with each of them. Through the :guilabel:`Add Attribute` button you can add new attributes.
+Usually the datasets features should have some *Attributes* that enrich the amount of information associated with each of them. Through the :guilabel:`Add Attribute` button you can add new attributes.
 
-.. figure:: img/new_layer_from_scratch.gif
+.. figure:: img/new_dataset_from_scratch.png
     :align: center
 
-    *New Layer creation from scratch*
+    *New Dataset creation from scratch*
 
-At this time you can also change the default *Permissions* settings, see :ref:`layer-permissions` to learn how.
+At this time you can also change the default *Permissions* settings, see :ref:`dataset-permissions` to learn how.
 
-Once the form has been filled out, click on :guilabel:`Create`. You will be redirected to the *Layer Page* (see :ref:`layer-info`). Now your Layer is created but is still empty, no features have been added yet. See the :ref:`layer-editing` section to learn how to add new features.
+Once the form has been filled out, click on :guilabel:`Create`. You will be redirected to the *Dataset Page* (see :ref:`dataset-info`). Now your Dataset is created but is still empty, no features have been added yet. See the :ref:`dataset-editing` section to learn how to add new features.

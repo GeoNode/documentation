@@ -1,36 +1,36 @@
-.. _layer-editing:
+.. _dataset-editing:
 
-Layer Editing
+Dataset Editing
 =============
 
-The :guilabel:`Editing Tools` button of the *Layer Page* (see :ref:`layer-info`) opens a panel like the one shown in the picture below.
+The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of options like ones shown in the picture below.
 
 .. figure:: img/layer_editing_panel.png
      :align: center
 
-     *The Layer Editing panel*
+     *The Dataset Editing Link*
 
 In that panel you can see many options grouped by four categories:
 
 1. *Metadata*
 2. *Styles*
 3. *Thumbnail*
-4. *Layer*
+4. *Dataset*
 
-In this section you will learn how to edit a *Layer*, how to replace and edit its data. See :ref:`layer-metadata` to learn how to explore the layer *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`layer-style`.
+In this section you will learn how to edit a *Dataset*, how to replace and edit its data. See :ref:`dataset-metadata` to learn how to explore the dataset *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`dataset-style`.
 
-Setting the Layer Thumbnail
+Setting the Dataset Thumbnail
 ---------------------------
 
-| The Thumbnail of the layer that will be displayed on the *Layers* list page can be changed by dragging and zooming on the layer preview to select which portion will be displayed, then by clicking on the :guilabel:`Set` button of the *Layer Editing* panel.
+| The Thumbnail of the dataset that will be displayed on the *Datasets* list page can be changed by dragging and zooming on the dataset preview to select which portion will be displayed, then by clicking on the :guilabel:`Set` button of the *Dataset Editing* panel.
 | A message will confirm the thumbnail has been correctly changed.
 
 .. figure:: img/set_thumbnail_confirmation_message.png
      :align: center
 
-     *The Layer Editing panel*
+     *The Dataset Editing panel*
 
-It is also possible to manually upload a thumbnail by using the :guilabel:`Upload` button of the *Layer Editing* panel.
+It is also possible to manually upload a thumbnail by using the :guilabel:`Upload` button of the *Dataset Editing* panel.
 Using the "Upload Thumbnail" page it is possible to enable the automatically generated thumbnail or upload an image to be used in place of it.
 
 .. figure:: img/upload_thumbnail.png
@@ -39,65 +39,65 @@ Using the "Upload Thumbnail" page it is possible to enable the automatically gen
      *The Upload Thumbnail panel*
 
 
-Replacing the Layer
+Replacing the Dataset
 -------------------
 
-From the *Layer Editing* panel click on :guilabel:`Replace` to change the layer source dataset. You will be driven to the *Replace Layer* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
+From the *Dataset Editing* panel click on :guilabel:`Replace` to change the dataset source dataset. You will be driven to the *Replace Dataset* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
 
 .. figure:: img/replace_layer_page.png
      :align: center
 
-     *Replace a Layer*
+     *Replace a Dataset*
 
-Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Replace Layer`. If no errors occur you will see a message like the one in the picture below.
+Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Replace Dataset`. If no errors occur you will see a message like the one in the picture below.
 
 .. figure:: img/replace_layer_success.png
      :align: center
 
-     *Replace Layer success*
+     *Replace Dataset success*
 
-We have replaced the *roads* dataset with the *railways* one. You can see the differences in the *Layer Preview*.
+We have replaced the *roads* dataset with the *railways* one. You can see the differences in the *Dataset Preview*.
 
 .. figure:: img/replace_layer_result.png
      :align: center
 
-     *Result of the Layer Replacement*
+     *Result of the Dataset Replacement*
 
-.. _layer-data-editing:
+.. _dataset-data-editing:
 
-Append Data to Layer
+Append Data to Dataset
 --------------------
 
-From the *Layer Editing* panel click on :guilabel:`Append` to append data to the layer source dataset. You will be driven to the *Append Layer* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
+From the *Dataset Editing* panel click on :guilabel:`Append` to append data to the dataset source dataset. You will be driven to the *Append Dataset* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
 
 .. figure:: img/layer_append.png
      :align: center
 
-     *Append to a Layer*
+     *Append to a Dataset*
 
-Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Append to Layer`. If no errors occur you will see a message like the one in the picture below.
+Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Append to Dataset`. If no errors occur you will see a message like the one in the picture below.
 
 .. figure:: img/layer_append_success.png
      :align: center
 
-     *Replace Layer success*
+     *Replace Dataset success*
 
-We have append the *layer_name* dataset to the existing one. You can see the differences in the *Layer Preview*.
+We have append the *layer_name* dataset to the existing one. You can see the differences in the *Dataset Preview*.
 
 
-.. _layer-data-editing:
+.. _dataset-data-editing:
 
-Editing the Layer Data
+Editing the Dataset Data
 ----------------------
 
-The :guilabel:`Edit data` button of the *Layer Editing* panel opens the *Layer* within a *Map*.
+The :guilabel:`Edit data` button of the *Dataset Editing* panel opens the *Dataset* within a *Map*.
 
 .. figure:: img/editing_layer_data.png
      :align: center
 
-     *Editing the Layer Data*
+     *Editing the Dataset Data*
 
-The *Attribute Table* panel of the *Layer* will automatically appear at the bottom of the *Map*. In that panel all the features are listed. For each feature you can zoom to its extent by clicking on the corresponding *magnifying glass* icon |magnifying_glass_icon| at the beginning of the row, you can also observe which values the feature assumes for each attribute.
+The *Attribute Table* panel of the *Dataset* will automatically appear at the bottom of the *Map*. In that panel all the features are listed. For each feature you can zoom to its extent by clicking on the corresponding *magnifying glass* icon |magnifying_glass_icon| at the beginning of the row, you can also observe which values the feature assumes for each attribute.
 
 .. |magnifying_glass_icon| image:: img/magnifying_glass_icon.png
      :width: 30px
@@ -115,7 +115,7 @@ Now you can:
 
 * *Add new Features*
 
-  Through the *Add New Feature* button |add_new_feature_button| it is possible to set up a new feature for your layer.
+  Through the *Add New Feature* button |add_new_feature_button| it is possible to set up a new feature for your dataset.
   Fill the attributes fields and click |save_changes_button| to save your change.
   Your new feature doesn't have a shape yet, click on |add_shape_to_geometry_button| to draw its shape directly on the *Map* then click on |save_changes_button| to save it.
 
@@ -137,7 +137,7 @@ Now you can:
   .. figure:: img/add_new_feature.gif
        :align: center
 
-       *Add a New Feature to the Layer*
+       *Add a New Feature to the Dataset*
 
   .. note:: When your new feature has a multi-vertex shape you have to double-click the last vertex to finish the drawing.
 

@@ -5,94 +5,26 @@ Dataset Editing
 
 The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of options like ones shown in the picture below.
 
-.. figure:: img/layer_editing_panel.png
+.. figure:: img/dataset_editing_link.png
      :align: center
 
-     *The Dataset Editing Link*
+     *Dataset Editing Link*
 
-In that panel you can see many options grouped by four categories:
+In that options list, you can see three options listed as:
+1. *Edit Metadata*
+2. *Edit Styles*
+3. *Edit Data*
 
-1. *Metadata*
-2. *Styles*
-3. *Thumbnail*
-4. *Dataset*
-
-In this section you will learn how to edit a *Dataset*, how to replace and edit its data. See :ref:`dataset-metadata` to learn how to explore the dataset *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`dataset-style`.
-
-Setting the Dataset Thumbnail
----------------------------
-
-| The Thumbnail of the dataset that will be displayed on the *Datasets* list page can be changed by dragging and zooming on the dataset preview to select which portion will be displayed, then by clicking on the :guilabel:`Set` button of the *Dataset Editing* panel.
-| A message will confirm the thumbnail has been correctly changed.
-
-.. figure:: img/set_thumbnail_confirmation_message.png
-     :align: center
-
-     *The Dataset Editing panel*
-
-It is also possible to manually upload a thumbnail by using the :guilabel:`Upload` button of the *Dataset Editing* panel.
-Using the "Upload Thumbnail" page it is possible to enable the automatically generated thumbnail or upload an image to be used in place of it.
-
-.. figure:: img/upload_thumbnail.png
-     :align: center
-
-     *The Upload Thumbnail panel*
-
-
-Replacing the Dataset
--------------------
-
-From the *Dataset Editing* panel click on :guilabel:`Replace` to change the dataset source dataset. You will be driven to the *Replace Dataset* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
-
-.. figure:: img/replace_layer_page.png
-     :align: center
-
-     *Replace a Dataset*
-
-Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Replace Dataset`. If no errors occur you will see a message like the one in the picture below.
-
-.. figure:: img/replace_layer_success.png
-     :align: center
-
-     *Replace Dataset success*
-
-We have replaced the *roads* dataset with the *railways* one. You can see the differences in the *Dataset Preview*.
-
-.. figure:: img/replace_layer_result.png
-     :align: center
-
-     *Result of the Dataset Replacement*
-
-.. _dataset-data-editing:
-
-Append Data to Dataset
---------------------
-
-From the *Dataset Editing* panel click on :guilabel:`Append` to append data to the dataset source dataset. You will be driven to the *Append Dataset* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
-
-.. figure:: img/layer_append.png
-     :align: center
-
-     *Append to a Dataset*
-
-Once the *Charset* selected the upload process can be triggered by clicking on :guilabel:`Append to Dataset`. If no errors occur you will see a message like the one in the picture below.
-
-.. figure:: img/layer_append_success.png
-     :align: center
-
-     *Replace Dataset success*
-
-We have append the *layer_name* dataset to the existing one. You can see the differences in the *Dataset Preview*.
-
+In this section you will learn how to edit a *Dataset*, and its data. See :ref:`dataset-metadata` to learn how to explore the dataset *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`dataset-style`.
 
 .. _dataset-data-editing:
 
 Editing the Dataset Data
 ----------------------
 
-The :guilabel:`Edit data` button of the *Dataset Editing* panel opens the *Dataset* within a *Map*.
+The :guilabel:`Edit data` link of the *Dataset Editing* options opens the *Dataset* within a *Map*.
 
-.. figure:: img/editing_layer_data.png
+.. figure:: img/editing_dataset_data.png
      :align: center
 
      *Editing the Dataset Data*
@@ -181,10 +113,5 @@ Now you can:
        *Feature Attributes Editing*
 
 Once you have finished you can end the *Editing Session* by clicking on the |end_editing_session_button| button.
-
-.. |end_editing_session_button| image:: img/end_editing_session_button.png
-     :width: 30px
-     :height: 30px
-     :align: middle
 
 By default the GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/>`_ for further information.

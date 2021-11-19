@@ -3,36 +3,16 @@
 Maps Metadata
 =============
 
-*Maps Metadata* can be explored by clicking the :guilabel:`Metadata Detail` button from the *Map Information* page.
+*Maps Metadata* can be Edited by clicking the :guilabel:`Edit Metadata` link from the *Map Detail* page.
 
 .. figure:: img/map_metadata_detail_button.png
     :align: center
 
-    *The Map Metadata Detail button*
+    *The Map Metadata Detail link*
 
-The *Map Metadata* page will open.
-
-.. figure:: img/map_metadata_details_page.png
-    :align: center
-
-    *The Map Metadata Details*
-
-Lots of information are displayed in this page. Those information are grouped as follow:
-
-    * *Identification* to uniquely identify the map (Title, License, Publication Date and Regions. There are also some flags which tell you the state of the map, in particular if it is Approved and/or Published);
-    * the map *Owner*;
-    * *Information*, the Identification Image, the Spatial Extent, the Projection System and the Extent;
-    * *Features*, Language, Supplemental and other Information;
-    * *Contact Points*, the available user to get in contact;
-    * *References*, links to the map and its metadata;
-    * *Metadata Author*, information about the author of the metadata.
-
-Metadata Wizard
----------------
-
+The *Map Metadata* Edit form will open.
 | Metadata provide essential information for the identification and the comprehension of the map. They also make the map more easily retrievable through the search tools.
-| Those *Metadata* can be filled out through a three-steps *Wizard* in which you have to provide all mandatory information to complete the process. Those three steps are described below.
-
+| Those *Metadata* can be filled out through three-steps in which you have to provide all mandatory information to complete the process. Those three steps are described below.
 
 * **Basic Metadata**
 
@@ -103,11 +83,14 @@ If you miss some mandatory metadata the *Completeness* bar shows you a red messa
 Metadata Advanced Editing
 -------------------------
 
-The :guilabel:`Advanced Edit` editing tool allows to change the map metadata. You can find this button into the map *Editing Tools*.
+The :guilabel:`Advanced Metadata` editing button in the Metadata Edit form allows to change the map metadata.
 
 .. figure:: img/advanced_edit_button.png
     :align: center
 
     *The Advanced Edit button*
 
-Click on it to display the *Metadata Advanced Editing Page*. That page allows you to edit all the layer metadata described in the previous paragraph. Once you have finished to edit them click on :guilabel:`Update` to save your changes.
+Click on it to display the *Metadata Advanced Editing Page*.
+That page allows you to edit all the map metadata described in the previous paragraph.
+
+Once you have finished to edit them click on :guilabel:`Update` to save your changes.

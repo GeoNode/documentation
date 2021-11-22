@@ -1,6 +1,6 @@
 .. _options-menu-tools:
 
-Options Menu Tools
+Other Menu Tools
 ==================
 
 .. |burger_menu_button| image:: ../img/burger_menu_button.png
@@ -8,20 +8,18 @@ Options Menu Tools
     :height: 30px
     :align: middle
 
-At the top-right corner of the *Map* there is a *Burger Menu* button |burger_menu_button|. Click on it to open the *Map Options* panel.
+At the top of the *Map* there are more menu items which we are are going to explain in this section.
 
 .. figure:: img/options_menu_tools.png
      :align: center
 
      *The Map Options Menu*
 
-We will explain those tools more in depth in the next paragraphs.
-
 Printing a Map
 --------------
 
 | The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer of GeoNode allows you to print your map with a customizable layout.
-| Click the :guilabel:`PRINT` option from the *Map Options Menu*, the **Printing Window** will open.
+| Click the :guilabel:`Print` option from the *Menu*, the **Printing Window** will open.
 
 .. figure:: img/printing_window.png
      :align: center
@@ -51,24 +49,24 @@ From this window you can:
 
 To print the map click on :guilabel:`Print`.
 
-The Layers Catalog
+The Datasets Catalog
 ------------------
 
-All the layers available in GeoNode, both uploaded and remote, can be loaded on the map through the *Catalog*.
-Click on the :guilabel:`CATALOG` option of the *Map Options Menu* to take a look at the catalog panel.
+All the datasets available in GeoNode, both uploaded and remote, can be loaded on the map through the *Catalog*.
+Click on the :guilabel:`Catalog` option of the *Menu* to take a look at the catalog panel.
 
-.. figure:: img/layers_catalog.png
+.. figure:: img/datasets_catalog.png
      :align: center
 
-     *The Layers Catalog*
+     *The Datasets Catalog*
 
-You can navigate through layers and look at their *Thumbnail* images, *Title*, *Description* and *Abstract*.
-Click on :guilabel:`Add To Map` to load a layer into the map, it will be also visible in the :ref:`toc`.
+You can navigate through datasets and look at their *Thumbnail* images, *Title*, *Description* and *Abstract*.
+Click on :guilabel:`Add To Map` to load a dataset into the map, it will be also visible in the :ref:`toc`.
 
 Performing Measurements
 -----------------------
 
-Click on the :guilabel:`MEASURE` option of the *Map Options Menu* to perform a measurement.
+Click on the :guilabel:`Measure` option of the *Menu* to perform a measurement.
 As you can see in the picture below, this tool allows you to measure *Distances*, *Areas* and the *Bearing* of lines.
 
 .. figure:: img/measure_tool.png
@@ -86,7 +84,10 @@ As you can see in the picture below, this tool allows you to measure *Distances*
 Saving a map
 ------------
 
-| Once all the customizations have been carried out, you can *Save* your map by clicking on the :guilabel:`SAVE AS` option of the *Map Options Menu*.
+| Once all the customizations have been carried out, you can *Save* your map by clicking on the :guilabel:`Save` option of the *Menu*.
+| Click :guilabel:`Save` again under the Save options.
+
+|You could create a new map from the existing view by clicking :guilabel:`Save As..`.
 | A new popup window will open.
 
 .. figure:: img/saving_map.png
@@ -94,9 +95,4 @@ Saving a map
 
      *Saving Maps*
 
-You have to fill out a *Title* and an optional *Description*, then click on :guilabel:`Save`. The page will reload and your map should be visible in the :ref:`finding-data` list.
-
-.. figure:: img/my_map.png
-     :align: center
-
-     *Your Map into the List*
+The current map title is filled by default, You can change it to the prefered naming then click on :guilabel:`Save`. The page will reload and your map should be visible in the :ref:`finding-data` list.

@@ -3,15 +3,7 @@
 Exploring Maps
 ==============
 
-From the :guilabel:`Explore Maps` link of the navigation bar you can reach the *Maps List* page (see :ref:`finding-maps`).
-Select a map you are interested in and click on it, the *Map Page* will open.
-
-.. figure:: img/view_map_button.png
-     :align: center
-
-     *The View Map button*
-
-Click on the :guilabel:`View Map` button to open the *Map Viewer*.
+In this section, we are going to explore all tools provided on the Map View page. From the list of available maps, you can select the map you are interested in and click *View map*, THe map vie will look like this.
 
 .. figure:: img/explore_map_viewer.png
      :align: center
@@ -23,7 +15,7 @@ The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/
 * the :ref:`toc` to manage the map contents;
 * the *Basemap Switcher* to change the basemap (see the next paragraphs);
 * the *Search Bar* to search by location, name and coordinates (see the paragraph below);
-* the :ref:`options-menu-tools` which contains the link to the *Print* tool, to the layers *Catalog* and to the *Measure* tool;
+* the :ref:`options-menu-tools` which contains the link to the *Print* tool, to the datasets *Catalog* and to the *Measure* tool;
 * the *Sidebar* and its tools such as the *Zoom* tools and the *Get Features Info* tool;
 * the *Footer Tools* to manage the scale of the map, to track the mouse coordinates and change the CRS (Coordinates Reference System).
 
@@ -125,22 +117,17 @@ Sidebar Tools
 The *Sidebar* contains the following tools:
 
 * The *Query Objects on map* allows you to get feature information through the |query_objects_on_map_button| button.
-  It allows you to retrieve information about the features of some layers by clicking them directly on the map.
+  It allows you to retrieve information about the features of some datasets by clicking them directly on the map.
 
   .. figure:: img/querying_objects_on_map.gif
       :align: center
 
       *Querying Objects on map*
 
-  When clicking on map a new panel opens. That panel will show you all the information about the clicked features for each active loaded layer.
+  When clicking on map a new panel opens. That panel will show you all the information about the clicked features for each active loaded dataset.
 
 * You can *Zoom To Max Extent* by clicking |zoom_to_max_extent_button|.
 
-* You can switch between the previous and the next zoom level through the *Go Back* button |go_back_button| and the *Go Forward* one |go_forward_button|.
-
-* The *Switch to Full Screen* |full_screen_button| button allows to have a full screen map.
-
-.. _basemap-switcher:
 
 Basemap Switcher
 ----------------
@@ -170,7 +157,7 @@ Footer Tools
 
 At the bottom of the map, the *Footer* shows you the *Scale* of the map and allows you to change it.
 
-.. figure:: img/map_scale.png
+.. figure:: img/map_scale.gif
     :align: center
     :height: 600px
 

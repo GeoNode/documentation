@@ -65,11 +65,6 @@ On the left you get a list of media documents available with a complementary tex
 
 To save your GeoStory, on the top your Geostory content choose :guilabel:`Save` and then :guilabel:`Save as...`
 
-.. figure:: img/save_geostory.png
-    :align: center
-
-    *Save GeoStory*
-
 Now your GeoStory can be shared with everyone!
 
 Further Reading

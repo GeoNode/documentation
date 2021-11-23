@@ -16,4 +16,4 @@ If no errors occur you will see a confirmation message.
 
      *Change password confirmation*
 
-Next time you log in you will have to use the new password.
+Next time you signin, you will have to use the new password.

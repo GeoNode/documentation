@@ -35,13 +35,7 @@ The visual editor looks like this
 
      *Visual Styles Panel in the Map*
 
-You can then edit the style by clicking on each attribute of the style. see an example below.
-
-.. figure:: img/edit_style.gif
-     :align: center
-
-     *Style Editing*
-
+You can then edit the style by clicking on each attribute of the style.
 
 Creating Style Rules
 -------------------
@@ -68,7 +62,7 @@ The rule you have chosen is now added on the top with default attributes which y
 
 If the rule has errors, the following will be shown.
 
-.. figure:: img/edit_style_error.gif
+.. figure:: img/edit_style_error.png
     :align: center
 
     *Rule Error*

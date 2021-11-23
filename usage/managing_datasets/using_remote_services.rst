@@ -66,11 +66,6 @@ GeoNode supports four **types of remote services**:
   .. note:: Try the following service to better understand how it works: ``https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer``.
 
 Once the service has been configured, you can load the resources you are interested in through the *Import Resources* page where you will be automatically redirected to.
-The availabe resources will be fetcheched by the havester.
-.. figure:: img/remote_service_resources.png
-    :align: center
-
-    *Remote Service Resources*
 
 | From the page where the services are listed, it is possible to click on the *Title* of a service. It opens the *Service Details* page.
 | Each service has its own metadata such as the *Service Type*, the *URL*, an *Abstract*, some *Keywords* and the *Contact* user.

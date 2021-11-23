@@ -11,6 +11,7 @@ The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of opt
      *Dataset Editing Link*
 
 In that options list, you can see three options listed as:
+
 1. *Edit Metadata*
 2. *Edit Styles*
 3. *Edit Data*
@@ -66,12 +67,12 @@ Now you can:
        :height: 30px
        :align: middle
 
-  .. figure:: img/add_new_feature.gif
-       :align: center
-
-       *Add a New Feature to the Dataset*
-
   .. note:: When your new feature has a multi-vertex shape you have to double-click the last vertex to finish the drawing.
+
+.. figure:: img/create_new_feature.png
+     :align: center
+
+     *Create New Feature*
 
 * *Delete Features*
 
@@ -82,36 +83,21 @@ Now you can:
        :height: 30px
        :align: middle
 
-  .. figure:: img/delete_feature.gif
-       :align: center
-
-       *Delete a Feature*
-
 * *Change the Feature Shape*
 
   You can edit the shape of an existing geometry dragging its vertices with the mouse. A blue circle lets you know what vertex you are moving.
 
-  .. figure:: img/edit_feature_shape.gif
-       :align: center
-
-       *Feature Shape Editing - Change the existing shape*
-
   Features can have *multipart shapes*. You can add parts to the shape when editing it.
-
-  .. figure:: img/add_shape_to_existing_geometry.gif
-      :align: center
-
-      *Feature Shape Editing -  Add parts to the existing shape*
 
 * *Change the Feature Attributes*
 
-  When you are in *Edit Mode* you can also edit the attributes values changing them directly in the corresponding text fields.
+  When you are in *Edit Mode* you can also edit the attributes values changing them directly in the corresponding text fields. You can achieve this by going into the edit mode and double click in the values.
 
-  .. figure:: img/edit_feature_attributes.gif
-       :align: center
+Once you have finished you can end the *Editing Session* by clicking on the |end_editing_session_button|.
 
-       *Feature Attributes Editing*
-
-Once you have finished you can end the *Editing Session* by clicking on the |end_editing_session_button| button.
+  .. |end_editing_session_button| image:: img/end_editing_session_button.png
+       :width: 30px
+       :height: 30px
+       :align: middle
 
 By default the GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/>`_ for further information.

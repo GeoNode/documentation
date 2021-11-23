@@ -20,7 +20,7 @@ From the *TOC* you can:
 * manage the datasets properties such as *Opacity* (scroll the opacity cursor), *Visibility* (click on |hide_button| to make the dataset not visible, click on |show_button| to show it on map);
 * manage the *Dataset Settings*, see the next paragraph.
 
-.. figure:: img/scrolling_opacity.gif
+.. figure:: img/scrolling_opacity.png
      :align: center
      :height: 400px
 

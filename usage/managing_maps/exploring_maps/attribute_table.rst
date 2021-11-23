@@ -73,12 +73,7 @@ Those functionalities are:
 
 
 * | *Hide/show columns*
-  | When clicking on |hide_show_columns_button| another panel opens inside the *Attributes Table*. Through that panel you can choose what columns you want to see, see the picture below.
-
-  .. figure:: img/hide_show_columns.gif
-      :align: center
-
-      *Hide/Show Columns of the Attributes Table*
+  | When clicking on |hide_show_columns_button| another panel opens inside the *Attributes Table*. Through that panel you can choose what columns you want to see.
 
   .. |hide_show_columns_button| image:: img/hide_show_columns_button.png
      :width: 30px

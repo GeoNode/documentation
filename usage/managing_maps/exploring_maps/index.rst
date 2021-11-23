@@ -119,7 +119,7 @@ The *Sidebar* contains the following tools:
 * The *Query Objects on map* allows you to get feature information through the |query_objects_on_map_button| button.
   It allows you to retrieve information about the features of some datasets by clicking them directly on the map.
 
-  .. figure:: img/querying_objects_on_map.gif
+  .. figure:: img/querying_objects_on_map.png
       :align: center
 
       *Querying Objects on map*
@@ -132,7 +132,7 @@ The *Sidebar* contains the following tools:
 Basemap Switcher
 ----------------
 
-By default, GeoNode allows to enrich maps with many world backgrounds:
+By default, GeoNode allows to enrich maps with many world backgrounds. You can open available backgrounds by clicking on the map tile below:
 
 * *OpenStreetMap*
 * *OpenTopoMap*
@@ -146,7 +146,7 @@ By default, GeoNode allows to enrich maps with many world backgrounds:
 
 You can also decide to have an *Empty Background*.
 
-.. figure:: img/basemap_switching.gif
+.. figure:: img/basemap_switching.png
     :align: center
     :height: 400px
 
@@ -157,7 +157,7 @@ Footer Tools
 
 At the bottom of the map, the *Footer* shows you the *Scale* of the map and allows you to change it.
 
-.. figure:: img/map_scale.gif
+.. figure:: img/map_scaling.png
     :align: center
     :height: 600px
 

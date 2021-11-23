@@ -1,6 +1,6 @@
 .. _getfetureinfo-templates:
 
-Customizing The Dtasets' GetFeatureInfo Templates
+Customizing The Datasets' GetFeatureInfo Templates
 ================================================
 When “clicking” over a feature of a dataset into a GeoNode Map, an info window popups showing a formatted representation of the raw data identified by the coordinates (see Fig. 1)
 

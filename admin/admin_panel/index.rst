@@ -81,36 +81,36 @@ Jumbotron and Get Started link
 .. note:: Remember, everytime you want to apply some changes to the Theme, you **must** save the Theme and reload the GeoNode browser tab.
     In order to quickly switch back to the Home page, you can just click the ``VIEW SITE`` link on the top-right corner of the Admin dashboard.
 
-    .. figure:: img/theming/theme-def-0003c.png
+    .. figure:: img/theming/view_site.png
         :align: center
 
 The next section, allows you to define the first important Theme properties. This part involves the GeoNode main page sections.
 
-.. figure:: img/theming/theme-def-0003.png
+.. figure:: img/theming/theme_properties.png
     :align: center
 
     *Jumbotron and Logo options*
 
 By changing those properties as shown above, you will easily change your default home page from this
 
-.. figure:: img/theming/theme-def-0003a.png
+.. figure:: img/theming/default_theme.png
     :align: center
 
     *GeoNode Default Home*
 
 to this
 
-.. figure:: img/theming/theme-def-0003b.png
+.. figure:: img/theming/first_customization.png
     :align: center
 
     *Updating Jumbotron and Logo*
 
-It is possible to optionally **hide** the ``Jumbotron text`` and/or the ``Call to action`` button
+It is possible to optionally **hide** the ``Jumbotron text``
 
-.. figure:: img/theming/theme-def-0003d.png
+.. figure:: img/theming/hide_jumbotron.png
     :align: center
 
-.. figure:: img/theming/theme-def-0003e.png
+.. figure:: img/theming/hide_jumbotron_view.png
     :align: center
 
     *Hide Jumbotron text and Call to action button*
@@ -158,140 +158,6 @@ Selecting the above slide in a slide show and enabling slide show (using the "we
 
 .. figure:: img/theming/theme-def-0007h.png
     :align: center
-
-Copyright and contact info footer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The default GeoNode footer does not present any type of contact info.
-
-.. figure:: img/theming/theme-def-0004.png
-    :align: center
-
-    *Default GeoNode Footer*
-
-By enabling and editing the ``contact us box`` fields
-
-.. figure:: img/theming/theme-def-0004a.png
-    :align: center
-
-    *Enable contact us box*
-
-it will be possible to show a simple *Contact Us* info box on the GeoNode footer section.
-
-.. figure:: img/theming/theme-def-0004b.png
-    :align: center
-
-    *Contact Us Footer*
-
-Similarly, by editing the ``Copyright`` text box and/or background color
-
-.. figure:: img/theming/theme-def-0004c.png
-    :align: center
-
-    *Copyright Text and Color*
-
-it will be possible to show the Copyright statement to the bottom of the page
-
-.. figure:: img/theming/theme-def-0004d.png
-    :align: center
-
-    *Copyright*
-
-Partners
-^^^^^^^^
-
-GeoNode simple theming, allows also a ``Partners`` section, in order to easily list links to third-party institutions collaborating to the project.
-
-The example below shows the ``Partners`` section of `WorldBank CHIANG MAI URBAN FLOODING <https://urbanflooding.geo-solutions.it/>`_ GeoNode instance
-made through integrating theming options.
-
-.. figure:: img/theming/theme-def-0005.png
-    :align: center
-
-    *Urban-flooding GeoNode Partners Section*
-
-The ``Partners`` items can be managed through the ``http://<your_geonode_host>/admin/geonode_themes/partner/`` Admin section
-
-.. figure:: img/theming/theme-def-0005a.png
-    :align: center
-
-    *GeoNode Partners Admin Section*
-
-From here it is possible to add, modify or delete partners items.
-
-A new partner is defined by few elements, a ``Logo``, a ``Name``, a ``Display Name`` and a ``Website``
-
-.. figure:: img/theming/theme-def-0005b.png
-    :align: center
-
-    *Add a Partner*
-
-In order to attach or detach a ``Partner`` to an existing ``Theme`` on GeoNode, you will need to edit the Theme and go to the ``Partners`` section
-
-.. figure:: img/theming/theme-def-0005c.png
-    :align: center
-
-    *Theme Partners Section*
-
-From here you will be able to either to change the ``Partners title`` text and/or select/deselect ``Partners`` from the ``multi-select`` box.
-
-.. note:: In order to select/deselect elements from the ``multi-select`` box, you **must** use the ``CTRL+CLICK`` button combination.
-
-Privacy Policies and Cookie settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-By enabling the ``Cookies Law Info Bar`` checkbox (``True`` by default)
-
-.. figure:: img/theming/theme-def-0006.png
-    :align: center
-
-    *Cookies Law Info Bar checkbox*
-
-it will be possible to allow GeoNode presenting the `Privacy Policies and Cookie settings` pop-ups and links at the bottom of the home page
-
-.. figure:: img/theming/theme-def-0006a.png
-    :align: center
-
-    *Cookies Law Info Bar*
-
-There are plenty of options available, allowing you to customize contact info as long as colors of the bar and page.
-
-One of the most important to consider it is for sure the ``Cookie law info bar text``
-
-.. figure:: img/theming/theme-def-0006b.png
-    :align: center
-
-    *Cookie law info bar text*
-
-The default text contained in this section is the following one
-
-.. code-block:: html
-
-    This website uses cookies to improve your experience,
-    check <strong><a style="color:#000000" href="/privacy_cookies/">this page</a></strong> for details.
-    We'll assume you're ok with this, but you can opt-out if you wish.
-
-
-The text can be changed and customized, of course. Nevertheless it points by default to the following page
-
-.. code-block:: shell
-
-    /privacy_cookies/
-
-aka `http://<your_geonode_host>/privacy_cookies/`
-
-.. figure:: img/theming/theme-def-0006c.png
-    :align: center
-
-    */privacy_cookies/ Default Page*
-
-The page contains a default generic text along with some placeholders, which, most probably, won't feet your needs.
-
-In order to change this you have two options:
-
-1. Change the link reported into the ``Cookie law info bar text`` section, to make it pointing to an external/static page.
-
-2. Change the contents of ``/geonode/templates/privacy-cookies.html`` Django template accordingly to your needs; this is basically a plain ``HTML`` page which can be easily customized by using a standard text editor.
 
 Switching between different themes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -848,7 +714,7 @@ In other words the options available from the :guilabel:`select-boxes` of the :g
         :align: center
 
         *Metadata Completeness*
-    
+
     Even if not all the fields have been filled, the system won't prevent you to update the metadata; this is why the ``Mandatory`` fields are
     mandatory to be fully compliant with an ``ISO 19115`` metadata schema, but are only recommended to be compliant with GeoNode.
 
@@ -1128,7 +994,7 @@ The hierarchical structure of a custom ``Menu`` is the following one:
         :align: center
 
         *Create a new Menu from the Admin panel*
-    
+
     You will need to provide:
 
     * A ``Title``, representing the name of the ``Menu`` visible by the users
@@ -1158,7 +1024,7 @@ This small section won't cover entirely the GeoNode OAuth2 security integration,
 
 Here we will focus mainly on the :guilabel:`Admin > DJANGO/GEONODE OAUTH TOOLKIT` panel items with a specific attention to the ``Access tokens`` management.
 
-The :guilabel:`Admin > DJANGO/GEONODE OAUTH TOOLKIT` panel (as shown in the figure below) allows an admin to manage everything related to 
+The :guilabel:`Admin > DJANGO/GEONODE OAUTH TOOLKIT` panel (as shown in the figure below) allows an admin to manage everything related to
 GeoNode OAuth2 grants and permissions.
 
 As better explained in other sections of the documentation, this is needed to correctly handle the communication between GeoNode and GeoServer.
@@ -1170,7 +1036,7 @@ As better explained in other sections of the documentation, this is needed to co
 
 Specifically from this panel an admin can create, delete or extend OAuth2 ``Access tokens``.
 
-The section :ref:`oauth2_tokens_and_sessions` better explains the concepts behind OAuth2 sessions; we want just to refresh the mind here 
+The section :ref:`oauth2_tokens_and_sessions` better explains the concepts behind OAuth2 sessions; we want just to refresh the mind here
 about the basic concepts:
 
 * If the `SESSION_EXPIRED_CONTROL_ENABLED <../../basic/settings/index.html#session-expired-control-enabled>`_ setting is set to `True` (by default it is set to `True`)

@@ -2007,6 +2007,34 @@ SECURE_SSL_REDIRECT
     If True, the SecurityMiddleware redirects all non-HTTPS requests to HTTPS (except for those URLs matching a regular expression listed in SECURE_REDIRECT_EXEMPT).
     This is `Django settings: <https://docs.djangoproject.com/en/3.2/ref/settings/#secure-ssl-redirect>`__
 
+SERVICES_TYPE_MODULES
+---------------------
+
+It's possible to define multiple Service Types Modules for custom service type with it's own Handler.
+
+The variable should be declared in this way in `settings.py`:
+
+`SERVICES_TYPE_MODULES = [ 'path.to.module1','path.to.module2', ... ]`
+
+Default service types are already included
+
+Inside each module in the list we need to define a variable:
+
+`services_type = {
+    "<key_of_service_type>": {
+        "OWS": True/False,
+        "handler": "<path.to.Handler>",
+        "label": "<label to show in remote service page>",
+        "management_view": "<path.to.view>"
+    }
+}`
+
+the key_of_service_type is just an identifier to assign at the service type.
+OWS is True if the service type is an OGC Service Compliant.
+The handler key must contain the path to the class who will provide all methods to manage the service type
+The label is what is shown in the service form when adding a new service.
+The management_view, if exists, must contain the path to the method where the management page is opened.
+
 SERVICE_UPDATE_INTERVAL
 -----------------------
 

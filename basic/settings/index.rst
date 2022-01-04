@@ -457,17 +457,6 @@ CACHES
     The ``'resources'`` is not currently used. It might be helpful for `caching Django template fragments <https://docs.djangoproject.com/en/3.2/topics/cache/#template-fragment-caching>`__ and/or `Tastypie API Caching <https://django-tastypie.readthedocs.io/en/latest/caching.html>`__.
 
 
-CACHE_BUSTING_MEDIA_ENABLED
----------------------------
-
-    | Default: ``False``
-    | Env: ``CACHE_BUSTING_MEDIA_ENABLED``
-
-    This is a `Django ManifestStaticFilesStorage storage setting <https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__
-    A boolean allowing you to enable the ``ManifestStaticFilesStorage storage``. This works only on a production system.
-
-    .. warning:: This works only if ``DEBUG = False``
-
 CACHE_BUSTING_STATIC_ENABLED
 ----------------------------
 

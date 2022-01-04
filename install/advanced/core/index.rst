@@ -876,7 +876,6 @@ Serving {“geonode”, “geoserver”} via NGINX
   SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
 
   env = CACHE_BUSTING_STATIC_ENABLED=False
-  env = CACHE_BUSTING_MEDIA_ENABLED=False
 
   env = MEMCACHED_ENABLED=False
   env = MEMCACHED_BACKEND=django.core.cache.backends.memcached.MemcachedCache
@@ -1441,7 +1440,7 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
     pidfile=/var/run/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
     childlogdir=/var/log/supervisor            ; ('AUTO' child log dir, default $TEMP)
-    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",CACHE_BUSTING_MEDIA_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True"
+    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True"
 
     ; the below section must remain in the config file for RPC
     ; (supervisorctl/web interface) to work, additional interfaces may be
@@ -1491,7 +1490,6 @@ The following are the minimum set of env key value pairs you will need for a sta
     - ``GEODATABASE_URL``
     - ``DEBUG``
     - ``CACHE_BUSTING_STATIC_ENABLED``
-    - ``CACHE_BUSTING_MEDIA_ENABLED``
     - ``SITEURL``
     - ``DJANGO_SETTINGS_MODULE``
     - ``GEOSERVER_ADMIN_PASSWORD``

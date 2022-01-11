@@ -318,7 +318,7 @@ First, it is not recommended to run Apache Tomcat as user root, so we will creat
 
 .. code-block:: shell
 
-  VERSION=9.0.48; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+  VERSION=9.0.56; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
 
 
 Once the download is complete, extract the tar file to the /opt/tomcat directory:

@@ -44,7 +44,7 @@ Check that your system is already up-to-date with the repository running the fol
 
 .. code-block:: shell
 
-   sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+   sudo add-apt-repository ppa:ubuntugis/ppa
    sudo apt update -y; sudo apt upgrade -y;
 
 
@@ -60,10 +60,11 @@ First, we are going to install all the **system packages** needed for the GeoNod
 .. code-block:: shell
 
   # Install packages from GeoNode core
-  sudo apt install -y build-essential gdal-bin \
+  sudo apt install -y --allow-downgrades build-essential \
+      python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2 \
       python3.8-dev python3.8-venv virtualenvwrapper \
       libxml2 libxml2-dev gettext libmemcached-dev zlib1g-dev \
-      libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev \
+      libxslt1-dev libjpeg-dev libpng-dev libpq-dev \
       software-properties-common build-essential \
       git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
       sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev 
@@ -74,26 +75,24 @@ First, we are going to install all the **system packages** needed for the GeoNod
 
   # Verify GDAL version
   gdalinfo --version
-    $> GDAL 3.0.4, released 2020/01/28
+    $> GDAL 3.3.2, released 2021/09/01
 
   # Verify Python version
   python3.8 --version
-    $> Python 3.8.5
+    $> Python 3.8.10
 
   which python3.8
     $> /usr/bin/python3.8
 
   # Verify Java version
   java -version
-    $> openjdk version "1.8.0_265"
-    $> OpenJDK Runtime Environment (build 1.8.0_265-8u265-b01-0ubuntu2~20.04-b01)
-    $> OpenJDK 64-Bit Server VM (build 25.265-b01, mixed mode)
+    $> openjdk version "1.8.0_315"
 
   # Install VIM
   sudo apt install -y vim
 
   # Cleanup the packages
-  sudo apt update -y; sudo apt upgrade -y; sudo apt autoremove --purge
+  sudo apt update -y; sudo apt autoremove --purge
 
 .. warning:: GeoNode 3.x is not compatible with Python < 3.7
 

@@ -581,8 +581,8 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/logs
 
   # Download and extract the default GEOSERVER_DATA_DIR
-  sudo wget --no-check-certificate "https://www.dropbox.com/s/cd20is9ddjz7ti5/data-2.18.3.zip?dl=1" -O data-2.18.3.zip
-  sudo unzip data-2.18.3.zip -d /opt/data/
+  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geonode-geoserver-ext-web-app-data.zip" -O data-2.19.x.zip
+  sudo unzip data-2.19.x.zip -d /opt/data/
 
   sudo mv /opt/data/data/ /opt/data/geoserver_data
   sudo chown -Rf tomcat:www-data /opt/data/geoserver_data
@@ -597,8 +597,8 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/gwc_cache_dir
 
   # Download and install GeoServer
-  sudo wget --no-check-certificate "https://www.dropbox.com/s/cmrdzde1oq67pre/geoserver-2.18.3.war?dl=0" -O geoserver-2.18.3.war
-  sudo mv geoserver-2.18.3.war /opt/tomcat/latest/webapps/geoserver.war
+  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geoserver.war" -O geoserver-2.19.x.war
+  sudo mv geoserver-2.19.x.war /opt/tomcat/latest/webapps/geoserver.war
 
 Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Container, like heap memory, garbage collector and so on.
 
@@ -864,7 +864,7 @@ Serving {“geonode”, “geoserver”} via NGINX
   # #################
   env = DEBUG=False
 
-  SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
+  env = SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
 
   env = CACHE_BUSTING_STATIC_ENABLED=False
   env = CACHE_BUSTING_MEDIA_ENABLED=False
@@ -901,9 +901,6 @@ Serving {“geonode”, “geoserver”} via NGINX
   env = CREATE_LAYER=True
   env = FAVORITE_ENABLED=True
 
-  logto = /opt/data/logs/geonode.log
-  # pidfile = /tmp/geonode.pid
-
   chdir = /opt/geonode
   module = geonode.wsgi:application
 
@@ -917,8 +914,7 @@ Serving {“geonode”, “geoserver”} via NGINX
 
   # logging
   # path to where uwsgi logs will be saved
-  # logto = /opt/data/geonode_logs/geonode.log
-
+  logto = /opt/data/logs/geonode.log
   daemonize = /opt/data/logs/geonode.log
   touch-reload = /opt/geonode/geonode/wsgi.py
   buffer-size = 32768
@@ -2508,10 +2504,10 @@ Update the GeoServer instance inside the GeoServer Container
 .. code-block:: shell
 
   cd /usr/local/tomcat/
-  wget --no-check-certificate "https://www.dropbox.com/s/cmrdzde1oq67pre/geoserver-2.18.3.war?dl=1" -O geoserver-2.18.3.war
+  wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geoserver.war" -O geoserver-2.19.x.war
   mkdir tmp/geoserver
   cd tmp/geoserver/
-  unzip /usr/local/tomcat/geoserver-2.18.3.war
+  unzip /usr/local/tomcat/geoserver-2.19.x.war
   rm -Rf data
   cp -Rf /usr/local/tomcat/webapps/geoserver/data/ .
   cd /usr/local/tomcat/

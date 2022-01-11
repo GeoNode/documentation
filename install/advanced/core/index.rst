@@ -325,6 +325,7 @@ Once the download is complete, extract the tar file to the /opt/tomcat directory
 
 .. code-block:: shell
 
+  sudo mkdir /opt/tomcat
   sudo tar -xf apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/; rm apache-tomcat-${VERSION}.tar.gz
 
 Apache Tomcat is updated regulary. So, to have more control over versions and updates, we’ll create a symbolic link as below:
@@ -358,154 +359,43 @@ Create the a systemd file with the following content:
   sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/ /usr/lib/jvm/jre
 
   # Let's create the tomcat service
-  sudo vim /etc/init.d/tomcat9
+  sudo vim /etc/systemd/system/tomcat9.service
 
 .. code-block:: bash
 
-  #!/bin/bash
+  [Unit]
+  Description=Tomcat 9 servlet container
+  After=network.target
 
-  ### BEGIN INIT INFO
-  # Provides:             tomcat9
-  # Required-Start:       $local_fs $remote_fs $network $time
-  # Required-Stop:        $local_fs $remote_fs $network $time
-  # Should-Start:         $syslog
-  # Should-Stop:          $syslog
-  # Default-Start:        2 3 4 5
-  # Default-Stop:         0 1 6
-  # Short-Description:    Apache Tomcat init script
-  ### END INIT INFO
+  [Service]
+  Type=forking
 
-  #Location of JAVA_HOME (bin files)
-  export JAVA_HOME=/usr/lib/jvm/jre
-  export JAVA_OPTS=-Djava.security.egd=file:///dev/urandom
+  User=tomcat
+  Group=tomcat
 
-  #Add Java binary files to PATH
-  export PATH=$JAVA_HOME/bin:$PATH
+  Environment="JAVA_HOME=/usr/lib/jvm/jre"
+  Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom -Djava.awt.headless=true"
 
-  #CATALINA_HOME is the location of the bin files of Tomcat
-  export CATALINA_HOME=/opt/tomcat/latest
+  Environment="CATALINA_BASE=/opt/tomcat/latest"
+  Environment="CATALINA_HOME=/opt/tomcat/latest"
+  Environment="CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid"
+  Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
 
-  #CATALINA_BASE is the location of the configuration files of this instance of Tomcat
-  export CATALINA_BASE=/opt/tomcat/latest
-  export CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid
+  ExecStart=/opt/tomcat/latest/bin/startup.sh
+  ExecStop=/opt/tomcat/latest/bin/shutdown.sh
 
-  #TOMCAT_USER is the default user of tomcat
-  export TOMCAT_USER=tomcat
-
-  #TOMCAT_USAGE is the message if this script is called without any options
-  TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;31mkill\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
-
-  #SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
-  SHUTDOWN_WAIT=20
-
-  tomcat_pid() {
-          echo `ps -fe | grep $CATALINA_BASE | grep -v grep | tr -s " "|cut -d" " -f2`
-  }
-
-  start() {
-    pid=$(tomcat_pid)
-    if [ -n "$pid" ]
-    then
-      echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
-    else
-      # Start tomcat
-      echo -e "\e[00;32mStarting tomcat\e[00m"
-      #ulimit -n 100000
-      #umask 007
-      #/bin/su -p -s /bin/sh $TOMCAT_USER
-          if [ `user_exists $TOMCAT_USER` = "1" ]
-          then
-                  /bin/su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
-          else
-                  echo -e "\e[00;31mTomcat user $TOMCAT_USER does not exists. Starting with $(id)\e[00m"
-                  sh $CATALINA_HOME/bin/startup.sh
-          fi
-          status
-    fi
-    return 0
-  }
-
-  status(){
-            pid=$(tomcat_pid)
-            if [ -n "$pid" ]
-              then echo -e "\e[00;32mTomcat is running with pid: $pid\e[00m"
-            else
-              echo -e "\e[00;31mTomcat is not running\e[00m"
-              return 3
-            fi
-  }
-
-  terminate() {
-          echo -e "\e[00;31mTerminating Tomcat\e[00m"
-          kill -9 $(tomcat_pid)
-  }
-
-  stop() {
-    pid=$(tomcat_pid)
-    if [ -n "$pid" ]
-    then
-      echo -e "\e[00;31mStoping Tomcat\e[00m"
-      #/bin/su -p -s /bin/sh $TOMCAT_USER
-          sh $CATALINA_HOME/bin/shutdown.sh
-
-      let kwait=$SHUTDOWN_WAIT
-      count=0;
-      until [ `ps -p $pid | grep -c $pid` = '0' ] || [ $count -gt $kwait ]
-      do
-        echo -n -e "\n\e[00;31mwaiting for processes to exit\e[00m";
-        sleep 1
-        let count=$count+1;
-      done
-
-      if [ $count -gt $kwait ]; then
-        echo -n -e "\n\e[00;31mkilling processes didn't stop after $SHUTDOWN_WAIT seconds\e[00m"
-        terminate
-      fi
-    else
-      echo -e "\e[00;31mTomcat is not running\e[00m"
-    fi
-
-    return 0
-  }
-
-  user_exists(){
-          if id -u $1 >/dev/null 2>&1; then
-          echo "1"
-          else
-                  echo "0"
-          fi
-  }
-
-  case $1 in
-          start)
-            start
-          ;;
-          stop)
-            stop
-          ;;
-          restart)
-            stop
-            start
-          ;;
-          status)
-                  status
-                  exit $?
-          ;;
-          kill)
-                  terminate
-          ;;
-          *)
-                  echo -e $TOMCAT_USAGE
-          ;;
-  esac
-  exit 0
+  [Install]
+  WantedBy=multi-user.target
 
 Now you can start the Apache Tomcat 9 server and enable it to start on boot time using the following command:
 
 .. code-block:: shell
 
-  sudo chmod +x /etc/init.d/tomcat9
-  sudo /etc/init.d/tomcat9 start
+  sudo systemctl daemon-reload
+  sudo systemctl start tomcat9.service
+  sudo systemctl status tomcat9.service
+  sudo systemctl enable tomcat9.service
+
 
 For verification, type the following ss command, which will show you the 8080 open port number, the default open port reserved for Apache Tomcat Server.
 

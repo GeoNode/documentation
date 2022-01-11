@@ -947,7 +947,42 @@ Serving {“geonode”, “geoserver”} via NGINX
 
   # Restart UWSGI Service
   sudo pkill -9 -f uwsgi
-  sudo service uwsgi restart
+
+.. code-block:: shell
+
+  # Create the UWSGI system service
+
+  # Create the executable
+  sudo vim /usr/bin/geonode-uwsgi-start.sh
+
+    #!/bin/bash
+    sudo uwsgi --ini /etc/uwsgi/apps-enabled/geonode.ini
+
+  sudo chmod +x /usr/bin/geonode-uwsgi-start.sh
+
+  # Create the systemctl Service
+  sudo vim /etc/systemd/system/geonode-uwsgi.service
+
+.. code-block:: shell
+
+  [Unit]
+  Description=GeoNode UWSGI Service
+
+  [Service]
+  User=root
+  PIDFile=/run/geonode-uwsgi.pid
+  ExecStart=/usr/bin/geonode-uwsgi-start.sh
+
+  [Install]
+  WantedBy=multi-user.target
+
+.. code-block:: shell
+
+  # Enable the UWSGI service
+  sudo systemctl daemon-reload
+  sudo systemctl start geonode-uwsgi.service
+  sudo systemctl status geonode-uwsgi.service
+  sudo systemctl enable geonode-uwsgi.service
 
 .. code-block:: shell
 
@@ -1139,7 +1174,6 @@ Restart ``UWSGI`` and update ``OAuth2`` by using the new ``geonode.settings``
 
   # Restart UWSGI
   pkill -9 -f uwsgi
-  service uwsgi restart
 
   # Update the GeoNode ip or hostname
   cd /opt/geonode
@@ -1202,7 +1236,7 @@ In particular the steps to do are:
         :wq
 
         # Restart the service
-        sudo service uwsgi restart
+        sudo service geonode-uwsgi restart
 
     3. Update ``OAuth2`` configuration in order to hit the new hostname.
 
@@ -1297,7 +1331,7 @@ Next, the steps to do are:
         env = AVATAR_GRAVATAR_SSL=True
 
         # Restart the service
-        sudo service uwsgi restart
+        sudo service geonode-uwsgi restart
 
     .. figure:: img/ubuntu-https-005.png
             :align: center

@@ -857,11 +857,18 @@ Serving {“geonode”, “geoserver”} via NGINX
 
   [Unit]
   Description=GeoNode UWSGI Service
+  After=rc-local.service
 
   [Service]
   User=root
-  PIDFile=/run/geonode-uwsgi.pid
-  ExecStart=/usr/bin/geonode-uwsgi-start.sh
+  PIDFile=/run/UNMISS_geonode.pid
+  WorkingDirectory=/opt/UNMISS_geonode/UNMISS_geonode/src
+  ExecStart=/usr/bin/UNMISS-geonode-start.sh
+  PrivateTmp=true
+  Type=simple
+  Restart=always
+  KillMode=process
+  TimeoutSec=900
 
   [Install]
   WantedBy=multi-user.target

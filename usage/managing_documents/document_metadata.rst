@@ -52,7 +52,7 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
   * The *Maintenance frequency* of the document;
   * The *Spatial representation type* used.
 
-  *Responsible Parties*, *Owner* and *Permissions* are listed on the right side of the page, you can edit them.
+  *Responsible Parties*, *Owner* and *Share options* are listed on the right side of the page, you can edit them.
 
   .. figure:: img/document_optional_metadata.png
       :align: center

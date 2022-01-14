@@ -1,6 +1,6 @@
 .. _dataset-permissions:
 
-Share OPtions
+Share Options
 =============
 
 When creating or uploading a new Dataset you have to set who can view, download, edit and manage that Dataset. By default only owners can edit and manage datasets, anyone can view them.

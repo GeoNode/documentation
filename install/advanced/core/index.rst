@@ -1146,20 +1146,36 @@ In particular the steps to do are:
     .. code-block:: shell
 
         workon geonode
+	sudo su
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname
-        sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+        PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+
+	exit
 
     4. Update the existing ``GeoNode`` links in order to hit the new hostname.
 
     .. code-block:: shell
 
         workon geonode
+	
+	# To avoid spatialite conflict if using postgresql
+	vim $VIRTUAL_ENV/bin/postactivate
+	
+	# Add these to make available. Change user, password and server information to yours
+	export DATABASE_URL='postgresql://<postgresqluser>:<postgresqlpass>@localhost:5432/geonode'
+
+	#Close virtual environmetn and aopen it again to update variables
+	deactivate
+	
+	workon geonode
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname
         DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
+	
+.. note:: If at the end you get a "bad gateway" error when accessing your geonode site, check uwsgi log with ``sudo tail -f /var/log/uwsgi/app/geonode.log`` and if theres is an error related with port 5432 check the listening configuration from the postgresql server and allow the incoming traffic from geonode.
 
 7. Install and enable HTTPS secured connection through the Let's Encrypt provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1253,20 +1269,27 @@ Install and configure `"rabbitmq-server" <https://lindevs.com/install-rabbitmq-o
 
 **Install rabbitmq-server**
 
-Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install-rabbitmq-on-ubuntu/>`_
+Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install-rabbitmq-on-ubuntu/>`_ & `www.rabbitmq.com/install-debian.html/ <https://www.rabbitmq.com/install-debian.html#apt-cloudsmith/>`_
 
 .. code-block:: bash
 
-    sudo apt update && sudo apt upgrade && sudo apt install wget -y
+    sudo apt install curl -y
     
-    # add the erlang repository
-    sudo add-apt-repository -y ppa:rabbitmq/rabbitmq-erlang
-
-    # add the rabbitmq repository
-    wget -qO - https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
-
-    # install rabbitmq
-    sudo apt install -y rabbitmq-server
+    ## Cloudsmith: modern Erlang repository
+    curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
+    
+    ## Cloudsmith: RabbitMQ repository
+    curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/setup.deb.sh' | sudo -E bash
+	
+    ## Install Erlang packages
+    sudo apt install -y erlang-base \
+                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
+                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
+                        erlang-runtime-tools erlang-snmp erlang-ssl \
+                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+	
+    ## Install rabbitmq-server and its dependencies
+    sudo apt install rabbitmq-server -y --fix-missing
 
     # check the status (it should already be running)
     sudo systemctl status rabbitmq-server

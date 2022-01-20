@@ -314,67 +314,6 @@ AVATAR_PROVIDERS
 
   (DefaultAvatarProvider before GravatarAvatarProvider)
 
-AWS_ACCESS_KEY_ID
------------------
-
-    | Default: ``''``
-    | Env: ``AWS_ACCESS_KEY_ID``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Your Amazon Web Services access key, as a string.
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_BUCKET_NAME
----------------
-
-    | Default: ``''``
-    | Env: ``S3_BUCKET_NAME``
-
-    The name of the S3 bucket GeoNode will pull static and/or media files from. Set through the environment variable S3_BUCKET_NAME.
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_QUERYSTRING_AUTH
---------------------
-
-    | Default: ``False``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Setting AWS_QUERYSTRING_AUTH to False to remove query parameter authentication from generated URLs. This can be useful if your S3 buckets are public.
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_S3_BUCKET_DOMAIN
---------------------
-
-    https://github.com/GeoNode/geonode/blob/master/geonode/settings.py#L1661
-    ``AWS_S3_BUCKET_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME``
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_SECRET_ACCESS_KEY
----------------------
-
-    | Default: ``''``
-    | Env: ``AWS_SECRET_ACCESS_KEY``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Your Amazon Web Services secret access key, as a string.
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_STORAGE_BUCKET_NAME
------------------------
-
-    | Default: ``''``
-    | Env: ``S3_BUCKET_NAME``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Your Amazon Web Services storage bucket name, as a string.
-
-    .. warning:: This works only if ``DEBUG = False``
 
 B
 =
@@ -463,8 +402,8 @@ CACHE_BUSTING_STATIC_ENABLED
     | Default: ``False``
     | Env: ``CACHE_BUSTING_STATIC_ENABLED``
 
-    This is a `Django ManifestStaticFilesStorage storage setting <https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__
-    A boolean allowing you to enable the ``ManifestStaticFilesStorage storage``. This works only on a production system.
+    This is a `Django Compressed Manifet storage provided by WhiteNoise <http://whitenoise.evans.io/en/stable/django.html#add-compression-and-caching-support>`__
+    A boolean allowing you to enable the ``WhiteNoise CompressedManifestStaticFilesStorage storage``. This works only on a production system.
 
     .. warning:: This works only if ``DEBUG = False``
 
@@ -1930,22 +1869,6 @@ RESOURCE_PUBLISHING
 
 S
 =
-
-S3_MEDIA_ENABLED
-----------------
-
-    | Default: ``False``
-    | Env: ``S3_MEDIA_ENABLED``
-
-    Enable/disable Amazon S3 media storage.
-
-S3_STATIC_ENABLED
------------------
-
-    | Default: ``False``
-    | Env: ``S3_STATIC_ENABLED``
-
-    Enable/disable Amazon S3 static storage.
 
 SEARCH_FILTERS
 --------------

@@ -18,12 +18,6 @@ Run
 
     DJANGO_SETTINGS_MODULE=geonode.settings python manage.py migrate_baseurl --help
 
-.. note:: If you enabled ``local_settings.py`` the command will change as following:
-
-    .. code-block:: shell
-
-        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --help
-
 This will produce output that looks like the following
 
 .. code-block:: shell
@@ -361,15 +355,13 @@ Loading Data into GeoNode
 
 There are situations where it is not possible or not convenient to use the
 :guilabel:`Upload Form` to add new Datasets to GeoNode via the web interface.
-As an instance:
+For instance:
 
-* The dataset is simply too big to be uploaded through a web interface.
+* The dataset is too big to be uploaded through a web interface.
 
-* We would like to import some data from the mass storage programmatically.
+* Import data from a mass storage programmatically.
 
-* We would like to import some tables from a DataBase.
-
-* We need to process the data first and, maybe, transform it to another format.
+* Import tables from a database.
 
 This section will walk you through the various options available to load data into your
 GeoNode from GeoServer, from the command-line or programmatically.
@@ -411,9 +403,9 @@ This will produce output that looks like the following
                                   [--force-color] [--skip-checks]
                                   [path [path ...]]
 
-    Brings a directory full of data files into a GeoNode site.
-    Datasets are added to the Django database, the GeoServer configuration, and the
-    pycsw metadata index.
+    Brings files from a local directory, including subfolders, into a GeoNode site.
+    The datasets are added to the Django database, the GeoServer configuration, and the
+    pycsw metadata index. At this moment only files of type Esri Shapefile (.shp) and GeoTiff (.tif) are supported.
     In order to perform the import, GeoNode must be up and running.
 
     positional arguments:
@@ -448,7 +440,7 @@ reviewing some of the key options a bit more in details.
 
 The import Datasets management command is invoked by specifying options as described
 above and specifying the path to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing Datasets that ship with geonode.
-You can replace this path with the directory to your own shapefiles.
+You can replace this path with a directory to your own shapefiles.
 
 .. code-block:: shell
     First let's run the GeoNode server:
@@ -508,11 +500,10 @@ While it is possible to import Datasets directly from your servers filesystem in
 GeoNode, you may have an existing GeoServer that already has data in it, or you may
 want to configure data from a GeoServer which is not directly supported by uploading data.
 
-GeoServer supports a wide range of data formats and connections to database, and while
-many of them are not supported as GeoNode upload formats, if they can be configured in
-GeoServer, you can add them to your GeoNode by following the procedure described below.
+GeoServer supports a wide range of data formats and connections to database, some of them 
+may not be supported as GeoNode upload formats. You can add them to your GeoNode by following the procedure described below.
 
-GeoServer supports 3 types of data: :guilabel:`Raster`, :guilabel:`Vector`, :guilabel:`Databases` and :guilabel:`Cascaded`.
+GeoServer supports 4 types of data: :guilabel:`Raster`, :guilabel:`Vector`, :guilabel:`Databases` and :guilabel:`Cascaded`.
 
 For a list of the supported formats for each type of data, consult the following pages:
 
@@ -637,6 +628,18 @@ First visit the GeoServer administration interface on your server. This is usual
                                 Only update data on specified workspace
         -p PERMISSIONS, --permissions PERMISSIONS
                                 Permissions to apply to each Dataset
+
+The update procedure includes the following steps:
+
+    - The process fetches from GeoServer the relevant WMS layers (all, by store or by workspace)
+
+    - If a filter is defined, the GeoServer layers are filtered
+
+    - For each of the layers, a GeoNode dataset is created based on the metadata registered on GeoServer (title, abstract, bounds)
+
+    - New layers are added, existing layers are replaced, unless the :guilabel:`--skip-geonode-registered` option is used
+
+    - The GeoNode layers, added in previous runs of the update process, which are no longer available in GeoServer are removed, if the :guilabel:`--remove-delete` option is set
 
 .. warning:: One of the :guilabel:`--workspace` or :guilabel:`--store` must be always specified if you want to ingest Datasets belonging to a specific ``Workspace``. As an instance, in order to ingest the Datasets present into the ``geonode`` workspace, you will need to specify the option ``-w geonode``.
 
@@ -854,7 +857,7 @@ First visit the GeoServer administration interface on your server. This is usual
         0 Failed Datasets
         5.000000 seconds per Dataset
 
-.. note:: In case you don't specify the :guilabel:`-f` option, the Datasets that already exist in your GeoNode will be just updated and the configuration synchronized between GeoServer and GeoNode.
+.. note:: In case you don't specify the :guilabel:`-f` option, the Datasets that already exists in your GeoNode will be just updated and the configuration synchronized between GeoServer and GeoNode.
 
 .. warning:: When updating **from** GeoServer, the configuration on GeoNode will be changed!
 

@@ -415,3 +415,26 @@ Run the containers in daemon mode
 
   docker-compose -f docker-compose.yml -f docker-compose.override.example-org.yml up --build -d
 
+Test geonode-project with vagrant
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: Inside geonode-project files you will find one file named `Vagrantfile.compose` and one named `Vagrantfile.stack`, copy one of them onto file `Vagrantfile` to use them with vagrant.
+
+.. code-block:: shell
+
+  apt-get install -y vagrant
+  #choose what to test (in this case docker-compose.yml)
+  cp Vagrantfile.compose Vagrantfile
+  #this will start a vargant virtual machine, generate and build geonode-project
+  vagrant up
+  # check services are up upon reboot
+  vagrant ssh geonode-compose -c 'docker ps'
+  vagrant destroy -f
+  # test docker swarm
+  cp Vagrantfile.stack Vagrantfile
+  vagrant up
+  # check services are up upon reboot
+  vagrant ssh geonode-vagrant -c 'docker service ls'
+  vagrant destroy -f
+
+.. note:: Vagrant will generate a dummi project named "antani" inside vagrant, starting with the geonode-project codebase, this way it is possible to test inside vagrant almost instantly what one modifies into geonode-project

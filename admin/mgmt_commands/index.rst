@@ -1684,6 +1684,12 @@ In this section we will provide a set of :guilabel:`shell` scripts which might b
 
 .. _createsuperuser:
 
+Thesaurus Import and Export
+===========================
+
+See :ref:`load_thesaurus` and :ref:`dump_thesaurus`.
+
+
 Create Users and Super Users
 ============================
 

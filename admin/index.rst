@@ -16,7 +16,7 @@ It should be highlighted that the sections not covered in this guide are meant t
 GeoNode Management Commands
 ===========================
 
-Managemant commands are utility functions for GeoNode maintenance tasks. They are usually run from an SSH/bash shell on the server running GeoNode.
+Management commands are utility functions for GeoNode maintenance tasks. They are usually run from an SSH/bash shell on the server running GeoNode.
 Any call to python is prepended with a configuration parameter to indicate the GeoNode settings module to be used.
 
 .. code-block:: shell
@@ -62,7 +62,7 @@ GeoNode Async Signals
 
     async/index
 
-GeoNode add a thesaurus
+GeoNode Add a thesaurus
 =======================
 
 .. toctree::

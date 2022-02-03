@@ -314,67 +314,6 @@ AVATAR_PROVIDERS
 
   (DefaultAvatarProvider before GravatarAvatarProvider)
 
-AWS_ACCESS_KEY_ID
------------------
-
-    | Default: ``''``
-    | Env: ``AWS_ACCESS_KEY_ID``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Your Amazon Web Services access key, as a string.
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_BUCKET_NAME
----------------
-
-    | Default: ``''``
-    | Env: ``S3_BUCKET_NAME``
-
-    The name of the S3 bucket GeoNode will pull static and/or media files from. Set through the environment variable S3_BUCKET_NAME.
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_QUERYSTRING_AUTH
---------------------
-
-    | Default: ``False``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Setting AWS_QUERYSTRING_AUTH to False to remove query parameter authentication from generated URLs. This can be useful if your S3 buckets are public.
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_S3_BUCKET_DOMAIN
---------------------
-
-    https://github.com/GeoNode/geonode/blob/master/geonode/settings.py#L1661
-    ``AWS_S3_BUCKET_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME``
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_SECRET_ACCESS_KEY
----------------------
-
-    | Default: ``''``
-    | Env: ``AWS_SECRET_ACCESS_KEY``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Your Amazon Web Services secret access key, as a string.
-
-    .. warning:: This works only if ``DEBUG = False``
-
-AWS_STORAGE_BUCKET_NAME
------------------------
-
-    | Default: ``''``
-    | Env: ``S3_BUCKET_NAME``
-
-    This is a `Django storage setting <https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__
-    Your Amazon Web Services storage bucket name, as a string.
-
-    .. warning:: This works only if ``DEBUG = False``
 
 B
 =
@@ -457,25 +396,14 @@ CACHES
     The ``'resources'`` is not currently used. It might be helpful for `caching Django template fragments <https://docs.djangoproject.com/en/3.2/topics/cache/#template-fragment-caching>`__ and/or `Tastypie API Caching <https://django-tastypie.readthedocs.io/en/latest/caching.html>`__.
 
 
-CACHE_BUSTING_MEDIA_ENABLED
----------------------------
-
-    | Default: ``False``
-    | Env: ``CACHE_BUSTING_MEDIA_ENABLED``
-
-    This is a `Django ManifestStaticFilesStorage storage setting <https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__
-    A boolean allowing you to enable the ``ManifestStaticFilesStorage storage``. This works only on a production system.
-
-    .. warning:: This works only if ``DEBUG = False``
-
 CACHE_BUSTING_STATIC_ENABLED
 ----------------------------
 
     | Default: ``False``
     | Env: ``CACHE_BUSTING_STATIC_ENABLED``
 
-    This is a `Django ManifestStaticFilesStorage storage setting <https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__
-    A boolean allowing you to enable the ``ManifestStaticFilesStorage storage``. This works only on a production system.
+    This is a `Django Compressed Manifet storage provided by WhiteNoise <http://whitenoise.evans.io/en/stable/django.html#add-compression-and-caching-support>`__
+    A boolean allowing you to enable the ``WhiteNoise CompressedManifestStaticFilesStorage storage``. This works only on a production system.
 
     .. warning:: This works only if ``DEBUG = False``
 
@@ -1942,22 +1870,6 @@ RESOURCE_PUBLISHING
 S
 =
 
-S3_MEDIA_ENABLED
-----------------
-
-    | Default: ``False``
-    | Env: ``S3_MEDIA_ENABLED``
-
-    Enable/disable Amazon S3 media storage.
-
-S3_STATIC_ENABLED
------------------
-
-    | Default: ``False``
-    | Env: ``S3_STATIC_ENABLED``
-
-    Enable/disable Amazon S3 static storage.
-
 SEARCH_FILTERS
 --------------
 
@@ -2017,6 +1929,34 @@ SECURE_SSL_REDIRECT
 
     If True, the SecurityMiddleware redirects all non-HTTPS requests to HTTPS (except for those URLs matching a regular expression listed in SECURE_REDIRECT_EXEMPT).
     This is `Django settings: <https://docs.djangoproject.com/en/3.2/ref/settings/#secure-ssl-redirect>`__
+
+SERVICES_TYPE_MODULES
+---------------------
+
+It's possible to define multiple Service Types Modules for custom service type with it's own Handler.
+
+The variable should be declared in this way in `settings.py`:
+
+`SERVICES_TYPE_MODULES = [ 'path.to.module1','path.to.module2', ... ]`
+
+Default service types are already included
+
+Inside each module in the list we need to define a variable:
+
+`services_type = {
+    "<key_of_service_type>": {
+        "OWS": True/False,
+        "handler": "<path.to.Handler>",
+        "label": "<label to show in remote service page>",
+        "management_view": "<path.to.view>"
+    }
+}`
+
+the key_of_service_type is just an identifier to assign at the service type.
+OWS is True if the service type is an OGC Service Compliant.
+The handler key must contain the path to the class who will provide all methods to manage the service type
+The label is what is shown in the service form when adding a new service.
+The management_view, if exists, must contain the path to the method where the management page is opened.
 
 SERVICE_UPDATE_INTERVAL
 -----------------------

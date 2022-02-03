@@ -44,8 +44,8 @@ Check that your system is already up-to-date with the repository running the fol
 
 .. code-block:: shell
 
-   sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-   sudo apt update -y; sudo apt upgrade -y;
+   sudo add-apt-repository ppa:ubuntugis/ppa
+   sudo apt update -y
 
 
 Packages Installation
@@ -60,10 +60,11 @@ First, we are going to install all the **system packages** needed for the GeoNod
 .. code-block:: shell
 
   # Install packages from GeoNode core
-  sudo apt install -y build-essential gdal-bin \
+  sudo apt install -y --allow-downgrades build-essential \
+      python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2 \
       python3.8-dev python3.8-venv virtualenvwrapper \
-      libxml2 libxml2-dev gettext \
-      libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev \
+      libxml2 libxml2-dev gettext libmemcached-dev zlib1g-dev \
+      libxslt1-dev libjpeg-dev libpng-dev libpq-dev \
       software-properties-common build-essential \
       git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
       sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev 
@@ -74,26 +75,24 @@ First, we are going to install all the **system packages** needed for the GeoNod
 
   # Verify GDAL version
   gdalinfo --version
-    $> GDAL 3.0.4, released 2020/01/28
+    $> GDAL 3.3.2, released 2021/09/01
 
   # Verify Python version
   python3.8 --version
-    $> Python 3.8.5
+    $> Python 3.8.10
 
   which python3.8
     $> /usr/bin/python3.8
 
   # Verify Java version
   java -version
-    $> openjdk version "1.8.0_265"
-    $> OpenJDK Runtime Environment (build 1.8.0_265-8u265-b01-0ubuntu2~20.04-b01)
-    $> OpenJDK 64-Bit Server VM (build 25.265-b01, mixed mode)
+    $> openjdk version "1.8.0_315"
 
   # Install VIM
   sudo apt install -y vim
 
   # Cleanup the packages
-  sudo apt update -y; sudo apt upgrade -y; sudo apt autoremove --purge
+  sudo apt update -y; sudo apt autoremove --purge
 
 .. warning:: GeoNode 3.x is not compatible with Python < 3.7
 
@@ -319,13 +318,14 @@ First, it is not recommended to run Apache Tomcat as user root, so we will creat
 
 .. code-block:: shell
 
-  VERSION=9.0.48; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+  VERSION=9.0.56; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
 
 
 Once the download is complete, extract the tar file to the /opt/tomcat directory:
 
 .. code-block:: shell
 
+  sudo mkdir /opt/tomcat
   sudo tar -xf apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/; rm apache-tomcat-${VERSION}.tar.gz
 
 Apache Tomcat is updated regulary. So, to have more control over versions and updates, we’ll create a symbolic link as below:
@@ -359,159 +359,56 @@ Create the a systemd file with the following content:
   sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/ /usr/lib/jvm/jre
 
   # Let's create the tomcat service
-  sudo vim /etc/init.d/tomcat9
+  sudo vim /etc/systemd/system/tomcat9.service
 
 .. code-block:: bash
 
-  #!/bin/bash
+  [Unit]
+  Description=Tomcat 9 servlet container
+  After=network.target
 
-  ### BEGIN INIT INFO
-  # Provides:             tomcat9
-  # Required-Start:       $local_fs $remote_fs $network $time
-  # Required-Stop:        $local_fs $remote_fs $network $time
-  # Should-Start:         $syslog
-  # Should-Stop:          $syslog
-  # Default-Start:        2 3 4 5
-  # Default-Stop:         0 1 6
-  # Short-Description:    Apache Tomcat init script
-  ### END INIT INFO
+  [Service]
+  Type=forking
 
-  #Location of JAVA_HOME (bin files)
-  export JAVA_HOME=/usr/lib/jvm/jre
-  export JAVA_OPTS=-Djava.security.egd=file:///dev/urandom
+  User=tomcat
+  Group=tomcat
 
-  #Add Java binary files to PATH
-  export PATH=$JAVA_HOME/bin:$PATH
+  Environment="JAVA_HOME=/usr/lib/jvm/jre"
+  Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom -Djava.awt.headless=true"
 
-  #CATALINA_HOME is the location of the bin files of Tomcat
-  export CATALINA_HOME=/opt/tomcat/latest
+  Environment="CATALINA_BASE=/opt/tomcat/latest"
+  Environment="CATALINA_HOME=/opt/tomcat/latest"
+  Environment="CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid"
+  Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
 
-  #CATALINA_BASE is the location of the configuration files of this instance of Tomcat
-  export CATALINA_BASE=/opt/tomcat/latest
-  export CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid
+  ExecStart=/opt/tomcat/latest/bin/startup.sh
+  ExecStop=/opt/tomcat/latest/bin/shutdown.sh
 
-  #TOMCAT_USER is the default user of tomcat
-  export TOMCAT_USER=tomcat
-
-  #TOMCAT_USAGE is the message if this script is called without any options
-  TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;31mkill\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
-
-  #SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
-  SHUTDOWN_WAIT=20
-
-  tomcat_pid() {
-          echo `ps -fe | grep $CATALINA_BASE | grep -v grep | tr -s " "|cut -d" " -f2`
-  }
-
-  start() {
-    pid=$(tomcat_pid)
-    if [ -n "$pid" ]
-    then
-      echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
-    else
-      # Start tomcat
-      echo -e "\e[00;32mStarting tomcat\e[00m"
-      #ulimit -n 100000
-      #umask 007
-      #/bin/su -p -s /bin/sh $TOMCAT_USER
-          if [ `user_exists $TOMCAT_USER` = "1" ]
-          then
-                  /bin/su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
-          else
-                  echo -e "\e[00;31mTomcat user $TOMCAT_USER does not exists. Starting with $(id)\e[00m"
-                  sh $CATALINA_HOME/bin/startup.sh
-          fi
-          status
-    fi
-    return 0
-  }
-
-  status(){
-            pid=$(tomcat_pid)
-            if [ -n "$pid" ]
-              then echo -e "\e[00;32mTomcat is running with pid: $pid\e[00m"
-            else
-              echo -e "\e[00;31mTomcat is not running\e[00m"
-              return 3
-            fi
-  }
-
-  terminate() {
-          echo -e "\e[00;31mTerminating Tomcat\e[00m"
-          kill -9 $(tomcat_pid)
-  }
-
-  stop() {
-    pid=$(tomcat_pid)
-    if [ -n "$pid" ]
-    then
-      echo -e "\e[00;31mStoping Tomcat\e[00m"
-      #/bin/su -p -s /bin/sh $TOMCAT_USER
-          sh $CATALINA_HOME/bin/shutdown.sh
-
-      let kwait=$SHUTDOWN_WAIT
-      count=0;
-      until [ `ps -p $pid | grep -c $pid` = '0' ] || [ $count -gt $kwait ]
-      do
-        echo -n -e "\n\e[00;31mwaiting for processes to exit\e[00m";
-        sleep 1
-        let count=$count+1;
-      done
-
-      if [ $count -gt $kwait ]; then
-        echo -n -e "\n\e[00;31mkilling processes didn't stop after $SHUTDOWN_WAIT seconds\e[00m"
-        terminate
-      fi
-    else
-      echo -e "\e[00;31mTomcat is not running\e[00m"
-    fi
-
-    return 0
-  }
-
-  user_exists(){
-          if id -u $1 >/dev/null 2>&1; then
-          echo "1"
-          else
-                  echo "0"
-          fi
-  }
-
-  case $1 in
-          start)
-            start
-          ;;
-          stop)
-            stop
-          ;;
-          restart)
-            stop
-            start
-          ;;
-          status)
-                  status
-                  exit $?
-          ;;
-          kill)
-                  terminate
-          ;;
-          *)
-                  echo -e $TOMCAT_USAGE
-          ;;
-  esac
-  exit 0
+  [Install]
+  WantedBy=multi-user.target
 
 Now you can start the Apache Tomcat 9 server and enable it to start on boot time using the following command:
 
 .. code-block:: shell
 
-  sudo chmod +x /etc/init.d/tomcat9
-  sudo /etc/init.d/tomcat9 start
+  sudo systemctl daemon-reload
+  sudo systemctl start tomcat9.service
+  sudo systemctl status tomcat9.service
+  sudo systemctl enable tomcat9.service
+
 
 For verification, type the following ss command, which will show you the 8080 open port number, the default open port reserved for Apache Tomcat Server.
 
 .. code-block:: shell
 
+  ss -ltn
+
+In a clean Ubuntu 20.04, the ss command may not be found and the iproute2 library should be installed first.
+
+.. code-block:: shell
+
+  sudo apt install iproute2
+  # Then run the ss command
   ss -ltn
 
 In a clean Ubuntu 20.04, the ss command may not be found and the iproute2 library should be installed first.
@@ -590,8 +487,8 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/logs
 
   # Download and extract the default GEOSERVER_DATA_DIR
-  sudo wget --no-check-certificate "https://www.dropbox.com/s/cd20is9ddjz7ti5/data-2.18.3.zip?dl=1" -O data-2.18.3.zip
-  sudo unzip data-2.18.3.zip -d /opt/data/
+  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geonode-geoserver-ext-web-app-data.zip" -O data-2.19.x.zip
+  sudo unzip data-2.19.x.zip -d /opt/data/
 
   sudo mv /opt/data/data/ /opt/data/geoserver_data
   sudo chown -Rf tomcat:www-data /opt/data/geoserver_data
@@ -606,8 +503,8 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/gwc_cache_dir
 
   # Download and install GeoServer
-  sudo wget --no-check-certificate "https://www.dropbox.com/s/cmrdzde1oq67pre/geoserver-2.18.3.war?dl=0" -O geoserver-2.18.3.war
-  sudo mv geoserver-2.18.3.war /opt/tomcat/latest/webapps/geoserver.war
+  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geoserver.war" -O geoserver-2.19.x.war
+  sudo mv geoserver-2.19.x.war /opt/tomcat/latest/webapps/geoserver.war
 
 Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Container, like heap memory, garbage collector and so on.
 
@@ -873,10 +770,9 @@ Serving {“geonode”, “geoserver”} via NGINX
   # #################
   env = DEBUG=False
 
-  SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
+  env = SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
 
   env = CACHE_BUSTING_STATIC_ENABLED=False
-  env = CACHE_BUSTING_MEDIA_ENABLED=False
 
   env = MEMCACHED_ENABLED=False
   env = MEMCACHED_BACKEND=django.core.cache.backends.memcached.MemcachedCache
@@ -910,9 +806,6 @@ Serving {“geonode”, “geoserver”} via NGINX
   env = CREATE_LAYER=True
   env = FAVORITE_ENABLED=True
 
-  logto = /opt/data/logs/geonode.log
-  pidfile = /tmp/geonode.pid
-
   chdir = /opt/geonode
   module = geonode.wsgi:application
 
@@ -926,8 +819,7 @@ Serving {“geonode”, “geoserver”} via NGINX
 
   # logging
   # path to where uwsgi logs will be saved
-  # logto = /opt/data/geonode_logs/geonode.log
-
+  logto = /opt/data/logs/geonode.log
   daemonize = /opt/data/logs/geonode.log
   touch-reload = /opt/geonode/geonode/wsgi.py
   buffer-size = 32768
@@ -960,7 +852,48 @@ Serving {“geonode”, “geoserver”} via NGINX
 
   # Restart UWSGI Service
   sudo pkill -9 -f uwsgi
-  sudo service uwsgi restart
+
+.. code-block:: shell
+
+  # Create the UWSGI system service
+
+  # Create the executable
+  sudo vim /usr/bin/geonode-uwsgi-start.sh
+
+    #!/bin/bash
+    sudo uwsgi --ini /etc/uwsgi/apps-enabled/geonode.ini
+
+  sudo chmod +x /usr/bin/geonode-uwsgi-start.sh
+
+  # Create the systemctl Service
+  sudo vim /etc/systemd/system/geonode-uwsgi.service
+
+.. code-block:: shell
+
+  [Unit]
+  Description=GeoNode UWSGI Service
+  After=rc-local.service
+
+  [Service]
+  User=root
+  PIDFile=/run/geonode-uwsgi.pid
+  ExecStart=/usr/bin/geonode-uwsgi-start.sh
+  PrivateTmp=true
+  Type=simple
+  Restart=always
+  KillMode=process
+  TimeoutSec=900
+
+  [Install]
+  WantedBy=multi-user.target
+
+.. code-block:: shell
+
+  # Enable the UWSGI service
+  sudo systemctl daemon-reload
+  sudo systemctl start geonode-uwsgi.service
+  sudo systemctl status geonode-uwsgi.service
+  sudo systemctl enable geonode-uwsgi.service
 
 .. code-block:: shell
 
@@ -1152,7 +1085,6 @@ Restart ``UWSGI`` and update ``OAuth2`` by using the new ``geonode.settings``
 
   # Restart UWSGI
   pkill -9 -f uwsgi
-  service uwsgi restart
 
   # Update the GeoNode ip or hostname
   cd /opt/geonode
@@ -1215,27 +1147,43 @@ In particular the steps to do are:
         :wq
 
         # Restart the service
-        sudo service uwsgi restart
+        sudo service geonode-uwsgi restart
 
     3. Update ``OAuth2`` configuration in order to hit the new hostname.
 
     .. code-block:: shell
 
         workon geonode
+	sudo su
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname
-        sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+        PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+
+	exit
 
     4. Update the existing ``GeoNode`` links in order to hit the new hostname.
 
     .. code-block:: shell
 
         workon geonode
+	
+	# To avoid spatialite conflict if using postgresql
+	vim $VIRTUAL_ENV/bin/postactivate
+	
+	# Add these to make available. Change user, password and server information to yours
+	export DATABASE_URL='postgresql://<postgresqluser>:<postgresqlpass>@localhost:5432/geonode'
+
+	#Close virtual environmetn and aopen it again to update variables
+	deactivate
+	
+	workon geonode
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname
         DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
+	
+.. note:: If at the end you get a "bad gateway" error when accessing your geonode site, check uwsgi log with ``sudo tail -f /var/log/uwsgi/app/geonode.log`` and if theres is an error related with port 5432 check the listening configuration from the postgresql server and allow the incoming traffic from geonode.
 
 7. Install and enable HTTPS secured connection through the Let's Encrypt provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1310,7 +1258,7 @@ Next, the steps to do are:
         env = AVATAR_GRAVATAR_SSL=True
 
         # Restart the service
-        sudo service uwsgi restart
+        sudo service geonode-uwsgi restart
 
     .. figure:: img/ubuntu-https-005.png
             :align: center
@@ -1320,44 +1268,82 @@ Next, the steps to do are:
 8. Enabling Fully Asynchronous Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Install and configure `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_
-...................................................................................................................
+Install and configure `"rabbitmq-server" <https://lindevs.com/install-rabbitmq-on-ubuntu/>`_
+............................................................................................
 
-.. warning:: Adapt the steps below accordingly to your Ubuntu distribution (see the `"rabbitmq-server" <https://www.vultr.com/docs/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_ links to the documentation).
+.. seealso::
 
-.. code-block:: shell
+    A `March 2021 blog post <https://blog.rabbitmq.com/posts/2021/03/migrate-off-of-bintray/>`_ from RabbitMQ provides alternative installations for other systems.
 
-    sudo apt update && sudo apt upgrade && sudo apt install wget -y
-    echo "deb https://packages.erlang-solutions.com/ubuntu focal contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+**Install rabbitmq-server**
 
-    sudo apt update
-    sudo apt install erlang
+Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install-rabbitmq-on-ubuntu/>`_ & `www.rabbitmq.com/install-debian.html/ <https://www.rabbitmq.com/install-debian.html#apt-cloudsmith/>`_
 
-    sudo apt install apt-transport-https -y
-    wget -O- https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc | sudo apt-key add -
-    wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
-    echo "deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang-22.x" | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+.. code-block:: bash
 
-    sudo apt update
-    sudo apt install rabbitmq-server
+    sudo apt install curl -y
+    
+    ## Cloudsmith: modern Erlang repository
+    curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
+    
+    ## Cloudsmith: RabbitMQ repository
+    curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/setup.deb.sh' | sudo -E bash
+	
+    ## Install Erlang packages
+    sudo apt install -y erlang-base \
+                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
+                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
+                        erlang-runtime-tools erlang-snmp erlang-ssl \
+                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+	
+    ## Install rabbitmq-server and its dependencies
+    sudo apt install rabbitmq-server -y --fix-missing
 
-    sudo systemctl start rabbitmq-server.service
-    sudo systemctl enable rabbitmq-server.service
+    # check the status (it should already be running)
+    sudo systemctl status rabbitmq-server
 
-    systemctl is-enabled rabbitmq-server.service
+    # check the service is enabled (it should already be enabled)
+    sudo systemctl is-enabled rabbitmq-server.service
+
+    # enable the web frontend and allow access through firewall
+    # view this interface at http://<your ip>:15672
     sudo rabbitmq-plugins enable rabbitmq_management
     sudo ufw allow proto tcp from any to any port 5672,15672
 
+**Create admin user**
+
+This is the user that GeoNode will use to communicate with rabbitmq-server.
+
+.. code-block::
+
     sudo rabbitmqctl delete_user guest
     sudo rabbitmqctl add_user admin <your_rabbitmq_admin_password_here>
-    sudo rabbitmqctl change_password admin <your_rabbitmq_admin_password_here>
     sudo rabbitmqctl set_user_tags admin administrator
     sudo rabbitmqctl add_vhost /localhost
     sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
     sudo rabbitmqctl set_permissions -p /localhost admin ".*" ".*" ".*"
 
+**Managing RabbitMQ**
+
+You can manage the rabbitmq-server service like any other service::
+
+    sudo systemctl stop rabbitmq-server
+    sudo systemctl start rabbitmq-server
+    sudo systemctl restart rabbitmq-server
+
+You can manage the rabbitmq-server node with `rabbitmqctl <https://www.rabbitmq.com/rabbitmqctl.8.html>`_.
+For example, to fully reset the server, use these commands::
+
+    sudo rabbitmqctl stop_app
+    sudo rabbitmqctl reset
+    sudo rabbitmqctl start_app
+
+After reset, you'll need to recreate the ``admin`` user (see above).
+
 Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
 ..........................................................................................................................................
+
+**Install supervisor**
 
 .. code-block:: shell
 
@@ -1368,18 +1354,11 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
 
     sudo mkdir /etc/supervisor/conf.d
 
+**Configure supervisor**
 
 .. code-block:: shell
 
     sudo vim /etc/supervisor/supervisord.conf
-
-.. note::
-
-    **!IMPORTANT!**
-
-    Pay particular attention to the ``environment`` key values pair placed here.
-
-    They **must** match the values you have already set on the ``uwsgi.ini`` file.
 
 .. code-block:: ini
 
@@ -1394,7 +1373,7 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
     pidfile=/var/run/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
     childlogdir=/var/log/supervisor            ; ('AUTO' child log dir, default $TEMP)
-    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",CACHE_BUSTING_MEDIA_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True" 
+    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True"
 
     ; the below section must remain in the config file for RPC
     ; (supervisorctl/web interface) to work, additional interfaces may be
@@ -1414,6 +1393,50 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     [include]
     files = /etc/supervisor/conf.d/*.conf
 
+Note the last line which includes the ``geonode-celery.conf`` file that is described below.
+
+**Set the `environment` directive**
+
+Environment variables are placed directly into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the
+service via the ``environment`` directive.
+
+The syntax of this directive can either be all on one line like this (shown above):
+
+.. code-block:: python
+
+    environment=ENV_KEY_1="ENV_VALUE_1",ENV_KEY_2="ENV_VALUE_2",...,ENV_KEY_n="ENV_VALUE_n"
+
+or broken into multiple **indented** lines like this:
+
+.. code-block:: python
+
+    environment=
+        ENV_KEY_1="ENV_VALUE_1",
+        ENV_KEY_2="ENV_VALUE_2",
+        ENV_KEY_n="ENV_VALUE_n"
+
+The following are the minimum set of env key value pairs you will need for a standard GeoNode Celery instance:
+
+    - ``ASYNC_SIGNALS="True"``
+    - ``BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/"``
+    - ``DATABASE_URL``
+    - ``GEODATABASE_URL``
+    - ``DEBUG``
+    - ``CACHE_BUSTING_STATIC_ENABLED``
+    - ``SITEURL``
+    - ``DJANGO_SETTINGS_MODULE``
+    - ``GEOSERVER_ADMIN_PASSWORD``
+    - ``GEOSERVER_LOCATION``
+    - ``GEOSERVER_PUBLIC_LOCATION``
+    - ``GEOSERVER_WEB_UI_LOCATION``
+    - ``MONITORING_ENABLED``
+
+.. warning::
+
+    + These key value pairs **must** match the values you have already set on the ``uwsgi.ini`` file.
+    + If you have custom ``tasks`` that use any other variables from  ``django.conf.settings`` (like ``MEDIA_ROOT``), these variables must also be added to the environment directive.
+
+**Configure celery**
 
 .. code-block:: shell
 
@@ -1433,6 +1456,10 @@ Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blo
     startsecs = 10
     stopwaitsecs = 600
     priority = 998
+
+----
+
+**Manage supervisor and celery**
 
 Reload and restart ``supervisor`` and the ``celery`` workers
 
@@ -1454,40 +1481,6 @@ Make sure everything is *green*
 
     # Check the celery workers logs
     sudo tail -F -n 300 /var/logs/geonode-celery.log
-
-
-**The `environment` directive**
-
-The environment variables are placed into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the service via the ``environment`` directive.
-
-The syntax of this directive is the following one:
-
-.. code-block:: python
-
-    environment=ENV_KEY_1="ENV_VALUE_1",ENV_KEY_2="ENV_VALUE_2",...,ENV_KEY_n="ENV_VALUE_n"
-
-The following are the minimum set of env key value pairs you will need for a standard GeoNode Celery instance:
-
-    - ``ASYNC_SIGNALS="True"``
-    - ``BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/"``
-    - ``DEBUG``
-    - ``CACHE_BUSTING_STATIC_ENABLED``
-    - ``CACHE_BUSTING_MEDIA_ENABLED``
-    - ``SITEURL``
-    - ``DJANGO_SETTINGS_MODULE``
-    - ``GEOSERVER_ADMIN_PASSWORD``
-    - ``GEOSERVER_LOCATION``
-    - ``GEOSERVER_PUBLIC_LOCATION``
-    - ``GEOSERVER_WEB_UI_LOCATION``
-    - ``MONITORING_ENABLED``
-
-You will also need to:
-
-    a. Add more variables accordingly to your custom ``tasks`` (if any)
-
-
-    b. Make **always** sure the values of the environment variables match the ones of the ``uwsgi.ini`` file
-
 
 Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
 ...........................................................................................................................
@@ -1719,7 +1712,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     env = OAUTH2_API_KEY=<secret_here>
     env = OAUTH2_CLIENT_ID=<secret_here>
     env = OAUTH2_CLIENT_SECRET=<secret_here>
-    pidfile = /tmp/geonode.pid
+    # pidfile = /tmp/geonode.pid
     chdir = /opt/geonode
     module = geonode.wsgi:application
     strict = false
@@ -2478,10 +2471,10 @@ Update the GeoServer instance inside the GeoServer Container
 .. code-block:: shell
 
   cd /usr/local/tomcat/
-  wget --no-check-certificate "https://www.dropbox.com/s/cmrdzde1oq67pre/geoserver-2.18.3.war?dl=1" -O geoserver-2.18.3.war
+  wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geoserver.war" -O geoserver-2.19.x.war
   mkdir tmp/geoserver
   cd tmp/geoserver/
-  unzip /usr/local/tomcat/geoserver-2.18.3.war
+  unzip /usr/local/tomcat/geoserver-2.19.x.war
   rm -Rf data
   cp -Rf /usr/local/tomcat/webapps/geoserver/data/ .
   cd /usr/local/tomcat/

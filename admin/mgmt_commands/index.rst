@@ -18,12 +18,6 @@ Run
 
     DJANGO_SETTINGS_MODULE=geonode.settings python manage.py migrate_baseurl --help
 
-.. note:: If you enabled ``local_settings.py`` the command will change as following:
-
-    .. code-block:: shell
-
-        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --help
-
 This will produce output that looks like the following
 
 .. code-block:: shell
@@ -93,61 +87,64 @@ Update Permissions, Metadata, Legends and Download Links
 
 The following three utility :guilabel:`Management Commands`, allow to fixup:
 
-1. :guilabel:`Users/Groups Permissions` on :guilabel:`Layers`; those will be refreshed and synchronized with the :guilabel:`GIS Server` ones also
+1. :guilabel:`Users/Groups Permissions` on :guilabel:`Datasets`; those will be refreshed and synchronized with the :guilabel:`GIS Server` ones also
 
-2. :guilabel:`Metadata`, :guilabel:`Legend` and :guilabel:`Download` links on :guilabel:`Layers` and :guilabel:`Maps`
+2. :guilabel:`Metadata`, :guilabel:`Legend` and :guilabel:`Download` links on :guilabel:`Datasets` and :guilabel:`Maps`
 
 3. Cleanup :guilabel:`Duplicated Links` and :guilabel:`Outdated Thumbnails`
 
-Management Command ``sync_geonode_layers``
-------------------------------------------
+Management Command ``sync_geonode_datasets``
+--------------------------------------------
 
-This command allows to sync already existing permissions on Layers. In order to change/set Layers' permissions refer to the section :ref:`batch_sync_permissions`
+This command allows to sync already existing permissions on Datasets. In order to change/set Datasets' permissions refer to the section :ref:`batch_sync_permissions`
 
 The options are:
 
-* **filter**; Only update data the layer names that match the given filter.
+* **filter**; Only update data the Dataset names that match the given filter.
 
 * **username**; Only update data owned by the specified username.
 
-* **updatepermissions**; Update the layer permissions; synchronize it back to the GeoSpatial Server.
+* **updatepermissions**; Update the Dataset permissions; synchronize it back to the GeoSpatial Server.
   This option is also available from the :guilabel:`Layer Details` page.
 
-* **updateattributes**; Update the layer attributes; synchronize it back to the GeoSpatial Server.
+* **updateattributes**; Update the Dataset attributes; synchronize it back to the GeoSpatial Server.
   This option is also available from the :guilabel:`Layer Details` page.
 
-* **updatethumbnails**; Update the map styles and thumbnails.
+* **updatethumbnails**; Update the Dataset thumbnail.
+  This option is also available from the :guilabel:`Layer Details` page.
+
+* **updatebbox**; Update the Dataset BBOX and LotLan BBOX.
   This option is also available from the :guilabel:`Layer Details` page.
 
 * **remove-duplicates**; Removes duplicated Links.
 
-First of all let's take a look at the :guilabel:`--help` option of the ``sync_geonode_layers``
+First of all let's take a look at the :guilabel:`--help` option of the ``sync_geonode_datasets``
 management command in order to inspect all the command options and features.
 
 Run
 
 .. code-block:: shell
 
-    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_layers --help
+    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_datasets --help
 
 .. note:: If you enabled ``local_settings.py`` the command will change as following:
 
     .. code-block:: shell
 
-        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py sync_geonode_layers --help
+        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py sync_geonode_datasets --help
 
 This will produce output that looks like the following
 
 .. code-block:: shell
 
-    usage: manage.py sync_geonode_layers [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py sync_geonode_datasets [-h] [--version] [-v {0,1,2,3}]
                                         [--settings SETTINGS]
                                         [--pythonpath PYTHONPATH] [--traceback]
                                         [--no-color] [-i] [-d] [-f FILTER]
                                         [-u USERNAME] [--updatepermissions]
-                                        [--updatethumbnails] [--updateattributes]
+                                        [--updatethumbnails] [--updateattributes][--updatebbox]
 
-    Update the GeoNode layers: permissions (including GeoFence database),
+    Update the GeoNode Datasets: permissions (including GeoFence database),
     statistics, thumbnails
 
     optional arguments:
@@ -169,29 +166,30 @@ This will produce output that looks like the following
     -d, --remove-duplicates
                             Remove duplicates first.
     -f FILTER, --filter FILTER
-                            Only update data the layers that match the given
+                            Only update data the Datasets that match the given
                             filter.
     -u USERNAME, --username USERNAME
                             Only update data owned by the specified username.
-    --updatepermissions   Update the layer permissions.
-    --updatethumbnails    Update the layer styles and thumbnails.
-    --updateattributes    Update the layer attributes.
+    --updatepermissions   Update the Dataset permissions.
+    --updatethumbnails    Update the Dataset styles and thumbnails.
+    --updateattributes    Update the Dataset attributes.
+    --updatebbox          Update the Dataset BBOX.
 
-* **Example 1**: I want to update/sync all layers permissions and attributes with the GeoSpatial Server
-
-    .. warning:: Make always sure you are using the **correct** settings
-
-    .. code-block:: shell
-
-        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_layers --updatepermissions --updateattributes
-
-* **Example 2**: I want to regenerate the Thumbnails of all the Layers belonging to ``afabiani``
+* **Example 1**: I want to update/sync all Datasets permissions and attributes with the GeoSpatial Server
 
     .. warning:: Make always sure you are using the **correct** settings
 
     .. code-block:: shell
 
-        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_layers -u afabiani --updatethumbnails
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_datasets --updatepermissions --updateattributes
+
+* **Example 2**: I want to regenerate the Thumbnails of all the Datasets belonging to ``afabiani``
+
+    .. warning:: Make always sure you are using the **correct** settings
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_datasets -u afabiani --updatethumbnails
 
 Management Command ``sync_geonode_maps``
 ----------------------------------------
@@ -271,11 +269,11 @@ This will produce output that looks like the following
 Management Command ``set_all_layers_metadata``
 ----------------------------------------------
 
-This command allows to reset **Metadata Attributes** and **Catalogue Schema** on Layers. The command will also update the :guilabel:`CSW Catalogue` XML and Links of GeoNode.
+This command allows to reset **Metadata Attributes** and **Catalogue Schema** on Datasets. The command will also update the :guilabel:`CSW Catalogue` XML and Links of GeoNode.
 
 The options are:
 
-* **filter**; Only update data the layers that match the given filter.
+* **filter**; Only update data the Datasets that match the given filter.
 
 * **username**; Only update data owned by the specified username.
 
@@ -314,7 +312,7 @@ This will produce output that looks like the following
                                             [--traceback] [--no-color] [-i] [-d]
                                             [-t] [-f FILTER] [-u USERNAME]
 
-    Resets Metadata Attributes and Schema to All Layers
+    Resets Metadata Attributes and Schema to All Datasets
 
     optional arguments:
     -h, --help            show this help message and exit
@@ -337,7 +335,7 @@ This will produce output that looks like the following
     -t, --delete-orphaned-thumbs
                             Delete Orphaned Thumbnails.
     -f FILTER, --filter FILTER
-                            Only update data the layers that match the given
+                            Only update data the Datasets that match the given
                             filter
     -u USERNAME, --username USERNAME
                             Only update data owned by the specified username
@@ -356,16 +354,14 @@ Loading Data into GeoNode
 =========================
 
 There are situations where it is not possible or not convenient to use the
-:guilabel:`Upload Form` to add new Layers to GeoNode via the web interface.
-As an instance:
+:guilabel:`Upload Form` to add new Datasets to GeoNode via the web interface.
+For instance:
 
-* The dataset is simply too big to be uploaded through a web interface.
+* The dataset is too big to be uploaded through a web interface.
 
-* We would like to import some data from the mass storage programmatically.
+* Import data from a mass storage programmatically.
 
-* We would like to import some tables from a DataBase.
-
-* We need to process the data first and, maybe, transform it to another format.
+* Import tables from a database.
 
 This section will walk you through the various options available to load data into your
 GeoNode from GeoServer, from the command-line or programmatically.
@@ -407,9 +403,9 @@ This will produce output that looks like the following
                                   [--force-color] [--skip-checks]
                                   [path [path ...]]
 
-    Brings a directory full of data files into a GeoNode site.
-    Layers are added to the Django database, the GeoServer configuration, and the
-    pycsw metadata index.
+    Brings files from a local directory, including subfolders, into a GeoNode site.
+    The datasets are added to the Django database, the GeoServer configuration, and the
+    pycsw metadata index. At this moment only files of type Esri Shapefile (.shp) and GeoTiff (.tif) are supported.
     In order to perform the import, GeoNode must be up and running.
 
     positional arguments:
@@ -438,13 +434,13 @@ This will produce output that looks like the following
 While the description of most of the options should be self explanatory, its worth
 reviewing some of the key options a bit more in details.
 
-- The :guilabel:`-hh` Identifies the GeoNode server where we want to upload our layers. The default value is :guilabel:`http://localhost:8000`.
+- The :guilabel:`-hh` Identifies the GeoNode server where we want to upload our Datasets. The default value is :guilabel:`http://localhost:8000`.
 - The :guilabel:`-u` Identifies the username for the login. The default value is :guilabel:`admin`.
 - The :guilabel:`-p` Identifies the password for the login. The default value is :guilabel:`admin`.
 
-The import layers management command is invoked by specifying options as described
-above and specifying the path to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing layers that ship with geonode.
-You can replace this path with the directory to your own shapefiles.
+The import Datasets management command is invoked by specifying options as described
+above and specifying the path to a directory that contains multiple files. For purposes of this exercise, let's use the default set of testing Datasets that ship with geonode.
+You can replace this path with a directory to your own shapefiles.
 
 .. code-block:: shell
     First let's run the GeoNode server:
@@ -466,7 +462,7 @@ This command will produce the following output to your terminal
     san_andres_y_providencia_water.shp: 201
     san_andres_y_providencia_natural.shp: 201
 
-    1.7456605294117646 seconds per layer
+    1.7456605294117646 seconds per Dataset
 
     Output data: {
         "success": [
@@ -487,11 +483,11 @@ As output the command will print:
 .. code-block:: shell
     layer_name: status code for each Layer
     
-    upload_time spent of each layer
+    upload_time spent of each Dataset
 
-    A json with the representation of the layers uploaded or with some errors.
+    A json with the representation of the Datasets uploaded or with some errors.
 
-The status code, is the response coming from GeoNode. For example 201 means that the layer has been correctly uploaded
+The status code, is the response coming from GeoNode. For example 201 means that the Dataset has been correctly uploaded
 
 If you encounter errors while running this command, please check the GeoNode logs for more information.
 
@@ -500,15 +496,14 @@ If you encounter errors while running this command, please check the GeoNode log
 Management Command ``updatelayers``
 -----------------------------------
 
-While it is possible to import layers directly from your servers filesystem into your
+While it is possible to import Datasets directly from your servers filesystem into your
 GeoNode, you may have an existing GeoServer that already has data in it, or you may
 want to configure data from a GeoServer which is not directly supported by uploading data.
 
-GeoServer supports a wide range of data formats and connections to database, and while
-many of them are not supported as GeoNode upload formats, if they can be configured in
-GeoServer, you can add them to your GeoNode by following the procedure described below.
+GeoServer supports a wide range of data formats and connections to database, some of them 
+may not be supported as GeoNode upload formats. You can add them to your GeoNode by following the procedure described below.
 
-GeoServer supports 3 types of data: :guilabel:`Raster`, :guilabel:`Vector`, :guilabel:`Databases` and :guilabel:`Cascaded`.
+GeoServer supports 4 types of data: :guilabel:`Raster`, :guilabel:`Vector`, :guilabel:`Databases` and :guilabel:`Cascaded`.
 
 For a list of the supported formats for each type of data, consult the following pages:
 
@@ -523,7 +518,7 @@ Data from a PostGIS database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Lets walk through an example of configuring a new PostGIS database in GeoServer and then
-configuring those layers in your GeoNode.
+configuring those Datasets in your GeoNode.
 
 First visit the GeoServer administration interface on your server. This is usually on port 8080 and is available at http://localhost:8080/geoserver/web/
 
@@ -534,7 +529,7 @@ First visit the GeoServer administration interface on your server. This is usual
     .. figure:: img/geoserver_admin.png
        :align: center
 
-    .. note:: The number of stores, layers and workspaces may be different depending on what you already have configured in your GeoServer.
+    .. note:: The number of stores, Datasets and workspaces may be different depending on what you already have configured in your GeoServer.
 
 2. Next you want to select the "Stores" option in the left hand menu, and then the "Add new Store" option. The following screen will be displayed.
 
@@ -548,12 +543,12 @@ First visit the GeoServer administration interface on your server. This is usual
 
     .. note:: If you are unsure about any of the settings, leave them as the default.
 
-4. The next screen lets you configure the layers in your database. This will of course be different depending on the layers in your database.
+4. The next screen lets you configure the Datasets in your database. This will of course be different depending on the Datasets in your database.
 
     .. figure:: img/geoserver_publish_layers.png
        :align: center
 
-5. Select the "Publish" button for one of the layers and the next screen will be displayed where you can enter metadata for this layer. Since we will be managing this metadata in GeoNode, we can leave these alone for now.
+5. Select the "Publish" button for one of the Datasets and the next screen will be displayed where you can enter metadata for this Dataset. Since we will be managing this metadata in GeoNode, we can leave these alone for now.
 
     .. figure:: img/geoserver_layer_params.png
        :align: center
@@ -566,12 +561,12 @@ First visit the GeoServer administration interface on your server. This is usual
     .. figure:: img/geoserver_srs_2.png
        :align: center
 
-7. Click save and this layer will now be configured for use in your GeoServer.
+7. Click save and this Dataset will now be configured for use in your GeoServer.
 
     .. figure:: img/geoserver_layers.png
        :align: center
 
-8. The next step is to configure these layers in GeoNode. The ``updatelayers`` management command can be used for this purpose. As with ``importlayers``, it's useful to look at the command line options for this command by passing the :guilabel:`--help` option
+8. The next step is to configure these Datasets in GeoNode. The ``updatelayers`` management command can be used for this purpose. As with ``importlayers``, it's useful to look at the command line options for this command by passing the :guilabel:`--help` option
 
     Run
 
@@ -615,28 +610,40 @@ First visit the GeoServer administration interface on your server. This is usual
         --traceback           Raise on CommandError exceptions
         --no-color            Don't colorize the command output.
         -i, --ignore-errors   Stop after any errors are encountered.
-        --skip-unadvertised   Skip processing unadvertised layers from GeoSever.
+        --skip-unadvertised   Skip processing unadvertised Datasets from GeoSever.
         --skip-geonode-registered
-                                Just processing GeoServer layers still not registered
+                                Just processing GeoServer Datasets still not registered
                                 in GeoNode.
-        --remove-deleted      Remove GeoNode layers that have been deleted from
+        --remove-deleted      Remove GeoNode Datasets that have been deleted from
                                 GeoSever.
         -u USER, --user USER  Name of the user account which should own the imported
-                                layers
+                                Datasets
         -f FILTER, --filter FILTER
-                                Only update data the layers that match the given
+                                Only update data the Datasets that match the given
                                 filter
         -s STORE, --store STORE
-                                Only update data the layers for the given geoserver
+                                Only update data the Datasets for the given geoserver
                                 store name
         -w WORKSPACE, --workspace WORKSPACE
                                 Only update data on specified workspace
         -p PERMISSIONS, --permissions PERMISSIONS
-                                Permissions to apply to each layer
+                                Permissions to apply to each Dataset
 
-.. warning:: One of the :guilabel:`--workspace` or :guilabel:`--store` must be always specified if you want to ingest Layers belonging to a specific ``Workspace``. As an instance, in order to ingest the layers present into the ``geonode`` workspace, you will need to specify the option ``-w geonode``.
+The update procedure includes the following steps:
 
-9. Let's ingest the layer ``geonode:_1_SARMIENTO_ENERO_2018`` from the ``geonode`` workspace.
+    - The process fetches from GeoServer the relevant WMS layers (all, by store or by workspace)
+
+    - If a filter is defined, the GeoServer layers are filtered
+
+    - For each of the layers, a GeoNode dataset is created based on the metadata registered on GeoServer (title, abstract, bounds)
+
+    - New layers are added, existing layers are replaced, unless the :guilabel:`--skip-geonode-registered` option is used
+
+    - The GeoNode layers, added in previous runs of the update process, which are no longer available in GeoServer are removed, if the :guilabel:`--remove-delete` option is set
+
+.. warning:: One of the :guilabel:`--workspace` or :guilabel:`--store` must be always specified if you want to ingest Datasets belonging to a specific ``Workspace``. As an instance, in order to ingest the Datasets present into the ``geonode`` workspace, you will need to specify the option ``-w geonode``.
+
+9. Let's ingest the Dataset ``geonode:_1_SARMIENTO_ENERO_2018`` from the ``geonode`` workspace.
 
     .. code-block:: shell
 
@@ -644,8 +651,8 @@ First visit the GeoServer administration interface on your server. This is usual
 
     .. code-block:: shell
 
-        Inspecting the available layers in GeoServer ...
-        Found 1 layers, starting processing
+        Inspecting the available Datasets in GeoServer ...
+        Found 1 Datasets, starting processing
         /usr/local/lib/python2.7/site-packages/owslib/iso.py:117: FutureWarning: the .identification and .serviceidentification properties will merge into .identification being a list of properties.  This is currently implemented in .identificationinfo.  Please see https://github.com/geopython/OWSLib/issues/38 for more information
         FutureWarning)
         /usr/local/lib/python2.7/site-packages/owslib/iso.py:495: FutureWarning: The .keywords and .keywords2 properties will merge into the .keywords property in the future, with .keywords becoming a list of MD_Keywords instances. This is currently implemented in .keywords2. Please see https://github.com/geopython/OWSLib/issues/301 for more information
@@ -653,7 +660,7 @@ First visit the GeoServer administration interface on your server. This is usual
         Content-Type: text/html; charset="utf-8"
         MIME-Version: 1.0
         Content-Transfer-Encoding: 7bit
-        Subject: [master.demo.geonode.org] A new layer has been uploaded
+        Subject: [master.demo.geonode.org] A new Dataset has been uploaded
         From: webmaster@localhost
         To: mapadeldelito@chubut.gov.ar
         Reply-To: webmaster@localhost
@@ -665,9 +672,9 @@ First visit the GeoServer administration interface on your server. This is usual
         You have received the following notice from master.demo.geonode.org:
         <p>
 
-        The user <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i> uploaded the following layer:<br/>
+        The user <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i> uploaded the following Dataset:<br/>
         <strong>_1_SARMIENTO_ENERO_2018</strong><br/>
-        You can visit the layer's detail page here: http://master.demo.geonode.org/layers/geonode:_1_SARMIENTO_ENERO_2018
+        You can visit the Dataset's detail page here: http://master.demo.geonode.org/Datasets/geonode:_1_SARMIENTO_ENERO_2018
 
         </p>
         <p>
@@ -679,7 +686,7 @@ First visit the GeoServer administration interface on your server. This is usual
         Content-Type: text/html; charset="utf-8"
         MIME-Version: 1.0
         Content-Transfer-Encoding: 7bit
-        Subject: [master.demo.geonode.org] A new layer has been uploaded
+        Subject: [master.demo.geonode.org] A new Dataset has been uploaded
         From: webmaster@localhost
         To: giacomo8vinci@gmail.com
         Reply-To: webmaster@localhost
@@ -691,9 +698,9 @@ First visit the GeoServer administration interface on your server. This is usual
         You have received the following notice from master.demo.geonode.org:
         <p>
 
-        The user <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i> uploaded the following layer:<br/>
+        The user <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i> uploaded the following Dataset:<br/>
         <strong>_1_SARMIENTO_ENERO_2018</strong><br/>
-        You can visit the layer's detail page here: http://master.demo.geonode.org/layers/geonode:_1_SARMIENTO_ENERO_2018
+        You can visit the Dataset's detail page here: http://master.demo.geonode.org/Datasets/geonode:_1_SARMIENTO_ENERO_2018
 
         </p>
         <p>
@@ -705,7 +712,7 @@ First visit the GeoServer administration interface on your server. This is usual
         Content-Type: text/html; charset="utf-8"
         MIME-Version: 1.0
         Content-Transfer-Encoding: 7bit
-        Subject: [master.demo.geonode.org] A new layer has been uploaded
+        Subject: [master.demo.geonode.org] A new Dataset has been uploaded
         From: webmaster@localhost
         To: fmgagliano@gmail.com
         Reply-To: webmaster@localhost
@@ -717,9 +724,9 @@ First visit the GeoServer administration interface on your server. This is usual
         You have received the following notice from master.demo.geonode.org:
         <p>
 
-        The user <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i> uploaded the following layer:<br/>
+        The user <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i> uploaded the following Dataset:<br/>
         <strong>_1_SARMIENTO_ENERO_2018</strong><br/>
-        You can visit the layer's detail page here: http://master.demo.geonode.org/layers/geonode:_1_SARMIENTO_ENERO_2018
+        You can visit the Dataset's detail page here: http://master.demo.geonode.org/Datasets/geonode:_1_SARMIENTO_ENERO_2018
 
         </p>
         <p>
@@ -728,7 +735,7 @@ First visit the GeoServer administration interface on your server. This is usual
         </body>
 
         -------------------------------------------------------------------------------
-        Found geoserver resource for this layer: _1_SARMIENTO_ENERO_2018
+        Found geoserver resource for this Dataset: _1_SARMIENTO_ENERO_2018
         ... Creating Default Resource Links for Layer [geonode:_1_SARMIENTO_ENERO_2018]
         -- Resource Links[Prune old links]...
         -- Resource Links[Prune old links]...done!
@@ -746,7 +753,7 @@ First visit the GeoServer administration interface on your server. This is usual
         Content-Type: text/html; charset="utf-8"
         MIME-Version: 1.0
         Content-Transfer-Encoding: 7bit
-        Subject: [master.demo.geonode.org] A layer has been updated
+        Subject: [master.demo.geonode.org] A Dataset has been updated
         From: webmaster@localhost
         To: mapadeldelito@chubut.gov.ar
         Reply-To: webmaster@localhost
@@ -758,9 +765,9 @@ First visit the GeoServer administration interface on your server. This is usual
         You have received the following notice from master.demo.geonode.org:
         <p>
 
-        The following layer was updated:<br/>
+        The following Dataset was updated:<br/>
         <strong>_1_SARMIENTO_ENERO_2018</strong>, owned by <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i><br/>
-        You can visit the layer's detail page here: http://master.demo.geonode.org/layers/geonode:_1_SARMIENTO_ENERO_2018
+        You can visit the Dataset's detail page here: http://master.demo.geonode.org/Datasets/geonode:_1_SARMIENTO_ENERO_2018
 
         </p>
         <p>
@@ -772,7 +779,7 @@ First visit the GeoServer administration interface on your server. This is usual
         Content-Type: text/html; charset="utf-8"
         MIME-Version: 1.0
         Content-Transfer-Encoding: 7bit
-        Subject: [master.demo.geonode.org] A layer has been updated
+        Subject: [master.demo.geonode.org] A Dataset has been updated
         From: webmaster@localhost
         To: giacomo8vinci@gmail.com
         Reply-To: webmaster@localhost
@@ -784,9 +791,9 @@ First visit the GeoServer administration interface on your server. This is usual
         You have received the following notice from master.demo.geonode.org:
         <p>
 
-        The following layer was updated:<br/>
+        The following Dataset was updated:<br/>
         <strong>_1_SARMIENTO_ENERO_2018</strong>, owned by <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i><br/>
-        You can visit the layer's detail page here: http://master.demo.geonode.org/layers/geonode:_1_SARMIENTO_ENERO_2018
+        You can visit the Dataset's detail page here: http://master.demo.geonode.org/Datasets/geonode:_1_SARMIENTO_ENERO_2018
 
         </p>
         <p>
@@ -798,7 +805,7 @@ First visit the GeoServer administration interface on your server. This is usual
         Content-Type: text/html; charset="utf-8"
         MIME-Version: 1.0
         Content-Transfer-Encoding: 7bit
-        Subject: [master.demo.geonode.org] A layer has been updated
+        Subject: [master.demo.geonode.org] A Dataset has been updated
         From: webmaster@localhost
         To: fmgagliano@gmail.com
         Reply-To: webmaster@localhost
@@ -810,9 +817,9 @@ First visit the GeoServer administration interface on your server. This is usual
         You have received the following notice from master.demo.geonode.org:
         <p>
 
-        The following layer was updated:<br/>
+        The following Dataset was updated:<br/>
         <strong>_1_SARMIENTO_ENERO_2018</strong>, owned by <i><a href="http://master.demo.geonode.org/people/profile/admin">admin</a></i><br/>
-        You can visit the layer's detail page here: http://master.demo.geonode.org/layers/geonode:_1_SARMIENTO_ENERO_2018
+        You can visit the Dataset's detail page here: http://master.demo.geonode.org/Datasets/geonode:_1_SARMIENTO_ENERO_2018
 
         </p>
         <p>
@@ -821,7 +828,7 @@ First visit the GeoServer administration interface on your server. This is usual
         </body>
 
         -------------------------------------------------------------------------------
-        Found geoserver resource for this layer: _1_SARMIENTO_ENERO_2018
+        Found geoserver resource for this Dataset: _1_SARMIENTO_ENERO_2018
         /usr/local/lib/python2.7/site-packages/geoserver/style.py:80: FutureWarning: The behavior of this method will change in future versions.  Use specific 'len(elem)' or 'elem is not None' test instead.
         if not user_style:
         /usr/local/lib/python2.7/site-packages/geoserver/style.py:84: FutureWarning: The behavior of this method will change in future versions.  Use specific 'len(elem)' or 'elem is not None' test instead.
@@ -843,14 +850,14 @@ First visit the GeoServer administration interface on your server. This is usual
         [created] Layer _1_SARMIENTO_ENERO_2018 (1/1)
 
 
-        Finished processing 1 layers in 5.0 seconds.
+        Finished processing 1 Datasets in 5.0 seconds.
 
-        1 Created layers
-        0 Updated layers
-        0 Failed layers
-        5.000000 seconds per layer
+        1 Created Datasets
+        0 Updated Datasets
+        0 Failed Datasets
+        5.000000 seconds per Dataset
 
-.. note:: In case you don't specify the :guilabel:`-f` option, the layers that already exist in your GeoNode will be just updated and the configuration synchronized between GeoServer and GeoNode.
+.. note:: In case you don't specify the :guilabel:`-f` option, the Datasets that already exists in your GeoNode will be just updated and the configuration synchronized between GeoServer and GeoNode.
 
 .. warning:: When updating **from** GeoServer, the configuration on GeoNode will be changed!
 
@@ -879,7 +886,7 @@ OGR is used to manipulate vector data. In this example, we will use MapInfo .tab
 
 http://services.land.vic.gov.au/landchannel/content/help?name=sampledata
 
-You can download the Admin;(Postcode) layer by issuing the following command::
+You can download the Admin;(Postcode) Dataset by issuing the following command::
 
     $ wget http://services.land.vic.gov.au/sampledata/shape/admin_postcode_vm.zip
 
@@ -942,13 +949,13 @@ The output will look like the following::
     UFI_CREATED: Date (10.0)
     UFI_OLD: Real (12.0)
 
-This gives you information about the number of features, the extent, the projection and the attributes of this layer.
+This gives you information about the number of features, the extent, the projection and the attributes of this Dataset.
 
-Next, lets go ahead and convert this layer into a shapefile by issuing the following command::
+Next, lets go ahead and convert this Dataset into a shapefile by issuing the following command::
 
     $ ogr2ogr -t_srs EPSG:4326 postcode_polygon.shp vicgrid94/mif/lga_polygon/macedon\ ranges/VMADMIN/POSTCODE_POLYGON.mid POSTCODE_POLYGON
 
-Note that we have also reprojected the layer to the WGS84 spatial reference system with the -t_srs ogr2ogr option.
+Note that we have also reprojected the Dataset to the WGS84 spatial reference system with the -t_srs ogr2ogr option.
 
 The output of this command will look like the following::
 
@@ -994,7 +1001,7 @@ Visit the upload page in your GeoNode, drag and drop the files that composes the
 .. figure:: img/upload_shapefile.png
    :align: center
 
-As soon as the import process completes, you will have the possibility to go straight to the layer info page ("Layer Info" button), or to edit the metadata for that layer ("Edit Metadata" button), or to manage the styles for that layer ("Manage Styles").
+As soon as the import process completes, you will have the possibility to go straight to the Dataset info page ("Layer Info" button), or to edit the metadata for that Dataset ("Edit Metadata" button), or to manage the styles for that Dataset ("Manage Styles").
 
 .. figure:: img/layer_info_vector.png
    :align: center
@@ -1172,7 +1179,7 @@ When dealing with big raster datasets it could be very useful to use tiles.
 Tiling allows large raster datasets to be broken-up into manageable pieces and are fundamental
 in defining and implementing a higher level raster I/O interface.
 
-In this example we will use the original dataset of the ``chiangMai_ortho_optimized`` public raster layer which
+In this example we will use the original dataset of the ``chiangMai_ortho_optimized`` public raster Dataset which
 is currently available on the Thai `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_.
 
 This dataset contains an orthorectified image stored as RGBa GeoTiff with 4 bands,
@@ -1411,7 +1418,7 @@ UAVs usually provide also two other types of data: ``DTM (Digital Terrain Model)
 
 Those data require different processes to be optimized. Let’s look at some examples to better understand how to use gdal to accomplish that task.
 
-From the `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_ platform it is currently available the ``chiangMai_dtm_optimized`` layer,
+From the `CHIANG MAI Urban Flooding GeoNode platform <https://urbanflooding.geo-solutions.it/>`_ platform it is currently available the ``chiangMai_dtm_optimized`` Dataset,
 let’s download its original dataset.
 
 This dataset should contain the DTM file ``chiangMai_dtm.tif``.
@@ -1677,6 +1684,12 @@ In this section we will provide a set of :guilabel:`shell` scripts which might b
 
 .. _createsuperuser:
 
+Thesaurus Import and Export
+===========================
+
+See :ref:`load_thesaurus` and :ref:`dump_thesaurus`.
+
+
 Create Users and Super Users
 ============================
 
@@ -1699,7 +1712,7 @@ The easiest way to create a superuser (in linux) is to open your terminal and ty
 You will be asked a username (in this tutorial we will call the superuser you now create *your_superuser*), an email address and a password.
 
 Now you've created a superuser you should become familiar with the *Django Admin Interface*. As a superuser you are having
-access to this interface, where you can manage users, layers, permission and more. To learn more detailed about this interface
+access to this interface, where you can manage users, Datasets, permission and more. To learn more detailed about this interface
 check this LINK. For now it will be enough to just follow the steps. To attend the *Django Admin Interface*, go to your geonode website and *sign in* with *your_superuser*. Once you've logged in, the name of your user will appear on the top right. Click on it and the following menu
 will show up:
 
@@ -1769,7 +1782,7 @@ Until now we've only created superusers. So how do you create an ordinary user? 
 Batch Sync Permissions
 ======================
 
-GeoNode provides a very useful management command ``set_layers_permisions`` allowing an administrator to easily add / remove permissions to groups and users on one or more layers.
+GeoNode provides a very useful management command ``set_layers_permisions`` allowing an administrator to easily add / remove permissions to groups and users on one or more Datasets.
 
 The ``set_layers_permisions`` command arguments are:
 
@@ -1795,7 +1808,7 @@ The ``set_layers_permisions`` command arguments are:
             'publish_resourcebase'
         ]
 
-- **resources** (layers) which permissions will be assigned on --> type the layer title (use quotation mark for titles with white space), multiple choices can be typed with white space separator, if no titles are provided all the layers will be considered
+- **resources** (Datasets) which permissions will be assigned on --> type the Dataset title (use quotation mark for titles with white space), multiple choices can be typed with white space separator, if no titles are provided all the Datasets will be considered
 - **users** who permissions will be assigned to, multiple choices can be typed with a white space separator
 - **groups** who permissions will be assigned to, multiple choices can be typed with a white space separator
 - **delete** flag (optional) which means the permissions will be unset
@@ -1803,30 +1816,30 @@ The ``set_layers_permisions`` command arguments are:
 Usage examples:
 ---------------
 
-1. Assign **write** permissions on the layers **layer_X** and **layer Y** to the users **user_A** and **user_B** and to the group **group_C**.
+1. Assign **write** permissions on the Datasets **layer_X** and **Dataset Y** to the users **user_A** and **user_B** and to the group **group_C**.
 
     .. code-block:: shell
 
-        python manage.py set_layers-permissions -p write -u user_A user_B -g group_C -r layer_X 'layer Y'
+        python manage.py set_layers-permissions -p write -u user_A user_B -g group_C -r layer_X 'Dataset Y'
 
-2. Assign **owner** permissions on all the layers to the group **group_C**.
+2. Assign **owner** permissions on all the Datasets to the group **group_C**.
 
     .. code-block:: shell
 
         python manage.py set_layers-permissions -p owner -g group_C
 
-3. Unset **download** permissions on the layer **layer_X** for the user **user_A**.
+3. Unset **download** permissions on the Dataset **layer_X** for the user **user_A**.
 
     .. code-block:: shell
 
         python manage.py set_layers-permissions -p download -u user_A -r layer_X -d
 
-The same functionalities, with some limitations, are available also from the :guilabel:`Admin Dashboard >> Layers`.
+The same functionalities, with some limitations, are available also from the :guilabel:`Admin Dashboard >> Datasets`.
 
 .. figure:: img/layer_batch_perms_admin.png
    :align: center
 
-An action named :guilabel:`Set layers permissions` is available from the list, redirecting the administrator to a form to set / unset read, write, download and ownership permissions on the selected layers.
+An action named :guilabel:`Set Datasets permissions` is available from the list, redirecting the administrator to a form to set / unset read, write, download and ownership permissions on the selected Datasets.
 
 .. figure:: img/layer_batch_perms_form.png
    :align: center
@@ -1912,7 +1925,7 @@ There are two ways to declare Q() expressions filtering which resources should b
         DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources -c /home/User/Geonode/configs/delete_resources.json
 
 
-2. With CLI: passing ``-l`` ``-d`` ``-m`` list arguments for each of resources (layers, documents, maps)
+2. With CLI: passing ``-l`` ``-d`` ``-m`` list arguments for each of resources (Datasets, documents, maps)
 
 * **Example 3**: Delete resources without configuration file
 
@@ -1925,20 +1938,20 @@ There are two ways to declare Q() expressions filtering which resources should b
 Configuration File
 ------------------
 
-The JSON configuration file should contain a single `filters` object, which consists of `layer`, `map` and `document` lists.
+The JSON configuration file should contain a single `filters` object, which consists of `Dataset`, `map` and `document` lists.
 Each list specifies the filter conditions applied to a corresponding queryset, defining which items will be deleted.
 The filters are evaluated and directly inserted into Django .filter() method, which means the filters occurring as
 separated list items are treated as AND condition. To create OR query ``|`` operator should be used. For more info please check Django
 [documentation](https://docs.djangoproject.com/en/3.2/topics/db/queries/#complex-lookups-with-q-objects)).
 The only exception is passing a list with ``'*'`` which will cause deleting all the queryset of the resource.
 
-* **Example 4**: Example content of the configuration file, which will delete layers with ID's 1, 2, and 3, those owned by `admin` user, along with all defined maps.
+* **Example 4**: Example content of the configuration file, which will delete Datasets with ID's 1, 2, and 3, those owned by `admin` user, along with all defined maps.
 
     .. code-block:: shell
 
         {
           "filters": {
-          "layer": [
+          "Dataset": [
               "Q(pk__in=[1, 2, 3]) | Q(title__icontains='italy')",
               "Q(user__name=admin)"
             ],
@@ -1952,12 +1965,324 @@ CLI
 ---
 
 The CLI configuration can be specified with ``-l`` ``-d`` ``-m`` list arguments, which in fact are a translation
-of the configuration JSON file. ``-l`` ``-d`` ``-m`` arguments are evaluated in the same manner as filters.layer,
+of the configuration JSON file. ``-l`` ``-d`` ``-m`` arguments are evaluated in the same manner as filters.Dataset,
 filters.map and filter.document accordingly from the Example 4.
 The following example's result will be equivalent to Example 4:
 
-* **Example 5**: Example CLI configuration, which will delete layers with ID's 1, 2, and 3, along with all maps.
+* **Example 5**: Example CLI configuration, which will delete Datasets with ID's 1, 2, and 3, along with all maps.
 
     .. code-block:: shell
 
         DJANGO_SETTINGS_MODULE=geonode.settings python manage.py delete_resources -l 'Q(pk__in: [1, 2, 3]) | Q(title__icontains:"italy")' 'Q(owner__name=admin)' -m '*'
+
+
+Async execution over http
+=========================
+
+It is possible to expose and run management commands over http.
+
+To run `custom django management commands <https://docs.djangoproject.com/en/3.2/howto/custom-management-commands/>`_ usually we make make use of the command line:
+
+.. code-block:: shell
+
+    python manage.py ping_mngmt_commands_http
+    $> pong
+
+The ``management_commands_http`` app allows us to run commands when we have no access to the command line.
+It's possible to run a command using the API or the django admin GUI.
+
+For security reasons, only admin users can access the feature and the desired command needs to be explicitly exposed.
+By default the following commands are exposed: *ping_mngmt_commands_http*, *updatelayers*, *sync_geonode_datasets*, *sync_geonode_maps*, *importlayers* and *set_all_datasets_metadata*.
+
+To expose more command you can change the environment variable ``MANAGEMENT_COMMANDS_EXPOSED_OVER_HTTP`` and the added commands will be exposed in your application.
+
+The list of exposed commands is available by the endpoint ``list_management_commands`` and also presented by the form in the admin page ``create management command job``.
+
+.. note:: To use the commands in an asyncronous approach ``ASYNC_SIGNALS`` needs to be set to ``True`` and celery should be running.
+
+Manage using django admin interface
+-----------------------------------
+
+Creating a job
+^^^^^^^^^^^^^^
+
+Access the admin panel: ``http://<your_geonode_host>/admin`` and go to "Management command jobs".
+
+.. figure:: img/management_commands_over_http_admin.png
+    :align: center
+    :alt: Management commands over http admin menu.
+
+    *Management command admin section*
+
+You will arrive at http://<your_geonode_host>/en/admin/management_commands_http/managementcommandjob/,
+then click on the buttton ``+ Add management command job`` (``http://<your_geonode_host>/en/admin/management_commands_http/managementcommandjob/add/``).
+
+.. figure:: img/management_commands_over_http_btn_add_job.png
+    :align: center
+    :alt: Button: Add management command job.
+
+    *Add management command job*
+
+Select the command and fill the form, with the arguments and/or key-arguments if needed.
+Save you job and in the list select the ``start`` action, alterantively you can mark the ``autostart`` option and the command will be automatic started when created.
+
+.. figure:: img/management_commands_over_http_add_job.png
+    :align: center
+    :alt: Form: Add management command job.
+
+    *Creating a management command job form*
+
+
+Starting a job
+^^^^^^^^^^^^^^
+
+To start a job:
+
+.. figure:: img/management_commands_over_http_start_job.png
+    :align: center
+    :alt: Starting a management command job.
+
+    *Starting a job*
+
+1. Select the job to be started.
+2. Select the ``start`` action.
+3. Click in ``Go``.
+4. The page will refresh and the job status will have changed. If it takes a long to run, refresh the page to see the updated the status.
+5. A ``stop`` option is also available.
+
+.. note::
+    If it takes too long to load the page, ``ASYNC_SIGNALS`` may not be activated.
+    If its status gets stuck at ``QUEUED``, verify if celery is running and properly configured.
+
+
+Job status
+^^^^^^^^^^
+
+Clicking at the link in the ID of a job, we can see the details of this job.
+For the job we just created, we can verify the output message and celery job status.
+
+.. figure:: img/management_commands_over_http_job_status.png
+    :align: center
+    :alt: Management command job status.
+
+    *Example job status*
+
+
+When we have an error during execution the traceback message will be available in the ``Celery traceback``.
+In the next image a ``ping_mngmt_commands_http`` job was created with the arguments ``["--force_exception", true]``.
+Checking the text in this field can be useful when troubleshooting errors.
+
+.. figure:: img/management_commands_over_http_job_status_with_traceback.png
+    :align: center
+    :alt: Management command job status with a traceback message.
+
+    *Example job traceback message*
+
+
+Manage using API endpoints
+--------------------------
+
+The execution of the management commands can be handled by http requests to an API: ``http://<your_geonode_host>/api/v2/management/``.
+
+All the requests need to be authenticated with administrative permissions (*superuser*).
+
+You can find here a postman collection with all the exemples listed here and other available endpoints:
+
+:download:`geonode_mngmt_commands.postman_collection.json <data/geonode_mngmt_commands.postman_collection.json>`
+
+
+List exposed commands
+^^^^^^^^^^^^^^^^^^^^^
+
+Getting a list of the exposed commands:
+
+.. code-block:: shell
+
+    curl --location --request GET 'http://<your_geonode_host>/api/v2/management/commands/' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+
+Response:
+
+.. code-block:: json
+
+    {
+        "success": true,
+        "error": null,
+        "data": [
+            "ping_mngmt_commands_http",
+            "updatelayers",
+            "set_all_datasets_metadata",
+            "sync_geonode_maps",
+            "importlayers",
+            "sync_geonode_datasets"
+        ]
+    }
+
+.. note:: You should change the header ``Authorization`` (``Basic YWRtaW46YWRtaW4=``) to your Auth token, in this example I am using a token for ``admin`` as username and ``admin`` as password.
+
+Creating a job
+^^^^^^^^^^^^^^
+
+Optionally, before creating the job you can get its *help message* with the following call:
+
+.. code-block:: shell
+
+    curl --location --request GET 'http://<your_geonode_host>/api/v2/management/commands/ping_mngmt_commands_http/' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+
+
+Creating a job for running ``ping_mngmt_commands_http`` with 30 seconds of sleep time: 
+
+.. code-block:: shell
+
+    curl --location --request POST 'http://<your_geonode_host>/api/v2/management/commands/ping_mngmt_commands_http/jobs/' \
+    --header 'Authorization: Basic YWRtaW46YWRtaW4=' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "args": ["--sleep", 30],
+        "kwargs": {},
+        "autostart": false
+    }'
+
+Response:
+
+.. code-block:: json
+
+    {
+        "success": true,
+        "error": null,
+        "data": {
+            "id": 8,
+            "command": "ping_mngmt_commands_http",
+            "app_name": "geonode.management_commands_http",
+            "user": 1000,
+            "status": "CREATED",
+            "created_at": "2021-10-08T18:17:25.045752Z",
+            "start_time": null,
+            "end_time": null,
+            "args": [
+                "--sleep",
+                30
+            ],
+            "kwargs": {},
+            "celery_result_id": null,
+            "output_message": null
+        }
+    }
+
+
+.. note:: Alterantively you can omit the ``jobs`` part of the url to create a job. (Using ``http://<your_geonode_host>/api/v2/management/commands/ping_mngmt_commands_http/`` as url)
+
+
+Start/Stop actions
+^^^^^^^^^^^^^^^^^^
+
+To start the created job:
+
+.. code-block:: shell
+
+    curl --location --request PATCH 'http://<your_geonode_host>/api/v2/management/jobs/8/start/' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+
+Response:
+
+.. code-block:: json
+
+    {
+        "success": true,
+        "error": null,
+        "data": {
+            "id": 8,
+            "command": "ping_mngmt_commands_http",
+            "app_name": "geonode.management_commands_http",
+            "user": 1000,
+            "status": "QUEUED",
+            "created_at": "2021-10-08T18:17:25.045752Z",
+            "start_time": null,
+            "end_time": null,
+            "args": [
+                "--sleep",
+                30
+            ],
+            "kwargs": {},
+            "celery_result_id": null,
+            "output_message": null
+        }
+    }
+
+.. note:: During execution the job can be interrupted using the following call:
+
+    .. code-block:: shell
+
+        curl --location --request PATCH 'http://<your_geonode_host>/api/v2/management/jobs/8/stop/' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+
+Note that the status changed from **CREATED** to **QUEUED**, during execution it will be **STARTED** and at the end **FINISHED**.
+
+Jobs list and status
+^^^^^^^^^^^^^^^^^^^^
+
+You can verify your job status and details with the following call:
+
+.. code-block:: shell
+
+    curl --location --request GET 'http://<your_geonode_host>/api/v2/management/jobs/8/status/' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+    
+Response:
+
+.. code-block:: json
+
+    {
+        "id": 8,
+        "command": "ping_mngmt_commands_http",
+        "app_name": "geonode.management_commands_http",
+        "user": 1000,
+        "status": "FINISHED",
+        "created_at": "2021-10-08T18:17:25.045752Z",
+        "start_time": "2021-10-08T18:20:02.761475Z",
+        "end_time": "2021-10-08T18:20:32.802007Z",
+        "args": [
+            "--sleep",
+            30
+        ],
+        "kwargs": {},
+        "celery_result_id": "fe7359a6-5f8c-47bf-859a-84351b5ed80c",
+        "output_message": "Sleeping for 30.0 seconds...\npong\n",
+        "celery_task_meta": {
+            "date_done": "2021-10-08T18:20:32.810649Z",
+            "status": "SUCCESS",
+            "traceback": null,
+            "worker": "worker1@4f641ffa9c0b"
+        }
+    }
+
+When runing multiple jobs and to audit already ran jobs. A list of jobs can be retrieved using the following call:
+
+.. code-block:: shell
+
+    curl --location --request GET 'http://<your_geonode_host>/api/v2/management/jobs/' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+    
+Response:
+
+.. code-block:: json
+
+    {
+        "links": {
+            "next": null,
+            "previous": null
+        },
+        "total": 1,
+        "page": 1,
+        "page_size": 10,
+        "data": [
+            {
+                "id": 1,
+                "command": "ping_mngmt_commands_http",
+                "app_name": "geonode.management_commands_http",
+                "user": 1000,
+                "status": "FINISHED",
+                "created_at": "2021-10-08T18:17:25.045752Z"
+            }
+        ]
+    }
+
+
+.. note:: This list can be filtered by the fields "celery_result_id", "command", "app_name", "status", "user" and "user__username".
+
+

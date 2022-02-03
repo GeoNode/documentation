@@ -24,14 +24,14 @@ The steps to be followed are:
 
 Installation steps
 
-On a fresh Ubuntu 18.04 installation, we will be installing gdal version 2.4.2
+On a fresh Ubuntu 20.04 installation, we will be installing gdal version 3.3.2
 
 1- Using the terminal in the host machine, run the following commands:
 
 .. code-block:: shell
 
     $ sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
-    $ sudo apt-get install libgdal-dev python3-gdal
+    $ sudo apt-get install python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
 
 .. note:: Make sure you don't have a newer version on the software list under /et/apt/sources.list.d/
 
@@ -40,11 +40,10 @@ On a fresh Ubuntu 18.04 installation, we will be installing gdal version 2.4.2
 
 .. code-block:: shell
 
-    $ sudo gdal-config --version   #it should output 2.4.2 at this step
-    $ python -c "from osgeo import gdal; print gdal.__version__"    #it should output 2.4.2 at this step
+    $ sudo gdal-config --version   #it should output 3.3.2 at this step
+    $ python -c "from osgeo import gdal; print gdal.__version__"    #it should output 3.3.2 at this step
 
 3- Install GDAL on your virtual environment by referring to the same version which we just installed on the host machine. To do that, you will need to run the following command during activated virtual environment session as follows:
-
 
 
 .. code-block:: shell

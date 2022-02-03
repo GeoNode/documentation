@@ -33,7 +33,6 @@ Check that your system is already up-to-date with the repository running the fol
 .. code-block:: shell
 
    sudo apt update
-   sudo apt upgrade
 
 
 Create a Dedicated User
@@ -66,16 +65,13 @@ First, we are going to install all the **system packages** needed for the GeoNod
 .. code-block:: shell
 
   # Install packages from GeoNode core
-  sudo apt install -y gdal-bin
+  sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
   sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
   sudo apt install -y libxml2 libxml2-dev gettext
-  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev
+  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
   sudo apt install -y software-properties-common build-essential
   sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
   sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
-
-  # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
 
   # Install Openjdk
   sudo -i apt update
@@ -83,7 +79,6 @@ First, we are going to install all the **system packages** needed for the GeoNod
   sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 
   sudo apt update -y
-  sudo apt upgrade -y
   sudo apt autoremove -y
   sudo apt autoclean -y
   sudo apt purge -y
@@ -420,3 +415,26 @@ Run the containers in daemon mode
 
   docker-compose -f docker-compose.yml -f docker-compose.override.example-org.yml up --build -d
 
+Test geonode-project with vagrant
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: Inside geonode-project files you will find one file named `Vagrantfile.compose` and one named `Vagrantfile.stack`, copy one of them onto file `Vagrantfile` to use them with vagrant.
+
+.. code-block:: shell
+
+  apt-get install -y vagrant
+  #choose what to test (in this case docker-compose.yml)
+  cp Vagrantfile.compose Vagrantfile
+  #this will start a vargant virtual machine, generate and build geonode-project
+  vagrant up
+  # check services are up upon reboot
+  vagrant ssh geonode-compose -c 'docker ps'
+  vagrant destroy -f
+  # test docker swarm
+  cp Vagrantfile.stack Vagrantfile
+  vagrant up
+  # check services are up upon reboot
+  vagrant ssh geonode-vagrant -c 'docker service ls'
+  vagrant destroy -f
+
+.. note:: Vagrant will generate a dummi project named "antani" inside vagrant, starting with the geonode-project codebase, this way it is possible to test inside vagrant almost instantly what one modifies into geonode-project

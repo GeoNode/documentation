@@ -26,7 +26,7 @@ To take full advantage of all the GeoNode features you need an user account. Fol
 
           *Alerts*
 
-To logout click on the :guilabel:`Log out` link of the user menu.
+To log out click on the :guilabel:`Log out` link of the user menu.
 
 .. figure:: img/logout_link.png
        :align: center

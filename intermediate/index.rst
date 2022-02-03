@@ -8,6 +8,14 @@ Read-Only and Maintenance Mode
 
     modes/index
 
+Harvesting resources from remote services
+=========================================
+
+.. toctree::
+    :maxdepth: 3
+
+    harvesting/index
+
 Monitoring
 ==========
 
@@ -24,13 +32,3 @@ GeoNode Backup and Restore
     :maxdepth: 3
 
     backup/index
-
-
-Viewer and Hooksets
-===================
-
-.. toctree::
-    :caption: Viewer and Hooksets
-    :maxdepth: 3
-
-    viewer/index

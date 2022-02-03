@@ -22,12 +22,12 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
 ======================================================================
 
-.. _Ubuntu (18.0 +) Basic Setup:
+.. _Ubuntu (20.04) Basic Setup:
 
-Ubuntu (18.0 +)
-^^^^^^^^^^^^^^^
+Ubuntu (20.04)
+^^^^^^^^^^^^^^
 
-.. note:: Recommended version 18.0.4 (Bionic Beaver). 
+.. note:: Recommended version 20.04 (Focal Fossa). 
 
 Packages Installation
 .....................
@@ -37,16 +37,13 @@ Login to the target machine and execute the following commands:
 
 .. code-block:: shell
 
-  sudo apt install -y gdal-bin
+  sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
   sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
   sudo apt install -y libxml2 libxml2-dev gettext
-  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev
+  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
   sudo apt install -y software-properties-common build-essential
   sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
   sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
-
-  # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
 
 Docker Setup (First time only)
 ..............................
@@ -87,16 +84,13 @@ Login to the target machine and execute the following commands:
 .. code-block:: shell
 
   sudo yum -y install epel-release
-  sudo yum install -y gdal
+  sudo yum install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
   sudo yum install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
   sudo pip3 install -U pip
   sudo pip3 install -U virtualenv
   sudo yum install -y libxml2 libxml2-dev gettext
-  sudo yum install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libgdal-dev
+  sudo yum install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
   sudo yum install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-
-  # If the following does not work, you can skip it
-  sudo apt install -y libgdal20
 
 Docker Setup (First time only)
 ..............................
@@ -585,7 +579,7 @@ Update the passwords and keys on :guilabel:`.env` file
 
 .. warning:: **Be careful!** The env GEOSERVER_ADMIN_PASSWORD is not actually used to change the GeoServer admin password. You need to login on GeoServer UI and change it manually!
 
-[Optional] Update your SSH Certificates
+[Optional] Update your SSL Certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In production deployment mode, GeoNode uses by default :guilabel:`Let's Encrypt` certificates
@@ -779,7 +773,7 @@ GeoWebCache DiskQuota should be always enabled on a production system. In the ca
      :width: 350px
      :align: center
 
-     *Tile Caching: Tiled Layers*
+     *Tile Caching: Tiled Datasets*
 
  - Configure :guilabel:`Disk Quota` by providing the connection string to the DB Docker Container as specified in the :guilabel:`.env` file
 
@@ -824,8 +818,8 @@ In order to do that, follow the procedure below:
 .. code-block:: shell
 
     # Update the GeoServer WEB-INF/lib JARs accordingly
-    wget --no-check-certificate "https://www.dropbox.com/s/psolxleimaft0t7/postgis-jdbc-1.3.3.jar?dl=1" -O postgis-jdbc-1.3.3.jar && \
-    wget --no-check-certificate "https://www.dropbox.com/s/ilowu1vd27j2cs1/hibernate-spatial-postgis-1.1.3.2.jar?dl=1" -O hibernate-spatial-postgis-1.1.3.2.jar && \
+    wget --no-check-certificate "https://repo1.maven.org/maven2/org/postgis/postgis-jdbc/1.3.3/postgis-jdbc-1.3.3.jar" -O postgis-jdbc-1.3.3.jar && \
+    wget --no-check-certificate "https://maven.geo-solutions.it/org/hibernatespatial/hibernate-spatial-postgis/1.1.3.2/hibernate-spatial-postgis-1.1.3.2.jar" -O hibernate-spatial-postgis-1.1.3.2.jar && \
     rm /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/hibernate-spatial-h2-geodb-1.1.3.1.jar && \
     mv hibernate-spatial-postgis-1.1.3.2.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/ && \
     mv postgis-jdbc-1.3.3.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/
@@ -848,8 +842,8 @@ You will need to :ref:`fixup_geonode_layers_permissions` in order to regenerate 
 
 .. _fixup_geonode_layers_permissions:
 
-Fixup GeoNode Layers Permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Fixup GeoNode Datasets Permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The list of the GeoFence Security Rules is available from the :guilabel:`GeoFence Data Rules` section.
 
@@ -868,24 +862,37 @@ In order to re-sync the GeoFence security rules, follow the procedure below:
     # Enter the GeoNode Docker Container
     docker-compose exec django bash
 
-    # Run the `sync_geonode_layers` management command
-    ./manage.sh sync_geonode_layers --updatepermissions
+    # Run the `sync_geonode_datasets` management command
+    ./manage.sh sync_geonode_datasets --updatepermissions
 
-Regenerate GeoNode Layers Thumbnails
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Regenerate GeoNode Datasets Thumbnails
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following procedure allows you to *batch* regenerate all Layers Thumbnails:
+The following procedure allows you to *batch* regenerate all Datasets Thumbnails:
 
 .. code-block:: shell
 
     # Enter the GeoNode Docker Container
     docker-compose exec django bash
 
-    # Run the `sync_geonode_layers` management command
-    ./manage.sh sync_geonode_layers --updatethumbnails
+    # Run the `sync_geonode_datasets` management command
+    ./manage.sh sync_geonode_datasets --updatethumbnails
 
-Fixup GeoNode Layers Metadata And Download Links
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Regenerate GeoNode Datasets BBOXES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following procedure allows you to *batch* regenerate all Datasets BBOXES:
+
+.. code-block:: shell
+
+    # Enter the GeoNode Docker Container
+    docker-compose exec django bash
+
+    # Run the `sync_geonode_datasets` management command
+    ./manage.sh sync_geonode_datasets --updatebbox
+
+Fixup GeoNode Datasets Metadata And Download Links
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following procedure allows you to fix-up broken or incorrect Metadata Links:
 

@@ -642,6 +642,15 @@ CSRF_COOKIE_SECURE
 
     Whether to use a secure cookie for the CSRF cookie. If this is set to True, the cookie will be marked as “secure,” which means browsers may ensure that the cookie is only sent with an HTTPS connection. This is a `Django Setting <https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-secure>`__
 
+CUSTOM_METADATA_SCHEMA
+----------------------
+
+    | Default: ``{}``
+
+    If present, will extend the available metadata schema used for store
+    new value for each resource. By default override the existing one.
+    The expected schema is the same as the default
+
 D
 =
 
@@ -691,6 +700,50 @@ DEFAULT_AUTO_FIELD
 
     Default primary key field type to use for models that don’t have a field with primary_key=True.
     Django documentation https://docs.djangoproject.com/it/3.2/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
+
+DEFAULT_EXTRA_METADATA_SCHEMA
+-----------------------------
+
+    Default
+
+    .. code-block:: json
+
+        {
+            Optional("id"): int,
+            "filter_header": object,
+            "field_name": object,
+            "field_label": object,
+            "field_value": object,
+        }
+
+    Define the default metadata schema used for add to the resource extra metadata without modify the actual model.
+    This schema is used as validation for the input metadata provided by the user
+
+    - `id`: (optional int): the identifier of the metadata. Optional for creation, required in Upgrade phase
+    - `filter_header`: (required object): Can be any type, is used to generate the facet filter header. Is also an identifier.
+    - `field_name`: (required object): name of the metadata field
+    - `field_label`: (required object): verbose string of the name. Is used as a label in the facet filters.
+    - `field_value`: (required object): metadata values
+
+    An example of metadata that can be ingested is the follow:
+
+    .. code-block:: json
+
+        [
+            {
+                "filter_header": "Bike Brand",
+                "field_name": "name",
+                "field_label": "Bike Name",
+                "field_value": "KTM",
+            },
+            {
+                "filter_header": "Bike Brand",
+                "field_name": "name",
+                "field_label": "Bike Name",
+                "field_value": "Bianchi",
+            }
+        ]
+
 
 DEFAULT_LAYER_FORMAT
 --------------------
@@ -902,6 +955,23 @@ EPSG_CODE_MATCHES
     Supported projections human readable descriptions associated to their EPSG Codes.
     This list will be presented to the user during the upload process whenever GeoNode won't be able to recognize a suitable projection.
     Those codes should be aligned to the `UPLOADER` ones and available in GeoServer also.
+
+EXTRA_METADATA_SCHEMA
+---------------------
+
+    | Default:
+
+    .. code-block:: python
+
+        EXTRA_METADATA_SCHEMA = {**{
+            "map": os.getenv('MAP_EXTRA_METADATA_SCHEMA', DEFAULT_EXTRA_METADATA_SCHEMA),
+            "layer": os.getenv('DATASET_EXTRA_METADATA_SCHEMA', DEFAULT_EXTRA_METADATA_SCHEMA),
+            "document": os.getenv('DOCUMENT_EXTRA_METADATA_SCHEMA', DEFAULT_EXTRA_METADATA_SCHEMA),
+            "geoapp": os.getenv('GEOAPP_EXTRA_METADATA_SCHEMA', DEFAULT_EXTRA_METADATA_SCHEMA)
+        }, **CUSTOM_METADATA_SCHEMA}
+
+    Variable used to actually get the expected metadata schema for each resource_type.
+    In this way, each resource type can have a different metadata schema
 
 F
 =

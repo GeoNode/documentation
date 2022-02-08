@@ -142,6 +142,10 @@ Startup the containers
 .. code-block:: shell
 
   cd my_geonode
+  
+  # create env file (customize if needed)
+  cp .env.sample .env
+  
   ./docker-build.sh
 
 - You can follow the containers startup by running the following commands from ``my_geonode`` root folder:

@@ -1003,11 +1003,24 @@ GEOIP_PATH
 
     The local path where GeoIPCities.dat is written to. Make sure your user has to have write permissions.
 
+GEONODE_APPS_ENABLED
+--------------------
 
-GEONODE_APPS
-------------
+    | Default: ``True``
 
     If enabled contrib apps are used.
+    If disabled:
+    - the geoapps URLs are not included in the routing paths
+    - the geoapps resources are excluded from the search
+    - the resource detail are forwarded to the homepage
+
+    ``ENABLE -> DISABLE`` transition:
+    
+    This should be done if the geoapps were enabled in an environment where they are not needed.
+
+    ``DISABLE -> ENABLE`` transition:
+
+    It should be done only once to enable geoapps in an environment where are needed
 
 GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY
 ------------------------------------

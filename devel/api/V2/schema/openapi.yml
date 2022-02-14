@@ -703,377 +703,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/GeoApp'
           description: ''
-  /api/v2/geostories/:
-    get:
-      operationId: api_v2_geostories_list
-      description: API endpoint that return all the geostories available with detailed information (paginated).
-      parameters:
-      - name: ordering
-        required: false
-        in: query
-        description: Which field to use when ordering the results.
-        schema:
-          type: string
-      - name: page
-        required: false
-        in: query
-        description: A page number within the paginated result set.
-        schema:
-          type: integer
-      - name: page_size
-        required: false
-        in: query
-        description: Number of results to return per page.
-        schema:
-          type: integer
-      - name: search
-        required: false
-        in: query
-        description: A search term.
-        schema:
-          type: string
-      tags:
-      - api
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedGeoStoryList'
-          description: ''
-    post:
-      operationId: api_v2_geostories_create
-      description: |-
-        Either create a single or many model instances in bulk
-        using the Serializer's many=True ability from Django REST >= 2.2.5.
-
-        The data can be represented by the serializer name (single or plural
-        forms), dict or list.
-
-        Examples:
-
-        POST /dogs/
-        {
-          "name": "Fido",
-          "age": 2
-        }
-
-        POST /dogs/
-        {
-          "dog": {
-            "name": "Lucky",
-            "age": 3
-          }
-        }
-
-        POST /dogs/
-        {
-          "dogs": [
-            {"name": "Fido", "age": 2},
-            {"name": "Lucky", "age": 3}
-          ]
-        }
-
-        POST /dogs/
-        [
-            {"name": "Fido", "age": 2},
-            {"name": "Lucky", "age": 3}
-        ]
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GeoStory'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/GeoStory'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/GeoStory'
-        required: true
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '201':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-          description: ''
-    patch:
-      operationId: api_v2_geostories_partial_update
-      description: API endpoint that allows geoapps to be viewed or edited.
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PatchedGeoStory'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/PatchedGeoStory'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/PatchedGeoStory'
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-          description: ''
-    delete:
-      operationId: api_v2_geostories_destroy
-      description: |-
-        Either delete a single or many model instances in bulk
-
-        DELETE /dogs/
-        {
-            "dogs": [
-                {"id": 1},
-                {"id": 2}
-            ]
-        }
-
-        DELETE /dogs/
-        [
-            {"id": 1},
-            {"id": 2}
-        ]
-      tags:
-      - api
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '204':
-          description: No response body
-  /api/v2/geostories/{id}/:
-    get:
-      operationId: api_v2_geostories_retrieve
-      description: API endpoint that return detailed information of a specific geostory.
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this geo story.
-        required: true
-      tags:
-      - api
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-          description: ''
-    put:
-      operationId: api_v2_geostories_update
-      description: |-
-        Update one or more model instances.
-
-        If ENABLE_BULK_UPDATE is set, multiple previously-fetched records
-        may be updated in a single call, provided their IDs.
-
-        If ENABLE_PATCH_ALL is set, multiple records
-        may be updated in a single PATCH call, even without knowing their IDs.
-
-        *WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature
-        and used with caution. This feature must be enabled at the viewset level
-        and must also be requested explicitly by the client
-        via the "patch-all" query parameter.
-
-        This parameter can have one of the following values:
-
-            true (or 1): records will be fetched and then updated in a transaction loop
-              - The `Model.save` method will be called and model signals will run
-              - This can be slow if there are too many signals or many records in the query
-              - This is considered the more safe and default behavior
-            query: records will be updated in a single query
-              - The `QuerySet.update` method will be called and model signals will not run
-              - This will be fast, but may break data constraints that are controlled by signals
-              - This is considered unsafe but useful in certain situations
-
-        The server's successful response to a patch-all request
-        will NOT include any individual records. Instead, the response content will contain
-        a "meta" object with an "updated" count of updated records.
-
-        Examples:
-
-        Update one dog:
-
-            PATCH /dogs/1/
-            {
-                'fur': 'white'
-            }
-
-        Update many dogs by ID:
-
-            PATCH /dogs/
-            [
-                {'id': 1, 'fur': 'white'},
-                {'id': 2, 'fur': 'black'},
-                {'id': 3, 'fur': 'yellow'}
-            ]
-
-        Update all dogs in a query:
-
-            PATCH /dogs/?filter{fur.contains}=brown&patch-all=true
-            {
-                'fur': 'gold'
-            }
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this geo story.
-        required: true
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GeoStory'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/GeoStory'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/GeoStory'
-        required: true
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-          description: ''
-    patch:
-      operationId: api_v2_geostories_partial_update_2
-      description: API endpoint that allows geoapps to be viewed or edited.
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this geo story.
-        required: true
-      tags:
-      - api
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PatchedGeoStory'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/PatchedGeoStory'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/PatchedGeoStory'
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-          description: ''
-    delete:
-      operationId: api_v2_geostories_destroy_2
-      description: |-
-        Either delete a single or many model instances in bulk
-
-        DELETE /dogs/
-        {
-            "dogs": [
-                {"id": 1},
-                {"id": 2}
-            ]
-        }
-
-        DELETE /dogs/
-        [
-            {"id": 1},
-            {"id": 2}
-        ]
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this geo story.
-        required: true
-      tags:
-      - api
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      responses:
-        '204':
-          description: No response body
-  /api/v2/geostories/{id}/{field_name}/:
-    get:
-      operationId: api_v2_geostories_retrieve_2
-      description: |-
-        Fetch related object(s), as if sideloaded (used to support
-        link objects).
-
-        This method gets mapped to `/<resource>/<pk>/<field_name>/` by
-        DynamicRouter for all DynamicRelationField fields. Generally,
-        this method probably shouldn't be overridden.
-
-        An alternative implementation would be to generate reverse queries.
-        For an exploration of that approach, see:
-            https://gist.github.com/ryochiji/54687d675978c7d96503
-      parameters:
-      - in: path
-        name: field_name
-        schema:
-          type: string
-        required: true
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this geo story.
-        required: true
-      tags:
-      - api
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoStory'
-          description: ''
   /api/v2/groups/:
     get:
       operationId: api_v2_groups_list
@@ -1453,10 +1082,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/GroupProfile'
           description: ''
-  /api/v2/layers/:
+  /api/v2/datasets/:
     get:
-      operationId: api_v2_layers_list
-      description: API endpoint that return all the layers available with detailed information (paginated).
+      operationId: api_v2_datasets_list
+      description: API endpoint that return all the datasets available with detailed information (paginated).
       parameters:
       - name: ordering
         required: false
@@ -1493,10 +1122,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PaginatedLayerList'
+                $ref: '#/components/schemas/PaginatedDatasetList'
           description: ''
     post:
-      operationId: api_v2_layers_create
+      operationId: api_v2_datasets_create
       description: |-
         Either create a single or many model instances in bulk
         using the Serializer's many=True ability from Django REST >= 2.2.5.
@@ -1539,13 +1168,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Layer'
+              $ref: '#/components/schemas/Dataset'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/Layer'
+              $ref: '#/components/schemas/Dataset'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/Layer'
+              $ref: '#/components/schemas/Dataset'
         required: true
       security:
       - cookieAuth: []
@@ -1555,24 +1184,24 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Layer'
+                $ref: '#/components/schemas/Dataset'
           description: ''
     patch:
-      operationId: api_v2_layers_partial_update
-      description: API endpoint that allows layers to be viewed or edited.
+      operationId: api_v2_datasets_partial_update
+      description: API endpoint that allows datasets to be viewed or edited.
       tags:
       - api
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PatchedLayer'
+              $ref: '#/components/schemas/PatchedDataset'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/PatchedLayer'
+              $ref: '#/components/schemas/PatchedDataset'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/PatchedLayer'
+              $ref: '#/components/schemas/PatchedDataset'
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1581,10 +1210,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Layer'
+                $ref: '#/components/schemas/Dataset'
           description: ''
     delete:
-      operationId: api_v2_layers_destroy
+      operationId: api_v2_datasets_destroy
       description: |-
         Either delete a single or many model instances in bulk
 
@@ -1609,16 +1238,16 @@ paths:
       responses:
         '204':
           description: No response body
-  /api/v2/layers/{id}/:
+  /api/v2/datasets/{id}/:
     get:
-      operationId: api_v2_layers_retrieve
-      description: API endpoint that return detailed information of a specific layer
+      operationId: api_v2_datasets_retrieve
+      description: API endpoint that return detailed information of a specific dataset
       parameters:
       - in: path
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this layer.
+        description: A unique integer value identifying this dataset.
         required: true
       tags:
       - api
@@ -1631,10 +1260,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Layer'
+                $ref: '#/components/schemas/Dataset'
           description: ''
     put:
-      operationId: api_v2_layers_update
+      operationId: api_v2_datasets_update
       description: |-
         Update one or more model instances.
 
@@ -1693,7 +1322,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this layer.
+        description: A unique integer value identifying this dataset.
         required: true
       tags:
       - api
@@ -1701,13 +1330,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Layer'
+              $ref: '#/components/schemas/Dataset'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/Layer'
+              $ref: '#/components/schemas/Dataset'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/Layer'
+              $ref: '#/components/schemas/Dataset'
         required: true
       security:
       - cookieAuth: []
@@ -1717,17 +1346,17 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Layer'
+                $ref: '#/components/schemas/Dataset'
           description: ''
     patch:
-      operationId: api_v2_layers_partial_update_2
-      description: API endpoint that allows layers to be viewed or edited.
+      operationId: api_v2_datasets_partial_update_2
+      description: API endpoint that allows datasets to be viewed or edited.
       parameters:
       - in: path
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this layer.
+        description: A unique integer value identifying this dataset.
         required: true
       tags:
       - api
@@ -1735,13 +1364,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PatchedLayer'
+              $ref: '#/components/schemas/PatchedDataset'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/PatchedLayer'
+              $ref: '#/components/schemas/PatchedDataset'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/PatchedLayer'
+              $ref: '#/components/schemas/PatchedDataset'
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1750,10 +1379,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Layer'
+                $ref: '#/components/schemas/Dataset'
           description: ''
     delete:
-      operationId: api_v2_layers_destroy_2
+      operationId: api_v2_dataset_destroy_2
       description: |-
         Delete a single model instance
 
@@ -1775,7 +1404,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this layer.
+        description: A unique integer value identifying this dataset.
         required: true
       tags:
       - api
@@ -1785,9 +1414,9 @@ paths:
       responses:
         '204':
           description: No response body
-  /api/v2/layers/{id}/{field_name}/:
+  /api/v2/datasets/{id}/{field_name}/:
     get:
-      operationId: api_v2_layers_retrieve_2
+      operationId: api_v2_datasets_retrieve_2
       description: |-
         Fetch related object(s), as if sideloaded (used to support
         link objects).
@@ -1809,7 +1438,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this layer.
+        description: A unique integer value identifying this dataset.
         required: true
       tags:
       - api
@@ -1822,8 +1451,57 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Layer'
+                $ref: '#/components/schemas/Dataset'
           description: ''
+  /api/v2/datasets/{id}/maps/:
+    get:
+      operationId: api_v2_datasets_maps_retrieve
+      description: API endpoint allowing to retrieve a list of the maps using a dataset.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Dataset'
+          description: ''
+  /api/v2/datasets/{id}/maplayers/:
+    get:
+      operationId: api_v2_datasets_maplayers_retrieve
+      description: API endpoint allowing to retrieve a list of the MapLayers related to the dataset
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Dataset'
+          description: ''
+
   /api/v2/maps/:
     get:
       operationId: api_v2_maps_list
@@ -2142,12 +1820,50 @@ paths:
       responses:
         '204':
           description: No response body
-  /api/v2/maps/{id}/layers/:
+  /api/v2/maps/{id}/{field_name}/:
     get:
-      operationId: api_v2_maps_layers_retrieve
+      operationId: api_v2_maps_retrieve_2
       description: |-
-        Return the list of the layer that compose the map with some information like opacity, name, visibility.
-        In the layer_params field, are available the information regarding the layer
+        Fetch related object(s), as if sideloaded (used to support
+        link objects).
+
+        This method gets mapped to `/<resource>/<pk>/<field_name>/` by
+        DynamicRouter for all DynamicRelationField fields. Generally,
+        this method probably shouldn't be overridden.
+
+        An alternative implementation would be to generate reverse queries.
+        For an exploration of that approach, see:
+            https://gist.github.com/ryochiji/54687d675978c7d96503
+      parameters:
+      - in: path
+        name: field_name
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this map.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+          description: ''
+  /api/v2/maps/{id}/maplayers/:
+    get:
+      operationId: api_v2_maps_datasets_retrieve
+      description: |-
+        Return the list of the maplayers that compose the map.
       parameters:
       - in: path
         name: id
@@ -2168,10 +1884,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Map'
           description: ''
-  /api/v2/maps/{id}/local_layers/:
+  /api/v2/maps/{id}/datasets/:
     get:
-      operationId: api_v2_maps_local_layers_retrieve
-      description: API endpoint allowing to retrieve a detailed list of the local MapLayers
+      operationId: api_v2_maps_datasets_retrieve
+      description: API endpoint allowing to retrieve a detailed list of the local Datasets a map is using.
       parameters:
       - in: path
         name: id
@@ -2195,7 +1911,7 @@ paths:
   /api/v2/resources/:
     get:
       operationId: api_v2_resources_list
-      description: API endpoint that show all resources available in GeoNode, includes maps, layers, geostories and documents (paginated).
+      description: API endpoint that show all resources available in GeoNode, includes maps, datasets, geoapps and documents (paginated).
       parameters:
       - name: ordering
         required: false
@@ -2879,9 +2595,9 @@ paths:
         Authenticated API endpoint that will show details about the upload status.
         Main informations available are:
           - ID: upload id
-          - name: layer name
+          - name: dataset name
           - date: start date of the import process
-          - state: the actual state of the import process. When the state is PROCESSED, means that the layer has been process by GeoNode and Geoserver
+          - state: the actual state of the import process. When the state is PROCESSED, means that the dataset has been process by GeoNode and Geoserver
           - progress: % of progress
           - uploadfile_set: list of the uploaded files
           - delete url: url to be called for delete the import
@@ -2890,7 +2606,7 @@ paths:
           {
             "upload": {
                 "id": 1119,
-                "name": "layer_name",
+                "name": "dataset_name",
                 "date": "2021-04-26T09:50:41.233543Z",
                 "create_date": "2021-04-26T09:50:40.515866Z",
                 "user": 1167,
@@ -3120,13 +2836,13 @@ paths:
     put:
       operationId: api_v2_uploads_upload_update
       description:  |-
-        API endpoint that allows user to upload new layers into GeoNode.
+        API endpoint that allows user to upload new datasets into GeoNode.
         The endpoint is protected via authentication and the request should always come from the same session.
         The API accept the request with form-data. Is also possible to define some information via json.
         Behind the scene, geonode will:
           - Create an upload session
-          - Save the layer into GeoNode
-          - Call async geoserver to save the layer
+          - Save the dataset into GeoNode
+          - Call async geoserver to save the dataset
         Example:
           client = requests.session()
           response = client.put(
@@ -3137,7 +2853,7 @@ paths:
             )
             Where:
               params = {
-                  "permissions": '{ "users": {"AnonymousUser": ["view_resourcebase"]} , "groups":{}}',  # layer permissions
+                  "permissions": '{ "users": {"AnonymousUser": ["view_resourcebase"]} , "groups":{}}',  # dataset permissions
                   "time": "false",
                   "layer_title": "layer_title",
                   "time": "false",
@@ -3174,14 +2890,14 @@ paths:
     put:
       operationId: api_upload_upload_final
       description:  |-
-        API endpoint that allows user to check the status of new layers into GeoNode.
+        API endpoint that allows user to check the status of new datasets into GeoNode.
         The endpoint is protected via authentication and the request should always come from the same session.
         Example:
           client = requests.session()
           response = client.get("http://localhost:8000/upload/final?id=1")
           Where:
             params = {
-                "permissions": '{ "users": {"AnonymousUser": ["view_resourcebase"]} , "groups":{}}',  # layer permissions
+                "permissions": '{ "users": {"AnonymousUser": ["view_resourcebase"]} , "groups":{}}',  # dataset permissions
                 "time": "false",
                 "layer_title": "layer_title",
                 "time": "false",
@@ -4442,7 +4158,7 @@ components:
       - pk
       - slug
       - title
-    Layer:
+    Dataset:
       type: object
       description: DREST-compatible model-based serializer.
       properties:
@@ -4961,7 +4677,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/GroupProfile'
-    PaginatedLayerList:
+    PaginatedDatasetList:
       type: object
       properties:
         count:
@@ -4976,7 +4692,7 @@ components:
         results:
           type: array
           items:
-            $ref: '#/components/schemas/Layer'
+            $ref: '#/components/schemas/Dataset'
     PaginatedMapList:
       type: object
       properties:
@@ -5566,7 +5282,7 @@ components:
           type: array
           items:
             type: string
-    PatchedLayer:
+    PatchedDataset:
       type: object
       description: DREST-compatible model-based serializer.
       properties:

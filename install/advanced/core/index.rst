@@ -72,6 +72,9 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Install Openjdk
   sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
   sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
+  
+  # If the update-alternatives command does not work, try below command and select the number coinciding with openjdk-8-jdk
+  sudo update-alternatives --config java
 
   # Verify GDAL version
   gdalinfo --version

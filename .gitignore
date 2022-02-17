@@ -1,6 +1,7 @@
 /_build/
+.vscode/
 /geonode-docs/
 .vscode/settings.json
-
+.vscode/
 .idea
 venv

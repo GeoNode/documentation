@@ -12,3 +12,4 @@ GeoNode Users Guide
     managing_maps/index
     publishing_data/index
     other_apps/index
+    extra_metadata/index

@@ -23,7 +23,7 @@ When clicking on that link the Django-based *Admin Interface* page opens and sho
 Reset or Change the admin password
 ==================================
 
-From the *Admin Interface* you can access the :guilabel:`CHANGE PASSWORD` link on the right side of the navigation bar.
+From the *Admin Interface* you can access the :guilabel:`Change password` link by clicking on the username on the right side of the navigation bar. which will open a dropdown.
 
 .. figure:: img/change_password_link.png
      :align: center
@@ -37,7 +37,7 @@ It allows you to access the *Change Password Form* through which you can change 
 
      *The Change Password Form*
 
-Once the fields have been filled out, click on :guilabel:`CHANGE MY PASSWORD` to perform the change.
+Once the fields have been filled out, click on :guilabel:`Change my password` to perform the change.
 
 .. _simple-theming:
 
@@ -105,7 +105,7 @@ to this
 
     *Updating Jumbotron and Logo*
 
-It is possible to optionally **hide** the ``Jumbotron text``
+It is possible to optionally **hide** the ``Jumbotron text``.
 
 .. figure:: img/theming/hide_jumbotron.png
     :align: center
@@ -113,11 +113,11 @@ It is possible to optionally **hide** the ``Jumbotron text``
 .. figure:: img/theming/hide_jumbotron_view.png
     :align: center
 
-    *Hide Jumbotron text and Call to action button*
+    *Hide Jumbotron text*
 
 Slide show
 ^^^^^^^^^^
-To switch between a slide show and a jumbotron, flip the value of the welcome theme from "slide show" to "jumbotron" and vice versa to either display a jumbotron with a "get started" link or a slide show in the home page
+To switch between a slide show and a jumbotron, flip the value of the welcome theme from "slide show" to "jumbotron" and vice versa to either display a jumbotron with content or a slide show in the home page
 
 For example, to display a slide show, change the welcome theme from jumbotron background
 
@@ -180,7 +180,7 @@ In GeoNode, administrators can manage other users. For example, they can *Add Ne
 
     *Adding New Users*
 
-The form above can be reached from the *Admin Panel* at the following path: *Home > People > Users*. Click on :guilabel:`ADD USER +` to open the form page.
+The form above can be reached from the *Admin Panel* at the following path: *Home > People > Users*. Click on :guilabel:`+  Add user` to open the form page.
 
 .. figure:: img/add_user_button.png
     :align: center
@@ -194,7 +194,7 @@ It is also available, in the GeoNode UI, the :guilabel:`Add User` link of the *A
 
     *Add User Link*
 
-To perform the user creation fill out the required fields (*username* and *password*) and click on :guilabel:`SAVE`.
+To perform the user creation fill out the required fields (*username* and *password*) and click on :guilabel:`Save`.
 You will be redirected to the *User Details Page* which allows to insert further information about the user.
 
 .. figure:: img/user_details_admin_page.png
@@ -242,7 +242,7 @@ As shown in the picture below, click on ``this form`` link from the *User Detail
 The *Change User Password Form* should looks like the following one.
 Insert the new password two times and click on :guilabel:`CHANGE PASSWORD`.
 
-.. figure:: img/chenge_user_password_form.png
+.. figure:: img/change_user_password_form.png
     :align: center
 
     *Changing Users Passwords*
@@ -327,7 +327,7 @@ A new **Group Profile** can be created as follow:
 
       *A new Group Profile*
 
-* click on :guilabel:`SAVE` to perform the creation, the new created group profile will be visible in the *Group Profiles List*
+* click on :guilabel:`Save` to perform the creation, the new created group profile will be visible in the *Group Profiles List*
 
   .. figure:: img/group_profiles_list.png
       :align: center
@@ -340,7 +340,7 @@ Group Categories
 *Group Profiles* can also be related to *Group Categories* which represents common topics between groups.
 In order to add a new **Group Category** follow these steps:
 
-* click on the *Group Categories* :guilabel:`+ Add` button
+* click on the *Group Categories* :guilabel:`+ Add group category` button
 
 * fill out the creation form (type *name* and *description*)
 
@@ -349,20 +349,13 @@ In order to add a new **Group Category** follow these steps:
 
       *A new Group Category*
 
-* click on :guilabel:`SAVE` to perform the creation, the new created category will be visible in the *Group Categories List*
+* click on :guilabel:`Save` to perform the creation, the new created category will be visible in the *Group Categories List*
 
   .. figure:: img/group_categories_list.png
       :align: center
 
       *The Group Categories List*
 
-| When a GeoNode resource (layer, document or maps) is associated to some *Group Profile*, it is also possible to retrieve the *Group Category* it belongs to.
-| So when searching for resources (see :ref:`finding-data`) you can also filter the data by group category.
-
-.. figure:: img/layers_group_category.png
-    :align: center
-
-    *Filtering Layers by Group Category*
 
 Managing a Group
 ================
@@ -416,12 +409,7 @@ There are also four links:
 
   * *Categories*, the group categories the group belongs to.
 
-  .. figure:: img/group_profile_details_page.png
-      :align: center
-
-      *Group Profile Details Page*
-
-* :guilabel:`Managing Group Members` (see next paragraphs).
+* :guilabel:`Manage Group Members` (see next paragraphs).
 * the :guilabel:`Delete this Group`, click on it to delete the Group Profile. GeoNode requires you to confirm this action.
 
   .. figure:: img/confirm_group_deletion.png
@@ -430,7 +418,7 @@ There are also four links:
 
       *Confirm Group Deletion*
 
-* the :guilabel:`Group Activities` drives you to the *Group Activities Page* where you can see all layers, maps and documents associated with the group. There is also a *Comments* tab which shows comments on those resources.
+* the :guilabel:`Group Activities` drives you to the *Group Activities Page* where you can see all datasets, maps and documents associated with the group. There is also a *Comments* tab which shows comments on those resources.
 
   .. figure:: img/group_activities.png
       :align: center
@@ -489,16 +477,16 @@ If you want to change the role of group members after adding them, you can use t
 Group based advanced data workflow
 ==================================
 
-By default GeoNode is configured to make every resource (Layer, Document or Map) suddenly available to everyone, i.e. publicly accessible
+By default GeoNode is configured to make every resource suddenly available to everyone, i.e. publicly accessible
 even from anonymous/non-logged in users.
 
 It is actually possible to change few configuration settings in order to allow GeoNode to enable an advanced publication workflow.
 
-With the advanced workflow enabled,  your layer, document or map won't be automatically published (i.e. made visible and accessible for all, contributors or simple users).
+With the advanced workflow enabled,  your resources won't be automatically published (i.e. made visible and accessible for all, contributors or simple users).
 
-For now, your item is only visible by yourself, the manager of the group to which the layer, document or map is linked (this information is filled in the metadata), the members of this group, and the GeoNode Administrators.
+For now, your item is only visible by yourself, the manager of the group to which the resource is linked (this information is filled in the metadata), the members of this group, and the GeoNode Administrators.
 
-Before being published, the layer, document or map will follow a two-stage review process, which is described below:
+Before being published, the resource will follow a two-stage review process, which is described below:
 
 .. figure:: img/adv_data_workflow/adv_data_workflow_001.jpg
     :align: center
@@ -544,57 +532,48 @@ After administrator unapprove the resource owner is again able to modify it.
 
 The group Manager approval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-Here, the role of the Manager of the group to which your layer, document or map is linked is to check that the uploaded item is correct.
-Particularly, in the case of a layer or a map, it consists of checking that the chosen cartographic representation and the style are
+Here, the role of the Manager of the group to which your dataset, document or map is linked is to check that the uploaded item is correct.
+Particularly, in the case of a dataset or a map, it consists of checking that the chosen cartographic representation and the style are
 fitting but also that the discretization is appropriate.
 
 The Manager must also check that the metadata are properly completed and that the mandatory information
 (Title, Abstract, Edition, Keywords, Category, Group, Region) are filled.
 
-If needed, the Manager can contact the contributor responsible of the layer, document or map in order to report potential comments or
+If needed, the Manager can contact the contributor responsible of the dataset, document or map in order to report potential comments or
 request clarifications.
 
 Members of the group can also take part in the reviewing process and give some potential inputs to the responsible of the
-layer, document or map.
+dataset, document or map.
 
-When the Manager considers that the layer, document or map is ready to be published, he should approve it.
-To do so, the Manager goes to the layer, document or map page, then opens the :guilabel:`Wizard` in order to edit the metadata.
+When the Manager considers that the resource is ready to be published, he should approve it.
+To do so, the Manager goes to the resource detail page, then opens the :guilabel:`Edit Metadata`.
 In the :guilabel:`Settings` tab, the manager checks the :guilabel:`Approved` box, and then updates the metadata and saves the changes:
-
-.. figure:: img/adv_data_workflow/approbation_manager.gif
-    :align: center
-
-    *The approbation process of an item by a Manager*
 
 Following this approval, the GeoNode Administrators receive a notification informing them that an item is now waiting for publication
 
-.. figure:: img/adv_data_workflow/unpublished.png
-    :align: center
-
-    *An approved layer, waiting for publication by the GeoNode administrators*
 
 The publication by the GeoNode Administrator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Prior to the public release of an approved layer, a document or a map, the Administrator of the platform performs a final validation of
+Prior to the public release of an approved resource, the Administrator of the platform performs a final validation of
 the item and its metadata, notably to check that it is in line with license policies.
 
-If needed, the GeoNode Administrator can contact the Manager who has approved the layer, document or map, as well as its responsible.
+If needed, the GeoNode Administrator can contact the Manager who has approved the resource, as well as its responsible.
 
-Once the layer, document or map is validated, the item is made public by the Administrator.
+Once the resource is validated, the item is made public by the Administrator.
 It can now be viewed, accessed, and downloaded in accordance with the ``Permissions`` set by the responsible contributor.
 
 Manage profiles using the admin panel
 =====================================
 
-So far GeoNode implements two distinct roles, that can be assigned to resources such as layers, maps or documents:
+So far GeoNode implements two distinct roles, that can be assigned to resources such as datasets, maps or documents:
 
 * party who authored the resource
 * party who can be contacted for acquiring knowledge about or acquisition of the resource
 
 These two profiles can be set in the GeoNode interface by accessing the metadata page and setting the ``Point of Contact`` and ``Metadata Author`` fields respectively.
 
-Is possible for an administrator to add new roles if needed, by clicking on the :guilabel:`Add Role` button in the :guilabel:`Base -> Contact Roles` section:
+Is possible for an administrator to add new roles if needed, by clicking on the :guilabel:`Add contact role` button in the :guilabel:`Base -> Contact Roles` section:
 
 .. figure:: img/admin-roles-add.png
     :align: center
@@ -608,57 +587,51 @@ Is important that this last section is not modified here unless the administrato
 .. figure:: img/admin-profiles-contactroles.png
     :align: center
 
-Manage layers using the admin panel
+Manage datasets using the admin panel
 ===================================
 
-Some of the Layers information can be edited directly through the admin interface although the best place is in the :guilabel:`Layer -> Metadata Edit` in GeoNode.
+Some of the datasets information can be edited directly through the admin interface although the best place is in the :guilabel:`Dataset -> Metadata Edit` in GeoNode.
 
-Clicking on the :guilabel:`Admin > Layers` link will show the list of available layers.
+Clicking on the :guilabel:`Admin > Dataset > Datasets` link will show the list of available datasets.
 
-.. figure:: img/admin-layers.png
+.. figure:: img/admin-datasets.png
     :align: center
 
-.. warning:: It is not recommended to modify the Layers' ``Attributes`` or ``Styles`` directly from the Admin dashboard unless you are aware of your actions.
+.. warning:: It is not recommended to modify the Datasets' ``Attributes`` or ``Styles`` directly from the Admin dashboard unless you are aware of your actions.
 
-The ``Metadata`` information can be changed for multiple Layers at once through the :guilabel:`Metadata batch edit` action.
+The ``Metadata`` information can be changed for multiple datasets at once through the :guilabel:`Metadata batch edit` action. Select the datasets you want to edit in the batch and at the bottom, enter the `Metadata batch edit` action then click :guilabel:`Go`.
 
-.. figure:: img/admin-layers-batch.png
+.. figure:: img/admin-datasets-batch.png
     :align: center
 
-By clicking over one Layer link, it will show a detail page allowing you to modify some of the resource info like the metadata, the keywords, the title, etc.
+This will open a form with the information you can edit in a batch. see picture below.
 
-.. note:: It is strongly recommended to always use the GeoNode :guilabel:`Metadata Wizard` or :guilabel:`Metadata Advanced` tools in order to edit the metadata info.
-
-The ``Permissions`` can be changed also for multiple Layers at once through the :guilabel:`Set layers permissions` action.
-
-.. figure:: img/set_layers_permissions_action.png
+.. figure:: img/admin-datasets-batch-form.png
     :align: center
 
-By clicking over one Layer link, it will show a detail page allowing you to modify the permissions for the selected resources.
+By clicking over one Dataset link, it will show a detail page allowing you to modify some of the resource info like the metadata, the keywords, the title, etc.
 
-.. figure:: img/set_layers_permissions_form.png
+.. note:: It is strongly recommended to always use the GeoNode resource :guilabel:`Edit Metadata` or :guilabel:`Advanced Metadata` tools in order to edit the metadata info.
+
+The ``Permissions`` can be changed also for multiple Datasets at once through the :guilabel:`Set permissions` action.
+
+.. figure:: img/set_datasets_permissions_action.png
     :align: center
+
+By clicking over one Dataset link, it will show a detail page allowing you to modify the permissions for the selected resources.
+
 
 Manage the maps using the admin panel
 =====================================
 
-Similarly to the Layers, it is possible to manage the available GeoNode Maps through the Admin panel also.
+Similarly to the Datasets, it is possible to manage the available GeoNode Maps through the Admin panel also.
 
 Move to :guilabel:`Admin > Maps` to access the Maps list.
 
 .. figure:: img/admin-maps.png
     :align: center
 
-The ``Metadata`` information can be changed for multiple Maps at once through the :guilabel:`Metadata batch edit` action.
-
-.. figure:: img/admin-layers-batch.png
-    :align: center
-
-By clicking over one Map link, it will show a detail page allowing you to modify some of the resource info like the metadata, the keywords, the title, etc.
-
-.. note:: It is strongly recommended to always use the GeoNode :guilabel:`Metadata Wizard` or :guilabel:`Metadata Advanced` tools in order to edit the metadata info.
-
-Notice that by enabling the ``Featured`` option here, will allow GeoNode to show the Map thumbnail and the Map detail link on the :guilabel:`Home Page`
+Notice that by enabling the ``Featured`` option here, will allow GeoNode to show the Map thumbnail and the Map detail link at the top under featured resources on the :guilabel:`Home Page`
 
 .. figure:: img/admin-maps-featured-001.png
     :align: center
@@ -669,21 +642,14 @@ Notice that by enabling the ``Featured`` option here, will allow GeoNode to show
 Manage the documents using the admin panel
 ==========================================
 
-Similarly to the Layers and Maps, it is possible to manage the available GeoNode Documents through the Admin panel also.
+Similarly to the Datasets and Maps, it is possible to manage the available GeoNode Documents through the Admin panel also.
 
 Move to :guilabel:`Admin > Documents` to access the Documents list.
 
 .. figure:: img/admin-documents.png
     :align: center
 
-The ``Metadata`` information can be changed for multiple Documents at once through the :guilabel:`Metadata batch edit` action.
-
-.. figure:: img/admin-layers-batch.png
-    :align: center
-
 By clicking over one Document link, it will show a detail page allowing you to modify some of the resource info like the metadata, the keywords, the title, etc.
-
-.. note:: It is strongly recommended to always use the GeoNode :guilabel:`Metadata Wizard` or :guilabel:`Metadata Advanced` tools in order to edit the metadata info.
 
 Manage the base metadata choices using the admin panel
 ======================================================
@@ -695,19 +661,19 @@ Manage the base metadata choices using the admin panel
 
     *Admin dashboard Base Panel*
 
-In other words the options available from the :guilabel:`select-boxes` of the :guilabel:`Metadata Wizard` and :guilabel:`Metadata Advanced` panels.
+In other words the options available from the :guilabel:`select-boxes` of the resource :guilabel:`Edit Metadata` and :guilabel:`Advanced Metadata` forms.
 
 .. figure:: img/metadata-base/admin-panel-metadata-contents-0002.png
     :align: center
 
-    *Metadata Wizard Panel*
+    *Metadata Form*
 
 .. figure:: img/metadata-base/admin-panel-metadata-contents-0003.png
     :align: center
 
-    *Metadata Advanced Panel*
+    *Advanced Metadata Form*
 
-.. note:: When editing the resource metadata through the :guilabel:`Metadata Wizard`, some fields are marked as ``mandatory`` and by filling those information
+.. note:: When editing the resource metadata through the :guilabel:`Edit Metadata`, some fields are marked as ``mandatory`` and by filling those information
     the ``Completeness`` progress will advance accordingly.
 
     .. figure:: img/metadata-base/admin-panel-metadata-contents-0003a.png
@@ -765,20 +731,6 @@ Through the :guilabel:`Admin > Base > Licenses` panel it will be possible to man
 
     *Metadata editor Licenses*
 
-The license description and the info URL will be shown on the resource detail page.
-
-.. figure:: img/metadata-base/admin-panel-metadata-contents-0007.png
-    :align: center
-
-    *Resource detail License*
-
-The license text will be shown on the catalogue metadata XML documents.
-
-.. figure:: img/metadata-base/admin-panel-metadata-contents-0008.png
-    :align: center
-
-    *Resource Metadata ISO License*
-
 .. warning:: It is **strongly** recommended to not publish resources without an appropriate license. Always make sure the data provider specifies the correct license and that all the restrictions have been honored.
 
 Metadata Regions
@@ -793,12 +745,7 @@ Through the :guilabel:`Admin > Base > Metadata Regions` panel it will be possibl
 
 Notice that those regions are used by GeoNode to filter search results also through the resource list view.
 
-.. figure:: img/metadata-base/admin-panel-metadata-contents-0010.png
-    :align: center
-
-    *GeoNode filtering by Metadata Regions*
-
-.. note:: GeoNode tries to guess the ``Regions`` intersecting the data bounding boxes when uploading a new layer. Those should be refined by the user layer on anyway.
+.. note:: GeoNode tries to guess the ``Regions`` intersecting the data bounding boxes when uploading a new dataset. Those should be refined by the user dataset on anyway.
 
 Metadata Restriction Code Types and Spatial Representation Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -835,30 +782,10 @@ GeoNode ``Announcements`` allow actually to do that; an admin has the possibilit
 decide their validity in terms of time period (start date and expiring date of the announcement), who can view them or not (everyone or just the
 registerd members) and whenever a user can hide the message or not and how long.
 
-A GeoNode announcement actually looks like this:
-
-.. figure:: img/announcments/admin-announcments-001.png
-    :align: center
-
-    *A sample Warning Announcement*
 
 There are three types of announcements accordingly to their severity level: ``General``, ``Warning`` and ``Critical``
 The difference is mainly the color of the announcement box.
 
-.. figure:: img/announcments/admin-announcments-002.png
-    :align: center
-
-    *General Announcement*
-
-.. figure:: img/announcments/admin-announcments-003.png
-    :align: center
-
-    *Warning Announcement*
-
-.. figure:: img/announcments/admin-announcments-004.png
-    :align: center
-
-    *Critical Announcement*
 
 Only administrators and staff members can create and manage announcements.
 
@@ -943,32 +870,7 @@ GeoNode provides some integrated functionalities allowing you to quickly and eas
 With minor changes of the ``basic.html`` template, potentially, it could be possible to use the same approach for a more complex customization.
 Let's start with the simple one.
 
-By default GeoNode provides a custom ``placeholder`` already defined into the ``basic.html`` template, called ``TOPBAR_MENU``
-
-.. code-block:: python
-
-    ...
-    <ul class="nav navbar-nav navbar-right">
-
-        {% block my_extra_right_tab %}
-
-            {% render_nav_menu 'TOPBAR_MENU' %}
-
-        {% endblock my_extra_right_tab %}
-
-        <li>
-            <div class="search">
-            <form id="search" action="{% url "search" %}" >
-                <span class="fa fa-search"></span>
-                {% if HAYSTACK_SEARCH %}
-                <input id="search_input" type="text" placeholder="{% trans 'Search' %}" name="q">
-                {% else %}
-                <input id="search_input" type="text" placeholder="{% trans 'Search' %}" name="title__icontains">
-                {% endif %}
-            </form>
-            </div>
-        </li>
-    ...
+By default GeoNode provides custom ``placeholders`` already defined into the ``basic.html`` template, called ``CARDS_MENU``, ``TOPBAR_MENU_RIGHT``, ``TOPBAR_MENU_LEFT``, ``TOPBAR_MENU``.
 
 From the :guilabel:`Admin > Base` panel, it is possible to access to the ``Menu``, ``Menu Items`` and ``Menu Placeholder`` options.
 
@@ -980,7 +882,7 @@ From the :guilabel:`Admin > Base` panel, it is possible to access to the ``Menu`
 The hierarchical structure of a custom ``Menu`` is the following one:
 
 1. ``Menu Placeholder``; first of all you need to define a *placeholder* both into the :guilabel:`Admin > Base` panel and the ``basic.html`` template, using the same **keyword**.
-    By default GeoNode provides an already defined one called ``TOPBAR_MENU``
+    By default GeoNode provides already defined menus.
 
     .. figure:: img/admin-panel-menus-0002.png
         :align: center
@@ -1012,7 +914,7 @@ The hierarchical structure of a custom ``Menu`` is the following one:
 
         *Create a new Menu Item from the Admin panel*
 
-    .. warning:: The ``Menu`` won't be visible until you add at least one ``Menu Item``
+    .. warning:: The ``Menu`` won't be visible until you add more than one ``Menu Item``, If you have 1, item, the item will be showed(but not under the menu).
 
 .. _oauth2_admin_panel_access_tokens:
 

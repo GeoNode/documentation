@@ -1,8 +1,8 @@
 .. _getfetureinfo-templates:
 
-Customizing The Layers' GetFeatureInfo Templates
+Customizing The Datasets' GetFeatureInfo Templates
 ================================================
-When “clicking” over a feature of a Layer into a GeoNode Map, an info window popups showing a formatted representation of the raw data identified by the coordinates (see Fig. 1)
+When “clicking” over a feature of a dataset into a GeoNode Map, an info window popups showing a formatted representation of the raw data identified by the coordinates (see Fig. 1)
 
 .. figure:: img/getfetureinfo_templates_001.png
      :align: center
@@ -13,13 +13,11 @@ The way how such information is presented to the user is defined by what we call
 
 The outcome is a rendered HTML snippet with the real values replacing the placeholders of the Template.
 
-Currently, GeoNode allows a very simple mechanism to customize the “GetFeatureInfo Template” of a Layer.
+Currently, GeoNode allows a very simple mechanism to customize the “GetFeatureInfo Template” of a dataset.
 
-It is possible, through the Layer Metadata Editor Wizard, to assign a name and a label to the attributes we want to display on the GetFeatureInfo output.
+It is possible, through the dataset Metadata Editor, to assign a name, a label and also set the attributes we want to display on the GetFeatureInfo output.
 
-Notice that the attributes without a label and name, in case others are present, won’t be rendered at all.
-
-As an instance, by using the example above, we can customize a bit the Layer Metadata as shown in Fig. 2
+As an instance, by using the example above, we can customize a bit the dataset Metadata as shown in Fig. 2
 
 .. figure:: img/getfetureinfo_templates_002.png
      :align: center
@@ -35,7 +33,7 @@ The “GetFeatureInfo” output will change accordingly as shown in Fig. 3
 
 Simple Template: Assigning A Media-Type To Attribute Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The easiest way to render a different media-type (:guilabel:`image`, :guilabel:`audio`, :guilabel:`video` or :guilabel:`iframe`) to a property value, is to change it from the :guilabel:`Metadata Editor Wizard` attributes panel.
+The easiest way to render a different media-type (:guilabel:`image`, :guilabel:`audio`, :guilabel:`video` or :guilabel:`iframe`) to a property value, is to change it from the :guilabel:`Metadata Edit` attributes panel.
 
 By changing the :guilabel:`Display Type` of an attribute from this panel as shown in Fig. 4
 
@@ -104,11 +102,6 @@ The example below shows how it is possible to create a nice HTML output with an 
      :align: center
 
      *Fig. 12*
-
-.. figure:: img/getfetureinfo_templates_013.png
-     :align: center
-
-     *Fig. 13*
 
 Optional: Customizing the HTML WYSIWYG Editor Menu Bar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

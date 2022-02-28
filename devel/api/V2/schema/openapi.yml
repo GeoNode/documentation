@@ -2432,6 +2432,150 @@ paths:
                 type: object
                 additionalProperties: {}
           description: ''
+  /api/v2/upload-size-limits/:
+    get:
+      operationId: upload-size-limit-list
+      description:  |-
+        Upload Size Limit List
+        Each object in `upload-size-limits` contains:
+          - slug [str]: an unique identifier
+          - description [str]: The description of the limit.
+          - max_size [int]: Max amount of bytes allowed.
+          - max_size_label [str]: max_size in a human readable format. 
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - basicAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUploadSizeLimitList'
+          description: ''
+  /api/v2/upload-size-limits/{slug}/:
+    get:
+      operationId: upload-size-limit-retrieve
+      description:  |-
+        Upload Size Limit Retrieve
+        Returns the limit object with the following data:
+          - slug [str]: an unique identifier
+          - description [str]: The description of the limit.
+          - max_size [int]: Max amount of bytes allowed.
+          - max_size_label [str]: max_size in a human readable format. 
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadSizeLimit'
+          description: ''
+    put:
+      operationId: upload-size-limit-update
+      description: Update one model instance.
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadSizeLimit'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadSizeLimit'
+          description: ''
+    patch:
+      operationId: upload-size-limit-partial-update
+      description: Partially update one model instance.
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadSizeLimit'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadSizeLimit'
+          description: ''
+    delete:
+      operationId: upload-size-limit-destroy
+      description: |-
+        Delete a model instance.
+        Protected objects, these objects are required by the code, so they can not
+        be deleted, only modified.
+          * 'dataset_upload_size'
+          * 'document_upload_size'
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
   /api/v2/uploads/:
     get:
       operationId: api_v2_uploads_list
@@ -4725,6 +4869,31 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ResourceBase'
+    PaginatedUploadSizeLimitList:
+      type: object
+      properties:
+        links:
+          type: object
+          properties:
+            next:
+              type: string
+              nullable: true
+            previous:
+              type: string
+              nullable: true
+        total:
+          type: integer
+          example: 123
+        page:
+          type: integer
+          example: 123
+        page_size:
+          type: integer
+          example: 123
+        upload-size-limits:
+          type: array
+          items:
+            $ref: '#/components/schemas/UploadSizeLimit'
     PaginatedUploadList:
       type: object
       properties:
@@ -6061,6 +6230,31 @@ components:
       - '[0-9]{8}T[0-9]{6}'
       - '[0-9]{8}T[0-9]{6}Z'
       type: string
+    UploadSizeLimit:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        slug:
+          type: string
+          readOnly: true
+          maxLength: 255
+          example: "dataset_upload_size"
+        description:
+          type: string
+          maxLength: 255
+          nullable: true
+        max_size:
+          type: integer
+          example: 104857600
+        max_size_label:
+          type: string
+          example: "100.0 MB"
+        link:
+          type: string
+          exemple: "http://localhost:8000/api/v2/upload-size-limits/dataset_upload_size"
+      required:
+      - slug
+      - max_size
     Upload:
       type: object
       description: DREST-compatible model-based serializer.

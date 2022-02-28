@@ -29,3 +29,9 @@ In order to upload a document:
 #. Click the red :guilabel:`Upload` button
 
 At the end of the uploading process you will be driven to the *Detail* page with a menu to save, view more info, edit metadata, share, download and delete the document. See the next section to know more about Metatadata.
+
+.. note:: If you get the following error message:
+
+     ``Total upload size exceeds 100.0 MB. Please try again with smaller files.``
+     
+     This means that there is an upload size limit of 100 MB. An user with administrative access can change the upload limits at the `admin panel <../../admin/upload-size-limits/index.html#upload-size-limits>`__.

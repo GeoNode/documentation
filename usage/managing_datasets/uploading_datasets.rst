@@ -36,3 +36,9 @@ When the process ends click the dsataset name in the table to check the dataset 
 .. note:: There are lot of free spatial dataset available in the Internet. In this example, an extract of the Berlin city center roads map from the `BBBike extracts OpenStreetMap <https://extract.bbbike.org>`_ dataset has been used.
 
 In the next paragraphs you will learn how to create a dataset from scratch, how to set share options, how to explore the dataset properties and how to edit them.
+
+.. note:: If you get the following error message:
+
+     ``Total upload size exceeds 100.0 MB. Please try again with smaller files.``
+     
+     This means that there is an upload size limit of 100 MB. An user with administrative access can change the upload limits at the `admin panel <../../admin/upload-size-limits/index.html#upload-size-limits>`__.

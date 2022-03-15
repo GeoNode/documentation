@@ -41,4 +41,10 @@ In the next paragraphs you will learn how to create a dataset from scratch, how 
 
      ``Total upload size exceeds 100.0 MB. Please try again with smaller files.``
      
-     This means that there is an upload size limit of 100 MB. An user with administrative access can change the upload limits at the `admin panel <../../admin/upload-size-limits/index.html#upload-size-limits>`__.
+     This means that there is an upload size limit of 100 MB. An user with administrative access can change the upload size limits at the `admin panel for size limits <../../admin/upload-size-limits/index.html#upload-size-limits>`__.
+
+     Similarly, for the following error message:
+     
+     ``The number of active parallel uploads exceeds 5. Wait for the pending ones to finish.``
+
+     You can modify the upload parallelism limits at the `admin panel for parallelism limits <../../admin/upload-parallelism-limit/index.html#upload-parallelism-limits>`__.

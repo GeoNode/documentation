@@ -2432,6 +2432,147 @@ paths:
                 type: object
                 additionalProperties: {}
           description: ''
+  /api/v2/upload-parallelism-limits/:
+    get:
+      operationId: upload-parallelism-limit-list
+      description:  |-
+        Upload Parallelism Limit List
+        Each object in `upload-parallelism-limits` contains:
+          - slug [str]: an unique identifier
+          - description [str]: The description of the limit.
+          - max_number [int]: Max parallel uploads.
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - basicAuth: []
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUploadParallelismLimitList'
+          description: ''
+  /api/v2/upload-parallelism-limits/{slug}/:
+    get:
+      operationId: upload-parallelism-limit-retrieve
+      description:  |-
+        Upload Parallelism Limit Retrieve
+        Returns the limit object with the following data:
+          - slug [str]: an unique identifier
+          - description [str]: The description of the limit.
+          - max_number [int]: Max parallel uploads.
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadParallelismLimit'
+          description: ''
+    put:
+      operationId: upload-parallelism-limit-update
+      description: Update one model instance.
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadParallelismLimit'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadParallelismLimit'
+          description: ''
+    patch:
+      operationId: upload-parallelism-limit-partial-update
+      description: Partially update one model instance.
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadParallelismLimit'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadParallelismLimit'
+          description: ''
+    delete:
+      operationId: upload-paralellism-limit-destroy
+      description: |-
+        Delete a model instance.
+        Protected objects, these objects are required by the code, so they can not
+        be deleted, only modified.
+          * 'default_max_parallel_uploads'
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        description: A unique string value identifying this upload.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '204':
+          description: No response body
   /api/v2/upload-size-limits/:
     get:
       operationId: upload-size-limit-list
@@ -4869,6 +5010,31 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ResourceBase'
+    PaginatedUploadParallelismLimitList:
+      type: object
+      properties:
+        links:
+          type: object
+          properties:
+            next:
+              type: string
+              nullable: true
+            previous:
+              type: string
+              nullable: true
+        total:
+          type: integer
+          example: 123
+        page:
+          type: integer
+          example: 123
+        page_size:
+          type: integer
+          example: 123
+        upload-parallelism-limits:
+          type: array
+          items:
+            $ref: '#/components/schemas/UploadParallelismLimit'
     PaginatedUploadSizeLimitList:
       type: object
       properties:
@@ -6230,6 +6396,28 @@ components:
       - '[0-9]{8}T[0-9]{6}'
       - '[0-9]{8}T[0-9]{6}Z'
       type: string
+    UploadParallelismLimit:
+      type: object
+      description: DREST-compatible model-based serializer.
+      properties:
+        slug:
+          type: string
+          readOnly: true
+          maxLength: 255
+          example: "default_max_parallel_uploads"
+        description:
+          type: string
+          maxLength: 255
+          nullable: true
+        max_number:
+          type: integer
+          example: 5
+        link:
+          type: string
+          exemple: "http://localhost:8000/api/v2/upload-parallelism-limits/default_max_parallel_uploads"
+      required:
+      - slug
+      - max_number
     UploadSizeLimit:
       type: object
       description: DREST-compatible model-based serializer.

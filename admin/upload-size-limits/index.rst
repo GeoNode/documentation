@@ -17,7 +17,7 @@ If it passes a limit value, you will get something similar to the following erro
 
 With the following message: ``Total upload size exceeds 100.0 MB. Please try again with smaller files.``
 
-This mean that the file you tried to upload is too large. It consider the sum of sizes in the case of datasets/layers with multiple files (ESRI Shapefile).
+This means that the file you tried to upload is too large. It consider the sum of sizes in the case of datasets/layers with multiple files (ESRI Shapefile).
 The default maximum value is set during installation by `DEFAULT_MAX_UPLOAD_SIZE <../../basic/settings/index.html#default-max-upload-size>`__, usually 100 MB.
 
 After installation, only an user with administrative rights can change it by the admin painel or `accessing by api <../../devel/api/V2/index.html#get--api-v2-upload-size-limits->`__.

@@ -44,7 +44,7 @@ Replacing the Layer
 
 To consider valid the input resource all new files should follow those rules:
 
-- The input filename **must be** the same as the layer in GeoNode
+- The input filename **must be** the same as the layer in GeoNode. Usually is enough the take the layer name in the alternate value
 - Is **not** possible to replace a vector layer with a raster one and vice-versa.
 - The dataset type must be consistent. So that is not possible to replace a `LineString` dataset with a `Point`
 - The attribute schema must be consistent with the one already present
@@ -78,7 +78,7 @@ Append Data to Layer
 
 To consider valid the input resource all new files should follow those rules:
 
-- The input filename **must be** the same as the layer in GeoNode
+- The input filename **must be** the same as the layer in GeoNode. Usually is enough the take the layer name in the alternate value
 - Is **not** possible to append data to a vector layer with a raster one and vice-versa.
 - The dataset type must be consistent. So that is not possible to replace a `LineString` dataset with a `Point`
 - The attribute schema must be consistent with the one already present

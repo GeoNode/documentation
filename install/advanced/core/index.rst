@@ -1187,7 +1187,7 @@ In particular the steps to do are:
 
     # Install Let's Encrypt Certbot
     # sudo add-apt-repository ppa:certbot/certbot  # for ubuntu 18.04 and lower
-    sudo apt update -y; sudo apt install python-certbot-nginx -y
+    sudo apt update -y; sudo apt install python3-certbot-nginx -y
 
     # Reload NGINX config and make sure the firewall denies access to HTTP
     sudo systemctl reload nginx

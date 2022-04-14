@@ -42,6 +42,14 @@ Using the "Upload Thumbnail" page it is possible to enable the automatically gen
 Replacing the Layer
 -------------------
 
+To consider valid the input resource all new files should follow those rules:
+
+- The input filename **must be** the same as the layer in GeoNode. Usually is enough the take the layer name in the alternate value
+- Is **not** possible to replace a vector layer with a raster one and vice-versa.
+- The dataset type must be consistent. So that is not possible to replace a `LineString` dataset with a `Point`
+- The attribute schema must be consistent with the one already present
+
+
 From the *Layer Editing* panel click on :guilabel:`Replace` to change the layer source dataset. You will be driven to the *Replace Layer* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
 
 .. figure:: img/replace_layer_page.png
@@ -67,6 +75,14 @@ We have replaced the *roads* dataset with the *railways* one. You can see the di
 
 Append Data to Layer
 --------------------
+
+To consider valid the input resource all new files should follow those rules:
+
+- The input filename **must be** the same as the layer in GeoNode. Usually is enough the take the layer name in the alternate value
+- Is **not** possible to append data to a vector layer with a raster one and vice-versa.
+- The dataset type must be consistent. So that is not possible to replace a `LineString` dataset with a `Point`
+- The attribute schema must be consistent with the one already present
+
 
 From the *Layer Editing* panel click on :guilabel:`Append` to append data to the layer source dataset. You will be driven to the *Append Layer* page in which :guilabel:`Choose Files` button allows you to select files from your disk.
 

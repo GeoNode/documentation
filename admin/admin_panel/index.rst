@@ -563,6 +563,16 @@ If needed, the GeoNode Administrator can contact the Manager who has approved th
 Once the resource is validated, the item is made public by the Administrator.
 It can now be viewed, accessed, and downloaded in accordance with the ``Permissions`` set by the responsible contributor.
 
+Promotion, Demotion and Removal of Group Members
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If the owner is a group Manager, They have permissions to edit, approve, and publish the resource.
+
+When a group member is promoted to a manager role, they gain permissions to edit, approve and publish the resource.
+
+When a group manager is demoted to a member role, they lose edit permissions of the resource and only remain with view and download permissions.
+
+When a member is removed from the group, they can nolonger access the unpublished resource anymore.
+
 Manage profiles using the admin panel
 =====================================
 

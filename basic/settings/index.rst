@@ -781,6 +781,36 @@ DEFAULT_MAP_ZOOM
     zoom level setting; 0 is at the world extent and each additional level cuts
     the viewport in half in each direction.
 
+DEFAULT_MAX_PARALLEL_UPLOADS_PER_USER
+-----------------------
+
+Default: ``5``
+
+When `uploading datasets <../../usage/managing_datasets/uploading_datasets.html#datasets-uploading>`__, 
+this value limits the number os parallel uploads.
+
+The parallelism limit is set during installation using the value of this variable.
+After installation, only an user with administrative rights can change it.
+These limits can be changed in the `admin panel <../../admin/upload-parallelism-limit/index.html#upload-parallelism-limit>`__
+or `accessing by api <../../devel/api/V2/index.html#get--api-v2-upload-parallelism-limits->`__.
+
+
+
+DEFAULT_MAX_UPLOAD_SIZE
+-----------------------
+
+Default: ``104857600`` (100 MB in bytes)
+
+When `uploading datasets <../../usage/managing_datasets/uploading_datasets.html#datasets-uploading>`__
+or `uploading documents <../../usage/managing_documents/uploading_documents.html#uploading-documents>`__,
+the total size of the uploaded files is verified.
+
+The size limits are set during installation using the value of this variable.
+After installation, only an user with administrative rights can change it.
+These limits can be changed in the `admin panel <../../admin/upload-size-limits/index.html#upload-size-limits>`__
+or `accessing by api <../../devel/api/V2/index.html#get--api-v2-upload-size-limits->`__.
+
+
 DEFAULT_SEARCH_SIZE
 -------------------
 

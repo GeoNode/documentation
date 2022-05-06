@@ -8,3 +8,4 @@ Your GeoNode project is based on core components which are interoperable and as 
 
     qgis/index
     geostory/index
+    dashboard/index

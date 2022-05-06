@@ -2,6 +2,12 @@
 
 Filling the Document Metadata
 =============================
+You can open the Metadata form by clicking on the *Edit* link in the document details menu and then *Edit Metatadata* Link.
+
+  .. figure:: img/edit_metadata_link.png
+      :align: center
+
+      *Edit Metadata Link*
 
 Metadata contains all the information related to the document: they are its ID card. They provide essential information for its identification and its comprehension. Metadata also make the document more easily retrievable through search by other users.
 
@@ -23,22 +29,6 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
       *Document Basic Metadata*
 
   Once all the fields are filled, click on the blue button :guilabel:`Next >>` in the bottom right corner of the page.
-
-  .. note:: When a document is linked to some resources, you can see that link on the *Resource Page*.
-
-    .. figure:: img/documents_linked_to_layer.png
-        :align: center
-        :width: 500px
-
-        *Documents linked to a Layer*
-
-    It will be also visible on the :ref:`document-info` page.
-
-    .. figure:: img/resources_linked_to_document.png
-        :align: center
-        :width: 500px
-
-        *Resources linked to a Document*
 
 2. On the **Location and Licenses** page, the following information should be filled:
 
@@ -62,7 +52,7 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
   * The *Maintenance frequency* of the document;
   * The *Spatial representation type* used.
 
-  *Responsible Parties*, *Owner* and *Permissions* are listed on the right side of the page, you can edit them.
+  *Responsible Parties*, *Owner* and *Share options* are listed on the right side of the page, you can edit them.
 
   .. figure:: img/document_optional_metadata.png
       :align: center

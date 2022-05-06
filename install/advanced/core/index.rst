@@ -72,6 +72,9 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Install Openjdk
   sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
   sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
+  
+  # If the update-alternatives command does not work, try below command and select the number coinciding with openjdk-8-jdk
+  sudo update-alternatives --config java
 
   # Verify GDAL version
   gdalinfo --version
@@ -1192,7 +1195,7 @@ In particular the steps to do are:
 
     # Install Let's Encrypt Certbot
     # sudo add-apt-repository ppa:certbot/certbot  # for ubuntu 18.04 and lower
-    sudo apt update -y; sudo apt install python-certbot-nginx -y
+    sudo apt update -y; sudo apt install python3-certbot-nginx -y
 
     # Reload NGINX config and make sure the firewall denies access to HTTP
     sudo systemctl reload nginx

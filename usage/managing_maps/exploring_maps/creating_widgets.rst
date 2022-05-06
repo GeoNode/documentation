@@ -8,7 +8,7 @@ Creating Widgets
     :height: 30px
     :align: middle
 
-*Widgets* are graphical elements that describe the layers data. They can be of different types such as *Charts*, *Texts*, *Tables* and *Counters*.
+*Widgets* are graphical elements that describe the datasets data. They can be of different types such as *Charts*, *Texts*, *Tables* and *Counters*.
 Through the |create_widgets_button| button of the :ref:`toc` you can open the *Widgets* panel.
 
 .. figure:: img/widgets_panel.png
@@ -19,7 +19,7 @@ Through the |create_widgets_button| button of the :ref:`toc` you can open the *W
 Chart Widgets
 -------------
 
-*Chart Widgets* are graphical representations of the layer data. They can be *Bar Chart*, *Pie Chart* or *Line Chart* as shown in the picture below.
+*Chart Widgets* are graphical representations of the dataset data. They can be *Bar Chart*, *Pie Chart* or *Line Chart* as shown in the picture below.
 
 .. figure:: img/chart_widgets.png
      :align: center
@@ -52,14 +52,14 @@ Chart Widgets
 | Now you can filter the data to be considered for the chart by clicking on |advanced_search_button|. We don't need any filter so click |configure_widgets_options_button| to configure other widget options.
   Insert a *Title* and a *Description* and click on *Save* |save_button|.
 
-.. figure:: img/chart_widgets.gif
+.. figure:: img/bar_chart_widget.png
      :align: center
 
      *Chart Widgets Creation*
 
 The green |connect_to_viewport| icon means that the chart is connected to the viewport.
 
-Expanding the options menu of the widget you can *Show the plotted data*, *Edit* the widget or *Delete* it, *Download* the data as a CSV file or *Export* the image of the graph.
+At the top of the bar chat, there is the options menu of the widget where you can *Download grapg as png*, *Zoom the wigets* and *Reset axes*.
 
 .. figure:: img/chart_widget_options.png
      :align: center
@@ -88,7 +88,7 @@ The resulting widget looks like the following.
 Table Widgets
 -------------
 
-| Through the *Table Widgets* you can add the :ref:`attributes-table` of the layer to the map. You can decide to show a subset of the features, through filters, and you can select one or more columns/attributes.
+| Through the *Table Widgets* you can add the :ref:`attributes-table` of the dataset to the map. You can decide to show a subset of the features, through filters, and you can select one or more columns/attributes.
 | So, choose what attributes you are interested in and click on |configure_widgets_options_button|.
 
 .. figure:: img/table_widget_columns.png

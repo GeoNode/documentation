@@ -161,7 +161,7 @@ Make an instance out of the ``Django Template``
   # Dev scripts
   mv .override_dev_env.sample src/.override_dev_env
   mv src/manage_dev.sh.sample src/manage_dev.sh
-  mv mv src/paver_dev.sh.sample src/paver_dev.sh
+  mv src/paver_dev.sh.sample src/paver_dev.sh
 
 Install and Configure the PostgreSQL Database System
 ....................................................

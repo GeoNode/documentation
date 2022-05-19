@@ -296,7 +296,7 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 .. code-block:: shell
 
   # Prepare the GeoNode Spatialite database (the first time only)
-  .cd src/
+  cd src/
   chmod +x paver_dev.sh
   ./paver_dev.sh setup
   ./paver_dev.sh sync

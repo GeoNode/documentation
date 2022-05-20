@@ -11,10 +11,10 @@ The following steps will guide you to a new setup of GeoNode Project. All guides
 
 Those guides **are not** meant to be used on a production system. There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine. In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
 
-Ubuntu 18.04
+Ubuntu 20.04
 ============
 
-This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 18.04 64-bit clean environment (Desktop or Server). All examples use shell commands that you must enter on a local terminal or a remote shell.
+This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 20.04 64-bit clean environment (Desktop or Server). All examples use shell commands that you must enter on a local terminal or a remote shell.
 - If you have a graphical desktop environment you can open the terminal application after login;
 - if you are working on a remote server the provider or sysadmin should has given you access through an ssh client.
 
@@ -57,6 +57,12 @@ Create User ``geonode`` **if not present**:
 
 Packages Installation
 .....................
+Add the Ubuntu GIS packages prior to installing the other system packages.
+
+.. code-block:: shell
+
+  sudo add-apt-repository ppa:ubuntugis/ppa
+  sudo apt update
 
 .. note:: You don't need to install the **system packages** if you want to run the project using Docker
 
@@ -68,7 +74,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
   sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
   sudo apt install -y libxml2 libxml2-dev gettext
-  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
+  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev libmemcached-dev
   sudo apt install -y software-properties-common build-essential
   sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
   sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
@@ -76,7 +82,9 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Install Openjdk
   sudo -i apt update
   sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
-  sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
+
+  # Remember to select the correct java version /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+  sudo update-alternatives --config java
 
   sudo apt update -y
   sudo apt autoremove -y
@@ -144,16 +152,16 @@ Make an instance out of the ``Django Template``
 
   # Install the Python packages
   cd /opt/geonode_custom/my_geonode
-  pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
-  pip install -e . --upgrade
+  pip install -r src/requirements.txt --upgrade --no-cache –-no-cache-dir
+  pip install -e src/ --upgrade
 
   # Install GDAL Utilities for Python
   pip install pygdal=="`gdal-config --version`.*"
 
   # Dev scripts
-  mv .override_dev_env.sample .override_dev_env
-  mv manage_dev.sh.sample manage_dev.sh
-  mv paver_dev.sh.sample paver_dev.sh
+  mv .override_dev_env.sample src/.override_dev_env
+  mv src/manage_dev.sh.sample src/manage_dev.sh
+  mv src/paver_dev.sh.sample src/paver_dev.sh
 
 Install and Configure the PostgreSQL Database System
 ....................................................
@@ -162,7 +170,7 @@ In this section we are going to install the ``PostgreSQL`` packages along with t
 
 .. code-block:: shell
 
-  # Ubuntu 18.04
+  # Ubuntu 20.04
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
   sudo apt update -y; sudo apt install -y postgresql-13 postgresql-13-postgis-3 postgresql-13-postgis-3-scripts postgresql-13 postgresql-client-13
@@ -288,6 +296,8 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 .. code-block:: shell
 
   # Prepare the GeoNode Spatialite database (the first time only)
+  cd src/
+  chmod +x paver_dev.sh
   ./paver_dev.sh setup
   ./paver_dev.sh sync
 

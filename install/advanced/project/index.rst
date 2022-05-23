@@ -152,7 +152,7 @@ Make an instance out of the ``Django Template``
 
   # Install the Python packages
   cd /opt/geonode_custom/my_geonode
-  pip install -r src/requirements.txt --upgrade --no-cache –no-cache-dir
+  pip install -r src/requirements.txt --upgrade --sno-cache-dir
   pip install -e src/ --upgrade
 
   # Install GDAL Utilities for Python
@@ -161,7 +161,7 @@ Make an instance out of the ``Django Template``
   # Dev scripts
   mv .override_dev_env.sample src/.override_dev_env
   mv src/manage_dev.sh.sample src/manage_dev.sh
-  mv mv src/paver_dev.sh.sample src/paver_dev.sh
+  mv src/paver_dev.sh.sample src/paver_dev.sh
 
 Install and Configure the PostgreSQL Database System
 ....................................................
@@ -296,7 +296,7 @@ This modality is beneficial to debug issues and/or develop new features, but it 
 .. code-block:: shell
 
   # Prepare the GeoNode Spatialite database (the first time only)
-  .cd src/
+  cd src/
   chmod +x paver_dev.sh
   ./paver_dev.sh setup
   ./paver_dev.sh sync
@@ -392,7 +392,7 @@ Finally, run the containers
 
   docker-compose -f docker-compose.yml up -d
 
-Deploy an instance of a geonode-project Django template 3.2.0 with Docker on a domain
+Deploy an instance of a geonode-project Django template with Docker on a domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: We will use ``www.example.org`` as an example. You can change the name at your convenience.

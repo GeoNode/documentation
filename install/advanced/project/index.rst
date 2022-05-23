@@ -82,9 +82,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Install Openjdk
   sudo -i apt update
   sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
-
-  # Remember to select the correct java version /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
-  sudo update-alternatives --config java
+  sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
 
   sudo apt update -y
   sudo apt autoremove -y

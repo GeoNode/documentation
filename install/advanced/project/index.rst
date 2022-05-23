@@ -125,7 +125,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.2.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
 
 Make an instance out of the ``Django Template``
 
@@ -343,7 +343,7 @@ Docker
 
     'django4my_geonode' instead of 'django4geonode' and so on...
 
-Deploy an instance of a geonode-project Django template 3.2.0 with Docker on localhost
+Deploy an instance of a geonode-project Django template 3.3.x with Docker on localhost
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Prepare the environment
@@ -360,7 +360,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.2.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
 
 Make an instance out of the ``Django Template``
 

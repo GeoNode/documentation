@@ -102,7 +102,7 @@ Geonode Project Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Geonode project is the proper way to run a customized installation of Geonode. The repository of geonode-project contains a minimal set of files following the structure of a django-project. Geonode itself will be installed as a requirement of your project.
-Inside the project structure is possible to extend, replace or modify all geonode componente (e.g. css and other static files, templates, models..) and even register new django apps **without touching the original Geonode code**.
+Inside the project structure is possible to extend, replace or modify all geonode components (e.g. css and other static files, templates, models..) and even register new django apps **without touching the original Geonode code**.
 
 
 .. note:: You can call your geonode project whatever you like following the naming conventions for python packages (generally lower case with underscores (_). In the examples below, replace ``my_geonode`` with whatever you would like to name your project.
@@ -152,7 +152,7 @@ Make an instance out of the ``Django Template``
 
   # Install the Python packages
   cd /opt/geonode_custom/my_geonode
-  pip install -r src/requirements.txt --upgrade --sno-cache-dir
+  pip install -r src/requirements.txt --upgrade --no-cache-dir
   pip install -e src/ --upgrade
 
   # Install GDAL Utilities for Python

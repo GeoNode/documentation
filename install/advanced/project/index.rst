@@ -379,6 +379,66 @@ Make an instance out of the ``Django Template``
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
   cd /opt/geonode_custom/my_geonode
+  
+Create the .env file
+
+An `.env` file is requird to run the application. It can be created from the `.env.sample` either manually or with the create-envfile.py script.
+
+The script accepts several parameters to create the file, in detail:
+
+    - *hostname*: e.g. master.demo.geonode.org, default localhost
+    - *https*: (boolean), default value is False
+    - *email*: Admin email (this is required if https is set to True since a valid email is required by Letsencrypt certbot)
+    - *emv_type*: `prod`, `test` or `dev`. It will set the `DEBUG` variable to `False` (`prod`, `test`) or `True` (`dev`)
+    - *geonodepwd*: GeoNode admin password (required inside the .env)
+    - *geoserverpwd*: Geoserver admin password (required inside the .env)
+    - *pgpwd*: PostgreSQL password (required inside the .env)
+    - *dbpwd*: GeoNode DB user password (required inside the .env)
+    - *geodbpwd*: Geodatabase user password (required inside the .env)
+    - *clientid*: Oauth2 client id (required inside the .env)
+    - *clientsecret*: Oauth2 client secret (required inside the .env)
+    - *secret key*: Django secret key (required inside the .env)
+    - *sample_file*: absolute path to a env_sample file used to create the env_file. If not provided, the one inside the GeoNode project is used.
+    - *file*: absolute path to a json file that contains all the above configuration
+
+.. note:: if the same configuration is passed in the json file and as an argument, the CLI one will overwrite the one in the JSON file. If some value is not provided, a random string is used
+
+      Example USAGE
+      
+.. code-block:: shell
+
+      ```bash
+      python create-envfile.py -f /opt/core/geonode-project/file.json \
+        --hostname localhost \
+        --https \
+        --email random@email.com \
+        --geonodepwd gn_password \
+        --geoserverpwd gs_password \
+        --pgpwd pg_password \
+        --dbpwd db_password \
+        --geodbpwd _db_password \
+        --clientid 12345 \
+        --clientsecret abc123 
+      ```
+
+Example JSON expected:
+      
+.. code-block:: shell
+
+      ```JSON
+      {
+        "hostname": "value",
+        "https": "value",
+        "email": "value",
+        "geonodepwd": "value",
+        "geoserverpwd": "value",
+        "pgpwd": "value",
+        "dbpwd": "value",
+        "geodbpwd": "value",
+        "clientid": "value",
+        "clientsecret": "value"
+      } 
+      ```
 
 Modify the code and the templates and rebuild the Docker Containers
 

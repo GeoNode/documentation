@@ -102,7 +102,7 @@ Geonode Project Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Geonode project is the proper way to run a customized installation of Geonode. The repository of geonode-project contains a minimal set of files following the structure of a django-project. Geonode itself will be installed as a requirement of your project.
-Inside the project structure is possible to extend, replace or modify all geonode componentse (e.g. css and other static files, templates, models..) and even register new django apps **without touching the original Geonode code**.
+Inside the project structure is possible to extend, replace or modify all geonode componente (e.g. css and other static files, templates, models..) and even register new django apps **without touching the original Geonode code**.
 
 
 .. note:: You can call your geonode project whatever you like following the naming conventions for python packages (generally lower case with underscores (_). In the examples below, replace ``my_geonode`` with whatever you would like to name your project.
@@ -125,7 +125,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
+  git clone https://github.com/GeoNode/geonode-project.git -b master
 
 Make an instance out of the ``Django Template``
 
@@ -343,7 +343,7 @@ Docker
 
     'django4my_geonode' instead of 'django4geonode' and so on...
 
-Deploy an instance of a geonode-project Django template 3.3.x with Docker on localhost
+Deploy an instance of a geonode-project Django template with Docker on localhost
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Prepare the environment
@@ -360,7 +360,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
+  git clone https://github.com/GeoNode/geonode-project.git -b master
 
 Make an instance out of the ``Django Template``
 

@@ -2335,10 +2335,6 @@ Replace everywhere ``localhost`` with ``www.example.org``
 
 .. code-block:: shell
 
-  vim docker-compose.override.example-org.yml
-
-.. code-block:: shell
-
   # e.g.: :%s/localhost/www.example.org/g
 
   version: '2.2'

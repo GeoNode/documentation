@@ -2381,7 +2381,7 @@ Run the containers in daemon mode
 
 .. code-block:: shell
 
-  docker-compose -f docker-compose.yml -f docker-compose.override.example-org.yml up --build -d
+  docker-compose -f docker-compose.yml up --build -d
 
 Access the django4geonode Docker container to update the code-base and/or change internal settings
 ..................................................................................................

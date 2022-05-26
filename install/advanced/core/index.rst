@@ -2229,7 +2229,7 @@ Clone the Project
 
   # Clone the GeoNode source code on /opt/geonode
   cd /opt
-  git clone https://github.com/GeoNode/geonode.git -b master geonode
+  git clone https://github.com/GeoNode/geonode.git -b 4.x geonode
 
 Start the Docker instances on ``localhost``
 

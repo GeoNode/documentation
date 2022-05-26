@@ -25,12 +25,3 @@ GeoNode Backup and Restore
 
     backup/index
 
-
-Viewer and Hooksets
-===================
-
-.. toctree::
-    :caption: Viewer and Hooksets
-    :maxdepth: 3
-
-    viewer/index

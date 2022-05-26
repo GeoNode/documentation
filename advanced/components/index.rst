@@ -1,38 +1,3 @@
-Overview
-========
-
-**TODO***
-
-Django
-======
-
-**TODO**
-
-WebServers
-==========
-
-**TODO**
-
-Apache
-------
-
-**TODO**
-
-NGINX
------
-
-**TODO**
-
-GeoServer
-=========
-
-**TODO**
-
-Databases
-=========
-
-**TODO**
-
 .. _geoserver_geonode_aa:
 
 OAuth2 Security: Authentication and Authorization

@@ -1,10 +1,5 @@
 .. _geonode_on_https:
 
-Publish on HTTPS
-================
-
-TBD
-
 Publish on other than HTTP port (for e.g. 8082)
 ===============================================
 

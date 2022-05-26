@@ -2215,7 +2215,7 @@ Logout and login again on shell and then execute:
   docker run -it hello-world
 
 4. Deploy a vanilla GeoNode with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
 

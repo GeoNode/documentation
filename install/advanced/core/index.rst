@@ -155,13 +155,13 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.x geonode
 
 .. code-block:: shell
 
   # Install the Python packages
   cd /opt/geonode
-  pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+  pip install -r requirements.txt --upgrade
   pip install -e . --upgrade
   pip install pygdal=="`gdal-config --version`.*"
 
@@ -1668,7 +1668,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     EOF
 
     sudo mkdir -p /opt/geonode/; sudo usermod -a -G nginx $USER; sudo chown -Rf $USER:nginx /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
-    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.x geonode
     source $HOME/.bashrc
     cd /opt/geonode
     pip install -e . --upgrade
@@ -2055,7 +2055,7 @@ In this section we are going to discuess installation process of geonode in wind
 .. code-block:: shell
 
     cd your/working/directory
-    git clone https://github.com/GeoNode/geonode.git -b 3.2.x
+    git clone https://github.com/GeoNode/geonode.git -b 4.x
 
 2. Installation of GDAL
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -2108,7 +2108,7 @@ invoke==1.4.1
     .\venv\Scripts\activate.bat
 
     # Install requirement.txt file inside virtualenv
-    pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+    pip install -r requirements.txt
     pip install -e .
 
 3. Run the geonode in ``DEBUG (DEVELOPMENT)`` mode
@@ -2193,7 +2193,7 @@ Docker
 In this section we are going to list the passages needed to:
 
 1. Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host
-2. Deploy a vanilla ``GeoNode 3.2.0`` with ``Docker``
+2. Deploy a vanilla ``GeoNode`` with ``Docker``
 
   a. Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``
   b. Access the ``django4geonode`` Docker image to update the code-base and/or change internal settings
@@ -2214,8 +2214,8 @@ Logout and login again on shell and then execute:
 
   docker run -it hello-world
 
-4. Deploy a vanilla GeoNode 3.2.0 with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Deploy a vanilla GeoNode with Docker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
 
@@ -2229,7 +2229,7 @@ Clone the Project
 
   # Clone the GeoNode source code on /opt/geonode
   cd /opt
-  git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+  git clone https://github.com/GeoNode/geonode.git -b 4.x geonode
 
 Start the Docker instances on ``localhost``
 
@@ -2239,15 +2239,15 @@ Start the Docker instances on ``localhost``
 .. code-block:: shell
 
     cd /opt/geonode
-    docker-compose -f docker-compose.yml pull
-    docker-compose -f docker-compose.yml up -d
+    docker-compose build --no-cache
+    docker-compose up -d
 
 
 .. note:: If you want to re-build the docker images from scratch, instead of ``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to the up command, for instance:
 
 .. code-block:: shell
 
-    docker-compose -f docker-compose.yml up --build
+    docker-compose up --build
 
   In this case you can of course skip the ``pull`` step to download the ``pre-built`` images.
 
@@ -2256,10 +2256,10 @@ Start the Docker instances on ``localhost``
 
   .. code-block:: shell
 
-    docker-compose -f docker-compose.yml up -d
+    docker-compose up -d
 
     # If you want to rebuild the images also
-    docker-compose -f docker-compose.yml up --build -d
+    docker-compose up --build -d
 
 
 Test the instance and follow the logs
@@ -2335,10 +2335,6 @@ Replace everywhere ``localhost`` with ``www.example.org``
 
 .. code-block:: shell
 
-  vim docker-compose.override.example-org.yml
-
-.. code-block:: shell
-
   # e.g.: :%s/localhost/www.example.org/g
 
   version: '2.2'
@@ -2385,7 +2381,7 @@ Run the containers in daemon mode
 
 .. code-block:: shell
 
-  docker-compose -f docker-compose.yml -f docker-compose.override.example-org.yml up --build -d
+  docker-compose up --build -d
 
 Access the django4geonode Docker container to update the code-base and/or change internal settings
 ..................................................................................................
@@ -2429,7 +2425,7 @@ Whenever you need to change some settings or environment variable, the easiest t
   docker-compose stop
 
   # Restart the container in Daemon mode
-  docker-compose -f docker-compose.yml -f docker-compose.override.<whatever>.yml up -d
+  docker-compose up -d
 
 Whenever you change the model, remember to run later in the container via ``bash``:
 
@@ -2497,6 +2493,8 @@ Update the GeoServer instance inside the GeoServer Container
 
   GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x
 
+  GeoNode 4.x is **NOT** compatible with GeoServer < 2.19.x
+
 
 Remove all data and bring your running GeoNode deployment to the initial stage
 ..............................................................................
@@ -2522,12 +2520,14 @@ It is possible to let docker show which containers are currently running (add ``
   # Show the currently running containers
   docker ps
 
-  CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS                NAMES
-  3b232931f820        geonode/nginx:production    "nginx -g 'daemon of…"   26 minutes ago      Up 26 minutes       0.0.0.0:80->80/tcp   nginx4geonode
-  ff7002ae6e91        geonode/geonode:latest     "/usr/src/app/entryp…"   26 minutes ago      Up 26 minutes       8000/tcp             django4geonode
-  2f155e5043be        geonode/geoserver:2.18.3   "/usr/local/tomcat/t…"   26 minutes ago      Up 26 minutes       8080/tcp             geoserver4geonode
-  97f1668a01b1        geonode_celery             "/usr/src/app/entryp…"   26 minutes ago      Up 26 minutes       8000/tcp             geonode_celery_1
-  1b623598b1bd        geonode/postgis:10         "docker-entrypoint.s…"   About an hour ago   Up 26 minutes       5432/tcp             db4geonode
+  CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS                   PORTS                                                                      NAMES
+4729b3dd1de7   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes             8000/tcp                                                                   celery4geonode
+418da5579b1a   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes (healthy)   8000/tcp                                                                   django4geonode
+d6b043f16526   geonode/letsencrypt:4.0    "./docker-entrypoint…"   29 minutes ago   Up 9 seconds             80/tcp, 443/tcp                                                            letsencrypt4geonode
+c77e1fa3ab2b   geonode/geoserver:2.19.6   "/usr/local/tomcat/t…"   29 minutes ago   Up 5 minutes (healthy)   8080/tcp                                                                   geoserver4geonode
+a971cedfd788   rabbitmq:3.7-alpine        "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             4369/tcp, 5671-5672/tcp, 25672/tcp                                         rabbitmq4geonode
+a2e4c69cb80f   geonode/nginx:4.0          "/docker-entrypoint.…"   29 minutes ago   Up 5 minutes             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   nginx4geonode
+d355d34cac4b   geonode/postgis:13         "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             5432/tcp                                                                   db4geonode
 
 
 Stop all the containers by running

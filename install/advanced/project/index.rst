@@ -125,7 +125,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b master
+  git clone https://github.com/GeoNode/geonode-project.git -b 4.x
 
 Make an instance out of the ``Django Template``
 
@@ -146,13 +146,13 @@ Make an instance out of the ``Django Template``
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==3.2
+  pip install Django==3.2.13
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
   # Install the Python packages
   cd /opt/geonode_custom/my_geonode
-  pip install -r src/requirements.txt --upgrade --no-cache –-no-cache-dir
+  pip install -r src/requirements.txt --upgrade
   pip install -e src/ --upgrade
 
   # Install GDAL Utilities for Python
@@ -360,7 +360,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b master
+  git clone https://github.com/GeoNode/geonode-project.git -b 4.x
 
 Make an instance out of the ``Django Template``
 
@@ -375,7 +375,7 @@ Make an instance out of the ``Django Template``
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==3.2
+  pip install Django==3.2.13
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
   cd /opt/geonode_custom/my_geonode

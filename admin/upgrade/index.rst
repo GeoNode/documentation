@@ -23,7 +23,7 @@ This must be done manually and with particular attention.
     cd /<full_path_to_geonode>
 
     pip install pip --upgrade
-    pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+    pip install -r requirements.txt --upgrade
     pip install -e . --upgrade
     pip install pygdal=="`gdal-config --version`.*"
 

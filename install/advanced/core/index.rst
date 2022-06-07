@@ -155,13 +155,13 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.x geonode
 
 .. code-block:: shell
 
   # Install the Python packages
   cd /opt/geonode
-  pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+  pip install -r requirements.txt --upgrade
   pip install -e . --upgrade
   pip install pygdal=="`gdal-config --version`.*"
 
@@ -1668,7 +1668,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     EOF
 
     sudo mkdir -p /opt/geonode/; sudo usermod -a -G nginx $USER; sudo chown -Rf $USER:nginx /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
-    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.x geonode
     source $HOME/.bashrc
     cd /opt/geonode
     pip install -e . --upgrade
@@ -2055,7 +2055,7 @@ In this section we are going to discuess installation process of geonode in wind
 .. code-block:: shell
 
     cd your/working/directory
-    git clone https://github.com/GeoNode/geonode.git -b 3.2.x
+    git clone https://github.com/GeoNode/geonode.git -b 4.x
 
 2. Installation of GDAL
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -2108,7 +2108,7 @@ invoke==1.4.1
     .\venv\Scripts\activate.bat
 
     # Install requirement.txt file inside virtualenv
-    pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+    pip install -r requirements.txt
     pip install -e .
 
 3. Run the geonode in ``DEBUG (DEVELOPMENT)`` mode
@@ -2215,7 +2215,7 @@ Logout and login again on shell and then execute:
   docker run -it hello-world
 
 4. Deploy a vanilla GeoNode with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project
 
@@ -2259,7 +2259,7 @@ Start the Docker instances on ``localhost``
     docker-compose up -d
 
     # If you want to rebuild the images also
-    docker-compose --build -d
+    docker-compose up --build -d
 
 
 Test the instance and follow the logs

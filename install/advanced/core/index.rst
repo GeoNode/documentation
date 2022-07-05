@@ -152,7 +152,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.3.x geonode
 
 .. code-block:: shell
 
@@ -1628,7 +1628,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     EOF
 
     sudo mkdir -p /opt/geonode/; sudo usermod -a -G nginx $USER; sudo chown -Rf $USER:nginx /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
-    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 3.3.x geonode
     source $HOME/.bashrc
     cd /opt/geonode
     pip install -e . --upgrade
@@ -2015,7 +2015,7 @@ In this section we are going to discuess installation process of geonode in wind
 .. code-block:: shell
 
     cd your/working/directory
-    git clone https://github.com/GeoNode/geonode.git -b 3.2.x
+    git clone https://github.com/GeoNode/geonode.git -b 3.3.x
 
 2. Installation of GDAL
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -2189,7 +2189,7 @@ Clone the Project
 
   # Clone the GeoNode source code on /opt/geonode
   cd /opt
-  git clone https://github.com/GeoNode/geonode.git -b 3.2.x geonode
+  git clone https://github.com/GeoNode/geonode.git -b 3.3.x geonode
 
 Start the Docker instances on ``localhost``
 

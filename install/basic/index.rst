@@ -115,7 +115,7 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
 
 .. code-block:: shell
 
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.2.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
 
   # Ubuntu
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
@@ -125,7 +125,7 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==3.2
+  pip install Django==2.2.24
 
   # CentOS
   virtualenv -p python3 my_geonode

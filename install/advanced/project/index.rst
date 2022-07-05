@@ -117,7 +117,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.2.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
 
 Make an instance out of the ``Django Template``
 
@@ -138,7 +138,7 @@ Make an instance out of the ``Django Template``
   python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
-  pip install Django==3.2
+  pip install Django==2.2.24
 
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
@@ -350,7 +350,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 3.2.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 3.3.x
 
 Make an instance out of the ``Django Template``
 

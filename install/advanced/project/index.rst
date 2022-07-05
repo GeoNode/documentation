@@ -143,17 +143,17 @@ Make an instance out of the ``Django Template``
   django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
   # Install the Python packages
-  cd /opt/geonode_custom/my_geonode
-  pip install -r requirements.txt --upgrade --no-cache --no-cache-dir
+  cd /opt/geonode_custom/my_geonode/src
+  pip install -r requirements.txt --upgrade
   pip install -e . --upgrade
 
   # Install GDAL Utilities for Python
   pip install pygdal=="`gdal-config --version`.*"
 
   # Dev scripts
-  mv .override_dev_env.sample .override_dev_env
-  mv manage_dev.sh.sample manage_dev.sh
-  mv paver_dev.sh.sample paver_dev.sh
+  cp ../.override_dev_env.sample .override_dev_env
+  cp manage_dev.sh.sample manage_dev.sh
+  cp paver_dev.sh.sample paver_dev.sh
 
 Install and Configure the PostgreSQL Database System
 ....................................................

@@ -2153,7 +2153,7 @@ Docker
 In this section we are going to list the passages needed to:
 
 1. Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host
-2. Deploy a vanilla ``GeoNode 3.2.0`` with ``Docker``
+2. Deploy a vanilla ``GeoNode 3.3.2`` with ``Docker``
 
   a. Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``
   b. Access the ``django4geonode`` Docker image to update the code-base and/or change internal settings
@@ -2174,7 +2174,7 @@ Logout and login again on shell and then execute:
 
   docker run -it hello-world
 
-4. Deploy a vanilla GeoNode 3.2.0 with Docker
+4. Deploy a vanilla GeoNode 3.3.2 with Docker
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clone the Project

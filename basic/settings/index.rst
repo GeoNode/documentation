@@ -125,6 +125,28 @@ ACTSTREAM_SETTINGS
 
     Actstream Settings.
 
+
+ADDITIONAL_DATASET_FILE_TYPES
+-----------------------------
+
+External application can define additional supported file type other than the default one declared in the `SUPPORTED_DATASET_FILE_TYPES` .
+
+The variable should be declared in this way in `settings.py` (or via application hook):
+
+
+    .. code::
+        ADDITIONAL_DATASET_FILE_TYPES=[
+            {
+                "id": "dummy_type",
+                "label": "Dummy Type",
+                "format": "dummy",
+                "ext": ["dummy"]
+            },
+        ]
+
+Please rely on geonode.tests.test_utils.TestSupportedTypes for an example
+
+
 ADMIN_MODERATE_UPLOADS
 ----------------------
 
@@ -2133,6 +2155,13 @@ SITEURL
 
     A base URL for use in creating absolute links to Django views and generating links in metadata.
 
+SIZE_RESTRICTED_FILE_UPLOAD_ELEGIBLE_URL_NAMES 
+----------------------------------------------
+
+    Default: ``'("data_upload", "uploads-upload", "document_upload",)'``
+
+    Rappresent the list of the urls basename that are under file_size restriction
+
 SKIP_PERMS_FILTER
 -----------------
 
@@ -2276,6 +2305,63 @@ SEARCH_RESOURCES_EXTENDED
 
     This will extend search with additinoal properties. By default its on and search engine will check resource title or purpose or abstract.
     When set to False just title lookup is performed.
+
+SUPPORTED_DATASET_FILE_TYPES
+----------------------------
+    
+    Default::
+        SUPPORTED_DATASET_FILE_TYPES = [
+        {
+            "id": "shp",
+            "label": "ESRI Shapefile",
+            "format": "vector",
+            "ext": ["shp"],
+            "requires": ["shp", "prj", "dbf", "shx"],
+            "optional": ["xml", "sld"]
+        },
+        {
+            "id": "tiff",
+            "label": "GeoTIFF",
+            "format": "raster",
+            "ext": ["tiff", "tif"],
+            "mimeType": ["image/tiff"],
+            "optional": ["xml", "sld"]
+        },
+        {
+            "id": "csv",
+            "label": "Comma Separated Value (CSV)",
+            "format": "vector",
+            "ext": ["csv"],
+            "mimeType": ["text/csv"],
+            "optional": ["xml", "sld"]
+        },
+        {
+            "id": "zip",
+            "label": "Zip Archive",
+            "format": "archive",
+            "ext": ["zip"],
+            "mimeType": ["application/zip"],
+            "optional": ["xml", "sld"]
+        },
+        {
+            "id": "xml",
+            "label": "XML Metadata File",
+            "format": "metadata",
+            "ext": ["xml"],
+            "mimeType": ["application/json"],
+            "needsFiles": ["shp", "prj", "dbf", "shx", "csv", "tiff", "zip", "sld"]
+        },
+        {
+            "id": "sld",
+            "label": "Styled Layer Descriptor (SLD)",
+            "format": "metadata",
+            "ext": ["sld"],
+            "mimeType": ["application/json"],
+            "needsFiles": ["shp", "prj", "dbf", "shx", "csv", "tiff", "zip", "xml"]
+        }
+    ]
+
+    Rappresent the list of the supported file type in geonode that can be ingested by the platform
 
 T
 =

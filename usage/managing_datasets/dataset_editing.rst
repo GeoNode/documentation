@@ -1,7 +1,7 @@
 .. _dataset-editing:
 
 Dataset Editing
-=============
+===============
 
 The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of options like ones shown in the picture below.
 
@@ -21,7 +21,7 @@ In this section you will learn how to edit a *Dataset*, and its data. See :ref:`
 .. _dataset-data-editing:
 
 Editing the Dataset Data
-----------------------
+------------------------
 
 The :guilabel:`Edit data` link of the *Dataset Editing* options opens the *Dataset* within a *Map*.
 

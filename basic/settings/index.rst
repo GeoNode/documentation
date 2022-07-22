@@ -146,6 +146,12 @@ The variable should be declared in this way in `settings.py` (or via application
 
 Please rely on geonode.tests.test_utils.TestSupportedTypes for an example
 
+ADMIN_IP_WHITELIST
+----------------------
+
+    | Default: ``[]``
+
+    When this list is popuplated with a list of IPs or IP ranges (e.g. 192.168.1.0/24) requests from and admin user will be allowe only from IPs matching with the list.
 
 ADMIN_MODERATE_UPLOADS
 ----------------------

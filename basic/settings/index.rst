@@ -654,6 +654,15 @@ CKAN_ORIGINS
 
     A list of dictionaries that are used to generate the links to CKAN instances displayed in the Share tab.  For each origin, the name and abstract format parameters are replaced by the actual values of the ResourceBase object (layer, map, document).  This is not enabled by default.  To enable, uncomment the following line: SOCIAL_ORIGINS.extend(CKAN_ORIGINS).
 
+CORS_ALLOW_ALL_ORIGINS
+----------------------
+
+    | Default: ``False``
+    | Env: ``CORS_ALLOW_ALL_ORIGINS``
+
+    If set to true `Access-Control-Allow-Origin: *` header is set for any response. A safer option (not managed through env vars at the moment) is `CORS_ALLOWED_ORIGINS`, where a list of hosts can be configured, o `CORS_ALLOWED_ORIGIN_REGEXES`, where the list can contain regexes.
+    Notice that the Nginx in front of GeoNode always includes `Access-Control-Allow-Credentials true`. This must also taken into account when CORS is enabled. 
+
 CSRF_COOKIE_HTTPONLY
 --------------------
 

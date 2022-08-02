@@ -2378,6 +2378,18 @@ SUPPORTED_DATASET_FILE_TYPES
 
     Rappresent the list of the supported file type in geonode that can be ingested by the platform
 
+For example. the following configuration is needed to add the GeoJSON as supported file:
+
+    Default::
+        {
+            "id": "geojson",
+            "label": "GeoJSON",
+            "format": "metadata",
+            "ext": ["geojson"],
+            "mimeType": ["application/json"]
+        }
+
+
 T
 =
 

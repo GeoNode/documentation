@@ -18,3 +18,16 @@ Guide](http://docs.geoserver.org/latest/en/docguide/style.html)
       - [Sphinx reStructuredText
         Primer](http://www.sphinx-doc.org/rest.html)
 
+
+## Installation of environments to generate documentation
+
+Below we detail the two options according to your operating system:
+
+
+### Linux o Mac
+
+
+
+
+
+### Windows

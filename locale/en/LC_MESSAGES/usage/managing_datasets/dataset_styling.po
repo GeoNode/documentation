@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../usage/managing_datasets/dataset_styling.rst:4
+#: feaf5e8d53dc496a84ef69730eb5b750
+msgid "Dataset Styling"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:6
+#: 9f93e9a626d9408db4d7d6dcd2f3ea6a
+msgid ""
+"Maps are helpful because they allow you gain a deeper understanding of "
+"your data by allowing you to visualize it in many different ways. So you "
+"can tell different stories depending on how the data is presented. For "
+"any given data or dataset, you should explore different styling options "
+"and choose the best style for that."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:10
+#: 54f63878d0d847aaa890b67f8f4f7ade
+msgid ""
+"In GeoNode each dataset has one style refered to as a *Default Style* "
+"which is determined by the nature of the data you're mapping. When "
+"uploading a new dataset (see :ref:`uploading-datasets`) a new default "
+"style will be associated to it."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:13
+#: f10f56adbfed4f958544a808855f537f
+msgid "Editing the Dataset Style"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:15
+#: 152420ce48094422b1f3c87f8153fb84
+msgid ""
+"In order to edit a dataset style, open the *Dataset Page* (see :ref"
+":`dataset-info`) and click on :guilabel:`Edit`. Then click the "
+":guilabel:`Edit Style` link in the *options* (see the picture below)."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:20
+#: 02bdd124cada4c7a8b327f3712b5f729
+msgid "*Edit Styles button*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:22
+#: 07651c266d774c6b90df6a305a522fd1
+msgid ""
+"The *Dataset* will open in a new *Map*. The *Styles Panel* will show you "
+"all the default style for the dataset and some useful tools. By default, "
+"the style will be showm in a text editor form."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:27
+#: 0806c60f1f9c4791852d1a5ea402d5d8
+msgid "*The Styles Panel in the Map*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:29
+#: bd5eac6cc83642ed8e120cf5efa1970a
+msgid ""
+"You could continue to change the style with the text editor or switch to "
+"a visualized editor using the :guilabel:`Visual editor` above the text "
+"editor."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:31
+#: 845747f0541c40908758d639e3fc7fbf
+msgid "The visual editor looks like this"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:36
+#: b01338c31c3a40328811075885e2a94f
+msgid "*Visual Styles Panel in the Map*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:38
+#: b673196713904fc389817fc24bf4b247
+msgid "You can then edit the style by clicking on each attribute of the style."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:41
+#: dbc3a3ff33444a49962e7531b526c73d
+msgid "Creating Style Rules"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:43
+#: ebe609bc3f0540b9a46396b2121d36dc
+msgid "In order to create a new rule, Three options are provided."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:45
+#: ee32880341b1458d8b530f2b69aa2880
+msgid "Mark rule"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:46
+#: 9d123f7d1bae495ba69698d1b042a5e2
+msgid "Icon rule"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:47
+#: 9ba90c32e2664e958adb5733f8701357
+msgid "text rule"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:49
+#: 8da43afbbb6344958a832adb51890353
+msgid "Click on any of the buttons below to create a type of style you want."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:54
+#: 1c1e2339273b4cb08cf60b89aa834541
+msgid "*Create new rule buttons*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:56
+#: d0247ff9401a422aad2b2f1e78c4db93
+msgid ""
+"The rule you have chosen is now added on the top with default attributes "
+"which you can edit to your preference*."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:61
+#: 35a84c4517e840d38819c0d2e7fb31cd
+msgid "*New style*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:63
+#: db5119262f704d65a8ad361b84f44882
+msgid "If the rule has errors, the following will be shown."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:68
+#: cef9e4364cab413c9d2aab64cbaf5c98
+msgid "*Rule Error*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:71
+#: fcb2f60974674604ac322a9f0b6e0241
+msgid ""
+"You can switch the rule ordering by dragging it to the top or bottom "
+"depending on your preference."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:74
+#: c4f13d62742d4b06ba1c6d43bf1e612d
+msgid ""
+"It would be nice to change the style in order to decrease the opacity of "
+"the filling color as well as to reduce the lines width. The embedded "
+"`MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ makes "
+"available a powerful *Style Editor* to accomplish that tasks. In the next"
+" paragraph we will explain how."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:77
+#: f159a11d18b34776a7572d25b49b09e7
+msgid ""
+"Each rule has a delete icon on the top right which you can use to remove "
+"the rule on the style."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_styling.rst:79
+#: d3af7163d1e641a4adf8d0ad974dae7e
+msgid "Click on :guilabel:`Save` on the top to save your changes."
+msgstr ""
+

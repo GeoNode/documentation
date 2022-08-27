@@ -8,41 +8,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../usage/accounts_user_profile/index.rst:2
-#: b17c37388f984b188f0562039a144da1
+#: 0d02c10e1a714bbaa138bcfe32cb000e
 msgid "Accounts and User Profile"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/index.rst:4
-#: d2e6f6f328cd42abac70e79e0ececf96
+#: 40fe2ab114934a46ae15750efd0d426d
 msgid ""
 "In GeoNode many contents are public so unregistered users have read-only "
-"access to public maps, layers and documents. In order to create maps, add"
-" layers or documents, edit the data and share these resources with other "
-"users, you need to sign in."
+"access to public maps, datasets and documents. In order to create maps, "
+"add datasets or documents, edit the data and share these resources with "
+"other users, you need to sign in."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/index.rst:7
-#: a7f7b3fc8b434341afe65eabb4980698
+#: 2a3e45999ea24de2b70cfe0226fd7f03
 msgid ""
 "GeoNode is primarily a *social* platform, thus a primary component of any"
 " GeoNode instance is the user account."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/index.rst:9
-#: b46c499bf53f43fa9804fe41e2fda47f
+#: 938bfa1a775246bc83ff38bde4fd9170
 msgid ""
 "This section will guide you through account registration, updating your "
 "account information and preferences, connections with social networks and"
 " email addresses."
 msgstr ""
+
+#~ msgid ""
+#~ "In GeoNode many contents are public "
+#~ "so unregistered users have read-only "
+#~ "access to public maps, layers and "
+#~ "documents. In order to create maps, "
+#~ "add layers or documents, edit the "
+#~ "data and share these resources with "
+#~ "other users, you need to sign in."
+#~ msgstr ""
 

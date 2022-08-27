@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:4
-#: a869e6c5fcdf4e1a8afe64659b624cd1
+#: 052e0abdf29843869b51b228d88d0566
 msgid "Updating the Profile"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:6
-#: bb5a5ca91e1d47f8becf99d65fc21c25
+#: 73745a5c344b4f0e81054f73d19d506e
 msgid ""
 "Once having an account you can enrich your profile with useful "
 "information, you can also edit or delete the existing ones. You can "
@@ -33,99 +33,146 @@ msgid ""
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:9
-#: 0ce6dbd61c4c42308747353fe1779bbb
+#: 8102c30cc96140199e071c927f7cbcec
 msgid ""
-"You can update these information anytime from your *Profile* page, it is "
-"accessible from the user menu."
+"You can update these information anytime from your *Profile* page which "
+"is accessible from the user menu."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:11
-#: 22278c14f7cc4cb984ce9b94a1e850e0
+#: e004a50e18844432bcb2eb756100a0fd
 msgid ""
-"So, click on your user name in the top right of the screen. A drop-down "
-"list will show. Click on :guilabel:`Profile` to enter the *Profile* "
+"So, click on your profile picture in the top right of the screen. A drop-"
+"down list will show. Click on :guilabel:`Profile` to enter the *Profile* "
 "settings page."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:16
-#: a0b9ac90eeb945609b1d211a668691df
+#: 97749dfc610a4ae3ace72a2d0b53f994
 msgid "*Link to your profile*"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:18
-#: 072a522636f646fbb2862eec0cee14e5
+#: 7c96fd23bc254132bd655b65084dd65c
 msgid "The *Profile* page looks like the one shown in the picture below."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:23
-#: 62fb6f7ab8324a57943738b6664caca4
+#: f08929ca5ce34e6eabab4a6607cd80b6
 msgid "*User profile page*"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:25
-#: 106115b8610246cba2d74991fbf29c59
+#: c4b8698172654a55b7e7d8cde45d0af3
 msgid ""
-"Your personal information are shown under the username. At the bottom of "
+"Your personal information is shown under the username. At the bottom of "
 "the page are listed all the resources associated to your *Profile*, you "
-"can decide to view only layers or maps or documents by clicking on the "
+"can decide to view only datasets or maps or documents by clicking on the "
 "corresponding tab."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:27
-#: 82016b78997042acbae65daefcf54816
+#: 43d2e9fe42934345891a2b777293eef7
 msgid ""
-"Through the link ``User layers WMS GetCapabilities document`` you can "
-"retrieve an XML document with the list of the available layers."
+"Through the link ``User datasets WMS GetCapabilities document`` you can "
+"retrieve an XML document with the list of the available datasets."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:29
-#: 272b0d1afdc0485d92e59f5f674ce50f
+#: f12d7a3f3d814253bb36ad4a9051c38b
 msgid ""
 "On the right side of the page there are many useful links to edit "
-"personal information, to upload and create layers or maps, to update your"
-" *Profile* settings and to get in touch with other GeoNode users."
+"personal information, to upload and create datasets or maps, to update "
+"your *Profile* settings and to get in touch with other GeoNode users."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:31
-#: 495414d5413b4ef2b3e2f222cca68cb1
+#: a925b6f32bcc4acdb7582149c28ebfae
 msgid ""
 "The :guilabel:`Favorites` link, also accessible from the user menu, drive"
 " you to the list of the resources marked as your favorites."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:36
-#: 6d824d0c3f1e45a0be75e5f61db48466
+#: b79427705bab475eadf2404187284854
 msgid "*Favorites*"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:38
-#: e14b043cb65e453888938df1a15e5ba4
+#: 7432bca13a654de7a380955991d76f6d
 msgid ""
 "Click the :guilabel:`Delete from Favorites` button to remove the resource"
 " from the list."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:40
-#: dbcda24a7fa640d6bbf2f5fc4015bcbd
+#: 038b9f7400b149538dfdf6ef6a4fd174
 msgid ""
 "The :guilabel:`My Activities` link allows to see all your recent "
-"activities on GeoNode such as layers uploading and maps creation."
+"activities on GeoNode such as datasets uploading and maps creation."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:45
-#: 075bdb8e8e4241b0b7702577c517bd6e
+#: 52f03b458b8847f394caa37ff31d526f
 msgid "*Recent activities*"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:47
-#: f0f6094b57ca4c98a73f9f69fff97499
+#: d8283585741e439a910140a6bf75e5de
 msgid "This link is also available in the user menu."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:49
-#: 418d9ad9cba840fe85c661b5e988d554
+#: 60c600f207354ce19ae9f8a4809eb9fa
 msgid ""
 "All other links and their functionalities will be described in depth in "
 "the following sections."
 msgstr ""
+
+#~ msgid ""
+#~ "You can update these information anytime"
+#~ " from your *Profile* page, it is "
+#~ "accessible from the user menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "So, click on your user name in "
+#~ "the top right of the screen. A "
+#~ "drop-down list will show. Click on"
+#~ " :guilabel:`Profile` to enter the *Profile*"
+#~ " settings page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your personal information are shown "
+#~ "under the username. At the bottom "
+#~ "of the page are listed all the "
+#~ "resources associated to your *Profile*, "
+#~ "you can decide to view only layers"
+#~ " or maps or documents by clicking "
+#~ "on the corresponding tab."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Through the link ``User layers WMS "
+#~ "GetCapabilities document`` you can retrieve"
+#~ " an XML document with the list "
+#~ "of the available layers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On the right side of the page "
+#~ "there are many useful links to "
+#~ "edit personal information, to upload and"
+#~ " create layers or maps, to update "
+#~ "your *Profile* settings and to get "
+#~ "in touch with other GeoNode users."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`My Activities` link allows "
+#~ "to see all your recent activities "
+#~ "on GeoNode such as layers uploading "
+#~ "and maps creation."
+#~ msgstr ""
 

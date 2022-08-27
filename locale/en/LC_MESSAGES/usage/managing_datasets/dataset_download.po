@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../usage/managing_datasets/dataset_download.rst:4
+#: b87abc3afbc3401bb93e6e91317dde21
+msgid "Downloading Datasets"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:6
+#: 2d758cda429d43df96f3863b0e818377
+msgid ""
+"At the top of the *Dataset Menu* there is an :guilabel:`Export` link . It"
+" provides access to the ability to extract geospatial data from within "
+"GeoNode."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:7
+#: d6dd4dea5a8f4a2ebc24f2fb89da0ac6
+msgid ""
+"You will be able to select from a list of options of the supported export"
+" file formats."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:12
+#: 41294815fce84953b89e8ceac63968c3
+msgid "*Downloading Datasets*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:14
+#: d7c593c6537e4a3fb719f09b676aa701
+msgid ""
+"As shown in the image above, GeoNode allows you to download a subset of "
+"data. Click on :guilabel:`Download filtered dataset` to download filtered"
+" data."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:16
+#: e8bb4b9de36346d187fb71d5f81b337e
+msgid ""
+"On clicking Export, the file is prepared and a notification is showed "
+"when file is ready"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:21
+#: cd383f11e7264e318605ce61e05b9a89
+msgid "*Export Ready*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:23
+#: 0d71d5dcb0dc46dc99b41aba16c7cf01
+msgid ""
+"To download the file to your machine, click on the export dataset icon. "
+"This opens the prepared export files and you can save the files on your "
+"by clicking on the save icon on each item."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:28
+#: 28c307ad31054928becb471501192443
+msgid "*Export Results Icon *"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:35
+#: 75fcc85a438848bb9ff00f513770a33d
+msgid "Printing"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:37
+#: b86c642670ef46ea9ab0270377e65be9
+msgid ""
+"The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based "
+"map viewer of GeoNode allows you to print the current view with a "
+"customizable layout."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:38
+#: 5cfd28ef49384d47afef73035f217c8b
+msgid ""
+"Click the :guilabel:`Print` option from the *Menu*, the **Printing "
+"Window** will open."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:43
+#: 8b7523b30b0b408d8654b9adf7ec2f03
+msgid "*The Printing Window*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:45
+#: aa4d551e8f7f45e68d6f251deb9c6691
+msgid "From this window you can:"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:47
+#: 145b062052c442f28d49e811874582a4
+msgid "enter *Title* and *Description*;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:48
+#: 0259b73df6654ad09bb0d95eddd497c7
+msgid "choose the *Resolution* in dpi;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:49
+#: 7a34e6b0930c45428545c86544237a70
+msgid "customize the *Layout*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:51
+#: 50b816e0f63445dfba93d645f0a31e41
+msgid "the *Sheet size* (A3, A4);"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:52
+#: a7dd4768cd1440429bc7924548e7bd0c
+msgid "if include the legend or not;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:53
+#: 1099efb62d6c4bc793349a8c2a7b1a46
+msgid "if to put the legend in a separate page;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:54
+#: 68798b9cd98341c4bcaa979dc3908128
+msgid "the page *Orientation* (Landscape or Portrait);"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:56
+#: a4ead7b7d5434128887fa573e3046599
+msgid "customize the *Legend*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:58
+#: 7316c439c03d4cf2ab07226a4558ae13
+msgid "the *Label Font*;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:59
+#: 7855c6619afc434a9ad6112a06368c20
+msgid "the *Font Size*;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:60
+#: a4c3759997ee492d9b1c21fb17109ca4
+msgid "the *Font Emphasis* (bold, italic);"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:61
+#: eac4436d698a401b808b4d8a928a80e6
+msgid "if *Force Labels*;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:62
+#: d5e69345d71a40e3af69e4f3ba8e717b
+msgid "if use *Anti Aliasing Font*;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:63
+#: f6fb2a325f2943689ca3291e7d6636aa
+msgid "the *Icon Size*;"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:64
+#: c3a44d69bff045cc982bbae20eb4a41c
+msgid "the *Legend Resolution* in dpi."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:66
+#: f65f8422d1c54f559498358c1b6045da
+msgid "To print the view click on :guilabel:`Print`."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:70
+#: 9b599d351d69430f94cc8a07addae0fb
+msgid "Performing Measurements"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:72
+#: f5d9bfc9d1564a10882361452a9d58af
+msgid ""
+"Click on the :guilabel:`Measure` option of the *Menu* to perform a "
+"measurement. As you can see in the picture below, this tool allows you to"
+" measure *Distances*, *Areas* and the *Bearing* of lines."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_download.rst:78
+#: c94bc712c10149e99e215e26659c5073
+msgid "*The Measure Tool*"
+msgstr ""
+

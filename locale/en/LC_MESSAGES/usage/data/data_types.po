@@ -8,150 +8,216 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: ../../usage/data/data_types.rst:4 a81341ecac7447ddb24e6a5bca92a65e
+#: ../../usage/data/data_types.rst:4 63e8548d516f42f5b72c66be3286b474
 msgid "Data Types"
 msgstr ""
 
-#: ../../usage/data/data_types.rst:6 836f8683effd4f8c86e124bfa6a9d6c2
+#: ../../usage/data/data_types.rst:6 f4cb167890e94582b86772a956554e71
 msgid ""
 "GeoNode welcome page shows a variety of information about the current "
 "GeoNode instance."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:7 0e1938fea91243e4b9cee35a2d7b7810
+#: ../../usage/data/data_types.rst:7 c9462437080c4367bcf1c2b66f11c18e
 msgid ""
 "You can explore the existing data using many search tools and filters "
 "(see :ref:`finding-data`) or through the links of the navigation bar at "
 "the top of the page."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:8 b9da50f1b04a42129990dd314491a694
+#: ../../usage/data/data_types.rst:8 a7636a66fa074274bdca9649b3568583
 msgid "There are three main types of resources that GeoNode can manage:"
 msgstr ""
 
-#: ../../usage/data/data_types.rst:10 ../../usage/data/data_types.rst:31
-#: 734802d5c0234839b3665c2358a780f2 7e0e51980c074705b81528e2beee1bb6
+#: ../../usage/data/data_types.rst:10 ../../usage/data/data_types.rst:27
+#: 42a924188e4a4d598c939fcec78f9929 461d4c692cca4f89be915e256bd2743f
 msgid "Documents"
 msgstr ""
 
-#: ../../usage/data/data_types.rst:11 ../../usage/data/data_types.rst:39
-#: c40e110438474af6907eb7c218355f2b e51a8172005e44489c600da7a2b74d42
-msgid "Layers"
+#: ../../usage/data/data_types.rst:11 ../../usage/data/data_types.rst:35
+#: 0be3698495cb45328802854dca2f7eb6 96afb64f276c47a3b8baa0c2f11df023
+msgid "Datasets"
 msgstr ""
 
-#: ../../usage/data/data_types.rst:12 ../../usage/data/data_types.rst:50
-#: 3f319239a0cd4e0287e8822fa28f5f8c b8ca844fdcdb4edba476b873b8ff672d
+#: ../../usage/data/data_types.rst:12 ../../usage/data/data_types.rst:46
+#: dd4fc4822f724f33ab18f77fd63b1874 f501ff22c0354bf78ee46a4ea3a87d69
 msgid "Maps"
 msgstr ""
 
-#: ../../usage/data/data_types.rst:14 e72614733b9a42918f3a3ba0ca7360bd
+#: ../../usage/data/data_types.rst:14 c9ac53972686482db9a1a91a725d0710
 msgid ""
-"Documents and layers can be accessed from the :guilabel:`Data` menu of "
-"the navigation bar."
+"Datasets, Documents and Remote Services can be accessed from the "
+":guilabel:`Data` menu of the navigation bar. The :guilabel:`Maps` menu "
+"lets you filter only maps in the available resource. This applies to "
+"other existing menu items like :guilabel:`GeoStories`."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:19 e74cb89af9ee4e1caca2df25a8d847a9
+#: ../../usage/data/data_types.rst:17 fed83b1edb014e0e8f152c05c79492d2
+msgid ""
+":guilabel:`GeoStories` and :guilabel:`Dashboards` In the screenshot below"
+" are GeoApp resouce types which are added by the client."
+msgstr ""
+
+#: ../../usage/data/data_types.rst:22 b206a6a34d484a58965aa30b350ed578
 msgid "*Data menu*"
 msgstr ""
 
-#: ../../usage/data/data_types.rst:21 1b630b234f2644048be81209115a8b08
-msgid "The :guilabel:`Maps` menu let you to manage maps."
-msgstr ""
-
-#: ../../usage/data/data_types.rst:26 e04392c3ba16481687009e174bb54d7a
-msgid "*Maps menu*"
-msgstr ""
-
-#: ../../usage/data/data_types.rst:33 78394bdfa82e489f8d48bab1406904da
+#: ../../usage/data/data_types.rst:29 dcbd7a05ef0b4f56bde3ceb3a14997e7
 msgid ""
 "GeoNode allows to publish tabular and text data and to manage metadata "
 "and associated documents."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:34 b7b7cf18cab34fe5a05d37dda1590e99
+#: ../../usage/data/data_types.rst:30 b925ea4649104665a66129d1b3d5b9bd
 msgid ""
 "Documents can be uploaded directly from your disk (see :ref:`uploading-"
 "documents` for further information)."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:35 85da0bd6de2246f6b9f9b0606c99f434
+#: ../../usage/data/data_types.rst:31 fc50b8756b7a40c383ee14a886c01156
 msgid ""
 "The following documents types are allowed: `.doc, .docx, .gif, .jpg, "
 ".jpeg, .ods, .odt, .odp, .pdf, .png, .ppt, .pptx, .rar, .sld, .tif, "
 ".tiff, .txt, .xls, .xlsx, .xml, .zip, .gz, .qml`."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:36 305b185570ab48378fd8e4a46b6b0575
+#: ../../usage/data/data_types.rst:32 d4b6e316deed403a86fa9447219761f6
 msgid ""
 "Through the document detailed page is possible to view, download and "
 "manage a document."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:41 a6a9c5f14b4e427e8e8c91854d30941a
-msgid "Layers are a primary component of GeoNode."
+#: ../../usage/data/data_types.rst:37 e6d526414efb4feeac0af06d33bb11b3
+msgid "Datasets are a primary component of GeoNode."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:42 a01f0a458fc0403fa517c18f8532c23b
+#: ../../usage/data/data_types.rst:38 41126b55118943dcbd523814c3fc7bd3
 msgid ""
-"Layers are publishable resources representing a raster or vector spatial "
-"data source. Layers also can be associated with metadata, ratings, and "
-"comments."
+"Datasets are publishable resources representing a raster or vector "
+"spatial data source. Datasets also can be associated with metadata, "
+"ratings, and comments."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:44 830e1f2efd9d48e1bcfb163cec4d5bd3
+#: ../../usage/data/data_types.rst:40 28e3bb8e2599427ba4ea01607e924f64
 msgid ""
-"By clicking the Layers link you will get a list of all published layers. "
-"If logged in as an administrator, you will also see the unpublished "
-"layers in the same list."
+"By clicking the Datasets link you will get a list of all published "
+"datasets. If logged in as an administrator, you will also see the "
+"unpublished datasets in the same list."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:45 b11928a1af924d4caddda829dd678211
+#: ../../usage/data/data_types.rst:41 8e85180a1b744188bd4ea7bb4b69499d
 msgid ""
 "GeoNode allows the user to upload vector and raster data in their "
 "original projections using a web form."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:47 d24fc9fdc11449afa61e69b7e05705bd
+#: ../../usage/data/data_types.rst:43 f6396b42d3b64c8da0b65b79cc94aad7
 msgid ""
 "Vector data can be uploaded in many different formats (ESRI Shapefile, "
 "KML and so on...). Satellite imagery and other kinds of raster data can "
 "be uploaded as GeoTIFFs."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:52 db4921f44da04710b88fa036090ef15a
+#: ../../usage/data/data_types.rst:48 7d328f7eecad41e4a6a7225a5acd4b55
 msgid "Maps are a primary component of GeoNode."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:53 cf05429f1bcd4d838a0456a931379311
+#: ../../usage/data/data_types.rst:49 548294a1152a40c7bc13a2d9c336171b
 msgid ""
-"Maps are comprised of various layers and their styles. Layers can be both"
-" local layers in GeoNode as well as remote layers either served from "
-"other WMS servers or by web service layers such as Google or MapQuest."
+"Maps are comprised of various datasets and their styles. Datasets can be "
+"both local datasets in GeoNode as well as remote datasets either served "
+"from other WMS servers or by web service datasets such as Google or "
+"MapQuest."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:55 c16099fe2fe145158b1bcfa9512fa8b7
+#: ../../usage/data/data_types.rst:51 784c3c30b23c4ddba0990644977800d3
 msgid ""
 "GeoNode maps also contain other information such as map zoom and extent, "
-"layer ordering, and style."
+"dataset ordering, and style."
 msgstr ""
 
-#: ../../usage/data/data_types.rst:57 bf0018679fac4329b13217adfb7c9bde
+#: ../../usage/data/data_types.rst:53 015ae39a718f4ad09c82d71a3913536a
 msgid ""
-"You can create a map based on uploaded layers, combine them with some "
-"existing layers and a remote web service layer, share the resulting map "
-"for public viewing. Once the data has been uploaded, GeoNode lets the "
-"user search for it geographically or via keywords and create maps. All "
-"the layers are automatically reprojected to web mercator for maps "
+"You can create a map based on uploaded datasets, combine them with some "
+"existing datasets and a remote web service dataset, share the resulting "
+"map for public viewing. Once the data has been uploaded, GeoNode lets the"
+" user search for it geographically or via keywords and create maps. All "
+"the datasets are automatically reprojected to web mercator for maps "
 "display, making it possible to use popular base maps such as "
 "`OpenStreetMap <https://www.openstreetmap.org>`_."
 msgstr ""
+
+#~ msgid "Layers"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Documents and layers can be accessed "
+#~ "from the :guilabel:`Data` menu of the"
+#~ " navigation bar."
+#~ msgstr ""
+
+#~ msgid "The :guilabel:`Maps` menu let you to manage maps."
+#~ msgstr ""
+
+#~ msgid "*Maps menu*"
+#~ msgstr ""
+
+#~ msgid "Layers are a primary component of GeoNode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layers are publishable resources representing"
+#~ " a raster or vector spatial data "
+#~ "source. Layers also can be associated"
+#~ " with metadata, ratings, and comments."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By clicking the Layers link you "
+#~ "will get a list of all published"
+#~ " layers. If logged in as an "
+#~ "administrator, you will also see the "
+#~ "unpublished layers in the same list."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Maps are comprised of various layers "
+#~ "and their styles. Layers can be "
+#~ "both local layers in GeoNode as "
+#~ "well as remote layers either served "
+#~ "from other WMS servers or by web"
+#~ " service layers such as Google or "
+#~ "MapQuest."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GeoNode maps also contain other "
+#~ "information such as map zoom and "
+#~ "extent, layer ordering, and style."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can create a map based on "
+#~ "uploaded layers, combine them with some"
+#~ " existing layers and a remote web "
+#~ "service layer, share the resulting map"
+#~ " for public viewing. Once the data"
+#~ " has been uploaded, GeoNode lets the"
+#~ " user search for it geographically or"
+#~ " via keywords and create maps. All"
+#~ " the layers are automatically reprojected"
+#~ " to web mercator for maps display,"
+#~ " making it possible to use popular"
+#~ " base maps such as `OpenStreetMap "
+#~ "<https://www.openstreetmap.org>`_."
+#~ msgstr ""
 

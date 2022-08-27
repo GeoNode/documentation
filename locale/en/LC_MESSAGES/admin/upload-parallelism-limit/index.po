@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../admin/upload-parallelism-limit/index.rst:5
+#: 694fc634970c4ca1b009affb73562745
+msgid "Upload Parallelism Limit"
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:7
+#: 5e755e4eb19244469e8ece6c06120498
+msgid "Default: ``5``"
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:9
+#: 158ecb8024b945029f9b2b68402bb56b
+msgid ""
+"When `uploading datasets "
+"<../../usage/managing_datasets/uploading_datasets.html#datasets-"
+"uploading>`__, this value limits the number os parallel uploads."
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:11
+#: 7db0012159904531a7ad27c4b137453b
+msgid ""
+"You will get the following message in case of error: ``The number of "
+"active parallel uploads exceeds 5. Wait for the pending ones to finish.``"
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:13
+#: a8187ece19af4c5ba04122256b71e965
+msgid ""
+"This means that you to finish current active uploads before creating a "
+"new one. The default maximum number is set during installation by "
+"`DEFAULT_MAX_PARALLEL_UPLOADS_PER_USER <../../basic/settings/index.html"
+"#default-max-parallel-uploads-per-user>`__, usually 5 parallel uploads."
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:16
+#: bcf933d549b3454aa3ba2489902ca2d5
+msgid ""
+"After installation, only an user with administrative rights can change it"
+" by the admin painel or `accessing by api "
+"<../../devel/api/V2/index.html#get--api-v2-upload-parallelism-"
+"limits->`__."
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:20
+#: 284a8cc95d4041d0bcd6af36826c3fcc
+msgid "Accessing the limits in the admin panel"
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:21
+#: 5d0e87005aa3463b919589f74209dae9
+msgid ""
+"Access the admin panel, scroll until you find the \"Upload Parallelism "
+"limits\" option."
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:26
+#: 9b8f53f801694c1fa535a82002e8e8f3
+msgid "Click at it, and you will be redirected to the limits list."
+msgstr ""
+
+#: ../../admin/upload-parallelism-limit/index.rst:31
+#: 5c2c48ee203e4167899983f8fbcd037e
+msgid ""
+"To change it, click at the slug of the limit, then you can change its "
+"description and the max_number value. Changing the slug will not produce "
+"any effect."
+msgstr ""
+

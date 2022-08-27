@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../usage/managing_documents/document_permissions.rst:4
-#: 6ad77e1a850349b59f503fcd29620fe0
-msgid "Changing the Document Permissions"
+#: 6591d2719f4d4cf589e9c4a274349a42
+msgid "Share Options"
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:6
-#: 9e31a4425d6a4291b66906216eeb3cad
+#: 595bf511cc6849f08d5a5da595c987e3
 msgid ""
 "GeoNode encourages to publicly, share and make available for download "
 "information uploaded on the platform. By default, anyone can see and "
@@ -32,66 +32,109 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:8
-#: 79914b8089bf48088c82230fa836e740
+#: 0ca253005e2c42d6b637a0fd2ba258d9
 msgid ""
-"Through the button shown in the picture below it is possible to manage "
-"the document permissions."
+"Through the *Share* Link shown in the menu it is possible to manage the "
+"document share options. it opens a form where set up who can:"
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:10
+#: 5fe07c57e14b493a9a11e771346cb445
+msgid "View (allows to view the document)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:11
+#: bcec2d9d80504e20986edfa06741e878
+msgid "Download (allows to view and download the document)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:12
+#: 100f70eb8e98433c848cd4f3dd2bd3ce
+msgid "Edit (allows to change the document metadata and attributes)."
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:13
-#: 2fbc62ea169846cabf1ff6ffad55aea7
-msgid "*The button to change permissions*"
-msgstr ""
-
-#: ../../usage/managing_documents/document_permissions.rst:15
-#: 1b3e6601961543fc880f433beec159ff
+#: 811783111bfc400195ff51efdd98d7e2
 msgid ""
-"The :guilabel:`Change Document Permissions` button on the right side of "
-"the document page allows to set up who can:"
-msgstr ""
-
-#: ../../usage/managing_documents/document_permissions.rst:17
-#: cd3b2fe3a864466c8140ac625bdcb885
-msgid "View the document;"
-msgstr ""
-
-#: ../../usage/managing_documents/document_permissions.rst:18
-#: 6510b7f2b7b841038a04fa5710ed0d02
-msgid "Download it;"
-msgstr ""
-
-#: ../../usage/managing_documents/document_permissions.rst:19
-#: 6db46588e0644c7a99475eb502a52da3
-msgid "Edit its metadata;"
+"Manage it (allows to update, delete, change share options, "
+"publish/unpublish)."
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:20
-#: e94f72fd0527403b95f5fb5b5eb6fe40
-msgid "Manage it (update, delete, change permissions, publish/unpublish)."
-msgstr ""
-
-#: ../../usage/managing_documents/document_permissions.rst:22
-#: 564d20d72fe743f693078a8c44a7694d
+#: c3bd57bb5ae240358680e23ad764e90b
 msgid "See an example in the picture below."
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:27
-#: 539991c7c7834278b0d372dadb1c0544
-msgid "*Changing the Document permissions*"
+#: ../../usage/managing_documents/document_permissions.rst:23
+#: bed6e6a918864ce9ac1398c5509b2c38
+msgid "After making changes, always save them with the *Save* Link in the menu"
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:29
-#: 1af38902a8c0473192977cfc50349c3b
-msgid ""
-"Usually that editing of metadata and the management of a document are in "
-"charge of the responsible of the document, i.e. the contributor who "
-"uploaded it and who has those permissions by default."
+#: ../../usage/managing_documents/document_permissions.rst:28
+#: 29692001bd7b4c5fbe232e24d7b7bc68
+msgid "*Changing the Document share options*"
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:31
-#: 886e6843d40a440cbb9897fc06a84be1
+#: ../../usage/managing_documents/document_permissions.rst:30
+#: 744a37f6cf274c36be9137c00c63a881
 msgid ""
-"Once the permissions are set, click :guilabel:`Apply changes` to save "
-"them."
+"Usually those with options of editing metadata and the management of a "
+"document are in charge and responsible of the document, i.e. the "
+"contributor who uploaded it has those options by default."
 msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:32
+#: db1042a9c58145e59c7e1d18d9a445b0
+msgid ""
+"Once the share options are set, click :guilabel:`Save` link in the menu "
+"to save them."
+msgstr ""
+
+#~ msgid "Changing the Document Permissions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Through the button shown in the "
+#~ "picture below it is possible to "
+#~ "manage the document permissions."
+#~ msgstr ""
+
+#~ msgid "*The button to change permissions*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Change Document Permissions` "
+#~ "button on the right side of the"
+#~ " document page allows to set up "
+#~ "who can:"
+#~ msgstr ""
+
+#~ msgid "View the document;"
+#~ msgstr ""
+
+#~ msgid "Download it;"
+#~ msgstr ""
+
+#~ msgid "Edit its metadata;"
+#~ msgstr ""
+
+#~ msgid "Manage it (update, delete, change permissions, publish/unpublish)."
+#~ msgstr ""
+
+#~ msgid "*Changing the Document permissions*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Usually that editing of metadata and "
+#~ "the management of a document are "
+#~ "in charge of the responsible of "
+#~ "the document, i.e. the contributor who"
+#~ " uploaded it and who has those "
+#~ "permissions by default."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once the permissions are set, click "
+#~ ":guilabel:`Apply changes` to save them."
+#~ msgstr ""
 

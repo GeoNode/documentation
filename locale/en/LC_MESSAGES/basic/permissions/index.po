@@ -8,27 +8,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: ../../basic/permissions/index.rst:5 a01dd3217b9747629ccd34093ff45efd
+#: ../../basic/permissions/index.rst:5 fd7eb2673409416dbe4f2e0fd7341903
 msgid "Permissions"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:7 013be6d78413401fba01010cba7e93c4
+#: ../../basic/permissions/index.rst:7 7178686a94ed429a877ef99a0768e953
 msgid ""
 "Permissions in GeoNode are set per resource, where a resource can be a "
-"layer, a map, a document or a service. The way the permissions are set is"
-" the same for all of them."
+"dataset, a map, a document, a service or a geoapp. The way the "
+"permissions are set is the same for all of them."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:11 1c093e45804f42f5ad331ee2804d7463
+#: ../../basic/permissions/index.rst:11 c46b273a65af41089236aa866d3ae2fe
 msgid ""
 "GeoNode has a set of default permissions that are applied on resource "
 "creation **when** you don't explicitly declare them. This is particularly"
@@ -41,81 +41,72 @@ msgid ""
 "anonymous-download-permission>`_"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:16 8f10e2bdbf834f168adc070881f0d821
+#: ../../basic/permissions/index.rst:16 6af1940c259c417c9093242d08b701ef
 msgid "Single Resource permissions"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:18 1ab8b5f99a334c0e8d6766060d9c66d6
+#: ../../basic/permissions/index.rst:18 59ccc62f05bb48a3afec104a883e7c5d
 msgid ""
 "Resource permissions can be generally set from the *resource detail* "
-"page. The following figure shows how to open the dialog to set "
-"permissions on a layer, the same concept applies to documents and maps."
+"page. The detail page has a menu item *Share* which is visible to people "
+"who are permitted to set permissions on a resource."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:24 3a9c816b71544de19ae1fcb0daa3db35
-msgid "*Change Layer Permissions*"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:26 3e3e2e109c834d89b9f2394e070311a2
+#: ../../basic/permissions/index.rst:19 3ac6cce42900485d9a0f8176ed8a19af
 msgid ""
-"The dialog for setting the permission allow a granular selection of each "
-"permission type to be applied for users and/or groups, each permission "
-"type is grouped in tabs that are expanded on click."
+"The share link opens a page on the right with a provision to edit user "
+"and group permissions on the resource. see picture below"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:27 c9e60ef8e74a478f9a948be03c731318
+#: ../../basic/permissions/index.rst:25 7da3cca5cfb64378b86e4d34e301041e
+msgid "*Change Dataset Permissions*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:27 3e6aebc975ae44629c6d09280e35e1c5
 msgid ""
-"The text boxes have an autosuggest feature to help the compilation of "
-"user names and groups, it starts upon typing."
+"The page for setting the permissions, allows addition of users/groups and"
+" selection of a permission to assign each of them."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:33 3c929561fc9b4960a56eb1bab3145891
+#: ../../basic/permissions/index.rst:33 412bc076f2e8463398a51f5e31854904
 msgid "*Resource Permission Dialogue*"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:35 f4d495672596443493d5eef2b8561a40
+#: ../../basic/permissions/index.rst:35 e7f3ba7763874ea9896b6198c25e2ecc
 msgid "You can set the following types of permissions:"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:37 41591c97894a4e35b8101c37214fa1f7
-msgid "*View* allows to view the layer;"
+#: ../../basic/permissions/index.rst:37 e3bc56fb49c6420f92fd8143833559b3
+msgid "*View:* allows to view the resource;"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:38 e09281b7e6a34e579a06b8fccd8acb8e
-msgid "*Download* allows to download the layer;"
+#: ../../basic/permissions/index.rst:38 052dd47b855849a88bd714f3256855a6
+msgid "*Download* allows to download the resource;"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:39 5509da2847a347deaf8afd572a98f127
-msgid "*Change Metadata* allows to change the layer metadata;"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:40 20706a034f03466ebcd23791aa8180e7
+#: ../../basic/permissions/index.rst:39 9a967b873671461ca9d23cdb200a3b93
 msgid ""
-"*Edit Data* allows to change attributes and properties of the layers "
-"features;"
+"*Edit:* allows to change attributes, properties of the datasets features,"
+" styles and metadata for the specified resource;"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:41 f700b831ed5248f79b9850bea3adec36
-msgid "*Edit Style* allows to change the layer style;"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:42 c7f8a8f2360f4dae99d78093f2b5cfee
+#: ../../basic/permissions/index.rst:40 2ce80d3933c94d608d05c7de0da88875
 msgid ""
-"*Manage* allows to update, delete, change permissions, publish and "
-"unpublish the layer."
+"*Manage:* allows to update, delete, change permissions, publish and "
+"unpublish the resource."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:44 17b24dda067340f8bfbcf506b551233e
+#: ../../basic/permissions/index.rst:42 b291fcfa5d4b43f698c77d2726812a0f
 msgid ""
 "When assigning permissions to a group, all the group members will have "
 "those permissions. Be careful in case of editing permissions."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:47 8c4e2729b44a4375bb65a5dd96489631
+#: ../../basic/permissions/index.rst:45 e2a73306d30748038454642a318f3523
 msgid "Geo Limits permissions"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:49 521564bdd03c44d28356a3c873d4a16e
+#: ../../basic/permissions/index.rst:47 cd0d392a87a6424699c316d13e51702d
 msgid ""
 "This feature is available **only** when enabling ```GeoServer``` as "
 "geospatial backend. Also make sure that the properties "
@@ -123,237 +114,381 @@ msgid ""
 "```GEOFENCE_URL``` are correctly set for the ```OGC_SERVER```."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:51 9df2f11d19324d86bace28b45b603302
+#: ../../basic/permissions/index.rst:49 ad1945c8c8164aa0b2684d888ca6c2d1
 msgid ""
 ":guilabel:`Geo Limits` are an extension of the GeoNode standard "
 "permissions. :guilabel:`Geo Limits` allows the owner of the resource, or "
 "the administrator, to restrict users or groups to a specific geographical"
-" area, in order to limit the access to the layer to only the portions "
+" area, in order to limit the access to the dataset to only the portions "
 "contained within that geographic restriction, excluding data outside of "
 "it."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:53 e89883cd15cd4a49af2218c738ed7a60
+#: ../../basic/permissions/index.rst:51 971c8f3d998947bbbc90c8c6ea87af45
 msgid ""
 "In order to be able to set :guilabel:`Geo Limits` you must be an "
 "```administrator``` of the system or the ```owner``` of the resource or "
 "you must have ```Manage Permissions``` rights to the resource."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:55 e9112176965b47f18a90b063140df22f
-msgid ""
-"Go to the :guilabel:`Layer Details` page and scroll down to the "
-":guilabel:`Change Layer Permissions` button, as we have seen on the "
-"previous section."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:57 65a76b412b924f9ebe4d3b5e5ba30f3d
+#: ../../basic/permissions/index.rst:53 b571f45659a14120a39a9000e406e942
 msgid ""
 "If you have the permissions to set the :guilabel:`Geo Limits`, you should"
-" be able to see the limits tab beside the permissions one."
+" be able to see the permissions section and the globe icon on each user "
+"or group."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:63 a6b3ae2b461e4e17a5ddba4685039d52
-msgid "*Geo Limits Tab*"
+#: ../../basic/permissions/index.rst:59 4db2e4425c7d46f292322b5b43156f1d
+msgid "*Geo Limits Icon*"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:65 6ba49027f15345bd93259f31367f04bf
+#: ../../basic/permissions/index.rst:61 dcf00b94c64940ec98d22ba1e6b490ed
 msgid ""
-"You should be able to see an interactive preview of the layers along with"
-" few small drawing tools, that allow you to start creating limits on the "
-"map manually if you want."
+"You should be able to see an interactive preview of the resource along "
+"with few small drawing tools, that allows you to start creating limits on"
+" the map manually if you want."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:67 c50c6c71248c451986bf9c98d05443bc
-msgid ""
-"Moreover at the bottom of the panel, there are two other tabs, one "
-"listing the available :guilabel:`Users` and another one listing the "
-"available :guilabel:`Groups`."
+#: ../../basic/permissions/index.rst:63 f67645131eb54e5c8343c570aab89bd2
+msgid "This opens a map dialog, with 3 options at the top:"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:69 5444b638bd0d40c4a49427e86a6c7c2d
-msgid ""
-"You will be able to access only :guilabel:`Public` groups and the "
-":guilabel:`Private` ones you belong to."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:75 60f6334492294a09be8b6c38b72d4db6
+#: ../../basic/permissions/index.rst:69 e231497ded42448482a7b3af1840a68d
 msgid "*Geo Limits: Preview Window with Drawing Tools*"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:77 661fedc217064692a461e9de1281b0ff
+#: ../../basic/permissions/index.rst:72 68a0241413a9406a98feea15058c5d6a
 msgid ""
-"For each entry of the :guilabel:`Users` and :guilabel:`Groups` tabs, you "
-"will have 3 options:"
+"The |edit_icon| icon allows you to draw limits on a map for which a user "
+"will be able to see. Click on it to start drawing on the map. Once you "
+"are done drawing, click on it again to deactivate drawing mode."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:79 409cbd3e970c44239b6f8bbb9c5bea67
-msgid "Load :guilabel:`Geo Limits`"
+#: ../../basic/permissions/index.rst:74 07e0cbf88ef54cadbafcfe5cbd6190a8
+#: a4827e07993446e9bdfa9ffe4acb43bb
+msgid "edit_icon"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:85 9fc840f35b824786a71aa2f662128be8
-msgid "*Geo Limits: Load from DB*"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:87 106902619992432d822094397f1e567a
+#: ../../basic/permissions/index.rst:79 11b69c751b87414ba0f7d44f354bbb05
 msgid ""
-"This button allows you to load the :guilabel:`Geo Limits` already stored "
-"on the DB."
+"The |delete_icon| icon enables you to remove the limits you have drawn. "
+"Click on the limit drawn, and then click the delete icon."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:89 ../../basic/permissions/index.rst:103
-#: 00daf98bb2e1405e8e821f78dfd8bd83 cf4acb90535a40ff9cadfdbcac469ab4
-msgid ""
-"By clicking this button, the geometries present into the map will be "
-"cleared. You can add/remove more geometries later on if needed."
+#: ../../basic/permissions/index.rst:81 27599a2efda944afa9d7914cb3497946
+#: 2c8bf37ca89e472fba2d52e04eb17b93
+msgid "delete_icon"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:91 d86af90798fd404f8c843a175e2b4448
-msgid "Upload :guilabel:`Geo Limits`"
+#: ../../basic/permissions/index.rst:86 5f599dd94c07495c87536e234a75fd58
+msgid "The |refresh_icon| icon removes all changes that are not saved."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:97 ../../basic/permissions/index.rst:109
-#: ../../basic/permissions/index.rst:115 8b70990b37084bc797b20c1d2dcf5689
-#: 8ed2b8f174ef4b17b8958a7aabb9b3ff e26f7397e6524c269c50d664846c0196
-msgid "*Geo Limits: Upload from a SHAPEFILE*"
+#: ../../basic/permissions/index.rst:88 2fcd47816e804eff9c195f87912ed02b
+#: 5b0b4585f4624d8e9788bde4e96aa04b
+msgid "refresh_icon"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:99 692b573d369d4f3ea2366c526cf69ce3
-msgid ""
-"This button allows you to upload the :guilabel:`Geo Limits` from a "
-"```SHAPEFILE``` on your hard disk. This button **won't** save anything "
-"yet. It will **only** load the geometries into the map."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:101 9a6d64f97ba14ac6aefffef1547779b0
-msgid ""
-"Be careful using big ```SHAPEFILES```. The geometries will be loaded in "
-"memory, and your browser might slow down a lot if you load huge / complex"
-" geometries."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:117 3d95f192c5f24ee1a760f199868cc067
-msgid "Save :guilabel:`Geo Limits`"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:123 76ac975f77b44aabbaa1e9b8bce9f917
-msgid "*Geo Limits: Store the Geo Limits into the DB*"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:125 aedd0bd799e94ab185dce6c4b4481232
-msgid ""
-"This button allows you to store the :guilabel:`Geo Limits` into the DB. "
-"The geometries will be associated to the current ```resource``` and "
-"selected ```user``` or ```group```."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:127 326e4aee1a6d404596830e39682b3634
-msgid ""
-"By saving the geometries into the DB, the geospatial restrictions won't "
-"be applied yet. In order to apply the restrictions you need to:"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:129 ac9c212f45dd4623b1549ea189cb16b6
-msgid ""
-"Set the general permissions to the user / group on the general "
-":guilabel:`Permissions` dialog."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:131 6f880abb68e04189ba2f9753eee362d0
-msgid "Click on :guilabel:`Apply Changes` button"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:133 70c37675f729436fb15acd1cb3ad880d
-msgid "See the next paragraph for more details."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:135 c250bbe384d343fdaaededfea024c086
-msgid "Once you finished editing your geometries, save them into the DB."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:141 d783f4fe5008464381e4e6e13c29cda0
+#: ../../basic/permissions/index.rst:98 e30bb62a4b9f49fc9f1cfcfb931893e3
 msgid "*Geo Limits: Editing the Geometries*"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:147 0e5643faefec499fa51232b5a85470fe
-msgid "*Geo Limits: Saving the Geometries for the user afabiani*"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:149 b928567419bf419d981fc5ad8f90eed0
+#: ../../basic/permissions/index.rst:100 39a694543ecc4ac9a551e30f2b6ac15d
 msgid ""
-"What you have to do now, in order to apply the :guilabel:`Geo Limits` "
-"correctly, is to go back to the :guilabel:`Permissions` tab and select "
-":guilabel:`View` and / or :guilabel:`Download` permissions for the users "
-"/ groups you want to apply the restrictions."
+"Once you finished editing your geometries, save them into the DB using "
+"the *Save* link in the resource menu."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:155 9b423acc9d564f879292e9df0651d23c
-msgid "*Geo Limits: Set View/Download Permissions for the user afabiani*"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:157 03b409189b40466fba39311e34942345
+#: ../../basic/permissions/index.rst:102 f0f5ce2047f24646acd5ca2a8c7a7c40
 msgid ""
-"When you are happy with your changes, click on :guilabel:`Apply Changes` "
-"button."
+"The user with the specified geometries won't be able from now on to "
+"access the whole dataset data."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:163 824024fb59574feb96a44c7607826e15
-msgid "*Geo Limits: Apply Permissions and Restrictions to the users and groups*"
+#: ../../basic/permissions/index.rst:108 67f2caacfae34f18b6aa3dc8da8a7aa5
+msgid "*Geo Limits: Geospatial restrictions applies for the user*"
 msgstr ""
 
-#: ../../basic/permissions/index.rst:165 8e90178a69344fc380d9360cd9c9714a
-msgid ""
-"The user ```afabiani``` won't be able from now on to access the whole "
-"layer data."
-msgstr ""
-
-#: ../../basic/permissions/index.rst:171 f683faad95c54608bacc489a1ec725b1
-msgid "*Geo Limits: Geospatial restrictions applies for the user afabiani*"
-msgstr ""
-
-#: ../../basic/permissions/index.rst:173 e86f3f22b0ad46fbb612609c3f595bd9
+#: ../../basic/permissions/index.rst:110 f5ac074a7a624bcaa92e7d50d3f5b94b
 msgid ""
 "The :guilabel:`Geo Limits` will be persisted on GeoNode DB for that "
 "resource. That means that everytime you will update the general "
 "permissions, also the geospatial restrictions will be applied."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:175 deb9202418834433a12d25ff4840c2d4
+#: ../../basic/permissions/index.rst:112 acdaf0d4393d42a18909dfc4ef1ae497
 msgid ""
 "In order to remove the :guilabel:`Geo Limits` for a certain user or "
 "group, you can just :guilabel:`Save` an **empty geometry**. This will "
 "**delete** the entry from the DB also."
 msgstr ""
 
-#: ../../basic/permissions/index.rst:179 c9d521e57c1642ce8ba62e7485175077
-msgid "Bulk permissions"
-msgstr ""
+#~ msgid ""
+#~ "Permissions in GeoNode are set per "
+#~ "resource, where a resource can be "
+#~ "a layer, a map, a document or "
+#~ "a service. The way the permissions "
+#~ "are set is the same for all "
+#~ "of them."
+#~ msgstr ""
 
-#: ../../basic/permissions/index.rst:181 fc98ecd8b1494a62b96049c2e92f1d05
-msgid ""
-"GeoNode offers the possibility to set permissions in bulk, this can be "
-"done in any *list* page."
-msgstr ""
+#~ msgid ""
+#~ "Resource permissions can be generally "
+#~ "set from the *resource detail* page. "
+#~ "The following figure shows how to "
+#~ "open the dialog to set permissions "
+#~ "on a layer, the same concept "
+#~ "applies to documents and maps."
+#~ msgstr ""
 
-#: ../../basic/permissions/index.rst:182 cab8447bc1864fd5a90a5d67c5d0d43b
-msgid ""
-"In order to set bulk permissions you have first to fill the *shopping "
-"cart* with the resources you are interested with by clicking the "
-":guilabel:`+` button on the resource snippet."
-msgstr ""
+#~ msgid "*Change Layer Permissions*"
+#~ msgstr ""
 
-#: ../../basic/permissions/index.rst:188 35dbbb96cea3410d80cf97145012155c
-msgid "*Add Resource To Shopping Cart*"
-msgstr ""
+#~ msgid ""
+#~ "The dialog for setting the permission"
+#~ " allow a granular selection of each"
+#~ " permission type to be applied for"
+#~ " users and/or groups, each permission "
+#~ "type is grouped in tabs that are"
+#~ " expanded on click."
+#~ msgstr ""
 
-#: ../../basic/permissions/index.rst:190 75deb759227c4d6b88e9a1c5e0cb4d7a
-msgid ""
-"Once happy with the selection you can click the :guilabel:`Set "
-"Permissions` button under the shopping cart to open the permissions "
-"dialogue that will apply the chosen permission to all selected resources."
-msgstr ""
+#~ msgid ""
+#~ "The text boxes have an autosuggest "
+#~ "feature to help the compilation of "
+#~ "user names and groups, it starts "
+#~ "upon typing."
+#~ msgstr ""
 
-#: ../../basic/permissions/index.rst:196 e0678d6e0e024b7dbf668e51236283bf
-msgid "*Sopping Cart Permissions*"
-msgstr ""
+#~ msgid "*View* allows to view the layer;"
+#~ msgstr ""
+
+#~ msgid "*Download* allows to download the layer;"
+#~ msgstr ""
+
+#~ msgid "*Change Metadata* allows to change the layer metadata;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Edit Data* allows to change attributes"
+#~ " and properties of the layers "
+#~ "features;"
+#~ msgstr ""
+
+#~ msgid "*Edit Style* allows to change the layer style;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Manage* allows to update, delete, "
+#~ "change permissions, publish and unpublish "
+#~ "the layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Geo Limits` are an extension "
+#~ "of the GeoNode standard permissions. "
+#~ ":guilabel:`Geo Limits` allows the owner "
+#~ "of the resource, or the administrator,"
+#~ " to restrict users or groups to "
+#~ "a specific geographical area, in order"
+#~ " to limit the access to the "
+#~ "layer to only the portions contained "
+#~ "within that geographic restriction, excluding"
+#~ " data outside of it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Go to the :guilabel:`Layer Details` page"
+#~ " and scroll down to the "
+#~ ":guilabel:`Change Layer Permissions` button, "
+#~ "as we have seen on the previous"
+#~ " section."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have the permissions to set"
+#~ " the :guilabel:`Geo Limits`, you should "
+#~ "be able to see the limits tab "
+#~ "beside the permissions one."
+#~ msgstr ""
+
+#~ msgid "*Geo Limits Tab*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should be able to see an "
+#~ "interactive preview of the layers along"
+#~ " with few small drawing tools, that"
+#~ " allow you to start creating limits"
+#~ " on the map manually if you "
+#~ "want."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Moreover at the bottom of the "
+#~ "panel, there are two other tabs, "
+#~ "one listing the available :guilabel:`Users`"
+#~ " and another one listing the "
+#~ "available :guilabel:`Groups`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You will be able to access only"
+#~ " :guilabel:`Public` groups and the "
+#~ ":guilabel:`Private` ones you belong to."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For each entry of the :guilabel:`Users`"
+#~ " and :guilabel:`Groups` tabs, you will "
+#~ "have 3 options:"
+#~ msgstr ""
+
+#~ msgid "Load :guilabel:`Geo Limits`"
+#~ msgstr ""
+
+#~ msgid "*Geo Limits: Load from DB*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This button allows you to load the"
+#~ " :guilabel:`Geo Limits` already stored on"
+#~ " the DB."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By clicking this button, the geometries"
+#~ " present into the map will be "
+#~ "cleared. You can add/remove more "
+#~ "geometries later on if needed."
+#~ msgstr ""
+
+#~ msgid "Upload :guilabel:`Geo Limits`"
+#~ msgstr ""
+
+#~ msgid "*Geo Limits: Upload from a SHAPEFILE*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This button allows you to upload "
+#~ "the :guilabel:`Geo Limits` from a "
+#~ "```SHAPEFILE``` on your hard disk. This"
+#~ " button **won't** save anything yet. "
+#~ "It will **only** load the geometries "
+#~ "into the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Be careful using big ```SHAPEFILES```. "
+#~ "The geometries will be loaded in "
+#~ "memory, and your browser might slow "
+#~ "down a lot if you load huge "
+#~ "/ complex geometries."
+#~ msgstr ""
+
+#~ msgid "Save :guilabel:`Geo Limits`"
+#~ msgstr ""
+
+#~ msgid "*Geo Limits: Store the Geo Limits into the DB*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This button allows you to store "
+#~ "the :guilabel:`Geo Limits` into the DB."
+#~ " The geometries will be associated to"
+#~ " the current ```resource``` and selected"
+#~ " ```user``` or ```group```."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By saving the geometries into the "
+#~ "DB, the geospatial restrictions won't be"
+#~ " applied yet. In order to apply "
+#~ "the restrictions you need to:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set the general permissions to the "
+#~ "user / group on the general "
+#~ ":guilabel:`Permissions` dialog."
+#~ msgstr ""
+
+#~ msgid "Click on :guilabel:`Apply Changes` button"
+#~ msgstr ""
+
+#~ msgid "See the next paragraph for more details."
+#~ msgstr ""
+
+#~ msgid "Once you finished editing your geometries, save them into the DB."
+#~ msgstr ""
+
+#~ msgid "*Geo Limits: Saving the Geometries for the user afabiani*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "What you have to do now, in "
+#~ "order to apply the :guilabel:`Geo "
+#~ "Limits` correctly, is to go back "
+#~ "to the :guilabel:`Permissions` tab and "
+#~ "select :guilabel:`View` and / or "
+#~ ":guilabel:`Download` permissions for the users"
+#~ " / groups you want to apply the"
+#~ " restrictions."
+#~ msgstr ""
+
+#~ msgid "*Geo Limits: Set View/Download Permissions for the user afabiani*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you are happy with your "
+#~ "changes, click on :guilabel:`Apply Changes`"
+#~ " button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Geo Limits: Apply Permissions and "
+#~ "Restrictions to the users and groups*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The user ```afabiani``` won't be able"
+#~ " from now on to access the "
+#~ "whole layer data."
+#~ msgstr ""
+
+#~ msgid "*Geo Limits: Geospatial restrictions applies for the user afabiani*"
+#~ msgstr ""
+
+#~ msgid "Bulk permissions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GeoNode offers the possibility to set"
+#~ " permissions in bulk, this can be "
+#~ "done in any *list* page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to set bulk permissions "
+#~ "you have first to fill the "
+#~ "*shopping cart* with the resources you"
+#~ " are interested with by clicking the"
+#~ " :guilabel:`+` button on the resource "
+#~ "snippet."
+#~ msgstr ""
+
+#~ msgid "*Add Resource To Shopping Cart*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once happy with the selection you "
+#~ "can click the :guilabel:`Set Permissions` "
+#~ "button under the shopping cart to "
+#~ "open the permissions dialogue that will"
+#~ " apply the chosen permission to all"
+#~ " selected resources."
+#~ msgstr ""
+
+#~ msgid "*Sopping Cart Permissions*"
+#~ msgstr ""
 

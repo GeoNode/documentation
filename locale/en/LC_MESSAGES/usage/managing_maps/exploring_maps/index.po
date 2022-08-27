@@ -8,312 +8,345 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 17:42+0100\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:4
-#: 3cc420e78f82405fb24a40f33bb858f5
+#: b1604f714aa64b928f241dd9ac955671
 msgid "Exploring Maps"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:6
-#: 64b4921fb1ef485995ab6c82542f0f0c
+#: 37ac8b357b174b0686626b4673e29717
 msgid ""
-"From the :guilabel:`Explore Maps` link of the navigation bar you can "
-"reach the *Maps List* page (see :ref:`finding-maps`). Select a map you "
-"are interested in and click on it, the *Map Page* will open."
+"In this section, we are going to explore all tools provided on the Map "
+"View page. From the list of available maps, you can select the map you "
+"are interested in and click *View map*, THe map vie will look like this."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:12
-#: 16908e7ed323470aa42daf635fcded47
-msgid "*The View Map button*"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/index.rst:14
-#: 2e3ca263e88a4007a36c4ab11c65c72c
-msgid "Click on the :guilabel:`View Map` button to open the *Map Viewer*."
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/index.rst:19
-#: cd0ae9cf56424b8c83b5f673593fbcf7
+#: ../../usage/managing_maps/exploring_maps/index.rst:11
+#: 59920db0c94c44f18c43c19061eda33f
 msgid "*The Map View*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:21
-#: c0c59c4947d243a0af14ade02b761fde
+#: ../../usage/managing_maps/exploring_maps/index.rst:13
+#: cf191300fa0d441f8c4c90381afd5e00
 msgid ""
 "The Map Viewer (based on `MapStore <https://mapstore2.geo-"
 "solutions.it/mapstore/#/>`_) provides the following tools:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:23
-#: 678c50e14f8e4c499fc00588242d5598
+#: ../../usage/managing_maps/exploring_maps/index.rst:15
+#: 323421c42ab64fa5a720a22aef03df9c
 msgid "the :ref:`toc` to manage the map contents;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:24
-#: b8bc8ac8d82c40f48ff347af234b0af8
+#: ../../usage/managing_maps/exploring_maps/index.rst:16
+#: cda77b7d798345fea76e8d5650909587
 msgid "the *Basemap Switcher* to change the basemap (see the next paragraphs);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:25
-#: 31b78fb7a4144b33a7186a2ed21db340
+#: ../../usage/managing_maps/exploring_maps/index.rst:17
+#: 7c459eaced534b55889f4818bf6fafa8
 msgid ""
 "the *Search Bar* to search by location, name and coordinates (see the "
 "paragraph below);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:26
-#: 8546e8cea108402992fbab90c32f2ebc
+#: ../../usage/managing_maps/exploring_maps/index.rst:18
+#: 05b3057734484924937528a55d51853d
 msgid ""
 "the :ref:`options-menu-tools` which contains the link to the *Print* "
-"tool, to the layers *Catalog* and to the *Measure* tool;"
+"tool, to the datasets *Catalog* and to the *Measure* tool;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:27
-#: b5e184ae62dc43a78f298775ad057d88
+#: ../../usage/managing_maps/exploring_maps/index.rst:19
+#: e5ac09a1b7a540ccb2ed56275088fb66
 msgid ""
 "the *Sidebar* and its tools such as the *Zoom* tools and the *Get "
 "Features Info* tool;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:28
-#: 99819177277444b09b1ff612a65ed018
+#: ../../usage/managing_maps/exploring_maps/index.rst:20
+#: bc034144646d4a05b67b0b39138ca54f
 msgid ""
 "the *Footer Tools* to manage the scale of the map, to track the mouse "
 "coordinates and change the CRS (Coordinates Reference System)."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:42
-#: ea1a7b285375439bb06733cd232b6278
+#: ../../usage/managing_maps/exploring_maps/index.rst:34
+#: 6439dcfdf908404f84b391c8adf9161c
 msgid "Search Bar"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:44
-#: 2eaf6b7c125047eeb5932be70fd07957
+#: ../../usage/managing_maps/exploring_maps/index.rst:36
+#: 431bae3a66124e11ac42d7ed599628c4
 msgid ""
 "The *Search Bar* of the map viewer allows you to find point of interests "
 "(POIs), streets or locations by name."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:45
-#: 64f3e25caf67441a85c95d6590747687
+#: ../../usage/managing_maps/exploring_maps/index.rst:37
+#: fa7ef2ae377547d399b33aadb15296a6
 msgid "Lets type the name of some place then select the first record."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:50
-#: 96da898bd4ec47d6bbc716781c9d345f
+#: ../../usage/managing_maps/exploring_maps/index.rst:42
+#: 6cfeeb843f254d7d82561a9e718f655c
 msgid "*The Search Bar*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:52
-#: 52b116214bdb42419aa7cf7c00e56fa2
+#: ../../usage/managing_maps/exploring_maps/index.rst:44
+#: dcd598b457da4928ad43a3494eb643da
 msgid ""
 "The map will automatically re-center on that area delimiting it by a "
 "polygon in the case of an area, by a line in the case of a linear shape "
 "(e.g. streets, streams) and by a marker in the case of a point."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:57
-#: c0f9acc6475d4c67912244759136de67
+#: ../../usage/managing_maps/exploring_maps/index.rst:49
+#: c4c1dbb5115a4990ad2373de32265f06
 msgid "*Result of a Search*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:62
-#: c254724dc6764739a8931b35b838f48e
+#: ../../usage/managing_maps/exploring_maps/index.rst:54
+#: 46dabe35c0a54d7bafc7a14dd27f253d
 msgid "Sidebar Tools"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:64
-#: 5bc9b6f30a954e0fbf80b5fce403d31d 79956b91619944588154c60aeac252bc
+#: ../../usage/managing_maps/exploring_maps/index.rst:56
+#: 307a9af5faf84af3a1b4c224700b80a9 bdc57fa74f144747b2d5573b5a73a7e4
 msgid "sidebar_expand_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:69
-#: 59ed86dae2b64aaf9bdf8b91e29f33d6 c3f72b67d9f14ed4919a5a7532d770cc
+#: ../../usage/managing_maps/exploring_maps/index.rst:61
+#: 2ba280056cd440a39f83990a121aae06 6d719f9ed98949429457168442ee707c
 msgid "zoom_in_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:74
-#: 93c997712e604d89920142d28c64f8d5 ebdbb28a2f644f8698cff86ccd8055d0
+#: ../../usage/managing_maps/exploring_maps/index.rst:66
+#: 07c8b08130ee47bc924059119239103e 4fd1d68e125f4974b31376203af848c3
 msgid "zoom_out_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:79
-#: 10fe1c155ed84d28b7e18ea387d07590 d689b07ae2c54a3a9caa00d4f9dbdec1
+#: ../../usage/managing_maps/exploring_maps/index.rst:71
+#: 9239410ed9fe44ad835146ac488300ab f229f2a8b1984c7697302dde4544d080
 msgid "query_objects_on_map_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:84
-#: 22ea3d7ffbc7464ead75a025eb4991cd 40d32dde84474a1ab616aca730686ba3
+#: ../../usage/managing_maps/exploring_maps/index.rst:76
+#: 0d26511ee7314f09a5369a9609da6e74 3cf6defdd7cd41b383dfaebb5c4f29a5
 msgid "zoom_to_max_extent_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:89
-#: 64baea447b004a4eb8d32a322df475c2 7163e482e0254924a77129ed0f1e96fb
+#: ../../usage/managing_maps/exploring_maps/index.rst:81
+#: 7acd71e42dbe469eab6b98090e7a0790
 msgid "go_back_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:94
-#: 13b45f4b02ad41f999a112cf5fb3b40c d630ce9da8e2493a811a2e7db0b626b1
+#: ../../usage/managing_maps/exploring_maps/index.rst:86
+#: a4f5bcd7ec4847f893fede1a3dd219bb
 msgid "go_forward_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:99
-#: 83218ed1bec345e8ac0b30c007dbdf50 e8f74e24e5874e21933aec518f283417
+#: ../../usage/managing_maps/exploring_maps/index.rst:91
+#: fb7a228e4d9e4cff96ea27c0c37cdd8a
 msgid "full_screen_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:104
-#: 500da710ab2b4f80a2f21af8b5fa6464 817ba87a82544d7ab86ffc32ddb8beff
+#: ../../usage/managing_maps/exploring_maps/index.rst:96
+#: 957841c7a23d415ea8e269c9d03ed0d0 ec11917d89a243f88d1787ee62b99f8f
 msgid "show_hide_coordinates_button"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:110
-#: b97cf0526cde4ad49c7ce35f95947b2a
+#: ../../usage/managing_maps/exploring_maps/index.rst:102
+#: 1c00865dc8364b019a363697e2951a08
 msgid ""
 "The *Map Viewer* makes also available the *Sidebar*. It is a navigation "
 "panel containing various tools that help you to explore the map such as "
 "tools for zooming, changing the extent and querying objects on the map."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:111
-#: 32e13ddbacbd462eb02edd3a3efaea46
+#: ../../usage/managing_maps/exploring_maps/index.rst:103
+#: 43f8a08ad48e4d1089d9d9f40d2817b4
 msgid ""
 "By default the *Sidebar* shows you the zooming buttons |zoom_in_button| "
 "and |zoom_out_button|, other options can be explored by clicking on "
 "|sidebar_expand_button| which expands/collapses the toolbar."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:117
-#: 61c0fda4bb8847d68f866951075d329c
+#: ../../usage/managing_maps/exploring_maps/index.rst:109
+#: 2f3894c855194db48aa8954bf3652566
 msgid "*The Default Sidebar*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:123
-#: 9bca9ae1f2bc42eda28644ba072da18c
+#: ../../usage/managing_maps/exploring_maps/index.rst:115
+#: 040cbcb8ad2d41889f3ad85453e22107
 msgid "*The Expanded Sidebar*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:125
-#: 3cb688c15aca41de909dd4317ed0b113
+#: ../../usage/managing_maps/exploring_maps/index.rst:117
+#: bd35c2c8b3634317989d86546ba4be8e
 msgid "The *Sidebar* contains the following tools:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:127
-#: c52f6f0f1f0d4fc5bdfbac071f50826a
+#: ../../usage/managing_maps/exploring_maps/index.rst:119
+#: d09eb9bbd445461a8e77f0d0d7a955e0
 msgid ""
 "The *Query Objects on map* allows you to get feature information through "
 "the |query_objects_on_map_button| button. It allows you to retrieve "
-"information about the features of some layers by clicking them directly "
-"on the map."
+"information about the features of some datasets by clicking them directly"
+" on the map."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:133
-#: 6567d733fdeb472e85178b19b980d9cb
+#: ../../usage/managing_maps/exploring_maps/index.rst:125
+#: d7116ad80b314030a797e019489fbe58
 msgid "*Querying Objects on map*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:135
-#: 57800eb6db1043e786957b7006013b66
+#: ../../usage/managing_maps/exploring_maps/index.rst:127
+#: 8b110875ae9b4b5089d9823c903bb682
 msgid ""
 "When clicking on map a new panel opens. That panel will show you all the "
-"information about the clicked features for each active loaded layer."
+"information about the clicked features for each active loaded dataset."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:137
-#: 4c249bb5801f4e679dcb2308e21f5a65
+#: ../../usage/managing_maps/exploring_maps/index.rst:129
+#: 439e07d78992435784cc9d1f039e5f36
 msgid "You can *Zoom To Max Extent* by clicking |zoom_to_max_extent_button|."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:139
-#: fd5ef9a27d9f4ff39e4d8e3ae67fb803
-msgid ""
-"You can switch between the previous and the next zoom level through the "
-"*Go Back* button |go_back_button| and the *Go Forward* one "
-"|go_forward_button|."
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/index.rst:141
-#: 7213b72c482c4e189108137d3e71ae78
-msgid ""
-"The *Switch to Full Screen* |full_screen_button| button allows to have a "
-"full screen map."
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/index.rst:146
-#: 21071c9851124ab1a4bd2bf69583f0c4
+#: ../../usage/managing_maps/exploring_maps/index.rst:133
+#: bf19ef82adf84ba6aee29ed028350253
 msgid "Basemap Switcher"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:148
-#: 6b4085e3352f42f7bb19e6328956c09b
-msgid "By default, GeoNode allows to enrich maps with many world backgrounds:"
+#: ../../usage/managing_maps/exploring_maps/index.rst:135
+#: fcc530e7d96b4245968503a1087cfa66
+msgid ""
+"By default, GeoNode allows to enrich maps with many world backgrounds. "
+"You can open available backgrounds by clicking on the map tile below:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:150
-#: 38aee5acf25846aa8c072dbdddc4ff3c
+#: ../../usage/managing_maps/exploring_maps/index.rst:137
+#: 5ecf14b208fc4787a12b7395c6763ec6
 msgid "*OpenStreetMap*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:151
-#: 03b17f9d72db457b9d2582b250a6b8ae
+#: ../../usage/managing_maps/exploring_maps/index.rst:138
+#: 58dcafba43e545bb81e0dad5752a9b80
 msgid "*OpenTopoMap*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:152
-#: 0dd8969b26c84a21a4a1a3a189c95ce4
+#: ../../usage/managing_maps/exploring_maps/index.rst:139
+#: 333b1b241d5c4c8eb53489cae6d24669
 msgid "*Sentinel-2-cloudless*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:158
-#: 131dcda59c494d119688beab0548b984
+#: ../../usage/managing_maps/exploring_maps/index.rst:145
+#: 46702694b725400da6532d52f145fcfb
 msgid "*The Basemap Switcher Tool*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:160
-#: 5c99c3b709f145eeab463df0d102255d
+#: ../../usage/managing_maps/exploring_maps/index.rst:147
+#: ee2364dfd7ab40e1afe2289a5f146699
 msgid "You can also decide to have an *Empty Background*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:166
-#: bf025c0ee684421ab9b8466d26a74db8
+#: ../../usage/managing_maps/exploring_maps/index.rst:153
+#: e3ba648c0bc74a5883bf9af74ca7fbf6
 msgid "*Switching the Basemap*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:169
-#: 59975d3171a3489a9f0e15d9f602ca3e
+#: ../../usage/managing_maps/exploring_maps/index.rst:156
+#: 0ffab2911770414299238a64e8467d02
 msgid "Footer Tools"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:171
-#: 2e4cc704c2394a0cb6adc55ec8beede6
+#: ../../usage/managing_maps/exploring_maps/index.rst:158
+#: f498df45b39a440b910126f5929d0564
 msgid ""
 "At the bottom of the map, the *Footer* shows you the *Scale* of the map "
 "and allows you to change it."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:177
-#: 389b840f68fe438184d698a0cacc44b8
+#: ../../usage/managing_maps/exploring_maps/index.rst:164
+#: eab78f9f9e3b4f80976372c1f37f11a8
 msgid "*The Map Scale*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:179
-#: f8c7b1d407954e4799b5f81b7a2b46fa
+#: ../../usage/managing_maps/exploring_maps/index.rst:166
+#: bd45ed2a8d294d87adcb4e4ebc545130
 msgid ""
 "The |show_hide_coordinates_button| button allows you to see the pointer "
 "*Coordinates* and to change the Coordinates Reference System (CRS), WGS "
 "84 by default."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/index.rst:184
-#: 3537993f95e9496da78f7ff03c60c388
+#: ../../usage/managing_maps/exploring_maps/index.rst:171
+#: bd8dbb38f323467984248d66f8e6beec
 msgid "*The Pointer Coordinates and the CRS*"
 msgstr ""
+
+#~ msgid ""
+#~ "From the :guilabel:`Explore Maps` link "
+#~ "of the navigation bar you can "
+#~ "reach the *Maps List* page (see "
+#~ ":ref:`finding-maps`). Select a map you"
+#~ " are interested in and click on "
+#~ "it, the *Map Page* will open."
+#~ msgstr ""
+
+#~ msgid "*The View Map button*"
+#~ msgstr ""
+
+#~ msgid "Click on the :guilabel:`View Map` button to open the *Map Viewer*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the :ref:`options-menu-tools` which "
+#~ "contains the link to the *Print* "
+#~ "tool, to the layers *Catalog* and "
+#~ "to the *Measure* tool;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Query Objects on map* allows "
+#~ "you to get feature information through"
+#~ " the |query_objects_on_map_button| button. It "
+#~ "allows you to retrieve information about"
+#~ " the features of some layers by "
+#~ "clicking them directly on the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When clicking on map a new panel"
+#~ " opens. That panel will show you "
+#~ "all the information about the clicked"
+#~ " features for each active loaded "
+#~ "layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can switch between the previous "
+#~ "and the next zoom level through "
+#~ "the *Go Back* button |go_back_button| "
+#~ "and the *Go Forward* one "
+#~ "|go_forward_button|."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Switch to Full Screen* "
+#~ "|full_screen_button| button allows to have "
+#~ "a full screen map."
+#~ msgstr ""
+
+#~ msgid "By default, GeoNode allows to enrich maps with many world backgrounds:"
+#~ msgstr ""
 

@@ -8,40 +8,40 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: ../../admin/index.rst:17 ../../admin/index.rst:19
-#: 3d291d1f4d39457e9f049c6925ba3c4f f57b056f6f534a02870756892eaf70f5
+#: ../../admin/index.rst:17 ../../admin/index.rst:32
+#: c4f21f3f2ae948859005d8a6ab347468 d50148eeefd8488eb7dbbaf2c27918e6
 msgid "GeoNode Management Commands"
 msgstr ""
 
-#: ../../admin/index.rst:26 ../../admin/index.rst:28
-#: 55fc2cbb40cd428fbabb71f215aa1ff6 677c1ed0832d4f2689cb02ee9f3c9c77
+#: ../../admin/index.rst:39 ../../admin/index.rst:41
+#: 4c8eabf6a6964514adf5bdb875c23b70 d6dd1364a3a34905886fe8ae584d3929
 msgid "Changing the default Languages"
 msgstr ""
 
-#: ../../admin/index.rst:35 ../../admin/index.rst:37
-#: 3e4a223971d44fcc9f1075012d45f021 a2661ccc25124e4b97b1f98335a58105
+#: ../../admin/index.rst:48 ../../admin/index.rst:50
+#: 73705997d3b6485986a4e61dc7189499 91d970aac62f48838c0763a99b115d6d
 msgid "GeoNode Upgrade from older versions"
 msgstr ""
 
-#: ../../admin/index.rst:44 ../../admin/index.rst:46
-#: 3999493ff699425dbf081e1342613d84 f853aa873f304a689dbf88331503ea62
+#: ../../admin/index.rst:57 ../../admin/index.rst:59
+#: 15d242f4b26a4644a620a5fd65927145 1aede4e323ef4b0f8bf844cb1cc7ef0e
 msgid "GeoNode Async Signals"
 msgstr ""
 
-#: ../../admin/index.rst:2 88e4d19a38c840068396f434b0773640
+#: ../../admin/index.rst:2 8646e454bf9b42b69490922c1512babf
 msgid "GeoNode Admins Guide"
 msgstr ""
 
-#: ../../admin/index.rst:4 1ab7d28e27194fd08549d7f6e02e5e17
+#: ../../admin/index.rst:4 ed65cec96d0c4ef68f788cb175c548a3
 msgid ""
 "GeoNode has an administration panel, based on the Django admin, which can"
 " be used to do some database operations. Although most of the operations "
@@ -49,15 +49,42 @@ msgid ""
 "panel provides a quick overview and management tool over the database."
 msgstr ""
 
-#: ../../admin/index.rst:8 4dbf0540255f4c3db907f7b7ac1f02c9
+#: ../../admin/index.rst:8 4f1ce6364ee349a2887f9e8f990f65ef
 msgid ""
 "The following sections will explain more in depth what functionalities "
-"the admin panel makes you available. It should be highlighted that the "
-"sections not covered in this guide are meant to be managed through "
+"the admin panel makes available to you. It should be highlighted that the"
+" sections not covered in this guide are meant to be managed through "
 "GeoNode UI."
 msgstr ""
 
-#: ../../admin/index.rst:53 1c8ac967f74b4a69a3c3471cb7e94a59
-msgid "GeoNode add a thesaurus"
+#: ../../admin/index.rst:19 95dfba03e66440838fb909214766ae46
+msgid ""
+"Management commands are utility functions for GeoNode maintenance tasks. "
+"They are usually run from an SSH/bash shell on the server running "
+"GeoNode. Any call to python is prepended with a configuration parameter "
+"to indicate the GeoNode settings module to be used."
 msgstr ""
+
+#: ../../admin/index.rst:26 aee10f107e994e41a3e09ece518a1d38
+msgid ""
+"If you have enabled ``local_settings.py`` the command will change as "
+"follows:"
+msgstr ""
+
+#: ../../admin/index.rst:66 c701812aa6df43f4b911f83f23dba876
+msgid "GeoNode Add a thesaurus"
+msgstr ""
+
+#~ msgid ""
+#~ "The following sections will explain more"
+#~ " in depth what functionalities the "
+#~ "admin panel makes you available. It "
+#~ "should be highlighted that the sections"
+#~ " not covered in this guide are "
+#~ "meant to be managed through GeoNode "
+#~ "UI."
+#~ msgstr ""
+
+#~ msgid "GeoNode add a thesaurus"
+#~ msgstr ""
 

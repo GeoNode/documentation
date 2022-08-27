@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:2
+#: 8020d5f4fbbd4188a23b226bd6c067ff
+msgid "Creating a Dataset from scratch"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:4
+#: bd479a95f8f24f23a092f65d49ff26e9
+msgid ""
+"An interesting tool that GeoNode makes available to you is the *Create "
+"dataset*. It allows you to create a new vector dataset from scratch. The "
+"*Dataset Creation Form* is reachable through the :guilabel:`Create "
+"dataset` link shown in the picture below."
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:9
+#: d0c0ad297019404390464d8c3f1f2774
+msgid "*Create dataset link*"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:11
+#: 1f9fd830271e493e922787b1503f9f51
+msgid ""
+"In order to create the new Dataset you have to fill out the required "
+"fields:"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:13
+#: d66727d434d940e2892772c6bc8600ba
+msgid "*Name*"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:14
+#: 016fa810e07f4c73853e105320040bbc
+msgid "*Title*"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:15
+#: 3f2f1f67e42e4a71b7e3b9e75904dfec
+msgid "*Geometry type*"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:20
+#: c8d9b536ec364603bf7327258b61156d
+msgid "*Geometry types*"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:22
+#: 233c203703ef4706a7fee19df367a0a9
+msgid ""
+"Usually the datasets features should have some *Attributes* that enrich "
+"the amount of information associated with each of them. Through the "
+":guilabel:`Add Attribute` button you can add new attributes."
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:27
+#: 4756e757eb6f4e989e288d0f1e34b6ff
+msgid "*New Dataset creation from scratch*"
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:29
+#: 169f74add6954a748fdef5192f992e14
+msgid ""
+"At this time you can also change the default *Share options* settings, "
+"see :ref:`dataset-permissions` to learn how."
+msgstr ""
+
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:31
+#: 79bb1ec4fe664a8bbc7469f2b9d4d452
+msgid ""
+"Once the form has been filled out, click on :guilabel:`Create`. You will "
+"be redirected to the *Dataset Page* (see :ref:`dataset-info`). Now your "
+"Dataset is created but is still empty, no features have been added yet. "
+"See the :ref:`dataset-editing` section to learn how to add new features."
+msgstr ""
+

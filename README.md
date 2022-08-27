@@ -23,10 +23,48 @@ Guide](http://docs.geoserver.org/latest/en/docguide/style.html)
 
 Below we detail the two options according to your operating system:
 
+### Prerequeriments
+
+1. python3 
+2. pip3
+
+
 
 ### Linux o Mac
 
+The step is: 
 
+1. Create a virtual environment python3 -m venv geonode-documentation 
+
+2. Activate the environment
+
+```
+source geonode-documentation/bin/activate
+```
+
+3. Execute: 
+
+```
+pip3 install -r requirements_docs.txt
+```
+
+4. To generate the html build with: 
+
+```
+make html
+```
+
+To especify language:
+
+```
+./build.sh <language> 
+```
+
+for example in spanish: 
+
+```
+./build.sh es
+```
 
 
 

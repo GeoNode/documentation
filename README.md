@@ -18,22 +18,20 @@ Guide](http://docs.geoserver.org/latest/en/docguide/style.html)
       - [Sphinx reStructuredText
         Primer](http://www.sphinx-doc.org/rest.html)
 
-## Installation of environments to generate documentation
+## Setting up the translation/dev enviroment
 
 Below we detail the two options according to your operating system:
 
-### Requeriments
-
+### Requirements
 1. python3 
 2. pip3
 
-
-
-### Linux o Mac
+<br><br>
+### Linux or Mac
 
 The steps are: 
 
-1. Create a virtual environment python3 -m venv geonode-documentation 
+1. Create a virtual environment `python3 -m venv geonode-documentation`
 
 2. Activate the environment
 
@@ -41,26 +39,24 @@ The steps are:
 source geonode-documentation/bin/activate
 ```
 
-3. Execute: 
+3. Install requirements: 
 
 ```
 pip3 install -r requirements_docs.txt
 ```
 
-4. To generate the html build with: 
+4. To generate the html build: 
 
 ```
 make html
 ```
 
 To especify language:
-
 ```
 ./build.sh <language> 
 ```
 
 for example in spanish: 
-
 ```
 ./build.sh es
 ```
@@ -81,7 +77,7 @@ for example in spanish:
 .\geonode-docs\Scripts\activate.bat
 ```  
 
-3. With 'activated' virtualenv. Install the requirements via the requirements: 
+3. With 'activated' virtualenv. Install the requirements via pip: 
 
 ```
 pip install -r requirements_docs.txt

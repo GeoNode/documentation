@@ -12,7 +12,7 @@
 
 TARGETBRANCH=`git branch --show-current`
 SOURCEPOFILES='locale/en/LC_MESSAGES/'
-PROJECT='geonode-documentation-1'
+PROJECT=<INSERT YOUR TRANSIFEX PROJECT NAME>
 CONFIGFILE='.tx/config'
 
 # To be sure there are no *.pot or *.mo files left

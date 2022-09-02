@@ -42,10 +42,10 @@ Here, django-admin is used with startproject option to create my_geonode project
 
 .. code-block:: shell
     
-    $ cd /home/geonode/my_geonode
+    $ cd /home/geonode/my_geonode/src
     $ paver setup
 
-4- Note the GeoNode database connection parameters mentioned in the local_settings.py configuration file. If not found, copy local_settings.py.sample and rename it to local_settings.py then use psql to create the required user and grant the required privileges as follows:
+4- Note the GeoNode database connection parameters mentioned in the .env.sample.py file. Rename it to .env then use psql to create the required user and grant the required privileges as follows:
 
 .. code-block:: shell
     
@@ -64,13 +64,10 @@ Here, django-admin is used with startproject option to create my_geonode project
 
 .. code-block:: shell
     
-    $ cd /home/geonode/my_geonode
+    $ cd /home/geonode/my_geonode/src
     $ paver start
 
-.. note:: You may find this warning message: You have 132 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): account, actstream, admin, agon_ratings, announcements, auth, avatar, base, contenttypes, dialogos, documents, favorite, geonode_client, geonode_themes, groups, guardian, invitations, layers, maps, mapstore2_adapter, monitoring, oauth2_provider, people, pinax_notifications, services, sessions, sites, socialaccount, taggit, tastypie, upload, user_messages. Run 'python manage.py migrate' to apply them.
-
-
-Which means you have some sql statements not executed yet and you need to run the "migrate" to sync your database first then "paver start" again as follows:
+.. note:: You may find this warning message: You have 132 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): account, actstream, admin, agon_ratings, announcements, auth, avatar, base, contenttypes, dialogos, documents, favorite, geonode_client, geonode_themes, groups, guardian, invitations, layers, maps, mapstore2_adapter, monitoring, oauth2_provider, people, pinax_notifications, services, sessions, sites, socialaccount, taggit, tastypie, upload, user_messages. Which means you have some sql statements not executed yet and you need to run the "migrate" to sync your database first then "paver start" again as follows:
 
 .. code-block:: shell
     
@@ -78,8 +75,6 @@ Which means you have some sql statements not executed yet and you need to run th
     $ paver start
 
 .. warning:: If encountered this message: ``(Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add u'0.0.0.0' to ALLOWED_HOSTS)`` It can be fixed in the settings.py file. You will need to add: ``ALLOWED_HOSTS = ['0.0.0.0']`` in settings.py
-
-.. image:: ./img/geonode-project-gui.png
 
 6- Once the previous step is done, you can visit 0.0.0.0:8000 to view the GUI of GeoNode. However, we still don't have an account in order to login from the GUI. This can be done using "paver sync". The command will create sync with latest fixtures and also creates a superuser "admin" with default password "admin"
 
@@ -98,9 +93,21 @@ In this section we will change the look and feel of GeoNode, in particular we wi
 
 The geonode-project provides some predefined templates to change the home page and the general site content.
 
-In the "my_geonode/my_geonode/templates" directory we can edit the site_index.html.
+In the "my_geonode/src/my_geonode/templates/geonode-mapstore-client/snippets" directory we can files with similar names as the geonode-mapstore-client. This way we can override the different parts of the site eg the header, menu, body content and the footer.
 
-Try to edit the content of the "jumbotron" box in the page, save and refresh your browser to see the changes.
+Create a file name hero.html and add the following.
+
+.. code:: html 
+    <div id="gn-hero" class="gn-hero">
+        <div class="jumbotron">
+            <div class="gn-hero-description">
+                <h1>My GeoNode</h1>
+                <p>Example customization of geonode project</p>
+            </div>
+            <p class="gn-hero-tools">
+            </p>
+        </div>
+    </div>
 
 .. image:: ./img/geonode-is-awesome.png
 
@@ -114,72 +121,69 @@ For example, if we want to change the background of the jumbotron, in this file 
 
 .. code:: css 
    
-   .home .jumbotron { background: red }
+   .msgapi .gn-hero .jumbotron { background: red }
 
 Then once we refreshed the browser, we should see the change as follows:
 
 .. image:: ./img/red-background.png
 
-
-Adding the ``".home"`` class is necessary in order to let the rule have precedence/priority over the GeoNode's one. We can see this by inspecting the element in the developer console.
-
 **The top menu:**
 
-Now we can make some changes that will apply to the whole site. We can add a Geocollections entry in the top menu bar.
+Now we can make some changes that will apply to the whole site. We can add an item to both the left and right side of the top menu bar.
 
-Edit the site_base.html file in the templates folder and uncomment the list item adapting the text as well from:
+This can be done by creating a get_menu_json.py under templatetags folder to override GeoNodes default menu.
 
-
-.. code-block:: python
-    
-    {% comment %}
-    Add Tab for Third Party Apps
-    <li>
-     <a href="{{ PROJECT_ROOT }}app">App</a>
-    </li>
-    {% endcomment %}
-To:
 
 .. code-block:: python
     
-    <li>
-     <a href="{{ PROJECT_ROOT }}/geocollections">Geocollections</a>
-    </li>
+    @register.simple_tag(takes_context=True)
+    def get_base_right_topbar_menu(context):
+
+        is_mobile = _is_mobile_device(context)
+
+        if is_mobile:
+            return []
+        
+        return [
+            {
+                "type": "link",
+                "href": "/",
+                "label": "Custom 3"
+            },
+            {
+                "type": "link",
+                "href": "/",
+                "label": "Custom 4"
+            },
+        ]
+    @register.simple_tag(takes_context=True)
+    def get_base_left_topbar_menu(context):
+
+        is_mobile = _is_mobile_device(context)
+
+        return [
+            {
+                "type": "link",
+                "href": "/",
+                "label": "Custom 1"
+            },
+            {
+                "type": "link",
+                "href": "/",
+                "label": "Custom 2"
+            },
+        ]
 
 On browser refresh you will see a new entry in the nav bar which is persistent to the whole site. 
 
 .. image:: ./img/geocollection-menu.png
-
-**GeoNode generic page**
-
-As you can see in the templates folder there are only the site_index.html and the site_base.html files. In order to customize another GeoNode page, for example the layers list page, you need to recreate the same folder structure of the GeoNode templates folder and add a file with the same name.
-
-For the layers list page we can create a directory named "layers" inside the template directory and a file named "layer_list.html" inside layers. The changes made in this file will only affect the layer list page.
-
-.. code-block:: shell
-    
-    mkdir -p my_geonode/templates/layers/
-    
-    cp geonode/geonode/layers/templates/layers/layer_list.html  my_geonode/templates/layers/layer_list.html
-    
-    vim my_geonode/templates/layers/layer_list.html
-
-For example change in page title to be:  
-
-.. code:: html
-   
-   <h2 class="page-title">{% trans "Explore My Layers" %}</h2>
-
-then refresh the browser to see the update.
-
-.. image:: ./img/explore-my-layers.png
 
 **Modify functionality**
 
 
 In this section, we will patch the ResourceBase of GeoNode and update the Templates in order to add one more field to the Metadata Schema.
 
-We will add a DOI field to the ResourceBase model and modify the Templates in order to show the new field both into the Metadata Wizard and the Layer Details page.
+We will add a DOI field to the ResourceBase model and modify the Templates in order to show the new field both into the Metadata Wizard page.
 
 .. Note:: Make sure to be inside "my_geonode" directory to execute the following commands
 
@@ -239,7 +243,7 @@ Customizing metadata can be achieved from the model which is defined in the core
         help_text=maintenance_frequency_help_text)
 
 
-To add fields directly to the ResourceBase Class without actually modifying it, this can be done from "my_geonode/my_geonode/apps.py" file
+To add fields directly to the ResourceBase Class without actually modifying it, this can be done from "my_geonode/src/my_geonode/apps.py" file
 
 The "ready" method is invoked at initialization time and can be currently used to tweak your app in several ways
 
@@ -293,7 +297,7 @@ Now we will add the "patch_resource_base" method to the AppConfig and execute it
 .. note:: you will need to perform migrations as follows: - Add field doi to resourcebase
 
 
-Once you run python manage.py migrate:
+Once you run ``python manage.py migrate``:
 
 .. code-block:: shell
    
@@ -306,59 +310,6 @@ Once you run python manage.py migrate:
 Till now, we have patched the DB. however, it is not yet sufficient as we still need to display the added field.
 
 Let's extend the default templates so that we can show the newly added field
-
-**Overriding the Metadata Wizard Template Page**
-
-Similar to what we have done before in the Templates directory, we will need to create "layouts" directory under "my_geonode/my_geonode/templates". This directory will contain a copy from "geonode/src/geonode/geonode/layers/templates/layouts/panels.html" as follows:
-
-.. code-block:: shell
-    
-    $ mkdir -p my_geonode/templates/layouts
-    $ cp ~/geonode/src/geonode/geonode/layers/templates/layouts/panels.html  my_geonode/templates/layouts/panels.html
-    $ vim my_geonode/templates/layouts/panels.html
-
-Inside panels.html, we will add a new div with text input as follows:
-
-.. code-block:: python
-    
-    {{ layer_form.data_quality_statement }}
-     </div>
-          <div>
-              <span><label for="{{ layer_form.doi|id }}">{{ layer_form.doi.label }}</label></span>
-              <input id="id_resource-doi" name="resource-doi"
-                    type="text"
-                    class="has-external-popover"
-                    data-container="body"
-                    data-content="a DOI will be added by Admin before publication." data-html="true" data-placement="right"
-                    placeholder="a DOI will be added by Admin before publication."
-                    value="{{ layer_form.doi.value }}">
-          </div>
-     </div>
-
-In addition, we will override the Layer Detail template page as follows:
-
-.. code-block:: shell
-    
-    mkdir -p my_geonode/templates/base
-    
-    cp /home/geo/Envs/geonode/src/geonode/geonode/base/templates/base/_resourcebase_info_panel.html my_geonode/templates/base/
-    
-    vim my_geonode/templates/base/_resourcebase_info_panel.html
-
-.. code:: python
-    
-    
-    <dd><a href="/groups/group/{{ resource.group.name }}/activity/">{{ group }}</a> </dd>
-    
-    <dt>DOI</dt>
-     <dd>{{ resource.doi }}</dd>
-    
-    </dl>
-
-Now from the layer details page, you can see the DOI metadata entry per layer 
-
-.. image:: ./img/doi.png
-
 
 3- Create your own django app
 -----------------------------
@@ -373,11 +324,13 @@ Create the django app
 
 Django gives us an handy command to create apps. We already used startproject to create our geonode-project, now we can use startapp to create the app.
 
-python manage.py startapp geocollections
+.. code:: shell
+
+    python manage.py startapp geocollections
 
 This will create a folder named geocollections that contains empty models and views.
 
-We need to add the new app to the INSTALLED_APPS of our project. inside "my_geonode/settings.py" line 54 change:
+We need to add the new app to the INSTALLED_APPS of our project. inside "my_geonode/src/my_geonode/settings.py":
 
 .. code:: python
    
@@ -472,7 +425,7 @@ We also need to register the app urls in the project urls. So let's modify the "
 
 .. code-block:: shell
     
-    vim my_geonode/urls.py
+    vim my_geonode/src/my_geonode/urls.py
     
 .. code-block:: python
     
@@ -540,10 +493,7 @@ login into the admin panel -> geocollections and create a geocollections
 
 Visit http://localhost:8000/geocollections/<the-name-of-the-created-geocollection> and view the results.
 
-.. image:: ./img/geocollections-details.png
-
-
-Now you know how to customize an html template so you can tune this page as you prefer.
+Now that you know how to customize an html template, you can tune the page as you prefer.
 
 
 

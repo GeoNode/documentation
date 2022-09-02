@@ -5,3 +5,4 @@ GeoNode API Schema
     :maxdepth: 2
 
     V2/index
+    integration/index

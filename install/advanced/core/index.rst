@@ -16,10 +16,10 @@ and then by configuring an HTTPD server to serve GeoNode through the standard ``
   There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine.
   In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
 
-Ubuntu 20.04LTS
-===============
+Ubuntu 22.04.1LTS
+=================
 
-This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 20.04LTS **64-bit** clean environment (Desktop or Server).
+This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 22.04.1LTS **64-bit** clean environment (Desktop or Server).
 
 All examples use shell commands that you must enter on a local terminal or a remote shell.
 
@@ -61,35 +61,31 @@ First, we are going to install all the **system packages** needed for the GeoNod
 
   # Install packages from GeoNode core
   sudo apt install -y --allow-downgrades build-essential \
-      python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2 \
-      python3.8-dev python3.8-venv virtualenvwrapper \
-      libxml2 libxml2-dev gettext libmemcached-dev zlib1g-dev \
-      libxslt1-dev libjpeg-dev libpng-dev libpq-dev \
-      software-properties-common build-essential \
-      git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
-      sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev 
+    python3-gdal=3.4.1+dfsg-1build4 gdal-bin=3.4.1+dfsg-1build4 libgdal-dev=3.4.1+dfsg-1build4 \
+    python3.10-dev python3.10-venv virtualenvwrapper \
+    libxml2 libxml2-dev gettext libmemcached-dev zlib1g-dev \
+    libxslt1-dev libjpeg-dev libpng-dev libpq-dev \
+    software-properties-common build-essential \
+    git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
+    sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev
 
   # Install Openjdk
-  sudo apt install openjdk-8-jdk-headless default-jdk-headless -y
-  sudo update-java-alternatives --jre-headless --jre --set java-1.8.0-openjdk-amd64
-  
-  # If the update-alternatives command does not work, try below command and select the number coinciding with openjdk-8-jdk
-  sudo update-alternatives --config java
+  sudo apt install openjdk-11-jdk-headless default-jdk-headless -y
 
   # Verify GDAL version
   gdalinfo --version
-    $> GDAL 3.3.2, released 2021/09/01
+    $> GDAL 3.4.1, released 2021/12/27
 
   # Verify Python version
-  python3.8 --version
-    $> Python 3.8.10
+  python3.10 --version
+    $> Python 3.10.4
 
-  which python3.8
-    $> /usr/bin/python3.8
+  which python3.10
+    $> /usr/bin/python3.10
 
   # Verify Java version
   java -version
-    $> openjdk version "1.8.0_315"
+    $> openjdk version "11.0.16"
 
   # Install VIM
   sudo apt install -y vim
@@ -97,7 +93,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Cleanup the packages
   sudo apt update -y; sudo apt autoremove --purge
 
-.. warning:: GeoNode 3.x is not compatible with Python < 3.7
+.. warning:: GeoNode 4.x is not compatible with Python < 3.7
 
 .. _install_venv:
 
@@ -114,16 +110,16 @@ Since geonode needs a large number of different python libraries and packages, i
 
 .. code-block:: shell
 
-  which python3.8  # copy the path of python executable
+  which python3.10  # copy the path of python executable
 
   # Create the GeoNode Virtual Environment (first time only)
   export WORKON_HOME=~/.virtualenvs
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-  mkvirtualenv --python=/usr/bin/python3.8 geonode  # Use the python path from above
+  mkvirtualenv --python=/usr/bin/python3.10 geonode  # Use the python path from above
 
   # Alterantively you can also create the virtual env like below
   mkdir -p ~/.virtualenvs
-  python3.8 -m venv ~/.virtualenvs/geonode
+  python3.10 -m venv ~/.virtualenvs/geonode
   source ~/.virtualenvs/geonode/bin/activate
 
 
@@ -184,7 +180,7 @@ In this section we are going to install the ``PostgreSQL`` packages along with t
 
 .. code-block:: shell
 
-  # Ubuntu 20.04 (focal)
+  # Ubuntu 22.04.1 (focal)
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
   sudo apt update -y; sudo apt install -y postgresql-13 postgresql-13-postgis-3 postgresql-13-postgis-3-scripts postgresql-13 postgresql-client-13
@@ -321,7 +317,7 @@ First, it is not recommended to run Apache Tomcat as user root, so we will creat
 
 .. code-block:: shell
 
-  VERSION=9.0.56; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+  VERSION=9.0.65; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
 
 
 Once the download is complete, extract the tar file to the /opt/tomcat directory:
@@ -356,10 +352,10 @@ Create the a systemd file with the following content:
   # Check the correct JAVA_HOME location
   JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
   echo $JAVA_HOME
-    $> /usr/lib/jvm/java-8-openjdk-amd64/jre/
+    $> /usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/
 
   # Let's create a symbolic link to the JRE
-  sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/ /usr/lib/jvm/jre
+  sudo ln -s /usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/ /usr/lib/jvm/jre
 
   # Let's create the tomcat service
   sudo vim /etc/systemd/system/tomcat9.service
@@ -406,7 +402,7 @@ For verification, type the following ss command, which will show you the 8080 op
 
   ss -ltn
 
-In a clean Ubuntu 20.04, the ss command may not be found and the iproute2 library should be installed first.
+In a clean Ubuntu 22.04.1, the ss command may not be found and the iproute2 library should be installed first.
 
 .. code-block:: shell
 
@@ -414,7 +410,7 @@ In a clean Ubuntu 20.04, the ss command may not be found and the iproute2 librar
   # Then run the ss command
   ss -ltn
 
-In a clean Ubuntu 20.04, the ss command may not be found and the iproute2 library should be installed first.
+In a clean Ubuntu 22.04.1, the ss command may not be found and the iproute2 library should be installed first.
 
 .. code-block:: shell
 
@@ -490,8 +486,10 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/logs
 
   # Download and extract the default GEOSERVER_DATA_DIR
-  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geonode-geoserver-ext-web-app-data.zip" -O data-2.19.x.zip
-  sudo unzip data-2.19.x.zip -d /opt/data/
+  GS_VERSION=2.20.5
+  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/$GS_VERSION/geonode-geoserver-ext-web-app-data.zip" -O data-$GS_VERSION.zip
+  
+  sudo unzip data-$GS_VERSION.zip -d /opt/data/
 
   sudo mv /opt/data/data/ /opt/data/geoserver_data
   sudo chown -Rf tomcat:www-data /opt/data/geoserver_data
@@ -506,14 +504,12 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/gwc_cache_dir
 
   # Download and install GeoServer
-  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geoserver.war" -O geoserver-2.19.x.war
-  sudo mv geoserver-2.19.x.war /opt/tomcat/latest/webapps/geoserver.war
+  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/$GS_VERSION/geoserver.war" -O geoserver-$GS_VERSION.war
+  sudo mv geoserver-$GS_VERSION.war /opt/tomcat/latest/webapps/geoserver.war
 
 Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Container, like heap memory, garbage collector and so on.
 
 .. code-block:: shell
-
-  sudo sed -i -e 's/xom-\*\.jar/xom-\*\.jar,bcprov\*\.jar/g' /opt/tomcat/latest/conf/catalina.properties
 
   export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
   echo 'JAVA_HOME='$JAVA_HOME | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
@@ -536,7 +532,7 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
       # do not need authbind.  It is used for binding Tomcat to lower port numbers.
       # (yes/no, default: no)
       #AUTHBIND=no
-      JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
+      JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/
       GEOSERVER_DATA_DIR="/opt/data/geoserver_data"
       GEOSERVER_LOG_LOCATION="/opt/data/geoserver_logs/geoserver.log"
       GEOWEBCACHE_CACHE_DIR="/opt/data/gwc_cache_dir"

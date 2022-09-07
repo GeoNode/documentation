@@ -1284,21 +1284,20 @@ Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install
 
     sudo apt install curl -y
     
-    ## Cloudsmith: modern Erlang repository
-    curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
-    
-    ## Cloudsmith: RabbitMQ repository
-    curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/setup.deb.sh' | sudo -E bash
-	
-    ## Install Erlang packages
-    sudo apt install -y erlang-base \
-                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-                        erlang-runtime-tools erlang-snmp erlang-ssl \
-                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
-	
-    ## Install rabbitmq-server and its dependencies
-    sudo apt install rabbitmq-server -y --fix-missing
+    ## Import GPG Key
+    sudo apt update
+    sudo apt install curl software-properties-common apt-transport-https lsb-release
+    curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/erlang.gpg
+
+    ## Add Erlang Repository to Ubuntu
+    sudo apt update
+    sudo apt install erlang
+
+    ## Add RabbitMQ Repository to Ubuntu
+    curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
+
+    ## Install RabbitMQ Server
+    sudo apt install rabbitmq-server
 
     # check the status (it should already be running)
     sudo systemctl status rabbitmq-server

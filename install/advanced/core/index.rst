@@ -511,6 +511,8 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
 
 .. code-block:: shell
 
+  sudo sed -i -e 's/xom-\*\.jar/xom-\*\.jar,bcprov\*\.jar/g' /opt/tomcat/latest/conf/catalina.properties
+
   export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
   echo 'JAVA_HOME='$JAVA_HOME | sudo tee --append /opt/tomcat/latest/bin/setenv.sh
   sudo sed -i -e "s/JAVA_OPTS=/#JAVA_OPTS=/g" /opt/tomcat/latest/bin/setenv.sh

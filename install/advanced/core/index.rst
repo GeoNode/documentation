@@ -62,7 +62,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Install packages from GeoNode core
   sudo apt install -y --allow-downgrades build-essential \
     python3-gdal=3.4.1+dfsg-1build4 gdal-bin=3.4.1+dfsg-1build4 libgdal-dev=3.4.1+dfsg-1build4 \
-    python3.10-dev python3.10-venv virtualenvwrapper \
+    python3-all-dev python3.10-dev python3.10-venv virtualenvwrapper \
     libxml2 libxml2-dev gettext libmemcached-dev zlib1g-dev \
     libxslt1-dev libjpeg-dev libpng-dev libpq-dev \
     software-properties-common build-essential \

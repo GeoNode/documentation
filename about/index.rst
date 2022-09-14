@@ -64,7 +64,7 @@ Current Version and Features
 
 GeoNode current version: `4.0.0 <https://github.com/GeoNode/geonode/releases/tag/4.0.0post1>`_
 
-Main Features: `State of GeoNode <https://www.geosolutionsgroup.com/blog/state-geonode-3-2-webinar/>`_
+Main Features: `State of GeoNode <https://www.geosolutionsgroup.com/blog/geonode-release-4-0-rc1/>`_
 
 .. _get_in_touch:
 

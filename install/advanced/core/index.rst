@@ -2359,13 +2359,13 @@ It is possible to let docker show which containers are currently running (add ``
   docker ps
 
   CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS                   PORTS                                                                      NAMES
-4729b3dd1de7   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes             8000/tcp                                                                   celery4geonode
-418da5579b1a   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes (healthy)   8000/tcp                                                                   django4geonode
-d6b043f16526   geonode/letsencrypt:4.0    "./docker-entrypoint…"   29 minutes ago   Up 9 seconds             80/tcp, 443/tcp                                                            letsencrypt4geonode
-c77e1fa3ab2b   geonode/geoserver:2.19.6   "/usr/local/tomcat/t…"   29 minutes ago   Up 5 minutes (healthy)   8080/tcp                                                                   geoserver4geonode
-a971cedfd788   rabbitmq:3.7-alpine        "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             4369/tcp, 5671-5672/tcp, 25672/tcp                                         rabbitmq4geonode
-a2e4c69cb80f   geonode/nginx:4.0          "/docker-entrypoint.…"   29 minutes ago   Up 5 minutes             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   nginx4geonode
-d355d34cac4b   geonode/postgis:13         "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             5432/tcp                                                                   db4geonode
+  4729b3dd1de7   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes             8000/tcp                                                                   celery4geonode
+  418da5579b1a   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes (healthy)   8000/tcp                                                                   django4geonode
+  d6b043f16526   geonode/letsencrypt:4.0    "./docker-entrypoint…"   29 minutes ago   Up 9 seconds             80/tcp, 443/tcp                                                            letsencrypt4geonode
+  c77e1fa3ab2b   geonode/geoserver:2.19.6   "/usr/local/tomcat/t…"   29 minutes ago   Up 5 minutes (healthy)   8080/tcp                                                                   geoserver4geonode
+  a971cedfd788   rabbitmq:3.7-alpine        "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             4369/tcp, 5671-5672/tcp, 25672/tcp                                         rabbitmq4geonode
+  a2e4c69cb80f   geonode/nginx:4.0          "/docker-entrypoint.…"   29 minutes ago   Up 5 minutes             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443-    >443/tcp, :::443->443/tcp   nginx4geonode
+  d355d34cac4b   geonode/postgis:13         "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             5432/tcp                                                                   db4geonode
 
 
 Stop all the containers by running

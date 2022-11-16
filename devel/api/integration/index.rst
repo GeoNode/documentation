@@ -157,6 +157,25 @@ Example:
     url = "https://master.demo.geonode.org/api/v2/resources/resource_types"
     response = requests.request("GET", url, headers=headers, data=payload)
 
+Dataset Get standardized Metadata
+-----------------------------
+Get the metadata of uploaded datasets with:
+    - API: ``GET /api/v2/datasets/{id}``
+    - Status Code: ``200``
+
+    Example:
+
+    .. code-block:: shell
+
+        import requests
+        
+        DATASET_ID = "the dataset id"
+        url = f"https://master.demo.geonode.org/api/v2/datasets/{DATASET_ID}"
+        headers = {
+            'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+        }
+        response = requests.request("GET", url, headers=headers)
+
 Resource Upload
 ---------------
 
@@ -245,6 +264,36 @@ Example:
         ‘Authorization’: ‘Basic dXNlcjpwYXNzd29yZA==’
     }
     response = requests.request("PATCH", url, headers=headers, data=payload)
+
+Dataset Update Metadata 
+-----------------------------
+
+Update individual metadata:
+    - API: ``PATCH /api/v2/datasets/{id}``
+    - Status Code: ``200``
+
+    Example:
+
+    This example changes the title, the bbox polygon, and the license of a dataset.
+
+    .. code-block:: shell
+
+        import requests
+
+        url = ROOT + "api/v2/datasets/" + DATASET_ID
+        auth = (LOGIN_NAME, LOGIN_PASSWORD)
+
+        data = {
+            "title": "a new title",
+            "bbox_polygon": {
+                "type": "Polygon",
+                "coordinates": [
+                    [[0.0, 0.0], [0.0, 50.0], [50.0, 50.0], [50.0, 0.0], [0.0, 0.0]]
+                ],
+            },
+            "license": 4, 
+        }
+        response = requests.patch(url, auth=auth, json=data)
 
 Resource Delete
 ---------------
@@ -532,55 +581,3 @@ The ``status_url`` property returns the URL to track kthe progress of the reques
 
 
 The operation will be completed once the ``status`` property is updated with the value ``finished``.
-
-Dataset Get Metadata 
------------------------------
-Get the metadata of uploaded datasets with:
-    - API: ``GET /api/v2/datasets/{id}``
-    - Status Code: ``200``
-
-    Example:
-
-    .. code-block:: shell
-
-        import requests
-        
-        DATASET_ID = "the dataset id"
-        url = f"https://master.demo.geonode.org/api/v2/datasets/{DATASET_ID}"
-        headers = {
-            'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
-        }
-        response = requests.request("GET", url, headers=headers)
-
-Dataset Update Metadata 
------------------------------
-
-Update individual metadata:
-    - API: ``PATCH /api/v2/datasets/{id}``
-    - Status Code: ``200``
-
-    Example:
-
-    This example changes the title, the bbox polygon, and the license of a dataset.
-
-    .. code-block:: shell
-
-        import requests
-
-        url = ROOT + "api/v2/datasets/" + DATASET_ID
-        auth = (LOGIN_NAME, LOGIN_PASSWORD)
-
-        data = {
-            "title": "a new title",
-            "bbox_polygon": {
-                "type": "Polygon",
-                "coordinates": [
-                    [[0.0, 0.0], [0.0, 50.0], [50.0, 50.0], [50.0, 0.0], [0.0, 0.0]]
-                ],
-            },
-            "license": 4, 
-        }
-        response = requests.patch(url, auth=auth, json=data)
-
-
-

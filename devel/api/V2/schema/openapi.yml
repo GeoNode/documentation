@@ -204,13 +204,6 @@ paths:
 
         Examples:
 
-        Update one dog:
-
-            PATCH /dogs/1/
-            {
-                'fur': 'white'
-            }
-
         Update many dogs by ID:
 
             PATCH /dogs/
@@ -259,7 +252,18 @@ paths:
           description: ''
     patch:
       operationId: datasets_partial_update_2
-      description: API endpoint that allows layers to be viewed or edited.
+      description: |-
+        API endpoint that allows layers to be viewed or edited.
+
+        Example:
+        
+        Update the metadata (e.g.'title', 'abstract',...) of a dataset:
+        
+            PATCH /dataset/{id}/
+            {
+              '{metadata_1_name}': '{metadata_1_value}',
+              '{metadata_n_name}': '{metadata_n_value'
+            }
       parameters:
       - in: path
         name: id

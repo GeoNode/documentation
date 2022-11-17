@@ -162,7 +162,8 @@ Dataset Get standardized Metadata
 Get the metadata of uploaded datasets with:
     - API: ``GET /api/v2/datasets/{id}``
     - Status Code: ``200``
-
+    .. note::
+        This is very similar to `GET /api/v2/resources` but provides additional metadata specifically for datasets like `featureinfo_custom_template` or `attribute_set`
     Example:
 
     .. code-block:: shell
@@ -274,7 +275,7 @@ Update individual metadata:
 
     Example:
 
-    This example changes the title, the bbox polygon, and the license of a dataset.
+    This example changes the title and the license of a dataset.
 
     .. code-block:: shell
 
@@ -285,16 +286,11 @@ Update individual metadata:
 
         data = {
             "title": "a new title",
-            "bbox_polygon": {
-                "type": "Polygon",
-                "coordinates": [
-                    [[0.0, 0.0], [0.0, 50.0], [50.0, 50.0], [50.0, 0.0], [0.0, 0.0]]
-                ],
-            },
             "license": 4, 
         }
         response = requests.patch(url, auth=auth, json=data)
-
+    .. note::
+        It's allowed to pass new values for `bbox_polygon` but this isn't recommended because the bounding box is calculated according to the dataset's spatial data. So even if the `bbox_polygon` is updated, it's value will revert back to the actual bounding of the spatial data when any other field for dataset is updated.
 Resource Delete
 ---------------
 

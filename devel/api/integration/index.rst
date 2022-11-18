@@ -290,7 +290,7 @@ Update individual metadata:
         }
         response = requests.patch(url, auth=auth, json=data)
     .. note::
-        It's allowed to pass new values for `bbox_polygon` but this isn't recommended because the bounding box is calculated according to the dataset's spatial data. So even if the `bbox_polygon` is updated, it's value will revert back to the actual bounding of the spatial data when any other field for dataset is updated.
+        `bbox_polygon` and `ll_bbox_polygon` are derived values which cannot be changed.
 Resource Delete
 ---------------
 

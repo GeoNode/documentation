@@ -2,7 +2,7 @@ sphinx==4.2.0
 sphinx-intl==2.0.1
 sphinx_rtd_theme==0.5.2
 readthedocs-sphinx-ext==2.1.4
-m2r==0.2.1
+m2r2==0.3.2
 mistune==0.8.4
 sphinxcontrib-httpdomain==1.7.0
 sphinxcontrib-openapi==0.7.0

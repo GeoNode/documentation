@@ -157,6 +157,26 @@ Example:
     url = "https://master.demo.geonode.org/api/v2/resources/resource_types"
     response = requests.request("GET", url, headers=headers, data=payload)
 
+Dataset Get standardized Metadata
+-----------------------------
+Get the metadata of uploaded datasets with:
+    - API: ``GET /api/v2/datasets/{id}``
+    - Status Code: ``200``
+    .. note::
+        This is very similar to `GET /api/v2/resources` but provides additional metadata specifically for datasets like `featureinfo_custom_template` or `attribute_set`
+    Example:
+
+    .. code-block:: shell
+
+        import requests
+        
+        DATASET_ID = "the dataset id"
+        url = f"https://master.demo.geonode.org/api/v2/datasets/{DATASET_ID}"
+        headers = {
+            'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+        }
+        response = requests.request("GET", url, headers=headers)
+
 Resource Upload
 ---------------
 
@@ -246,6 +266,31 @@ Example:
     }
     response = requests.request("PATCH", url, headers=headers, data=payload)
 
+Dataset Update Metadata 
+-----------------------------
+
+Update individual metadata:
+    - API: ``PATCH /api/v2/datasets/{id}``
+    - Status Code: ``200``
+
+    Example:
+
+    This example changes the title and the license of a dataset.
+
+    .. code-block:: shell
+
+        import requests
+
+        url = ROOT + "api/v2/datasets/" + DATASET_ID
+        auth = (LOGIN_NAME, LOGIN_PASSWORD)
+
+        data = {
+            "title": "a new title",
+            "license": 4, 
+        }
+        response = requests.patch(url, auth=auth, json=data)
+    .. note::
+        `bbox_polygon` and `ll_bbox_polygon` are derived values which cannot be changed.
 Resource Delete
 ---------------
 
@@ -532,4 +577,3 @@ The ``status_url`` property returns the URL to track kthe progress of the reques
 
 
 The operation will be completed once the ``status`` property is updated with the value ``finished``.
-

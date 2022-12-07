@@ -1,0 +1,978 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../intermediate/harvesting/index.rst:3 ab17bf32079b46cabda6cfb41be6cc5d
+msgid "Harvesting resources from remote services"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:5 6b3b80b7ebc640e9bee9d363c7022c46
+msgid ""
+"GeoNode is able to harvest resource metadata from multiple remote "
+"services."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:7 bf30f00488af40d1a82e59380d4a2338
+msgid ""
+"Harvesting is the process by which a metadata catalogue, *i.e.* GeoNode, "
+"is able to connect to other remote catalogues and retrieve information "
+"about their resources. This process is usually performed periodically, in"
+" order to keep the local catalogue in sync with the remote."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:11 9a0ab1f23b8249889b16020bd5c07d88
+msgid ""
+"When appropriately configured, GeoNode will contact the remote service, "
+"extract a list of relevant resources that can be harvested and create "
+"local resources for each remote resource. It will also keep the resources"
+" synchronized with the remote service by periodically updating them."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:15 27d573eb5e5d43e5a822c56252b86d68
+msgid "Out of the box, GeoNode ships with support for harvesting from:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:17 2d24643c477745e3a58855a9867feec3
+msgid ":ref:`Other remote GeoNode instances <geonode-harvester-worker-label>`;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:18 71a62d53145c47b99f7994d43f933a81
+msgid ":ref:`OGC WMS servers <wms-harvester-worker-label>`;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:19 72a86dda502849298195e73d8cf8e03f
+msgid ":ref:`ArcGIS REST services <arcgis-harvester-worker-label>`."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:21 55de1c8a614f425eb165cb9f47849632
+msgid ""
+"Adding support for :ref:`additional harvesting sources <creating-new-"
+"workers-label>` is also possible."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:25 6675634916a146e588bbb22c1763dc09
+msgid "GeoNode harvesting concepts"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:27 0b7a3cdf0b11421abc98d3a6dd85efce
+msgid ""
+"When a **harvester** is configured, GeoNode is able to use its "
+"corresponding **harvester worker** to contact the remote service and "
+"generate a list of **harvestable resources**. The user is then able to "
+"select which of those resources are of interest. Depending on its "
+"configured update frequency, sometime later, the **harvesting scheduler**"
+" will create new **harvesting sessions** in order to create local GeoNode"
+" resources from the remote harvestable resources that had been marked as "
+"relevant by the user."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:33 16e6e1a6a387466981bc2dd159c45142
+msgid "The above description uses the following key concepts:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:77 d6ee9bc230734525b8f2e5e7bf2c62e0
+msgid "harvester"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:38 5ecb6c06750740adab570a591334386b
+msgid ""
+"This is the configuration object that is used to parametrize harvesting "
+"of a remote service. It is configurable at runtime and is preserved in "
+"the GeoNode database."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:41 436bd702f0c3497c8291f3235d649ace
+msgid ""
+"Harvesters and their properties can be managed by visiting the "
+"``Harvesting -> Harvesters`` section of the GeoNode admin area, or by "
+"visiting the ``api/v2/harvesters/`` API endpoint with an admin user."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:44 c60c796ffbc4436cb07c5727559266d1
+msgid "Among other parameters, a harvester holds:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:47 002ed4fb09254c6889ff7386a5146e0b
+msgid "remote_url"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:47 9dea279f22bf4ec89afd787eadc9a841
+msgid ""
+"Base URL of the remote service being harvested, *e.g.* "
+"``https://stable.demo.geonode.org``"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:52 0ae78d350845452296438135933dc643
+msgid "harvester_type"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:50 066fc727f0a54bd1aabd5a24ad5cc10d
+msgid ""
+"Type of harvester worker that will be used to perform harvesting. See the"
+" :ref:`Harvester worker concept <harvester-worker-label>` and the "
+":ref:`standard harvester workers <standard-harvester-workers-label>` "
+"sections below for more detail. Example: "
+"``geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:56 f3ade194b20949b6b36ae3dc9b6562d9
+msgid "scheduling_enabled"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:55 ccd717cc9d3343c69d94e846820671dd
+msgid ""
+"Whether harvesting shall be performed periodically by the "
+":ref:`harvesting scheduler <harvesting-scheduler-label>` or not."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:60 1c4232c223254f72af864f1d8bbbff02
+msgid "harvesting_session_update_frequency"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:59 1a68bc32aab44c04b3e8b9ed9d56cbe2
+msgid ""
+"How often (in minutes) should new :ref:`harvesting sessions <harvesting-"
+"session-label>` be automatically scheduled?"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:63 f654eedee9e04fc4ac65af7559b2bd45
+msgid "refresh_harvestable_resources_update_frequency"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:63 1fb410e7b3a449b8a7135742efad00e6
+msgid ""
+"How often (in minutes) should new :ref:`refresh sessions <refresh-"
+"session-label>` be automatically scheduled?"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:66 a701b2f415644c63a1cae0c6eb7b5418
+msgid "default_owner"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:66 f850d37fe4b74dbebe847c5e85334a47
+msgid "Which GeoNode user shall be made the owner of harvested resources"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:71 e3edfc0d4d5d46d899bbbba2763160eb
+msgid "harvest_new_resources_by_default"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:69 c68c9612eab34dc4b06dd7d206ad4442
+msgid ""
+"Should new remote resources be harvested automatically? When this option "
+"is selected, the user does not need to specify which :ref:`harvestable "
+"resources <harvestable-resource-label>` should be harvested, as all of "
+"them will be automatically marked for harvesting by GeoNode."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:77 45e8a250ecd84f69b7bac07e0a09ff8c
+msgid "delete_orphan_resources_automatically"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:74 05e10570e39a461eab0b915e627deab1
+msgid ""
+"Orphan resources are those that have previously been created by means of "
+"a harvesting operation but that GeoNode can no longer find on the remote "
+"service being harvested. Should these resources be deleted from GeoNode "
+"automatically? This also applies to when a harvester configuration is "
+"deleted, in which case all of the resources that originated from that "
+"harvester are now considered to be orphan."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:97 04d25e1f20a840228829df6afe86a69c
+msgid "harvester worker"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:82 bf9bdf2bfdaa41e889c69fdd1fc3178b
+msgid ""
+"Harvester workers implement retrieval for concrete remote service types. "
+"Each harvester uses a specific worker, depending on the type of remote "
+"service that it gets data from. Harvester workers may accept their own "
+"additional configuration parameters."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:86 7fdc7eab057e464aab667251b4c6ebb1
+msgid ""
+"Harvester workers are set as the ``harvester_type`` attribute on a "
+":ref:`harvester <harvester-label>`. Their configuration is set as a JSON "
+"object on the ``harvester_type_specific_configuration`` attribute of the "
+"harvester."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:89 0e3c850517ce427d91c3a0c83ddfe430
+msgid "GeoNode ships with the following harvester workers:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:91 1f940598dce44a0cb8b705e1f469f04f
+msgid ""
+":ref:`GeoNode <geonode-harvester-worker-label>` - Enables harvesting from"
+" other GeoNode deployments"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:92 de255fd402d74aeda9690d49cf6e375a
+msgid ""
+":ref:`WMS <wms-harvester-worker-label>` - Enables harvesting from OGC WMS"
+" servers"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:93 252461e2b4b14380a04fc4ab8d55c70f
+msgid ""
+":ref:`ArcGIS REST services <arcgis-harvester-worker-label>` - Enables "
+"harvesting from ArcGIS REST services"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:95 453568a31a8f489fbfe36cd887b3788d
+msgid ""
+":ref:`Adding new harvester workers <creating-new-workers-label>` is also "
+"possible. This allows custom GeoNode deployments to add support for "
+"harvesting from other remote sources."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:114 62fe9f745d624f9caa1a73905e28083a
+msgid "harvestable resource"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:102 f2e3be6528404cadb2f66983093bc3d0
+msgid ""
+"A resource that is available on the remote server. Harvestable resources "
+"are persisted in the GeoNode DB. They are created during :ref:`refresh "
+"operations <update-harvestable-resources-action-label>`, when the "
+"harvester worker interacts with the remote service in order to discover "
+"which remote resources can be harvested."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:106 84c82bcb7d694e8dbce8159c1ae8942b
+msgid ""
+"Harvestable resources can be managed by visiting the ``Harvesting -> "
+"Harvestable resources`` section of the GeoNode admin area, or by visiting"
+" the ``api/v2/harvesters/{harvester-id}/harvestable-resources`` API "
+"endpoint with an admin user."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:110 e1fbb16399f54a18b2a031511c4fc1fd
+msgid ""
+"In order to be harvested by the :ref:`harvesting scheduler <harvesting-"
+"scheduler-label>`, a harvestable resource must have its "
+"``should_be_harvested`` attribute set to ``True``. This attribute can be "
+"set manually by the user or it can be set automatically by the harvester "
+"worker, in case the corresponding harvester is configured with "
+"``harvest_new_resources_by_default = True``"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:141
+#: ../../intermediate/harvesting/index.rst:145 758b37e2ffd64e1a8513a0425850ef43
+#: bfb06e6693ea4c28afccb5dfce1ffb36
+msgid "harvesting session"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:119 fc512d799f0449d48e9edcca7efc40b3
+msgid ""
+"In GeoNode, discovering remote resources and harvesting them is always "
+"done under the scope of a harvesting session. These sessions are stored "
+"in the GeoNode DB and can be inspected by visiting the ``Harvesting -> "
+"Asynchronous harvesting sessions`` section of the GeoNode admin area."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:123 3e8c670394d5493cb60493063340a473
+msgid ""
+"Harvesting sessions are used to keep track of the progress of execution "
+"of the relevant harvesting operations. They are updated while each "
+"operation is running. There are two types of sessions:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:134 a6626b63cd0a4a5eb9fdb4acd6df273c
+msgid "refresh session"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:130 3a7e8e51b4ff4aaf9ff54bbd0740b0ea
+msgid ""
+"This session is created during the :ref:`update of harvestable resources "
+"operation <update-harvestable-resources-action-label>`. It has ``type"
+"=discover-harvestable-resources``. During a refresh session, the "
+"harvester worker discovers remote resources and creates their respective "
+":ref:`harvestable resources <harvestable-resource-label>` on the GeoNode "
+"DB. After such session is finished, the user can inspect the found "
+"harvestable resources and mark those that are relevant with "
+"``should_be_harvester=True``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:139 c64a27c1378f4b9f855b6d7731348a86
+msgid ""
+"This session is created during the :ref:`perform harvesting operation "
+"<perform-harvesting-action-label>`. It has ``type=harvesting``. During a "
+"harvesting session, the harvester worker creates or updates new GeoNode "
+"resources based on the harvestable resources that have been configured "
+"with ``should_be_harvested=True``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:143 b28a1ac9c9ec49ae80238aa84f66398e
+msgid ""
+"In addition to the aforementioned ``type``, harvesting sessions also "
+"carry the ``status`` attribute, which provides context on the current "
+"status of the session (and consequently of the underlying harvesting "
+"operation)."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:164 c410b93c03f54caab4a91d68763ca3e1
+msgid "harvesting scheduler"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:150 28b9ac6171cb411088221799a5963408
+msgid ""
+"The scheduler is responsible for initiating new :ref:`harvesting "
+"operations <harvesting-operations-label>` in an automated fashion. "
+"Periodically, the scheduler goes through the list of existing harvesters,"
+" checking if it is time to dispatch one of the harvesting operations "
+"mentioned in the next section."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:154 29254bf7b41e483eabefa8f6372328db
+msgid ""
+"The scheduler's operation frequency is configurable by defining a "
+"``HARVESTER_SCHEDULER_FREQUENCY_MINUTES`` setting - the default is to "
+"trigger the scheduler every 30 seconds."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:159 e51415eecb5d4717aa7fc71ccf9181f7
+msgid ""
+"Since the harvesting scheduler only checks if there is work to do once "
+"every ``x`` seconds (defaulting to 30 seconds, as mentioned above), there"
+" will usually be a delay between the time a harvesting operation is "
+"supposed to be scheduled and the actual time when it is indeed scheduled."
+" Moreover, the harvesting scheduler is implemented as a celery task. This"
+" means that, if the celery worker is busy, that may also cause a delay in"
+" scheduling harvesting operations, as the scheduler's celery task may not"
+" be triggered immediately."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:167 ac8851aa933343f0839b72993d2de097
+msgid "Harvesting workflows"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:169 60bbd76b15eb44b0a232473ca0a5ab18
+msgid "There are two main possible harvesting workflows:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:171 0c103e2d3bb945308b75a5a30c1de64f
+msgid ":ref:`Continuous harvesting <continuous-harvesting-label>`"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:172 caaba5b3393349a3916b5105df2013d9
+msgid ":ref:`One-time harvesting <one-time-harvesting-label>`"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:178 aed22c135953419e93738c0eea3b51d3
+msgid "Continuous harvesting"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:180 b2dc56b0a0cc4f9ca44cd2d883a70047
+msgid ""
+"This workflow relies on the :ref:`harvesting scheduler <harvesting-"
+"scheduler-label>` in order to ensure harvested resources are continuously"
+" kept up to date with their remote counterparts."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:183 4c963b81d53a437ab5acf6809f6631c0
+msgid ""
+"User creates harvester and sets its ``scheduling_enabled`` attribute to "
+"``True``;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:184 839c4231b4f848f9b56df3acbef196fe
+msgid ""
+"When the time comes, the harvesting scheduler calls the :ref:`update list"
+" of harvestable resources operation <update-harvestable-resources-action-"
+"label>`. Alternatively, the user may call this operation manually the "
+"first time."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:187 6e98192b24204e45bbc7e5edee1a6f4d
+msgid ""
+"When the previous operation is done, user goes through the list of "
+"generated :ref:`harvestable resources <harvestable-resource-label>` and, "
+"for each relevant harvestable resource, sets it ``should_be_harvested`` "
+"attribute to ``True``. Alternatively, if the harvester has its "
+"``harvest_new_resources_automatically`` attribute set to ``True``, the "
+"harvestable resources will already be marked as to be harvested, without "
+"requiring manual user intervention;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:192 a38069ab256f42cfb15e359aa9663a45
+msgid ""
+"When the time comes, the harvesting scheduler calls the :ref:`perform "
+"harvesting operation <perform-harvesting-action-label>`. This causes the "
+"remote resources to be harvested. These now show up as resources on the "
+"local GeoNode."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:200 3a70ba2e3bbc40d28e4e08309061b8f9
+msgid "One-time harvesting"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:202 c4b64fa2c2a14f8c9af71661376bb007
+msgid "This workflow is mostly executed manually by the user."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:204 00b89b27a2814ab88d3a2a2ffa9b8e87
+msgid ""
+"User creates harvester and sets its ``scheduling_enabled`` attribute to "
+"``False``;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:205 fa36460775fd4b55bdb5e0f61662b0ad
+msgid ""
+"User calls the :ref:`update list of harvestable resources operation "
+"<update-harvestable-resources-action-label>`;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:206 9e144ff2cb174d11b4ea1e27c45d37f4
+msgid ""
+"When the previous operation is done, user goes through the list of "
+"generated :ref:`harvestable resources <harvestable-resource-label>` and, "
+"for each relevant harvestable resource, sets it ``should_be_harvested`` "
+"attribute to ``True``;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:209 1bea2cd856d44cffa68ca7c7e5f65c52
+msgid ""
+"User then proceeds to call the :ref:`perform harvesting operation "
+"<perform-harvesting-action-label>`. This causes the remote resources to "
+"be harvested. These now show up as resources on the local GeoNode."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:217 805bfd2c693e4cf7bc1ec16fc8faac5b
+msgid "Harvester operations"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:219 199d3fa5e76e4d38970a5088723f391a
+msgid ""
+"Each GeoNode harvester is able to perform a finite set of operations. "
+"These can be performed either:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:221 cd83d17e3e744602b609af226013c4fe
+msgid ""
+"In an **automated fashion**, being dispatched by the harvesting "
+"scheduler. Automated harvesting is only performed when the corresponding "
+":ref:`harvester <harvester-label>` has ``scheduling_enabled=True``;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:224 baae08398d1448b281240c71d978ffeb
+msgid ""
+"**On-demand**, by explicit request of the user. On-demand execution can "
+"be requested by one of two ways:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:226 8d28d6ab721a4c1f880f5d312c9486a7
+msgid ""
+"By selecting the relevant harvester(s) in the ``Harvesting -> "
+"Harvesters`` section of the GeoNode admin area and then selecting and "
+"running an action from the drop-down menu;"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:229 e4c73d0d70be41f788ff3e9c62e04794
+msgid ""
+"By interacting with the GeoNode REST API. Harvester actions are requested"
+" by issuing ``HTTP PATCH`` requests to the ``/api/v2/harvesters"
+"/{harvester-id}/`` endpoint. The payload of such requests must specify "
+"the corresponding status. For example, by issuing a request like::"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:238 5f7e4d8ab3b448c4a58a9b8d304c45ea
+msgid ""
+"We are asking that the harvester's status be changed to ``updating-"
+"harvestable-resources``. If the server accepts this request, then the "
+":ref:`update list of harvestable resources operation <update-harvestable-"
+"resources-action-label>` is triggered."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:244 04dd9d47bd364188a1fffd1962e293f2
+msgid ""
+"The server will not accept the API request if the harvester's current "
+"status is not ``ready``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:247 55829b5fe8a04eea93377d54c7f591f0
+msgid ""
+"While performing an action, the harvester's ``status`` property "
+"transitions from ``ready`` to whatever action-related status is "
+"appropriate (as indicated below). As the operation finishes execution, "
+"the harvester's status transitions back to ``ready``. If the harvester "
+"has any status other than ``ready``, then it is currently busy. When a "
+"harvester is busy it cannot execute other operations, you'll need to wait"
+" until the current operation finishes."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:256 a9c7553952054767b806c572aa864479
+msgid "Check if the remote service is available operation"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:258 6bf7aaf6d12e4793ae9c9c0b5dbe75b3
+msgid ""
+"This operation causes the harvester to perform a simple health check on "
+"the remote service, in order to check whether it responds successfully. "
+"The response is stored in the harvester's ``remote_available`` property. "
+"This operation is performed in the same process of the main GeoNode "
+"(*i.e.* it runs synchronously)."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:262 567da85b1a9d49919dfaa548983206a2
+msgid ""
+"When triggered, this operation causes the harvester's status to "
+"transition to ``checking-availability``. As the operation finishes, the "
+"harvester's status transitions back to ``ready``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:265 83ab630a8e724f1698cfa641ff986995
+msgid ""
+"Invocation via the GeoNode admin is performed by selecting the ``Check "
+"availability of selected harvesters`` command."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:268
+#: ../../intermediate/harvesting/index.rst:291
+#: ../../intermediate/harvesting/index.rst:312
+#: ../../intermediate/harvesting/index.rst:330
+#: ../../intermediate/harvesting/index.rst:348 11cb1b6342c74b0899886c4e1a3a4465
+#: 47a90c70a52848869cd9c6ab18c80edc 50219073507b4351b057856a800e1f73
+#: b1ddfbd6f02e4baf900e353f4a191a42 d02ad72463544b5db2c51c82f2d51230
+msgid ""
+"Invocation via the GeoNode REST API is performed by issuing an HTTP PATCH"
+" request with a payload that sets the harvester status."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:275 df4a7917e73c4c17bf0ee614924a682e
+msgid "Update the list of harvestable resources operation"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:277 839b7bb4769f412e9dfc2cd41ff542a0
+msgid ""
+"This operation causes the harvester to interact with the remote service "
+"in order to discover which resources are available for being harvested. "
+"Existing remote resources are then saved as :ref:`harvestable resources "
+"<harvestable-resource-label>`."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:281 aa7ec2ca42d24f70adf5927df6a51371
+msgid ""
+"Since this operation can potentially take a long time to complete (as we "
+"don't know how may resources may exist on the remote service), it is run "
+"using a background process. GeoNode creates a new :ref:`refresh session "
+"<refresh-session-label>` and uses it to track the progress of this "
+"operation."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:285 f38c297fd14f4289a16a73f6d55a6136
+msgid ""
+"When triggered, this operation causes the harvester's status to "
+"transition to ``updating-harvestable-resources``. As the operation "
+"finishes, the harvester's status transitions back to ``ready``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:288 3bfc73d4987d4867980714bb56ef2c0b
+msgid ""
+"Invocation via the GeoNode admin is performed by selecting the ``Update "
+"harvestable resources for selected harvesters`` command."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:298 c05bdd26fd2f4f36821b8d78a23872c5
+msgid "Perform harvesting operation"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:300 bbb85e6ef483439882f3436c940a0017
+msgid ""
+"This operation causes the harvester to check which harvestable resources "
+"are currently marked as being harvestable and then, for each one, harvest"
+" the resource from the remote server."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:303 94fc8032cad74457ac0b8e383db8bffc
+msgid ""
+"Since this operation can potentially take a long time to complete (as we "
+"don't know how may resources may exist on the remote service), it is run "
+"using a background process. GeoNode creates a new :ref:`harvesting "
+"session <harvesting-session-label>` and uses it to track the progress of "
+"this operation."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:307 136c570010654d4dacdd39cf1ecd5213
+msgid ""
+"When triggered, this operation causes the harvester's status to "
+"transition to ``harvesting-resources``. As the operation finishes, the "
+"harvester's status transitions back to ``ready``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:310 7ed1907904d64b878c04c4a8a15a797e
+msgid ""
+"Invocation via the GeoNode admin is performed by selecting the ``Perform "
+"harvesting on selected harvesters`` command."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:319 37125cea19774a2982a38c4d758bc8bb
+msgid "Abort update of harvestable resources operation"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:321 d52d709fe8404a6ea1801827ed48aec2
+msgid ""
+"This operation causes the harvester to abort an on-going :ref:`update "
+"list of harvestable resources operation <update-harvestable-resources-"
+"action-label>`."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:324 f9a8f4d48f5d4403b7859016fa1bf89c
+msgid ""
+"When triggered, this operation causes the harvester's status to "
+"transition to ``aborting-update-harvestable-resources``. As the operation"
+" finishes, the harvester's status transitions back to ``ready``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:327 fc684f129d414e1fb163ad79ece5febd
+msgid ""
+"Invocation via the GeoNode admin is performed by selecting the ``Abort "
+"on-going update of harvestable resources for selected harvesters`` "
+"command."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:337 afdf3814eb9a4815bd002ca0adf0f810
+msgid "Abort harvesting operation"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:339 37b0c928b2ef48409e3512312a3dcff6
+msgid ""
+"This operation causes the harvester to abort an on-going :ref:`perform "
+"harvesting operation <perform-harvesting-action-label>`."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:342 b58acd5c489c43de98660c2edae248df
+msgid ""
+"When triggered, this operation causes the harvester's status to "
+"transition to ``aborting-performing-harvesting``. As the operation "
+"finishes, the harvester's status transitions back to ``ready``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:345 09c9cb9bd9794db5a9c0ccf96940d5b0
+msgid ""
+"Invocation via the GeoNode admin is performed by selecting the ``Abort "
+"on-going harvesting sessions for selected harvesters`` command."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:355 a2ffcd359b9843bda0ce44b0870a598d
+msgid "Reset harvester operation"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:357 bed903c40a3a4f41ab30a0a0f7b1b2d0
+msgid ""
+"This operation causes the harvester's status to be reset back to "
+"``ready``. It is mainly useful for troubleshooting potential errors, in "
+"order to unlock harvesters that may get stuck in a non-actionable status "
+"when some unforeseen error occurs."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:361 760bf5ecf05f4f59949ad428eb408e4c
+msgid ""
+"When triggered, this operation causes the harvester's status to "
+"transition to ``ready`` immediately."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:363 62ea4cc9556443d984b79372f11df734
+msgid ""
+"Invocation via the GeoNode admin is performed by selecting the ``Reset "
+"harvester status`` command."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:365 ed8efbb74d324f2ebd236e2adc96468a
+msgid "This operation cannot be called via the GeoNode API."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:371 3653862346ce423aa77605d6f7bcad71
+msgid "Standard harvester workers"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:374 d134d818be614afd947fe8a5cc05564b
+msgid ""
+"Remember that, as stated above, a harvester worker is configured by means"
+" of setting the ``harvester_type`` and "
+"``harvester_type_specific_configuration`` attributes on the "
+":ref:`harvester <harvester-label>`."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:377 f74a57ef76aa425aa6d9abbe1f62c021
+msgid ""
+"Moreover, the format of the ``harvester_type_specific_configuration`` "
+"attribute must be a JSON object."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:383 a9607bc41d9b48acb9d6d8869d576070
+msgid "GeoNode harvester worker"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:385 c407e20f3c41489db10742cb7e2dde8c
+msgid ""
+"This worker is able to harvest remote GeoNode deployments. In addition to"
+" creating local resources by retrieving the remote metadata, this "
+"harvester is also able to copy remote datasets over to the local GeoNode."
+" This means that this harvester can even be used in order to generate "
+"replicated GeoNode instances."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:389 b2605e1979a943d48a4131c8f040d37f
+msgid ""
+"This harvester can be used by setting "
+"``harvester_type=geonode.harvesting.harvesters.geonodeharvester.GeonodeUnifiedHarvesterWorker``"
+" in the harvester configuration."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:392
+#: ../../intermediate/harvesting/index.rst:440
+#: ../../intermediate/harvesting/index.rst:469 19bc6417da6943e7afb8950f76961835
+#: 6a3bac159b8c4b50bcea36dacbc579f8 6d80029d1a5943e0b5b462ef4163db93
+msgid ""
+"It recognizes the following ``harvester_type_specific_configuration`` "
+"parameters:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:395 402801bd8ec54318b9db422773479536
+msgid "harvest_datasets"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:395 6681f8acf3dd420ab321346812ee85e0
+msgid ""
+"Whether to harvest remote resources of type ``dataset`` or not. "
+"Acceptable values: ``true`` (the default) or ``false``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:398 6cfda5f44b1f4c4b90fb7bd507dd0a2b
+msgid "copy_datasets"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:398 de15fb6cfb754cbf94da3739fe09918b
+msgid ""
+"Whether to copy remote resources of type ``dataset`` over to the local "
+"GeoNode. Acceptable values: ``true`` or ``false`` (the default)."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:401 e6e214a4998e4d5bb9086b16261478be
+msgid "harvest_documents"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:401 0db198426ed743ae9127ec4a491c3972
+msgid ""
+"Whether to harvest remote resources of type ``document`` or not. "
+"Acceptable values: ``true`` (the default) or ``false``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:404 201b6acaead548fca01d832c29681190
+msgid "copy_documents"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:404 e284d314e4194292834dedf1069eea37
+msgid ""
+"Whether to copy remote resources of type ``document`` over to the local "
+"GeoNode. Acceptable values: ``true`` or ``false`` (the default)."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:413 92bf17eaf9db4a30822178975da3b70e
+msgid "resource_title_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:407 c45207f59336481e858bfda85dec1c3c
+msgid ""
+"A string that must be present in the remote resources' ``title`` in order"
+" for them to be acknowledged as harvestable resources. This allows "
+"filtering out resources that are not relevant. Acceptable values: any "
+"alphanumeric value."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:411 e85a6eba34e64b92ae4d09d61397284e
+msgid ""
+"Example: setting this to a value of ``\"water\"`` would mean that the "
+"harvester would generate harvestable resources for remote resources that "
+"are titled *water basins*, *Water territories*, etc. The harvester would "
+"not generate harvestable resources for remote resources whose title does "
+"not contain the word *water*."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:418 c54ac2b569024d4486cff0e66453b6b4
+msgid "start_date_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:416 9a49c1df4bce4233a1e49f1fee77aab1
+msgid ""
+"A string specifying a datetime that is used to filter out resources by "
+"their start_date. This is parsed with :ref:`dateutil.parser.parse() "
+"<https://dateutil.readthedocs.io/en/stable/parser.html#dateutil.parser.parse>`,"
+" which means that it accepts many different formats (e.g. "
+"`2021-06-31T13:04:05Z`)"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:421 9a94e4c8a87948feb09cf17c54e5c785
+msgid "end_date_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:421 7a5daf12d2604b889544a4b77ce767c6
+msgid ""
+"Similar to ``start_date_filter`` but uses resources' `end_date` as a "
+"filter parameter."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:424 8b32a8b20b9c4185923f22a64397bdfb
+msgid "keywords_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:424 d4369d1ab3564345b5aa8d6b06b44c14
+msgid "A list of keywords that are used to filter remote resources."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:428 fcd1257e44d64e74bf972c8b8895cac0
+msgid "categories_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:427 f78683951d614529b00faed297d9e46c
+msgid "A list of categories that are used to filter remote resources."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:433 d7d7bf6bcc6340e1bbcfdc941fd580c5
+msgid "WMS harvester worker"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:435 3cdd34ce8f594c409252a6d252fcd1c3
+msgid "This worker is able to harvest from remote OGC WMS servers."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:437 d878e41daeb046cd86532b3b9736f7dd
+msgid ""
+"This harvester can be used by setting "
+"``harvester_type=geonode.harvesting.harvesters.wms.OgcWmsHarvester`` in "
+"the harvester configuration."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:445 5d21b494ca294f1e9719818e5609a9ae
+msgid "dataset_title_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:443 035543390f7d4390b32306729ae7de3e
+msgid ""
+"A string that is used to filter remote WMS layers by their ``title`` "
+"property. If a remote layer's title contains the string defined by this "
+"parameter, then the layer is recognized by the harvester worker."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:450 fd636eb5958747bd886187396441fdad
+msgid "ArcGIS REST Services harvester worker"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:452 5f60450daf954822b7b8a098f6b725ed
+msgid "This worker is able to harvest from remote ArcGIS REST Services catalogs."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:454 ffcef6b78ebe47089304fead582e6fca
+msgid "This worker is able to recognize two types of ``remote_url``:"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:456 e8d4bc3eb3a1402891db6e7b942b157c
+msgid ""
+"URL of the ArcGIS REST services catalog. This URL usually ends in "
+"``rest/services``. A catalog may expose several different services. This "
+"harvester worker is able to descend into the available ArcGIS Rest "
+"services and retrieve their respective resources. Example::"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:462 66768631ea3a4a1cad37a506eae2d446
+msgid ""
+"URL of the ArcGIS REST services Service. This URL usually takes the form "
+"``{base-url}/rest/services/{service-name}/{service-type}``. Example::"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:466 fd1dc423d7e145d5a6d71b565211baf8
+msgid ""
+"This harvester worker can be used by setting "
+"``harvester_type=geonode.harvesting.harvesters.arcgis.ArcgisHarvesterWorker``"
+" in the harvester configuration."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:472 abc64db9bb084b809cb181992d393d41
+msgid "harvest_map_services"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:472 1f983c5fd36b43a98d4bf45b9662add2
+msgid ""
+"Whether services of type `MapServer` ought to be harvested. Defaults to "
+"``True``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:475 711912eb67fe4ed68af746d87626e824
+msgid "harvest_image_services"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:475 1b34d704664c4df79387fd35927f677d
+msgid ""
+"Whether services of type `ImageServer` ought to be harvested. Defaults to"
+" ``True``."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:479 012c001844db4106a4270566eefa893c
+msgid "resource_name_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:478 5185808cec0a43abb37ba483f9020258
+msgid ""
+"A string that is used to filter remote WMS layers by their ``title`` "
+"property. If a remote layer's name contains the string defined by this "
+"parameter, then the layer is recognized by the harvester worker."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:483 70479427cf1548c590e1f6429be7818c
+msgid "service_names_filter"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:482 58b177c24a964061afc9bb2550a58344
+msgid "A list of names that are used to filter the remote ArcGIS catalog."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:488 6ae1074a4b334d9d8cafd0a34367284b
+msgid "Creating new harvesting workers"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:490 a2903457cebe492c91e74fafc020ca5c
+msgid ""
+"New harvesting workers can be created by writing classes derived from "
+":ref:`geonode.harvesting.harvesters.base.BaseGeonodeHarvesterWorker "
+"<https://github.com/GeoNode/geonode/blob/master/geonode/harvesting/harvesters/base.py#L66>`."
+" This class defines an abstract interface that must be implemented. All "
+"methods decorated with ``abc.abstractmethod`` must be implemented in the "
+"custom harvester worker class. Study the implementation of the standard "
+"GeoNode harvester worker classes in order to gain insight on how to "
+"implement custom ones."
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:496 ceb96262ecd74ffdaa5d6b1ec2c7a00e
+msgid ""
+"After writing a custom harvester worker class, it can be added to the "
+"list of known harvester workers by defining the ``HARVESTER_CLASSES`` "
+"GeoNode setting. This setting is a list of strings, containing the Python"
+" class path to each harvester worker class. It has a default value of::"
+msgstr ""
+
+#: ../../intermediate/harvesting/index.rst:506 59ccc95175db41dc997739271cacdf0f
+msgid ""
+"These are the standard harvester worker classes shipped by GeoNode. If "
+"this setting is defined, its value will simply extend the default list. "
+"This means that it is not possible to disable the standard worker "
+"classes, only to add new ones."
+msgstr ""
+

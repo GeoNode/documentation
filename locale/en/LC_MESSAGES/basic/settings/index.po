@@ -8,33 +8,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 17:42+0100\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: ../../basic/settings/index.rst:5 350dc4b506e349b18dcc1d4090a0cda7
+#: ../../basic/settings/index.rst:5 9feefb22cb044421ab2be9fcdff97531
 msgid "Settings"
 msgstr ""
 
-#: ../../basic/settings/index.rst:7 93965c6f75e34a158115826e58221715
+#: ../../basic/settings/index.rst:7 5ee9b273418247989ec2f565d16c7419
 msgid ""
 "Here’s a list of settings available in GeoNode and their default values."
 "  This includes settings for some external applications that GeoNode "
 "depends on."
 msgstr ""
 
-#: ../../basic/settings/index.rst:10 275206c859924c348a61aa586efc24fa
+#: ../../basic/settings/index.rst:10 fef73135f56544d5a689e604f085786b
 msgid ""
 "For most of them, default values are good. Those should be changed only "
 "for advanced configurations in production or heavily hardened systems."
 msgstr ""
 
-#: ../../basic/settings/index.rst:12 9a8f5d6e58d54a6486eff943ed708cd3
+#: ../../basic/settings/index.rst:12 a373b9cd52a544dda8c0df76f6f9c4ec
 msgid ""
 "The most common ones can be set through ``environment`` variables to "
 "avoid touching the ``settings.py`` file at all. This is a good practice "
@@ -44,136 +44,134 @@ msgid ""
 "``local_settings``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:21 06795f52c9664e2ab92ecf34884dd901
+#: ../../basic/settings/index.rst:21 87b5fd576eb5430094b9eb582e3a76d2
 msgid "A"
 msgstr ""
 
-#: ../../basic/settings/index.rst:24 e8632d3e0d9c41128be7ec1dd0b9af39
+#: ../../basic/settings/index.rst:24 89c964cdd32941d291665cab3ef8994f
 msgid "ACCESS_TOKEN_EXPIRE_SECONDS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3177bd85e01348589477ffdfeed64f2e
+#: ../../basic/settings/index.rst fcbd800101ac4b68ac6f228f4b591ee7
 msgid "Default: ``86400``"
 msgstr ""
 
-#: ../../basic/settings/index.rst ae1c52dc0bc94ca09c7020f8d3ce0873
+#: ../../basic/settings/index.rst 6b3895bf06354df484124e60d5ea06b7
 msgid "Env: ``ACCESS_TOKEN_EXPIRE_SECONDS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:29 1461bd6fe9eb4a0bb9485bea488c468c
+#: ../../basic/settings/index.rst:29 edd28ba29af34014926375d8a6f0bf43
 msgid ""
 "When a user logs into GeoNode, if no ``ACCESS_TOKEN`` exists, a new one "
 "will be created with a default expiration time of "
 "``ACCESS_TOKEN_EXPIRE_SECONDS`` seconds (1 day by default)."
 msgstr ""
 
-#: ../../basic/settings/index.rst:32 a8572cffdd654e94840420174807b8f3
+#: ../../basic/settings/index.rst:32 b68544b04eb94c08a6d35ae06ff9585b
 msgid "ACCOUNT_ADAPTER"
 msgstr ""
 
-#: ../../basic/settings/index.rst 8935a03ef3ce4b2db35e8e11aa26c37f
+#: ../../basic/settings/index.rst ed2081e0bfe5442f83fc18ccd2ffffdb
 msgid "Default: ``geonode.people.adapters.LocalAccountAdapter``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:36 b95b5c33116c49d2a4a11ea2113adaba
+#: ../../basic/settings/index.rst:36 a19b37fee1da41d29287699a3ce6da7d
 msgid "Custom GeoNode People (Users) Account Adapter."
 msgstr ""
 
-#: ../../basic/settings/index.rst:39 10ea2d62d94d4558814dadf3fb2b3200
+#: ../../basic/settings/index.rst:39 e03bee4441094405a27f80d0f39c5d4a
 msgid "ACCOUNT_APPROVAL_REQUIRED"
 msgstr ""
 
-#: ../../basic/settings/index.rst ../../basic/settings/index.rst:546
-#: ../../basic/settings/index.rst:574 ../../basic/settings/index.rst:661
-#: ../../basic/settings/index.rst:668 ../../basic/settings/index.rst:948
-#: ../../basic/settings/index.rst:952 ../../basic/settings/index.rst:1377
-#: ../../basic/settings/index.rst:1385 ../../basic/settings/index.rst:1400
-#: ../../basic/settings/index.rst:1680 ../../basic/settings/index.rst:1686
-#: ../../basic/settings/index.rst:1927 ../../basic/settings/index.rst:1934
-#: ../../basic/settings/index.rst:2056 ../../basic/settings/index.rst:2395
-#: 034ebac450b048b2a83b3c22d6493de4 0ab5847763d34217b8702534749dcef2
-#: 13a9eec122104b8a8e824d61f8ab9491 16b1f624a3a34b3982fb9093439e9a0f
-#: 193077c60dad4d26bc9a3ae5887e3b4e 19aac7c48db84f628d85cf65d9fa33a2
-#: 1c9cda3482b04523b489a5b449dc6ef9 283eeab8351d45b69b33199cd9a28e3a
-#: 469af8bf9b0e48bcabb409f2cf4c510e 48d8d8f2fe0e40e085c0a8451e08ced8
-#: 4ef9f46331a6421fbe8f31bcb724b6ce 670be9b16683497494e6a8f4b0ad583c
-#: 6764388f31ab4f9a811eacec9bda3331 71fae515dbf64ed69b5723648443d44f
-#: 76904f3d85664028891da32b67fd869f 7e96dd6a147d46bba69ba8455e05d183
-#: 7ef450b2189242e3aed27a1c56341a93 7efb161875ee4ceabff01b482c4d2c77
-#: 82c7868e085c4e578d5c652bdb27e76c 83e21855b16e41edb75dbab15f0e9a8b
-#: 86d4104bd3b94fe49994c1a7a0d9a353 8aa5263f94934bfdb9c2f2cee85ec07e
-#: 8cf6a3843bc94a2ba755a1a45d9739d7 8da277e56be147e08ea4bd4e1904d807
-#: 90c3566239714a03a08243ed16e3596d 94b4e6a6d610405d890cedf946ae7b55
-#: a2a9b6a7e99e420cb6c1b9598674e8c5 a4fa4469e96042d79a66319bfeb3993c
-#: a5d9aca853ad4138906a81cabefaed89 ac1a86ceeaed4fdd8cd413d3ef9a4781
-#: b45ec2e957d24e3494fb5b35f1cb72cc b698010aae8644099902b4814f3349e2
-#: bcac0426aedb4b27af1fed0dfbecf94b c7113aa2b092433fab848437c5f2ee46
-#: c9d1049d56d040899db22139c4dd9c3b cd43f3089b754143b5470d0c9c7c5b3a
-#: cf483495931344fb8180774b732438c3 d4fa1b055b664e3b9e09cd4790e28296
-#: d8cd47d3d1fb472c9ed861b35568c7fc e4008371fc1b4160ad2a73137071b820
-#: e4178d8312b34662b4a9cf9da5d6c6fa e93cccc01be54e5c9b730043e15e9be4
-#: f9d8730734f2472d9fef1da0b50217fd fad476184c8442ff921ad0efd2f24d96
-#: fc3c8c1977164b238f8cd276a3573540
+#: ../../basic/settings/index.rst ../../basic/settings/index.rst:502
+#: ../../basic/settings/index.rst:530 ../../basic/settings/index.rst:617
+#: ../../basic/settings/index.rst:624 ../../basic/settings/index.rst:996
+#: ../../basic/settings/index.rst:1000 ../../basic/settings/index.rst:1455
+#: ../../basic/settings/index.rst:1463 ../../basic/settings/index.rst:1478
+#: ../../basic/settings/index.rst:1758 ../../basic/settings/index.rst:1764
+#: ../../basic/settings/index.rst:2005 ../../basic/settings/index.rst:2012
+#: ../../basic/settings/index.rst:2146 ../../basic/settings/index.rst:2561
+#: 03c372e64d604063b3729e19691f58c0 149cafb5fa9c458997f131b6dfd7bc44
+#: 199e7ed2fce74978ab0b935277ddf94c 1af176c5d2f94243a0f3f576d6eeb608
+#: 21dd1bd2fd8a4b82a5dac089d9350b68 25479c7509c146b397c7753badf8d49b
+#: 27d6327cd3ff4c5e91cea17d1ee094de 2955f8520ccd443c9e3fd14e064d2984
+#: 2a7b3d2a408c4c9e99286c2d1331c242 3517dc4e55064d91aba89810ecaffe5e
+#: 36b188776dd643e88b5a33281dea9d31 3bf2e84d302e4ff29890ecbcbbb4bd35
+#: 3d1e6ab8c2244684ba4f5d3e30e78353 4555b94cd3134c75bc5d9e203b28a787
+#: 457b0512cfeb4b14be97b3287d8cb89a 45a80f8d0cc3443aa2355018d8d1f059
+#: 4627055a729a49928c78f4d9e3f0ad08 4633e577c9ff429380592dbedff94df9
+#: 4789680e522b4fb89b23027077585240 4e8c355a6cb8425f84f57c1a140250de
+#: 571f243ce91e4a31b2e34a2b8c10e830 62412c5db8444f1fa464973dd26d3227
+#: 7933b236dbbf4cfabe8f03c9b00de535 84141c954b604c03b38c8385bfe42b30
+#: 8f1a9f3c7c5e4592b45efed67d983f7b 9d709ac6343d48a2b5973cf8c3c944b9
+#: a01e910ee0f44b9781d83da668e63c95 a10af1c016534dbf9f817024345ea27f
+#: a1300865fbf942e3bb4c162c0f3ddbb6 ab5d116e47e846c0a7c08ce765ea4aab
+#: aff450d7332844dd9238e53e1bf3f574 b1bfdc7f75e8450e8eda374c9065d904
+#: b7029b56cfcb49dba4d6fa5d43d2480b c0fa9a6e941e4b8f92082dfb714c1cf4
+#: d0c5373583a04a409f49b52082581b21 d1ca547a9ae141a38ce4674634506728
+#: de5cf2262a704fada55791ee5a93eed9 e466a83487ed47ef8ee53b5eb8a8db4b
+#: e97d6bd6d4604f9c9e52c8b8bc4d616b eaf73906542b4680b3e6166d18aed222
+#: f7cd16e863ae415f99cca3c33af79d8a f920defd1a344e1c88bdfac88f5c4b79
 msgid "Default: ``False``"
 msgstr ""
 
-#: ../../basic/settings/index.rst daff28da0e5549959f36036abdf84878
+#: ../../basic/settings/index.rst 754473c8fb684ae3b2b728f69b2c47b9
 msgid "Env: ``ACCOUNT_APPROVAL_REQUIRED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:44 1ec7671ac70e4b528e8a1ee29127a79e
+#: ../../basic/settings/index.rst:44 86a554add1fb4f87aa091c813a41ed60
 msgid ""
 "If ``ACCOUNT_APPROVAL_REQUIRED`` equals ``True``, newly registered users "
 "must be activated by a superuser through the Admin gui, before they can "
 "access GeoNode."
 msgstr ""
 
-#: ../../basic/settings/index.rst:47 f757a86b3bcf44d8b81cc9799379d0a6
+#: ../../basic/settings/index.rst:47 1cbcfa7d37a14e0aa46846d08b503818
 msgid "ACCOUNT_CONFIRM_EMAIL_ON_GET"
 msgstr ""
 
-#: ../../basic/settings/index.rst ../../basic/settings/index.rst:520
-#: ../../basic/settings/index.rst:534 ../../basic/settings/index.rst:553
-#: ../../basic/settings/index.rst:588 ../../basic/settings/index.rst:603
-#: ../../basic/settings/index.rst:610 ../../basic/settings/index.rst:654
-#: ../../basic/settings/index.rst:748 ../../basic/settings/index.rst:755
-#: ../../basic/settings/index.rst:1595 ../../basic/settings/index.rst:1633
-#: ../../basic/settings/index.rst:1649 ../../basic/settings/index.rst:1661
-#: ../../basic/settings/index.rst:2102 ../../basic/settings/index.rst:2174
-#: ../../basic/settings/index.rst:2206 ../../basic/settings/index.rst:2222
-#: 0df374df18884ad08ae44590abb67e99 11fcb525d4fc4c2b815e6c0f7e5579be
-#: 1571d3361fea437e8fd0cbd7dc51f2cf 1a02b3067eb5458bbde9fb3bf43bb8a7
-#: 2bc808c61d5c41f887d3a6b81a021995 34a0cc439eea45acb7eb83deb0af2de9
-#: 5b1b677d657744c5bc0a116221d8ef2f 63bc959986ea42a98cb883757f5caf17
-#: 6d1a509826434079adad8406716c00f2 732bee46bf6644f48d49406e8a3120bb
-#: 73e22f7a3ae0438d84351396f6baa647 7e7ef05d89584746991d4710e6b2c6bf
-#: 7f847843405c4321b3b205494169342b 8335b630933d4a0f83bbf8f10b5a1df4
-#: 8eb7f70382a345e0af3e63f65b2f8593 9ac4cec87dc04f4c9e2a0cddeb041515
-#: 9e141ae73c37454ea790c18d04196201 9fbcffa9f2c74e85b8e86c3c06b6a1f7
-#: a943f4e2e82a4f40a9f2bb7811477dc9 aa5ec68032164183b3b473ec695bed8e
-#: afbe134069df49d388cff7866c116404 afd52028d8004ca394f1149e14c2dc20
-#: b15bf7d5aa0549518dff8ea0336ec439 c86bce63e34f48cf9913bc6c0052cf85
-#: c86c56ebd3914338bd876801837a43f8 cae1e990c4f042359582e3f6f51a878c
-#: cd2cc18ddc3149d98e69d9ba2b5c2866 deb5fc0e2aeb4461974ec7fef6cc7c20
-#: df6b492039ed46ebbd9d33a2de6b11bf e2823a6e90bb4cd3ad4e7ba2d52d252d
-#: e3c14ef1566e4096a62eaa9038384cdd ecba2b8bf40246c6af127570cabf3f94
-#: ee4deaaf2e5f404b8cae096537113b91 f5e4edb42963423299d8cfdfbc2dc5bc
-#: fff5a279256d43c9a16e2f92ff78a4f0
+#: ../../basic/settings/index.rst ../../basic/settings/index.rst:476
+#: ../../basic/settings/index.rst:490 ../../basic/settings/index.rst:509
+#: ../../basic/settings/index.rst:544 ../../basic/settings/index.rst:559
+#: ../../basic/settings/index.rst:566 ../../basic/settings/index.rst:610
+#: ../../basic/settings/index.rst:722 ../../basic/settings/index.rst:729
+#: ../../basic/settings/index.rst:1673 ../../basic/settings/index.rst:1711
+#: ../../basic/settings/index.rst:1727 ../../basic/settings/index.rst:1739
+#: ../../basic/settings/index.rst:2199 ../../basic/settings/index.rst:2271
+#: ../../basic/settings/index.rst:2303 ../../basic/settings/index.rst:2319
+#: 0626bede4a874b428dfc881e4ec0a9fd 074bf662cb7549ffafe4fe6ab2047573
+#: 0e57d8249d1549a0ae710c7e88774448 11d1459f220d4eb0aa657990db40276c
+#: 29097116b1ab480c9de2578ba08b1a0b 2b8a754627e448bbbcc9d752bd69686e
+#: 2bcb286611b44394987d8c6562e0a92b 2bd9f8371b53463fa7c3fca8443c37ca
+#: 3102824b77c94cfabdd7085954f812e1 311b526f58134f9389e6d6af13183266
+#: 349c907ea9cb40af9240d7ed9d40ba46 4f66a34686cf4dc8af14cddde5b2ef27
+#: 52bdd4bda57448f793efc7b914ff4b5f 547b190b669c4f4baee9af2832f26115
+#: 57cb12f30202473eaa198a1f4b6b5a6b 650758986d974426858777288f4deb87
+#: 66080a0636cc4a668dc7f86dade5bd4d 69875bffe11b417383ebdea96d924b58
+#: 699ba4ca19bb436ab05bc3c0782a37a8 8071ee9f6c394cbf876e3525b1c22a92
+#: 83996c51fdcf4b588f7a4152ac2fa2c9 83cf7b36fe634afa992e55e1bdaaf06e
+#: 8e95c2992ea54ee58aa9c9c39b5abefe 962d1d0952134ae1927239df5593a274
+#: 98312c042e924310ae780e35abd4224b ac7162891bb74e7abef824df7fcda114
+#: afc2587b739146638f0c03a50bd1dea1 b1b86be1830a46a7b01df275206e2762
+#: bb350a32971b44ec9fd7d8b4dc892a09 c5aadba47e3d44c3a747426913cc7ed9
+#: ca01653e7b114f6092e3e7e33af8fd75 d680bab59d6244bd863f63be1db32979
+#: e08001f44e874564bb6c00979942e732 e9acf7503a574f15a24f28b844318603
+#: eb0fc1a9f2374b2eb7a1e97732442add fa7c2389a5a04de3b355abaaf804b42f
 msgid "Default: ``True``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:51 102850a6b5ce48329c626a333aa87d91
+#: ../../basic/settings/index.rst:51 93565ba62a5d4aeeb1d9e270186326c1
 msgid ""
 "This is a `django-allauth setting <https://django-"
 "allauth.readthedocs.io/en/latest/configuration.html#configuration>`__ It "
 "allows specifying the HTTP method used when confirming e-mail addresses."
 msgstr ""
 
-#: ../../basic/settings/index.rst:55 9707c64000d2442fa17dcbc8d652904b
+#: ../../basic/settings/index.rst:55 0a49156f4c534c98aa25582dbf7ee40c
 msgid "ACCOUNT_EMAIL_REQUIRED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:59 71c37c43cdd34f548f3d14a761dee7d3
+#: ../../basic/settings/index.rst:59 22034152f6bb4b44bc5cf880e98c4b0c
 msgid ""
 "This is a `django-allauth setting <https://django-"
 "allauth.readthedocs.io/en/latest/configuration.html#configuration>`__ "
@@ -181,159 +179,197 @@ msgid ""
 "upon registration."
 msgstr ""
 
-#: ../../basic/settings/index.rst:63 9a1c78e4c05941a1a002726b463a96d0
+#: ../../basic/settings/index.rst:63 cabd86bc79ca4590965f850883c2ad0d
 msgid "ACCOUNT_EMAIL_VERIFICATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst dff39ab4df9143d2b56bdc9cdaf0b852
+#: ../../basic/settings/index.rst 91e2da46d8c84c9ca29da472edaa8828
 msgid "Default: ``optional``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:67 c21d4dec6d644662a0bfad3a261f4957
+#: ../../basic/settings/index.rst:67 27fbbd14fca24943962c536cd0930fec
 msgid ""
 "This is a `django-allauth setting <https://django-"
 "allauth.readthedocs.io/en/latest/configuration.html#configuration>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:70 81128a9238544f408961db780e889c64
+#: ../../basic/settings/index.rst:70 106af7f8db9a4b9e83769253e25889df
 msgid "ACCOUNT_LOGIN_REDIRECT_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 35db68ed7a5c44e1a5e625d6a0454247
-#: 80309c181bb94c46ba9c68ec62159b9c
+#: ../../basic/settings/index.rst 1c6deb88d1ee42139aa9331b0c5d0e87
+#: e3a6d45798e54cb684ec6ea00013a396
 msgid "Default: ``SITEURL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 48db291b4ff242bf93df6cba71363ee5
+#: ../../basic/settings/index.rst 29381bfa77174eaabc8c1ce2ffb8fe33
 msgid "Env: ``LOGIN_REDIRECT_URL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:75 4a1cdf0749a9431b9a457124666956c6
+#: ../../basic/settings/index.rst:75 2378fee2a77e4fedbc3b143a1d252f25
 msgid ""
 "This is a `django-user-accounts setting <https://django-user-"
 "accounts.readthedocs.io/en/latest/settings.html>`__ It allows specifying "
 "the default redirect URL after a successful login."
 msgstr ""
 
-#: ../../basic/settings/index.rst:79 7dd91bdc46934fd68d20c677c5b62801
+#: ../../basic/settings/index.rst:79 da94740a208a484a9430b579c4c6d8d8
 msgid "ACCOUNT_LOGOUT_REDIRECT_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst ea364c65da3c49eda2c879d87af58a35
+#: ../../basic/settings/index.rst 742673e5e3954c228910e39cd64a810c
 msgid "Env: ``LOGOUT_REDIRECT_URL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:84 f3db2c22cdff4e94a49be02f53261b2d
+#: ../../basic/settings/index.rst:84 9face1d946dc4b9588155dd0f5e46114
 msgid ""
 "This is a `django-user-accounts setting <https://django-user-"
 "accounts.readthedocs.io/en/latest/settings.html>`__ It allows specifying "
 "the default redirect URL after a successful logout."
 msgstr ""
 
-#: ../../basic/settings/index.rst:88 53251aad905c4de99943fbb9f91b0355
+#: ../../basic/settings/index.rst:88 2683be5dedeb46058fff1ee55eb28904
 msgid "ACCOUNT_NOTIFY_ON_PASSWORD_CHANGE"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1ea2c9de4070472bbfa1036e15f7816d
-#: e438636a29914651ad22506aeafce834
+#: ../../basic/settings/index.rst 9c2280bccca74af6b5e8d1573064e80b
+#: cf9e1421ad724ac290937f84b54ad7c5
 msgid "Env: ``ACCOUNT_NOTIFY_ON_PASSWORD_CHANGE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:93 90916d6c2680418e9cd5b216cccdfa61
+#: ../../basic/settings/index.rst:93 8f92e951e3ce45009a3149b35999940b
 msgid ""
 "This is a `django-user-accounts setting <https://django-user-"
 "accounts.readthedocs.io/en/latest/settings.html>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:96 2c686d174bdb4fee9301b0a3072b6327
+#: ../../basic/settings/index.rst:96 c7d33733bc8b4956a25e3a734e74d468
 msgid "ACCOUNT_OPEN_SIGNUP"
 msgstr ""
 
-#: ../../basic/settings/index.rst 98dec1f41cbe411b81d1039c5a12baff
+#: ../../basic/settings/index.rst 6d186e240b794d09bc691635d95dec04
 msgid "Env: ``ACCOUNT_OPEN_SIGNUP``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:101 12a358317e4844e0ba10f1e4ad84607c
+#: ../../basic/settings/index.rst:101 41d772d666c141fcacf10d48c76c5f8e
 msgid ""
 "This is a `django-user-accounts setting <https://django-user-"
 "accounts.readthedocs.io/en/latest/settings.html>`__ Whether or not people"
 " are allowed to self-register to GeoNode or not."
 msgstr ""
 
-#: ../../basic/settings/index.rst:105 2dd0f2198c8b438dbe5c84f65114d2d9
+#: ../../basic/settings/index.rst:105 404868fc0ebc46b29e5248fd71515b37
 msgid "ACCOUNT_SIGNUP_FORM_CLASS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 67500207ed35473480132e8766149d26
-#: bf4d107a3cbc459bb2c59b31d2e62d44
+#: ../../basic/settings/index.rst 22fedf0620d0472c959795ef34f95269
+#: d7db490cc8ea4a1fba4432eef95b107a
 msgid "Default: ``geonode.people.forms.AllauthReCaptchaSignupForm``"
 msgstr ""
 
-#: ../../basic/settings/index.rst b1143dfb0afa4916b888a1b29efc08e4
-#: b917244db749403099eea33d17ecaee0
+#: ../../basic/settings/index.rst a81cc0b01ace42fa9c515e4803493ed2
+#: b0e4038abc574a6f94fd0dfa4ac6d68b
 msgid "Env: ``ACCOUNT_SIGNUP_FORM_CLASS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:110 ../../basic/settings/index.rst:1844
-#: 7af49ae6038d4509aebd6ec4f198b6f9 ce15414c08f44964ad3c8579b8094908
+#: ../../basic/settings/index.rst:110 ../../basic/settings/index.rst:1922
+#: 4df42bf03e87453793746708cefbee41 d5708f0ef88e402393e4bf318af9639b
 msgid "Enabled only when the :ref:`recaptcha_enabled` option is ``True``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:112 ../../basic/settings/index.rst:1889
-#: ../../basic/settings/index.rst:1899 0bed1cf058f84f91885cad34c043e6c4
-#: 36854daef90c4f3a81c56ca88bb28a8f 7d4ebb08ce544c3593aee6ac922a3707
+#: ../../basic/settings/index.rst:112 ../../basic/settings/index.rst:1967
+#: ../../basic/settings/index.rst:1977 9684fc1909f04629a78a5a7d793e5dac
+#: 9775395558ed48df81c45a08a55ab385 a493153567f74f76a3f28941af36a53b
 msgid "Ref. to :ref:`recaptcha_enabled`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:115 0bcabcb493df42239dffe8dda3577f28
+#: ../../basic/settings/index.rst:115 10431289b7f740169c1760101b44ef29
 msgid "ACTSTREAM_SETTINGS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:117 ../../basic/settings/index.rst:164
-#: ../../basic/settings/index.rst:182 ../../basic/settings/index.rst:233
-#: ../../basic/settings/index.rst:419 ../../basic/settings/index.rst:437
-#: ../../basic/settings/index.rst:617 ../../basic/settings/index.rst:691
-#: ../../basic/settings/index.rst:885 ../../basic/settings/index.rst:896
-#: ../../basic/settings/index.rst:908 ../../basic/settings/index.rst:1742
-#: ../../basic/settings/index.rst:1964 ../../basic/settings/index.rst:2111
-#: ../../basic/settings/index.rst:2161 ../../basic/settings/index.rst:2181
-#: ../../basic/settings/index.rst:2213 ../../basic/settings/index.rst:2287
-#: ../../basic/settings/index.rst:2368 ../../basic/settings/index.rst:2387
-#: 01de2223ceb544908af650a0e53b9a07 0a69e5b143c545ac9459279cab6935f1
-#: 22792d4d3aa54058b879cb7a8dd963ea 2f95b2dde9d24aea9b40f428a223acc6
-#: 393a6b4f3c6744fea38f1a0086f1de7c 606c379dcaa547e79716d0f5dff4d1a2
-#: 68c51e11682b448e83381d5c2b68f774 6e96a36189d840c2ba6bb97d0c016eb1
-#: 72ae8c72555b4fbe91dcdeddd0709722 7cfc505d3cbb49179eb4c8a1ac03559a
-#: 7f0558a6387e419e85c5ffa1c6798ff4 841ce241aab34440bc5eb5fa95aebd74
-#: 9112a7306f9940ca9076df7d3aa600c9 96215c747e1d4621b732e0dfa40f1d12
-#: a7be41d7cb8a406b9d6ef00f58f5f003 af7957e598134e49b688b2815d2b4605
-#: b1610e9348e54f178b3cccf94e34cc43 c99d9720e05d40ae9c4144c2b219ffc9
-#: f2d44694a1fd4d0f9a41322290af56e8 f707ab3f558e4b5fb5ad5d08a4a4d926
+#: ../../basic/settings/index.rst:117 ../../basic/settings/index.rst:192
+#: ../../basic/settings/index.rst:210 ../../basic/settings/index.rst:261
+#: ../../basic/settings/index.rst:386 ../../basic/settings/index.rst:404
+#: ../../basic/settings/index.rst:573 ../../basic/settings/index.rst:656
+#: ../../basic/settings/index.rst:933 ../../basic/settings/index.rst:944
+#: ../../basic/settings/index.rst:956 ../../basic/settings/index.rst:1820
+#: ../../basic/settings/index.rst:2026 ../../basic/settings/index.rst:2208
+#: ../../basic/settings/index.rst:2258 ../../basic/settings/index.rst:2278
+#: ../../basic/settings/index.rst:2310 ../../basic/settings/index.rst:2375
+#: ../../basic/settings/index.rst:2391 ../../basic/settings/index.rst:2453
+#: ../../basic/settings/index.rst:2534 ../../basic/settings/index.rst:2553
+#: 069d52bdda494d14ac76d973cd8130c2 2b591eb1bc8e4815a2a723135c23dc7f
+#: 301e1424ca884e4e84986cc02847fe53 337786feebb947cba8fbed49da88f39d
+#: 374762e513a74b7a8308154237ea1c85 3ac7d62a4c1e42e6b5fb22c051adaed8
+#: 43346a2e085d4eb8a2cd6870d1ad1d20 4aa365981f4c40778333842806694e68
+#: 587b2133efb84967ac79b775675bbc24 83b63c5d73394a03b7b80ebf34a61b92
+#: 868e852c8e5a49e68fe3ad50509a8874 8b0692656ce1478c8ad315bc99ed4fe7
+#: a35b814f692a40bc8a2b442b2c89d038 a893d2fcf9104ea5a156218b5edf64dc
+#: b39a7591bead48b9a7a4e033bbd59ce1 c00d3bef2fb14d08a6dabaf5e243369b
+#: ce0ddc0361f04f6da9b9e45e64b5655f d8e483d6327145dc88abc1f0d036df46
+#: ded4bf53508c4152ba86d117f2e667aa dfdb0e8a132c426da47594c80dd7065a
+#: f59455339a1146bb9ada0f682952890e faef6e12a8c94fae807ca7bb8f9ac32e
 msgid "Default::"
 msgstr ""
 
-#: ../../basic/settings/index.rst:126 f3ccf0a668d44d2a9c0647a524b0d854
+#: ../../basic/settings/index.rst:126 6a9267c062aa4b23a0e8e546070f1591
 msgid "Actstream Settings."
 msgstr ""
 
-#: ../../basic/settings/index.rst:129 62966dc73c3844a78ae1e7205185b663
+#: ../../basic/settings/index.rst:130 f76db7e41f1244408d086e245dd16539
+msgid "ADDITIONAL_DATASET_FILE_TYPES"
+msgstr ""
+
+#: ../../basic/settings/index.rst:132 3e83b686f62d4559accea11d8a478006
+msgid ""
+"External application can define additional supported file type other than"
+" the default one declared in the `SUPPORTED_DATASET_FILE_TYPES` ."
+msgstr ""
+
+#: ../../basic/settings/index.rst:134 bd195b833e324fb0944f16caa38040b5
+msgid ""
+"The variable should be declared in this way in `settings.py` (or via "
+"application hook):"
+msgstr ""
+
+#: ../../basic/settings/index.rst:147 4dea044bfd6540c99abd08fe4c151d3e
+msgid "Please rely on geonode.tests.test_utils.TestSupportedTypes for an example"
+msgstr ""
+
+#: ../../basic/settings/index.rst:150 804f18ccc3a44d97abeb824e978c6353
+msgid "ADMIN_IP_WHITELIST"
+msgstr ""
+
+#: ../../basic/settings/index.rst 1656163c59c34097af6000d10e7445f1
+#: 72caeef1ad5d4b1d99bb52de032bbfab f480283b21b649ba8c52cd5be19759c1
+msgid "Default: ``[]``"
+msgstr ""
+
+#: ../../basic/settings/index.rst:154 0585f0d7df2b4ce29bbf42ca080f74a1
+msgid ""
+"When this list is popuplated with a list of IPs or IP ranges (e.g. "
+"192.168.1.0/24) requests from and admin user will be allowe only from IPs"
+" matching with the list."
+msgstr ""
+
+#: ../../basic/settings/index.rst:157 07d7a8a0a83540efbe748edb6901b291
 msgid "ADMIN_MODERATE_UPLOADS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:133 04dc5ad459c9473dbdf97a239fada39a
+#: ../../basic/settings/index.rst:161 93e97559ee9a42efbc16cbe46d5a5942
 msgid ""
 "When this variable is set to ``True``, every uploaded resource must be "
 "approved before becoming visible to the public users."
 msgstr ""
 
-#: ../../basic/settings/index.rst:135 048d77515586465eaf3b52dfe22a45f8
+#: ../../basic/settings/index.rst:163 675b12be25704d34ab533d06fd1deebf
 msgid ""
 "Until a resource is in ``PENDING APPROVAL`` state, only the superusers, "
 "owner and group members can access it, unless specific edit permissions "
 "have been set for other users or groups."
 msgstr ""
 
-#: ../../basic/settings/index.rst:137 4f1b1e04efa44130af692940c396ee90
+#: ../../basic/settings/index.rst:165 7d22e715f8e54fa7b2eeb34cdb31c7b6
 msgid ""
 "A ``Group Manager`` *can* approve the resource, but he cannot publish it "
 "whenever the setting ``RESOURCE_PUBLISHING`` is set to ``True``. "
@@ -341,121 +377,116 @@ msgid ""
 "becomes accessible as soon as it is approved."
 msgstr ""
 
-#: ../../basic/settings/index.rst:141 817ac21616754f7fb80f621704d5986d
+#: ../../basic/settings/index.rst:169 996b2754b3394f8e97b0fb76ef236228
 msgid "ADMINS_ONLY_NOTICE_TYPES"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3c2ff078362440d2a6492f002468562d
+#: ../../basic/settings/index.rst c3e9f896520a4c10891004296d0ce221
 msgid "Default: ``['monitoring_alert',]``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:145 dcfe369469b3462bba1743f58b7cb7d0
+#: ../../basic/settings/index.rst:173 1958c05a0b004e15bc597b7ca9bf30d0
 msgid ""
 "A list of notification labels that standard users should not either see "
 "or set."
 msgstr ""
 
-#: ../../basic/settings/index.rst:147 1953f931a91a423b9ea22d6d1dcaa6c1
+#: ../../basic/settings/index.rst:175 aa1248e1850f4d66b7d17d96c8afda8e
 msgid ""
 "Such notifications will be hidden from the notify settings page and "
 "automatically set to false for non-superusers."
 msgstr ""
 
-#: ../../basic/settings/index.rst:151 4998e26114724abab0fa9947b1931de3
+#: ../../basic/settings/index.rst:179 3c41a38818e04a6796db564ec14e5908
 msgid "ADVANCED_EDIT_EXCLUDE_FIELD"
 msgstr ""
 
-#: ../../basic/settings/index.rst 74095600fe3c42919ec5bd772dde1f3f
-#: f8bd15150a3e4e3fbc81a8f1ffe45c8a
-msgid "Default: ``[]``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:154 698d4af87bd2468f88a10a770b6f8189
+#: ../../basic/settings/index.rst:182 039fb6a7e7254695a0edf40db7f9ac1c
 msgid "A list of element (item name) to exclude from the Advanced Edit page."
 msgstr ""
 
-#: ../../basic/settings/index.rst:156 ../../basic/settings/index.rst:1763
-#: fba8522da0bb4873ade2b00db4de196b fe38805a605140c1b1940c0474a55d5b
+#: ../../basic/settings/index.rst:184 ../../basic/settings/index.rst:1841
+#: 5f517abe6c7b428b81ab9628cd8fe87a 6c8e6c60544245b282155057baa37bea
 msgid "Example:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:158 9ed9e0b3611549a996f027061c132671
+#: ../../basic/settings/index.rst:186 688a94cf670f4f6c8e01c5408a71ad57
 msgid "``ADVANCED_EDIT_EXCLUDE_FIELD=['title', 'keywords', 'tkeywords']``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:162 c65d3e4cdbad4844bf07be84640ceaa3
+#: ../../basic/settings/index.rst:190 80dfa34058204e6f9d9e7ab86261cef2
 msgid "AGON_RATINGS_CATEGORY_CHOICES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:180 59a67633d4f04bbe9533779fbb446b5e
+#: ../../basic/settings/index.rst:208 92536744361e4fdd84f39f564a10768b
 msgid "ALLOWED_DOCUMENT_TYPES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:188 95051e0f72cb4d41b033d57622473197
+#: ../../basic/settings/index.rst:216 126f7b1fa68e4ec488e6c3e0a52c34f6
 msgid ""
 "A list of acceptable file extensions that can be uploaded to the "
 "Documents app."
 msgstr ""
 
-#: ../../basic/settings/index.rst:191 9a8910bd05ec47bf86207a2b04eae0a1
+#: ../../basic/settings/index.rst:219 1ce224ab7db542c9a82ab580ecd8b2d1
 msgid "ANONYMOUS_USER_ID"
 msgstr ""
 
-#: ../../basic/settings/index.rst a1bfe037c73d4a9587c22592799f199a
-#: a5e6a139b86246fd971fe7eaa5a5b611 db1bf9dfac37486892afd98386d02e54
+#: ../../basic/settings/index.rst 026dc937149c437ba25fcc45c9280a05
+#: 8467f288532240f790321916ec14ecbb 96fcb9fc308840e99bdf2eb108e8f0e5
 msgid "Default: ``-1``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 22ec0df5b3b64123ac2496d18f0cd1ed
+#: ../../basic/settings/index.rst 7fa49902747047c190b45d3c4ab0d2b6
 msgid "Env: ``ANONYMOUS_USER_ID``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:196 0170fac9b0554ea692bd99927084d947
+#: ../../basic/settings/index.rst:224 7ce47de6f5c24275abaadd4774541430
 msgid "The id of an anonymous user. This is an django-guardian setting."
 msgstr ""
 
-#: ../../basic/settings/index.rst:199 bfeccc9250ab43f99dbb56e5b6348027
+#: ../../basic/settings/index.rst:227 4acc5ec9b9954583acd59ba2009dfcd6
 msgid "API_INCLUDE_REGIONS_COUNT"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1f1f24e22f3349608986157439214b35
+#: ../../basic/settings/index.rst 71d4b91dcffe4a6eb44c3919e1695524
 msgid "Env: ``API_INCLUDE_REGIONS_COUNT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:204 d0d986098e494bc8ae6584b71621ad92
+#: ../../basic/settings/index.rst:232 34173e930e764c4f9970d77e26319f1b
 msgid ""
 "If set to ``True``, a counter with the total number of available regions "
 "will be added to the API JSON Serializer."
 msgstr ""
 
-#: ../../basic/settings/index.rst:207 2d1388bf564f45ff8cfff55bccb444c4
+#: ../../basic/settings/index.rst:235 9d47e356f718449991f6eb613980a22a
 msgid "API_LIMIT_PER_PAGE"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6918690a645c4d2baa487253ab4eec4b
+#: ../../basic/settings/index.rst f98cc475682442db90742c1229e53d77
 msgid "Default: ``200``"
 msgstr ""
 
-#: ../../basic/settings/index.rst a5fc5f14dea64b379fed14583e92b984
+#: ../../basic/settings/index.rst 4670a06c75af4708aac4906ea53621ea
 msgid "Env: ``API_LIMIT_PER_PAGE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:212 9c54f9e9e74b451aa8be3f2dde23b86f
+#: ../../basic/settings/index.rst:240 865bf179742642cc9c6a9d29fb47bcdf
 msgid ""
 "The Number of items returned by the APIs 0 equals no limit. Different "
 "from ``CLIENT_RESULTS_LIMIT``, affecting the number of items per page in "
 "the resource list."
 msgstr ""
 
-#: ../../basic/settings/index.rst:215 5c315b642c354f4ea810e5c8c8b425ce
+#: ../../basic/settings/index.rst:243 c315139495634bbdb3618f4ed04c1a7a
 msgid "API_LOCKDOWN"
 msgstr ""
 
-#: ../../basic/settings/index.rst f514db6857ca4cb890478742dc251632
+#: ../../basic/settings/index.rst 5b2bd19537ba4b63a579c10c6e93adab
 msgid "Env: ``API_LOCKDOWN``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:220 009a2f02d09c468dab7962cc9a397a46
+#: ../../basic/settings/index.rst:248 7eee32bec93a48b4a9c7bcec69fe4e63
 msgid ""
 "If this is set to ``True`` users must be authenticated to get search "
 "results when search for for users, groups, categories, regions, tags etc."
@@ -465,15 +496,15 @@ msgid ""
 " users."
 msgstr ""
 
-#: ../../basic/settings/index.rst:225 5abef844fb654d859376bb3feb447b8f
+#: ../../basic/settings/index.rst:253 d98f5a1c815f4289a0da5cb589ced976
 msgid "ASYNC_SIGNALS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:231 79a690fead5d4284a9a26e5826b239c9
+#: ../../basic/settings/index.rst:259 63af0f07d2ce4649b2710373604c30e9
 msgid "AUTH_EXEMPT_URLS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:245 cc2a0c9d327a46bd86c66042df234f28
+#: ../../basic/settings/index.rst:273 383cf903770d4e6ead4eda77e9b82c4c
 msgid ""
 "A tuple of URL patterns that the user can visit without being "
 "authenticated. This setting has no effect if ``LOCKDOWN_GEONODE`` is not "
@@ -481,44 +512,44 @@ msgid ""
 "unauthenticated users to browse maps."
 msgstr ""
 
-#: ../../basic/settings/index.rst:251 49b46a1a0136484aaad82bdc016a1ef5
+#: ../../basic/settings/index.rst:279 7909a76e082e4df28e8a497eb8a93e5c
 msgid "AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME"
 msgstr ""
 
-#: ../../basic/settings/index.rst bf271a87a8194e44a3f64c64a030e16b
+#: ../../basic/settings/index.rst 14d463e2e9464d51b1fedbbf555fff2d
 msgid "Env: ``AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:256 0b0bad1702fa41909ad1aff474aafc31
+#: ../../basic/settings/index.rst:284 7d14c4e11a6547e094461ac77ea06d7d
 msgid ""
 "Auto assign users to a default ``REGISTERED_MEMBERS_GROUP_NAME`` private "
 "group after "
 "``AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_AT``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:259 bbb4422bc75d4ff5b5fa3f8af33bb46b
+#: ../../basic/settings/index.rst:287 681134d895df42a5b282f116ae37d843
 msgid "AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_AT"
 msgstr ""
 
-#: ../../basic/settings/index.rst 39d43c9f435340ea9f54d5699195f73b
+#: ../../basic/settings/index.rst 3299e19839fd4429ae15beb48c2489b2
 msgid "Default: ``activation``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1c3ba6f5957341d9ac8eb2be3177208a
+#: ../../basic/settings/index.rst fc23e5ebb2754cffb4bf8d42edc90eba
 msgid "Env: ``AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_AT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 21780d0d73fc4841ae236d016cfa1b47
+#: ../../basic/settings/index.rst 55b8dc3a09f7489e8cf6d7bb55ccb75e
 msgid "Options: ``\"registration\" | \"activation\" | \"login\"``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:265 2af3a0eaf10e4d56b8ecb22e609810e8
+#: ../../basic/settings/index.rst:293 85754a92fdf24bdaac623459e9422484
 msgid ""
 "Auto assign users to a default ``REGISTERED_MEMBERS_GROUP_NAME`` private "
 "group after {\"registration\" | \"activation\" | \"login\"}."
 msgstr ""
 
-#: ../../basic/settings/index.rst:267 096bd36b8158474a891e92a95c78ab1e
+#: ../../basic/settings/index.rst:295 15552571673a48e3a275cf8b0fa24985
 msgid ""
 "Notice that whenever ``ACCOUNT_EMAIL_VERIFICATION == True`` and "
 "``ACCOUNT_APPROVAL_REQUIRED == False``, users will be able to register "
@@ -526,225 +557,124 @@ msgid ""
 "until the email has been verified."
 msgstr ""
 
-#: ../../basic/settings/index.rst:270 880ad8d2b95440928566fe281533e311
+#: ../../basic/settings/index.rst:298 21b2a23165e942ad955becf88a745114
 msgid "AUTO_GENERATE_AVATAR_SIZES"
 msgstr ""
 
-#: ../../basic/settings/index.rst 5d61606cdccb445fb5769f8f38852794
+#: ../../basic/settings/index.rst d9d7fcd914ee4274bb030c0ad6601f07
 msgid "Default: ``20, 30, 32, 40, 50, 65, 70, 80, 100, 140, 200, 240``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:274 d87df3b1a2114bd2ad25320558be2322
+#: ../../basic/settings/index.rst:302 c4b5178935494366b9136b0f0657d50d
 msgid ""
 "An iterable of integers representing the sizes of avatars to generate on "
 "upload. This can save rendering time later on if you pre-generate the "
 "resized versions."
 msgstr ""
 
-#: ../../basic/settings/index.rst:277 a950fcc84ccf4c5986f3cf8fb9feab09
+#: ../../basic/settings/index.rst:305 940e7c77a34a4dcba8720d43f069def8
 msgid "AVATAR_GRAVATAR_SSL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3579199a0e744390a78e0d9f930e129e
-#: 522840a8a0984724bdfb7c5541ec6848
+#: ../../basic/settings/index.rst 106fe8e78cbb4dce983d7a444e4f76cb
+#: 579e817e764c4756a27886679021bc50
 msgid "Env: ``AVATAR_GRAVATAR_SSL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 711d54edff1b46d8b596a9a3aa6cb706
+#: ../../basic/settings/index.rst e97c8e8787154e2d81212bf40a367174
 msgid "Options: ``True | False``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:283 439f84affc304e66aecd3af2eafc5970
+#: ../../basic/settings/index.rst:311 296ee49857b24e9ebc4fc4b9bf23c0c7
 msgid "Force SSL when loading fallback image from gravatar.com."
 msgstr ""
 
-#: ../../basic/settings/index.rst:286 83a31faf0cdf4858ae440b4ac5a279c9
+#: ../../basic/settings/index.rst:314 b9a7564b560142faa706bf63e6fda3e4
 msgid "AVATAR_DEFAULT_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 926d278687d24b5395ca85f13327b5e5
+#: ../../basic/settings/index.rst a5b09742bf0245caaab906fa1653e23a
 msgid "Default: ``/geonode/img/avatar.png``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1c5232970cb84ccda2cee17ee73e95da
+#: ../../basic/settings/index.rst 9be720b5f41c4bd5a4c0b5d2d0064a67
 msgid "Options: ``\"filepath to image\"``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:292 ea8569d3969441d4bb393f81a31366d7
+#: ../../basic/settings/index.rst:320 c2d447a59d224f4f9372f4b9ad34b04d
 msgid ""
 "Allows to set a custom fallback image in case a User has not uploaded a "
 "profile image. Needs ``AVATAR_PROVIDERS`` to be set correctly."
 msgstr ""
 
-#: ../../basic/settings/index.rst:296 b0d92aaa5c894f4db60aaa7363c3f545
+#: ../../basic/settings/index.rst:324 9f52745bad3b4dceb1eb35a3fb3a23df
 msgid "AVATAR_PROVIDERS"
 msgstr ""
 
-#: ../../basic/settings/index.rst ../../basic/settings/index.rst:1419
-#: ../../basic/settings/index.rst:1460 215aa3e35cf64ea1b2485418b69778fb
-#: 2ed62b9743be41eea1ab33b77d3a667f 30a5f1d1a2e549459d651b886fb6a341
-#: 69e15ddf91d64dc7becd355d7e3dba5a cf1848bd9f6e4b39a65210a2ff74428a
-#: d505b2191ae54a8592e11d8c1e1d7a9c
+#: ../../basic/settings/index.rst ../../basic/settings/index.rst:1497
+#: ../../basic/settings/index.rst:1538 054631b54cb94ecd95ba656b78a0d08b
+#: 075b833f54054f06a3e71dac198af65e 5679fca5a94e49f2a537686c6932a929
+#: 61d4de3c8e864ccc9974ca3e772a7058 62bb9e41b94e496f8d0d56930827f035
+#: 95d127b035c34448995d85f6d5565ce1 c0a3d77a9ce84fecae5fe7ba3d62b04f
 msgid "Default:"
 msgstr ""
 
-#: ../../basic/settings/index.rst 7207b18f6cf54b5dab6417e9b5e8a3b3
+#: ../../basic/settings/index.rst 6fbfb7236be3424d858f3dfef2179a08
 msgid "Env: ``AVATAR_PROVIDERS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 4562b338bc4c41499970ffc8b3202f35
+#: ../../basic/settings/index.rst 563fe0e85d28440facfec27c94583d22
 msgid "Options: ``Avatar provider object``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:308 a5a46281f29e413cb154507a41e369f4
+#: ../../basic/settings/index.rst:336 c07c014c8f3c452d9ec5b75f450440ac
 msgid ""
 "This setting configures in which order gravatar images are loaded. A "
 "common use case is the use of a local image over a fallback image loaded "
 "from gravatar.com. To do so you would change the order like:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:315 e0c1067828674fb49278302f6c0b1bd6
+#: ../../basic/settings/index.rst:343 e58ba5306cf247199503f3e1374d5f25
 msgid "(DefaultAvatarProvider before GravatarAvatarProvider)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:318 232042f8501540b996ce3f8adc37d2a5
-msgid "AWS_ACCESS_KEY_ID"
-msgstr ""
-
-#: ../../basic/settings/index.rst ../../basic/settings/index.rst:940
-#: ../../basic/settings/index.rst:944 06ad9eae8af14a2791301da1e47965f7
-#: 481fdee5dc964459a673e812b215f9fa 687c6287ec6b415fbb6acaaece461476
-#: 9a0ec6095f7e40248165bcaf760cf236 ad3d6f385b164219aa2a767ffebe6a12
-#: affbd21846d04a44bdf6db8a0d1dc964
-msgid "Default: ``''``"
-msgstr ""
-
-#: ../../basic/settings/index.rst 35e5bb3e72074e798f7901e8a9667538
-msgid "Env: ``AWS_ACCESS_KEY_ID``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:323 0c4cf3b11ffe42ab96cfca2c7d7f2a85
-msgid ""
-"This is a `Django storage setting <https://django-"
-"storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ Your Amazon"
-" Web Services access key, as a string."
-msgstr ""
-
-#: ../../basic/settings/index.rst:326 ../../basic/settings/index.rst:337
-#: ../../basic/settings/index.rst:347 ../../basic/settings/index.rst:355
-#: ../../basic/settings/index.rst:366 ../../basic/settings/index.rst:377
-#: ../../basic/settings/index.rst:469 ../../basic/settings/index.rst:480
-#: 01022f1d377d42c182312c2934ff2672 2b3d99314ab54ae28ee9a9d49df1f305
-#: 381bbefe29cd4487801e82ff57f8223d 5b92cc59d89b45038ec3f57d1ce0ec4a
-#: 7960e25226d6468ea2b5c323797efa70 ea645d6e2bda450088a91a6bfb19409e
-#: fbb6cc49f3cc4723bc5737c928d5e0ab fcd4a04317de413fb5da52a1b7d0abfb
-msgid "This works only if ``DEBUG = False``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:329 6f01d3d69b6e42f0bf25330e205d9b2b
-msgid "AWS_BUCKET_NAME"
-msgstr ""
-
-#: ../../basic/settings/index.rst 7a9fe2d277da42109e1b4f9b0ddad62a
-#: 7d7dea05337a49c3b0446c252a692524
-msgid "Env: ``S3_BUCKET_NAME``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:334 401eef8898234668b4c16fa3f692d8a3
-msgid ""
-"The name of the S3 bucket GeoNode will pull static and/or media files "
-"from. Set through the environment variable S3_BUCKET_NAME. This is a "
-"`Django storage setting <https://django-"
-"storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__"
-msgstr ""
-
-#: ../../basic/settings/index.rst:340 691cdbd67a69477ebfb1d81279e907be
-msgid "AWS_QUERYSTRING_AUTH"
-msgstr ""
-
-#: ../../basic/settings/index.rst:344 31f9af74d9ef4651af7237366d56140e
-msgid ""
-"This is a `Django storage setting <https://django-"
-"storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ Setting "
-"AWS_QUERYSTRING_AUTH to False to remove query parameter authentication "
-"from generated URLs. This can be useful if your S3 buckets are public."
-msgstr ""
-
-#: ../../basic/settings/index.rst:350 bff95d3540a74d8ca308b71cde6db2e4
-msgid "AWS_S3_BUCKET_DOMAIN"
-msgstr ""
-
-#: ../../basic/settings/index.rst:352 825bd0bb562a4b11a8e3f0db78c886aa
-#, python-format
-msgid ""
-"https://github.com/GeoNode/geonode/blob/master/geonode/settings.py#L1661 "
-"``AWS_S3_BUCKET_DOMAIN = '%s.s3.amazonaws.com' % "
-"AWS_STORAGE_BUCKET_NAME``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:358 920274798af44cee9ffdc3c8c00125a8
-msgid "AWS_SECRET_ACCESS_KEY"
-msgstr ""
-
-#: ../../basic/settings/index.rst 57079c077a744f858e66e10690b34fdf
-msgid "Env: ``AWS_SECRET_ACCESS_KEY``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:363 3648ab98dbda47969f9297d1132be461
-msgid ""
-"This is a `Django storage setting <https://django-"
-"storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ Your Amazon"
-" Web Services secret access key, as a string."
-msgstr ""
-
-#: ../../basic/settings/index.rst:369 b71555c97f92474cbdca69bb871ae1d7
-msgid "AWS_STORAGE_BUCKET_NAME"
-msgstr ""
-
-#: ../../basic/settings/index.rst:374 ce8f401f457e47658065043ee63ab68b
-msgid ""
-"This is a `Django storage setting <https://django-"
-"storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ Your Amazon"
-" Web Services storage bucket name, as a string."
-msgstr ""
-
-#: ../../basic/settings/index.rst:380 c52500f940894090b4a48e06633d4f4a
+#: ../../basic/settings/index.rst:347 0d2496f3eb174706968010088fb134be
 msgid "B"
 msgstr ""
 
-#: ../../basic/settings/index.rst:383 a2dd14b7f2554d599964aa78224783d7
+#: ../../basic/settings/index.rst:350 071cb2f82b78496f8489c12b1650f3f1
 msgid "BING_API_KEY"
 msgstr ""
 
-#: ../../basic/settings/index.rst a39647bf5a424969866b90b133b6fd72
-#: adc2451c81fe428ab67f8abeb7f48167
+#: ../../basic/settings/index.rst 275c24746dd6465db8de699ca4a151ee
+#: 7b7f5e643d114450aeb1b20933c3865c
 msgid "Default: ``None``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 318accd9f2c545a8b8ca302b8a8fed47
+#: ../../basic/settings/index.rst 9d8a65b77c044dcaa653fa4c49058a42
 msgid "Env: ``BING_API_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:388 5873bbdd10204313b91441ead5cb8a76
+#: ../../basic/settings/index.rst:355 d6159e20f30e40e7b693254ed175c972
 msgid "This property allows to enable a Bing Aerial background."
 msgstr ""
 
-#: ../../basic/settings/index.rst:390 ca0267afdcf64ad4a193a1ebee45cb04
+#: ../../basic/settings/index.rst:357 3bc4c862880c44b280d3eeab0eae6ec9
 msgid ""
 "If using ``mapstore`` client library, make sure the "
 "``MAPSTORE_BASELAYERS`` include the following:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:408 e8ab6a3c2887416c94f34ccab906b977
+#: ../../basic/settings/index.rst:375 e0eaad2d25b9491eb4648bec726aa07e
 msgid "BROKER_HEARTBEAT"
 msgstr ""
 
-#: ../../basic/settings/index.rst 5ba989b7fb1d40d88fb8224661ad5d4c
-#: 5f4d35720ade41a08ea8f1cbb3d3f2b2 a1a89772560240ccbe451aef83a578e8
+#: ../../basic/settings/index.rst 106c74ec1501495dbb2ee280742f04d0
+#: 28d3f27a28ed400ba3512a4af12b7cb2 2db7ea1be237449b96778225dd2f357a
 msgid "Default: ``0``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:412 3b2d27edf9e04c3bbb958842e7303516
+#: ../../basic/settings/index.rst:379 952005a7365f4f6fb6fa2aaec06c1dd8
 msgid ""
 "Heartbeats are used both by the client and the broker to detect if a "
 "connection was closed. This is a `Celery setting "
@@ -752,41 +682,41 @@ msgid ""
 "#broker-heartbeat>`__."
 msgstr ""
 
-#: ../../basic/settings/index.rst:417 16e6f446b2674b4fa4a6fb38aa6f1d5d
+#: ../../basic/settings/index.rst:384 3db8c32ed167459b92fb430c689b27c3
 msgid "BROKER_TRANSPORT_OPTIONS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:428 ../../basic/settings/index.rst:522
-#: ../../basic/settings/index.rst:529 ../../basic/settings/index.rst:548
-#: ../../basic/settings/index.rst:555 ../../basic/settings/index.rst:562
-#: ../../basic/settings/index.rst:569 ../../basic/settings/index.rst:576
-#: ../../basic/settings/index.rst:583 ../../basic/settings/index.rst:598
+#: ../../basic/settings/index.rst:395 ../../basic/settings/index.rst:478
+#: ../../basic/settings/index.rst:485 ../../basic/settings/index.rst:504
+#: ../../basic/settings/index.rst:511 ../../basic/settings/index.rst:518
+#: ../../basic/settings/index.rst:525 ../../basic/settings/index.rst:532
+#: ../../basic/settings/index.rst:539 ../../basic/settings/index.rst:554
+#: ../../basic/settings/index.rst:561 ../../basic/settings/index.rst:568
+#: ../../basic/settings/index.rst:589 ../../basic/settings/index.rst:597
 #: ../../basic/settings/index.rst:605 ../../basic/settings/index.rst:612
-#: ../../basic/settings/index.rst:633 ../../basic/settings/index.rst:641
-#: ../../basic/settings/index.rst:649 ../../basic/settings/index.rst:656
-#: 02429000ea804ee6948647185480dcda 039dbbc7957243f9bf7fe8428039c880
-#: 03e1941034914b7388829120428e101f 0a66c87ac6bb43f897f025842753d967
-#: 0e09e6cbf1984ac3a53ccfac33731687 0fc5f3ea64f543b8aa64d488995dafb4
-#: 78ee0303f8d44e0396db082e00b7c11f 85db294a96f245aa801cbda77e346bfc
-#: 88449368d2aa4493a0a716a9572f0b32 ae1676dd79d341a29fa7f605b97e1026
-#: ba3ef58ec5254e0cbda3f587b3c8009b c6a6dea8e2c44530b700f79c312bf399
-#: d1aae10149954b54b43ffabb9e9b7213 e6f5e4a649844849b1c51d445dab057c
-#: e79fd5d2912749c8adc5df122d0a5033 f1a5a17e0602417885ae437de6b69377
+#: 32bd6149e3ed4e79ade179957a8b094d 3387df458eb64a2e86244cd8c96dd4bd
+#: 462bf676a6e64b30b0b604fe2c05fad0 60a457762c434020ab1d3c48dbe8cbb4
+#: 7a52ae8600ec4b09bff422d7a967f554 7b5a915e7044499aa47871bd4c49bf32
+#: 8d9ffdf624cd4ad3938644de95d723b3 9e21716b5b8a487aa735bfc0132cf7ac
+#: ae0602591e664b3d8509a2d4402dcea2 b20d6bed79cb46c09e3a76ad84e9d0d2
+#: bc0e6e7d23b14fc48ada1361e1df658d cd316e6d40484b14aff38915887e03d7
+#: dd1328f449594e0cbb9e57c8cce77692 eb993f3940d74b6da0c60199001f6d04
+#: f09fba5de8d84b5db5ab874fb9e1c200 f6d0ba271dbc4bc58913d628526027ab
 msgid ""
 "This is a `Celery setting "
 "<https://docs.celeryproject.org/en/latest/userguide/configuration.html"
 "#new-lowercase-settings>`__."
 msgstr ""
 
-#: ../../basic/settings/index.rst:432 c84e0233eb084aeca628988ad7fd6638
+#: ../../basic/settings/index.rst:399 227cfa1da8e74e0d8f5c46d51ccdfe8e
 msgid "C"
 msgstr ""
 
-#: ../../basic/settings/index.rst:435 050951d82ac247e983badb1a59175788
+#: ../../basic/settings/index.rst:402 fc32c3e169c8499b82500beae6890f36
 msgid "CACHES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:452 12f208e065334800a2b703072c1cd64b
+#: ../../basic/settings/index.rst:419 56793c20445a49599a7a17bb3ac1ce69
 msgid ""
 "A dictionary containing the settings for all caches to be used with "
 "Django. This is a `Django setting "
@@ -794,14 +724,14 @@ msgid ""
 "CACHES>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:455 70dd6fd7949b4fec8dfc53c90dd47a4e
+#: ../../basic/settings/index.rst:422 fbd52d3096d147508e12332143f3f515
 msgid ""
 "The ``'default'`` cache is disabled because we don't have a mechanism to "
 "discriminate between client sessions right now, and we don't want all "
 "users fetch the same api results."
 msgstr ""
 
-#: ../../basic/settings/index.rst:457 007821e4b9c142d98fb6b897bb59efdc
+#: ../../basic/settings/index.rst:424 183904287ad1483f9eb554d613db978e
 msgid ""
 "The ``'resources'`` is not currently used. It might be helpful for "
 "`caching Django template fragments "
@@ -810,60 +740,49 @@ msgid ""
 "tastypie.readthedocs.io/en/latest/caching.html>`__."
 msgstr ""
 
-#: ../../basic/settings/index.rst:461 efea738a152142269d3127f2aeab4572
-msgid "CACHE_BUSTING_MEDIA_ENABLED"
-msgstr ""
-
-#: ../../basic/settings/index.rst 2961c67b98ba457cae96476a021f9ea7
-msgid "Env: ``CACHE_BUSTING_MEDIA_ENABLED``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:466 c25bd485fe434014820c0e834d86bf38
-msgid ""
-"This is a `Django ManifestStaticFilesStorage storage setting "
-"<https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__"
-" A boolean allowing you to enable the ``ManifestStaticFilesStorage "
-"storage``. This works only on a production system."
-msgstr ""
-
-#: ../../basic/settings/index.rst:472 62ee65719b4b431fa268346e9a831e06
+#: ../../basic/settings/index.rst:428 5b6893cdd8ab4958af17e8c22e697270
 msgid "CACHE_BUSTING_STATIC_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst 8717807420bf460e90a5c096eb5bab15
+#: ../../basic/settings/index.rst 39f281ea264d4bd6be6de7f259a64805
 msgid "Env: ``CACHE_BUSTING_STATIC_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:477 264b80469b2d4f559a54b974834508d8
+#: ../../basic/settings/index.rst:433 abad1567cb8f44b9b9ea149ef27cbbdb
 msgid ""
-"This is a `Django ManifestStaticFilesStorage storage setting "
-"<https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__"
-" A boolean allowing you to enable the ``ManifestStaticFilesStorage "
-"storage``. This works only on a production system."
+"This is a `Django Compressed Manifet storage provided by WhiteNoise "
+"<http://whitenoise.evans.io/en/stable/django.html#add-compression-and-"
+"caching-support>`__ A boolean allowing you to enable the ``WhiteNoise "
+"CompressedManifestStaticFilesStorage storage``. This works only on a "
+"production system."
 msgstr ""
 
-#: ../../basic/settings/index.rst:484 ca4ac396b35343b38003a15a43d59eb3
+#: ../../basic/settings/index.rst:436 55324d0b82724e60bee3f8f368a5bfb0
+msgid "This works only if ``DEBUG = False``"
+msgstr ""
+
+#: ../../basic/settings/index.rst:440 3d4d08e5ec4948f7a4958628521de819
 msgid "CASCADE_WORKSPACE"
 msgstr ""
 
-#: ../../basic/settings/index.rst ace256a78f91438e989736ec95b300cd
-#: c59c016a20dd4399b5e5c7fd70e9d592
+#: ../../basic/settings/index.rst 1013a2e156754e91b30cce43554d59c5
+#: adeb51d289a04fff8aab436c5e6819db
 msgid "Default: ``geonode``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1c8e5bfbf55640079a73a37f44a648bf
+#: ../../basic/settings/index.rst 61e6ba1d2d0e4da1a6fe033867b52453
 msgid "Env: ``CASCADE_WORKSPACE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:491 c704d5eb5fc1499a9b9560e68d1fab11
+#: ../../basic/settings/index.rst:447 85cf08b0f4ca47a7bce39931d8bb7216
 msgid "CATALOGUE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:493 5b5736d9be3347fd832c3d4db829c59c
+#: ../../basic/settings/index.rst:449 cc59a954b53a44d985daa99c1a4031a2
 msgid "A dict with the following keys:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:495 121272fd466b4b898f8d367c20a9f894
+#: ../../basic/settings/index.rst:451 5a0967fc3eb641b18fb39ab1d84e2377
 msgid ""
 "ENGINE: The CSW backend (default is "
 "``geonode.catalogue.backends.pycsw_local``) URL: The FULLY QUALIFIED base"
@@ -871,111 +790,111 @@ msgid ""
 " required) PASSWORD: login credentials (if required)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:500 a7eef7e748b44d20aa8afe61ec0a751f
+#: ../../basic/settings/index.rst:456 f4b0f2e483d4451f9067926f11381a31
 msgid ""
 "pycsw is the default CSW enabled in GeoNode. pycsw configuration "
 "directives are managed in the PYCSW entry."
 msgstr ""
 
-#: ../../basic/settings/index.rst:504 080d343269dd4fbba83ec73961527bcd
+#: ../../basic/settings/index.rst:460 c05a918f49254913be9d050186a86a70
 msgid "CATALOGUE_METADATA_TEMPLATE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:506 72e1a3a041834797a67852423ace15b9
+#: ../../basic/settings/index.rst:462 6d6014937b204116af3b148d3f87abaa
 msgid "Default : ``catalogue/full_metadata.xml``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:508 e3b20902562b476b98b5bace66498e49
+#: ../../basic/settings/index.rst:464 42472cabdaa1484da3ee5de8d7c1db63
 msgid "A string with the catalogue xml file needed for the metadata."
 msgstr ""
 
-#: ../../basic/settings/index.rst:511 e9a4785384544964a5c40120f66fb19a
+#: ../../basic/settings/index.rst:467 3f037ad55edf488fa4c7214b28519e97
 msgid "CATALOGUE_METADATA_XSL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:513 af85f158f2cb449fb3220a498913c879
+#: ../../basic/settings/index.rst:469 f6d89fbc4c3649d79523b27a5dc11d5c
 msgid "Default : ``'/static/metadataxsl/metadata.xsl``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:515 14a92778bb3b4788b8bd5f5a28f68ef2
+#: ../../basic/settings/index.rst:471 ebaef8558b6b4636a49dc6fb939dbbdd
 msgid ""
 "A string pointing to the XSL used to transform the metadata XML into "
 "human readable HTML."
 msgstr ""
 
-#: ../../basic/settings/index.rst:518 ae759947e60e4a08923b0476be32dd92
+#: ../../basic/settings/index.rst:474 469302b15ee14279b613cbc35559706f
 msgid "CELERYD_POOL_RESTARTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:525 48798648e8b74a09a43009121d53cbb3
+#: ../../basic/settings/index.rst:481 e197c07b7dcf4fbabcadaec9768aacb1
 msgid "CELERY_ACCEPT_CONTENT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:527 0a003218978b46f1bcaaa41ec487f69e
+#: ../../basic/settings/index.rst:483 b604d996aca24fb5aeb88fb9ff4385ad
 msgid "Defaul: ``['json']``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:532 ce7224ca26f34e5c85b526054f06fba7
+#: ../../basic/settings/index.rst:488 69f5744515bd47e5817895a2a5a5f3db
 msgid "CELERY_ACKS_LATE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:536 c5f67ab7943c4ae0a0f7f1074e0aca67
+#: ../../basic/settings/index.rst:492 15719acdb44a46d699e3289f72b982c0
 msgid ""
 "This is a `Celery setting "
 "<http://docs.celeryproject.org/en/3.1/configuration.html#celery-acks-"
 "late>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:539 e4cd3446193d454eacf6e968864d1538
+#: ../../basic/settings/index.rst:495 b8ef2ae038714874a51029579274baaf
 msgid "CELERY_BEAT_SCHEDULE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:541 c2365df4dd2e4f9e95d186819cba40bb
+#: ../../basic/settings/index.rst:497 faa2ac0cc6b64387a2fc7b16303d0dc9
 msgid "Here you can define your scheduled task."
 msgstr ""
 
-#: ../../basic/settings/index.rst:544 14896d2dade44696bfdbef47360e0557
+#: ../../basic/settings/index.rst:500 0236de7ccfe54d88b0fc02097c5a4798
 msgid "CELERY_DISABLE_RATE_LIMITS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:551 e540616a90b941c99bc6aa89ae26af7f
+#: ../../basic/settings/index.rst:507 9fb3b902e3ce486698993f40e5eb6d9d
 msgid "CELERY_ENABLE_UTC"
 msgstr ""
 
-#: ../../basic/settings/index.rst:558 a00c56687fc04a05a17d72296adcde1e
+#: ../../basic/settings/index.rst:514 aff3acf14db841c58a92321690f5da00
 msgid "CELERY_MAX_CACHED_RESULTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:560 108564b417fb4e2ead816d36f68a2082
+#: ../../basic/settings/index.rst:516 2d7c5a92918c412fad0d0a5ad194e0ce
 msgid "Default: ``32768``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:565 d24330e63d2946a4986cf5ed079a66d9
+#: ../../basic/settings/index.rst:521 28671f276f054b21a80cd68388ba322d
 msgid "CELERY_MESSAGE_COMPRESSION"
 msgstr ""
 
-#: ../../basic/settings/index.rst:567 7c93184a6708488985ca245b20c3016f
+#: ../../basic/settings/index.rst:523 12ce39b51911412e86be5c24c798586c
 msgid "Default: ``gzip``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:572 fb21cffe2cf74cb9b07ce40f433a871f
+#: ../../basic/settings/index.rst:528 ad3998284ebb4f3293b0405947a55898
 msgid "CELERY_RESULT_PERSISTENT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:579 57ff2f8f4be04bc6aaf57a4d020a0d7f
+#: ../../basic/settings/index.rst:535 94e2fcc865374e0894a4417ca83018aa
 msgid "CELERY_RESULT_SERIALIZER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:581 ../../basic/settings/index.rst:2233
-#: 4b1bbd0ded6c4d9389efb40d64d00f81 ee7ae371d0994a44b4cfa4b9ec248462
+#: ../../basic/settings/index.rst:537 ../../basic/settings/index.rst:2399
+#: 067c8fedbe4a4cc3b8dd6aa460fa3e5d 6e615239dabf4bb6aec09669a7ed3c9d
 msgid "Default: ``json``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:586 478e6c0d81f84512845e84278d96d7e3
+#: ../../basic/settings/index.rst:542 062eb326a9214dad91b460bab2c79f29
 msgid "CELERY_SEND_TASK_SENT_EVENT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:590 f81898a32b5448e099e34c6c352a62ce
+#: ../../basic/settings/index.rst:546 d84814c6ecfc411f87418ba2ba46a1fd
 msgid ""
 "If enabled, a task-sent event will be sent for every task so tasks can be"
 " tracked before they are consumed by a worker. This is a `Celery setting "
@@ -983,120 +902,140 @@ msgid ""
 "#new-lowercase-settings>`__."
 msgstr ""
 
-#: ../../basic/settings/index.rst:594 995918d740d94623bd23368974a44ef5
+#: ../../basic/settings/index.rst:550 41d615ee1f2c476e80c61508ce251f54
 msgid "CELERY_TASK_ALWAYS_EAGER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:596 19aaa2e648ea42f68029b23bfb79b2dc
+#: ../../basic/settings/index.rst:552 ef44f1351b0a4613bd602853a74db1af
 msgid "Default: ``False if ASYNC_SIGNALS else True``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:601 4576966f6b8c4b68801e0a4291b9dba0
+#: ../../basic/settings/index.rst:557 1cac4310a645408999704566b90dbfba
 msgid "CELERY_TASK_CREATE_MISSING_QUEUES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:608 4542bab451c7416abfe76a485e7196fe
+#: ../../basic/settings/index.rst:564 a8bbbc7520e14e769eba155779a242d9
 msgid "CELERY_TASK_IGNORE_RESULT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:615 911595822cc9470db1d5af8987236553
+#: ../../basic/settings/index.rst:571 8e89479185e942ceac27aa3cbe47aefc
 msgid "CELERY_TASK_QUEUES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:625 e262e54d870e4cc9bacf6636c1f55513
+#: ../../basic/settings/index.rst:581 7e9fd6227f5e4caeb1dd72d4954222d5
 msgid "A tuple with registered Queues."
 msgstr ""
 
-#: ../../basic/settings/index.rst:628 1edca6b7dd614d9c978847a79ef1a3d3
+#: ../../basic/settings/index.rst:584 66993e9de07340d08773597bcd073529
 msgid "CELERY_TASK_RESULT_EXPIRES"
 msgstr ""
 
-#: ../../basic/settings/index.rst 68b0d2a5879c4b6ca87770d324031d0c
+#: ../../basic/settings/index.rst f47792334a9f4d37bdce46e596f14932
 msgid "Default: ``43200``"
 msgstr ""
 
-#: ../../basic/settings/index.rst d4d7c79084264c0fa68836f0fbce80f4
+#: ../../basic/settings/index.rst 8b4f5c1efeba4f7face70fbef14f3147
 msgid "Env: ``CELERY_TASK_RESULT_EXPIRES``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:636 b673068b3f824f7aa1ac3d76f8d5f818
+#: ../../basic/settings/index.rst:592 1532375ec7134881950b1fb5cda0d85b
 msgid "CELERY_TASK_SERIALIZER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:638 748f55b05a6142e89a4ff283508a3533
+#: ../../basic/settings/index.rst:594 baa808508f364787a6ec811cd40977fc
 msgid "Default: ``json`` Env: ``CELERY_TASK_SERIALIZER``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:644 bf7a489313a44d24b49d9bdf9c9a2034
+#: ../../basic/settings/index.rst:600 052b4f7850654953beff632b0163377b
 msgid "CELERY_TIMEZONE"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6d01caf1ca434a2590235da14c63c8cf
+#: ../../basic/settings/index.rst b7446ff372954063a68169a2f5b2d65c
 msgid "Default: ``UTC``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 7ba1669abaa44526812aed533d2c67f2
+#: ../../basic/settings/index.rst 3e0177cd0cbc424ea468869e6791ed5e
 msgid "Env: ``TIME_ZONE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:652 8a45465743a04dcd9fd9f4402a793bfa
+#: ../../basic/settings/index.rst:608 69f24ad02bcb4e6b93174147692e2f4b
 msgid "CELERY_TRACK_STARTED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:659 e87be1ed14ee4bfa9ec758434e4938d4
+#: ../../basic/settings/index.rst:615 44414b3ef93e46a1b9ec22181cf9bdbe
 msgid "CELERY_WORKER_DISABLE_RATE_LIMITS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:663 23c7ab934aed4084a595f397962dac4a
+#: ../../basic/settings/index.rst:619 d0289b19a71c4cfaa81e33a8e18177e6
 msgid ""
 "Disable the worker rate limits (number of tasks that can be run in a "
 "given time frame)."
 msgstr ""
 
-#: ../../basic/settings/index.rst:666 7cc79e3ef1d445fd820b034372e3b2d9
+#: ../../basic/settings/index.rst:622 b27f5fb0269141bd8dc3eb81ba79a75c
 msgid "CELERY_WORKER_SEND_TASK_EVENTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:670 af2fba636efc4632b1b33f16376d2bbb
+#: ../../basic/settings/index.rst:626 b3e75f3bd46246bf9993000be8b2d98f
 msgid "Send events so the worker can be monitored by other tools."
 msgstr ""
 
-#: ../../basic/settings/index.rst:673 7d6a894a654e48449bab5302db125170
+#: ../../basic/settings/index.rst:629 8690bfff322c48479f4f6e3726de3d42
 msgid "CLIENT_RESULTS_LIMIT"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3c59698d67aa47d9be1ce547cf741c9f
+#: ../../basic/settings/index.rst ../../basic/settings/index.rst:824
+#: 747ef7f9c208490699b7b8eb6c6c8367 840b138eb9bd4acfbd6770ce35ac8eae
 msgid "Default: ``5``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 773362f2d81b47b6a7f3a1bc18c90bc8
+#: ../../basic/settings/index.rst b91d66615c71472089f6501826b4f739
 msgid "Env: ``CLIENT_RESULTS_LIMIT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:678 b9001e91972146b584350bcd18f3a63c
+#: ../../basic/settings/index.rst:634 c6ca626c0618416187d21d954426e1ef
 msgid ""
 "The Number of results per page listed in the GeoNode search pages. "
 "Different from ``API_LIMIT_PER_PAGE``, affecting the number of items "
 "returned by the APIs."
 msgstr ""
 
-#: ../../basic/settings/index.rst:681 cb571f76a83843df91ad3fd3b37135a9
+#: ../../basic/settings/index.rst:637 1762b0d22aa84e42aaa1eaab9b336084
+msgid "CORS_ALLOW_ALL_ORIGINS"
+msgstr ""
+
+#: ../../basic/settings/index.rst a39dc76148f840e0b644c698fb628341
+msgid "Env: ``CORS_ALLOW_ALL_ORIGINS``"
+msgstr ""
+
+#: ../../basic/settings/index.rst:642 6e3b2511f3c2422cb7b3d1effc380022
+msgid ""
+"If set to true `Access-Control-Allow-Origin: *` header is set for any "
+"response. A safer option (not managed through env vars at the moment) is "
+"`CORS_ALLOWED_ORIGINS`, where a list of hosts can be configured, o "
+"`CORS_ALLOWED_ORIGIN_REGEXES`, where the list can contain regexes. Notice"
+" that the Nginx in front of GeoNode always includes `Access-Control-"
+"Allow-Credentials true`. This must also taken into account when CORS is "
+"enabled."
+msgstr ""
+
+#: ../../basic/settings/index.rst:646 1b7c11d383da45a9aab3d6d3725eab1e
 msgid "CREATE_LAYER"
 msgstr ""
 
-#: ../../basic/settings/index.rst 5638c458e83f4a2ea4c1ed9af9ab99ff
+#: ../../basic/settings/index.rst d4b64a17f02b4dfe8884297bdc9963f8
 msgid "Env: ``CREATE_LAYER``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:686 8feda5cd8a4a4da982e763d84953d9c6
+#: ../../basic/settings/index.rst:651 6d151889bf29455da87f2ec005937f11
 msgid "Enable the create layer plugin."
 msgstr ""
 
-#: ../../basic/settings/index.rst:689 95d01e9b4cda48debdb643175bfc96e2
+#: ../../basic/settings/index.rst:654 95d4d978fafd423d8e4c088f7ceefd66
 msgid "CKAN_ORIGINS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:699 90ed3b6459764d36836ab5ba1ae60e29
+#: ../../basic/settings/index.rst:664 22a0e4cdce6448feb596a0283b42b27b
 msgid ""
 "A list of dictionaries that are used to generate the links to CKAN "
 "instances displayed in the Share tab.  For each origin, the name and "
@@ -1106,15 +1045,15 @@ msgid ""
 "SOCIAL_ORIGINS.extend(CKAN_ORIGINS)."
 msgstr ""
 
-#: ../../basic/settings/index.rst:702 5f20dde7a1964e6bb226835d75f41db4
+#: ../../basic/settings/index.rst:667 d48a5814f0bc478c95ca60b2740b313b
 msgid "CSRF_COOKIE_HTTPONLY"
 msgstr ""
 
-#: ../../basic/settings/index.rst bb980d8de2a44670a80adf422f13c0dd
+#: ../../basic/settings/index.rst 89af6acfe4a8462ca40d1b4cb1407506
 msgid "Env: ``CSRF_COOKIE_HTTPONLY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:707 389e2f32f2514b558b4d44bde020dd5e
+#: ../../basic/settings/index.rst:672 4c29376d39a347bbb235813f05de1fc5
 msgid ""
 "Whether to use HttpOnly flag on the CSRF cookie. If this is set to True, "
 "client-side JavaScript will not be able to access the CSRF cookie. This "
@@ -1122,15 +1061,15 @@ msgid ""
 "/#csrf-cookie-httponly>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:710 7712cac2c5ec44568315bdbe9e19f150
+#: ../../basic/settings/index.rst:675 42b2dc55d6eb442c8ad20002a12c0f2b
 msgid "CSRF_COOKIE_SECURE"
 msgstr ""
 
-#: ../../basic/settings/index.rst 5ec23e625c2f403eab142b34bbe47c9c
+#: ../../basic/settings/index.rst 5440467685b542f9a7cf983f95259d26
 msgid "Env: ``CSRF_COOKIE_SECURE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:715 0dd3a1e90cbd47c292799b74438a5a70
+#: ../../basic/settings/index.rst:680 0cc0eb46d37048338deb8c9d166f3c35
 msgid ""
 "Whether to use a secure cookie for the CSRF cookie. If this is set to "
 "True, the cookie will be marked as “secure,” which means browsers may "
@@ -1139,31 +1078,46 @@ msgid ""
 "/#csrf-cookie-secure>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:718 bbb667b526e74b6cb8931eb40c99718d
+#: ../../basic/settings/index.rst:683 a4283368cf12449486d71ab30126c4f2
+msgid "CUSTOM_METADATA_SCHEMA"
+msgstr ""
+
+#: ../../basic/settings/index.rst 366dfe1dfc154c36b558f412325d1c03
+msgid "Default: ``{}``"
+msgstr ""
+
+#: ../../basic/settings/index.rst:687 abd4fcad90d34c58ac1aa5e5b41abb4d
+msgid ""
+"If present, will extend the available metadata schema used for store new "
+"value for each resource. By default override the existing one. The "
+"expected schema is the same as the default"
+msgstr ""
+
+#: ../../basic/settings/index.rst:692 f1cd72dc85a8476293da9b57b88a5ea3
 msgid "D"
 msgstr ""
 
-#: ../../basic/settings/index.rst:721 8186340257534dd68f3ffba100cbdfb4
+#: ../../basic/settings/index.rst:695 30f7bf2c9fd64dbdad07cf49aecee206
 msgid "DATA_UPLOAD_MAX_NUMBER_FIELDS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:723 84e0ea620ec64c7a894f65164939d1b0
+#: ../../basic/settings/index.rst:697 55a380370ab9464e880a1c4794a62d88
 msgid "Default: ``100000``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:725 1433f2c0ab8a4c74ad855bb47680636c
+#: ../../basic/settings/index.rst:699 d538d971f64d40f19266b3830b10cec5
 msgid "Maximum value of parsed attributes."
 msgstr ""
 
-#: ../../basic/settings/index.rst:728 0205ceeb420a4071ba0a97433961deaa
+#: ../../basic/settings/index.rst:702 b000583b9831466ba647b2d2bb77cb80
 msgid "DEBUG"
 msgstr ""
 
-#: ../../basic/settings/index.rst 79a72d5da6644c1daf3b0531d9cb528b
+#: ../../basic/settings/index.rst 099e5b4d5be841cb9e8f648829ee8909
 msgid "Env: ``DEBUG``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:733 cb0901177cfd48b184a4a29250e4f015
+#: ../../basic/settings/index.rst:707 3101617fa62745a1bbfaa54e1bb0859b
 msgid ""
 "One of the main features of debug mode is the display of detailed error "
 "pages. If your app raises an exception when DEBUG is True, Django will "
@@ -1173,39 +1127,39 @@ msgid ""
 "<https://docs.djangoproject.com/en/3.2/ref/settings/#debug>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:738 777d022cf02c492a8ff577ff9653fde0
+#: ../../basic/settings/index.rst:712 cf7402ccacf24882b9394cd7135b5480
 msgid "DEBUG_STATIC"
 msgstr ""
 
-#: ../../basic/settings/index.rst cecdd1fa0c834f2f8fbe48a850e1aca9
+#: ../../basic/settings/index.rst 24fb933f9d5b4e71a1c706f4564f20b1
 msgid "Env: ``DEBUG_STATIC``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:743 de9fdf88aecf461d97b78e697c57cc3c
+#: ../../basic/settings/index.rst:717 b686cb44278d409fb29c82e27c118cd7
 msgid "Load non minified version of static files."
 msgstr ""
 
-#: ../../basic/settings/index.rst:746 256e882db537401d9e32be962881d963
+#: ../../basic/settings/index.rst:720 f6e05cefc5904f60b0790cfe9a51679f
 msgid "DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION"
 msgstr ""
 
-#: ../../basic/settings/index.rst:750 13e7d1b68bd74a70a3e7b28df094cf3c
+#: ../../basic/settings/index.rst:724 9d3a3434c15f47e0a847f610cad1c484
 msgid "Whether the uploaded resources should downloadable by default."
 msgstr ""
 
-#: ../../basic/settings/index.rst:757 156409f907b44d7ab3ad36c3c206f453
+#: ../../basic/settings/index.rst:731 e1cb38184e1c4a2396154650b9f0e44e
 msgid "Whether the uploaded resources should be public by default."
 msgstr ""
 
-#: ../../basic/settings/index.rst:760 05808fdc5ea44b6c8c30541b483bd0af
+#: ../../basic/settings/index.rst:734 5d6917e9a5dc4f42a71fc342eddcf840
 msgid "DEFAULT_AUTO_FIELD"
 msgstr ""
 
-#: ../../basic/settings/index.rst:762 0c81cc49f0034dbd81cda2317095302a
+#: ../../basic/settings/index.rst:736 1005c44e3b334014a09a266ec2493b78
 msgid "Default: ``django.db.models.AutoField``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:764 87d411b28c1b465088b68b415cb2fd86
+#: ../../basic/settings/index.rst:738 0f1cd2cd803c450f8532f0c1774206a2
 msgid ""
 "Default primary key field type to use for models that don’t have a field "
 "with primary_key=True. Django documentation "
@@ -1213,124 +1167,216 @@ msgid ""
 "DEFAULT_AUTO_FIELD"
 msgstr ""
 
-#: ../../basic/settings/index.rst:768 cf38052272f04f999c77ccef940dfa89
+#: ../../basic/settings/index.rst:742 02f1da6bca9740709c37b5b420764bb6
+msgid "DEFAULT_EXTRA_METADATA_SCHEMA"
+msgstr ""
+
+#: ../../basic/settings/index.rst:744 19c8f61fc71043d1925163269c33c92c
+msgid "Default"
+msgstr ""
+
+#: ../../basic/settings/index.rst:756 55613d1b576e4badb8c1d583fac509b2
+msgid ""
+"Define the default metadata schema used for add to the resource extra "
+"metadata without modify the actual model. This schema is used as "
+"validation for the input metadata provided by the user"
+msgstr ""
+
+#: ../../basic/settings/index.rst:759 25511bafa7fa4675ae2f3cc4b6274984
+msgid ""
+"`id`: (optional int): the identifier of the metadata. Optional for "
+"creation, required in Upgrade phase"
+msgstr ""
+
+#: ../../basic/settings/index.rst:760 a6957fc5f87141e68f4d449dc25e2461
+msgid ""
+"`filter_header`: (required object): Can be any type, is used to generate "
+"the facet filter header. Is also an identifier."
+msgstr ""
+
+#: ../../basic/settings/index.rst:761 de1da267c17d40d58e9105e291187e9f
+msgid "`field_name`: (required object): name of the metadata field"
+msgstr ""
+
+#: ../../basic/settings/index.rst:762 6b46de4ec8334a809e5bd693e1def040
+msgid ""
+"`field_label`: (required object): verbose string of the name. Is used as "
+"a label in the facet filters."
+msgstr ""
+
+#: ../../basic/settings/index.rst:763 7f5c720b4f504b7484ac2ba0434c7604
+msgid "`field_value`: (required object): metadata values"
+msgstr ""
+
+#: ../../basic/settings/index.rst:765 d875c53baf2d46e6b95fbf1f35a0bc34
+msgid "An example of metadata that can be ingested is the follow:"
+msgstr ""
+
+#: ../../basic/settings/index.rst:786 101383542704461d9d879af82bb13f25
 msgid "DEFAULT_LAYER_FORMAT"
 msgstr ""
 
-#: ../../basic/settings/index.rst febf2a4ead2847cdbb00190eb380aa8e
+#: ../../basic/settings/index.rst 3b3cc847d5284435a03fa656c63b888e
 msgid "Default: ``image/png``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 272c634fb290475382b18e5301d4a158
+#: ../../basic/settings/index.rst 229af4e136e14b8390573514fe132fdb
 msgid "Env: ``DEFAULT_LAYER_FORMAT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:773 e3ec351e32ed455bbe71550f35aa8ad8
+#: ../../basic/settings/index.rst:791 348a7325bff2403286fcae6582c1c650
 msgid "The default format for requested tile images."
 msgstr ""
 
-#: ../../basic/settings/index.rst:777 cf647f4b0f2d469b93afdc519ddb4670
+#: ../../basic/settings/index.rst:795 c5af4ff80ef64c7999587fbed2ad8d10
 msgid "DEFAULT_MAP_CENTER"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6d46745fa9f840efb41963d46750c894
+#: ../../basic/settings/index.rst ff2d9a7af0464de0b078be72e2eb4986
 msgid "Default: ``(0, 0)``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 191fbcafd2194929b7d2d1fa634603b1
+#: ../../basic/settings/index.rst 91ade563afa64a43b3a1495850b5b976
 msgid "Env: ``DEFAULT_MAP_CENTER_X`` ``DEFAULT_MAP_CENTER_Y``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:782 2947f587035344349714a2df5dde5047
+#: ../../basic/settings/index.rst:800 f578955727454ac2b8f58962491ed505
 msgid ""
 "A 2-tuple with the latitude/longitude coordinates of the center-point to "
 "use in newly created maps."
 msgstr ""
 
-#: ../../basic/settings/index.rst:786 a37b86d1204d4de497224505e3702ec5
+#: ../../basic/settings/index.rst:804 a96f37e6a5ad47d28982b48a0ea0a771
 msgid "DEFAULT_MAP_CRS"
 msgstr ""
 
-#: ../../basic/settings/index.rst bebc28c39f1c488fb0bf613f43a1faf1
+#: ../../basic/settings/index.rst 07a2a2baa9694114a677fbd5b0946968
 msgid "Default: ``EPSG:3857``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 2a62ea4e157047dfb2dc2c372431c311
+#: ../../basic/settings/index.rst 2d8547b86e894dbb893d7e9778a3f7b3
 msgid "Env: ``DEFAULT_MAP_CRS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:791 a87d68555b764c67841f46db35458884
+#: ../../basic/settings/index.rst:809 68897c4985c547c880a16aff39f12611
 msgid "The default map projection. Default: EPSG:3857"
 msgstr ""
 
-#: ../../basic/settings/index.rst:794 c5ecf21ec4f949788680e35800054bc6
+#: ../../basic/settings/index.rst:812 af8e7719ab1946ee8605d1ef641d9c54
 msgid "DEFAULT_MAP_ZOOM"
 msgstr ""
 
-#: ../../basic/settings/index.rst 0ebac2344ad145fd824c43f7ba09587b
+#: ../../basic/settings/index.rst 0ab42bf64cc64df59e5f60edabe78cfe
 msgid "Env: ``DEFAULT_MAP_ZOOM``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:799 98017a347f224d3aa120755ccd953004
+#: ../../basic/settings/index.rst:817 676363c462f440aa9c99338c88f305a9
 msgid ""
 "The zoom-level to use in newly created maps.  This works like the "
 "OpenLayers zoom level setting; 0 is at the world extent and each "
 "additional level cuts the viewport in half in each direction."
 msgstr ""
 
-#: ../../basic/settings/index.rst:804 8969bc3fc9ce40d4a59b04d3d1f8267b
+#: ../../basic/settings/index.rst:822 532c07d2d63f4210a311ac1f0622f23d
+msgid "DEFAULT_MAX_PARALLEL_UPLOADS_PER_USER"
+msgstr ""
+
+#: ../../basic/settings/index.rst:826 4cd22acdeb6c4cb19bb655e43e5aecf3
+msgid ""
+"When `uploading datasets "
+"<../../usage/managing_datasets/uploading_datasets.html#datasets-"
+"uploading>`__, this value limits the number os parallel uploads."
+msgstr ""
+
+#: ../../basic/settings/index.rst:829 74fc772fdccb4e5093820ecd514107f1
+msgid ""
+"The parallelism limit is set during installation using the value of this "
+"variable. After installation, only an user with administrative rights can"
+" change it. These limits can be changed in the `admin panel <../../admin"
+"/upload-parallelism-limit/index.html#upload-parallelism-limit>`__ or "
+"`accessing by api <../../devel/api/V2/index.html#get--api-v2-upload-"
+"parallelism-limits->`__."
+msgstr ""
+
+#: ../../basic/settings/index.rst:837 e313e3e1b4ed4ba58cedcaac2e0da81e
+msgid "DEFAULT_MAX_UPLOAD_SIZE"
+msgstr ""
+
+#: ../../basic/settings/index.rst:839 c0edce44939c4c949adfb556e10b5e82
+msgid "Default: ``104857600`` (100 MB in bytes)"
+msgstr ""
+
+#: ../../basic/settings/index.rst:841 3cff1a2af204480bac08e2a82c2bb95c
+msgid ""
+"When `uploading datasets "
+"<../../usage/managing_datasets/uploading_datasets.html#datasets-"
+"uploading>`__ or `uploading documents "
+"<../../usage/managing_documents/uploading_documents.html#uploading-"
+"documents>`__, the total size of the uploaded files is verified."
+msgstr ""
+
+#: ../../basic/settings/index.rst:845 172bd203eb6f489fbe6117802d8cb096
+msgid ""
+"The size limits are set during installation using the value of this "
+"variable. After installation, only an user with administrative rights can"
+" change it. These limits can be changed in the `admin panel <../../admin"
+"/upload-size-limits/index.html#upload-size-limits>`__ or `accessing by "
+"api <../../devel/api/V2/index.html#get--api-v2-upload-size-limits->`__."
+msgstr ""
+
+#: ../../basic/settings/index.rst:852 8b8fbd9d7ea746e4978fc41fa7cff409
 msgid "DEFAULT_SEARCH_SIZE"
 msgstr ""
 
-#: ../../basic/settings/index.rst ../../basic/settings/index.rst:1692
-#: 03a9f0eb5b0646d485c9a78c2b8234ac 959e474aa3454459a1f9ddae44ea11fa
+#: ../../basic/settings/index.rst ../../basic/settings/index.rst:1770
+#: 5326532249f244ffb93ff64853314f1d de595c71d58a48efbb55e0b52dfc6ace
 msgid "Default: ``10``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 0b89460d903f4b148ec8f9c28f21e493
+#: ../../basic/settings/index.rst cf3bcca07902453f97a8b6b3b1873441
 msgid "Env: ``DEFAULT_SEARCH_SIZE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:809 3abdac32776f4b5fbfc0a98210b27e63
+#: ../../basic/settings/index.rst:857 a13dfe8f592a420494f7b145cfd08fba
 msgid ""
 "An integer that specifies the default search size when using "
 "``geonode.search`` for querying data."
 msgstr ""
 
-#: ../../basic/settings/index.rst:812 1b80950f8a5e41fbbb1661325975d160
+#: ../../basic/settings/index.rst:860 a504d6e54ddb4b499ab35e9f58a7d16e
 msgid "DEFAULT_WORKSPACE"
 msgstr ""
 
-#: ../../basic/settings/index.rst 75dfc46325cc4d11a17a15c0c14b6efb
+#: ../../basic/settings/index.rst 10ae8a8c114a4099925fef6e1737fc03
 msgid "Env: ``DEFAULT_WORKSPACE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:817 7aec7fba9f8546aca5561b95f306c489
+#: ../../basic/settings/index.rst:865 bd464d5c1bad42b688da1394c7f5e8c9
 msgid "The standard GeoServer workspace."
 msgstr ""
 
-#: ../../basic/settings/index.rst:820 7dfebd1086094f88b41fc9d9f5067756
+#: ../../basic/settings/index.rst:868 f2ed91e26bb54c0899d935c82e5da12b
 msgid "DELAYED_SECURITY_SIGNALS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 441bc98f3e16439a84c380c4ca2d827a
+#: ../../basic/settings/index.rst 3e914346b2714769ba40c10c11b1e017
 msgid "Env: ``DELAYED_SECURITY_SIGNALS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:825 9a7a4175968d4a3d8e76cafe2cee0d1b
+#: ../../basic/settings/index.rst:873 1856b3bf41d649dd880027e4288a0fc7
 msgid ""
 "This setting only works when ``GEOFENCE_SECURITY_ENABLED`` has been set "
 "to ``True`` and GeoNode is making use of the ``GeoServer BACKEND``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:827 03de375885a64a5b862eed9f6503ba38
+#: ../../basic/settings/index.rst:875 c328520cc1a74f18a894a4e3ab4a0bca
 msgid ""
 "By setting this to ``True``, every time the permissions will be "
 "updated/changed for a Layer, they won't be applied immediately but only "
 "and only if either:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:830 dfab5ffe87224992b07bde71dda1bfd2
+#: ../../basic/settings/index.rst:878 2d13911b55d74ab3b2dbdb6fe2a03048
 msgid ""
 "A Celery Worker is running and it is able to execute the "
 "``geonode.security.tasks.synch_guardian`` periodic task; notice that the "
@@ -1338,182 +1384,187 @@ msgid ""
 "defined in the corresponding PeriodicTask model."
 msgstr ""
 
-#: ../../basic/settings/index.rst:833 7ab99cd5f05548e4aba113dafcb9ceed
+#: ../../basic/settings/index.rst:881 ff6687376b32423b8e8cd595763358ba
 msgid ""
 "A periodic ``cron`` job runs the ``sync_security_rules`` management "
 "command, or either it is manually executed from the Django shell."
 msgstr ""
 
-#: ../../basic/settings/index.rst:835 667e3ba958314945af881f54881ddc59
+#: ../../basic/settings/index.rst:883 8d1306baf5af4745b7019baaa6349294
 msgid ""
 "The user, owner of the Layer or with rights to change its permissions, "
 "clicks on the GeoNode UI button ``Sync permissions immediately``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:837 1a17ffa04c4744639ee67194200abf8e
+#: ../../basic/settings/index.rst:885 81261ae0c0c5408eb9f7faf87994cd2a
 msgid ""
 "Layers won't be accessible to public users anymore until the Security "
 "Rules are not synchronized!"
 msgstr ""
 
-#: ../../basic/settings/index.rst:840 5810365fcf1c445fa8f433ede7445d04
+#: ../../basic/settings/index.rst:888 21c8624311194587b4ec29c0ac233b3b
 msgid "DISPLAY_COMMENTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 98cbde9a777d48ceb9381712dd8e4653
+#: ../../basic/settings/index.rst ed05228f79a64ef5b15b684ff08a1348
 msgid "Env: ``DISPLAY_COMMENTS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:845 6989b67a7c1e4b76a928597f2e0cf6a0
+#: ../../basic/settings/index.rst:893 fdb124f1ce184953a67fea8adb139a01
 msgid "If set to False comments are hidden."
 msgstr ""
 
-#: ../../basic/settings/index.rst:849 4627cf50019e4942ae83db4e103ee83f
+#: ../../basic/settings/index.rst:897 f04e2c6e525d444e850ac2e2ddd8d1f4
 msgid "DISPLAY_RATINGS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 5f88679662f84d06b8d9abdc9f8c850c
+#: ../../basic/settings/index.rst a09aab10d659440da348ac6c4b63a4e2
 msgid "Env: ``DISPLAY_RATINGS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:854 bbd5e0aed8db46489444d7f25703f201
+#: ../../basic/settings/index.rst:902 b75f5249925f4a54bca32e74ef9b1a0f
 msgid "If set to False ratings are hidden."
 msgstr ""
 
-#: ../../basic/settings/index.rst:857 d7a2d95bcadd4f7ca2ef2e3cd3473d36
+#: ../../basic/settings/index.rst:905 215fd04b37ab4d23bdabb289a731acbc
 msgid "DISPLAY_SOCIAL"
 msgstr ""
 
-#: ../../basic/settings/index.rst b9e6526e8a204a96abeb513ff8408c0c
+#: ../../basic/settings/index.rst 833e0cdfc5f3495498e9ad4de86464b5
 msgid "Env: ``DISPLAY_SOCIAL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:862 432a188acf5b42299b193fa014922df1
+#: ../../basic/settings/index.rst:910 adb951e2296a436d87ce0f34ae3e302c
 msgid "If set to False social sharing is hidden."
 msgstr ""
 
-#: ../../basic/settings/index.rst:865 5f7a9a173577469a873d71b9efdbe4b8
+#: ../../basic/settings/index.rst:913 00302521d12142dd93f0a84885c67a2d
 msgid "DISPLAY_WMS_LINKS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9a6ff004afea4eb89be086eb25bea6d7
+#: ../../basic/settings/index.rst fde9ad098c904218b5eac3fd75501c3a
 msgid "Env: ``DISPLAY_WMS_LINKS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:870 68404c1405ab4ea2af6e4e7b503ffd66
+#: ../../basic/settings/index.rst:918 6d5b614acd174b9ba0ab1605e4275ff5
 msgid "If set to False direct WMS link to GeoServer is hidden."
 msgstr ""
 
-#: ../../basic/settings/index.rst:873 c37dcecf67e1439eaa659088fbc6bbd6
+#: ../../basic/settings/index.rst:921 c4a5fd2ffe9e40ff98f404eaa16882e8
 msgid "DISPLAY_ORIGINAL_DATASET_LINK"
 msgstr ""
 
-#: ../../basic/settings/index.rst 2eb4b648868f49569d8ce5fd4549b048
+#: ../../basic/settings/index.rst 2aac404c914e4d1a90101451c40da4c3
 msgid "Env: ``DISPLAY_ORIGINAL_DATASET_LINK``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:878 1817b5cf065847c690d004d6231f6787
+#: ../../basic/settings/index.rst:926 ceaccbae83804b6790e23144898e860d
 msgid "If set to False original dataset download is hidden."
 msgstr ""
 
-#: ../../basic/settings/index.rst:881 0bc0ddbbd4624424abd7fa5df0e591f3
+#: ../../basic/settings/index.rst:929 ff36df8ed8904af9b39c7a6741a8265f
 msgid "DOWNLOAD_FORMATS_METADATA"
 msgstr ""
 
-#: ../../basic/settings/index.rst:883 0f32626ed8db490388e4b055266bbc0d
+#: ../../basic/settings/index.rst:931 6176070a1a914de8b07b47b174b89bac
 msgid "Specifies which metadata formats are available for users to download."
 msgstr ""
 
-#: ../../basic/settings/index.rst:892 fadc8c7033844a24bb89f7ac9ba7faa9
+#: ../../basic/settings/index.rst:940 907bbfaca9584b10af5374951689c522
 msgid "DOWNLOAD_FORMATS_VECTOR"
 msgstr ""
 
-#: ../../basic/settings/index.rst:894 015eb33362d14cfe97e7d9d868a5c93f
+#: ../../basic/settings/index.rst:942 c715f12036ea4e9e8fab038873af2231
 msgid ""
 "Specifies which formats for vector data are available for users to "
 "download."
 msgstr ""
 
-#: ../../basic/settings/index.rst:904 14d27054374748a08d22fa386f9afb46
+#: ../../basic/settings/index.rst:952 549ff37202484aa58afea965c55bb11d
 msgid "DOWNLOAD_FORMATS_RASTER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:906 caf443900b8b4e8184a39a437c18297c
+#: ../../basic/settings/index.rst:954 13b67ec09b2f4e109f2ffaa90bd44c94
 msgid ""
 "Specifies which formats for raster data are available for users to "
 "download."
 msgstr ""
 
-#: ../../basic/settings/index.rst:915 1af6ca32b04646b19cdf006dfcca3338
+#: ../../basic/settings/index.rst:963 8d762cb8edea4666943ce9588bd768e2
 msgid "E"
 msgstr ""
 
-#: ../../basic/settings/index.rst:918 e7dc31887fa6445a8572baf5c5ff4f83
+#: ../../basic/settings/index.rst:966 f0a199a698a14bcc9e646edfd46bb455
 msgid "EMAIL_ENABLE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:922 e028b390d92d44a8b757f27a8c7c0569
+#: ../../basic/settings/index.rst:970 faad51d125a6434ea064a0dad73daf88
 msgid "Options:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:924 daf28ee45bff4d1e8d4a156e713d0376
+#: ../../basic/settings/index.rst:972 71b72a1ab8454e5eabe864950511311e
 msgid "EMAIL_BACKEND"
 msgstr ""
 
-#: ../../basic/settings/index.rst:926 fd2e457c899d481dbfe2096c8b2b6f94
+#: ../../basic/settings/index.rst:974 b45a4b52b71f4c82b2de8e22292e4581
 msgid "Default: ``django.core.mail.backends.smtp.EmailBackend``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:928 7aa3a2a7a84d4d01ab8e4ca69869947c
+#: ../../basic/settings/index.rst:976 6c5b95df8cdf42df8fd0aee403196b08
 msgid "Env: ``DJANGO_EMAIL_BACKEND``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:930 563ad797e26c4622bbe6ea63f66f91ff
+#: ../../basic/settings/index.rst:978 0e257c1dcce1457cb051a7733d0f37c9
 msgid "EMAIL_HOST"
 msgstr ""
 
-#: ../../basic/settings/index.rst ../../basic/settings/index.rst:932
-#: 3313aa755251423e9137ae50a7ab8b36 d86e9ffde22a4ecd91501dd4c39187e9
+#: ../../basic/settings/index.rst ../../basic/settings/index.rst:980
+#: 495c4d101e354947b4a754a000de071a ddd8165ef7ef4401b859cb8b7591fef4
 msgid "Default: ``localhost``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:934 3a8d80d9ac6c4c7b82f0dda70428618c
+#: ../../basic/settings/index.rst:982 b817801376124a359336cc243fa7e5f0
 msgid "EMAIL_PORT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:936 915244f21fa147679248319804c70dd6
+#: ../../basic/settings/index.rst:984 561c7a2598aa4f45a9e7ff1602ec5300
 msgid "Default: ``25``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:938 b9263b6786674e16a53ea6db055b77c1
+#: ../../basic/settings/index.rst:986 37ba844c7ac1470ab4e2c343a29c6364
 msgid "EMAIL_HOST_USER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:942 020d7b01c8634bf18e48608b0ee2722e
+#: ../../basic/settings/index.rst:988 ../../basic/settings/index.rst:992
+#: 2bdbf50596424f3f80d3c77fffe72f94 ae52bfc82cc84c90bc8369dd62748364
+msgid "Default: ``''``"
+msgstr ""
+
+#: ../../basic/settings/index.rst:990 6a7a8e2bc8a140098c581438b7650197
 msgid "EMAIL_HOST_PASSWORD"
 msgstr ""
 
-#: ../../basic/settings/index.rst:946 a6d3b8378ecd4900a81dc9a72e1a5d80
+#: ../../basic/settings/index.rst:994 7351c83c03944a4c89a60dcee78ddbe3
 msgid "EMAIL_USE_TLS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:950 0e24e0bced674f22bbf265aa4338fe83
+#: ../../basic/settings/index.rst:998 6bb264f6afe2416d8e21b9a7a8781d61
 msgid "EMAIL_USE_SSL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:954 d37b5d56780040698c902911c2fb0886
+#: ../../basic/settings/index.rst:1002 ebf9dd9a3c87468381ce59b930c89cae
 msgid "DEFAULT_FROM_EMAIL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:956 fb786dccc51e45bd89c6e2586c266b7a
+#: ../../basic/settings/index.rst:1004 65a3a27e82ca44b886386ab902c210e4
 msgid "Default: ``GeoNode <no-reply@geonode.org>``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:959 d373df764dc341678ef016c53e60a51a
+#: ../../basic/settings/index.rst:1007 3c72abb6760641c7abd0d1d0e71b1125
 msgid "EPSG_CODE_MATCHES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:974 eeab63f0ae764056b090acf6b721dd59
+#: ../../basic/settings/index.rst:1022 d71fa316f5a24e02bd919157a96cc97f
 msgid ""
 "Supported projections human readable descriptions associated to their "
 "EPSG Codes. This list will be presented to the user during the upload "
@@ -1522,97 +1573,131 @@ msgid ""
 "available in GeoServer also."
 msgstr ""
 
-#: ../../basic/settings/index.rst:979 5e25ebad0ec744fe92c291be4ba5bc9c
+#: ../../basic/settings/index.rst:1027 8b458940edb04d54ab23ab11ea25cf98
+msgid "EXTRA_METADATA_SCHEMA"
+msgstr ""
+
+#: ../../basic/settings/index.rst:1040 5c8a9dc9cdd34e6e90c34fda98bced89
+msgid ""
+"Variable used to actually get the expected metadata schema for each "
+"resource_type. In this way, each resource type can have a different "
+"metadata schema"
+msgstr ""
+
+#: ../../basic/settings/index.rst:1044 102cefe7eade4a07ba7b1cf96c75190d
 msgid "F"
 msgstr ""
 
-#: ../../basic/settings/index.rst:982 9ea8eb27e9ba44be861a7188fca8713b
+#: ../../basic/settings/index.rst:1047 3d3e9c03bd8b4bbd8c86ae09f69499c6
 msgid "FREETEXT_KEYWORDS_READONLY"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3a9fcd9add0143258384d012b04b8da6
+#: ../../basic/settings/index.rst 3980053d9e6a46dd96419e0dd86ebfab
 msgid "Env: ``FREETEXT_KEYWORDS_READONLY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:987 360eedf04cea4ddfa6cf5bd052fa3b36
+#: ../../basic/settings/index.rst:1052 f57533de8fdf415c98060c1682af6bdb
 msgid ""
 "Make Free-Text Keywords writable from users. Or read-only when set to "
 "False."
 msgstr ""
 
-#: ../../basic/settings/index.rst:990 cb5e51465710450583f127a2d9915ab9
+#: ../../basic/settings/index.rst:1055 39144e8a9e3643b099487e1d92fa488c
 msgid "G"
 msgstr ""
 
-#: ../../basic/settings/index.rst:993 fbb916d636c9484e89e2f2e8e0f36c70
+#: ../../basic/settings/index.rst:1058 6308a985d4bf44579594cd09ebbf466b
 msgid "GEOFENCE_SECURITY_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6a2cd794d84d47098a1c0bfaf2139380
+#: ../../basic/settings/index.rst 8c7e74d11cfa4f0c98da87e8c3c3bb54
 msgid "Default: ``True`` (False is Test is true)"
 msgstr ""
 
-#: ../../basic/settings/index.rst 44b0791d422145b98cdd57449560bcfe
+#: ../../basic/settings/index.rst 94e8f7cd22594613a05265eaa220972f
 msgid "Env: ``GEOFENCE_SECURITY_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:998 3567985934ca40c5883d7ed4b35e4b0b
+#: ../../basic/settings/index.rst:1063 a47ee4d963de4f8f88a7a5aa847ae530
 msgid "Whether the geofence security system is used."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1001 c8134d09b16c46a6abeb71ec4a23d411
+#: ../../basic/settings/index.rst:1066 d9baaeb584c544a793525e9956a9f062
 msgid "GEOIP_PATH"
 msgstr ""
 
-#: ../../basic/settings/index.rst 19e64fb001134f828dd84c595c34dd3e
+#: ../../basic/settings/index.rst 2ff6b9a3033d46e091736632d32230d0
 msgid "Default: ``Path to project``"
 msgstr ""
 
-#: ../../basic/settings/index.rst b79bf9113b6c455c896d4204724d6992
+#: ../../basic/settings/index.rst 45ba70b431664aaa9b863c4d54e76740
 msgid "Env: ``PROJECT_ROOT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1006 416d348c81de4227807e14a59b0ea9fc
+#: ../../basic/settings/index.rst:1071 a41914ed44544174b2cd12abe87a4364
 msgid ""
 "The local path where GeoIPCities.dat is written to. Make sure your user "
 "has to have write permissions."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1010 1e2441955bf8490688b141584cf868c2
-msgid "GEONODE_APPS"
+#: ../../basic/settings/index.rst:1074 ec561aaafdfd4879a93604dd8f3aae6a
+msgid "GEONODE_APPS_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1012 b8ae0d8fe4224c6ca280b2b0a83086e3
-msgid "If enabled contrib apps are used."
+#: ../../basic/settings/index.rst:1078 880c77270fff4e908a310de5532f2bce
+msgid ""
+"If enabled contrib apps are used. If disabled: - the geoapps URLs are not"
+" included in the routing paths - the geoapps resources are excluded from "
+"the search - the resource detail are forwarded to the homepage"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1015 a00391dd4d7641338b1086d69724b6fb
+#: ../../basic/settings/index.rst:1084 d0ae8e2a419f4a2a8e3c2786b3a2e47f
+msgid "``ENABLE -> DISABLE`` transition:"
+msgstr ""
+
+#: ../../basic/settings/index.rst:1086 ed8a6b9e68374e6f8c53d70825a72674
+msgid ""
+"This should be done if the geoapps were enabled in an environment where "
+"they are not needed."
+msgstr ""
+
+#: ../../basic/settings/index.rst:1088 533d93ed0a60424faaafb8cb0b9e99c8
+msgid "``DISABLE -> ENABLE`` transition:"
+msgstr ""
+
+#: ../../basic/settings/index.rst:1090 fa5e107d06684c91bdbda97d3ae13ec8
+msgid ""
+"It should be done only once to enable geoapps in an environment where are"
+" needed"
+msgstr ""
+
+#: ../../basic/settings/index.rst:1093 a0d1d7dc5c45407ab304fe1b0c8cb217
 msgid "GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1017 eac5c67a22b746059fcbf43bd8bb8c73
+#: ../../basic/settings/index.rst:1095 65af8c0e4fc849c1afad3a286e9dc293
 msgid "Default:  ``\"mapstore\"``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1019 ef4b6a00178d44a28df0ac5485063669
+#: ../../basic/settings/index.rst:1097 2126d69d3a544833a4ed12655dd1ad03
 msgid ""
 "The library to use for display preview images of layers. The library "
 "choices are:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1021 44e062f94d454b35a38f551f070f6a75
+#: ../../basic/settings/index.rst:1099 8affb1f30b66478dab2fbe2827ce3210
 msgid "``\"mapstore\"`` ``\"leaflet\"`` ``\"react\"``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1026 3ecd5abedeaa455ba2fc06b4c02b28d6
+#: ../../basic/settings/index.rst:1104 ee10017cd60c4cfeb6e5413cbc2802b7
 msgid "GEONODE_EXCHANGE"
 msgstr ""
 
-#: ../../basic/settings/index.rst c56f36d7bb1c4494bf269e901dcff54c
+#: ../../basic/settings/index.rst 7fc8a717dcf74744b34dde098a4e69b6
 msgid "Default:: ``Exchange(\"default\", type=\"direct\", durable=True)``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1030 86228585cd604d0988855303e5b86632
+#: ../../basic/settings/index.rst:1108 5a4e910b5626472994b62c15e2fc3df2
 msgid ""
 "The definition of Exchanges published by geonode. Find more about "
 "Exchanges at `celery docs "
@@ -1620,15 +1705,15 @@ msgid ""
 "#exchanges-queues-and-routing-keys>`__."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1034 5e32415081e548388ad84ab9a5ccd24a
+#: ../../basic/settings/index.rst:1112 6584d59356ac42639be61212bf281e27
 msgid "GEOSERVER_EXCHANGE"
 msgstr ""
 
-#: ../../basic/settings/index.rst 0109646b768a4a6e8937600665bb0873
+#: ../../basic/settings/index.rst 27fe6dfb6dd2439ca2262fef9919b95e
 msgid "Default:: ``Exchange(\"geonode\", type=\"topic\", durable=False)``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1038 134251c8305147fe8890ca94eb56b216
+#: ../../basic/settings/index.rst:1116 bffbc2f8a8e544ee8478cd1a53d0991a
 msgid ""
 "The definition of Exchanges published by GeoServer. Find more about "
 "Exchanges at `celery docs "
@@ -1636,161 +1721,161 @@ msgid ""
 "#exchanges-queues-and-routing-keys>`__."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1041 81090a1fc67f423886480794330abe03
+#: ../../basic/settings/index.rst:1119 de78697cc3c448dfaf1c7ae1ad27b8c3
 msgid "GEOSERVER_LOCATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst 700b368e432a456abf6febcba5dd1e12
+#: ../../basic/settings/index.rst 2bbd5c69ae974e859e33979d9250451b
 msgid "Default: ``http://localhost:8080/geoserver/``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 4fe9845a09fa4e37a64c9e1196ba608d
+#: ../../basic/settings/index.rst 52bffea2d356485ba62d603267ac5acd
 msgid "Env: ``GEOSERVER_LOCATION``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1046 ac693d53851e45e29c2194da04e39692
+#: ../../basic/settings/index.rst:1124 4cb9ab2bb46b4027adca004ed5364ef8
 msgid "Url under which GeoServer is available."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1049 9e381361125a40ef9175a0631c2c3b4c
+#: ../../basic/settings/index.rst:1127 88a59f10b79048ba9df305a2a9887dac
 msgid "GEOSERVER_PUBLIC_HOST"
 msgstr ""
 
-#: ../../basic/settings/index.rst 2a0a5325699545569e1597b9811b16d5
-#: a325e690a03e4e83a34610e8d6c7b298
+#: ../../basic/settings/index.rst 38a7e22cd6da4cf7b29c77577947bcf8
+#: 5ecb1f2255634d3c99f4ed663e0f6c2c
 msgid "Default: ``SITE_HOST_NAME`` (Variable)"
 msgstr ""
 
-#: ../../basic/settings/index.rst 60aa8b5789eb48e396559785e944617d
+#: ../../basic/settings/index.rst 20591567845940fb968a703aff54e039
 msgid "Env: ``GEOSERVER_PUBLIC_HOST``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1054 30add9fafe074ad0a555e6467d40c09e
+#: ../../basic/settings/index.rst:1132 5fe1d2f5c92a41a6a9a9acf0214234dc
 msgid "Public hostname under which GeoServer is available."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1057 02d0cf2a042c4baebd7a351a8c22856c
+#: ../../basic/settings/index.rst:1135 2b20ab3f093e42d2bff3b93f5f6b893e
 msgid "GEOSERVER_PUBLIC_LOCATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst 8ebe5c01eff4404897056e70408b0917
+#: ../../basic/settings/index.rst 65b148f656a84d1b9b22c6ad4712146d
 msgid "Env: ``GEOSERVER_PUBLIC_LOCATION``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1062 ../../basic/settings/index.rst:1079
-#: 73d8f9526c294ac1be927f2c69a682a1 cbb0375cc2e8430f948d2433e1eac161
+#: ../../basic/settings/index.rst:1140 ../../basic/settings/index.rst:1157
+#: a19178d2b6f04d699dd8d9c504e26137 a1a4f8bc9a1146f69e589c826266dd34
 msgid "Public location under which GeoServer is available."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1065 b741c977a286467b8fd393d435159a12
+#: ../../basic/settings/index.rst:1143 efe2927f81394dff818226d3fcf08c05
 msgid "GEOSERVER_PUBLIC_PORT"
 msgstr ""
 
-#: ../../basic/settings/index.rst c0c5fbbe0b07416ea5319de2039f56d6
+#: ../../basic/settings/index.rst 6490d3d891574cfeba2953bcc6e1115b
 msgid "Default: ``8080 (Variable)``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 441f66841cd142d6b52ac8384f7fb080
+#: ../../basic/settings/index.rst fbc155c91df04f479257eb5aaeac8a7f
 msgid "Env: ``GEOSERVER_PUBLIC_PORT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1071 d6c180a1f9da4a38a15c055c41ee9f02
+#: ../../basic/settings/index.rst:1149 99598e17de6749038f2974b162951b69
 msgid "Public Port under which GeoServer is available."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1074 51cfbe2dad4b44f1a65601f41718df92
+#: ../../basic/settings/index.rst:1152 596447ec163a4d9696f0f6e3d7a84657
 msgid "GEOSERVER_WEB_UI_LOCATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst 86f49a06efc44dd38494d8c0c444b14b
+#: ../../basic/settings/index.rst 0bbd0b3fa12c4a54bd593ae0720a3739
 msgid "Default: ``GEOSERVER_PUBLIC_LOCATION (Variable)``"
 msgstr ""
 
-#: ../../basic/settings/index.rst d7d932eb31864b98953232048b31d598
+#: ../../basic/settings/index.rst c50d2480161544ea95765bc5a0b1c120
 msgid "Env: ``GEOSERVER_WEB_UI_LOCATION``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1082 1df0eb07b2074a72ac5d0477f7cfb83f
+#: ../../basic/settings/index.rst:1160 c07e0985eba949e78e5c5356e96b916b
 msgid "GROUP_PRIVATE_RESOURCES"
 msgstr ""
 
-#: ../../basic/settings/index.rst 003756e43edd4f9aae0825e841f4e84d
+#: ../../basic/settings/index.rst fcce9b4bab0244f6a9053ddc66d1ae89
 msgid "Env: ``GROUP_PRIVATE_RESOURCES``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1087 13c1f3c5f3a14d64946aa408fdf2f5fe
+#: ../../basic/settings/index.rst:1165 a1be26147ec94a92b7c99c7cc78e8017
 msgid ""
 "If this option is enabled, Resources belonging to a Group won't be "
 "visible by others"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1090 e3f58506022c43a489e13c26b8cf728d
+#: ../../basic/settings/index.rst:1168 c552d0d7fb7649cdbe1a571bf923ed2b
 msgid "H"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1093 b7f44aec05294bfd9087e556389b736f
+#: ../../basic/settings/index.rst:1171 ab93f2a84ecf40238e9e566cb7bd0a44
 msgid "HAYSTACK_FACET_COUNTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 07eea7d9f65c468fa08d1c16cd279561
+#: ../../basic/settings/index.rst b656fad07d07477498eb862db744f3c4
 msgid "Env: ``HAYSTACK_FACET_COUNTS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1098 d9478eafda0b490caca844bcb65b6178
+#: ../../basic/settings/index.rst:1176 24cedf8a7dae4232bff68c3936cd517c
 msgid ""
 "If set to True users will be presented with feedback about the number of "
 "resources which matches terms they may be interested in."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1101 21acae37028d4457afa0c08e603e8d7f
+#: ../../basic/settings/index.rst:1179 b9c639d971204728b329b1a9123a6446
 msgid "HAYSTACK_SEARCH"
 msgstr ""
 
-#: ../../basic/settings/index.rst d10bf8e967114d64a6e85c8b501fbcfd
+#: ../../basic/settings/index.rst 2984c13085b84bc19e9d4a363e91f954
 msgid "Env: ``HAYSTACK_SEARCH``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1106 14eff9bab746411ba4182b58c595a202
+#: ../../basic/settings/index.rst:1184 d6b34e12b3da4ad0900268a3875f6929
 msgid "Enable/disable haystack Search Backend Configuration."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1110 4d30a0e33a8c43e8a4613e4a110fb6b5
+#: ../../basic/settings/index.rst:1188 f931182e9bc2466482a4a072ee318884
 msgid "L"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1113 395f53c6783d4ac48fdf101c883485ef
+#: ../../basic/settings/index.rst:1191 60b5148c87b24d258ccbbda540d79c65
 msgid "LEAFLET_CONFIG"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1115 86a50f22ed0c4adcab32e7f71d3b4032
+#: ../../basic/settings/index.rst:1193 39ac141d48864bf592f9b058e617a746
 msgid "A dictionary used for Leaflet configuration."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1118 bf7e1cbb2d09441096ae82a97c656e5d
+#: ../../basic/settings/index.rst:1196 6b3e450c32f84b7787c15bf947ab41fb
 msgid "LICENSES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1130 714de79a9ee14cfd8c926d19db6914c2
+#: ../../basic/settings/index.rst:1208 53d41c7c9909426a9c0591a7f87a8fac
 msgid "Enable Licenses User Interface"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1133 88533cff72ef4b95ac07799f764c7095
+#: ../../basic/settings/index.rst:1211 04f4c96ff3c34611b200f8c0dadcaa15
 msgid "LOCAL_SIGNALS_BROKER_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst ee5aad45926a49fcabd6a4e816aab96c
+#: ../../basic/settings/index.rst 15b64d34558043bc9437735f358f1cce
 msgid "Default: ``memory://``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1138 8dcd6f99b3da40d0a3a321443218d86a
+#: ../../basic/settings/index.rst:1216 b7d3d680a3f24c2b9ac58af29762cd43
 msgid "LOCKDOWN_GEONODE"
 msgstr ""
 
-#: ../../basic/settings/index.rst c4411d63eb10410db9a304f1bdaf6a16
+#: ../../basic/settings/index.rst 5a814280c9d14b6f938e0f377d497790
 msgid "Env: ``LOCKDOWN_GEONODE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1143 ae4d35fe84d6489f9a077d4b5de028e4
+#: ../../basic/settings/index.rst:1221 c56290120ced4b7db7996693ff48f4f3
 msgid ""
 "By default, the GeoNode application allows visitors to view most pages "
 "without being authenticated. If this is set to ``True`` users must be "
@@ -1798,290 +1883,291 @@ msgid ""
 "``AUTH_EXEMPT_URLS``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1147 8849d6632572439eb0d67fc5a8e910a2
+#: ../../basic/settings/index.rst:1225 4429468db00b473fa336b0ea0a12de73
 msgid "LOGIN_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 5a151a39eda847b99ab23926b2ee1bef
-#: ed1236528e5a41c09f01e7d5676be08e
+#: ../../basic/settings/index.rst 16675c695b394bc48faa7f5a4041ea5f
+#: 4dd14ae162d24addabf095f7046ef42f
 msgid "Default: ``{}account/login/'.format(SITEURL)``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 34969f901c7c4a2d85047d63262347db
+#: ../../basic/settings/index.rst 8b24aa6bb20842af9b03437ceaacb798
 msgid "Env: ``LOGIN_URL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1152 3a2663b0148e4e2da58a424ea0f108f8
+#: ../../basic/settings/index.rst:1230 3a1e5e879a7747b49e20d969869b782e
 msgid "The URL where requests are redirected for login."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1156 791ac267e689428d84bd7a699cbba902
+#: ../../basic/settings/index.rst:1234 924a2f39691745378a246a26f7b835e3
 msgid "LOGOUT_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst c30d49a26c1f4da8a86acc5cfbc40ea6
+#: ../../basic/settings/index.rst bf555e0624cc497985ac8b2fb8a0bbd0
 msgid "Env: ``LOGOUT_URL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1161 42531bed34ea48af96318e1c69a662b8
+#: ../../basic/settings/index.rst:1239 1ba04c7a78e44b0b8ff342e85c609ff8
 msgid "The URL where requests are redirected for logout."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1164 88a81d82507f42c497f30eac94d2d1a7
+#: ../../basic/settings/index.rst:1242 32f2c4fe988343bd96d1141657d49843
 msgid "M"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1167 67463911b6ac406cb3e637c9ab78e6a5
+#: ../../basic/settings/index.rst:1245 5c0019e1cd1745879fd752293b22ceb2
 msgid "MAP_CLIENT_USE_CROSS_ORIGIN_CREDENTIALS"
 msgstr ""
 
-#: ../../basic/settings/index.rst e439fe5507114a6e80e56d05567ce782
+#: ../../basic/settings/index.rst bd37ca7057f242c8ad7f434f6add5e43
 msgid "Env: ``MAP_CLIENT_USE_CROSS_ORIGIN_CREDENTIALS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1172 67b177df05244d3aa8eaa10b783101dc
+#: ../../basic/settings/index.rst:1250 6799d81112a94d41bf521f74dffdcd41
 msgid "Enables cross origin requests for geonode-client."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1175 39ac2542d60640028b8b98ab54e62bda
+#: ../../basic/settings/index.rst:1253 875e1c414ba14eb6b205d4a5a7dc9ab9
 msgid "MAPSTORE_BASELAYERS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1e7fc9da22174a8784f5a6a1849e5e68
+#: ../../basic/settings/index.rst cd541f8021164e41a79fcb750fff1c03
 msgid "Env: ``MAPSTORE_BASELAYERS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1221 d6ffc64cee08407b928fb89ed43a2dcc
+#: ../../basic/settings/index.rst:1299 9ba66fb09aed414e9c004c6b2789de74
 msgid ""
 "Allows to specify which backgrounds MapStore should use. The parameter "
 "``visibility`` for a layer, specifies which one is the default one."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1223 76b94b9f253c4fbd917301fc38cf843b
+#: ../../basic/settings/index.rst:1301 ac5722b20d3e4642ac42cf39e3afb743
 msgid ""
 "A sample configuration using the Bing background without OpenStreetMap, "
 "could be the following one:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1266 125e509392ee42a8889ffd23e7d1edc4
+#: ../../basic/settings/index.rst:1344 0bfce4f8d786488a829fec376c5ff7b1
 msgid ""
 "To use a Bing background, you need to correctly set and provide a valid "
 "``BING_API_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1269 d3a873e10b2e4d81a35c59ed19f042db
+#: ../../basic/settings/index.rst:1347 14ee1683d52e41d396c9bd3807789e0d
 msgid "MAX_DOCUMENT_SIZE"
 msgstr ""
 
-#: ../../basic/settings/index.rst ed9e3fb141544082a69c5e0f3afc2e28
+#: ../../basic/settings/index.rst d5e9e59e1dcd4ca2b0c16d8a3d5c60ca
 msgid "Default:``2``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 92ad2701027c40a08307fb71c0ad5840
+#: ../../basic/settings/index.rst baeed657c7994e3299c4dd67befcdc2e
 msgid "Env: ``MAX_DOCUMENT_SIZE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1274 9e9c25208800401c98823e336d26751f
+#: ../../basic/settings/index.rst:1352 d4536e8993994651b0f3c8d46a87a515
 msgid "Allowed size for documents in MB."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1277 d3126b32367441c0a12da99d2f86ba84
+#: ../../basic/settings/index.rst:1355 808818b313f84c35853b4d37ee7a613b
 msgid "METADATA_PARSERS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1279 dcecbbc81e244f318b0fa1b4a6ea1c94
+#: ../../basic/settings/index.rst:1357 f02a603e5c834b5aa7a1920d3b9e3e77
 msgid ""
 "Is possible to define multiple XML parsers for ingest XML during the "
 "layer upload."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1281 66e0af6eedbe4bd2a9ba833530d43ffa
+#: ../../basic/settings/index.rst:1359 ../../basic/settings/index.rst:2088
+#: 75e7aff9eb8045edafa6fab1ad8288e7 b870f6c614584ca98f10de242e000aa4
 msgid "The variable should be declared in this way in `settings.py`:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1283 cd3d24c4eb214148b6720bb866b325dd
+#: ../../basic/settings/index.rst:1361 c4ae8136d06d44d98b68fb8c43e6f1db
 msgid "`METADATA_PARSERS = ['list', 'of', 'parsing', 'functions']`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1285 a7accac2884f474aa8f0f1c885c19ba9
+#: ../../basic/settings/index.rst:1363 da37a6dffb2e4f6c84fde65d40dd2403
 msgid ""
 "If you want to always use the default metadata parser and after use your "
 "own, the variable must be set with first value as `__DEFAULT__` Example:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1288 9d570d5912e74316962e79295f5f5447
+#: ../../basic/settings/index.rst:1366 e89c5120b30a4ec3be2add673ceb29b4
 msgid "`METADATA_PARSERS = ['__DEFAULT__', 'custom_parsing_function]`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1290 c81410234d6f4138a6a35e8f00a4f78d
+#: ../../basic/settings/index.rst:1368 1f0b3d2a2432485991a0dd47e64a68e7
 msgid "If not set, the system will use the `__DEFAULT__` parser."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1292 30d4acdf2fcd402e81c960e194107b16
+#: ../../basic/settings/index.rst:1370 86974f82fd0c4fd3b3bb62d7e4118a53
 msgid "The custom parsing function must be accept in input 6 parameter that are:"
 msgstr ""
 
-#: ../../basic/settings/index.rst e9951d3c20c4427caa025ee6c61b64ff
+#: ../../basic/settings/index.rst 05433850fd0c49e0b09d1763c8dcfa62
 msgid "- exml (xmlfile)"
 msgstr ""
 
-#: ../../basic/settings/index.rst edd33f9f617f426f9fb146ec5bcc045e
+#: ../../basic/settings/index.rst d188a3a3bf9749189d19736044f23b10
 msgid "- uuid (str)"
 msgstr ""
 
-#: ../../basic/settings/index.rst 4359bbe7dc0e49b7b54967cbb3678999
+#: ../../basic/settings/index.rst 8b68051f2a5041caa84946ab0d48b28c
 msgid "- vals (dict)"
 msgstr ""
 
-#: ../../basic/settings/index.rst 79316df931514df880e5c166612188c0
+#: ../../basic/settings/index.rst 88d38c8bc34e4bd1adc8ad5dc00021b2
 msgid "- regions (list)"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6b18a629b4664466a98dddcea172fc8a
+#: ../../basic/settings/index.rst 12c43483f3664eeba7284ba6d1e89b7a
 msgid "- keywords (list)"
 msgstr ""
 
-#: ../../basic/settings/index.rst e1ab808426b0489aa188bce63df555e2
-#: e44398907c864477a994bc51df4017a2
+#: ../../basic/settings/index.rst 3316abceb67649a4a14d3ed2fb3164c2
+#: dff9aa3650634c568ac42777f37caaff
 msgid "- custom (dict)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1301 07e8162448d943c6b57630525f9a2c97
+#: ../../basic/settings/index.rst:1379 53121acf96c048e6a98bc4f21089ba1c
 msgid ""
 "If you want to use your parser after the default one, here is how the "
 "variable are populated:"
 msgstr ""
 
-#: ../../basic/settings/index.rst 942a8a8b4bf14ab5962a9ee2d496c9b5
+#: ../../basic/settings/index.rst f670716c11b243bda474872d076bb654
 msgid "- exml: the XML file to parse"
 msgstr ""
 
-#: ../../basic/settings/index.rst f8a66dd949054d91911ab4ba80878146
+#: ../../basic/settings/index.rst 8e9030d87db24e13b95a21f47d0ebf85
 msgid "- uuid: the UUID of the layer"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9648d691c5e74dbb92e271d63a7e116f
+#: ../../basic/settings/index.rst 54641a54df5e43e488ab390461f38b02
 msgid "- vals: Dictionary of information that belong to ResourceBase"
 msgstr ""
 
-#: ../../basic/settings/index.rst 8b3ba151812a4fc1aba2b3036599426a
+#: ../../basic/settings/index.rst 72204926d8e44c989887b8f4fd67ce4b
 msgid "- regions: List of regions extracted from the XML"
 msgstr ""
 
-#: ../../basic/settings/index.rst d9c39f52927e4de099cbced100c80cba
+#: ../../basic/settings/index.rst e98d24c6374a47af96703dd2424f614b
 msgid ""
 "- keywords: List of dict of keywords already divided between free-text "
 "and thesarus"
 msgstr ""
 
-#: ../../basic/settings/index.rst e63160228aa843809116efbd63f75717
+#: ../../basic/settings/index.rst 1dd286373ffe434ba7cfa661bc916d5c
 msgid "- custom: Custom varible"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1310 3112ed237a9f48fc862f0077d1af1174
+#: ../../basic/settings/index.rst:1388 7398e98901584bfaa73718805cfa3c7a
 msgid ""
 "NOTE: the keywords must be in a specific format, since later this dict, "
 "will be ingested by the `KeywordHandler` which will assign the "
 "keywords/thesaurus to the layer."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1319 b30cf8efa3b3436cbe59d74ab8250d02
+#: ../../basic/settings/index.rst:1397 e751ca4df3714841b771b27ed8cc87ce
 msgid "Here is an example of expected parser function"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1326 670dc9a7d68243a7b4da55b348736294
+#: ../../basic/settings/index.rst:1404 1c44698ee8ae4ea69174348d737730c0
 msgid ""
 "For more information, please rely to `TestCustomMetadataParser` which "
 "contain a smoke test to explain the functionality"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1330 e3aa0a96602f4a49b56218459822054d
+#: ../../basic/settings/index.rst:1408 d0d640fed8a440e9bd9768bc3bd7f044
 msgid "METADATA_STORERS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1332 cf12163509714a50a8a305e287b40b0d
+#: ../../basic/settings/index.rst:1410 c4a137b6cffc49f1a54a089f561d3504
 msgid "Is possible to define multiple Layer storer during the layer upload."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1334 95ff7b8e1ea64ef1af2fc289b214f56d
+#: ../../basic/settings/index.rst:1412 10a013ce9ed143acaefdf4ef166b7bbd
 msgid "The variable should be declared in this way:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1336 ebdd275d594c488d93e0317531064f6f
+#: ../../basic/settings/index.rst:1414 9e2983105aef46ec9e01f22b04aa07bb
 msgid "`METADATA_STORERS = ['custom_storer_function']`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1338 8b0a04626f3a4c01ac63a1947cf9c009
+#: ../../basic/settings/index.rst:1416 f7e44fffcdfa46bcb360e79c8ff4631a
 msgid "NOTE: By default the Layer is always saved with the default behaviour."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1340 c525c0b3a941428badcb4785699c25c6
+#: ../../basic/settings/index.rst:1418 c8a5543151024386ab2e41b74523d115
 msgid "The custom storer function must be accept in input 2 parameter that are:"
 msgstr ""
 
-#: ../../basic/settings/index.rst d0b10a80ec9c4a55a050211e893ced41
+#: ../../basic/settings/index.rst cc464a85a5334fd896015327fa49c0d8
 msgid "- Layer (layer model instance)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1345 a06f2ad9e61d41f5ace2e3f041f4ac9f
+#: ../../basic/settings/index.rst:1423 e52fe8ff2c564ab98d956f0f542ab929
 msgid "Here is how the variable are populated by default:"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1a8b322709c744c2a025b2d7bba52a31
+#: ../../basic/settings/index.rst 302f6d20a2fb44618341cf0f19a1ed6c
 msgid "- layer (layer model instance) that we wanto to change"
 msgstr ""
 
-#: ../../basic/settings/index.rst 7037cf52b34444c28743fccef0660e60
+#: ../../basic/settings/index.rst a231ad67031a461fbf100353dc37cecf
 msgid "- custom: custom dict populated by the parser"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1350 da316a77736b4630abbe554494276598
+#: ../../basic/settings/index.rst:1428 dfeb3fbd8bcd4f75abc861a009b2de02
 msgid "Here is an example of expected storer function"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1357 0a7a74b44e754f6987171533ecac1e20
+#: ../../basic/settings/index.rst:1435 c1df61a37b0b4ee69559662e3dd111db
 msgid ""
 "For more information, please rely to `TestMetadataStorers` which contain "
 "a smoke test to explain the functionality"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1361 a4344a33b496496e844c99bcbff51e52
+#: ../../basic/settings/index.rst:1439 3a85d82e7e234cbd819053dc8e82c514
 msgid "MISSING_THUMBNAIL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1363 52f2e5f8f33342b7829abb4e85e67f9e
+#: ../../basic/settings/index.rst:1441 0747d77f0965452086dd743876de1495
 msgid "Default: ``geonode/img/missing_thumb.png``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1365 ad506cd0d0fc4d688b8214e172a49e32
+#: ../../basic/settings/index.rst:1443 d35666b7c3ca4a8b97f9a979595b168d
 msgid "The path to an image used as thumbnail placeholder."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1369 7ef46675b0524a8f8a608a3cb9330abe
+#: ../../basic/settings/index.rst:1447 4ef5afe6f6924fab9dfd67e2a84b666f
 msgid "MEMCACHED_BACKEND"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1370 7756d6443a55485f8ad231f25019d103
+#: ../../basic/settings/index.rst:1448 357485bbc94b458796d44a9e5b381c69
 msgid "Default: ``django.core.cache.backends.memcached.PyMemcacheCache``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1372 6de6d24da4114865bfe8a05b81d238fa
+#: ../../basic/settings/index.rst:1450 437986d18c644a41953693930b2fee5f
 msgid "Define which backend of memcached will be used"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1376 3491b48cebf14ea6971cf00f1f529e48
+#: ../../basic/settings/index.rst:1454 e0dde1f9168441e7854034a846b2375d
 msgid "MEMCACHED_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1379 3b00e4934e134232b33392ead6af7bc0
+#: ../../basic/settings/index.rst:1457 3bd2ec77bd634c9e94d442b2f0a2f531
 msgid "If True, will use MEMCACHED_BACKEND as default backend in CACHES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1383 95371c3e5276483cb4897dc62c3e7802
+#: ../../basic/settings/index.rst:1461 e234075f0bfb4a3e98fd070cf42a63e1
 msgid "MODIFY_TOPICCATEGORY"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1387 e8fece3c1fd54ee6bcee6184586bd28d
+#: ../../basic/settings/index.rst:1465 1bfdbb973341412a87d2ece991c887bf
 msgid ""
 "Metadata Topic Categories list should not be modified, as it is strictly "
 "defined by ISO (See: "
@@ -2090,250 +2176,250 @@ msgid ""
 "element)."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1391 69f6eecad9834e759dc4d24febe3715d
+#: ../../basic/settings/index.rst:1469 bccc539dfc9b405f9bd1ad345e516538
 msgid ""
 "Some customization is still possible changing the is_choice and the "
 "GeoNode description fields."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1394 b5c9e3ded9fb415593788ca80fe7c328
+#: ../../basic/settings/index.rst:1472 7e4c03c411ff411f97170eda7038d51e
 msgid ""
 "In case it is necessary to add/delete/update categories, it is possible "
 "to set the MODIFY_TOPICCATEGORY setting to True."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1398 6072f0fa0ed142dabaedf80d84859767
+#: ../../basic/settings/index.rst:1476 d3e116fca5e54638a3fd1644594d69c7
 msgid "MONITORING_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1402 240805f54bd146eca379f416d90e084f
+#: ../../basic/settings/index.rst:1480 58ac25e2eae54618a3e5e8423a5e59f7
 msgid ""
 "Enable internal monitoring application (`geonode.monitoring`). If set to "
 "`True`, add following code to your local settings:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1412 f9cef9875f1649faa330918652b659d0
+#: ../../basic/settings/index.rst:1490 ab52ba3219614ba7b6f78493ec5eceb7
 msgid "See :ref:`geonode_monitoring` for details."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1417 dde165ef41f74c77adf165a137d20838
+#: ../../basic/settings/index.rst:1495 bb410fe9e29344fbbd23d39576710be5
 msgid "MONITORING_DATA_AGGREGATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1429 b207517cac454827afceab9054323a74
+#: ../../basic/settings/index.rst:1507 3f5f6485e940435fb9e0306ad48c0da8
 msgid ""
 "Configure aggregation of past data to control data resolution. It lists "
 "data age and aggregation in reverse order, by default:"
 msgstr ""
 
-#: ../../basic/settings/index.rst ec6d41de9a904a05b4c6fef5ddc2d074
+#: ../../basic/settings/index.rst cc72bddcac4045dab451438dea0dd074
 msgid "- for current data, 1 minute resolution"
 msgstr ""
 
-#: ../../basic/settings/index.rst 12ea48ad37ae45a7a1ad450c66054131
+#: ../../basic/settings/index.rst 3b277a557e554aeeb0aac678a36e0162
 msgid "- for data older than 1 day, 1-hour resolution"
 msgstr ""
 
-#: ../../basic/settings/index.rst 2eaafdbdfd074d6ea2e1a4c9007b9ac8
+#: ../../basic/settings/index.rst 3c50bb6851ab4ec0b60f99daf68c7b78
 msgid "- for data older than 2 weeks, 1 day resolution"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1435 154b1846aedd4de49faa42a597434f03
+#: ../../basic/settings/index.rst:1513 ed3e93be23d34c8f9a91973fad39d933
 msgid "See :ref:`geonode_monitoring` for further details."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1437 ../../basic/settings/index.rst:1477
-#: 8614c0b8d36d407e9155fb25a59bd4d8 ca19f10db22f4673b1f5b01976f9a179
+#: ../../basic/settings/index.rst:1515 ../../basic/settings/index.rst:1555
+#: 36b783520e3848659443b6a2789bed32 7a8af7a632a849a4a2b06d278c8d1ac9
 msgid "This setting takes effects only if :ref:`user-analytics` is true."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1440 0572dad29a234127904fa7bdbce1f436
+#: ../../basic/settings/index.rst:1518 dddd35f9f7e6430cb7e283a4d238ce54
 msgid "MONITORING_DATA_TTL"
 msgstr ""
 
-#: ../../basic/settings/index.rst ac44ac6000dc43f59161ed73e2638793
+#: ../../basic/settings/index.rst 7fdc1ebbeedd432aa2ce63a457325a5e
 msgid "Default: ``365``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 95889285e8964d5dbffaa0de2394539d
+#: ../../basic/settings/index.rst 4947d7e4498042ceb2ce5496cea96a0b
 msgid "Env: ``MONITORING_DATA_TTL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1445 27826669d263472791bcb7658a3f3b6e
+#: ../../basic/settings/index.rst:1523 d3e9390d432e4d27899b3bbda5692502
 msgid "How long monitoring data should be stored in days."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1448 56eff4d94b0f4fffa34a7b0aa23ce501
+#: ../../basic/settings/index.rst:1526 9132a63e4f964b9693f135426ec7166e
 msgid "MONITORING_DISABLE_CSRF"
 msgstr ""
 
-#: ../../basic/settings/index.rst 0e59ec8c5f1747d4b4f6516a4ac52480
+#: ../../basic/settings/index.rst 1b25b9cf02b94556848ed35c8af76b76
 msgid "Env: ``MONITORING_DISABLE_CSRF``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1453 d4f136680138451db320b19975348a76
+#: ../../basic/settings/index.rst:1531 ce57944034084b27a73be9f86736608d
 msgid ""
 "Set this to true to disable csrf check for notification config views, use"
 " with caution - for dev purpose only."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1458 a75fd523ca7149a89fb15a83562331e8
+#: ../../basic/settings/index.rst:1536 34e3729b3f3c447bb3a79b3b16515598
 msgid "MONITORING_SKIP_PATHS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1474 ed1a2f7d76884d45b3c415ea5c02ff8d
+#: ../../basic/settings/index.rst:1552 b9692124c6a64b7e958e250e0b605f50
 msgid ""
 "Skip certain useless paths to not to mud analytics stats too much. See "
 ":ref:`geonode_monitoring` to learn more about it."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1480 b03d6204658d4409826766c41a3a57c1
+#: ../../basic/settings/index.rst:1558 38692b8d9a94487bab1ac9f27b107e5c
 msgid "N"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1483 11c9445930fc428b99541ddf07acef93
+#: ../../basic/settings/index.rst:1561 c6eb5ef4e8394b798a068eb7bac12fcb
 msgid "NOTIFICATIONS_MODULE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1485 76ca09926e8e47d38894a9474ea544b7
+#: ../../basic/settings/index.rst:1563 af52650e997d4e758a0c1c2256e9daac
 msgid "Default: ``pinax.notifications``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1487 190b8e226d154f00ad655a29a283e4c9
+#: ../../basic/settings/index.rst:1565 976154d0e1a543618edfb48e1494a46c
 msgid "App used for notifications. (pinax.notifications or notification)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1490 c30a13e47f23419e91e4f452109be60d
+#: ../../basic/settings/index.rst:1568 0337370537cf4926bbfa690e638aeac4
 msgid "NOTIFICATION_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst f0530212847f4026ad7268d6377b5e7a
+#: ../../basic/settings/index.rst ff11cd9fedbe4655966f2a90d2652c60
 msgid "Env: ``NOTIFICATION_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1495 f2543ae52a814e03bfb2cdc1b746ec01
+#: ../../basic/settings/index.rst:1573 a72b37d8a0154bafaee7c82d18eceab1
 msgid "Enable or disable the notification system."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1498 a958ddacd4f540bfad8b2330130f1dc0
+#: ../../basic/settings/index.rst:1576 d8169913f0c547d9b1452f62727e799e
 msgid "O"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1501 8cf0486afa7449308ced292a6d6d03fb
+#: ../../basic/settings/index.rst:1579 e4c767f4cc39436f9e4512e1c243a4d3
 msgid "OAUTH2_API_KEY"
 msgstr ""
 
-#: ../../basic/settings/index.rst d174acfcf266471b983143cec6916d43
+#: ../../basic/settings/index.rst f005209229904e80b505f04cf28b2f0c
 msgid "Env: ``OAUTH2_API_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1506 8618dc8ccc62415cb825ac8b50f7fdb0
+#: ../../basic/settings/index.rst:1584 e856c958a905462997810e6d76af452d
 msgid ""
 "In order to protect oauth2 REST endpoints, used by GeoServer to fetch "
 "user roles and infos, you should set this key and configure the ``geonode"
 " REST role service`` accordingly. Keep it secret!"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1508 1746985efd464f10a9b22bb3f08cbcb7
+#: ../../basic/settings/index.rst:1586 9c2ad89aea104a42b78c5e9027e7b45c
 msgid "If not set, the endpoint can be accessed by users without authorization."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1511 36a20d9d8ac2455186f43474a7e98274
+#: ../../basic/settings/index.rst:1589 3f9aa651950c43a08dc486358019d8e7
 msgid "OAUTH2_PROVIDER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1513 ../../basic/settings/index.rst:1520
-#: ../../basic/settings/index.rst:1527 ../../basic/settings/index.rst:1534
-#: ../../basic/settings/index.rst:1541 ../../basic/settings/index.rst:1548
-#: 10981b60d4d34048b7e1ad02b58c54b4 11374a36ac0d4666b8c51cbc2a9a754e
-#: b54d3bdd82a74facab9b0a8ee2e98d46 c82b23453f0a4bdfb95e659af7b4ff7b
-#: f744c447a9b740e4b70f73815c7df39f fb8e6481a1e244bea00160e1545f965f
+#: ../../basic/settings/index.rst:1591 ../../basic/settings/index.rst:1598
+#: ../../basic/settings/index.rst:1605 ../../basic/settings/index.rst:1612
+#: ../../basic/settings/index.rst:1619 ../../basic/settings/index.rst:1626
+#: 47c2f19f3012443c8b04c917618fe035 4d1518a7b3cf49859b7756c5168c2dee
+#: 614d279ec8f848d2ba915d579a64c3f8 a9dccbd4222d4b4d8dac4659465c6118
+#: bb549827bf924e108d577d2916951133 d8726364634441b9ab4475457cfca9c7
 msgid ""
 "Ref.: `OAuth Toolkit settings <https://django-oauth-"
 "toolkit.readthedocs.io/en/latest/settings.html>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1516 aa734bea390e4298890680ad8c4a8e9b
+#: ../../basic/settings/index.rst:1594 87d874554c2041adb3bda00b7c783b16
 msgid "OAUTH2_PROVIDER_APPLICATION_MODEL"
 msgstr ""
 
-#: ../../basic/settings/index.rst c0e5bfae02884370bc95584778ccfa91
+#: ../../basic/settings/index.rst 18c24cac745943e6b19cb26049de0215
 msgid "Default: ``oauth2_provider.Application``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1523 22f0249bfc43492999a5ce7284162546
+#: ../../basic/settings/index.rst:1601 debdafdb61c24a0ea86a828c4538602a
 msgid "OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 65029b331c144de5acfae37d9f94b03d
+#: ../../basic/settings/index.rst ab400188e5ac4515a5a29e0b6b9b2152
 msgid "Default: ``oauth2_provider.AccessToken``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1530 c6206fdf14a1497e833b2330cba9b0f2
+#: ../../basic/settings/index.rst:1608 11e3b5dfcf214307862f0137aec7b341
 msgid "OAUTH2_PROVIDER_ID_TOKEN_MODEL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6bc5f19a290d45a1b49c6925ab6cfec8
+#: ../../basic/settings/index.rst 099a1f821ab9474690dae8f52c540e3a
 msgid "Default: ``oauth2_provider.IDToken``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1537 9cd92384a13844fc9a4b0be101ca2af3
+#: ../../basic/settings/index.rst:1615 b30c068088e04ec08559368fda385ce7
 msgid "OAUTH2_PROVIDER_GRANT_MODEL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9637d07e072f4c8f8fb66e1d070dce82
+#: ../../basic/settings/index.rst 6379e1f449a24167b7705a23222c5403
 msgid "Default: ``oauth2_provider.Grant``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1544 1faf5cb297b54f6d9c48b223721d68b2
+#: ../../basic/settings/index.rst:1622 a8c4572045a747ea96d1e263483cb3d3
 msgid "OAUTH2_PROVIDER_REFRESH_TOKEN_MODEL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 16c7be1afc0249a9bccb6cf16fb78233
+#: ../../basic/settings/index.rst a4fcd07f89d040ff90d0d5380ead4ed2
 msgid "Default: ``oauth2_provider.RefreshToken``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1551 53187fef83304f3bae50c83a765f80c9
+#: ../../basic/settings/index.rst:1629 b4d9c90a8f1747f88c07a065496b7509
 msgid "OGC_SERVER_DEFAULT_PASSWORD"
 msgstr ""
 
-#: ../../basic/settings/index.rst 30e1d58a6bf643699777fd1b4d5bc919
+#: ../../basic/settings/index.rst efc424f531884d489ddab4cda94896fb
 msgid "Default: ``geoserver``"
 msgstr ""
 
-#: ../../basic/settings/index.rst e6aa12ad9b924c48a97d7468ecf4f8e2
+#: ../../basic/settings/index.rst 7b96177189384553b648888babbacb86
 msgid "Env: ``GEOSERVER_ADMIN_PASSWORD``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1556 043faa22aa1a400d85eb8897175e1f55
+#: ../../basic/settings/index.rst:1634 50235bb0e2e54aac9c19ff7fa91e3431
 msgid "The geoserver password."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1559 87949c31a14a4cdab50aaf4fb34d6b55
+#: ../../basic/settings/index.rst:1637 c4e917fe26a14088a8347c1af4903205
 msgid "OGC_SERVER_DEFAULT_USER"
 msgstr ""
 
-#: ../../basic/settings/index.rst a13169f4c31345f1982210188cc89475
+#: ../../basic/settings/index.rst b7c7421d81b148f6af5d9e5c003e3fc7
 msgid "Default: ``admin``"
 msgstr ""
 
-#: ../../basic/settings/index.rst b9d8ee8ffd02455a93a4614f1e263e2d
+#: ../../basic/settings/index.rst b15d1b85dbb4441184ae3f0af9f13784
 msgid "Env: ``GEOSERVER_ADMIN_USER``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1564 37054c7c06e046408b710c5bc2882320
+#: ../../basic/settings/index.rst:1642 6247beb8b73a43978acfe174379926d6
 msgid "The GeoServer user."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1567 bed1fffaa7f44ad5a8f60de3dcda3775
+#: ../../basic/settings/index.rst:1645 3ee32a6af8af4450bf5277314a0da443
 msgid "OGC_SERVER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1569 eaafb3d615fa4af2872cd2cd9e521635
+#: ../../basic/settings/index.rst:1647 078177ef5e744800806860e058e58950
 msgid "Default: ``{}`` (Empty dictionary)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1571 a632660ca3a14579bdf3378859664baf
+#: ../../basic/settings/index.rst:1649 36b34cceb64b4b74a49ef0a8cf374a87
 msgid ""
 "A dictionary of OGC servers and their options.  The main server should be"
 " listed in the 'default' key.  If there is no 'default' key or if the "
@@ -2342,42 +2428,42 @@ msgid ""
 "setting::"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1585 ../../basic/settings/index.rst:2379
-#: 4165e245c0f44b1dad7746044d6d5075 bca62d85480a4b87a969128be80d9394
+#: ../../basic/settings/index.rst:1663 ../../basic/settings/index.rst:2545
+#: 67ebb62dc87b44a4947f485aa0792db9 8878ed5e82c749b7a65baa9f93385869
 msgid "BACKEND"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1587 9583bfc79ada4d75a0054b7768095e30
+#: ../../basic/settings/index.rst:1665 2b8d139c2ff64b839b851ff5fb5aa166
 msgid "Default: ``\"geonode.geoserver\"``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1589 851234b9b6db4f0f92f845b2a55bea2d
+#: ../../basic/settings/index.rst:1667 d315f3ffd858463a8793f88ce78b8f54
 msgid "The OGC server backend to use.  The backend choices are:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1591 419a4d4bd37e49c3a8cad94db830e71a
+#: ../../basic/settings/index.rst:1669 2bef3095dbd44e638677008b5847c9b4
 msgid "``'geonode.geoserver'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1593 02b634abe34c48c0b15f7effeb4ac653
+#: ../../basic/settings/index.rst:1671 3868225b05bb48b48745ff3f9df7a6ce
 msgid "BACKEND_WRITE_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1597 b73500ae457142fb837b7f695fd15656
+#: ../../basic/settings/index.rst:1675 170dc21878b14b92be212eb47970d4e0
 msgid ""
 "Specifies whether the OGC server can be written to.  If False, actions "
 "that modify data on the OGC server will not execute."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1600 3b9dc106d0044583a9d212e8bbb42886
+#: ../../basic/settings/index.rst:1678 b749fb5bffbd465dbba39b4b503ab442
 msgid "DATASTORE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1602 90e7355547314d789de056ebfb76c585
+#: ../../basic/settings/index.rst:1680 6b6b0758e2e24fa6a0f574db34448522
 msgid "Default: ``''`` (Empty string)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1604 bd96d5e67c68426c9d6a2b976658a7a1
+#: ../../basic/settings/index.rst:1682 a7f6afeeb5344fd1a80ea6debc6af129
 msgid ""
 "An optional string that represents the name of a vector datastore, where "
 "Geonode uploads are imported into. To support vector datastore imports "
@@ -2385,26 +2471,26 @@ msgid ""
 "dictionary with the same name.  Example::"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1631 da6d3061f4f045d29e1bb6f4b3cc0675
+#: ../../basic/settings/index.rst:1709 f20f52f8624c4fcd92433975160e0bc4
 msgid "GEONODE_SECURITY_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1635 f92199e97d6649398f94e03b706ecc38
+#: ../../basic/settings/index.rst:1713 2b5965f972d5416e879f5f4522e5fbc7
 msgid ""
 "A boolean that represents whether GeoNode's security application is "
 "enabled."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1637 eff08f4bde754775b364b481de488461
+#: ../../basic/settings/index.rst:1715 38518201d86044c591a98c5e333e8669
 msgid "LOCATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1639 ../../basic/settings/index.rst:1667
-#: 3c5324737dea4b6badd64119d4550cdd 88563e8c725e45efafcecec1bcb215bf
+#: ../../basic/settings/index.rst:1717 ../../basic/settings/index.rst:1745
+#: 9e64f08923524c999e8267fcadade120 ced5355ad49a441cb6fd765a876de19c
 msgid "Default: ``\"http://localhost:8080/geoserver/\"``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1641 aacf1a4938ed445d83b08c3ac1dc31fe
+#: ../../basic/settings/index.rst:1719 2a0874149db44d928fdee62146a76074
 msgid ""
 "A base URL from which GeoNode can construct OGC service URLs. If using "
 "GeoServer you can determine this by visiting the GeoServer administration"
@@ -2413,140 +2499,140 @@ msgid ""
 " location is http://example.com/geoserver."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1647 947f6ef46840466c9336ff399ce7013f
+#: ../../basic/settings/index.rst:1725 874669c2390f42f186ccf04adc6f3c51
 msgid "MAPFISH_PRINT_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1651 de31135e3aa4484581692281238ffffe
+#: ../../basic/settings/index.rst:1729 d59ea3dff1924577bf326c7ae34ab7cd
 msgid ""
 "A boolean that represents whether the MapFish printing extension is "
 "enabled on the server."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1653 d27125cdcee34fbeb10044400f4a0c52
+#: ../../basic/settings/index.rst:1731 8772c5dca4664fc19d8eb07f3cb1521e
 msgid "PASSWORD"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1655 c53e7bc7a009430a861ce4234e80dbd1
+#: ../../basic/settings/index.rst:1733 93cedcef901b4659819219b7c2c8620f
 msgid "Default: ``'geoserver'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1657 b1421380c34941db82e9cfb97dfa7ab8
+#: ../../basic/settings/index.rst:1735 bfb2759c084c4e638461803c7c154149
 msgid "The administrative password for the OGC server as a string."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1659 3a5358fb6a2142a3a646bbab16aeb10e
+#: ../../basic/settings/index.rst:1737 3aa89d72c477445c90ba822154ce42c8
 msgid "PRINT_NG_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1663 aeabd774679043ba910fdbf7dd259d7c
+#: ../../basic/settings/index.rst:1741 91f8e49cb19f49e180eb7ef571171dde
 msgid "A boolean that represents whether printing of maps and layers is enabled."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1665 e8a73e8cb1c348d6bb8387a60cf13c1d
+#: ../../basic/settings/index.rst:1743 0227cc4aa50a4a14a8cf99d974387427
 msgid "PUBLIC_LOCATION"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1669 847d4baac81d49b4b380250d22b4a509
+#: ../../basic/settings/index.rst:1747 f5a9ad2ca61d4fb48066adefa80b7fda
 msgid ""
 "The URL used to in most public requests from Geonode.  This setting "
 "allows a user to write to one OGC server (the LOCATION setting) and read "
 "from a separate server or the PUBLIC_LOCATION."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1672 f29f379956234595ac82714037778634
+#: ../../basic/settings/index.rst:1750 a81a1869e00043859532aaae4ad2bd83
 msgid "USER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1674 0b66cc6d058244e4827f95579664ded1
+#: ../../basic/settings/index.rst:1752 6bdd5d7c1e964aa28a293368a1e8da7e
 msgid "Default: ``'admin'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1676 0acddac24e94442f9cce158fc3ee2235
+#: ../../basic/settings/index.rst:1754 6700eb1c5b4c42089cb01e948cfa7104
 msgid "The administrative username for the OGC server as a string."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1678 e210560df6f54862b2ff91fa4bdcd5b5
+#: ../../basic/settings/index.rst:1756 f1bd4ff460454c799397d81d89658b6a
 msgid "WMST_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1682 ../../basic/settings/index.rst:1688
-#: bcb7bfbf02334d09a88a043275fc5c88 df2ced5aab204206b8f241c88dab91fb
+#: ../../basic/settings/index.rst:1760 ../../basic/settings/index.rst:1766
+#: 9916ad702e524f158c7edc17a082b35b c93751afbec34273bf686a6b8e2e5aee
 msgid "Not implemented."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1684 93049d924dfa42aeaae33108a231dc59
+#: ../../basic/settings/index.rst:1762 589e60160d1545a59ae76469b1f13c8b
 msgid "WPS_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1690 fd5de5f165f44667908b1733ae331561
+#: ../../basic/settings/index.rst:1768 55de35a9b8ea4d2c989e2e4b5405ae0c
 msgid "TIMEOUT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1694 ef58879930434de39bdbfcc9801ffa66
+#: ../../basic/settings/index.rst:1772 b908133ed48c49868e8447bbbe42797d
 msgid "The maximum time, in seconds, to wait for the server to respond."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1697 b2e3900fa3a0406493ed382e680b453e
+#: ../../basic/settings/index.rst:1775 aa442057a64f4fe1a912bceb11e113b0
 msgid "OGP_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst 58cb4f668712495a9a710ca5f62c899c
+#: ../../basic/settings/index.rst 242ebb33130a4f9c9591ba4433d1609a
 msgid "Default: ``http://geodata.tufts.edu/solr/select``"
 msgstr ""
 
-#: ../../basic/settings/index.rst a798cc7764a441daa7dd9b436eccc4d8
+#: ../../basic/settings/index.rst 1b2207c5bf6c4e318ad43ce582ba2586
 msgid "Env: ``OGP_URL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1702 5531b366872947f999c1ed2fcae788e3
+#: ../../basic/settings/index.rst:1780 50866aec852e45f49efb374efcbc177d
 msgid "Endpoint of geodata.tufts.edu getCapabilities."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1705 3c4812dac457411d907464968308f068
+#: ../../basic/settings/index.rst:1783 1b17ea3e72ab4763ad69d2e4249de801
 msgid "OPENGRAPH_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1707 ../../basic/settings/index.rst:2264
-#: 4891a7bf584a4b53b96ef34937cc3815 f8e7fbf0939b48d691b509ea0e925271
+#: ../../basic/settings/index.rst:1785 ../../basic/settings/index.rst:2430
+#: 76065a39b6b24c169ca296a2d23aafa9 e3e898a4e16141e0937a40e7db4d9ffa
 msgid "Default:: ``True``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1709 9799b0c2de264449b351020f7f5b6cb7
+#: ../../basic/settings/index.rst:1787 a13489605c1b4c088de82422018c3295
 msgid ""
 "A boolean that specifies whether Open Graph is enabled.  Open Graph is "
 "used by Facebook and Slack."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1712 bb8e1ab694454885ba070aa623552e7c
+#: ../../basic/settings/index.rst:1790 c2c98b1b64fa485cba8a6e9887510599
 msgid "P"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1715 e953ef70f5994e1a84efa178281dd701
+#: ../../basic/settings/index.rst:1793 46b106a5b36b43c9adc35f2b09404b3b
 msgid "PINAX_NOTIFICATIONS_BACKENDS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1717 7f9f41b42c834ff3ab48c295519f040d
+#: ../../basic/settings/index.rst:1795 5046bf8ce3044789970b59da94ac8fc2
 msgid "Default: ``(\"email\", _EMAIL_BACKEND, 0),``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1719 d7d2fda08d0340c0b9b741e22bce37cc
+#: ../../basic/settings/index.rst:1797 5ae75dd490e041dc845474b88335322c
 msgid ""
 "Used notification backend. This is a `pinax notification setting: <https"
 "://django-notification.readthedocs.io/en/latest/settings.html#pinax-"
 "notifications-backends>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1722 b5a6ea56be194c5fad2e45e82c40f95a
+#: ../../basic/settings/index.rst:1800 0b588a33515346c99e223c4aaab1a045
 msgid "PINAX_NOTIFICATIONS_LOCK_WAIT_TIMEOUT"
 msgstr ""
 
-#: ../../basic/settings/index.rst add8e891fd304d9f8244336bcfd656a3
-#: bb1daada08624171b6e181fcbc9b2c20
+#: ../../basic/settings/index.rst 85cfb1b0f56144858be6760282798f73
+#: c6c2feded386477e8688c47041caac36
 msgid "Env: ``NOTIFICATIONS_LOCK_WAIT_TIMEOUT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1727 ede22ce29fd84bf1be59f16543962d13
+#: ../../basic/settings/index.rst:1805 603ca9d1f6214126ac323e9f04f8ce4f
 msgid ""
 "It defines how long to wait for the lock to become available. Default of "
 "-1 means to never wait for the lock to become available. This is a `pinax"
@@ -2555,11 +2641,11 @@ msgid ""
 "lock-wait-timeout>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1731 9069e6f669154788ae18788f3bd9f2fb
+#: ../../basic/settings/index.rst:1809 a8737d1dfcde4ee18008adbf2f5a70b6
 msgid "PINAX_NOTIFICATIONS_QUEUE_ALL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1736 3d30174df425442da11159dad5c17fd5
+#: ../../basic/settings/index.rst:1814 657930804f734429adc87d7f0d99c3c0
 msgid ""
 "By default, calling notification.send will send the notification "
 "immediately, however, if you set this setting to True, then the default "
@@ -2570,31 +2656,31 @@ msgid ""
 "queue-all>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1740 b73c4f5b64cb42e6bc05305d3c9b3687
+#: ../../basic/settings/index.rst:1818 6bfb644f3a6544dd936faab11834fa06
 msgid "PINAX_RATINGS_CATEGORY_CHOICES"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1758 dfdc721e9d044005bf8cae8488198549
+#: ../../basic/settings/index.rst:1836 899eb179361342f880e9f07f6d1d47f7
 msgid "PROFILE_EDIT_EXCLUDE_FIELD"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1761 8d3404c353bf4857821116a4ae38ef2f
+#: ../../basic/settings/index.rst:1839 bfe9481e3a2f41518624d2de3bcbe965
 msgid "A list of element (item name) to exclude from the Profile Edit page."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1765 f27219e5c7e24188aa95f7a9558d89e2
+#: ../../basic/settings/index.rst:1843 d615d3cdd88e4ecaa9ccd7ee1bf17935
 msgid "``PROFILE_EDIT_EXCLUDE_FIELD=['organization', 'language']``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1769 692dc4b34a04459aa9ab12bdd63b0b4c
+#: ../../basic/settings/index.rst:1847 642aea1ef05444b4975411d3560699b1
 msgid "PROXY_ALLOWED_HOSTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1771 793855953e344282a9619a38d29fcddf
+#: ../../basic/settings/index.rst:1849 c849e4b618814e20be6bfeada5b64713
 msgid "Default: ``()`` (Empty tuple)"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1773 61210ea85f52400bafa0c73d9efd9d9c
+#: ../../basic/settings/index.rst:1851 673c53eef50d42b699626a7b11901663
 msgid ""
 "A tuple of strings representing the host/domain names that GeoNode can "
 "proxy requests to. This is a security measure to prevent an attacker from"
@@ -2602,7 +2688,7 @@ msgid ""
 "sites."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1776 5a342310345e466c8baef1f40433aae4
+#: ../../basic/settings/index.rst:1854 67d56852a0d9469da039719ab74a6653
 msgid ""
 "Values in this tuple can be fully qualified names (e.g. "
 "'www.geonode.org'), in which case they will be matched against the "
@@ -2613,32 +2699,32 @@ msgid ""
 "recommended for production deployments."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1783 d28cab6642924efd95937f28fe29323f
+#: ../../basic/settings/index.rst:1861 207fbcf0a7cf4b1cb5228c4a2125a118
 msgid "PROXY_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1785 39887226327b4137890d8c642f5b1a12
+#: ../../basic/settings/index.rst:1863 1445183ae69445e793ffb3c1c0889556
 msgid "Default ``/proxy/?url=``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1787 072ca776602548619e605239f9cd06f3
+#: ../../basic/settings/index.rst:1865 f96ac0c1123c48b29eecf41f3f095578
 msgid ""
 "The URL to a proxy that will be used when making client-side requests in "
 "GeoNode.  By default, the internal GeoNode proxy is used but "
 "administrators may favor using their own, less restrictive proxies."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1792 b8c8d3d49f1545e1ad39b2330671c71d
+#: ../../basic/settings/index.rst:1870 11f54e4a92904e6f9ad67db13be251d1
 msgid "PYCSW"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1794 a045f2530c384c0699dffb36e096dc50
+#: ../../basic/settings/index.rst:1872 9323072906424952a4a8834cf695434f
 msgid ""
 "A dict with pycsw's configuration with two possible keys CONFIGURATION "
 "and FILTER."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1796 d9859b3300e84beeb90455b12c23044a
+#: ../../basic/settings/index.rst:1874 0928866542484f5eb3127a8993620334
 msgid ""
 "CONFIGURATION Of note are the sections ``metadata:main`` to set CSW "
 "server metadata and ``metadata:inspire`` to set INSPIRE options.  Setting"
@@ -2648,7 +2734,7 @@ msgid ""
 " pycsw configuration details."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1803 848c34e75272490f8e25fb118954b67c
+#: ../../basic/settings/index.rst:1881 0a17c06a2df749c4bf1197c0ff7cc4db
 msgid ""
 "FILTER Optional settings in order to add a filter to the CSW filtering. "
 "The filter follow the django orm structure and must be a `ResourceBase` "
@@ -2656,196 +2742,199 @@ msgid ""
 "resource_type"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1808 73d0627a31ec4f97a357526728805693
+#: ../../basic/settings/index.rst:1886 f83fa6b65bdb4be6abd02335513fd866
 msgid "Example of PYCSW configuration. PYCSW: {"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1810 3cb26afef2a448579409c564d18a3e7f
+#: ../../basic/settings/index.rst:1888 1e5e773bf04647dd93ad9ff009929337
 msgid "'CONFIGURATION': {...}, 'FILTER': {'resource_type__in':['layer'] }"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1812 26ba9a6abad9452c98387822e0e3bcad
+#: ../../basic/settings/index.rst:1890 ../../basic/settings/index.rst:2102
+#: ../../basic/settings/index.rst:2376 ../../basic/settings/index.rst:2390
+#: 26ac5578901c44649d18c0e0526a63c2 876019cf3faf4f5586fe7d3886da328c
+#: bdcf15d4c85143489ecae97598296ee3 d9c5ac1c9e70440b826beec213380b5c
 msgid "}"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1815 8ef348f9fc484d3ab8eb44e37afb7002
+#: ../../basic/settings/index.rst:1893 96adecfd22544052a6bc2a701a7fa3a1
 msgid "R"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1818 5c8230b0bc8b45f293967592085354b7
+#: ../../basic/settings/index.rst:1896 ba16d1f8097142c08d32f04908413073
 msgid "RABBITMQ_SIGNALS_BROKER_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1820 f851d7ea3ef845ae89f17c7c07597ff6
+#: ../../basic/settings/index.rst:1898 2aa9ef63984a471fbf27dc7c6ac3a927
 msgid "Default: ``amqp://localhost:5672``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1822 b9f3cd9931954e4fb82e2fab5ac73abd
+#: ../../basic/settings/index.rst:1900 20f6d7d3f46f46d0b93ef82daccbed9d
 msgid "The Rabbitmq endpoint"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1827 44c8692e573c4f34b64a29290cda90ac
+#: ../../basic/settings/index.rst:1905 71e541788b2c4b6ebbc3555d95d26f74
 msgid "RECAPTCHA_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst 1aa5fdd65d8a4c13b42adfd78e23a00c
+#: ../../basic/settings/index.rst 6dad16c810734cb58e32b9a1aa11bc31
 msgid "Env: ``RECAPTCHA_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1832 3816e07d26ba447791e23b43c47f6bfc
+#: ../../basic/settings/index.rst:1910 bb9b4f6fd0174f5bb4e220c52e6e9db3
 msgid ""
 "Allows enabling reCaptcha field on signup form. Valid Captcha Public and "
 "Private keys will be needed as specified here https://pypi.org/project"
 "/django-recaptcha/#installation"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1835 ../../basic/settings/index.rst:1862
-#: ../../basic/settings/index.rst:1874 ../../basic/settings/index.rst:1887
-#: ../../basic/settings/index.rst:1897 123a61cd1b7f489c92da01b3b7355111
-#: 3479e01756b8477d967fd4d0beccdf13 4c377661ee9c4aa5822798ceb6a9b3c7
-#: 53fa7f08dc9c44dea858bd42d44611e6 a3b1f4378ef3442281270a17d8f95b48
+#: ../../basic/settings/index.rst:1913 ../../basic/settings/index.rst:1940
+#: ../../basic/settings/index.rst:1952 ../../basic/settings/index.rst:1965
+#: ../../basic/settings/index.rst:1975 001cab50af864a0abf5b67e5a0701d4d
+#: 02eab585f9c34a5dada98529f14f0bdd 33d2382edc1f4074977b86c60c07c1bd
+#: a50df4222c7f4cf0aac59ae5c5847bca f85bb2211d10491681bb4a069fd72c44
 msgid ""
 "You will need to generate a keys pair for ``reCaptcha v2`` for your "
 "domain from https://www.google.com/recaptcha/admin/create"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1837 14b45b7a1f224169bcd9666f14dbef40
+#: ../../basic/settings/index.rst:1915 cad1ffbae6fe4f8d8155176efa1b905f
 msgid "More options will be available by enabling this setting:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1839 1fede6d0b28a4f8bb7185cb4fc565147
+#: ../../basic/settings/index.rst:1917 401b0ae2df01411f939f95e89095e756
 msgid "**ACCOUNT_SIGNUP_FORM_CLASS**"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1846 762413554cb44b768ccec7e7ab6bc1dc
+#: ../../basic/settings/index.rst:1924 cdab3540918c47c7b3634324294505b0
 msgid "**INSTALLED_APPS**"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1848 45db399e97a541d999dc6e70b94cdf39
+#: ../../basic/settings/index.rst:1926 cbdb0669cd1c4640b58341c263cec25f
 msgid ""
 "The ``captcha`` must be present on ``INSTALLED_APPS``, otherwise you'll "
 "get an error."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1850 83e2118029ad42efb31d809802a7657c
+#: ../../basic/settings/index.rst:1928 2f4d1c083700419784b5a81fafd85385
 msgid ""
 "When enabling the :ref:`recaptcha_enabled` option through the "
 "``environment``, this setting will be automatically added by GeoNode as "
 "follows:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1857 c1252a9bfe6f4c0d9c7cce55240ddeeb
+#: ../../basic/settings/index.rst:1935 3f1fa4cda0fd4441870afef2de4a8370
 msgid "**RECAPTCHA_PUBLIC_KEY**"
 msgstr ""
 
-#: ../../basic/settings/index.rst 35b1176ae83f476fa645bf597e7ea1dd
-#: 6bbfc950922c4e00ae23a8d73b56bb0d
+#: ../../basic/settings/index.rst 0faf36104e8e448b8938de3f41e629c2
+#: ab1f7fa19a31474aa9a9a80ef3cfc0a5
 msgid "Default: ``geonode_RECAPTCHA_PUBLIC_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3b882d2ffafd4522a1e9e75990854d3e
-#: 85a8e155bebd4768a7ec7ead3ca05351
+#: ../../basic/settings/index.rst 31bec8fbff014a95b84e0af788d96dc7
+#: af07d2d1fff4403ab51fb964d254a2b1
 msgid "Env: ``RECAPTCHA_PUBLIC_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1864 ../../basic/settings/index.rst:1876
-#: 0283e2546db14413bb4a92d568366c18 123f30c8135048dbbe730e1f70809c2e
+#: ../../basic/settings/index.rst:1942 ../../basic/settings/index.rst:1954
+#: 98dac17b270441c79f0d8ec870372ca5 f09250c88c174d0eb161e30dce2c8955
 msgid "For mode details on the reCaptcha package, please see:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1866 ../../basic/settings/index.rst:1878
-#: e983803d8a76433d94613212030c2baf ecc8546bdb694ad69f12c074c7a0dc47
+#: ../../basic/settings/index.rst:1944 ../../basic/settings/index.rst:1956
+#: 27bb8275d6084fc0ae87f783e95a614b b737468aff354867a08415dc0af92974
 msgid "https://pypi.org/project/django-recaptcha/#installation"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1867 ../../basic/settings/index.rst:1879
-#: 2c794d1a0f7b406fabc02af35b1e996d 9920b2612a76465eb89b580c2607b274
+#: ../../basic/settings/index.rst:1945 ../../basic/settings/index.rst:1957
+#: 832c1620b8aa4f2d8c3fb8cc76b0d0cc 858ece2769d8463b930dd88161a70e2f
 msgid ""
 "https://pypi.org/project/django-recaptcha/#local-development-and-"
 "functional-testing"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1869 c773135a697a45c5bb4ccd9cb4cb16af
+#: ../../basic/settings/index.rst:1947 e6f0dadb19ce4516a40a0d597dba6652
 msgid "**RECAPTCHA_PRIVATE_KEY**"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3002ade6736a4bc6913e2b9a037d11ae
-#: 8fb9d297498e4bc1b511dd9fc92f8bcc
+#: ../../basic/settings/index.rst 5f401eb185584e43a7997c6b608aa17c
+#: 772dbcbaa6184e1ebc433ff1caa4d549
 msgid "Default: ``geonode_RECAPTCHA_PRIVATE_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 45e15e3ecd994f6099ef6003a6d38269
-#: f80643d74478452a8b6715956e61a61b
+#: ../../basic/settings/index.rst 4cb006879b6c440ba41e71192127c9e0
+#: e35c2736c3a746e2850270c2e4e6527f
 msgid "Env: ``RECAPTCHA_PRIVATE_KEY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1882 0f4ec89423bd4d5da810e0f16e551753
+#: ../../basic/settings/index.rst:1960 305e0688184848aa9b971aabd9f23cb8
 msgid "RECAPTCHA_PUBLIC_KEY"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1892 ed1c45e262e74d14b612b6fb8118bed2
+#: ../../basic/settings/index.rst:1970 7b2e1e248a7e4574979f8c10bdb7db15
 msgid "RECAPTCHA_PRIVATE_KEY"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1902 48a1f818552848dfb9d80cc617e57f86
+#: ../../basic/settings/index.rst:1980 95ff6c266fef4e47857b678766381368
 msgid "REDIS_SIGNALS_BROKER_URL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1904 261d608e30fb4fc2bebbc6f04df20e7b
+#: ../../basic/settings/index.rst:1982 bee208876cea47dfb8dbf655a64112ad
 msgid "Default: ``redis://localhost:6379/0``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1906 746900d67e0d4ce7b4c7b2049879d268
+#: ../../basic/settings/index.rst:1984 5f9e398eee814165980d482ea6fe2d67
 msgid "The Redis endpoint."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1909 1f259512081041ce84b5c04aa842b7f6
+#: ../../basic/settings/index.rst:1987 a744d3d73819483e878e2c9f71c608b8
 msgid "REGISTERED_MEMBERS_GROUP_NAME"
 msgstr ""
 
-#: ../../basic/settings/index.rst 0da880ec93fc4a16b54e3bbeb501bd2e
+#: ../../basic/settings/index.rst 5741821a32834395a3fbb91fc5585bf4
 msgid "Default: ``registered-members``"
 msgstr ""
 
-#: ../../basic/settings/index.rst e4fcdf0779e14758a4ec2e11a81b9bec
+#: ../../basic/settings/index.rst ce811ce82df844059becb7e1eb715c77
 msgid "Env: ``REGISTERED_MEMBERS_GROUP_NAME``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1914 ../../basic/settings/index.rst:1922
-#: 1b3bc59533414db384816a419ea9ef99 cf96b83c75b04608a001b4ea415d6eb7
+#: ../../basic/settings/index.rst:1992 ../../basic/settings/index.rst:2000
+#: 4caaefd4c75941cc9c776a8281de5f7a 8125d6add7e04600bb1f761d17c10c23
 msgid ""
 "Used by "
 "``AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME`` "
 "settings."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1917 39ec8fc9550740c0974f13a770862aa7
+#: ../../basic/settings/index.rst:1995 53a1904805ff447bb683dd8b435a4052
 msgid "REGISTERED_MEMBERS_GROUP_TITLE"
 msgstr ""
 
-#: ../../basic/settings/index.rst a360433e8ca249b4be5d53ede0049984
+#: ../../basic/settings/index.rst da30ab77420c4f568bf80866f88d3092
 msgid "Default: ``Registered Members``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3f1ffa8e66614d53946aaef43d106a01
+#: ../../basic/settings/index.rst 832a39dd2c9e436c8bdbc14084cf6eec
 msgid "Env: ``REGISTERED_MEMBERS_GROUP_TITLE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1925 9a20b5f8f5554fe49320dce920c6d7a1
+#: ../../basic/settings/index.rst:2003 67145f33ebf6410dbc8822095f3cd510
 msgid "REGISTRATION_OPEN"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1929 0cad990d828b4b71b7c9c2c9065b0c9f
+#: ../../basic/settings/index.rst:2007 164e2b23b48e40faa86e2bb3407217cc
 msgid ""
 "A boolean that specifies whether users can self-register for an account "
 "on your site."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1932 3dff79b1e6fc47ef8e755f44aadabcf9
+#: ../../basic/settings/index.rst:2010 15c4b0cc6630476ab73273b63f4c5045
 msgid "RESOURCE_PUBLISHING"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1936 9e0ba72981b64c2b8735c2616cbfbcb6
+#: ../../basic/settings/index.rst:2014 de0ba753c1d34325adc1c3a04969491e
 msgid ""
 "By default, the GeoNode application allows GeoNode staff members to "
 "publish/unpublish resources. By default, resources are published when "
@@ -2853,51 +2942,27 @@ msgid ""
 "to unpublish a resource (and eventually publish it back)."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1943 d4a3a2fc173d465fbe0ce776b5ba9c0d
+#: ../../basic/settings/index.rst:2021 b62c9716ecf74c7d8036e512a721a04e
 msgid "S"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1946 4ff05a47169044389fb0087071abf4f4
-msgid "S3_MEDIA_ENABLED"
-msgstr ""
-
-#: ../../basic/settings/index.rst 7a9a2db4404548a5a858b7b942ae3afc
-msgid "Env: ``S3_MEDIA_ENABLED``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:1951 98c300c3c2874e85a3c8596f2da955b4
-msgid "Enable/disable Amazon S3 media storage."
-msgstr ""
-
-#: ../../basic/settings/index.rst:1954 b0b27c6dced54bd9a9a1446659934d16
-msgid "S3_STATIC_ENABLED"
-msgstr ""
-
-#: ../../basic/settings/index.rst 63f9d92e56d84d58a6d232cf6f4cbb4e
-msgid "Env: ``S3_STATIC_ENABLED``"
-msgstr ""
-
-#: ../../basic/settings/index.rst:1959 85f5702cac1048d48383afc9cd8ae67a
-msgid "Enable/disable Amazon S3 static storage."
-msgstr ""
-
-#: ../../basic/settings/index.rst:1962 312da706a3404ab687f30fbcdf767383
+#: ../../basic/settings/index.rst:2024 dd1a84a982404e21ad487fd9acd48b10
 msgid "SEARCH_FILTERS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1977 6b0db65d6a814e3195d38a1825f17e86
+#: ../../basic/settings/index.rst:2039 a34a5d0a6ddc41fdb9139b0610581928
 msgid "Enabled Search Filters for filtering resources."
 msgstr ""
 
-#: ../../basic/settings/index.rst:1980 43135b4474d548d6b34c1a09e6990acc
+#: ../../basic/settings/index.rst:2042 dfe0bf74fc5b4a2c887cbf016c13c709
 msgid "SECURE_BROWSER_XSS_FILTER"
 msgstr ""
 
-#: ../../basic/settings/index.rst f79cb62e312a40f5842a2b4058fea593
+#: ../../basic/settings/index.rst 105b6492b13f4d26bdc24486728d649a
 msgid "Env: ``SECURE_BROWSER_XSS_FILTER``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1985 f846d0357ac44da89b17e73ee80c8947
+#: ../../basic/settings/index.rst:2047 311b38157c6c47c8b4b896cb487d65ab
 msgid ""
 "If True, the SecurityMiddleware sets the X-XSS-Protection: 1; mode=block "
 "header on all responses that do not already have it. This is `<Django "
@@ -2905,15 +2970,15 @@ msgid ""
 "browser-xss-filter>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1989 a018e14350cb4729a5a85290acb1bbaf
+#: ../../basic/settings/index.rst:2051 bc9bff3072d94995b3133fff976dc723
 msgid "SECURE_CONTENT_TYPE_NOSNIFF"
 msgstr ""
 
-#: ../../basic/settings/index.rst 079f75f998174e6da8a0272e21ee4b3e
+#: ../../basic/settings/index.rst ef0ebb6028b24b9dbf2384ebfa591864
 msgid "Env: ``SECURE_CONTENT_TYPE_NOSNIFF``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1994 03515b75582643cab4b9d0603e87d489
+#: ../../basic/settings/index.rst:2056 78ee6a88d61041d4a408d6e49245b57e
 msgid ""
 "If True, the SecurityMiddleware sets the X-Content-Type-Options: nosniff "
 "header on all responses that do not already have it. This is `Django "
@@ -2921,34 +2986,34 @@ msgid ""
 "content-type-nosniff>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:1999 171d7266d8d4466da4ca4f40202f6497
+#: ../../basic/settings/index.rst:2061 3b66ba0c4b6a498086c2257cf64e1ca8
 msgid "SECURE_HSTS_INCLUDE_SUBDOMAINS"
 msgstr ""
 
-#: ../../basic/settings/index.rst d5794212cd6f4517817de56d46a268b5
+#: ../../basic/settings/index.rst 43453f4bfd1b43cebc772b98e367ce2f
 msgid "Env: ``SECURE_HSTS_INCLUDE_SUBDOMAINS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2004 9768d9c3917341138531608418a87d48
+#: ../../basic/settings/index.rst:2066 492611183acd48e2a54589384981809a
 msgid ""
 "This is Django settings: "
 "https://docs.djangoproject.com/en/3.2/ref/settings/#secure-hsts-include-"
 "subdomains"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2007 a64bd863f1fa4a739d1d2505a7cf72af
+#: ../../basic/settings/index.rst:2069 edcdd9888c2740cbb6ee10b8deb0cfe4
 msgid "SECURE_HSTS_SECONDS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 608ca14729fb41c098ead1c15f5a5047
+#: ../../basic/settings/index.rst 1976d4381128445c8d16fb34feb10ffc
 msgid "Default: ``3600``"
 msgstr ""
 
-#: ../../basic/settings/index.rst e7c156bbdf5c42fe957553cdd50954f6
+#: ../../basic/settings/index.rst 561663d448d84662810a91c98a500aa9
 msgid "Env: ``SECURE_HSTS_SECONDS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2012 39fae889c37843dda69ede32ce6afdbc
+#: ../../basic/settings/index.rst:2074 cea3c2709c31433789ec0db6812102da
 msgid ""
 "This is `Django settings: "
 "<https://docs.djangoproject.com/en/3.2/ref/settings/#secure-hsts-"
@@ -2957,11 +3022,11 @@ msgid ""
 "not already have it."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2016 5db84cda2112486089e91b4da99e841f
+#: ../../basic/settings/index.rst:2078 38744c24006a4d47a1b852991223952b
 msgid "SECURE_SSL_REDIRECT"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2018 35ea26e92528482f8ba1a2787c917288
+#: ../../basic/settings/index.rst:2080 7e0bb7ac27b74a6baff8d47d286a7e60
 msgid ""
 "If True, the SecurityMiddleware redirects all non-HTTPS requests to HTTPS"
 " (except for those URLs matching a regular expression listed in "
@@ -2970,38 +3035,89 @@ msgid ""
 "redirect>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2022 8afad428163a40d2b0f689fc5000f583
+#: ../../basic/settings/index.rst:2084 5ca50ebf7d8b4363affd7f43953067a0
+msgid "SERVICES_TYPE_MODULES"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2086 0e2d6d238a5840ffa4bd02adfea11651
+msgid ""
+"It's possible to define multiple Service Types Modules for custom service"
+" type with it's own Handler."
+msgstr ""
+
+#: ../../basic/settings/index.rst:2090 d6df721bcd3d47b5a871ac35598b162e
+msgid "`SERVICES_TYPE_MODULES = [ 'path.to.module1','path.to.module2', ... ]`"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2092 3d65074810b541d1b2a03c0c4281c3d3
+msgid "Default service types are already included"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2094 57e3da0db4e64cf7aa2be44d74ee25f2
+msgid "Inside each module in the list we need to define a variable:"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2101 d083799539044f1ca1243d23f03169dd
+msgid "`services_type = {"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2100 468ff7bab1404b7589c118b1587485c6
+msgid "\"<key_of_service_type>\": {"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2098 f0d8f18884ca483b821d2c5aceffce79
+msgid ""
+"\"OWS\": True/False, \"handler\": \"<path.to.Handler>\", \"label\": "
+"\"<label to show in remote service page>\", \"management_view\": "
+"\"<path.to.view>\""
+msgstr ""
+
+#: ../../basic/settings/index.rst:2103 743a405142bb4238994a82dc52041946
+msgid "}`"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2105 2be7adad836d4c4e8b79d87d79ba9e40
+msgid ""
+"the key_of_service_type is just an identifier to assign at the service "
+"type. OWS is True if the service type is an OGC Service Compliant. The "
+"handler key must contain the path to the class who will provide all "
+"methods to manage the service type The label is what is shown in the "
+"service form when adding a new service. The management_view, if exists, "
+"must contain the path to the method where the management page is opened."
+msgstr ""
+
+#: ../../basic/settings/index.rst:2112 a42f878139c9442b8b6f9460268e6e17
 msgid "SERVICE_UPDATE_INTERVAL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2026 4584c7698911462b90c434de9b54c3a1
+#: ../../basic/settings/index.rst:2116 410f5311fc8e4ced96d422bc4864434b
 msgid "The Interval services are updated."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2029 4c23c021d09e44919c4126f0fc9e7c81
+#: ../../basic/settings/index.rst:2119 f2e81294ae24404f805d7202bb6f5eeb
 msgid "SESSION_COOKIE_SECURE"
 msgstr ""
 
-#: ../../basic/settings/index.rst d17986a19c16429889c13ee45fb7fe22
+#: ../../basic/settings/index.rst 58edea180f4b4d6ab24d7ddc86cdb8de
 msgid "Env: ``SESSION_COOKIE_SECURE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2034 953fa8be10074bfbabfedf12f3e04db0
+#: ../../basic/settings/index.rst:2124 c732333fed244aacab072ab56fe522f4
 msgid ""
 "This is a `Django setting: "
 "<https://docs.djangoproject.com/en/3.2/ref/settings/#session-cookie-"
 "secure>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2037 0114308cfd994e73a85d688ac0883c30
+#: ../../basic/settings/index.rst:2127 80468e781901490d8bcce041b7a9f29d
 msgid "SESSION_EXPIRED_CONTROL_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst cf2ad0892d8041e5bf06203d995fb89f
+#: ../../basic/settings/index.rst 4e39d9e770cc403884f22bb335f3a02e
 msgid "Env: ``SESSION_EXPIRED_CONTROL_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2042 a22cf7d08f0f45f7adac695aeefe649f
+#: ../../basic/settings/index.rst:2132 b605319c044549cc8daed5516ac4403a
 msgid ""
 "By enabling this variable, a new middleware "
 "``geonode.security.middleware.SessionControlMiddleware`` will be added to"
@@ -3010,11 +3126,11 @@ msgid ""
 "conditions occurs:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2045 2d8a2a743c844c6ebc80f1d588bc3526
+#: ../../basic/settings/index.rst:2135 d0449c5cabe74cbf993f97dc9deb3f78
 msgid "The OAuth2 Access Token is not valid anymore or it is expired."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2047 5f18429efc9c447e97624b6a6ad7b3b1
+#: ../../basic/settings/index.rst:2137 c9f604893a6b4ed58167b7020fdfe1a3
 msgid ""
 "The Access Token might be invalid for various reasons. Usually a "
 "misconfiguration of the OAuth2 ``GeoServer`` application. The latter is "
@@ -3022,91 +3138,105 @@ msgid ""
 "through the default fixtures."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2049 c6d706e5deef4c8c807d09baceb6aaa0
+#: ../../basic/settings/index.rst:2139 6901bca0955547a9af6d426d89bcc1ad
 msgid ""
 "The user has been deactivated for some reason; an Admin has disabled it "
 "or its password has expired."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2051 39981de08b7d4445b5622e2a5709fe0c
+#: ../../basic/settings/index.rst:2141 fe9029fd2cf947a99a4d43154ed75a92
 msgid ""
 "Whenever the middleware terminates the session and the user forced to log"
 " out, a message will appear to the GeoNode interface."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2054 ffe9ad0a58254d9c88d4edcad41eb512
+#: ../../basic/settings/index.rst:2144 a2f4473c4f02450993f90556faece14e
 msgid "SHOW_PROFILE_EMAIL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2058 401ae04c08b1474082d4aaa7878a06c4
+#: ../../basic/settings/index.rst:2148 73192eaaaef247e0836e5a7a3652cc77
 msgid ""
 "A boolean which specifies whether to display the email in the user’s "
 "profile."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2061 197659bf249e4086a5326a4ebf210542
+#: ../../basic/settings/index.rst:2151 3520fc3630bf47c99c2c6d782322d6c3
 msgid "SITE_HOST_NAME"
 msgstr ""
 
-#: ../../basic/settings/index.rst 11d32d6e7d404c0cb5a0263f5be5844a
+#: ../../basic/settings/index.rst 40ab13a4a4f842df96ec735be766901e
 msgid "Env: ``SITE_HOST_NAME``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2066 0ac23be5d4b84d8c927ad53ae679c8de
+#: ../../basic/settings/index.rst:2156 e1cf642963a44a0c96193a44bcf8a8d6
 msgid "The hostname used for GeoNode."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2069 c9b9f8de6fe745209acc77fb7dfa4517
+#: ../../basic/settings/index.rst:2159 18f7c80fd31e43fcb06eee894b5c60c0
 msgid "SITE_HOST_PORT"
 msgstr ""
 
-#: ../../basic/settings/index.rst 04ed7f2103364ab5b9a299b9cc2c529d
+#: ../../basic/settings/index.rst 7129f6a59dbd493f9331332169b890e9
 msgid "Default: ``8000``"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9434d012aefd4abf8cb92bddd88ecadd
+#: ../../basic/settings/index.rst c4cdac11f8d5466ebd2dbf7882488ac6
 msgid "Env: ``SITE_HOST_PORT``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2074 4b9cf4d754074d60bb2652378553426a
+#: ../../basic/settings/index.rst:2164 01059fa71ce94bcb97d9a7a65270adbd
 msgid "The Site hostport."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2077 4278b1060a104995b188c700d235c45a
+#: ../../basic/settings/index.rst:2167 55859830b98a4b8e99c805271347fb42
 msgid "SITEURL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2079 80fd95f3285942c095acf25d5c361217
+#: ../../basic/settings/index.rst:2169 e28e0b9e0dc04721ae2d42ef4001318a
 msgid "Default: ``'http://localhost:8000/'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2081 c3a0c7580dd24969829ca9490095629a
+#: ../../basic/settings/index.rst:2171 c35c5ec1289a483e9427f9286c7f12e4
 msgid ""
 "A base URL for use in creating absolute links to Django views and "
 "generating links in metadata."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2084 ab86232bce3c4b8f9a4e70d5f4a39485
+#: ../../basic/settings/index.rst:2174 7922b33c6c354b4e9dd409054ae193b3
+msgid "SIZE_RESTRICTED_FILE_UPLOAD_ELEGIBLE_URL_NAMES"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2176 67d2278069f14731b7ebeac8b2b81d43
+msgid "Default: ``'(\"data_upload\", \"uploads-upload\", \"document_upload\",)'``"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2178 e63d222c866f4df8a4584d80ce654bfb
+msgid ""
+"Rappresent the list of the urls basename that are under file_size "
+"restriction"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2181 460b5ccad3974a918df7f0bea07d554f
 msgid "SKIP_PERMS_FILTER"
 msgstr ""
 
-#: ../../basic/settings/index.rst 93f86de302ae47448ce1421364701526
+#: ../../basic/settings/index.rst 312543384d534a22ba1f66a4067ebe43
 msgid "Env: ``SKIP_PERMS_FILTER``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2089 2c41bfff169f42ba8def1f145b588783
+#: ../../basic/settings/index.rst:2186 ee37897f54c04a3a923df9e39fe6625a
 msgid "If set to true permissions prefiltering is avoided."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2092 876bd50410b54f1ba307761d7097e75c
+#: ../../basic/settings/index.rst:2189 0b8743138c8e46208130696f66644343
 msgid "SOCIALACCOUNT_ADAPTER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2094 bcf3a8ad20bc4f078c30944bf512714a
+#: ../../basic/settings/index.rst:2191 103cfd5baf554f608e5f4bc74a5deaa5
 msgid "Default: ``geonode.people.adapters.SocialAccountAdapter``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2096 3cb86c6063ea456d8b0950a17fe7a542
+#: ../../basic/settings/index.rst:2193 944d77b72ac14aecaa3b13b93ae55801
 msgid ""
 "This is a `django-allauth setting <https://django-"
 "allauth.readthedocs.io/en/latest/configuration.html#configuration>`__ It "
@@ -3114,11 +3244,11 @@ msgid ""
 "accounts."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2100 c2e7796f11a74a78879a75c4362e6a82
+#: ../../basic/settings/index.rst:2197 3d0601e3a8784145929409a25a0ada1e
 msgid "SOCIALACCOUNT_AUTO_SIGNUP"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2104 a7a62c1c8f4c41048aa4823dc1467361
+#: ../../basic/settings/index.rst:2201 fa13c517905e4af8ac81ee8d26a66125
 msgid ""
 "Attempt to bypass the signup form by using fields (e.g. username, email) "
 "retrieved from the social account provider. This is a `Django-allauth "
@@ -3126,42 +3256,42 @@ msgid ""
 "allauth.readthedocs.io/en/latest/configuration.html>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2109 d0daec78326544ea94eb8e0aa23028bb
+#: ../../basic/settings/index.rst:2206 e581cf337d974261bffe7ad56b320010
 msgid "SOCIALACCOUNT_PROVIDERS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2155 3933a1036ef24e519c72247a78c94dcc
+#: ../../basic/settings/index.rst:2252 1fd88ba7f28348a3ac8675804bf99f76
 msgid ""
 "This is a `django-allauth setting <https://django-"
 "allauth.readthedocs.io/en/latest/configuration.html#configuration>`__ It "
 "should be a dictionary with provider specific settings"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2159 5d5944a5660647fbab72c1e963fd3d79
+#: ../../basic/settings/index.rst:2256 f9246048737b4fc69c612f66ee018069
 msgid "SOCIALACCOUNT_PROFILE_EXTRACTORS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2168 adea46fd6edd48df88cd991149e483b8
+#: ../../basic/settings/index.rst:2265 df83f02568ad45f7939505ba3670e109
 msgid ""
 "A dictionary with provider ids as keys and path to custom profile "
 "extractor classes as values."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2172 066b990f855743f78086f6bb58bb23ba
+#: ../../basic/settings/index.rst:2269 8828528419a3433c8ea12f445a7a181d
 msgid "SOCIAL_BUTTONS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2176 82da22da0fd046bab0a7972490c9358c
+#: ../../basic/settings/index.rst:2273 7ee9d5b110484a3d8ea35eb68d8c5027
 msgid ""
 "A boolean which specifies whether the social media icons and JavaScript "
 "should be rendered in GeoNode."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2179 4cea88244da54d0480ce5726e24007d0
+#: ../../basic/settings/index.rst:2276 ef0ebbbc71f04716adf683c19592c195
 msgid "SOCIAL_ORIGINS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2201 543b9ebbc66f4e7dbe721d794231e43d
+#: ../../basic/settings/index.rst:2298 48888ce70b9e450caea5e4402f0902a2
 msgid ""
 "A list of dictionaries that are used to generate the social links "
 "displayed in the Share tab.  For each origin, the name and URL format "
@@ -3169,40 +3299,126 @@ msgid ""
 "(layer, map, document)."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2204 e1126e61b8ba482087a3c9c697deab53
+#: ../../basic/settings/index.rst:2301 4cd008517b0f4f7298dc0c037908ade6
 msgid "SOCIALACCOUNT_WITH_GEONODE_LOCAL_SINGUP"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2208 bf97517bfe9040e4ba343edf933e248e
+#: ../../basic/settings/index.rst:2305 2b377811a065423d8fd5595950123264
 msgid ""
 "Variable which controls displaying local account registration form. By "
 "default form is visible"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2211 b8978e33b22947f6b65b5bf845c91bb3
+#: ../../basic/settings/index.rst:2308 4029956ad0dd401c96baa77623a6d8ef
 msgid "SRID"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2220 e6e35fc79ab846a0b0234869ac2464cc
+#: ../../basic/settings/index.rst:2317 82289add827543c2ae3661e006f6c4c9
 msgid "SEARCH_RESOURCES_EXTENDED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2224 7fb08fbcdd284c56b68bc698be6bfddb
+#: ../../basic/settings/index.rst:2321 afe387987ee944589d29218996549dd5
 msgid ""
 "This will extend search with additinoal properties. By default its on and"
 " search engine will check resource title or purpose or abstract. When set"
 " to False just title lookup is performed."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2228 5a07d771645f46508580c454513082f9
+#: ../../basic/settings/index.rst:2325 fea7f626f99342739d114bf0c9a8885d
+msgid "SUPPORTED_DATASET_FILE_TYPES"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2328 3ff39fb298b849f782ab423215ccb209
+msgid "SUPPORTED_DATASET_FILE_TYPES = [ {"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2330 0c443988e8df46b9b01dfbe929817b8f
+msgid ""
+"\"id\": \"shp\", \"label\": \"ESRI Shapefile\", \"format\": \"vector\", "
+"\"ext\": [\"shp\"], \"requires\": [\"shp\", \"prj\", \"dbf\", \"shx\"], "
+"\"optional\": [\"xml\", \"sld\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2336 ../../basic/settings/index.rst:2344
+#: ../../basic/settings/index.rst:2352 ../../basic/settings/index.rst:2360
+#: ../../basic/settings/index.rst:2368 0e1f2779d78e4c7fb858b2443f06b48d
+#: 4ff48b445c714598a11a415cc71b7e8b 9dd622b79e2243a48e0cdf9f16e0af31
+#: ee36dbbaef284bcb8ede8cae0f0e37a7 f6cc0755c0ea4442b346513ecad87747
+msgid "}, {"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2338 ab92d7696022496e8d99e92ecf374b35
+msgid ""
+"\"id\": \"tiff\", \"label\": \"GeoTIFF\", \"format\": \"raster\", "
+"\"ext\": [\"tiff\", \"tif\"], \"mimeType\": [\"image/tiff\"], "
+"\"optional\": [\"xml\", \"sld\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2346 4d97133bc52f44428abc8fcb7083a603
+msgid ""
+"\"id\": \"csv\", \"label\": \"Comma Separated Value (CSV)\", \"format\": "
+"\"vector\", \"ext\": [\"csv\"], \"mimeType\": [\"text/csv\"], "
+"\"optional\": [\"xml\", \"sld\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2354 f262e31566fd4686a4d9d448b0263ba2
+msgid ""
+"\"id\": \"zip\", \"label\": \"Zip Archive\", \"format\": \"archive\", "
+"\"ext\": [\"zip\"], \"mimeType\": [\"application/zip\"], \"optional\": "
+"[\"xml\", \"sld\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2362 a2fa01f589c24fbfb3034a69a0f5c59b
+msgid ""
+"\"id\": \"xml\", \"label\": \"XML Metadata File\", \"format\": "
+"\"metadata\", \"ext\": [\"xml\"], \"mimeType\": [\"application/json\"], "
+"\"needsFiles\": [\"shp\", \"prj\", \"dbf\", \"shx\", \"csv\", \"tiff\", "
+"\"zip\", \"sld\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2370 64d33a71a5d84c8cab5f5d23b4096d99
+msgid ""
+"\"id\": \"sld\", \"label\": \"Styled Layer Descriptor (SLD)\", "
+"\"format\": \"metadata\", \"ext\": [\"sld\"], \"mimeType\": "
+"[\"application/json\"], \"needsFiles\": [\"shp\", \"prj\", \"dbf\", "
+"\"shx\", \"csv\", \"tiff\", \"zip\", \"xml\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2377 953884f6557c460ebf030cc243bc86e6
+msgid "]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2379 6b7f7302fe7c4d7fb956637a39f12cca
+msgid ""
+"Rappresent the list of the supported file type in geonode that can be "
+"ingested by the platform"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2381 29299a3d276841c08c9a8fc27008eaf3
+msgid ""
+"For example. the following configuration is needed to add the GeoJSON as "
+"supported file:"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2388 c800211266574a17bf7cd31880d810e0
+msgid "{"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2385 c03da137b92c4686ae977300470ec1ef
+msgid ""
+"\"id\": \"geojson\", \"label\": \"GeoJSON\", \"format\": \"metadata\", "
+"\"ext\": [\"geojson\"], \"mimeType\": [\"application/json\"]"
+msgstr ""
+
+#: ../../basic/settings/index.rst:2394 3a59c233726a447caa9fa423cfcbd61d
 msgid "T"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2231 524536327e7240e5a51ffb07e6e194ed
+#: ../../basic/settings/index.rst:2397 83bd2deb1b644d27a110e9f19537c9f6
 msgid "TASTYPIE_DEFAULT_FORMATS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2235 b0ac29cd441644efa62d4944778e6f7f
+#: ../../basic/settings/index.rst:2401 97fe2aa7a4b54a3dac311b48d43fe586
 msgid ""
 "This setting allows you to globally configure the list of allowed "
 "serialization formats for your entire site. This is a `tastypie setting: "
@@ -3210,317 +3426,317 @@ msgid ""
 "#tastypie-default-formats>`__"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2239 c41729d0086c49ae89b1daad1b86cf6a
+#: ../../basic/settings/index.rst:2405 8909249d26a3442792f3f86a3ec81f5c
 msgid "THEME_ACCOUNT_CONTACT_EMAIL"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2241 f25cb29071a0465abbd0027478621fb8
+#: ../../basic/settings/index.rst:2407 8db44f4cb4424eaea775c9add99cbb94
 msgid "Default: ``'admin@example.com'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2243 8289ddc15512459ea1e5eb105a97d66d
+#: ../../basic/settings/index.rst:2409 9232e055af0240cabce20b7628eef853
 msgid ""
 "This email address is added to the bottom of the password reset page in "
 "case users have trouble unlocking their account."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2246 519f5d7e770845758de69167f24e6929
+#: ../../basic/settings/index.rst:2412 99fcd5a706264b7cac2c7add536a3f23
 msgid "THESAURI"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2248 3510ccb4b9ba4db3a5c0b4163f941dec
+#: ../../basic/settings/index.rst:2414 866e0039c559413d888749ee4a886074
 msgid "Default = ``[]``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2250 2d08e0ff880e4e6db8c5c3466783f194
+#: ../../basic/settings/index.rst:2416 fe0a6012f29b4a37a859771b6b8ec2ad
 msgid ""
 "A list of Keywords thesauri settings: For example `THESAURI = "
 "[{'name':'inspire_themes', 'required':True, 'filter':True}, "
 "{'name':'inspire_concepts', 'filter':True}, ]`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2254 edb5b65670d34b5fb4accacd60b6b73e
+#: ../../basic/settings/index.rst:2420 b830f3343292403096772c096a5459d0
 msgid "TOPICCATEGORY_MANDATORY"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6dd50c7c7f9c405fa847b8971216b009
+#: ../../basic/settings/index.rst 445d21655da341c59c05e5f1d6b742d5
 msgid "Env: ``TOPICCATEGORY_MANDATORY``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2259 c7baba482caf466c89de201c3ed9a166
+#: ../../basic/settings/index.rst:2425 fd8e2b701ac041f6995e5c2d7fae791c
 msgid ""
 "If this option is enabled, Topic Categories will become strictly "
 "Mandatory on Metadata Wizard"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2262 679219b47a754543b08ecf82f2f80db3
+#: ../../basic/settings/index.rst:2428 53f9647be79e47329692e60f27fb2bc1
 msgid "TWITTER_CARD"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2266 8c9b2ba9f7b44ea395a90cfb0567529d
+#: ../../basic/settings/index.rst:2432 b783df7d3daf4618abd6a3ddfecf0830
 msgid "A boolean that specifies whether Twitter cards are enabled."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2269 28ea9917ff8d4063902f28915153ce6b
+#: ../../basic/settings/index.rst:2435 523b2e512861472bb7be714cc6069931
 msgid "TWITTER_SITE"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2271 ed8ea17e3c9f43e4be3cf4c3a6c7f866
+#: ../../basic/settings/index.rst:2437 83036bb93e5c460bb9f3743e1d0b5150
 msgid "Default:: ``'@GeoNode'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2273 782690d348fb4e9baa9ced5b33be52cf
+#: ../../basic/settings/index.rst:2439 845b10d9e42b4ce1ba438ef9fac85cb6
 msgid ""
 "A string that specifies the site to for the twitter:site meta tag for "
 "Twitter Cards."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2276 15033813ea9f476f96a568a74d804cb0
+#: ../../basic/settings/index.rst:2442 7bce9536629e49a59cda9e5002f44b5a
 msgid "TWITTER_HASHTAGS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2278 79bee2acddd9410bb2afed115675193d
+#: ../../basic/settings/index.rst:2444 e867a3d9e4f74d6c8b681fa2103bfc93
 msgid "Default:: ``['geonode']``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2280 b174f0d087f0496d91c6778aab209179
+#: ../../basic/settings/index.rst:2446 dca38f1d6a044c2ca4a960af28280649
 msgid ""
 "A list that specifies the hashtags to use when sharing a resource when "
 "clicking on a social link."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2285 2befd7a9b424495a95438fbe69952d55
+#: ../../basic/settings/index.rst:2451 008c6d28b2c246708fbb483d55c22428
 msgid "TINYMCE_DEFAULT_CONFIG"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2332 2cba84edc0954534ab531110ac3f238d
+#: ../../basic/settings/index.rst:2498 4d267a047dfe4b7b8c6baf5f49ebe846
 msgid "HTML WYSIWYG Editor (TINYMCE) Menu Bar Settings. For more info see:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2334 4eb9bed05b7c495db07af4737c90a90c
+#: ../../basic/settings/index.rst:2500 31c1b52044b54be997d2df2d72272fe7
 msgid ""
 "https://django-"
 "tinymce.readthedocs.io/en/latest/installation.html#configuration"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2335 d6dd852b2f634d5d83b59968737a2c2f
+#: ../../basic/settings/index.rst:2501 1d1d0d8ee78e41f1bc2ecce68948ab81
 msgid ":ref:`getfetureinfo-templates`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2337 9465d0a1f16e4bbbb9552fea4c8b1bfe
+#: ../../basic/settings/index.rst:2503 9c99f826e36e47d5bf69b4661352e6d5
 msgid "U"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2340 d7c8e2cfcf1c4a07a38adcf0904d0271
+#: ../../basic/settings/index.rst:2506 1db7a0e138154a2d9b3f208e2eb278a6
 msgid "UI_REQUIRED_FIELDS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2341 44337d06d11e4b828e71eef038c23ee4
+#: ../../basic/settings/index.rst:2507 5df92521ec804156a022c8e82b49e217
 msgid ""
 "If this option is enabled, the input selected (we are referring to the "
 "one present in the optional Metadata-Tab on the Metadata-Wizard) will "
 "become mandatory."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2343 86c113f60d414d65872b26a8ae858c61
+#: ../../basic/settings/index.rst:2509 89b39906faeb4246811f4c467295489e
 msgid "The fields that can be mandatory are:"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9331655dc6ac425481cad39c66a92506
+#: ../../basic/settings/index.rst 356d9b439fe740fd9fdcf27d763cf7a9
 msgid "id_resource-edition => Label: Edition"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3df7d6780d0048ada33c8b9145fb8055
+#: ../../basic/settings/index.rst 1f41b0c089104477869c22e1cc3b579e
 msgid "id_resource-purpose => Label: Purpose"
 msgstr ""
 
-#: ../../basic/settings/index.rst 977e0e44ca484537a177bf9dbc930ec6
+#: ../../basic/settings/index.rst d57ad557bbd240839abd282f0cb4bca4
 msgid "id_resource-supplemental_information =>  Label: Supplemental information"
 msgstr ""
 
-#: ../../basic/settings/index.rst 3e0ec5fe07de47cfb22c0fe51d45e8ca
+#: ../../basic/settings/index.rst d3bfe8feb6014df1a90cde26ecc26c71
 msgid "id_resource-temporal_extent_start_pickers => Label: temporal extent start"
 msgstr ""
 
-#: ../../basic/settings/index.rst 94fa96359a034e1f926825c9d029c5bf
+#: ../../basic/settings/index.rst 836c646cacd94bea8a7de879791ab935
 msgid "id_resource-temporal_extent_end => Label:  temporal extent end"
 msgstr ""
 
-#: ../../basic/settings/index.rst 703318d701f64f51b45bfcd664e61004
+#: ../../basic/settings/index.rst 41d568e9b5754b37ac89bde3d6873c97
 msgid "id_resource-maintenance_frequency => Label:  Maintenance frequency"
 msgstr ""
 
-#: ../../basic/settings/index.rst 8ccaf488eb744c06bc7e925c532ccc79
+#: ../../basic/settings/index.rst b92b208951844a838228a891cfe44e89
 msgid ""
 "id_resource-spatial_representation_type => Label:  Spatial representation"
 " type"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2353 065db4deedbc478aacec0282526a6002
+#: ../../basic/settings/index.rst:2519 5bf6c28edac3415d8ac7878a935092a4
 msgid ""
 "If at least one on the above ids is set in this configuration, the panel "
 "header will change from `Optional` to `Mandatory`"
 msgstr ""
 
-#: ../../basic/settings/index.rst f0b4fb75f01e4e0fa37b64723d21c925
+#: ../../basic/settings/index.rst 5068d52909884a9da7db7460d972c592
 msgid "Confiugration Example:"
 msgstr ""
 
-#: ../../basic/settings/index.rst 27954d8c5a954d1293807262ae3b99f9
+#: ../../basic/settings/index.rst 3d45547abffb4341a7d7cede0cb6e960
 msgid "UI_REQUIRED_FIELDS = ['id_resource-edition']"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2360 022a4a6cf2574e44b4216112993205f1
+#: ../../basic/settings/index.rst:2526 5e5532a5d56543e2a99eeb8b48d86de5
 msgid "UNOCONV_ENABLE"
 msgstr ""
 
-#: ../../basic/settings/index.rst d1801356fb23437687f21f51fda989d3
+#: ../../basic/settings/index.rst 8c292f8c6f1f4f2899165ee698bfac39
 msgid "Env: ``UNOCONV_ENABLE``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2366 f3ada3bc70894ed99a901c854f9bc869
+#: ../../basic/settings/index.rst:2532 22d1f6b630a44de080c73cb791448f41
 msgid "UPLOADER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2377 28c1567f0a5d4e46a66f16a1cc13471c
+#: ../../basic/settings/index.rst:2543 f63894b0f6c34e9dba54f75379125019
 msgid "A dictionary of Uploader settings and their values."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2381 4bfe4144eb9d46afbf86e9e6bf776b9c
+#: ../../basic/settings/index.rst:2547 ecdafeee8b3b43fe9e20e9bbfa51f9c1
 msgid "Default: ``'geonode.importer'``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2383 095df797d5554512aede90aca49c813a
+#: ../../basic/settings/index.rst:2549 5c050daa11cd4c51aa7a24cbe7872601
 msgid ""
 "The importer backend requires the GeoServer importer extension to be "
 "enabled."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2385 090c6b9d98594c35810eb88f65cd328a
+#: ../../basic/settings/index.rst:2551 dd9e7cdf1d4e447e8a9d497110968140
 msgid "OPTIONS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2393 b7d567e750d241ddbfea0e060f0923a3
+#: ../../basic/settings/index.rst:2559 bf8b3e0b310343688ab67e8a40e0b4a2
 msgid "TIME_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2397 ec7532bf94e44cb29ede865abbfd9081
+#: ../../basic/settings/index.rst:2563 e7f3e356d62b42b9bca13f7903d1d3cb
 msgid ""
 "A boolean that specifies whether the upload should allow the user to "
 "enable time support when uploading data."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2400 8664848d1f8f413b8ac0a9c3ad51425c
+#: ../../basic/settings/index.rst:2566 4e173841e8924b47a598c035abc2e762
 msgid "USER_MESSAGES_ALLOW_MULTIPLE_RECIPIENTS"
 msgstr ""
 
-#: ../../basic/settings/index.rst 8bc7cb8383a4449291f4b9f8687713a3
+#: ../../basic/settings/index.rst bd901e5d220143ddbd133de316ab7efb
 msgid "Env: ``USER_MESSAGES_ALLOW_MULTIPLE_RECIPIENTS``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2405 c67f98c21b9242dc8b219ea4263a305d
+#: ../../basic/settings/index.rst:2571 ccd89dddca724518be509a7e5f06fa7e
 msgid "Set to true to have multiple recipients in /message/create/"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2410 43ce515b2ef7441e82e457c29748c434
+#: ../../basic/settings/index.rst:2576 31b98ebe561a407db1ac65af6259cb2d
 msgid "USER_ANALYTICS_ENABLED"
 msgstr ""
 
-#: ../../basic/settings/index.rst c91dcde79389404c8ba166c634112422
+#: ../../basic/settings/index.rst e737aae0788541fe964502d89a62f97f
 msgid "Env: ``USER_ANALYTICS_ENABLED``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2415 2912d3043f8f407988702640ce66ae6e
+#: ../../basic/settings/index.rst:2581 544c9de59a4d47519b37d1a338d6e1ee
 msgid ""
 "Set to true to anonymously collect user data for analytics. If true you "
 "have to set :ref:`monitoring-data-aggregation` and :ref:`monitoring-skip-"
 "paths`."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2418 b33bd381b47049599d1e35384e5dd3fb
+#: ../../basic/settings/index.rst:2584 3e4e7524c24d42118f95faeb2cbffd71
 msgid "See :ref:`geonode_monitoring` to learn more about it."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2421 cd8382e118154753980ee1d5d1b97729
+#: ../../basic/settings/index.rst:2587 8ac68f1e8fec4885a986c5450a0b75c6
 msgid "USER_ANALYTICS_GZIP"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9ac7cf258a5740b1a4aa7cbfb11ed0d3
+#: ../../basic/settings/index.rst 94c71c8957434f3f983b377e6849c5f9
 msgid "Env: ``USER_ANALYTICS_GZIP``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2426 036392a0a8f1469eb5a9e0527d2db7e9
+#: ../../basic/settings/index.rst:2592 f29ca47af9dd486a9f0f14572aabfa7e
 msgid ""
 "To be used with ``USER_ANALYTICS_ENABLED``. Compress ``gzip`` json "
 "messages before sending to ``logstash``."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2431 83128fae67294516880d2fe7fe526829
+#: ../../basic/settings/index.rst:2597 bfb0abcb204e43e894fffb80f9a4d19a
 msgid "UUID HANDLER"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2433 b488ad0babec408f95a6d01b51bcd3cd
+#: ../../basic/settings/index.rst:2599 235fada1756f47dfbe94664cbe36d713
 msgid "Is possible to define an own uuidhandler for the Layer."
 msgstr ""
 
-#: ../../basic/settings/index.rst:2435 439264795acc4a749420b9617dc9ebc1
+#: ../../basic/settings/index.rst:2601 1ba809aa1d074416be27fabcc8122716
 msgid ""
 "To start using your own handler, is needed to add the following "
 "configuration:"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2437 63fb4de8ea7b4480902dd1cae27e6519
+#: ../../basic/settings/index.rst:2603 4a5cf5aa4b59409aa2e8de735933269e
 msgid "`LAYER_UUID_HANDLER = \"mymodule.myfile.MyObject\"`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2439 bfcf4add47b942d7aa92972f20982b99
+#: ../../basic/settings/index.rst:2605 1fa4e038cedb45aa964080bf37ea79fc
 msgid ""
 "The Object must accept as `init` the `instance` of the layer and have a "
 "method named `create_uuid()`"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2441 60912cfc6dfb428a8b02d72a8502218c
+#: ../../basic/settings/index.rst:2607 e79c8325cb3b4774b1f59c637436065a
 msgid "here is an example:"
 msgstr ""
 
-#: ../../basic/settings/index.rst e37054c31f554b988a7e9674224bdd62
+#: ../../basic/settings/index.rst 76c143596ec440b0bb64b42aba162aaf
 msgid "class MyObject():"
 msgstr ""
 
-#: ../../basic/settings/index.rst d39299cac67b44a49a8cd0b91eba1c20
+#: ../../basic/settings/index.rst 5b45334aa5544e1590012f610008ac12
 msgid "def __init__(self, instance):"
 msgstr ""
 
-#: ../../basic/settings/index.rst 9b950e2fef0349a7a1a44a4621f68c8c
+#: ../../basic/settings/index.rst 1c0c73ab08af4510bca1fe8069df05ff
 msgid "self.instance = instance"
 msgstr ""
 
-#: ../../basic/settings/index.rst f7a15eee271b4899a62e10fec600ed66
+#: ../../basic/settings/index.rst 843c18ad8283402d9b077cf97a1b00fd
 msgid "def create_uuid(self):"
 msgstr ""
 
-#: ../../basic/settings/index.rst efbbfc8cc46c43428400bb95150e4490
+#: ../../basic/settings/index.rst 6347728633734e2ea8ad5aca6efb3bf7
 msgid "# here your code"
 msgstr ""
 
-#: ../../basic/settings/index.rst 6a1ad3624c7441b49f21ae96b000448f
+#: ../../basic/settings/index.rst 78cad9f0369b48a68d414cbd2782f4d9
 msgid "pass"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2453 4cbc9868507f40b9abaada0e239b1604
+#: ../../basic/settings/index.rst:2619 d0bc9d8a788d488aa4345e8fbb6b3953
 msgid "X"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2456 eac39257d4fe4d0b97b04ac92e004e19
+#: ../../basic/settings/index.rst:2622 bd591e10396c4a93a6dd9a73aaf348b6
 msgid "X_FRAME_OPTIONS"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2458 2527bca698964894a399f2f8038b3f08
+#: ../../basic/settings/index.rst:2624 fb1cd8e0eb4a4170af9ef2ee61516585
 #, python-format
 msgid "Default: ``'ALLOW-FROM %s' % SITEURL``"
 msgstr ""
 
-#: ../../basic/settings/index.rst:2460 fa624c7dd9e348dcaf75b47eeb34aa66
+#: ../../basic/settings/index.rst:2626 a5e47ca83c654aaeae86be8e214ee3b0
 msgid ""
 "This is a `Django setting "
 "<https://docs.djangoproject.com/en/3.2/ref/clickjacking/#setting-x-frame-"
@@ -3537,5 +3753,129 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "In order to generate reCaptcha keys, please see:"
+#~ msgstr ""
+
+#~ msgid "AWS_ACCESS_KEY_ID"
+#~ msgstr ""
+
+#~ msgid "Env: ``AWS_ACCESS_KEY_ID``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a `Django storage setting "
+#~ "<https://django-"
+#~ "storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ "
+#~ "Your Amazon Web Services access key, "
+#~ "as a string."
+#~ msgstr ""
+
+#~ msgid "AWS_BUCKET_NAME"
+#~ msgstr ""
+
+#~ msgid "Env: ``S3_BUCKET_NAME``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The name of the S3 bucket GeoNode"
+#~ " will pull static and/or media files"
+#~ " from. Set through the environment "
+#~ "variable S3_BUCKET_NAME. This is a "
+#~ "`Django storage setting <https://django-"
+#~ "storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__"
+#~ msgstr ""
+
+#~ msgid "AWS_QUERYSTRING_AUTH"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a `Django storage setting "
+#~ "<https://django-"
+#~ "storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ "
+#~ "Setting AWS_QUERYSTRING_AUTH to False to "
+#~ "remove query parameter authentication from "
+#~ "generated URLs. This can be useful "
+#~ "if your S3 buckets are public."
+#~ msgstr ""
+
+#~ msgid "AWS_S3_BUCKET_DOMAIN"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "https://github.com/GeoNode/geonode/blob/master/geonode/settings.py#L1661"
+#~ " ``AWS_S3_BUCKET_DOMAIN = '%s.s3.amazonaws.com' %"
+#~ " AWS_STORAGE_BUCKET_NAME``"
+#~ msgstr ""
+
+#~ msgid "AWS_SECRET_ACCESS_KEY"
+#~ msgstr ""
+
+#~ msgid "Env: ``AWS_SECRET_ACCESS_KEY``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a `Django storage setting "
+#~ "<https://django-"
+#~ "storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ "
+#~ "Your Amazon Web Services secret access"
+#~ " key, as a string."
+#~ msgstr ""
+
+#~ msgid "AWS_STORAGE_BUCKET_NAME"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a `Django storage setting "
+#~ "<https://django-"
+#~ "storages.readthedocs.io/en/latest/backends/amazon-S3.html>`__ "
+#~ "Your Amazon Web Services storage bucket"
+#~ " name, as a string."
+#~ msgstr ""
+
+#~ msgid "CACHE_BUSTING_MEDIA_ENABLED"
+#~ msgstr ""
+
+#~ msgid "Env: ``CACHE_BUSTING_MEDIA_ENABLED``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a `Django ManifestStaticFilesStorage"
+#~ " storage setting "
+#~ "<https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__"
+#~ " A boolean allowing you to enable "
+#~ "the ``ManifestStaticFilesStorage storage``. This "
+#~ "works only on a production system."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a `Django ManifestStaticFilesStorage"
+#~ " storage setting "
+#~ "<https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage>`__"
+#~ " A boolean allowing you to enable "
+#~ "the ``ManifestStaticFilesStorage storage``. This "
+#~ "works only on a production system."
+#~ msgstr ""
+
+#~ msgid "GEONODE_APPS"
+#~ msgstr ""
+
+#~ msgid "If enabled contrib apps are used."
+#~ msgstr ""
+
+#~ msgid "S3_MEDIA_ENABLED"
+#~ msgstr ""
+
+#~ msgid "Env: ``S3_MEDIA_ENABLED``"
+#~ msgstr ""
+
+#~ msgid "Enable/disable Amazon S3 media storage."
+#~ msgstr ""
+
+#~ msgid "S3_STATIC_ENABLED"
+#~ msgstr ""
+
+#~ msgid "Env: ``S3_STATIC_ENABLED``"
+#~ msgstr ""
+
+#~ msgid "Enable/disable Amazon S3 static storage."
 #~ msgstr ""
 

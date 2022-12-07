@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 11:59+0100\n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: ../../usage/other_apps/geostory/index.rst:4 37250836ce914549bac24e949ec68e0a
+#: ../../usage/other_apps/geostory/index.rst:4 6628ebc379ba4ee79341a00a833c9216
 msgid "GeoStory"
 msgstr ""
 
-#: ../../usage/other_apps/geostory/index.rst:6 479cb45f3e6c450bb08d3965e64ec01a
+#: ../../usage/other_apps/geostory/index.rst:6 b7f9094ac7f748288d51808d254dfad3
 msgid ""
 "GeoStory is a MapStore tool integrated in GeoNode that provides the user "
 "a way to create inspiring and immersive stories by combining text, "
@@ -31,33 +31,32 @@ msgid ""
 "of GeoNode users or make them public to everyone around the world."
 msgstr ""
 
-#: ../../usage/other_apps/geostory/index.rst:9 cca5d5be8ae840749358c35c6991d292
+#: ../../usage/other_apps/geostory/index.rst:9 59d99387bba14aa0bba529df925aa209
 msgid ""
-"To build a new or explore existing GeoStory go to :guilabel:`Apps` menu "
-"and once in :guilabel:`Explore Apps` page on top right dropdown button "
-":guilabel:`Create New Apps` choose :guilabel:`GeoStory`."
+"To build a new GeoStory go to :guilabel:`Create new` option on the "
+"resource page and choose option *Create geostory*."
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:14
 #: ../../usage/other_apps/geostory/index.rst:21
-#: 69d24dc5db0c4dfcae63b5f781efd38a 88a870851508446ab4849249f660a8d7
+#: 4ff7277a0dfd4738881b64c9c617d7d7 890d8c9a08e84588866328a21b567126
 msgid "*New GeoStory Apps option*"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:16
-#: b6e06f23f9c24fa2af9f9212f1fc7114
+#: 39da7d54e9e84e33b539ea83d0c26215
 msgid ""
 "Now you landed on the GeoStory edition page that is composed of the "
 "following sections:"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:23
-#: 9bab4b7f8b034ea2aa1a94b616916257 e50bcafed567400aaa461c19b3b9a6cf
+#: 7496feac89ab420cb4f4c48c77349ae4 d5ef464c5a534e27b1d342d6d72fb4d1
 msgid "add_section"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:28
-#: 37d98b83a1a6467aa770f45e0b399591
+#: b3f56135780c4bda868d64a5f5561b6a
 msgid ""
 "The GeoStory content is organized in Sections, that can be added with the"
 " |add_section| button in the *Container* area. In particular, the user "
@@ -65,66 +64,66 @@ msgid ""
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:33
-#: 95cb15ca103a423db0bbabe5e9d27d01
+#: d7d466e3b4a346e7aa98b03e628117e6
 msgid "*GeoStory Sections Types*"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:35
-#: 0eb30df1b4744bca9a15d9eca2ee4b88
+#: 18225564f73242d59eed81c6ce782080
 msgid ""
 "For more information on these specific section please follow the official"
 " MapStore documentation:"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:37
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: 10f2516d289546a7aeb283629238535e
 msgid ""
 "`Title Section <https://mapstore.readthedocs.io/en/latest/user-guide"
 "/title-section/>`_"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:38
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: 09a25f1e19394d2fbb3b26375eaa89ed
 msgid ""
 "`Banner Section <https://mapstore.readthedocs.io/en/latest/user-guide"
 "/banner-section/>`_"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:39
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: e6e2c752e85a4a9bb28acdc8b2ec55c9
 msgid ""
 "`Paragraph Section <https://mapstore.readthedocs.io/en/latest/user-guide"
 "/paragraph-section/>`_"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:40
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: 2a153cf70bea4834b8f8bc834ca04faf
 msgid ""
 "`Immersive Section <https://mapstore.readthedocs.io/en/latest/user-guide"
 "/immersive-section/>`_"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:41
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: d5973ffd95b64c6686999eccae15fbfe
 msgid ""
 "`Media Section <https://mapstore.readthedocs.io/en/latest/user-guide"
 "/media-section/>`_"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:42
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: 5663627b967c4b17ad41fe9b808b3380
 msgid ""
 "`Web Page Section <https://mapstore.readthedocs.io/en/latest/user-guide"
 "/web-section/>`_"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:45
-#: 8fc7db3fa6784d8f90f60b534a69666f
+#: 94211eb2d684423797f2476c9611cb94
 msgid "Add GeoNode content to GeoStory"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:47
-#: a06751295b13428e84ddbe40bbfec387
+#: 36bef72a3cdd436fa0b425f78ae3acaa
 msgid ""
 "With GeoNode you can add content to your GeoStory using internal GeoNode "
 "documents and maps as well external sources. This ability to add internal"
@@ -132,19 +131,19 @@ msgid ""
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:50
-#: 38bdc717e21e47e8a65cc75e572029f1 e092c36a557a4992841bdc767b7fbd2f
+#: 23ba462af78e449380d840f54ee13353 d42db7303ebe42b0807488e3b11adde8
 msgid "edit_mode"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:55
-#: b95e4a7f25ad4e42a68808428604eb19
+#: bd7accea7e4840129faca815af33826d
 msgid ""
 "To add GeoNode content to your GeoStory use the |edit_mode| button on top"
 " of your GeoStory section."
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:57
-#: 161085e849c94ab58dc2ba39390b7c0f
+#: b99e41868d7b48ec975269fb84eb6860
 msgid ""
 "From here you can add :guilabel:`Images`, :guilabel:`Videos` and "
 ":guilabel:`Maps`. To enable GeoNode internal catalog, on "
@@ -154,41 +153,36 @@ msgid ""
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:64
-#: 41d8319744934f41b57aafd4969b4c6c
+#: 7974851b1e8b4dfab12ad61120b61eda
 msgid "*Add Media to GeoStory*"
 msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:66
-#: b7abd22136cc425d8a22c9b5494af4dd
+#: 6315414da23c445892b5021f338bb8fe
 msgid ""
-"To save your GeoStory on the top right hamburguer button choose "
-":guilabel:`Save as...`"
+"To save your GeoStory, on the top your Geostory content choose "
+":guilabel:`Save` and then :guilabel:`Save as...`"
 msgstr ""
 
-#: ../../usage/other_apps/geostory/index.rst:71
-#: 065aee745d89478eb1557f38e152638e
-msgid "*Save GeoStory*"
-msgstr ""
-
-#: ../../usage/other_apps/geostory/index.rst:73
-#: 68ccca7768e34fec9c29691ebf07335c
+#: ../../usage/other_apps/geostory/index.rst:68
+#: 79741b710a754b1c906b70daefee28a2
 msgid "Now your GeoStory can be shared with everyone!"
 msgstr ""
 
-#: ../../usage/other_apps/geostory/index.rst:76
-#: 248fec3609a04c178e2b191b264e08b8
+#: ../../usage/other_apps/geostory/index.rst:71
+#: 22aee673654c47ecbfccb27f8620724c
 msgid "Further Reading"
 msgstr ""
 
-#: ../../usage/other_apps/geostory/index.rst:78
-#: be04116037c24b3798cd31819642526b
+#: ../../usage/other_apps/geostory/index.rst:73
+#: dee14a3d93bb401caa5a6d1194cae1a4
 msgid ""
 "Follow the link below to get more detailed information about the usage of"
 " GeoStory."
 msgstr ""
 
-#: ../../usage/other_apps/geostory/index.rst:80
-#: 672fa68eb23c4ed6b76ad405ed20e958
+#: ../../usage/other_apps/geostory/index.rst:75
+#: 8ef2d299d2a24bb1887374c43411c190
 msgid ""
 "`GeoStory Documentation <https://mapstore.readthedocs.io/en/latest/user-"
 "guide/exploring-stories>`_"
@@ -283,5 +277,23 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Futher Reading"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To build a new or explore existing"
+#~ " GeoStory go to :guilabel:`Apps` menu "
+#~ "and once in :guilabel:`Explore Apps` "
+#~ "page on top right dropdown button "
+#~ ":guilabel:`Create New Apps` choose "
+#~ ":guilabel:`GeoStory`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To save your GeoStory on the top"
+#~ " right hamburguer button choose "
+#~ ":guilabel:`Save as...`"
+#~ msgstr ""
+
+#~ msgid "*Save GeoStory*"
 #~ msgstr ""
 

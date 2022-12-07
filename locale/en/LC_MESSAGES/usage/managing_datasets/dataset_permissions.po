@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-27 15:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:4
+#: 40cd2b09fef44764b4dd5f30a09462e1
+msgid "Share Options"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:6
+#: 0b63e567645445e993936599d7655d96
+msgid ""
+"When creating or uploading a new Dataset you have to set who can view, "
+"download, edit and manage that Dataset. By default only owners can edit "
+"and manage datasets, anyone can view them."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:8
+#: 6ed3e2e5f4e84896b0e40a865be953bc
+msgid ""
+"In order to modify the Dataset *Share options* settings, On the detail "
+"page of the dataset click the :guilabel:`Share` link in the menu."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:13
+#: f12d2aab036a4bc6adc310d26ffb2d9f
+msgid "*Change Dataset Share options*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:15
+#: 4d00347873fe42dbaf2b6ba5f03626fa
+msgid ""
+"Through the *Share options Settings Panel* you can add or remove options "
+"for users and groups. The picture below shows an example."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:20
+#: 164ac6edb45743f69f4973ae2896c19a
+msgid "*Dataset Share options settings for users and groups*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:22
+#: 7e302d3396f74ef4bf1a6c03728521b5
+msgid "You can set the following share options:"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:24
+#: 1dc5e3238fec416688ff2971ed6eeea0
+msgid "*View* (allows to view the dataset)."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:25
+#: c192e5af6bd749b18e453793f7eaa7b6
+msgid "*Download* (allows to view and download the dataset)."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:26
+#: eac6658c354f41dea1b9c3e03154fa98
+msgid ""
+"*Edit* (allows to change the dataset metadata,change attributes and "
+"properties of the datasets features and change the dataset style)."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:27
+#: 43311f7c4a3b4762952b2382b3ef5660
+msgid ""
+"*Manage* (allows to update, delete, change share options, publish and "
+"unpublish the dataset)."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:29
+#: 99a67a8d64f745ec82631b190feac98b
+msgid ""
+"When assigning options to a group, all the group members will have those "
+"options. Be careful in case of editing them."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_permissions.rst:31
+#: 8bf3ae6cc1b849e1a1e4d8393b021ff1
+msgid "Click on :guilabel:`Save` link in the menu to save these settings."
+msgstr ""
+

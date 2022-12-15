@@ -1,0 +1,877 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intermediate/monitoring/api/index.rst:2
+#: 3dad6dd20f1b4a6fb60debb33d952528
+msgid "Monitoring: API"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:5
+#: 868310d473cb411e89dce6d04f06e95f
+msgid "Overview"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:7
+#: 5dee7c9c95dc4d7eb49710a1c0bbd9ec
+msgid "Geonode monitoring is an optional infrastructure for monitoring resource usage in GeoNode, accompanying GeoServer(s) and hosts on which each service is running. This is not full-fledge monitoring, like zabbix or nagios, rather a moderate size tool to diagnose deployment health. It will be used by users that mostly are not full-time sysops, so usage is simplified."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:11
+#: 153d96a3f315448d8a37c62657a205a6
+msgid "API"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:13
+#: de9c41d2275f432fb278d4e7c0b82441
+msgid "Monitoring API exposes various data to monitoring client."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:15
+#: 6d286e9ce66a4871a427e2978d3d3e74
+msgid "API root URL is ``/monitoring/``, each path in this documentation is relative to that root."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:18
+#: 538749e6ab4b4e31bd04ecd7bc58630f
+msgid "Valid from/valid to"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:20
+#: 5c12d4b7e1904007adeb7179a5a7dae8
+msgid "Monitoring collects data periodically, in fixed periods (usually 1 minute). Each metric data is a value (or values if they are split by additional indicators, like resource, label etc) accumulated within that period."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:26
+#: 79e4796384fe4711873685ad8b77ec2e
+msgid "Host"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:28
+#: cd437edaaf0345f0b39d28a58c4f0751
+msgid "Host is a physical or virtualized instance, on which specific service (GeoNode or GeoServer) is running. This entity is not monitored, but it's used to group services by their deployment location. Hosts list is available in API in ``/api/hosts/`` endpoint:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:32
+#: 353dd2dc94724c80aea5fe755f902462
+msgid "``GET /monitoring/api/hosts/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:45
+#: 56716c24433d4c3d9d6d9c2242a4503f
+msgid "While host is not monitored directly, some service types (and services of those types) are responsible for monitoring underlying host,hardware resources are monitored indirectly (no dedicated system-level agent is needed)."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:48
+#: 0eb092ef61d045d79601161d2ec26a41
+msgid "Service"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:50
+#: 61fef1275eef46e4ad9bfa69d677ed2c
+msgid "Service is a name of monitored service. Services are configurable from admin interface, and exposed in API in ``/api/services/``:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:53
+#: 59ee2bf0b9974c41ae94ec180a312141
+msgid "``GET /monitoring/api/services/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:86
+#: d36c943b203f412aa2dd709b47b451db
+msgid "Each service is described by properties:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:88
+#: 27b64b838d7f4deabf52167cf075dc3d
+msgid "`name` - unique name of service"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:89
+#: b1c536799a314a73bc053de9c2ae2b1b
+msgid "`type` - service type name"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:90
+#: ba81c536dd3049db8b731b7ec8b9a7f9
+msgid "`host` - host on which service is running"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:91
+#: db3735728c464a1fb0c276143377a80f
+msgid "`id` - object id"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:92
+#: 94bb2528faef4d0fb7877a19ce32a89e
+msgid "`last_check` - timestamp with last check (data collection) on that service"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:93
+#: 4dae351ee15443eb906e6722f21062fd
+msgid "`check_interval` - interval in seconds, how often data should be collected from this service."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:96
+#: 6a6ab83e76ce470186ee42918794091c
+msgid "Service type"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:98
+#: 7f2c280bb127413495b8ae0b2f180040
+msgid "Service type describes kind of services to which it's assigned. There are several service types available:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:100
+#: 4c84db4db29a488db5b249f5d50db9ab
+msgid "`geonode` - service is a GeoNode instance"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:101
+#: fb257a228a554e05af12e08f4b76a766
+msgid "`geoserver` - service is a GeoServer instance"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:102
+#: 10e803058f6e48809c3c3cfbbf911405
+msgid "`hostgeonode` - service is not an application, service is underlying host measured with GeoNode (see :ref:`host`)"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:103
+#: 0126be28140e4c58800dc8a2dd2e6bab
+msgid "`hostserver` - service is not an application, service is underlying host measured with GeoServer (see :ref:`host`)"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:106
+#: 4c6ea6a3b41a40f39cdc86b4a3a8d824
+msgid "Resource"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:108
+#: d61ff29906ed4f8bb040d8b97b3baf32
+msgid "Resource is an object that can be served by GeoNode or GeoServer. There are several resource types monitored:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:110
+#: a96ef4bd3f094eb1a7e26b861dd1bbd2
+msgid "layer"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:111
+#: 50acbf19d5f74cd38f545c8be404e320
+msgid "document"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:112
+#: 6fdec8e0bf864550b739cf5a19a442ae
+msgid "map"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:113
+#: 0194e1e94ee540388997f7e96b6e0163
+msgid "url"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:115
+#: 5a74e3d100eb415a8c82bff8a4da225f
+msgid "Resource can be served from either GeoNode or GeoServer. We don't check if specific resource actually exists, just keep list of items used and recorded for monitoring. Also, it won't show renames/copies/moves of the same resource."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:119
+#: ab74724c210a4d8a91500c4756c715d2
+msgid "Resources list is available in ``/api/resources/`` endpoint:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:121
+#: 2cf749a6836b4e988d57b7362b2158fa
+msgid "``GET /monitoring/api/resources/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:150
+#: 2fa021f6cfce417a8d7c99e033cbe8aa
+msgid "Resource is described with following attributes:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:152
+#: ccaf44e0b8a14cbaa669cef43baf1f82
+msgid "`id` - numeric id of resource record in monitoring"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:153
+#: b90f29d8391f423899a1ca2cab3a4503
+msgid "`type` - type of resource"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:154
+#: 8173fa18088249859e0a990781edcad7
+msgid "`name` - name of resource."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:156
+#: 45d9a796e1814e149670263b836c0c1e
+msgid "Resources list can be filtered with following query sting arguments:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:158
+#: eb82b5a0f93b4bfe86fb4178906ce50f
+msgid "`metric_name` - name of metric for which resources should be returned"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:159
+#: a86e4e3de8484a719040c843837ccf90
+msgid "`resource_type` - name of type of resource (`layer`, `map`, `document`, `style`, `url`)"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:160
+#: 81743976a35e4b6497843231162933a0
+msgid "`valid_from` - list resources that are available since that timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:161
+#: e20827ca77c3483b8b6b83e0caf85a8f
+msgid "`valid_to` - list resources that are available until that timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:163
+#: ../../intermediate/monitoring/api/index.rst:519
+#: 66197c7dd52f4fb2ab6025f3a16db163
+#: 478a2c6f5f0444e9815d543fbd8e885c
+msgid "Example:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:165
+#: 7d30b29129074208909065d998aa2e8e
+msgid "``GET /monitoring/api/resources/?resource_type=layer&metric_name=request.count&valid_from=2017-08-01``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:205
+#: a5943ad7556a432fa37568c4a4ef811e
+msgid "Resource type"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:207
+#: 314f53e7b45d43d691a8a5a7fc04fca2
+msgid "Resource Types describe which types of resource the GeoNode monitoring consider. To retrieve the full list of Resource Types the ``/api/resource_types/`` is available:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:210
+#: 3ad3a746c93546fa97e30adae87f5fb9
+msgid "``GET /monitoring/api/resource_types/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:262
+#: 5a5632a4fbe04442ba4498d98ffe8fa8
+msgid "Event Types"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:264
+#: 312e046da8bd4d87827fa7877aae62ba
+msgid "Event Types describe the way resources were used in GeoNode. Resource can be accessed as a regular view (through GeoNode, like `/layers/X` url), or through OWS request. Full list of Event Types handled is available in ``/api/event_types/`` endpoint:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:268
+#: af4ce38ae65a4a3795c7ffa1f1df5afa
+msgid "``GET /monitoring/api/event_types/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:340
+#: 38ec9b6ff36947ac90b48ff164047276
+msgid "Event types starting with `OWS:` prefix mean they're related to OWS service. `OWS:ALL` is a cumulative event type, which keeps requests for any OWS."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:343
+#: bddfb8f64d974ba89d4479331d2f96dd
+msgid "Event type `other` means request not related to OWS. This is also cumulative event type, and should be used as a baseline of all non-ows requests."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:346
+#: 5013073e10514780872306a56acaea9c
+msgid "In order to retrieve `OWS` only requests the `ows-service` *flag* (possible values are `True`, `true`, `False`, `false`, `0`, `1`) can be used:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:348
+#: aa6a406711684c5d95b2fb95902453a5
+msgid "`OWS` event types"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:350
+#: 3febbf6085be49cc91c5e7ac90c502ba
+msgid "``GET /monitoring/api/event_types/?ows_service=true``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:397
+#: 0406320729074ea8bafbe6ffefc94361
+msgid "`non-OWS` event types"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:399
+#: 4c1aabc78851483a929ad4b5b1545805
+msgid "``GET /monitoring/api/event_types/?ows_service=false``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:462
+#: 4c347d3ab5794a1dbec5bbdc143ada89
+msgid "Event type `all` means any request."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:465
+#: d8c85cc9b350420eb1a734e1049e6842
+msgid "Label"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:467
+#: 4dbd9d9cc7034c6e9527f1187df3d63a
+msgid "Label is a description of subset of metric data that is not described by resources (it's not served as logical data set). Things that can be described with label:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:470
+#: fb8654f6d2c945b1be9ac13acc8a7fca
+msgid "user tracking id"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:471
+#: 0aac679c978247379681c90387d9fbb1
+msgid "volume mount point"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:472
+#: c6df03b5e7744266b898d66ec758b2a5
+msgid "network interface name"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:473
+#: 27541c738f8045fdaf43635ca748d48c
+msgid "request path"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:474
+#: 9084a3946dfe4f32b53d85adb5dd297d
+msgid "request method"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:475
+#: 90b6c9e228a14d5e8523c33579564373
+msgid "response status code"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:476
+#: 711e6590caf5490ebcce178ee1dab428
+msgid "etc ..."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:478
+#: 9ef3121ea8f147f6a0b592fe9b79c1fa
+msgid "List of all labels recorded is available in ``/api/labels/`` endpoint:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:480
+#: c7a8e9ca595e4166b6d7049beb832f2a
+msgid "``GET /monitoring/api/labels/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:513
+#: 86552133419a46738168d5a989f30d2b
+msgid "Each metric data set will have at least one label attached. List of labels can be filtered with following query sting arguments:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:515
+#: 86c5298af3b34edc9caa00d09373e478
+msgid "`metric_name` - name of metric for which labels should be returned"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:516
+#: f6bcf57091aa4810b60efcb7ae69282a
+msgid "`valid_from` - list labels that are available since that timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:517
+#: 72415c2a57e94c96abfd99a664088ff4
+msgid "`valid_to` - list labels that are available until that timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:521
+#: 08c3f04f2dec452197d5c05743b61e73
+msgid "``GET /monitoring/api/labels/?metric_name=request.ua&valid_from=2017-08-05``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:548
+#: f95ccbf980644fe6be712c87fa101a50
+msgid "Metric name"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:550
+#: fea5fce4c12f44a1b4da64fb0117f509
+msgid "Metric name is a semi-namespace description of what kind of data metric stores. Typical metric names: - `request.count` - `request.ip` - `response.size` - `response.status`"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:557
+#: 62926cf6b7194dffa6176a79ab7fb24b
+msgid "Each service type has a set of metrics available. Application-level services will have different metric set than host-level services."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:560
+#: 823161ab8fc64930b41d5d85427150fc
+msgid "Full list of metrics is available in ``/api/metrics/`` endpoint. Returned list is not filterable. Sample response:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:563
+#: 122bdb2a2397438d87402ccdc709f143
+msgid "``GET /monitoring/api/metrics/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:591
+#: 32a8669f51ab4b959150bbb997154ab2
+msgid "Metrics are grouped by service. Each metric has following structure:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:601
+#: ../../intermediate/monitoring/api/index.rst:718
+#: ../../intermediate/monitoring/api/index.rst:757
+#: e46aeb309b404b5da16cef4ed244729e
+#: a295d27dd7e14d34a481b1375a2cd32a
+#: 343518db5a2548c4a99f222209e00ef0
+msgid "where:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:603
+#: f1c27f4c764b4d2d984e84c85aff2b57
+msgid "`type` is a metric data type (it can be count, value or rate). This is internal description of how to deal with aggregation of data for metric."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:604
+#: 6738356bda3a4306847e6635bc322733
+msgid "`name` name of metric"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:605
+#: b5063e18cb0a4795a3f957e640e8c71e
+msgid "`unit` suggested Y-axis label, describing data units"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:608
+#: 74cc0e1137314efea988a38d0d81a878
+msgid "Metric Data"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:610
+#: 3f4d59ab8dd74f8fa36139f21336aebf
+msgid "Core feature of monitoring API is ability to get data for given metric for specified period. Metric value is a data set for fixed period of time, from which data were collected and processed for one specific metric name. Additionally, each metric can have data calculated for specific services, resources, labels and event_types. Metric data API has several features:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:615
+#: ed0d4e655940406392cdc3060eea53a6
+msgid "it can show metric data within specific time frame, down to 1 minute granularity (may be less if collection intervals are lower)."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:616
+#: 1922f8ce064947e69709b423756eef8c
+msgid "it can show metric data aggregated with custom granularity (for example from last 48 hours with 15 minutes granularity)."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:617
+#: befecb308e29424bbf1865165e10c24b
+msgid "it can show metric data for whole monitored setup or for specific resource, label (like user agent type), monitored service (just for geonode or just for geoserver), Event type. Params can be joined in one query."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:619
+#: 54bd82360cac4d678a93621e6a7a5dc1
+msgid "API endpoint is: ``/api/metric_data/METRIC_NAME/``:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:621
+#: daea4ada9cf0428d8ee6ac887259c9e4
+msgid "Sample request for `request.ua` metric in specific time window (between 10am and 2pm of 2017-08-03) and data granularity (1h)"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:623
+#: 6b0a1f0e5ba245efbee8219c8fca4180
+msgid "``GET /monitoring/api/metric_data/request.ua/?``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:624
+#: cf4f503d16cd4d0ab340a4cdd8ff5069
+msgid "``valid_from=2017-08-03%2010:00:00&valid_to=2017-08-03%2014:00:00&interval=3600``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:700
+#: 30990f501b2045138b4a29ca076be1de
+msgid "Metric data response is wrapped with following envelope:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:720
+#: c2deeeae52f141d1a740025868a74d3a
+msgid "`input_valid_from` and `input_valid_to` are parsed and aligned timestamps for which data are returned,"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:721
+#: 5d993935b46642cdb12e129b201ba08e
+msgid "`metric` is metric name for which response is returned,"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:722
+#: cff2f8e01e264bf2a9b7d28328b98032
+msgid "`interval` data aggregation interval used, in seconds (if none is provided, 60 seconds are used, unless time window is larger than 24 hours),"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:723
+#: 7bd7f95f72844e12b3eabedd3dbfca52
+msgid "`type` is metric data type, which describes internally how data are aggregated (sum, average or min/max function)."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:724
+#: ae655591018748e1a2e6e6aba9af39c9
+msgid "`axis_label` is suggested value-axis label to be used in chart"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:725
+#: cbf667c5d23345bd99825df9457a2b4d
+msgid "`label` is metric data label used (no label by default)."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:727
+#: a6efdc262ee3446897b9b5e931030979
+msgid "Metric data item is build as following structure:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:759
+#: 84f40c881ffe4beca7e8e8cceea26bc1
+msgid "`valid_from` and `valid_to` are timestamps of data aggregation period"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:760
+#: 4ed0cbf29cf04b8cb45b5b46452c2b13
+msgid "`data` is a list of value rows. When `data` is empty, that means no data were collected for input params."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:761
+#: 67b2c4bbc3ff46f1ac17770fd676a9eb
+msgid "each `data` element contains:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:763
+#: b80752f3765c4653b1e2143fb34f444e
+msgid "`label` label value associated with metric data value. This can describe user-provided differentiation value (user agent string, request method etc), or, if such value is not in use, default, \"count\" or \"value\" label."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:764
+#: b6772b8b095149e68fa8e5580ccb703e
+msgid "`val` is metric data aggregated value, which should be used by frontend application. For `request.ua` this means count of requests for given user agent string, for `response.time` that will return average response time."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:765
+#: 26179c2f97484664a6edd3b54d8892c2
+msgid "`min`, `max`, `sum` are helper statistical values to give insight on data used,"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:766
+#: dcdc7d2ef0224ee0b9f8e0af7ee767b6
+msgid "`samples_count` is a sum of all samples counts (actual requests) used for this calculation"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:767
+#: fc445c17fc194ddeb326490dbaef6c83
+msgid "`metric_count` is a number of metric data used to calculate the value."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:768
+#: 73b98b2bddfe493cb8675e526bceaa42
+msgid "`resource` (optional) key with resource structure (`id`, `name`, `type`). This element will be visible when grouping by resource is used."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:769
+#: 81e59ad5f8ca4fa389c17947e334851c
+msgid "`event_type` (optional) key with name of event type related to rest of row. This element will be visible when grouping by event type is used"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:771
+#: 319d72284d56425a956915cb3d304157
+msgid "Metric data can be filtered with following params:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:773
+#: 8fa92fd127b945208879dce317b632ab
+msgid "`valid_from` timestamp (date or date + time) meaning that data should be newer than this timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:774
+#: 4cacf81eead7436592c6b657902320fa
+msgid "`valid_to` timestamp (date or date + time) meaning that data should be older than this timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:775
+#: b3b6b367934b4d86b1bbda1e862b81a5
+msgid "`interval` data aggregation interval, in seconds. See below notes about intervals and timestamps alignment"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:776
+#: d78b38ce4aab4cff86bbfc03e16d6bc6
+msgid "`label` label value only for which data should be returned (see [Labels](#labels))"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:777
+#: 9c0d10ac8a4a4e7fa1a56eab31bd0cdf
+msgid "`resource` id of resource (see [Resources](#resources)) for which data should be returned"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:778
+#: ad4109519f65467c8c5dd616bb5c91e9
+msgid "`service` name of service (see [Services](#services)) for which data should be returned"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:779
+#: dea50060694b4a7295abcea891602850
+msgid "`event_type` name of service (see [Event Types](#ows_service)) for which data should be returned"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:780
+#: f7ef2bbfd2ba4387a343cb8705aae073
+msgid "`resource_type` name of resource type to filter by, for example `layer` to show only data for layer objects (exclude urls, documents, maps)."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:783
+#: bb7be2bbb9e24921ac37e471176a325e
+msgid "grouping metric data"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:785
+#: 200a3d1bd9a54d1fab1f27bdfc03db24
+msgid "Additionally, in some cases client application may want to receive list of data points in one period for several resources (typical usage scenario: list top-most requested layers). In such case, metric data should be queried also with following params:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:788
+#: 12f615d0a7b74237a405d6109cd0853f
+msgid "`group_by` - name of object which should be used for grouping. At the moment two grouping modes are available:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:790
+#: 6d829661524f4a33a5616f3f7c8a6834
+msgid "`resource` - group by resource affected. This will produce metrics for the same label but each resource affected will be listed separately. Returned metric data items will have additional `resource` key, which will hold dictionary with keys `name` and `type`. Sample response:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:792
+#: 15a06e27907748dfae9386f070713f87
+msgid "``GET /monitoring/api/metric_data/request.count/?last=86400&interval=86400&group_by=resource``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:848
+#: f416a58f3fa24382a7a65403b710b5fc
+msgid "`resource_no_labels` - group by resource affected, but do not distinct by label. This will produce similar result as the other grouping, but it will not contain 'label' key."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:850
+#: 410029f5d2814f5ea742f1cf59609ddd
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=resource_no_label&event_type=view&resource_type=url``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:940
+#: b83206417126479a95ad594e4c9cba79
+msgid "`label` - group by label. This will return number of unique label occurrences within selected period."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:942
+#: 2cd28d5c120f4953a668b37d76cc95b1
+msgid "``GET /monitoring/api/metric_data/request.users/?last=86400&interval=86400&group_by=label``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:974
+#: 1c32c2495f4940db8d1a0bb8edf48dc9
+msgid "`event_type` - group by event type. This will expose `event_type` field in data items. Grouping will return number of requests per each event type."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:975
+#: eaac61fe68ae447b961c035aac9e672d
+msgid "`event_type_on_label` - group by event type but use label to do grouping (instead of metric data value). This will expose `event_type` field in data items. Grouping will return number of requests per label (especially for `request.users`, which uses label field as tracking id value, see [User Analytics](https://github.com/geosolutions-it/geonode/wiki/Monitoring:-User-Analytics))."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:978
+#: 022b8cf75061481b88c8d812010aacdf
+msgid "Timestamps alignment"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:980
+#: 0207f79b6b954098a1b7ea9730305ca2
+msgid "Data collected by monitoring are aggregated into fixed period values. This have several consequences:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:982
+#: 22b5f8d735ab4be997a3992721143904
+msgid "you cannot query for time window smaller than aggregation period"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:983
+#: 61ee9d4ee5414e3692b3d72e27879eae
+msgid "when querying for time window, input valid_from and valid_to will be aligned to possible actual valid_from and valid_to values. Alignment is calculated from 0:00h each day. For best results, you should use intervals that can be aligned without reminders."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:984
+#: 7a98cb0f781748b89dca2e3af8dca075
+msgid "timestamps alignment may produce more rows than you expect in some cases. For example, let's say client application want to have data aggregated with 5 minutes interval. Search for data between 12:04 and 12:06, even if interval between those two (2 minutes) is smaller than data interval (5 minutes), this will be aligned to data intervals, which will be:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:986
+#: 6fc948e1caec4c2489d2f27d6bca60be
+msgid "from 12:00 to 12:05"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:987
+#: ad6234697f27481792d109a3bf8b7a12
+msgid "from 12:05 to 12:10"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:989
+#: 7a83def5ed6b42b090eb472228775559
+msgid "If data aggregation period ends in the future, there's good chance it will not contain any data."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:992
+#: 48d773a3b6f14b9b9920e739e4f47139
+msgid "Exceptions"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:994
+#: cb7fb1f466804257bb184a3477db95d2
+msgid "Exceptions are served with separate API endpoints. Those endpoints will return:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:996
+#: ffa6629cdded4713aeec65f74ef6c071
+msgid "list of exceptions captured"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:997
+#: d7c2a7d523a94a32a4b705b17765efc8
+msgid "exception details"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:999
+#: 86225991a5a94d52a9eb2336489c6ded
+msgid "List of exceptions is available in ``/api/exceptions/`` endpoint:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1001
+#: 80b61547d7604c0e955df4f030076f1e
+msgid "``GET /monitoring/api/exceptions/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1040
+#: 46fb979f4109428788d95b22af0defa3
+msgid "Each exception in list contains:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1042
+#: ../../intermediate/monitoring/api/index.rst:1094
+#: ff186a5fbc8a458093018be4fb48cf2d
+#: 787d5bc2f88a4ccd8e26c111441bcb6f
+msgid "`error_type` which is a class of exception"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1043
+#: 05c019a5e051492396e83b98b07aa963
+msgid "`id` object id for given exception recorded"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1044
+#: 4b05af799a9c43c5bb62cee974f751e4
+msgid "` service` service object, on which exception was recorded"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1045
+#: ../../intermediate/monitoring/api/index.rst:1098
+#: 8f116b7570ab4b349f41629cf925a53f
+#: 0af010d1b8a340d2b1bc36461ddc2933
+msgid "`created` exception recorded timestamp"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1046
+#: a57df9eba9b445e88e1c510b81ba172b
+msgid "`url` url with exception details"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1048
+#: b9df4e8de25640c79acf16c660b2da2f
+msgid "Exception details:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1050
+#: 109fbaab084e469f98f1f9ac1d97fea0
+msgid "``GET /monitoring/api/exceptions/30/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1092
+#: 0042247f7e1a42cfac011a7e24d1ada6
+msgid "Details contain:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1095
+#: 89f7600775084c639436fe75d45d7554
+msgid "`error_message` message provided with error"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1096
+#: 7bbca51d6b734b219e7b670224e9303b
+msgid "`error_data` is a plain text with stack trace"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1097
+#: 84cb571083dd4cb3b225ddd18f68eabf
+msgid "`service` service object, on which exception was recorded"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1099
+#: 88a681e6e46d40109e6960fd0cbc0134
+msgid "`request` information on request associated with this error:"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1101
+#: 23bc9f59377e44818d4beb9232af16fa
+msgid "`event_type` name of Event Type associated with request"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1102
+#: e4ecd450665a4d3889eb17615f9b94c2
+msgid "`client` requesting client information"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1103
+#: 0d78ad8490c74cad912e1afb15d58346
+msgid "`request` details on request received"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1104
+#: a579c2c0a6844c869410cb4315c9b823
+msgid "`response` details on response send back"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1105
+#: 2e57a177971c47e6aa9710174e2b4a7a
+msgid "`resources` list of resources affected"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1108
+#: d755c076462a47fab20aabed3c9423e3
+msgid "Autoconfiguration"
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1110
+#: 738d8577be2b4685979d738792515ee1
+msgid "Autoconfiguration endpoint allows to perform monitoring configuration based on `settings` values. This API endpoint is available to superusers/staff only. Response is wrapped with standard envelope."
+msgstr ""
+
+#: ../../intermediate/monitoring/api/index.rst:1113
+#: 7db9dc91de804bc9bbc1284eb2bba570
+msgid "``POST /monitoring/api/autoconfigure/``"
+msgstr ""

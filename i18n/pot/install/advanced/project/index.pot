@@ -1,0 +1,480 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../install/advanced/project/index.rst:5
+#: c0321d945d9e460ab9916714f139326d
+msgid "GeoNode Project"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:8
+#: 5a2b0fba4ab94e72883519c5717fbd74
+msgid "Overview"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:10
+#: f84946967c144ecc9dd59bfdecea0ff8
+msgid "The following steps will guide you to a new setup of GeoNode Project. All guides will first install and configure the system to run it in ``DEBUG`` mode (also known as ``DEVELOPMENT`` mode) and then by configuring an HTTPD server to serve GeoNode through the standard ``HTTP`` (``80``) port."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:12
+#: e7cf23f60d924243952b51174f7114fd
+msgid "Those guides **are not** meant to be used on a production system. There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine. In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:15
+#: 2285245869e84425a414b40f78ff4fe7
+msgid "Ubuntu 20.04"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:17
+#: 861d9065683d4750a338b4437b7ee162
+msgid "This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 20.04 64-bit clean environment (Desktop or Server). All examples use shell commands that you must enter on a local terminal or a remote shell. - If you have a graphical desktop environment you can open the terminal application after login; - if you are working on a remote server the provider or sysadmin should has given you access through an ssh client."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:24
+#: 3654c1db398844dc84b4bd6744b3cd5f
+msgid "Install the dependencies"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:26
+#: 92090caf44904743997abfe107e8f0f3
+msgid "In this section, we are going to install all the basic packages and tools needed for a complete GeoNode installation. To follow this guide, a piece of basic knowledge about Ubuntu Server configuration and working with a shell is required. This guide uses ``vim`` as the editor; fill free to use ``nano``, ``gedit`` or others."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:29
+#: b4c04775d7a04ca0a88eb9010cf12b79
+msgid "Upgrade system packages"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:31
+#: 327e4e14a75b465eade7e17efb18a1d8
+msgid "Check that your system is already up-to-date with the repository running the following commands:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:39
+#: e1aaaa0154734be28e7b1fa322e119f1
+msgid "Create a Dedicated User"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:41
+#: 2b9d1e05fede46f58b867ac13e28cfe2
+msgid "In the following steps a User named ``geonode`` is used: to run installation commands the user must be in the ``sudo`` group."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:43
+#: 3c60086f7d914b71bdff62dbbd99fc6f
+msgid "Create User ``geonode`` **if not present**:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:59
+#: 0f8c4a7aa5db4ca8affafece443665e1
+msgid "Packages Installation"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:60
+#: 20618ad2fc52411996844e1adb1a2499
+msgid "Add the Ubuntu GIS packages prior to installing the other system packages."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:67
+#: 7380230868f94dc7953608e7f50e9f41
+msgid "You don't need to install the **system packages** if you want to run the project using Docker"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:69
+#: 68e28074175d477f84ae15bc1d6cfbd3
+msgid "First, we are going to install all the **system packages** needed for the GeoNode setup."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:102
+#: 4b0de902be6f44e9a81fe40822dca220
+msgid "Geonode Project Installation"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:104
+#: 0bc474c884734050a9c1d830da7dc81d
+msgid "Geonode project is the proper way to run a customized installation of Geonode. The repository of geonode-project contains a minimal set of files following the structure of a django-project. Geonode itself will be installed as a requirement of your project. Inside the project structure is possible to extend, replace or modify all geonode components (e.g. css and other static files, templates, models..) and even register new django apps **without touching the original Geonode code**."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:108
+#: 3ff7a6c583a846c28bada76dcf27de6c
+msgid "You can call your geonode project whatever you like following the naming conventions for python packages (generally lower case with underscores (_). In the examples below, replace ``my_geonode`` with whatever you would like to name your project."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:110
+#: 5c124ec2a131457a9821add362a4d8f0
+msgid "See also the `README <https://github.com/GeoNode/geonode-project/blob/master/README.md>`_ file on geonode-project repository"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:112
+#: 07b6de1cc7774222a0e1c1288f3074f8
+msgid "First of all we need to prepare a new Python Virtual Environment"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:114
+#: ../../install/advanced/project/index.rst:349
+#: b4f277b9c0474ef9b91ddb0f93aed281
+#: 0671c16d5b0642699669c3460a90a8e3
+msgid "Prepare the environment"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:123
+#: ../../install/advanced/project/index.rst:358
+#: cac85437bf854fd799e979c6f4e4942d
+#: aa5abaff85dd4df8995a62aec867c079
+msgid "Clone the source code"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:130
+#: ../../install/advanced/project/index.rst:365
+#: 6ea4f8f1cb144941a1678ee4da85330d
+#: 84996f0b471f400790ebca220d19c72c
+msgid "Make an instance out of the ``Django Template``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:132
+#: ../../install/advanced/project/index.rst:367
+#: 218a831db7ed487cb2d5e84280670742
+#: 1ff75658e547442b98625cc041fe6cb7
+msgid "We will call our instance ``my_geonode``. You can change the name at your convenience."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:167
+#: 1eef8d81009842ea85feb7acbe0769b4
+msgid "Install and Configure the PostgreSQL Database System"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:169
+#: 94361e3c44bb47318a91c27dc97f27b8
+msgid "In this section we are going to install the ``PostgreSQL`` packages along with the ``PostGIS`` extension. Those steps must be done **only** if you don't have the DB already installed on your system."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:178
+#: 4054d87725254798961666894ac4aa6c
+msgid "We now must create two databases, ``my_geonode`` and ``my_geonode_data``, belonging to the role ``my_geonode``."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:180
+#: b3ec4d83644540bd874955084aecaf83
+msgid "This is our default configuration. You can use any database or role you need. The connection parameters must be correctly configured on ``settings``, as we will see later in this section."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:185
+#: fab50bd357444906b6e8d49e2328e27c
+msgid "Databases and Permissions"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:187
+#: 2b52199adb0b402eaa9af81225b56f76
+msgid "First, create the geonode user. GeoNode is going to use this user to access the database"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:196
+#: 1e7007dde05c425ca4b19e32d8c75f9c
+msgid "You will be prompted asked to set a password for the user. **Enter geonode as password**."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:198
+#: 1e989878758e45e88f3b05932634ab7c
+msgid "This is a sample password used for the sake of simplicity. This password is very **weak** and should be changed in a production environment."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:200
+#: 8d60875212b84264a5a583f6d46f7d0e
+msgid "Create database ``my_geonode`` and ``my_geonode_data`` with owner ``my_geonode``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:207
+#: 5517f646db6d48ef8532476446b876dd
+msgid "Next let's create PostGIS extensions"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:221
+#: de92d5082fd6407caea88ac2fa853678
+msgid "Final step is to change user access policies for local connections in the file ``pg_hba.conf``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:227
+#: 9f8e6ab23ff541f8b7337bfba0ee2f25
+msgid "Scroll down to the bottom of the document. We want to make local connection ``trusted`` for the default user."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:229
+#: 1a64bc2c723e4c2ba2123d044cf9133d
+msgid "Make sure your configuration looks like the one below."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:257
+#: 44f18ff98af8401fbf4e7b60ba994cbd
+msgid "If your ``PostgreSQL`` database resides on a **separate/remote machine**, you'll have to **allow** remote access to the databases in the ``/etc/postgresql/13/main/pg_hba.conf`` to the ``geonode`` user and tell PostgreSQL to **accept** non-local connections in your ``/etc/postgresql/13/main/postgresql.conf`` file"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:259
+#: 5cd17190602e4acab96b94abdf255dd3
+msgid "Restart PostgreSQL to make the change effective."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:265
+#: 8210ee5d1cbb46f3a0a64ca15a467649
+msgid "PostgreSQL is now ready. To test the configuration, try to connect to the ``geonode`` database as ``geonode`` role."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:283
+#: 1472528870604a84bf397e478279adeb
+msgid "Run GeoNode Project for the first time in DEBUG Mode"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:287
+#: 60dc835b962841e682ab0ed9c6022be7
+msgid "Be sure you have successfully completed all the steps of the section :ref:`install_dep_proj`."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:289
+#: b6e15d12ea694a2db60863b7f41bd6ca
+msgid "This command will run both GeoNode and GeoServer locally after having prepared the Spatialite database. The server will start in ``DEBUG`` (or ``DEVELOPMENT``) mode, and it will start the following services:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:291
+#: f54f6f1ab66c4b6f92cd438f0362927f
+msgid "GeoNode on ``http://localhost:8000/``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:292
+#: a37bb75b85214207995cd80129adbb33
+msgid "GeoServer on ``http://localhost:8080/geoserver/``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:294
+#: 95a3bf3cdb2e4a95a83db112dedf6fbd
+msgid "This modality is beneficial to debug issues and/or develop new features, but it cannot be used on a production system."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:306
+#: 7edbd16ba6f24162b2b0b137a4b6d008
+msgid "In case you want to start again from a clean situation, just run"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:312
+#: f1c4fccaa57246a5892d697cb9711052
+msgid "This will blow up completely your ``local_settings``, delete the SQLlite database and remove the GeoServer data dir."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:319
+#: 22acef1995694459a3b207292238a228
+msgid "Once the server has finished the initialization and prints on the console the sentence ``GeoNode is now available.``, you can open a browser and go to::"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:323
+#: d5cec60724cb45c0b95343c556f18a20
+msgid "Sign-in with::"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:328
+#: 4f8b287cf92e49228dd26c6bd913ccb0
+msgid "From now on, everything already said for GeoNode Core (please refer to the section :ref:`configure_dbs_core` and following), applies to a GeoNode Project."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:331
+#: b357ca77f9764207a3fd9d1d054b6f1c
+msgid "**Be careful** to use the **new** paths and names everywhere:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:333
+#: 558ddb6a66864ce1ab4c40ce9395d73e
+msgid "Everytime you'll find the keyword ``geonode``, you'll need to use your geonode custom name instead (in this example ``my_geonode``)."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:335
+#: 16a00540fe93402baacbaecd3a30ad1a
+msgid "Everytime you'll find paths pointing to ``/opt/geonode/``, you'll need to update them to point to your custom project instead (in this example ``/opt/geonode_custom/my_geonode``)."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:338
+#: ff76bcaff07a4d9c8731e554bca50df3
+msgid "Docker"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:340
+#: c996ef6f2cfc4aa384cdd3f737bbd2e6
+msgid "Before moving with this section, you should have read and clearly understood the ``INSTALLATION > GeoNode Core`` sections, and in particular the ``Docker`` one. Everything said for the GeoNode Core Vanilla applies here too, except that the Docker container names will be slightly different. As an instance if you named your project ``my_geonode``, your containers will be called:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:347
+#: 111be456686044da8580f785fbc92ca4
+msgid "Deploy an instance of a geonode-project Django template with Docker on localhost"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:383
+#: 075b47ed9a1843a986e118305489a201
+msgid "Create the .env file"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:385
+#: d9d12a4f9e764310984751ba64aaabe0
+msgid "An `.env` file is requird to run the application. It can be created from the `.env.sample` either manually or with the create-envfile.py script."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:387
+#: 0cc54d9e152a4021ba3d75a80a845864
+msgid "The script accepts several parameters to create the file, in detail:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:389
+#: 29f1ab3f95884b78a597982329b35317
+msgid "*hostname*: e.g. master.demo.geonode.org, default localhost"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:390
+#: eb5d4a854bce4ed2a5eb06d7eb16d414
+msgid "*https*: (boolean), default value is False"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:391
+#: 304449135b374bf3aa7296f4a77d8c14
+msgid "*email*: Admin email (this is required if https is set to True since a valid email is required by Letsencrypt certbot)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:392
+#: 638ffedcfa93460d8ec5fd5a9f12978c
+msgid "*emv_type*: `prod`, `test` or `dev`. It will set the `DEBUG` variable to `False` (`prod`, `test`) or `True` (`dev`)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:393
+#: e8d986ec92aa484ebe25b92e90fe6aec
+msgid "*geonodepwd*: GeoNode admin password (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:394
+#: 4fb2abf8060e42f28ad9f675ea21a4ff
+msgid "*geoserverpwd*: Geoserver admin password (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:395
+#: 820575f3f62a4e71a6260d02b1aec5c8
+msgid "*pgpwd*: PostgreSQL password (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:396
+#: 8653b77e7fa34cd6a36d6009afb9ed19
+msgid "*dbpwd*: GeoNode DB user password (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:397
+#: e69e726ef717415499be2a3870e408ff
+msgid "*geodbpwd*: Geodatabase user password (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:398
+#: c6fff22b84264bac8d6981855113b9c0
+msgid "*clientid*: Oauth2 client id (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:399
+#: 3dd7abeab4e04720b3bca7b056cb24f2
+msgid "*clientsecret*: Oauth2 client secret (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:400
+#: 58782d079bf24dc29e9a628b72ffe5d0
+msgid "*secret key*: Django secret key (required inside the .env)"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:401
+#: 3984507f933e4511a8472b28f1e65dcc
+msgid "*sample_file*: absolute path to a env_sample file used to create the env_file. If not provided, the one inside the GeoNode project is used."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:402
+#: 0c103926b192435f89840f6cead7abf9
+msgid "*file*: absolute path to a json file that contains all the above configuration"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:404
+#: 6fda41328b1a46c1b106890ba3393fa8
+msgid "if the same configuration is passed in the json file and as an argument, the CLI one will overwrite the one in the JSON file. If some value is not provided, a random string is used"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:406
+#: a4a70f283d74467e81d3e61d868d5c93
+msgid "Example USAGE"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:424
+#: 4b524f51105e4213941893c1f01a8b56
+msgid "Example JSON expected:"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:443
+#: 4ace3d1011da46ff83771128a594f092
+msgid "Modify the code and the templates and rebuild the Docker Containers"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:449
+#: 832df3f007a04a1c9f0f02826900d5b4
+msgid "Finally, run the containers"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:456
+#: b0411ebe6be64f2fa07815b905f775d1
+msgid "Deploy an instance of a geonode-project Django template with Docker on a domain"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:458
+#: d4289f59b091428bb5d633c596a67c8f
+msgid "We will use ``www.example.org`` as an example. You can change the name at your convenience."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:460
+#: d26ddba690384dcca6ecfccaad35622f
+msgid "Stop the containers"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:468
+#: 148e2c27a3ae4ddda7124d3de844d381
+msgid "Edit the ``ENV`` override file in order to deploy on ``www.example.org``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:470
+#: 51849c7e66a246cd8b3ba60a6d3d7ff8
+msgid "Replace everywhere ``localhost`` with ``www.example.org``"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:480
+#: 8ad0f67f16034c1eaf705b152facd73f
+msgid "It is possible to override here even more variables to customize the GeoNode instance. See the ``GeoNode Settings`` section in order to get a list of the available options."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:482
+#: c0052dec1ff0438bad76c227facf7d15
+msgid "Run the containers in daemon mode"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:489
+#: d839c68b4adb4d09b37afc680da64aa5
+msgid "Test geonode-project with vagrant"
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:491
+#: d6b3176a142a4916bf667128b4820ce0
+msgid "Inside geonode-project files you will find one file named `Vagrantfile.compose` and one named `Vagrantfile.stack`, copy one of them onto file `Vagrantfile` to use them with vagrant."
+msgstr ""
+
+#: ../../install/advanced/project/index.rst:510
+#: 9abe38c758f44ad29b379ca0a77517de
+msgid "Vagrant will generate a dummi project named \"antani\" inside vagrant, starting with the geonode-project codebase, this way it is possible to test inside vagrant almost instantly what one modifies into geonode-project"
+msgstr ""

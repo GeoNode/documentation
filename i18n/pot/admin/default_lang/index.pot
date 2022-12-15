@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../admin/default_lang/index.rst:4
+#: 6629bf648c5f47f3a2ad75bef419a903
+msgid "Changing the Default Language"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:6
+#: aff79b9b75e64e0b9966759c8776523c
+msgid "GeoNode's default language is English, but GeoNode users can change the interface language with the pulldown menu at the top-right of most GeoNode pages.  Once a user selects a language GeoNode remembers that language for subsequent pages."
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:9
+#: bb6aa80d1ed6478f977c6283d92b4809
+msgid "GeoNode Configuration"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:11
+#: 22631a0009ef452da13ab8d57267f10a
+msgid "As root edit the geonode config file :file:`/home/geonode/geonode/geonode/settings.py` (or :file:`/etc/geonode/settings.py` if GeoNode has been installed using **apt-get**) and change ``LANGUAGE_CODE`` to the desired default language."
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:13
+#: 9f36f3af8d4746af920883444ed44fde
+msgid "A list of language codes can be found in the global django config file :file:`/usr/local/lib/python2.7/dist-packages/django/conf/global_settings.py` (or :file:`/var/lib/geonode/lib/python2.7/site-packages/django/conf/global_settings.py` if GeoNode has been installed using **apt-get**)."
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:15
+#: 4c00329fd18546129d306cd0ca5a3ab4
+msgid "For example, to make French the default language use::"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:19
+#: d4d6692d8ad74e35b5ab754b95cfff42
+msgid "Unfortunately  Django overrides this setting, giving the language setting of a user's browser priority.  For example, if ``LANGUAGE_CODE`` is set to French, but the user has configured their operating system for Spanish they may see the Spanish version when they first visit GeoNode."
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:23
+#: 8f8ea6cdecb54942b488e0dca5a83ab5
+msgid "Additional Steps"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:25
+#: 432f2ed41f044315955417554d86a9a6
+msgid "If this is not the desired behaviour, and all users should initially see the default ``LANGUAGE_CODE``, regardless of their browser's settings, do the following steps to ensure Django ignores the browser language settings.  (Users can always use the pulldown language menu to change the language at any time.)"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:27
+#: 416344dd9cb4447e84373ddf50b09ffd
+msgid "As **root** create a new directory within GeoNode's site packages"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:33
+#: 74ee89bbc6514a1fb03364fdde195c25
+msgid "or"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:39
+#: 70afc48cb92f41569836e661436d196f
+msgid "if GeoNode has been installed using **apt-get**."
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:41
+#: 37f4c27ae3da4843b2cc442d9052ac21
+msgid "As root create and edit a new file :file:`/usr/lib/python2.7/dist-packages/setmydefaultlanguage/__init__.py` and add the following lines"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:59
+#: 5a9f99cb81f542dc9acb965915ae0088
+msgid "At the end of the GeoNode configuration file :file:`/home/geonode/geonode/geonode/settings.py` (or :file:`/etc/geonode/settings.py` if GeoNode has been installed using **apt-get**) add the following lines to ensure the above class is executed"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:68
+#: ce5becd1a9b94958bb2649b47d23b535
+msgid "Restart"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:70
+#: 721ecc070e274a78b19b267ba3ac3f46
+msgid "You will need to restart GeoNode accordingly to the installation method you have choosen."
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:72
+#: a22ab51941db4bd59e965227b5ee6b02
+msgid "As an instance in case you are using `NGINX` with `UWSGI`, as root you will need to run the following commands"
+msgstr ""
+
+#: ../../admin/default_lang/index.rst:80
+#: a1faa885f6dc422184f6fd9bf41671f3
+msgid "Please refer to Translating GeoNode for information on editing GeoNode pages in different languages and create new GeoNode Translations."
+msgstr ""

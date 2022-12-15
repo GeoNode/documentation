@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contribute/index.rst:2
+#: a80b2f4a96114af891f1f6087bbeb638
+msgid "Participate in the Discussion"
+msgstr ""
+
+#: ../../contribute/index.rst:10
+#: d526168719924dda90a78838621adb3d
+msgid "Write Documentation"
+msgstr ""
+
+#: ../../contribute/index.rst:18
+#: 20abfb9de417447aa5a6e45b6925af73
+msgid "Provide Translations"
+msgstr ""
+
+#: ../../contribute/index.rst:26
+#: 5cbd79f9728645e894cb6865c04c3989
+msgid "Write Code"
+msgstr ""
+
+#: ../../contribute/index.rst:29
+#: 8892beaaaed346009da95fc4dcaa8b2b
+msgid "Frontend Development"
+msgstr ""

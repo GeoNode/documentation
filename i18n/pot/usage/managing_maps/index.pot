@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_maps/index.rst:2
+#: 60d528ff36184f2db6e27d900bcdf549
+msgid "Managing Maps"
+msgstr ""
+
+#: ../../usage/managing_maps/index.rst:6
+#: f50d6a44a4aa4392a20592705fbb57cc
+msgid "Maps are sets of datasets displayed together on an interactive web map. Maps can be composed in the map composer and saved as GeoNode resources. Maps can also be associated with metadata, ratings, and comments."
+msgstr ""
+
+#: ../../usage/managing_maps/index.rst:7
+#: d160d85edbad431e8671374a76764feb
+msgid "In this section, you will learn how to create a new map and share it."
+msgstr ""

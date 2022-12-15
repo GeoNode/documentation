@@ -1,6 +1,6 @@
 .. _api_v2_rest:
 
-API v2 - REST
+API v2 - Schema
 =============
 
 OpenAPI 3.0 Schema

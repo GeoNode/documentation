@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_maps/map_info.rst:4
+#: 9a84c26ba70f43a388e5526396472b8e
+msgid "Map Information"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:6
+#: 24893f09c07f49dba131da33c9416bb1
+msgid "As mentioned in the :ref:`finding-data` section, in GeoNode you can see your maps and all the published maps through the filtering feature on the resource page."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:7
+#: e08d6d760e374cd9a8e8caef76a71d62
+msgid "Click on the title of the *Map* you are interested in to open its overview, then click on *View Map*, it should looks like the following."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:12
+#: 6e213f97145c4c7f970252e2471521dd
+msgid "*Map Detail page*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:14
+#: 9e8361958a5d4a4696757696a6a17bf3
+msgid "The *Map Detail Page* shows the *Map* with very basic functionalities:"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:16
+#: c65bb1c33174498db85883cb4e56b074
+msgid "the *Base Map Switcher* that allows you to change the base map;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:17
+#: fb44835f6eb44d32912452603eebe3b5
+msgid "the *Zoom in/out* tool to enlarge and decrease the view;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:18
+#: a969f3fba042480094b99e179d735879
+msgid "the *Zoom to max extent* tool for the zoom to fit the datasets extents;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:19
+#: 5517f643234c4641bf45b5d3138b559c
+msgid "the *Query Objects* tool to retrieve information about the map objects by clicking on the map;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:20
+#: a852a3825f8b40ddbfbeb1c66537d112
+msgid "the *Print* tool to print the preview."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:22
+#: c50b2fe01bd9439dad7356d620b03552
+msgid "To see the information of the Map, click on the :guilabel: `Info` in the menu of the details page, This section shows some metadata such as its Title, the License, the Publication Date etc. The metadata also indicates the map owner and which regions are involved. see example below."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:27
+#: 404051660fd54d5888f4bf597a681ad6
+msgid "*Map Information page*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:30
+#: db358a1ba337469991b7fe73aa0504cf
+msgid "See the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/>`_ to learn more."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:33
+#: 4b058df4e3084395b4f8c899b57cfdb1
+msgid "Map Sharing"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:34
+#: fc99f2032c3e42028284e4e667360608
+msgid "The *Share link*  on the detail page provides the link for the map to share."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:39
+#: 162e2da593a948e88c88f3c539e91fbd
+msgid "*Map Sharing*"
+msgstr ""

@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:14
+#: ../../index.rst:14
+#: 
+#: e495442e612342bab378a3d6f50f1c2d
+msgid "About"
+msgstr ""
+
+#: ../../index.rst:20
+#: ../../index.rst:20
+#: 
+#: 14557522fead4bc8b9298d32afff46c2
+msgid "Getting Started"
+msgstr ""
+
+#: ../../index.rst:26
+#: ../../index.rst:26
+#: 
+#: 2f4acbdaa72b44e2afc4d98eb6ddd46c
+msgid "Using"
+msgstr ""
+
+#: ../../index.rst:32
+#: ../../index.rst:32
+#: 
+#: 377a7bf610b348788f8467ba65bd8d8a
+msgid "Installing"
+msgstr ""
+
+#: ../../index.rst:38
+#: ../../index.rst:38
+#: 
+#: 999afbab5d864e74b8fc3debb5086363
+msgid "Configuring (Basic)"
+msgstr ""
+
+#: ../../index.rst:44
+#: ../../index.rst:44
+#: 
+#: d14ec7ddaae044758e75a1635ceeb73e
+msgid "Configuring (Intermediate)"
+msgstr ""
+
+#: ../../index.rst:50
+#: ../../index.rst:50
+#: 
+#: 91dbd5c73c3e406fac4dd168c747d845
+msgid "Configuring (Advanced)"
+msgstr ""
+
+#: ../../index.rst:56
+#: ../../index.rst:56
+#: 
+#: 69971c72a62d4ec98004eccd9c60fc68
+msgid "Administering"
+msgstr ""
+
+#: ../../index.rst:62
+#: ../../index.rst:62
+#: 
+#: 4245b3c2a45647f5890482b11a3ab071
+msgid "Contributing"
+msgstr ""
+
+#: ../../index.rst:68
+#: ../../index.rst:68
+#: 
+#: 2297eb2182f54365bdc6c181a44d4b56
+msgid "Developing"
+msgstr ""
+
+#: ../../index.rst:5
+#: 6734639f86514d08aa2c02926e05dcf1
+msgid "GeoNode's Documentation"
+msgstr ""
+
+#: ../../index.rst:7
+#: e2d7314b918c4aaf925b13b19afde662
+msgid "Welcome to GeoNode's Documentation."
+msgstr ""
+
+#: ../../index.rst:9
+#: 1535515fb8fa469baa0acc2126eea025
+msgid "GeoNode is an Open Source, Content Management System (CMS) for geospatial data. It is a web-based application and platform for developing geospatial information systems (GIS) and for deploying spatial data infrastructures (SDI)."
+msgstr ""
+
+#: ../../index.rst:12
+#: 8b3e758b183f4a03a6a31ae7043453dd
+msgid "Table of contents"
+msgstr ""

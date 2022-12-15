@@ -1,10 +1,11 @@
-API Schema
+GeoNode API
 ==========
 
 .. toctree::
     :maxdepth: 3
 
-    api/index
+    api/V2/index
+    api/usage/index
 
 How to Develop
 ==============

@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/other_apps/qgis/index.rst:4
+#: fb5adca109d84228a2d3e71eb2638629
+msgid "QGIS Desktop"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:6
+#: 730310f0d8764dc5a2b35322ae96a772
+msgid "QGIS is a professional GIS application that is built on top of and proud to be itself Free and Open Source Software (FOSS). QGIS is a volunteer driven project if you are interested you can find more information at https://www.qgis.org."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:11
+#: cfbdd2e4af2649e2a915b9b9b19aa7b9
+msgid "*QGIS Desktop Main Window*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:14
+#: 15cf3ecf6a784e28a815afaa50eded64
+msgid "How can I connect to Geonode?"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:16
+#: efaf0827d9e64437a72e1ae48b57b11e
+msgid "Open QGIS Desktop and go to **Layer Menu > Data Source Manager**. At the bottom of Data Source Manager, you can see a tab with the name and an icon related to Geonode. This is because Geonode is recognized as a data source inside QGIS."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:22
+#: 00e62bcf54014cf3ac04ce46024830c0
+msgid "*Data Source Manager Dialog*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:25
+#: 5cb088dc60df4db489c409c2c096520b
+msgid "It's possible as well load Geonode instances from an existence file this is useful to share between users or to backup existence connections."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:27
+#: f3637dab1efb4e1bacded72af922edfe
+msgid "To add a new Geonode instance, in the Geonode tab selected click on **New** and you will see the following dialog:"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:32
+#: 8debec68432f483f838661db48b7c76e
+msgid "*Details of Geonode instance Dialog*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:35
+#: 986336ddf59041f6a0e33b433ce7214a
+msgid "In the dialog Fill the name as you like and in the URL put the link of the Geonode instance. It's possible edit some WFS and WMS options to optimize the connection. If everything is ok you will receive the following successful connection dialog:"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:41
+#: c67b6d52fb1440dca8741cd1239442c2
+msgid "*Successful connection Dialog*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:43
+#: 566de6468e90441bbabe0aa945c7aa75
+msgid "After the successful dialog it's now possible to load all layers of the Geonode instance clicking on **Connect** button. You can see both WMS and WFS connections of the Geonode and you can load to QGIS Desktop."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:48
+#: 2f4f52fc8db34472adffe48058ef16d5
+msgid "*Geonode instance layers Dialog*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:50
+#: 6f5062fc3d3b418eb69b4eeb5590d34d
+msgid "After select a layer (WMS or WFS) click on the **Add** button and the layer will be displayed in the main window of QGIS."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:55
+#: 1fe1ca530b0744b28ad6c286734a2313
+msgid "*Example of Geonode layer*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:58
+#: 47919e57447e4e9a93f7878f4f99b018
+msgid "This procedure only work with public layers. If the layers are for private use is necessary to do the standard qgis add remote WMS/WFS layers (through **Data Source Manager**) along with basic auth method and specific endpoints."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:62
+#: 973673ccdb7f4ecfaf7abd4738b0f1f5
+msgid "Connect to Private layers by using OAuth2"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:65
+#: 58bbf35298264345884d5b3078cbcdc1
+msgid "GeoNode OAuth2 Client App Setup"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:67
+#: f91a7e4ff1a941e7a5a5a3e397b5046a
+msgid "Login to GeoNode as a superuser"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:72
+#: f44527f6b7fb46ffae19f0b75bce991a
+msgid "Browse to :guilabel:`http://<geonode>/o/applications/`"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:77
+#: 4630bb06a146462abe3a56177d7ff97a
+msgid "Create a new specific app or, better, edit the existing one (“GeoServer”) based on `OAuth2 Authorization Code Grant Type <https://oauth.net/2/grant-types/authorization-code/#:~:text=The%20Authorization%20Code%20grant%20type,to%20request%20an%20access%20token.>`_"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:79
+#: a8b3f6be97b4484f8641a8b69e69d57c
+msgid "Click on “Edit” and add the Redirect URI :guilabel:`http://127.0.0.1:7070/qgis-client` as shown below"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:82
+#: adcf32e2a7fd4ac8b1c5f4071028968c
+msgid "This is an example. The port and path of the URI can be customized. They must be the same on both GeoNode and QGis Client as shown later."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:90
+#: 95540127f6524467a7354f40cd3ae016
+msgid "Also you will need the :guilabel:`Client ID` and :guilabel:`Client Secret` keys later when configuring QGis."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:93
+#: a39f6e1899c9452fb0e7664abe98ea95
+msgid "Configure QGis Desktop Client OAuth2 Authentication"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:95
+#: a54db6aa710a4982a6cada161dbe2753
+msgid "Open the QGis Desktop Client and add a new OWS remote Layer configuration"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:100
+#: 431de812754b488c8a332fed95705a66
+msgid "Create a new service connection"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:105
+#: 5b0294b77ed74eedb4b3e85887d68916
+msgid "Provide the connection details"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:108
+#: dd0fc08bdb4e45388351397444afd47e
+msgid "*It is* :guilabel:`Important` *that the URL ends with* :guilabel:`/gs/ows`"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:110
+#: 00abf3ef077c46838e1e05fa5a870e16
+msgid "When finished click on “+” in order to add a new auth configuration"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:115
+#: 4b7471077e05443f8af147918fce0630
+msgid "Provide the needed information as shown below:"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:117
+#: 6281bfe9026c403a989de34b27a5989d
+msgid "Name: *any descriptive string*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:118
+#: 29941ec3a29047e786c7953b0efae92f
+msgid "Type: *OAuth2 authentication*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:119
+#: 55ce9fbac35d4ad6a08c8e873af99b24
+msgid "Grant Flow: *Authorization Code*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:120
+#: 9a860fd5e57d488090c8e89f6416320a
+msgid "Request URL: *must end with* :guilabel:`/o/authorize/`"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:121
+#: 84e2e2f9965b49a3b06def81cdb0f433
+msgid "Token URL and Refresh URL: *must end with* :guilabel:`/o/token/`"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:122
+#: 639e8f97a66b4b3a883d5070d51f27fa
+msgid "Redirect URL: *must match with the one defined on GeoNode above*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:123
+#: c38d766df46b4bbe8d7fefef471fa554
+msgid "Client ID and Client Secret: *must match with the one defined on GeoNode above*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:124
+#: b8b009f3f7334246ac46e84decfa5d61
+msgid "Scopes: *openid write*"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:125
+#: deac2bb616974021bd5c79ac3daecc26
+msgid "Enable the persistent Token Session via Headers"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:130
+#: 80f3d11a27724aa89b4102467fdee773
+msgid "Save and click on :guilabel:`“Connect”`. QGis will redirect you on a browser page asking to GeoNode to authenticate. Approve the Claims and go back to QGis."
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:136
+#: c19fd94179b042f98a79a6bc132d656d
+msgid "Remove Saved Token Sessions From QGis and Login with another User"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:138
+#: b466afda08ec444b89650bec4cbc6e8c
+msgid "Edit the QGis configuration"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:143
+#: 712f48f4e5b040d18fb7b3b9854441dc
+msgid "Click on the :guilabel:`“pencil”`"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:148
+#: 2dcb74a18265485ba4c43a13a81b4934
+msgid "Clean up the saved :guilabel:`Tokens` and save"
+msgstr ""
+
+#: ../../usage/other_apps/qgis/index.rst:153
+#: db5cb5d50ff24c929d6b7395c071c719
+msgid "Try to connect again."
+msgstr ""

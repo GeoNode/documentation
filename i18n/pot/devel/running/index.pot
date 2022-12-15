@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../devel/running/index.rst:2
+#: 55a4e56ba0b143c8ab96d281f09d58d9
+msgid "How to run GeoNode Core for development"
+msgstr ""
+
+#: ../../devel/running/index.rst:5
+#: d7e1b583711c4a1a8e8859742158ab67
+msgid "In order to start Geonode Core for development, you need to make sure that no Geonode instance is running first. This can be done by running the following commands:"
+msgstr ""
+
+#: ../../devel/running/index.rst:15
+#: d3960f4bed504d368a6d2fac7b5b2bea
+msgid "Then you need to start both geoserver and django services as follows:"
+msgstr ""
+
+#: ../../devel/running/index.rst:23
+#: 6da1ac317d72454cb7acdaec1685eaa6
+msgid "Now you can visit your Geonode GUI by typing http://localhost:8000 into your browser window"
+msgstr ""
+
+#: ../../devel/running/index.rst:28
+#: 98d7688941f842bca84908a135761c22
+msgid "How to run GeoNode Project for development"
+msgstr ""
+
+#: ../../devel/running/index.rst:31
+#: bf8a10f7ccda45cf85733ad85ffc0948
+msgid "In order to run a project for development, the following steps have to be followed:"
+msgstr ""
+
+#: ../../devel/running/index.rst:33
+#: 7bd001ce180341b8a44ed3168a0cff97
+msgid "1- Make sure there is no running instance of Geonode first by running the following command:"
+msgstr ""
+
+#: ../../devel/running/index.rst:41
+#: 22f21236292d4c64988f5226af807f57
+msgid "The above command will stop all services related to Geonode if running"
+msgstr ""
+
+#: ../../devel/running/index.rst:43
+#: faa51909dfbc402eabbd1f64fc6a64d1
+msgid "2- Start the servers by running paver start as follows:"
+msgstr ""
+
+#: ../../devel/running/index.rst:49
+#: 4b4d09ee87f14e60b91f6b95853828e5
+msgid "Now you can visit your geonode project site by typing http://localhost:8000 into your browser window"
+msgstr ""

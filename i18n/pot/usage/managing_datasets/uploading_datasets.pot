@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:4
+#: 72c1f9d3a69747fd9aa5ec1b7b0ce605
+msgid "Datasets Uploading"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:6
+#: fe2a401de7024be5b25e502beb53389a
+msgid "The most important resource type in GeoNode is the *Dataset*. A dataset represents spatial information so it can be displayed inside a map."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:7
+#: 9b7eb88b3d7241d08027a425c0a5bb25
+msgid "To better understand what we are talking about lets upload your first dataset."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:9
+#: 4e61ea08d5b747bb857a49dfb6935570
+msgid "The *Dataset Uploading* page can be reached from the :guilabel:`Upload dataset` link of the :guilabel:`Create new` menu above the resources list page."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:14
+#: f145f231855a4e529add50da8c90dd67
+msgid "*Link for Datasets Uploading*"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:16
+#: 20ad47ace0524866a0490227010b4bde
+msgid "The *Datasets Uploading* page looks like the one in the picture below."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:21
+#: 9c9ce6788c034931817ba67629224055
+msgid "*The Datasets Uploading page*"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:24
+#: 8f65a24c9a074da1a0ab55b13c1e1e99
+msgid "Through the :guilabel:`Choose Files` button you can select files from your disk, make sure they are valid raster or vector spatial data. You can also change the default *Share options* settings (see :ref:`dataset-permissions` for further information on how to set share options)."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:25
+#: 0823a91d79864e889bec156a0ce104de
+msgid "Select the *charset*, then click on :guilabel:`Upload files` to start the process or click :guilabel:`Clear` to remove all the loaded files form the page."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:27
+#: cea219b87e1d4c13baf923bf6ecdde74
+msgid "In this example the ``ne_10m_airports_vufl8s3`` ESRI Shapefile, with all its mandatory files (`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen. A progress bar shows the operation made during the dataset upload and alerts you when the process is over. When the process ends click the dsataset name in the table to check the dataset has been correctly uploaded."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:34
+#: fc20fa76bbb24a4daf2bf403010a7ede
+msgid "*Dataset uploading finished*"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:36
+#: 052432c646c948e5b41667f23d441446
+msgid "There are lot of free spatial dataset available in the Internet. In this example, an extract of the Berlin city center roads map from the `BBBike extracts OpenStreetMap <https://extract.bbbike.org>`_ dataset has been used."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:38
+#: 2f63e0db8de54b6fbb651a06b399181a
+msgid "In the next paragraphs you will learn how to create a dataset from scratch, how to set share options, how to explore the dataset properties and how to edit them."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:40
+#: 92f2eaa29dee4defb07f42416ffe3944
+msgid "If you get the following error message:"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:42
+#: 2129752bc1904b9aa32c1d065fdd96ea
+msgid "``Total upload size exceeds 100.0 MB. Please try again with smaller files.``"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:44
+#: 140d12d35ab248d2ae7802a6fd7ac7bc
+msgid "This means that there is an upload size limit of 100 MB. An user with administrative access can change the upload size limits at the `admin panel for size limits <../../admin/upload-size-limits/index.html#upload-size-limits>`__."
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:46
+#: a3551ffd753a403ead97e4546a793e13
+msgid "Similarly, for the following error message:"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:48
+#: 13d881becb34499f95e4be7ec7c21666
+msgid "``The number of active parallel uploads exceeds 5. Wait for the pending ones to finish.``"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:50
+#: 1d5a43cb24fe4c3986e17de49a37589e
+msgid "You can modify the upload parallelism limits at the `admin panel for parallelism limits <../../admin/upload-parallelism-limit/index.html#upload-parallelism-limits>`__."
+msgstr ""

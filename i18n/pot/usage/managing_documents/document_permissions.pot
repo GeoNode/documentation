@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_documents/document_permissions.rst:4
+#: b35b5ce97e5c462da98b938ed79a5ff1
+msgid "Share Options"
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:6
+#: 652f7ac5a37e466eb806b4589a61c564
+msgid "GeoNode encourages to publicly, share and make available for download information uploaded on the platform. By default, anyone can see and download a document. However, the document responsible can choose to limit access to the document to some contributors and/or groups."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:8
+#: ae2676dfc6514254a4869b4ec94082de
+msgid "Through the *Share* Link shown in the menu it is possible to manage the document share options. it opens a form where set up who can:"
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:10
+#: 91fb87125d7a44c5bd1bef198332ad72
+msgid "View (allows to view the document)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:11
+#: d9b0cd8e5b48423a890e81a2de18ccfc
+msgid "Download (allows to view and download the document)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:12
+#: 3d5e9fcfcb5943a5bec588152e95f66b
+msgid "Edit (allows to change the document metadata and attributes)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:13
+#: f3b5869eae3b46ec9839e11d34b06071
+msgid "Manage it (allows to update, delete, change share options, publish/unpublish)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:20
+#: ede3c689e7294403b6b02ba0cae48590
+msgid "See an example in the picture below."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:23
+#: 89b5135b5a6b472e856fb56feaca9ec4
+msgid "After making changes, always save them with the *Save* Link in the menu"
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:28
+#: 682644c7c51b47cf8176d3358b192975
+msgid "*Changing the Document share options*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:30
+#: 913addacf2274298be5bb4d4c6494417
+msgid "Usually those with options of editing metadata and the management of a document are in charge and responsible of the document, i.e. the contributor who uploaded it has those options by default."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:32
+#: bc27067dd727423f8a98276c0d059c70
+msgid "Once the share options are set, click :guilabel:`Save` link in the menu to save them."
+msgstr ""

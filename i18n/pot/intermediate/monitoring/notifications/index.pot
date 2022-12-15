@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intermediate/monitoring/notifications/index.rst:2
+#: 6af6a4bd5c2a47bc93300f58b68eb7ef
+msgid "Monitoring: Notifications"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:4
+#: cf1e2302b5e74e9d8e7275554d959d89
+msgid "Notifications are part of monitoring that is run after each data collection cycle. Its configurable mechanism to check if metrics values are within allowed value range, and if not, send notification to designated receivers (registered users or external emails)."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:8
+#: 00b2eef6b9754bbf8221d05884cea718
+msgid "Data model"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:10
+#: f7509adeea25453d814785bb0e12b37e
+msgid "Notification mechanism is composed of several classes, responsible for different aspects:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:12
+#: 91f6494cf5054a158856f8425a03a624
+msgid "High-level configuration: `NotificationCheck`:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:14
+#: ebcc0b422f414793bffced1f7d4ccbda
+msgid "keeps general description, list of metric check definition, send grace period configuration and last send marker, list of users to which notification should be delivered (in helper table, `NotificationReceiver` class)."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:16
+#: 909db1a8b9e84a888d8733112bf47b6e
+msgid "Per-metric definition: `MetricNotificationDefinition`:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:18
+#: 635aeaf18e5b457bbaa0912265e7fc72
+msgid "keeps per-metric-per-check configuration: name of metric, min, max values allowed for user, check type (if value should be below or above given threshold, or should last read be not older than specific period from metric check), additional scope for check (resource, label, ows service - this part is partially implemented). Definition object is created from `NotificationCheck.user_tresholds` data, and is used to generate validation form. Note, that one `NotificationCheck` can have several definition items, for set of different metrics. Definition rows are created when `NotificationCheck` is created, or updated."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:21
+#: d6d1cc5da42e48b5b8209cde752e566c
+msgid "Per-metric check configuration: `MetricNotificationCheck`"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:23
+#: e44a1d579ed34180b952c98704f49a2e
+msgid "Keeps per-metric-per-check configuration: metric and threshold values. It is created after user submits configuration form for specific notification."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:26
+#: 2e1ad88f7150499bae237545deefc0a6
+msgid "Workflow"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:28
+#: 1964fdcc38564703b5e5dc800584e77d
+msgid "Notifications are checked after each collection/processing period in collection script, by calling `CollectorAPI.emit_notifications(for_timestamp)`. This will do following:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:30
+#: 17bc57b1426e4a2d87d57c5dffd7e7ff
+msgid "get all notifications,"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:31
+#: ae55485b0cb04793a50c5c646f8e2369
+msgid "for each notification, will get all notification checks"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:32
+#: 26e6c2ce3c404a6bb2d1d4f09a87f039
+msgid "for each notification check, it will get metric valid for given timestamp and check if value matches given criteria"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:33
+#: 7f23780a01fd407681e9ebfecf2161ef
+msgid "each check can raise exception, which will be captured in caller, and for each notification, list of errors will be returned"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:34
+#: addbbf5cb962485c860e0e0da3b21704
+msgid "based on list of notifications and errors, alerts will be generated and send to users, unless last delivery was before grace period is finished."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:36
+#: 98a809dfe50e471c99ecd5858a948fe3
+msgid "Additionally, notifications expose ``/monitoring/api/status/`` :ref:`status-api`, which will show errors detected at the moment of request."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:39
+#: 37695b6008724aa59ca6f138a2151496
+msgid "Web API"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:44
+#: 4cd94b8560694e5a8d8cff7dfd5bd3a3
+msgid "Status API"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:46
+#: 359f6368eab645609d1f733024540f5a
+msgid "Status endpoint presents current state of error checking performed by notifications. Frontend can make requests periodically to this endpoint. There is no history view for status at the moment. Status response is wrapped with standard response envelope. Non-error response will have `status` key set to `ok` and `success` to `true`, otherwise `errors` will be not empty."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:52
+#: a8ea79fd70d44950a63809c0847e8c9a
+msgid "No errors response:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:54
+#: 299158dc816c4c72beb84381503e86f2
+msgid "``GET /monitoring/api/status/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:64
+#: 81e9c2721c4346dc8fe86ce24a05ed0e
+msgid "Response with errors reported:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:120
+#: a3d63946b302443da41a868cad58b2ed
+msgid "Response with reported errors contains list of check elements in `data` element. Each check element contains:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:122
+#: b7e3da58daab44bc96f9a325db6edd26
+msgid "`check` - serialized `NotificationCheck` object, which was used"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:123
+#: 4dfc2ce4fece46ffad9778a067baed31
+msgid "`problems` - list of metric checks that failed. Each element contains name of metric, severity, error message, measured and threshold value."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:126
+#: 15bff1c91fe142b692ed029831c19f9e
+msgid "Severity"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:128
+#: 1b3550e5292f4475a44ea2e23dc544eb
+msgid "Severity is a textual description of potential impact of error. There are three values: `warning`, `error` and `fatal`."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:131
+#: bc2109e6957e41f49b811130f37e1633
+msgid "Notification list"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:133
+#: 131d511cc8544eaea32f95b1dee9b41d
+msgid "This call will return list of available notifications:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:135
+#: 4c6a9218b095430fa0b53a1de4e83141
+msgid "``GET /monitoring/api/notifications/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:159
+#: 1b0adf2984dc4149a7aec2e623b250cd
+msgid "Response will contain list of notifications summary in `data` key. Each element will have:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:161
+#: 09d0a2db6f044c018bd0531a4fddc57b
+msgid "`name` of metric checked"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:162
+#: 4a1eb4d448e24faf9bdbbe041bc2e756
+msgid "`message` is error message generated by notification. This describes what the problem is."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:163
+#: 3964f66cb6c7481297aab36f0539bcba
+msgid "`description` more detailed information what which check failed."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:164
+#: 5ac6b31916744973a80daf468b1739ad
+msgid "`offending_value` and `threshold_value` are values that were compared (`offending_value` is actual value from metric data)"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:165
+#: e71cb376422b41d0ab7f1e2c3788799d
+msgid "`check_url` to notification details"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:166
+#: 18096ac1e87b4dec9a528a291fc7c7d8
+msgid "`severity` of error"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:168
+#: 9f42e9983b0840b6b059f450270da839
+msgid "Also, `data` will have highest `severity` value available in `health_level`."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:171
+#: 8125b4cde2114ac787cccd62dcd877c2
+msgid "Notification details"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:173
+#: 0ffee64b04fb4931abb8cd5ea74dd141
+msgid "This will return details for notification, including form and list of allowed fields:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:175
+#: eb3368a44a3c4c03891e22cbc5cfe9b2
+msgid "``GET /monitoring/api/notifications/config/{{notification_id}}/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:368
+#: 809dd8c2ad674d7e90071d2f5ed1e9fe
+msgid "Returned keys in `data` element:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:370
+#: 3f63ac1bdd444105aa8bdf8cac327982
+msgid "`fields` - list of form fields, including detailed per-resource configuration flags"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:371
+#: df979416ed3f4c47957515a6fcdea875
+msgid "`form` - rendered user form, which can be displayed"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:372
+#: 66e969cae9f94b6e81f7ef106be5b3e2
+msgid "`notification` - serialized notification object with `user_thresholds` list (this is a base to create `fields` objects)"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:374
+#: c80c9a475a88417d847f343947d8c21e
+msgid "Frontend should use `fields` list to create whole form in client-side:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:376
+#: fa58c99526544af38425e1a2c89faa31
+msgid "field name is stored in `field_name`."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:377
+#: c52bb1c76b8a42569fefb64dcc73e54e
+msgid "field label can be constructed from `description`"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:378
+#: 05b43e1d961f44a8995419044fe72286
+msgid "unit can be extracted from `unit` field"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:379
+#: 6fbefc3c7df347a3bbc7e0edaebfc2bb
+msgid "if field definition provides list in `steps_calculated`, this should be used to construct selection/dropdown, otherwise text input should be displayed. If possible, validation should take into account `min_value` and `max_value`."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:380
+#: beb08efd5389499cb63a0ced28009476
+msgid "currently set value is available in `current_value` field."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:381
+#: 168f4ffb91c145fcbd859e902cd1e205
+msgid "each field has `is_enabled` property, which tells if field is enabled. Currently this value is calculated in following way: field is enabled if `current_value` is not `None`. This may change in the future."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:383
+#: ed1402e78a524e2da408e3338023e2b1
+msgid "Additionally, each notification configuration accepts list of emails in `emails` field. This field should be send as a list of emails joined with new line char (`\\n`)."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:385
+#: aaec216aa7dd40ebb9a2221052240a85
+msgid "Form should be submitted to the same url as configuration source (``/monitoring/api/notifications/config/{id}/``), see below."
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:388
+#: 33de0deddb1545b5a86eaef10a75c419
+msgid "Notification edition (by user)"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:390
+#: 5e62778fcf0c4032bdde64ff71c71b5c
+msgid "Following API call allows user to configure notification by setting receivers and adjust threshold values for checks:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:392
+#: d4c8d486efbd4ba895d3f3d99694e800
+msgid "``POST /monitoring/api/notifications/config/{{notification_check_id}}/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:400
+#: 85ca708931df4ca4af10253fc7cfa08d
+msgid "Response contains serialized `NotificationCheck` in `data` element, if no errors were captured during form processing:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:437
+#: 277fa531634c46f2b3cdad3011281ede
+msgid "Error (non-200) response will have `errors` key populated:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:459
+#: 6c2304225450430a95a4c43f852e83c0
+msgid "Notification creation"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:461
+#: 7d5557fd9a11470580142145585808b2
+msgid "This API call allows to create new notification, it's different in form layout from edition:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:463
+#: 9acf8f3ea7964f4bbacbc8032f6f05f4
+msgid "``POST /monitoring/api/notifications/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:473
+#: 8e91bb89416346fd96925530f8dfe3f8
+msgid "Payload elements:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:475
+#: 9a87a155ae304fb5884f9c9574946621
+msgid "`name`, `description` are values visible for user"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:476
+#: 75f7c3348fcf4951b215e0c2d4109b53
+msgid "`severity` severity value"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:477
+#: e60b14aa45794113a32f9325c3c45951
+msgid "`emails` is a list of emails, however, it is encoded to a string, where each email is in new line:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:484
+#: fa224d8180ab4b918d1acc742830de38
+msgid "`user_thresholds` is a json encoded list of per-metric-per-check configurations. Each element of list should be a 10-elemnt list, containing:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:486
+#: a9fab2f3dcdc4d6192db87ba45f02b0b
+msgid "name of metric"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:487
+#: dd3e3d39dc4444009aec98902ab963ba
+msgid "field check option (one of three values: `min_value`, `max_value` or `max_timeout`)"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:488
+#: 755ffde7a7204b5681e2c25065624aa7
+msgid "flag, if metric check can use service"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:489
+#: bc53108d191b479f8acf12d34a535554
+msgid "flag, if metric check can use resource"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:490
+#: 156bd57e1542476e8da14bf39ddae3b7
+msgid "flag, if metric check can use label"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:491
+#: 62d5a062843b4745ab1d7dc670aea34c
+msgid "flag, if metric check can use ows service"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:492
+#: 2282e21ca27e478f952a62aca9e0047f
+msgid "minimum value for user input (no minimum check if None)"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:493
+#: 4f9c9dea969c45aba1e2ae63f19c51d2
+msgid "maximum value for user input (no maximum check if None)"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:494
+#: e3d3fc38983b44968733814385fbf87a
+msgid "steps count is a number of steps to generate for user input, so user can select value from select list instead of typing. This will have effect only if both min and max values are also provided Sample payload for `user_thresholds`:"
+msgstr ""
+
+#: ../../intermediate/monitoring/notifications/index.rst:504
+#: a3600ccf098e407788298369ab40e07c
+msgid "Response is a serialized `NotificationCheck` wrapped with standard response envelope (status, errors etc). Actual data is in `data` key. If processing failed, for example because of form validation errors, response will be non-200 OK, and `errors` key will be populated."
+msgstr ""

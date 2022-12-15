@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:4
+#: 47e6559e976a4eddabe8be92e141438a
+msgid "Timeline"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:7
+#: 8b05d7dc493e4448b47d542c3a5d649f
+msgid "GeoNode can manage datasets with a *time dimension*. Those vector datasets may vary their data through time so it is useful to represent that variation on the map."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:8
+#: 62f335c144e34e639ad01972c51b1c9f
+msgid "The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer used in Geonode makes available the **Timeline** tool which allows you to observe the datasets' evolution over time, to inspect the dataset configuration at a specific time instant and to view different dataset configurations time by time dynamically through animations (see the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/user-guide/timeline/>`_ for further details)."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:10
+#: a414c25035674c4282e73235942928e2
+msgid "Timeline actually works only with WMTS-Multidim extension (WMS time in capabilities is not fully supported)."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:12
+#: 844d2c86490449d39d278eeb37d4769b
+msgid "When loading a temporal dataset into the map, the *Timeline* opens automatically."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:17
+#: f55f19f0670d4e5d87e36c03cf61eb0f
+msgid "*The Timeline*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:19
+#: f1954027fccf4a7c866e54012fd32eb6
+msgid "On the left side of the *Timeline* panel you can set the time value in which you want to observe the data. You can type it directly filling out the corresponding input fields or by using the up/down arrows."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:24
+#: 88533fb28df9420996bb8718f3bcda7f
+msgid "*The Time Control Buttons*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:26
+#: bbdcec25e8ee44dd99b7fd9674bf8800
+msgid "On the other side there are the buttons responsible for managing the animations."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:27
+#: 58f1b699a687491c9113750c5e4343eb
+msgid "In particular you can *Play* the animation by clicking |play_button|, go back to the previous time instant through |time_go_backward_button|, go forward to next time step using |time_go_forward_button| and stop the animation by clicking |stop_button|."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:32
+#: f39f1f70fb32475b8153d623c82d0f0a
+msgid "*The Animation Control Buttons*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:34
+#: 05d39c041c4d4a5aabe9c145f87817ee
+msgid "The *Timeline* panel can be expanded through the |expand_timeline_button| button."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:39
+#: 8b22196a7e08449aba6f854223e75e80
+msgid "*The Expanded Timeline*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:41
+#: ce22ad56c990424db373beb7a01bcb2a
+msgid "The expanded section of the *Timeline* panel contains the *Time Datasets List* and an *Histogram* which shows you:"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:43
+#: 5f57a2ee30d842399543c0c355fabbe3
+msgid "the distribution of the data over time"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:48
+#: 386afab00d0a4d4f84b72e130ed62e3c
+msgid "*The Timeline Histogram*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:50
+#: c27e8c8818d1435e879ccb68fa1c8c3e
+msgid "the *Time Cursor*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:55
+#: 7c6161b39ad540d894db1a69df736f04
+msgid "*The Time Cursor*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:57
+#: a46c9952b3a140eea0ead69c118f8c18
+msgid "You can show/hide the datasets list by clicking |show_hide_datasets_list_button| (it is active by default)."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:59
+#: 89c6c3109d7f4b96b71f66c3f79b48e5
+msgid "Through the *Time Range* function you can observe the data in a finite temporal interval. Click on |time_range_button| and set the initial and the final times to use it."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:65
+#: efe676d461664c3985b9806c68cc945a
+msgid "*The Time Range Settings*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:68
+#: 4ad518dac46249d694c5be66ad53c1e0
+msgid "Animations"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:70
+#: 3df1724d7ab74f6596ee5406c74625c9
+msgid "The *Timeline* allows you to see the data configurations (one for each time in which the data are defined) through ordered sequences of steps."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:72
+#: 0185e5b8f83a4ad597debeca1d73b09d
+msgid "As said before, you can play the resulting *Animation* by clicking the play button |play_button|. The dataset data displayed on map will change accordingly to the time reach by the cursor on the *Histogram*."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:74
+#: 27e0992177b34b4caf8934cbc07b59e0
+msgid "By clicking on |animation_settings_button| you can manage some *Animation Settings*."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:80
+#: 27e39c1c7df44c08bc01660eff0be8fc
+msgid "*The Timeline Settings*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:82
+#: b18d31318aa94e47ada3f1552aed79c4
+msgid "You can activate the *Snap to guide dataset* so that the time cursor will snap to the selected dataset's data. You can also set up the *Frame Duration* (by default 5 seconds)."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:83
+#: 3e464784a8f44ad492d04b8f0ab6758c
+msgid "If the *Snap to guide dataset* option is disabled, you can force the animation step to be a fixed value."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:85
+#: 6e17cd6d2cd2461d97695b4836673823
+msgid "The *Animation Range* option lets you to define a temporal range within which the time cursor can move."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:90
+#: 9bdcf46d2c894d3e8cc53f82a4a5293b
+msgid "*The Timeline Animation Range*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:93
+#: a11369d41ba94929b803c9300b0161c5
+msgid "See the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/user-guide/timeline/>`_ for more information."
+msgstr ""

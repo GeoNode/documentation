@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../devel/docker/index.rst:2
+#: 9e0c9403f01f4078b719d15c04ca9a49
+msgid "Start to develop with Docker"
+msgstr ""
+
+#: ../../devel/docker/index.rst:5
+#: 1a2e5880fc1647f3a5f0b4a64b3c670a
+msgid "How to run the instance for development"
+msgstr ""
+
+#: ../../devel/docker/index.rst:7
+#: c1abec1e22d342b39eb843022dbb17ea
+msgid "There are two options to develop using Docker containers:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:9
+#: 705ccdd71bc7428f9aea37ccf685253d
+msgid "**Alternative A**: Running by command line and editing the code using your preferred editor (usually harder)."
+msgstr ""
+
+#: ../../devel/docker/index.rst:10
+#: 21a82352fb2c4e0a9f9f2ad5e2c1df92
+msgid "**Alternative B**: Using the vscode `remote containers <https://code.visualstudio.com/docs/remote/containers>`_ extension (easier)."
+msgstr ""
+
+#: ../../devel/docker/index.rst:13
+#: 4050bbbd13f94ef384d10b36a82c60a9
+msgid "Alternative A: Building and running Docker for development"
+msgstr ""
+
+#: ../../devel/docker/index.rst:15
+#: f43d87e32a1643dabd41b880fdc1bbba
+msgid "Build (first time only):"
+msgstr ""
+
+#: ../../devel/docker/index.rst:21
+#: f9de74adb04546cbaaff3799ebea38ad
+msgid "Running:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:28
+#: 9f38c6c2bdab4039ba0412edf40ff72e
+msgid "If you are running ``postgresql`` and ``tomcat9`` services, you need to stop them, ``docker-compose`` will take care of running the database and geonode service."
+msgstr ""
+
+#: ../../devel/docker/index.rst:31
+#: e841517792bc4a5580a8d5c9a29e8010
+msgid "Otherwise, you will get the following error:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:39
+#: 7e0d64e5b0dc4ef987437e4685926678
+msgid "Running the geonode application in debug mode:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:46
+#: a546fedddeb145998b1ea1511dc06794
+msgid "When running, you can debug the application using your preferred method. For example, you can edit a file, save it and see your modifications. You can also use `ipdb <https://github.com/gotcha/ipdb>`_ to add breakpoints and inspect your code (Writing ``import ipdb; ipdb.set_trace()`` in the line you want your breakpoint)."
+msgstr ""
+
+#: ../../devel/docker/index.rst:51
+#: 246129d1dc0140c08758529d8e77fba1
+msgid "Another option is to use *debugpy* alongside with *vscode*, for this you have to enable *debugpy* inside your *django4geonode* container:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:57
+#: 4ec8e9f41d2f45728e1be5664cce813b
+msgid "Select \"**Run and Debug**\" in vscode and use the following launch instruction in your ``.vscode/launch.json`` file:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:59
+#: 4ce338988dae4febb64670114b9efa4d
+msgid ":download:`launch.json <data/vscode_debugpy_launch.json>`"
+msgstr ""
+
+#: ../../devel/docker/index.rst:63
+#: f04d959015c04832ba2ee2d6b68eb6dd
+msgid "Alternative B: Using vscode extension"
+msgstr ""
+
+#: ../../devel/docker/index.rst:65
+#: f2c23b30dabb49f794dbc1830d1efd0d
+msgid "Alternatively, you can develop using the vscode `remote containers <https://code.visualstudio.com/docs/remote/containers>`_ extension. In this approach you need to:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:68
+#: b0c94345c6274febb4ed43610db6aa39
+msgid "Install the extension in your vscode: `ms-vscode-remote.remote-containers <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers>`_"
+msgstr ""
+
+#: ../../devel/docker/index.rst:70
+#: a878cf3769534802a3cdc7502868d255
+msgid "On your command pallet, select: \"**Remote-Containers: Reopen in Container**\""
+msgstr ""
+
+#: ../../devel/docker/index.rst:72
+#: 5af1dfc2a4dd418cba48eb2c7d7bee1f
+msgid "If it's the first time, vscode will take care of building the images. This might take some time."
+msgstr ""
+
+#: ../../devel/docker/index.rst:74
+#: 38a519466ca24db89ce68c4f5cdb92b7
+msgid "Then a new vscode window will open, and it'll be connected to your docker container."
+msgstr ""
+
+#: ../../devel/docker/index.rst:76
+#: 4592d6d966734efc8d3303f2fedb1f63
+msgid "The message \"**Dev Container: Debug Docker Compose**\" will appear in the bottom-left corner of that window."
+msgstr ""
+
+#: ../../devel/docker/index.rst:78
+#: 776291c7dd1f4b9697df712bf313ff7c
+msgid "In the vscode terminal, you're going to see something similar to ``root@77e80acc89b8:/usr/src/geonode#``."
+msgstr ""
+
+#: ../../devel/docker/index.rst:80
+#: 1733b970e37a43f6a384b0cf6c100175
+msgid "To run your application, you can use the integrated terminal (``./manage.py runserver 0.0.0.0:8000``) or the vscode \"**Run and Debug**\" option. For launching with \"Run and Debug\", use the following instruction file:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:83
+#: b5fb764eb73e4797b7943f115c69c11b
+msgid ":download:`launch.json <data/vscode_runserver_launch.json>`"
+msgstr ""
+
+#: ../../devel/docker/index.rst:85
+#: a1a268ca9fbb4dd5a30a7a8577ae43c7
+msgid "For more information, take a read at vscode remote containers `help page <https://code.visualstudio.com/docs/remote/containers>`_."
+msgstr ""

@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../install/advanced/core/docker/centos.rst:2
+#: 97f2a62a75874a6e9e2f665eb5bcacd1
+msgid "2. Install the Docker and docker-compose packages on a CentOS host"
+msgstr ""
+
+#: ../../install/advanced/core/docker/centos.rst:5
+#: b716edc890574dba81f5a5083877af73
+msgid "Docker Setup (First time only)"
+msgstr ""
+
+#: ../../install/advanced/core/docker/centos.rst:7
+#: 665dc520ad6444f8a6fa32405e635089
+msgid "The `centos-extras` repository must be enabled"
+msgstr ""

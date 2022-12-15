@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_documents/index.rst:2
+#: e46bd9dce5084a65af6d0154512ef463
+msgid "Managing Documents"
+msgstr ""
+
+#: ../../usage/managing_documents/index.rst:4
+#: c03baf1a514743c382a52531d8b1a72c
+msgid "In this section all the aspects concerning :ref:`document-data-type` will be discussed."
+msgstr ""
+
+#: ../../usage/managing_documents/index.rst:5
+#: 087bb023fcf4441289a43fe233b8a2b8
+msgid "You will learn how to upload a document and how to inspect its metadata and details. All the editing tools will be also explained."
+msgstr ""

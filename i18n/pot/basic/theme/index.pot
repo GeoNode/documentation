@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../basic/theme/index.rst:2
+#: e5f2d62d4dda4aafbe5708222ee51f1a
+msgid "GeoNode Themes"
+msgstr ""
+
+#: ../../basic/theme/index.rst:5
+#: 36e07c5a5b2a490fbf946501ac5706dd
+msgid "We have already explained in :ref:`simple-theming` how to change the GeoNode theme directly from the *Admin Interface*. This is an easy way for customizing GeoNode appearance but, in some cases, you might want to have more control on it."
+msgstr ""
+
+#: ../../basic/theme/index.rst:7
+#: dba4dd490aa244e49fb8df9d8c8617ce
+msgid "In those cases, you have to venture into the code and it is highly recommended to use a GeoNode Project and customize it instead of the GeoNode default HTML/CSS code. See the following sections to learn more about that."
+msgstr ""
+
+#: ../../basic/theme/index.rst:10
+#: 83151e4fd41c471ca75ee8954ea9d7b5
+msgid "Theming your GeoNode Project"
+msgstr ""
+
+#: ../../basic/theme/index.rst:12
+#: 20bae181094844f5b20895a90e152242
+msgid "There are a range of options available to you if you want to change the default look and feel of your :ref:`geonode-project`."
+msgstr ""
+
+#: ../../basic/theme/index.rst:15
+#: e5c3d30d4a8f45a5a0ebf0a2f8e41bb9
+msgid "Logos and graphics"
+msgstr ""
+
+#: ../../basic/theme/index.rst:17
+#: b746919a89174d10a57bea7be89119dc
+msgid "GeoNode intentionally does not include a large number of graphics files in its interface. This keeps page loading time to a minimum and makes for a more responsive interface. That said, you are free to customize your GeoNode’s interface by simply changing the default logo, or by adding your own images and graphics to deliver a GeoNode experience the way you envision it."
+msgstr ""
+
+#: ../../basic/theme/index.rst:21
+#: 03fecd0728624c8286e92198a3e2f1ea
+msgid "Your GeoNode project has a directory already set up for storing your own images at ``<my_geonode>/static/img``. You should place any image files that you intend to use for your project in this directory."
+msgstr ""
+
+#: ../../basic/theme/index.rst:24
+#: 6fdabcb51d7845c38700d06413858929
+msgid "Let’s walk through an example of the steps necessary to change the default logo."
+msgstr ""
+
+#: ../../basic/theme/index.rst:26
+#: 2da57fc8ef2e414a935675e461404248
+msgid "Change to the :file:`img` directory:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:32
+#: 672b33ae74694d83abd347e1e344c289
+msgid "If you haven't already, obtain your logo image. The URL below is just an example, so you will need to change this URL to match the location of your file or copy it to this location:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:39
+#: e15baedd5c9b4ee18b6677dea791d41b
+msgid "Create snippets directory :"
+msgstr ""
+
+#: ../../basic/theme/index.rst:47
+#: 01042313031c41c4b0f175cc25200682
+msgid "Create a new HTML file named :file:`brand_navbar.html`"
+msgstr ""
+
+#: ../../basic/theme/index.rst:71
+#: 303bd47e1c354cc79eb46cacef97147d
+msgid "Restart your GeoNode project and look at the page in your browser:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:81
+#: 149367e91e724e2a879fa8a550ffb698
+msgid "It is a good practice to cleanup the **static_folder** and the Browser Cache before reloading in order to be sure that the changes have been correctly taken and displayed on the screen."
+msgstr ""
+
+#: ../../basic/theme/index.rst:83
+#: c8516f321996463db5ab7f57475b1290
+msgid "Visit your site at http://localhost/ or the remote URL for your site."
+msgstr ""
+
+#: ../../basic/theme/index.rst:88
+#: d8771c3718ae42a0abd1537a28b7debb
+msgid "*Custom logo*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:90
+#: 7c0c1dc81a474a63b7efbfae182585eb
+msgid "In the following sections you will learn how to customize this header to make it as you want."
+msgstr ""
+
+#: ../../basic/theme/index.rst:92
+#: c5cdb55803e449deb40ff2916f3ecce1
+msgid "You should commit these changes to your repository as you progress through this section, and get in the habit of committing early and often so that you and others can track your project on GitHub. Making many atomic commits and staying in sync with a remote repository makes it easier to collaborate with others on your project."
+msgstr ""
+
+#: ../../basic/theme/index.rst:96
+#: 9c68acef1b33433e91ca036c8d5513a8
+msgid "Cascading Style Sheets"
+msgstr ""
+
+#: ../../basic/theme/index.rst:98
+#: 0ff880cb74d04bf8b218182fa2cdc4ca
+msgid "In the last section you already learned how to override GeoNode’s default CSS rules to include your own logo. You are able to customize any aspect of GeoNode’s appearance this way. In the last screenshot, you saw that the main area in the homepage is covered up by the expanded header."
+msgstr ""
+
+#: ../../basic/theme/index.rst:102
+#: a201c797fd09450aa87e8523e8316ae3
+msgid "First, we’ll walk through the steps necessary to displace it downward so it is no longer hidden, then change the background color of the header to match the color in our logo graphic."
+msgstr ""
+
+#: ../../basic/theme/index.rst:104
+#: adcbdb41120b4913a3391e984ab15bf1
+msgid "Reopen :file:`<my_geonode>/static/css/brand_navbar.html` in your editor:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:112
+#: bde32858bb514e40963caaa0a9e2cc13
+msgid "Append a rule to change the background color of the header to match the logo graphic:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:121
+#: af94055eef9e4230a600b88c6ce30300
+msgid "Create new file to manipulate *hero*  section:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:128
+#: 4e668475e25e4771ad90484c03191919
+msgid "Add the following code to change the background image and font for the *hero* section:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:154
+#: 68c3c772c3814f32a17d673bb1a65e7f
+msgid "Collect the static files into STATIC_ROOT, restart the development server and reload the page:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:164
+#: 2a3614bef5254410826646e9d4a9a7b6
+msgid "*CSS override*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:166
+#: aec24127df344211840491b5702ae66c
+msgid "You can continue adding rules to this file to override the styles that are in the GeoNode base CSS file which is built from `base.less <https://github.com/GeoNode/geonode/blob/master/geonode/static/geonode/less/base.less>`_."
+msgstr ""
+
+#: ../../basic/theme/index.rst:168
+#: 38f7cfca659042ea9598a18d29d11758
+msgid "You may find it helpful to use your browser's development tools to inspect elements of your site that you want to override to determine which rules are already applied. See the screenshot below."
+msgstr ""
+
+#: ../../basic/theme/index.rst:173
+#: 90a96e3053a84fc7a5c5bc2664b4341d
+msgid "*Screenshot of using browser debugger to inspect the CSS overrides*"
+msgstr ""
+
+#: ../../basic/theme/index.rst:176
+#: fc336db024e541789ff9bb28e9615561
+msgid "Modify GeoNode Homepage"
+msgstr ""
+
+#: ../../basic/theme/index.rst:178
+#: 9979e427aba64d76967f824bad565861
+msgid "So far we learned how to modify some template sections of your GeoNode main page. You can do it individually per section template, adding a new page under :file:`<my_geonode>/templates/geonode-mapstore-client/snippets` folder with the section name (ex: :file:`brand_navbar.html`) or by extending the base template file :file:`custom_theme.html` where you can add different theme settings in one place."
+msgstr ""
+
+#: ../../basic/theme/index.rst:184
+#: 3879d30621054f6abe0d561271803ca1
+msgid "Remove the previous `hero` section :file:`hero.html` file:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:190
+#: ae6c286bc66b4e9dafca1ed6073b1b94
+msgid "Create a new :file:`custom_theme.html` file:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:198
+#: d7ac0c123cf94fc5959795b36b8a4fec
+msgid "Add the following content to this page:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:240
+#: 9b6b6caccca64b5b9ee2e0bb5aacdc0d
+msgid "Restart httpd server"
+msgstr ""
+
+#: ../../basic/theme/index.rst:247
+#: 86872f5880dd4bd299b9508ae1868c5d
+msgid "Your customized layout should be similar to the next picture:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:252
+#: 872f04becdd94a93881ce169658776bc
+msgid "Edit title and intro message"
+msgstr ""
+
+#: ../../basic/theme/index.rst:254
+#: b9d660e93c984f4298e3b6c742cfc2d6
+msgid "Login as administrator on GeoNode and go to ``Admin`` page:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:259
+#: 7222e9f0ff024632b500ee0480a1a535
+msgid "Create a new theme under `GeoNode Themes Library` and ``Themes``:"
+msgstr ""
+
+#: ../../basic/theme/index.rst:264
+#: 5ec2cdbfe4ac4cfba743a027e8e4b68d
+msgid "Add a ``Name``, ``Description`` and turn on ``Is enabled`` option. At the bottom, add a ``Jumbotron title`` and ``Jumbotron content``. This will override the default GeoNode welcome title and message. Click ``Save`` at the bottom in the end."
+msgstr ""
+
+#: ../../basic/theme/index.rst:275
+#: b351bba858724784898057072db13c34
+msgid "After this, reload your GeoNode homepage. The output should be similar to this:"
+msgstr ""

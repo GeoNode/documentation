@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contribute/translation/index.rst:2
+#: 74c982d932064f98a095ad46ccd19129
+msgid "Contribute to Translations"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:4
+#: 65174337d31b4c9280636e7bebaa7ca0
+msgid "Behind the scenes, GeoNode is using a software called GNU gettext further text-based translation files (django.po and djangojs.po) for translating content.  If you'd like to know more about how all of this works you'll find a full description at the  `Django Docs <https://docs.djangoproject.com/en/3.2/topics/i18n/translation/>`_. Following will concentrate on what is needed for edit existing or contribute a new translation."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:9
+#: fc5efb1ef2cf4d03b83e704cf7950a36
+msgid "Download the translation File"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:11
+#: 42df47343e2f4b2e8de57df02762beeb
+msgid "All language files live in a specific subfolder called after their `iso code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes/>`_  within the `locale folder <https://github.com/GeoNode/geonode/tree/master/geonode/locale/>`_. For example, for French, the main translation file called django.po can be downloaded from `here <https://github.com/GeoNode/geonode/blob/master/geonode/locale/fr/LC_MESSAGES/django.po/>`_."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:14
+#: b951247813a04dc492fa889333689c33
+msgid "Next, to download the language file, we need to install an OpenSource Editor called \"poedit\" for editing from: https://poedit.net/download"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:17
+#: b79e027ea3e147db9d0fa0532a53944e
+msgid "Translation process"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:18
+#: 1b1b7247300f4d99bc5facb6a3ad1a2a
+msgid "Make a copy of the file before starting the translation so that you can revert in case of errors."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:20
+#: 78f16e70120747649774c325902df3b5
+msgid "After installing 'poedit', you should be able to double click on the '.po' file to open it. Poedit’s interface should look similar to the one shown in the picture below:"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: 1ed1641ac70e41ac8332edd13170a4bb
+msgid "Poedit interface"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:28
+#: 577fdf25d221441e95a0018dfd3239b6
+msgid "Identifying translation issues"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:30
+#: 024fe37bd6ae417f9a8f9b4b9dedc170
+msgid "From the 'poedit' menu 'View', make sure that 'Entries with Errors first' is checked:"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: ../../contribute/translation/index.rst:None
+#: 68667da4fdd74f18803feadfa1eb81b3
+#: 9a8502d7e1b44af8ae1ee4f8fec87074
+msgid "Validate translation"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:38
+#: f01152ccbe6540f1bdf68f1c0fb7df2c
+msgid "Next click on 'Validate Translations' from the 'Catalogue' menu:"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:45
+#: e52968e860ea4ddab7796d5f9af8931d
+msgid "'Poedit' will place translations which may require additional consideration on top of the list. A warning mark means that the interpretation might be not entirely consistent with the original phrase. This is not necessarily an error, just a warning asking the user to double check."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: c552408500b84ecb916d67418368850e
+msgid "Poedit warning"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:53
+#: 0d2c1c5efdfa407699cf311641d6f780
+msgid "Following to marked phrases, 'Poedit' will show untranslated sentences. When clicking on one, it can be translated through the bottom panel."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:55
+#: 46d241052cbf4337abd3d3bf65c1ec3f
+msgid "During translation pay special attention to the button saying 'needs work'. In case this button is checked, the phrase will be marked as 'fuzzy' and ignored in GeoNode."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: 65343ce1693a4412bfff1dc98c685189
+msgid "phrase needs work"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:62
+#: 25a4aee8f221497e986f64b7d51e2135
+msgid "Saving translations"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:63
+#: 1d4a8657a1ae412d82443d26ec1b550f
+msgid "As soon as the translation is complete, it must be saved and compiled. Saving is straightforward. All you have to do is clicking the 'Save' button from the top menu."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:66
+#: 98a524859cdc4b95aed05acf8b624465
+msgid "As a last step we compile the file. Compiling the translation means to create a binary \".mo\" file out of the edited \".po\" file. To do so, click on \"Compile to MO\""
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: 33cd50f3730046639a4d7ff703c5b233
+msgid "save and compile"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:73
+#: 2b90644f8ac04cf2becc1b0bc1ebde8e
+msgid "Poedit will ask where to write the \".mo\" file to, by default, this is the same folder as the edited '.po' resides in. The '.mo' file can be overwritten if necessary."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:76
+#: 3a15d65b24ac43918d2781388255f332
+msgid "Push translations to the repository"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:78
+#: bc485a1a6a52425bb78c8831449384b4
+msgid "For sharing our updates, we must upload the files to GeoNode’s GitHub repository. Go to the correct file position which, in case for French is: https://github.com/GeoNode/geonode/tree/master/geonode/locale/fr/LC_MESSAGES"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:82
+#: 460cead637374994a6cec7f1bfb7ce88
+msgid "Click on \"Upload Files\""
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: 9c3467f7566f4461a6a1584eff7316d9
+msgid "upload files"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:89
+#: fc984b73374f41249b3109a0e3c35961
+msgid "Drag the updated files into the Upload form, and write a title/description of the changes"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:None
+#: ../../contribute/translation/index.rst:None
+#: 9ca6306bdd3a44399eb902d609933622
+#: 4b41ce97128f451ca1e50bac66f2408b
+msgid "drag files"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:96
+#: 114fddbb2e0549f98013c9db0ac6cbeb
+msgid "Click on \"Create a new branch for this commit…\" and then click on the green button."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:103
+#: 328bd335feee4924aa14484b29cfecb0
+msgid "The last step will create a `PULL REQUEST` which can be reviewed and then approved by a developer."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:107
+#: 2459d747a870470da977422b319fc6bd
+msgid "Activate updated translation at your server"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:109
+#: d124ff91c5224738a7deb4eee1476503
+msgid "Once the files have been pushed to GitHub, it will be necessary to update your server to respect changed files."
+msgstr ""
+
+#: ../../contribute/translation/index.rst:111
+#: 7a5eec5f8463422a9d49029dc56af155
+msgid "At this time, this can be done only by an administrator. From the server 'shell' following commands need to be executed:"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:123
+#: e806660f835b43a3983f9bd4a972367c
+msgid "Texts not listed in  .po files"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:124
+#: c61a1248dc2f4469896ba95bf535a028
+msgid "In case you find a template output without corresponding translation you can add it as follows:"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:126
+#: d593bab5ff9e4466b91f8ba8ac456224
+msgid "Identify the corresponding template file which is responsible for outputting the text. Add a ``{% trans \"TEXT\" %}`` tag. Save the template file and run the following:"
+msgstr ""
+
+#: ../../contribute/translation/index.rst:134
+#: a21abc06312e48b1853e23ac854fef0c
+msgid "This will update the english .po file. also to update the language which should be edited by settings the ``-l fr`` parameter. Continue with updating the .po file as described above."
+msgstr ""

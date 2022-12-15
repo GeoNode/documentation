@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../advanced/social/index.rst:2
+#: 41a7a96ce9ef4d5c9d9844c23378029b
+msgid "GeoNode Social Accounts"
+msgstr ""
+
+#: ../../advanced/social/index.rst:5
+#: 18b3e69be3034ea08cac2f2a7f553579
+msgid "Contents"
+msgstr ""
+
+#: ../../advanced/social/index.rst:8
+#: 98aa4ad4b3564ad09ca70205d78db1b1
+msgid "Allow GeoNode to Login throguh Social Accounts (Facebook and Linkedin)"
+msgstr ""
+
+#: ../../advanced/social/index.rst:11
+#: 283413c3a8d64b3fa521f82fea9a0942
+msgid "Base concepts and objects"
+msgstr ""
+
+#: ../../advanced/social/index.rst:13
+#: db682115c86d4c75866f9e4e83e45eaa
+msgid "In order to harmonize the various authentication flows between local accounts and remote social accounts, the whole user registration and authentication codebase has been refactored."
+msgstr ""
+
+#: ../../advanced/social/index.rst:15
+#: b8c09d59e08f473f8b426cc3d4f82849
+msgid "Major changes:"
+msgstr ""
+
+#: ../../advanced/social/index.rst:17
+#: 47235726f2014cb1b021519817e4d224
+msgid "`geonode-user-accounts <https://github.com/GeoNode/geonode-user-accounts>`_ has been retired and is not used anymore. This app was only capable of managing local accounts;"
+msgstr ""
+
+#: ../../advanced/social/index.rst:19
+#: 0836960a621f48babeed7dfffa863282
+msgid "`django-allauth <https://github.com/pennersr/django-allauth>`_ has been integrated as a dependency of geonode. It provides a solution for managing both local and remote user accounts. It is now used for dealing with most user registration and auth flows;"
+msgstr ""
+
+#: ../../advanced/social/index.rst:21
+#: cdf2357875f94164a3fcaa8df0b285cb
+msgid "`django-invitations <https://github.com/bee-keeper/django-invitations>`_ has also been integrated as a dependency of geonode and is used for managing invitations to new users. This functionality was previously provided by geonode-user-accounts;"
+msgstr ""
+
+#: ../../advanced/social/index.rst:23
+#: d7649f63f5b5472a8219f228c708d509
+msgid "`django-allauth <http://django-allauth.readthedocs.io/en/latest/>`_ has been extended in order to provide the following additional features:"
+msgstr ""
+
+#: ../../advanced/social/index.rst:25
+#: 24b2030f3c3c44d59f831a3cdedae5a9
+msgid "Automatically registering an e-mail with a user when the e-mail is used to connect to a social account;"
+msgstr ""
+
+#: ../../advanced/social/index.rst:26
+#: 486447c0dbdc472caf9bbf8111d3cee2
+msgid "Automatically extract information from the user's social account and use that to enhance the user's profile fields on geonode. This was implemented in a pluggable way, allowing custom installs to configure it for other providers;"
+msgstr ""
+
+#: ../../advanced/social/index.rst:27
+#: 4a42e15bd1c743d98c293aec2c2991bf
+msgid "Allow approval of new registrations by staff members before allowing new users to login. This functionality was previously provided by geonode-user-accounts."
+msgstr ""
+
+#: ../../advanced/social/index.rst:29
+#: 1ff53c793fd34f73a7cfda951d575bb0
+msgid "There are now extra sections on the user's profile to manage connected social accounts and e-mail accounts"
+msgstr ""
+
+#: ../../advanced/social/index.rst:33
+#: 4c32bf19958a451d8b7ebd209498f11a
+msgid "When properly configured, the login and register pages now display the possibility to login with social accounts"
+msgstr ""
+
+#: ../../advanced/social/index.rst:39
+#: 795926595dde49a8bc003bf13c53a082
+msgid "Installation"
+msgstr ""
+
+#: ../../advanced/social/index.rst:41
+#: 7598c4c5105f4d4eb2cd7864337540fc
+msgid "Install the new ``allauth`` plugin and remove any of the old dependencies"
+msgstr ""
+
+#: ../../advanced/social/index.rst:50
+#: b664fb13105045998a75ddc53e078194
+msgid "ensure sure the DJango model is updated and the templates updated to the ``static`` folder"
+msgstr ""
+
+#: ../../advanced/social/index.rst:58
+#: be8d9ce05eaa44758138cb0962a40cce
+msgid "ensure that Social Providers are enabled in your ``settings``:"
+msgstr ""
+
+#: ../../advanced/social/index.rst:129
+#: 95754334b8664bcc939b78991b99bef8
+msgid "Configuration"
+msgstr ""
+
+#: ../../advanced/social/index.rst:131
+#: 669aabfa8f5c4e809cb15a345b6847ae
+msgid "Go to GeoNode/Django Admin Dashboard and add the Social Apps you want to configure:"
+msgstr ""
+
+#: ../../advanced/social/index.rst:133
+#: 49ef4256e60c4e369536f8e630204d84
+msgid "``admin/socialaccount/socialapp/``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:None
+#: e53854676ab241f2848f1464a452ae6b
+msgid "go to admin section"
+msgstr ""
+
+#: ../../advanced/social/index.rst:138
+#: ../../advanced/social/index.rst:None
+#: c5b9fdf2d1194d69a16441ff17457c1b
+#: 43fc3b386b8443afaa3bfcce9cd4ed58
+msgid "Linkedin"
+msgstr ""
+
+#: ../../advanced/social/index.rst:143
+#: ../../advanced/social/index.rst:None
+#: 77f719aa92024089a23f801c978fc0e7
+#: f54c462b0d164acfa5a35517937aa4c2
+msgid "Facebook"
+msgstr ""
+
+#: ../../advanced/social/index.rst:148
+#: f09eb09098a04c27ad7862b7eacc85cd
+msgid "Make sure to add the sites you want to enable."
+msgstr ""
+
+#: ../../advanced/social/index.rst:151
+#: e8c065a6ad134e84a1eb267e2d2c8a91
+msgid "Usage"
+msgstr ""
+
+#: ../../advanced/social/index.rst:153
+#: b9bc792390c74e7aa2eab52a2a7e96d7
+msgid "You need first to create and configure OAuth2 Applications on your Social Providers."
+msgstr ""
+
+#: ../../advanced/social/index.rst:155
+#: 3ecce7cb572e4843a9867899da4f35c8
+msgid "This will require a persoanl or business account, which can access to the ``developers`` sections of LinkedIn and Facebook and create and configure new ``Applications``."
+msgstr ""
+
+#: ../../advanced/social/index.rst:157
+#: cb894bd1ca884e259400f4c0711d414e
+msgid "That account won't be visibile to the GeoNode users. This is needed only to generate OAuth2 ``Client ID`` and ``Client Secret`` Authorization Keys."
+msgstr ""
+
+#: ../../advanced/social/index.rst:159
+#: 36d0dcd26efe42f48eb3cccbe1b1645b
+msgid "In the following sections we will see in details how to configure them for both LinkedIn and Facebook."
+msgstr ""
+
+#: ../../advanced/social/index.rst:162
+#: 6c38739ab56443cfa0ab6bd1bf186f0e
+msgid "LinkedIn Application"
+msgstr ""
+
+#: ../../advanced/social/index.rst:163
+#: a9662097547141e8a3ab1513ad0e8bcf
+msgid "(ref.: http://django-allauth.readthedocs.io/en/latest/providers.html)"
+msgstr ""
+
+#: ../../advanced/social/index.rst:165
+#: c7c35666411848939be80d3df095647a
+msgid "Go to https://www.linkedin.com/developer/apps and select ``Create Application``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:None
+#: efc2a38d1764435997b6e5d9dcaa14d5
+msgid "Linkedin Dev"
+msgstr ""
+
+#: ../../advanced/social/index.rst:170
+#: 5f02d32abd3e408b939d82fdcc7b1eb3
+msgid "Create a new Company"
+msgstr ""
+
+#: ../../advanced/social/index.rst:174
+#: a36825ac13e54106a72d4d25d6a69e9f
+msgid "Fill the informations"
+msgstr ""
+
+#: ../../advanced/social/index.rst:176
+#: 92b3e6f4d7164c799f87e4738921d7b5
+msgid "The logo must have precise square dimensions"
+msgstr ""
+
+#: ../../advanced/social/index.rst:180
+#: ef728c4c02a14b7b8d66da49f6934d9b
+msgid "Select the following ``Default Application Permissions``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:182
+#: b5f18dfcc9ff4652957dfca0bc45631f
+msgid "Be sure to select the ``r_basicprofile`` and ``r_emailaddress``  application permissions."
+msgstr ""
+
+#: ../../advanced/social/index.rst:186
+#: 6a4732fa424947169e5accd2888cd869
+msgid "Add OAuth 2.0 Authorized Redirect URLs:"
+msgstr ""
+
+#: ../../advanced/social/index.rst:195
+#: ../../advanced/social/index.rst:213
+#: ../../advanced/social/index.rst:250
+#: ../../advanced/social/index.rst:305
+#: f3892ca57514437abe762bb1d6a6a387
+#: bdc500ba8be74885a4febaf6f685adb8
+#: a27c44fbc4cf414da3e49bf204d3e40a
+#: 7053b9ad68ae4de088775e911d7a08ec
+msgid "Save"
+msgstr ""
+
+#: ../../advanced/social/index.rst:199
+#: ../../advanced/social/index.rst:231
+#: 3d0a386d616d41fc8c8935e9e0c83e57
+#: 9e4fec053be34e25b6e7158b43ba0492
+msgid "Take note of the ``Authentication Keys``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:203
+#: ../../advanced/social/index.rst:235
+#: afa526b8d8d14f9eae00fdd544c4b56d
+#: 5e716a2ad7764fca869cd6082236511e
+msgid "Go to GeoNode/Django admin, Social Applications and select the LinkedIn one"
+msgstr ""
+
+#: ../../advanced/social/index.rst:205
+#: ../../advanced/social/index.rst:237
+#: 38f3c163f4cf43988b545841115b4479
+#: 9968570bf3ff45878ec81cadba052bf4
+msgid "(``/admin/socialaccount/socialapp/``)"
+msgstr ""
+
+#: ../../advanced/social/index.rst:209
+#: ef35775d69324450a21a2be9080d7bdd
+msgid "Cut and Paste the ``Client ID`` and ``Client Secret`` on the related fields"
+msgstr ""
+
+#: ../../advanced/social/index.rst:216
+#: ff97cc20561a4cefaebfa08590403410
+msgid "Facebook Application"
+msgstr ""
+
+#: ../../advanced/social/index.rst:217
+#: 20ad5953ac6941b59c2add0c54ed4ccd
+msgid "(ref.: http://django-allauth.readthedocs.io/en/latest/providers.html) (ref.: https://www.webforefront.com/django/setupdjangosocialauthentication.html)"
+msgstr ""
+
+#: ../../advanced/social/index.rst:220
+#: 315e120f50e842a3b6d8965912a67783
+msgid "Go to https://developers.facebook.com/apps and Add a ``New Application``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:224
+#: 89e195e64d84401980db2fc89eeca486
+msgid "Create the ``App ID`` and go to the ``Dashboard``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:241
+#: 6260cc453d124311b6b80021aab8b759
+msgid "Cut and Paste the ``App ID`` and ``Secret Key`` on the related fields"
+msgstr ""
+
+#: ../../advanced/social/index.rst:252
+#: 2da3326772914b0d88d0e443de9b9dee
+msgid "Go back to the Facebook Application ``Dashboard`` and select ``Settings``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:256
+#: 1c7e4ee8c0cc489581358afcff44337d
+msgid "Add your App Domain"
+msgstr ""
+
+#: ../../advanced/social/index.rst:260
+#: b69e4037dcda4b3284f5dfd01af331d8
+msgid "Click on ``Add Platform``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:264
+#: 573d7a7a28c44964b1c5be11bf3415dd
+msgid "Select ``Web Site``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:268
+#: a3e4c38bd3ec47098810344a5bb56a81
+msgid "Add the ``URL``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:272
+#: bf0a0ebf925d4362abfb9286599e62c3
+msgid "And Save"
+msgstr ""
+
+#: ../../advanced/social/index.rst:276
+#: e9c98b8a19604ca8b1b4ecfc0c280799
+msgid "Go to ``Add Product``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:280
+#: 93063b7e16c242f29cb5381274d0a0fa
+msgid "Select ``Facebook Login``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:284
+#: c744ed9179f74636bbdab284e4588d73
+msgid "Select ``Web``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:288
+#: 859ec7c0dac347cc97e63bddc8bf59b8
+msgid "Go to ``Settings``"
+msgstr ""
+
+#: ../../advanced/social/index.rst:292
+#: 992adb5074c84283b3561b3c556c0acb
+msgid "Make sure ``Allow client OAuth`` and ``Access via OAuth Web`` are enabled"
+msgstr ""
+
+#: ../../advanced/social/index.rst:296
+#: 8e9ac40ac2284524ad088c45f0e83d28
+msgid "Add the valid ``redirect URIs``:"
+msgstr ""
+
+#: ../../advanced/social/index.rst:310
+#: a63fec2a07814cdf9db6cfa61fffa202
+msgid "Login by using Existing Accounts on GeoNode"
+msgstr ""
+
+#: ../../advanced/social/index.rst:312
+#: 0514d426b5494a0aa50be6ead1d3cad5
+msgid "If you want to enable an already existing user account to login through social apps, you need to associate it to social accounts."
+msgstr ""
+
+#: ../../advanced/social/index.rst:314
+#: 5f3c9fa9027a4db985928928619af6ea
+msgid "Usually this could be done only by the current user, since this operation requires authentication on its social accounts."
+msgstr ""
+
+#: ../../advanced/social/index.rst:316
+#: 62158d6739c0487aab84ad7dba7c479d
+msgid "In order to do that you need to go to the User Profile Settings"
+msgstr ""
+
+#: ../../advanced/social/index.rst:321
+#: c1873ffe6f1f4c97b617bde3d76662b4
+msgid "Click on “Connected social accounts”"
+msgstr ""
+
+#: ../../advanced/social/index.rst:325
+#: f42d10606fc74112af2d076e87362fc2
+msgid "And actually connect them"
+msgstr ""

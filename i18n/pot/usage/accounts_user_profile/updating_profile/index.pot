@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:4
+#: 8623849147c64a9dafc2984f18947eb7
+msgid "Updating the Profile"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:6
+#: fc43265d511146fbae05177ba1dad433
+msgid "Once having an account you can enrich your profile with useful information, you can also edit or delete the existing ones. You can connect the account with your social network, associate many e-mail addresses to it and manage many options such as preferences about notifications."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:9
+#: 0e5216dc604c4924a4e89cbd7732480f
+msgid "You can update these information anytime from your *Profile* page which is accessible from the user menu."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:11
+#: 96e41a740f7649c99658a00890083aa1
+msgid "So, click on your profile picture in the top right of the screen. A drop-down list will show. Click on :guilabel:`Profile` to enter the *Profile* settings page."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:16
+#: c143132e001747fc8665244e8957fcd6
+msgid "*Link to your profile*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:18
+#: af2b2cb64fcc4ae0ae262436d472f27a
+msgid "The *Profile* page looks like the one shown in the picture below."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:23
+#: 4286a31ed6024d78a8b294f2fb390807
+msgid "*User profile page*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:25
+#: 0605aaac6316453f9a84e108cda09f97
+msgid "Your personal information is shown under the username. At the bottom of the page are listed all the resources associated to your *Profile*, you can decide to view only datasets or maps or documents by clicking on the corresponding tab."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:27
+#: 05c2372a26da4bd0af6c1695ebcb72c7
+msgid "Through the link ``User datasets WMS GetCapabilities document`` you can retrieve an XML document with the list of the available datasets."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:29
+#: 74a14444308e4ff08cf53965f91af6b0
+msgid "On the right side of the page there are many useful links to edit personal information, to upload and create datasets or maps, to update your *Profile* settings and to get in touch with other GeoNode users."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:31
+#: 7d743df82da64041ab09ecaae955f852
+msgid "The :guilabel:`Favorites` link, also accessible from the user menu, drive you to the list of the resources marked as your favorites."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:36
+#: ffc9abb39c0840e09f6522935b0e1219
+msgid "*Favorites*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:38
+#: 1407658de7cb4d958f148ebe79b6e0f2
+msgid "Click the :guilabel:`Delete from Favorites` button to remove the resource from the list."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:40
+#: 738c9261b4d242c18a6590dfec4a1a9e
+msgid "The :guilabel:`My Activities` link allows to see all your recent activities on GeoNode such as datasets uploading and maps creation."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:45
+#: 392cfc9969ce4b699ec3e9da23241eee
+msgid "*Recent activities*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:47
+#: e749045d14af4b24b1dc1b70c64b66d2
+msgid "This link is also available in the user menu."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:49
+#: 504989dcdd0245e091572c7641479d5a
+msgid "All other links and their functionalities will be described in depth in the following sections."
+msgstr ""

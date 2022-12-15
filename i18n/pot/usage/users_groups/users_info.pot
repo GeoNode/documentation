@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/users_groups/users_info.rst:4
+#: f207e206e4a2419f842761dc98fd30b9
+msgid "Viewing other users information"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:6
+#: 1b81a5ef16bb49eea08ad2f9b313a72b
+msgid "Once your account is created, you can view other accounts on the system."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:7
+#: 3ab4e761e1ab4adebea70f7ecfa3d71c
+msgid "To see information about other users on the system, click the :guilabel:`People` link of the :guilabel:`About` menu in *Home* page."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:12
+#: 37bae1e41f8245f78ff9ec5df1403e81
+msgid "*About menu - People link*"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:14
+#: 1610937c66084f4799fae3eee58fefe3
+msgid "You will see a list of users registered on the system."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:19
+#: 2010d907bf4f4b37bb56127a7ef1c739
+msgid "*List of the registered users*"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:21
+#: 69152e121fb0432b937660a30cbc5635
+msgid "The *Search* tool is very useful in case of many registered users, type the name of the user you are looking for in the input text field to filter the users list."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:22
+#: a3c82f3037ea497680d2466a42842826
+msgid "Select a user and click on its *username* to access to the user details page."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:27
+#: 35437aa09e1742cb92396a21ac03fed2
+msgid "*User details*"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:29
+#: 2f1a15b639ec4ff6b67a05303b9df2b5
+msgid "In this page the main information about the user are shown: personal information (organization) and the resources the user owns (datasets, maps, documents and other apps)."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:31
+#: 6ea7e9aab04e4b9086e72d17f1eba052
+msgid "Through the :guilabel:`User Activities` link, in right side of the page, it is possible to visualize all the activities the user has been done."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:36
+#: f7f44a14d1144f1c818eb0d90831a0ed
+msgid "*User activities*"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:38
+#: a85b80a670174b9a872f60be71a48189
+msgid "The :guilabel:`Message User` link lets you to contact other users, see the next section to read more about that."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:40
+#: 89a16c6daa20474988d2e5376e656499
+msgid "It is also possible, in GeoNode, to see the recent activities of all users through the :guilabel:`Recent Activities` link of the user menu."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:45
+#: 8b85febe8e7446a99666eb0f068fc816
+msgid "*Recent Activities link*"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:47
+#: cfec1590994f4bf9bd0e4fb82473f928
+msgid "In the picture below an example."
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:52
+#: 98d7d8cc61fa423ea2f771ac7f985dd9
+msgid "*Recent Activities*"
+msgstr ""
+
+#: ../../usage/users_groups/users_info.rst:54
+#: 4337c8a3c0504fb295ae1bb3ee5662a1
+msgid "As you can see, you can decide whether to see only the activities related to datasets or those related to maps or comments by switching the tabs."
+msgstr ""

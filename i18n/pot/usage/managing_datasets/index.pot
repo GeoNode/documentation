@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_datasets/index.rst:2
+#: f5aad33179aa4a8d825ea87e122ff4fb
+msgid "Managing Datasets"
+msgstr ""
+
+#: ../../usage/managing_datasets/index.rst:4
+#: 86598cbfbf224300978209b0ce58fac0
+msgid "Datasets are published resources representing raster o vector spatial data sources. Datasets can also be associated with metadata, ratings, and comments."
+msgstr ""
+
+#: ../../usage/managing_datasets/index.rst:5
+#: 8e602b2932714af69801640f37516bc9
+msgid "In this section, you will learn how to create a new dataset by uploading a local data set, add dataset info, change the style of the dataset, and share the results."
+msgstr ""

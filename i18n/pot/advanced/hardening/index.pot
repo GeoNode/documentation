@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../advanced/hardening/index.rst:4
+#: 2111db8bbb9146b3ae6eef9aad8fe65c
+msgid "Publish on other than HTTP port (for e.g. 8082)"
+msgstr ""
+
+#: ../../advanced/hardening/index.rst:6
+#: 8baf2620ca9740d4b99189b08c47e42f
+msgid "By default geonode will be installed in the port 80 (i.e. HTTP) port. But what if you want to change the port of the geonode to other than HTTP port (For this example, I am taking 8082 port)? We need to edit couple of things in the web configuration. First things is, we need to update the `/etc/uwsgi/apps-enabled/geonode.ini` file,"
+msgstr ""
+
+#: ../../advanced/hardening/index.rst:12
+#: ../../advanced/hardening/index.rst:32
+#: 0fba49ff79104ecf898a4f2998746082
+#: d3e609ddd1684cc9973481145ba046dd
+msgid "Edit the following lines,"
+msgstr ""
+
+#: ../../advanced/hardening/index.rst:26
+#: 8a0e0bcb455543db970b1d26858d16d1
+msgid "After that we need to update the `/etc/nginx/sites-enabled/geonode` file,"
+msgstr ""

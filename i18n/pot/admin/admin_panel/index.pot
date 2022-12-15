@@ -1,0 +1,1761 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../admin/admin_panel/index.rst:2
+#: b210f02a6f1c4029ae98a8e79643f78a
+msgid "Accessing the panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:4
+#: e92ea48c9b694743acf19a6f2d6df781
+msgid "The *Admin Panel* is a model-centric interface where trusted users can manage content on GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:5
+#: 82d2d2d57e994351a1dbaa4de98bbce3
+msgid "Only the staff users can access the admin interface."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:7
+#: 0ec9697a4c784c3db8b0643922180671
+msgid "The “staff” flag, which controls whether the user is allowed to log in to the admin interface, can be set by the admin panel itself."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:9
+#: 5329bb5f529d42e29e4188875a454baf
+msgid "The panel can be reached from :guilabel:`Admin` link of the *User Menu* in the navigation bar (see the picture below) or through this URL: ``http://<your_geonode_host>/admin``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:14
+#: 7af7adc52fc947e68ae549fe121a646c
+msgid "*The Admin Link of the User Menu*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:16
+#: 2785f6a945cf4109bf9f2041f21b54d7
+msgid "When clicking on that link the Django-based *Admin Interface* page opens and shows you all the Django models registered in GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:21
+#: b0bdb53cbc4042858277731d562ff1e5
+msgid "*The GeoNode Admin Interface*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:24
+#: 710b35fdc01b441c877a4dcaf3efbc13
+msgid "Reset or Change the admin password"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:26
+#: 0e55b2106b454b39a1cac019668c2119
+msgid "From the *Admin Interface* you can access the :guilabel:`Change password` link by clicking on the username on the right side of the navigation bar. which will open a dropdown."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:31
+#: 0a68449e0aa44bb587bf7407aa8cbbf8
+msgid "*The Change Password Link*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:33
+#: 63fdaa9f32dd47d4838642f9950504bd
+msgid "It allows you to access the *Change Password Form* through which you can change your password."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:38
+#: 3da53eb1cefc4c3faffdbcaec6427755
+msgid "*The Change Password Form*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:40
+#: 20a470423c904813928add6ddbb30902
+msgid "Once the fields have been filled out, click on :guilabel:`Change my password` to perform the change."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:45
+#: 631294e14ee442b5a3cc59927794c0fd
+msgid "Simple Theming"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:47
+#: 5140640da4644b5a82919b5f734f058c
+msgid "GeoNode provides by default some theming options manageable directly from the Administration panel. Most of the times those options allows you to easily change the GeoNode look and feel without touching a single line of `HTML` or `CSS`."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:50
+#: b4768ab7ec344466bed19d390ce5f409
+msgid "As an `administrator` go to ``http://<your_geonode_host>/admin/geonode_themes/geonodethemecustomization/``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:55
+#: 2f577924bc2941eeb413187c54fbc56d
+msgid "*List of available Themes*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:57
+#: bb41e4d506cf4cb884f3b00882a524fa
+msgid "The panel shows all the available GeoNode themes, if any, and allows you to create new ones."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:59
+#: 646a067a3faa4d6b9f78e3bd9a4b8721
+msgid "Only one theme at a time can be **activated** (aka *enabled*). By disabling or deleting all the available themes, GeoNode will turn the gui back to the default one."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:61
+#: 26ef7c37cc82493f863dd6883551075c
+msgid "Editing or creating a new Theme, will actually allow you to customize several properties."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:63
+#: 3d5a8232256c44e4b4e0ce58dec7c30a
+msgid "At least you'll need to provide a ``Name`` for the Theme. Optionally you can specify also a ``Description``, which will allow you to better identify the type of Theme you created."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:69
+#: ../../admin/admin_panel/index.rst:76
+#: 13e04e3081344bf3b489c5975b96fa93
+#: 09e6d4e7e42a44aaba1184ff8fea7804
+msgid "*Theme Name and Description*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:71
+#: 5b23a5e51db74b65aa6312fe4a1b992f
+msgid "Just below the ``Description`` field, you will find the ``Enabled`` checkbox, allowing you to toggle the Theme."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:79
+#: c447b9d6029a456088ab2c485caa976a
+msgid "Jumbotron and Get Started link"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:81
+#: b422829bc70f471198196f717d5d115b
+msgid "Remember, everytime you want to apply some changes to the Theme, you **must** save the Theme and reload the GeoNode browser tab. In order to quickly switch back to the Home page, you can just click the ``VIEW SITE`` link on the top-right corner of the Admin dashboard."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:87
+#: 159f2f615cb9427586c29c799e0ba200
+msgid "The next section, allows you to define the first important Theme properties. This part involves the GeoNode main page sections."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:92
+#: 76192091e7c9454a9fd732e5d028ddc6
+msgid "*Jumbotron and Logo options*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:94
+#: 89885a1ffedb4b88a8029117e242337c
+msgid "By changing those properties as shown above, you will easily change your default home page from this"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:99
+#: 0ac31d99c74e49c4825fa437e8a90564
+msgid "*GeoNode Default Home*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:101
+#: 021935ab888f48e5922aff03e1053d83
+msgid "to this"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:106
+#: 964ebb2047b248d4ad52088a7751d74b
+msgid "*Updating Jumbotron and Logo*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:108
+#: 3fd42600d1c44cda95f83029ba3bff22
+msgid "It is possible to optionally **hide** the ``Jumbotron text``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:116
+#: 3936f7faf65e4229908678f93afe46e4
+msgid "*Hide Jumbotron text*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:119
+#: c6f773fd6baa42ba8d803914cb64e6d2
+msgid "Slide show"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:120
+#: 6c73503220a8471e8e7307931eeffe0a
+msgid "To switch between a slide show and a jumbotron, flip the value of the welcome theme from \"slide show\" to \"jumbotron\" and vice versa to either display a jumbotron with content or a slide show in the home page"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:122
+#: d4601584f637425d9bc56e515777ade3
+msgid "For example, to display a slide show, change the welcome theme from jumbotron background"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:127
+#: 2700eb0c201c4be6b54cd5bd0472f3dc
+msgid "to slide show"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:132
+#: ac7c8d5580f8418c8148da4cb3add430
+msgid "Before creating a slide show, make sure you have slides to select from (in the multi-select widget) to make up the slide show."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:137
+#: 0245c0a3efa2476c96ac54fa2170070e
+msgid "If no slides exist, click the plus (+) button beside the slide show multi-select widget to add a new slide."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:142
+#: d2338d133a0943e8971fe932ea4d06b1
+msgid "Fill in the slide name, slide content using markdown formatting, and upload a slide image (the image that will be displayed when the slide is in view)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:147
+#: 51d4fb1c860844099db8a3549ba368cd
+msgid "For slide images that already contain text, hide slide content by checking the checkbox labeled \"Hide text in the jumbotron slide\" as shown below, then save the slide."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:152
+#: f9ec153f61324d158c91ebc2e65f2ee8
+msgid "It is also possible to hide a slide from all slide show themes that use it by unchecking the checkbox labeled \"Is enabled\" as shown below."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:157
+#: 1671d88ef61d4e95961d60d4a4116387
+msgid "Selecting the above slide in a slide show and enabling slide show (using the \"welcome theme\" configuration) will create a slide show with a slide as shown below:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:163
+#: d26fe71e43cb462d827fad6369b17e48
+msgid "Switching between different themes"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:165
+#: 9dd2b561aac146d69e1d47caa1a6a81a
+msgid "In the case you have defined more Themes, switching between them is as easy as ``enabling`` one and ``disabling`` the others."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:167
+#: 6fc534a083c640a0b2799ed4a223deb0
+msgid "Remember to save the Themes everytime and refresh the GeoNode home page on the browser to see the changes."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:169
+#: e66734914d61474497ec2f7f8b36d6fd
+msgid "It is also important that there is **only one** Theme enabled **at a time**."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:171
+#: 7e73b72855004d81b77ad46bd7fe08ca
+msgid "In order to go back to the standard GeoNode behavior, just disable or delete all the available Themes."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:174
+#: 83aa2571c0d14190be20a4a5cbedeb0b
+msgid "Add a new user"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:176
+#: ca98f44ba89e42c394d381f442a8d7cd
+msgid "In GeoNode, administrators can manage other users. For example, they can *Add New Users* through the following form."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:181
+#: bbe37baa35f8489eaded305e080be4e1
+msgid "*Adding New Users*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:183
+#: 33ccd3d53d814097a16a236e3d7b0c94
+msgid "The form above can be reached from the *Admin Panel* at the following path: *Home > People > Users*. Click on :guilabel:`+  Add user` to open the form page."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:188
+#: a50f8e74d1ca441fb2ce19fb886d2dd8
+msgid "*The Add User button in the Users List page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:190
+#: 5c2974bc9ddd44608b71fd1ebaa506f8
+msgid "It is also available, in the GeoNode UI, the :guilabel:`Add User` link of the *About* menu in the navigation bar."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:195
+#: 5b5f7e13629c4d0ca8b98bdbe227a212
+msgid "*Add User Link*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:197
+#: ac731872abeb43abb6e2abcfe7c58781
+msgid "To perform the user creation fill out the required fields (*username* and *password*) and click on :guilabel:`Save`. You will be redirected to the *User Details Page* which allows to insert further information about the user."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:203
+#: 2af1c6e5baa44adfa438b7c4de36787f
+msgid "*The User Details Page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:205
+#: c839171ef3ed46a7a942d3bade641dcf
+msgid "The user will be visible into the *Users List Page* of the *Admin Panel* and in the *People Page* (see :ref:`user-info`)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:210
+#: 66b3dc0c0cdb40ddacb0027a98cafdad
+msgid "*The User in the People page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:213
+#: 2e2b730342ed450eb855e18e1a5a8f55
+msgid "Activate/Disable a User"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:215
+#: 68fc1c62313c41a68c2a12d792b3d8de
+msgid "When created, new users are *active* by default. You can check that in the *User Details Page* from the *Admin Panel* (see the picture below)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:221
+#: 11f4cc663a334c26a2c6b201f34b7bed
+msgid "*New Users Active by default*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:223
+#: fea793850a904ee8ac098f98168ea789
+msgid "*Active* users can interact with other users and groups, can manage resources and, more in general, can take actions on the GeoNode platform."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:224
+#: 25b58f43d0d145bea01d0be95bc794d5
+msgid "Untick the *Active* checkbox to disable the user. It will be not considered as user by the GeoNode system."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:229
+#: b1b08500f6344b778c57e0ffa9cb0562
+msgid "*Disabled Users*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:232
+#: 4c9c3e48e5394cc192c99638d4340b27
+msgid "Change a User password"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:234
+#: 6ff5f1bb5f524033aaab2fba5bcf3676
+msgid "GeoNode administrators can also change/reset the password for those users who forget it. As shown in the picture below, click on ``this form`` link from the *User Details Page* to access the *Change Password Form*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:240
+#: ../../admin/admin_panel/index.rst:248
+#: e4a22adc04c54cc0befbfc5f4e4a4f7d
+#: 39872695934149e7816fe33debc97b37
+msgid "*Changing Users Passwords*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:242
+#: b3012e120ef247e389d7342515ee09ce
+msgid "The *Change User Password Form* should looks like the following one. Insert the new password two times and click on :guilabel:`CHANGE PASSWORD`."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:251
+#: 924878cefede43559f471ee40a30f52d
+msgid "Promoting a User to Staff member or superuser"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:253
+#: dcd10c60fef244cd89c90a2ccbcfc8c9
+msgid "Active users have not access to admin tools. GeoNode makes available those tools only to *Staff Members* who have the needed permissions. *Superusers* are staff members with full access to admin tools (all permissions are assigned to them)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:257
+#: 13fe8766ea0a4a2c8bbbac9257d2d748
+msgid "Administrators can promote a user to *Staff Member* by ticking the **Staff status** checkbox in the *User Details Page*. To make some user a *Superuser*, the **Superuser status** checkbox should be ticked. See the picture below."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:263
+#: e6355ed30edf4f5a843e9aab00b21fd8
+msgid "*Staff and Superuser permissions*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:266
+#: eead2ce0e39e4654a795aaf46e9ff1ea
+msgid "Creating a Group"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:268
+#: 47717246853945d4a7f431adbcf04bda
+msgid "In GeoNode is possible to create new groups with set of permissions which will be inherited by all the group members."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:269
+#: 0e954e7434924f6780ff749f34df1c16
+msgid "The creation of a Group can be done both on the GeoNode UI and on the *Admin Panel*, we will explain how in this paragraph."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:271
+#: e48cd8d7fec7439690cbabdad9a4a1ef
+msgid "The :guilabel:`Create Groups` link of *About* menu in the navigation bar allows administrators to reach the *Group Creation Page*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:276
+#: 8a6feacc49564dc28cb8edb1493e2fb1
+msgid "*The Create Group Link*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:278
+#: b21571ba0cf542f2b167848941e263a8
+msgid "The following form will open."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:283
+#: 88344bd5649f4f08baab47f79b73dbf1
+msgid "*The Group Creation Form*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:285
+#: 4e6852fac7be4a55b59ef11e0c1567af
+msgid "Fill out all the required fields and click :guilabel:`Create` to create the group. The *Group Details Page* will open."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:291
+#: ad8101fc3f9f4d669d7349d261ad2855
+msgid "*The Group Details Page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:293
+#: 22c8de82d76440f494d87bc73d33b7f5
+msgid "The new created group will be searchable in the *Groups List Page*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:298
+#: fd4c3bbae5164594b95e9adb18774c1d
+msgid "*The Groups List Page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:300
+#: 091b5ed260704678b0eab5815d8fe3fc
+msgid "The :guilabel:`Create a New Group` button on the *Groups List Page* allows to reach the *Group Creation Form*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:302
+#: a38e04d51e824ddfb562f45c4fd73754
+msgid "As already mentioned above, groups can also be created from the Django-based *Admin Interface* of GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:303
+#: a8b7d9fdf44a430d936b52b07104bfc7
+msgid "The *Groups* link of the *AUTHENTICATION AND AUTHORIZATION* section allows to manage basic Django groups which only care about permissions."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:304
+#: 9c5d883372cc43499edfc64354b549cf
+msgid "To create a GeoNode group you should take a look at the *GROUPS* section."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:309
+#: 81f713dc1f134c29876c8748d2eb19ba
+msgid "*The Groups Section on the Admin Panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:311
+#: f16d85c428234e818b0381f10e5be382
+msgid "As you can see, GeoNode provides two types of groups. You will learn more about that in the next paragraph."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:314
+#: d8f5f23bc8b647b8aeb5c6e3f3ebafcd
+msgid "Types of Groups"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:316
+#: d82b6e24358f4c5bb816516ea23c18d0
+msgid "In GeoNode users can be grouped through a *Group Profile*, an enhanced Django group which can be enriched with some further information such as a description, a logo, an email address, some keywords, etc. It also possible to define some *Group Categories* based on which those group profiles can be divided and filtered."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:319
+#: 1b9bf89c127a4458b2cc139b77edeea7
+msgid "A new **Group Profile** can be created as follow:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:321
+#: 724612dbd29849689cc7186ee0204bb7
+msgid "click on the *Group Profile* :guilabel:`+ Add` button"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:323
+#: e3a46fffe53e4d2c80daed179ee0277f
+msgid "fill out all the required fields (see the picture below), *Group Profiles* can be explicitly related to group categories"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:328
+#: 654e637ac4ea42139b748b141371391f
+msgid "*A new Group Profile*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:330
+#: 11cf515e8c134e4990ae8880204bf34c
+msgid "click on :guilabel:`Save` to perform the creation, the new created group profile will be visible in the *Group Profiles List*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:335
+#: 8d3fcfb495fa48c8a85fe438af47a84a
+msgid "*The Group Profiles List*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:338
+#: 01fe48ee980c43b9ad02c17b4879e602
+msgid "Group Categories"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:340
+#: 7272bd71f2474c20ad78edcbcc7a8781
+msgid "*Group Profiles* can also be related to *Group Categories* which represents common topics between groups. In order to add a new **Group Category** follow these steps:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:343
+#: 8482fc05b79a4dc89dd82f78afe566f2
+msgid "click on the *Group Categories* :guilabel:`+ Add group category` button"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:345
+#: a7580e3a626c45aca7a1ae033ad7f27c
+msgid "fill out the creation form (type *name* and *description*)"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:350
+#: 6ac0cf11f5144e2aadaaf7b379aa1993
+msgid "*A new Group Category*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:352
+#: c00f5e4d551b490d830bdc666e47dac1
+msgid "click on :guilabel:`Save` to perform the creation, the new created category will be visible in the *Group Categories List*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:357
+#: a767c6cf8e5e4c8099028655a8424f93
+msgid "*The Group Categories List*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:361
+#: c5fcfe467e3443b4a24b5d465d91e260
+msgid "Managing a Group"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:363
+#: 911430d21ef648ebbee443de851eb555
+msgid "Through the :guilabel:`Groups` link of *About* menu in the navigation bar, administrators can reach the *Groups List Page*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:368
+#: fad22ceb11b74f3ebf639518a1af0c86
+msgid "*The Groups Link in the navigation bar*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:370
+#: 3ea8dcede2554b2ab6fbfcbe29110736
+msgid "In that page all the GeoNode *Group Profiles* are listed."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:375
+#: d3a44f30a8e1490ea2aa591474249074
+msgid "*Group Profiles List Page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:377
+#: f3d8208502fa461c90df4dd2ab5c89e3
+msgid "For each group some summary information (such as the *title*, the *description*, the number of *members* and *managers*) are displayed near the *Group Logo*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:379
+#: d46775ae890549569852a5134c390c83
+msgid "Administrators can manage a group from the *Group Profile Details Page* which is reachable by clicking on the *title* of the group."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:384
+#: 3ce15f36f127416ab597a5c3389e7760
+msgid "*Group Profile Details Page*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:386
+#: cfd1fb90c7b547c5ac7718575da4d508
+msgid "As shown in the picture above, all information about the group are available on that page:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:388
+#: f585ac6c5101487db194b72800cbf963
+msgid "the group *Title*;"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:389
+#: 62bc06aa61fe42fb95cf484876e858a6
+msgid "the *Last Editing Date* which shows a timestamp corresponding to the last editing of the group properties;"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:390
+#: d8c28ac310fc4abf96d2d9b50c422d4c
+msgid "the *Keywords* associated with the group;"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:391
+#: 5c913db88ca2487199e2191f03b779bc
+msgid "*Permissions* on the group (Public, Public(invite-only), Private);"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:392
+#: 25a5b5192b6345529a8d15e108c4bfb2
+msgid "*Members* who join the group;"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:393
+#: 36308353573a40698c957aa96b29e02b
+msgid "*Managers* who manage the group."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:395
+#: ed38fe9b87064dd8a9677ae9425bc812
+msgid "There are also four links:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:397
+#: 7e4ceb7b6b644937896f0fe9c1ccedf0
+msgid "The :guilabel:`Edit Group Details` link opens the *Group Profile Form* through which the following properties can be changed:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:399
+#: 314c43f8175d4e2fb80bd302bc94848d
+msgid "*Title*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:400
+#: a0476de7e7db4441910d53f8ba87bee7
+msgid "*Logo* (see next paragraphs)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:401
+#: 108e8665d4894773bbf04015c1484060
+msgid "*Description*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:402
+#: e34aac1d1e3d4222bf4dc35466c3452a
+msgid "*Email*, to contact one or all group members."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:403
+#: e2a53a77eb524b33a22f7a8ff535b1b0
+msgid "*Keywords*, a comma-separated list of keywords."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:404
+#: 2911252cea6c43bdb356df3448841682
+msgid "*Access*, which regulates permissions:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:406
+#: 0a495f4978fd4c11bf3c6218f52ebe3d
+msgid "*Public*: any registered user can view and join a public group."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:407
+#: f73bf932c8c444afa34c66fa88041b69
+msgid "*Public (invite-only)*: only invited users can join, any registered user can view the group."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:408
+#: c8daf30f487e4980bc563bad03858d72
+msgid "*Private*: only invited users can join the group, registered users cannot see any details about the group, including membership."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:410
+#: a5a68dccd7964b1ea29d32aab50a30a2
+msgid "*Categories*, the group categories the group belongs to."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:412
+#: c2f7b392e9dd4cbaa00c557369b995ac
+msgid ":guilabel:`Manage Group Members` (see next paragraphs)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:413
+#: f700437403fb4d0aa1af45106313a2e3
+msgid "the :guilabel:`Delete this Group`, click on it to delete the Group Profile. GeoNode requires you to confirm this action."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:419
+#: 6197d122989b4fd880066e00a63adc80
+msgid "*Confirm Group Deletion*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:421
+#: 20ebeb80fb5144b58999f12a15a835ab
+msgid "the :guilabel:`Group Activities` drives you to the *Group Activities Page* where you can see all datasets, maps and documents associated with the group. There is also a *Comments* tab which shows comments on those resources."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:426
+#: 5f8be5632f2949aca6940ba175a74758
+msgid "*Group Activities*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:429
+#: 5f38d1687bda41e89e742804e321b3de
+msgid "Group Logo"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:431
+#: b43eb7619aff44249397a54f90e658bb
+msgid "Each group represents something in common between its members. So each group should have a *Logo* which graphically represents the idea that identify the group."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:434
+#: fd729735f95847f7a5c198a16f1c1cae
+msgid "On the *Group Profile Form* page you can insert a logo from your disk by click on :guilabel:`Browse...`."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:439
+#: 7971c98faf644f45ae5b4df9f3e37b6b
+msgid "*Editing the Group Logo*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:441
+#: 54bc8c57ea4b42b7bdf554f9c785e4d2
+msgid "Click on :guilabel:`Update` to apply the changes."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:442
+#: dcd321884175448f9232bf6ec8277ad2
+msgid "Take a look at your group now, you should be able to see that logo."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:447
+#: 00131aac3e83483f9181b6298d9e63a4
+msgid "*The Group Logo*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:450
+#: 5fe6c3fc700a47688fffc760996a390c
+msgid "Managing Group members"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:452
+#: 5ff92255c9c1430db73bdb653c72e056
+msgid "The :guilabel:`Manage Group Members` link opens the *Group Members Page* which shows *Group Members* and *Group Managers*. **Managers** can edit group details, can delete the group, can see the group activities and can manage memberships. Other **Members** can only see the group activities."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:457
+#: 048db9fe105b41b998bceae6e2475122
+msgid "In Public Groups, users can join the group without any approval. Other types of groups require the user to be invited by the group managers."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:461
+#: 095125a12b48435eb529ce9cba66cd47
+msgid "Only group managers can *Add new members*. In the picture below, you can see the manager can search for users by typing their names into the *User Identifiers* search bar. Once found, he can add them to the group by clicking the :guilabel:`Add Group Members` button. The *Assign manager role* flag implies that all the users found will become managers of the group."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:466
+#: bf2db61ff23b421aaa5488e16d558e23
+msgid "*Adding a new Member to the Group*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:468
+#: 5d72da127067497b83c7a8c98aa444a4
+msgid "The following picture shows you the results."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:473
+#: 35512b5124214de78be79a726a8cc9ee
+msgid "*New Members of the Group*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:475
+#: b067b1dd0a2f4725b2cc63f4cd62fa80
+msgid "If you want to change the role of group members after adding them, you can use the \"promote\" button to make a member into a manager, and the \"demote\" button to make a manager into a regular member."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:478
+#: 6385f7d80e764d369e75ccb09a60ed50
+msgid "Group based advanced data workflow"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:480
+#: f018da1fa28042d39113dc1dda4ac25c
+msgid "By default GeoNode is configured to make every resource suddenly available to everyone, i.e. publicly accessible even from anonymous/non-logged in users."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:483
+#: 887ff671273f4facb70263d8b3f8668b
+msgid "It is actually possible to change few configuration settings in order to allow GeoNode to enable an advanced publication workflow."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:485
+#: 65aa6f78da6c4ee39477c926137cc9fa
+msgid "With the advanced workflow enabled,  your resources won't be automatically published (i.e. made visible and accessible for all, contributors or simple users)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:487
+#: 64857491c177463eb22c41c1c646f39f
+msgid "For now, your item is only visible by yourself, the manager of the group to which the resource is linked (this information is filled in the metadata), the members of this group, and the GeoNode Administrators."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:489
+#: 8caacd8e51764be4be594a396f142089
+msgid "Before being published, the resource will follow a two-stage review process, which is described below:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:494
+#: ec874fd5f48b4964872a75964b0913dd
+msgid "*From upload to publication: the review process on GeoNode*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:497
+#: 28eda2bddbfc4c83a60701f15d3bd4dc
+msgid "How to enable the advanced workflow"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:499
+#: 583d7733e98a4b709d4d387a478a2994
+msgid "You have to tweak the GeoNode settings accordingly."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:501
+#: 7113b14cbe4341cba44ec13c1d0bd946
+msgid "Please see the details of the following GeoNode ``Settings``:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:503
+#: a111a474e2c9474790ee2a24e849f06c
+msgid "`RESOURCE_PUBLISHING <../../basic/settings/index.html#resource-publishing>`_"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:505
+#: 35a111e1afee472b99aa0cdff53f9a4b
+msgid "`ADMIN_MODERATE_UPLOADS <../../basic/settings/index.html#admin-moderate-uploads>`_"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:507
+#: a20893423dfa4eb2a5e02d2493049d30
+msgid "`GROUP_PRIVATE_RESOURCES <../../basic/settings/index.html#group-private-resources>`_"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:509
+#: b0d990a9426946178fc1602d2c519686
+msgid "Summarizing, when all the options above of the Advanced Workflow are enabled, upon a new upload we will have:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:511
+#: 1a6e4ee77dbc45608f27eee3fc77e5fc
+msgid "The **\"unpublished\"** resources will be **hidden** to **anonymous users only**. The **registered users** will be still able to access the resources (if they have the rights to do that, of course)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:513
+#: 45160401905d4b23a61b23ad8933683c
+msgid "The **\"unpublished\"** resources will remain hidden to users if the permission (see *Admin Guide section: 'Manage Permissions'*) will be explicitly removed"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:515
+#: e62951075d2e4221b90d87c773919f5e
+msgid "During the upload, whenever the advanced workflow is enabled, the **owner's Groups** are automatically allowed to access the resource, even if the **\"anonymous\"** flag has been disabled. Those permissions can be removed later on"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:517
+#: 13a31e136774488ebc9bfe72bfdf503b
+msgid "During the upload, **\"managers\"** of the owner's Groups associated to the resource, are always allowed to edit the resource, the same as they are admin for that resource"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:519
+#: 076b698357194305b3fa333092c9d1c9
+msgid "**\"managers\"** of the owner's Groups associated to the resource are allowed to **\"publish\"** also the resources, not only to **\"approve\"** them"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:523
+#: 1128823ac2844019b8bb24b37db3b0d5
+msgid "Change the owner rights in case of advanced workflow is on"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:524
+#: 76a59a833af0428aae346a4ed872e12f
+msgid "After switching ``ADMIN_MODERATE_UPLOADS`` to True and resource is approved owner is no longer able to modify it. He will see new button on the resource detail page: Request change. After clicking this, view with short form is shown. On this view user can write short message why he want to modify the resource."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:529
+#: d0fbbb5a8ed24c868b1c4ee13c876cb9
+msgid "This message will be sent through messaging and email system to administrators:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:531
+#: dcda9319287440878187c04a643d0c80
+msgid "After administrator unapprove the resource owner is again able to modify it."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:534
+#: 212aff5d13e24e2f9f298416438bc2d5
+msgid "The group Manager approval"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:535
+#: 48f4ddea7524414689486408feb1ccc1
+msgid "Here, the role of the Manager of the group to which your dataset, document or map is linked is to check that the uploaded item is correct. Particularly, in the case of a dataset or a map, it consists of checking that the chosen cartographic representation and the style are fitting but also that the discretization is appropriate."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:539
+#: 7c970f2fbe074c3c835f96a187363219
+msgid "The Manager must also check that the metadata are properly completed and that the mandatory information (Title, Abstract, Edition, Keywords, Category, Group, Region) are filled."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:542
+#: 3af9343be6914cd48f225b297be4d00c
+msgid "If needed, the Manager can contact the contributor responsible of the dataset, document or map in order to report potential comments or request clarifications."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:545
+#: 44089a11bca4439b86569750dff255b0
+msgid "Members of the group can also take part in the reviewing process and give some potential inputs to the responsible of the dataset, document or map."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:548
+#: 1a5d85b867ee49e19918fb374e841422
+msgid "When the Manager considers that the resource is ready to be published, he should approve it. To do so, the Manager goes to the resource detail page, then opens the :guilabel:`Edit Metadata`. In the :guilabel:`Settings` tab, the manager checks the :guilabel:`Approved` box, and then updates the metadata and saves the changes:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:552
+#: 4211991936ea414d899daa35b2d5a252
+msgid "Following this approval, the GeoNode Administrators receive a notification informing them that an item is now waiting for publication"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:556
+#: 60cfeea8c0e74b27989e40e2e6474b02
+msgid "The publication by the GeoNode Administrator"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:558
+#: 0957c1447bb346cea48d7922aff87e7b
+msgid "Prior to the public release of an approved resource, the Administrator of the platform performs a final validation of the item and its metadata, notably to check that it is in line with license policies."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:561
+#: 473b9aac241d41a5b9d412947d32384a
+msgid "If needed, the GeoNode Administrator can contact the Manager who has approved the resource, as well as its responsible."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:563
+#: 76eff7ffb7c548f39d063cbade48e3d0
+msgid "Once the resource is validated, the item is made public by the Administrator. It can now be viewed, accessed, and downloaded in accordance with the ``Permissions`` set by the responsible contributor."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:567
+#: ffd5c12871664d5d9aba38e65d1adc5a
+msgid "Promotion, Demotion and Removal of Group Members"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:568
+#: 1383d32e9c12414386bc0da4fec970df
+msgid "If the owner is a group Manager, They have permissions to edit, approve, and publish the resource."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:570
+#: 4d1245d9d3664519943e2b6d316d0463
+msgid "When a group member is promoted to a manager role, they gain permissions to edit, approve and publish the resource."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:572
+#: 73039c4f6b8d486ba88cfa7ef69581c9
+msgid "When a group manager is demoted to a member role, they lose edit permissions of the resource and only remain with view and download permissions."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:574
+#: a4b2e664d5984df198fbb50fc01770fb
+msgid "When a member is removed from the group, they can nolonger access the unpublished resource anymore."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:577
+#: d1e60ccb84ea46409d9e5aaf1a370fa0
+msgid "Manage profiles using the admin panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:579
+#: c50377870a0247a9aef2c16f7743478e
+msgid "So far GeoNode implements two distinct roles, that can be assigned to resources such as datasets, maps or documents:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:581
+#: 2b85179a4c5b451c8e8021b3ec46f183
+msgid "party who authored the resource"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:582
+#: 19a762ac221b46ceb37bcb81832bcef8
+msgid "party who can be contacted for acquiring knowledge about or acquisition of the resource"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:584
+#: 5ab684458b654f088b85a7538fcde24b
+msgid "These two profiles can be set in the GeoNode interface by accessing the metadata page and setting the ``Point of Contact`` and ``Metadata Author`` fields respectively."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:586
+#: d9e6743c90084a2eb63e90c61e1890a2
+msgid "Is possible for an administrator to add new roles if needed, by clicking on the :guilabel:`Add contact role` button in the :guilabel:`Base -> Contact Roles` section:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:591
+#: 90b3caa89fe846a4a3fa30d6031bf25b
+msgid "Clicking on the :guilabel:`People` section (see figure) will open a web for with some personal information plus a section called :guilabel:`Users`."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:595
+#: 3f1c4bcc08c24ca4a20d057087cd69b5
+msgid "Is important that this last section is not modified here unless the administrator is very confident in that operation."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:601
+#: 7e9c7671bcd4414fa90497724537e3c9
+msgid "Manage datasets using the admin panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:603
+#: 7e5bdba7648649f59f3644bafda24869
+msgid "Some of the datasets information can be edited directly through the admin interface although the best place is in the :guilabel:`Dataset -> Metadata Edit` in GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:605
+#: fa2b4364976d47948974919d5984c723
+msgid "Clicking on the :guilabel:`Admin > Dataset > Datasets` link will show the list of available datasets."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:610
+#: 9fae5bbef30b418c98aad0f01e8b67cd
+msgid "It is not recommended to modify the Datasets' ``Attributes`` or ``Styles`` directly from the Admin dashboard unless you are aware of your actions."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:612
+#: b03e2e60cee247b683ec5eef63b87d41
+msgid "The ``Metadata`` information can be changed for multiple datasets at once through the :guilabel:`Metadata batch edit` action. Select the datasets you want to edit in the batch and at the bottom, enter the `Metadata batch edit` action then click :guilabel:`Go`."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:617
+#: aac8c0772b9147a282e57ca5756ca843
+msgid "This will open a form with the information you can edit in a batch. see picture below."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:622
+#: ee13d092f26748f292bfbb4e3ea67751
+msgid "By clicking over one Dataset link, it will show a detail page allowing you to modify some of the resource info like the metadata, the keywords, the title, etc."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:624
+#: eef85dab222346d0822e64c3aaee0b18
+msgid "It is strongly recommended to always use the GeoNode resource :guilabel:`Edit Metadata` or :guilabel:`Advanced Metadata` tools in order to edit the metadata info."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:626
+#: 0b7a7c48c35e4948b0c0e7615dad566c
+msgid "The ``Permissions`` can be changed also for multiple Datasets at once through the :guilabel:`Set permissions` action."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:631
+#: db47ccc7c07e400d8622f2cbc5d3983f
+msgid "By clicking over one Dataset link, it will show a detail page allowing you to modify the permissions for the selected resources."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:635
+#: c2ffd76cd18a44daa290cefe1922e602
+msgid "Manage the maps using the admin panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:637
+#: c83a7631e89240d4b512e6d0982c223a
+msgid "Similarly to the Datasets, it is possible to manage the available GeoNode Maps through the Admin panel also."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:639
+#: 7851eda4efb94a04a487ac1c2047b912
+msgid "Move to :guilabel:`Admin > Maps` to access the Maps list."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:644
+#: 7acc1a51cf764ccc9e834785986d34db
+msgid "Notice that by enabling the ``Featured`` option here, will allow GeoNode to show the Map thumbnail and the Map detail link at the top under featured resources on the :guilabel:`Home Page`"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:653
+#: 6407169ace8d430e9fc2132aab48d537
+msgid "Manage the documents using the admin panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:655
+#: 013ceea77c654590b785ba11cba01f11
+msgid "Similarly to the Datasets and Maps, it is possible to manage the available GeoNode Documents through the Admin panel also."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:657
+#: 365d3e0b230b413089e8087594574310
+msgid "Move to :guilabel:`Admin > Documents` to access the Documents list."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:662
+#: 40e33777c3ed4e9ab7f67e13e25c4c9d
+msgid "By clicking over one Document link, it will show a detail page allowing you to modify some of the resource info like the metadata, the keywords, the title, etc."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:665
+#: 50ec01b40e014f04b9866736e0e45ef1
+msgid "Manage the base metadata choices using the admin panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:667
+#: 1a4a7c7662474843af6888580010d88c
+msgid ":guilabel:`Admin > Base` contains almost all the objects you need to populate the resources metadata choices."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:672
+#: 3f98aba78aec47aba80999e8434cc774
+msgid "*Admin dashboard Base Panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:674
+#: d6512295b662494a8446709e7c6cc111
+msgid "In other words the options available from the :guilabel:`select-boxes` of the resource :guilabel:`Edit Metadata` and :guilabel:`Advanced Metadata` forms."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:679
+#: d2086325ae004005a452e81f83a0171b
+msgid "*Metadata Form*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:684
+#: eb1efa03bb9c4766a2fe55875c662d6f
+msgid "*Advanced Metadata Form*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:686
+#: 526b11f91f88430baf35c685e503e6bf
+msgid "When editing the resource metadata through the :guilabel:`Edit Metadata`, some fields are marked as ``mandatory`` and by filling those information the ``Completeness`` progress will advance accordingly."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:692
+#: d4f4b5a598f64461900fc6e38890090e
+msgid "*Metadata Completeness*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:694
+#: 6191cea0670f4871814fd8e538c05697
+msgid "Even if not all the fields have been filled, the system won't prevent you to update the metadata; this is why the ``Mandatory`` fields are mandatory to be fully compliant with an ``ISO 19115`` metadata schema, but are only recommended to be compliant with GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:697
+#: ed50f22be78b4b4b975f8f8fa345b3dc
+msgid "Also the ``Completeness`` indicates how far the metadata is to be compliant with an ``ISO 19115`` metadata schema."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:699
+#: a240d854286743f29859c36215509029
+msgid "Of course, it is **highly** recommended to always fill as much as possible at least all the metadata fields marked as ``Mandatory``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:701
+#: a315712e44ee4c158e6bcc695e8335de
+msgid "This will improve not only the quality of the data stored into the system, but will help the users to easily search for them on GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:703
+#: 64e3b4eaa53947838f868ec6f573a9dd
+msgid "All the ``Search & Filter`` panels and options of GeoNode are, in fact, based on the resources metadata fields. Too much generic descriptions and too empty metadata fields, will give highly un-precise and very wide search results to the users."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:707
+#: 171465ed551340eba6b355df0c88065e
+msgid "Hierarchical keywords"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:709
+#: 94e9a765ed134aaf8971a2ba6c7334ab
+msgid "Through the :guilabel:`Admin > Base > Hierarchical keywords` panel it will be possible to manage all the keywords associated to the resources."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:714
+#: bcd8e769579046c2b659dfa710aa2d37
+msgid "*Hierarchical keywords list*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:719
+#: 1b75ea3e477f4644890b2588d2cae3e9
+msgid "*Hierarchical keywords edit*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:721
+#: cede9ef9304f42bd992b018f5e397723
+msgid "The :guilabel:`Name` is the human readable text of the keyword, what users will see."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:723
+#: 1d6f205c219d43f1bba784896060b392
+msgid "The :guilabel:`Slug` is a unique label used by the system to identify the keyword; most of the times it is equal to the name."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:725
+#: 9620f3f1d4174db89594836b769aa8a8
+msgid "Notice that through the :guilabel:`Position` and :guilabel:`Relative to` selectors, it is possible to establish a hierarchy between the available keywords. The hierarchy will be reflected in the form of a tree from the metadata panels."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:728
+#: 53bd1b070f8a4fd9a511a4d28748efd6
+msgid "By default each user with editing metadata rights on any resource, will be able to insert new keywords into the system by simply typing a free text on the keywords metadata field."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:730
+#: 050c0f8200a5467f9a38a64d881ac129
+msgid "It is possible to force the user to select from a fixed list of keywords through the `FREETEXT_KEYWORDS_READONLY <../../basic/settings/index.html#freetext-keywords-readonly>`_ setting."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:732
+#: c84be1109781466185bf77d422f80aba
+msgid "When set to `True` keywords won't be writable from users anymore. Only admins can will be able to manage them through the :guilabel:`Admin > Base > Hierarchical keywords` panel."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:735
+#: 91fa835d24584c25a91340a8760bc29e
+msgid "Licenses"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:737
+#: 0b8698604b404ee2abc76a4ae1639200
+msgid "Through the :guilabel:`Admin > Base > Licenses` panel it will be possible to manage all the licenses associated to the resources."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:742
+#: 517520261840478282cd3294cef2c744
+msgid "*Metadata editor Licenses*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:744
+#: a653fda63abd49dd85c324e43bd2da7c
+msgid "It is **strongly** recommended to not publish resources without an appropriate license. Always make sure the data provider specifies the correct license and that all the restrictions have been honored."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:747
+#: 6147679a476b4601b43d9cd661f5bfa2
+msgid "Metadata Regions"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:749
+#: f5c9e5839c5049bd910f8180e12aaa6a
+msgid "Through the :guilabel:`Admin > Base > Metadata Regions` panel it will be possible to manage all the admin areas associated to the resources."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:754
+#: 9b2aa8962f97413c89ef41e7fffb7014
+msgid "*Resource Metadata Regions*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:756
+#: c9ec11a13740491ea249f322a946eec1
+msgid "Notice that those regions are used by GeoNode to filter search results also through the resource list view."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:758
+#: 165da0a3f9634439bcd45541027f6470
+msgid "GeoNode tries to guess the ``Regions`` intersecting the data bounding boxes when uploading a new dataset. Those should be refined by the user dataset on anyway."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:761
+#: 10b7d49a48b14ab3b9e298439523b804
+msgid "Metadata Restriction Code Types and Spatial Representation Types"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:763
+#: f1491d9aaaf241c89e0ba1b3ccf931c2
+msgid "Through the :guilabel:`Admin > Base > Metadata Restriction Code Types` and :guilabel:`Admin > Base > Metadata Spatial Representation Types` panels, it will be possible to **update only** the metadata descriptions for restrictions and spatial representation types."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:766
+#: 3c562162fed242ccb6b26cddae48ab23
+msgid "Such lists are *read-only* by default since they have been associated to the specific codes of the ``ISO 19115`` metadata schema. Changing them would require the system to provide a custom dictionary through the metadata catalog too. Such functionality is not supported actually by GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:770
+#: 8a2ae66e615f42069c9517800efa26c3
+msgid "Metadata Topic Categories"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:772
+#: 21fc5f22c45a4176afdbc4937eec4e6a
+msgid "Through the :guilabel:`Admin > Base > Metadata Topic Categories` panel it will be possible to manage all the resource metadata categories avaialble into the system."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:774
+#: 792c644c2964420a98c5dd8575604f6e
+msgid "Notice that by default, GeoNode provides the standard topic categories available with the ``ISO 19115`` metadata schema. Changing them means that the system won't be compliant with the standard ``ISO 19115`` metadata schema anymore. ``ISO 19115`` metadata schema extensions are not currently supported natively by GeoNode."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:777
+#: 0efe2e02af2b45d687ed8d586710f522
+msgid "It is worth notice that GeoNode allows you to associate `Font Awesome Icons <https://fontawesome.com/icons?d=gallery>`_ to each topic category through their ``fa-icon`` code. Those icons will be used by GeoNode to represent the topic category on both the ``Search & Filter`` menus and :guilabel:`Metadata` panels."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:780
+#: c2c637b779944921a4e3b3e8412fbebe
+msgid "The list of the ``Metadata Topic Categories`` on the home page is currently fixed. To change it you will need to update or override the GeoNode ``index.html`` HTML template."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:782
+#: 4f0afd3bbe1045bdaad37adf41083a02
+msgid "By default the ``Metadata Topic Categories`` are *writable*. Meaning that they can be removed or created by the :guilabel:`Admin` panel."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:784
+#: 3500003c82734721b563691dcfbed072
+msgid "It is possible to make them fixed (it will be possible to update their descriptions and icons only) through the `MODIFY_TOPICCATEGORY <../../basic/settings/index.html#modify-topiccategory>`_ setting."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:787
+#: f6fedb41954e4fcc9a6327456681dea2
+msgid "Announcements"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:789
+#: 714490636c1f442ca8fc788ea459c116
+msgid "As an Administrator you might need to broadcast announcements to the world about your portal or simply to the internal contributors."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:791
+#: ffe108cff68e4a0ca1851c0f5d621ef7
+msgid "GeoNode ``Announcements`` allow actually to do that; an admin has the possibility to create three types of messages, accordingly to their severity, decide their validity in terms of time period (start date and expiring date of the announcement), who can view them or not (everyone or just the registerd members) and whenever a user can hide the message or not and how long."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:796
+#: 763ae2ec27e04b12acdb36b51e886658
+msgid "There are three types of announcements accordingly to their severity level: ``General``, ``Warning`` and ``Critical`` The difference is mainly the color of the announcement box."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:800
+#: d04d4cfcd12040aab3815d62a5e0dbe9
+msgid "Only administrators and staff members can create and manage announcements."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:802
+#: 0ff8443d60424f199951444ee91c37c5
+msgid "Currently there two ways to access and manage the announcements list:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:804
+#: 41a37480214a4597b8ba643dee81c40c
+msgid "Via the GeoNode interface, from the :guilabel:`Profile` panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:806
+#: ea54d6a781dc4b25a7895329f7a4e699
+msgid "Those are accessible by both admins and staff members."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:811
+#: 615e69883ee0429bb89d7482c4f81888
+msgid "*Announcements from the Profile panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:813
+#: 8499fb0f694646c3959a7aa84a8ea55b
+msgid "Via the GeoNode :guilabel:`Admin` panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:815
+#: bb5763719a4f4ae4a2e9c6efe101910a
+msgid "Those are accessible by admins only."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:820
+#: 39308920b77f4324b5dc95bbf52a4cf8
+msgid "*Announcements from the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:822
+#: 2bbb2a2470e14e28b7bd9c9f817161d7
+msgid "The functionalities are almost the same for both the interfaces, except that from the :guilabel:`Admin` panel it is possible to manage the dismissals too."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:825
+#: 59bc5681f79a46d39108bb30580b4ea2
+msgid "``Dismissals`` are basically records of members that have read the announcement and closed the message box. An announcement can have one ``dismissal type`` among the three below:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:828
+#: e166b05104454912a7c04206393c4e41
+msgid ":guilabel:`No Dismissal Allowed` it won't be possible to close the announcement's message box at all."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:830
+#: 86173fdbd8eb4f62ac3de85928c86814
+msgid ":guilabel:`Session Only Dismissal` (*) the default one, it will be possible to close the announcement's message box for the current browser session. It will show up again at next access."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:832
+#: de3423ff9b9e45159e7b78e9fc01c0e0
+msgid ":guilabel:`Permanent Dismissal Allowed` once the announcement's message box is closed, it won't appear again for the current member."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:835
+#: 9205a55b6f3647d58583ddf5a86725b3
+msgid "How to create and manage Announcements"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:837
+#: 232ee934a50c4c71a53d64020348651e
+msgid "From the :guilabel:`Profile` panel, click on ``Announcements`` link"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:842
+#: 57e7efac42b84132a4eaa4fc68fe0fb7
+msgid "*Announcements List from the Profile panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:844
+#: 9652cd4ed57b4e758805c10e7aca6bd0
+msgid "Click either on :guilabel:`New Announcement` to create a new one or over a title of an existing one to manage its contents."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:846
+#: 3ec9ac9da08d4ac2a56d00b0a652dd1b
+msgid "Create a new announcement is quite straight; you have to fill the fields provided by the form."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:848
+#: 3d1a092dd7c144e390a1123732feb0e9
+msgid "In order to be visible, you will need to check the :guilabel:`Site wide` option **in any case**. You might want to hide the message to *anonymous* users by enabling the :guilabel:`Members only` option too."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:853
+#: 26787693923248b28b5af13dcc08d4a1
+msgid "*Create Announcement from the Profile panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:855
+#: 4a1f5894d12f48b48fee84b1c4e4abe8
+msgid "Managing announcements form the :guilabel:`Admin` panel, is basically the same; the fields for the form will be exactly the same."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:860
+#: cd6a37f61a9449ddba7dfdafeae48cdb
+msgid "*Create Announcement from the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:862
+#: 85d05072ed6643379475ef2f6f9c5343
+msgid "Accessing announcements options from the :guilabel:`Admin` panel, allows you to manage dismissals also. Through this interface you will be able to selectively decide members which can or cannot view a specific announcement, or force them to visualize the messages again by deleting the dismissals accordingly."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:868
+#: 8d0ab6fea7a44c01b91f2139c0b4636e
+msgid "*Create Dismissal from the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:871
+#: 1b79600afae6465997ef48b274204827
+msgid "Menus, Items and Placeholders"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:873
+#: c8eda98b56e440279151b8bd97111cbf
+msgid "GeoNode provides some integrated functionalities allowing you to quickly and easily customize the top-bar menu (see the example below)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:878
+#: 892d8ed264e94929b1d6ded326db6e1c
+msgid "*GeoNode Top-Bar Menu customization*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:880
+#: e0f33035d3924b8d8337f5e4af36bd4a
+msgid "With minor changes of the ``basic.html`` template, potentially, it could be possible to use the same approach for a more complex customization. Let's start with the simple one."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:883
+#: 18f995b7c1bc4704adfb5b7dc76eabfe
+msgid "By default GeoNode provides custom ``placeholders`` already defined into the ``basic.html`` template, called ``CARDS_MENU``, ``TOPBAR_MENU_RIGHT``, ``TOPBAR_MENU_LEFT``, ``TOPBAR_MENU``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:885
+#: 927bb2e79613439ba72c2e5b2ad30ef8
+msgid "From the :guilabel:`Admin > Base` panel, it is possible to access to the ``Menu``, ``Menu Items`` and ``Menu Placeholder`` options."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:890
+#: 2a1bb2afa4634db9a6eb41bf141c0ab2
+msgid "*Menu, Menu Items and Menu Placeholder options on the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:892
+#: 1e824b773daf49d5811adbbe135a940c
+msgid "The hierarchical structure of a custom ``Menu`` is the following one:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:900
+#: 0b423b6aad294dd5baf3fee57cb55627
+msgid "``Menu Placeholder``; first of all you need to define a *placeholder* both into the :guilabel:`Admin > Base` panel and the ``basic.html`` template, using the same **keyword**."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:895
+#: 45109d2676e6441d9e1ec47432bdcba4
+msgid "By default GeoNode provides already defined menus."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:900
+#: b0bfd6d3a6e34049bb4eb499c13d2461
+msgid "*The default ``TOPBAR_MENU`` Menu Placeholder on the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:918
+#: a402357bb8bd4adeb8abc3c220041a5a
+msgid "``Menu``; second thing to do is to create a new *menu* associated to the corresponding *placeholder*."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:903
+#: a2e96e3764f942c6a0b69f3249d47099
+msgid "This is still possible from the :guilabel:`Admin > Base` panel"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:908
+#: 106e7d52f1e94b6c81878f9323db6625
+msgid "*Create a new Menu from the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:910
+#: a72bd898ebf64c5996e5368ec5207f6c
+msgid "You will need to provide:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:912
+#: b7dc0b85b084417f9dc23ef73287840e
+msgid "A ``Title``, representing the name of the ``Menu`` visible by the users"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:914
+#: 9d8ddb33e6f542bc9ff7079f186d7194
+msgid "By using this approach, internationalization won't be supported. For the time being GeoNode does not support this for menus created from the :guilabel:`Admin > Base` panel."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:916
+#: 572ddfc89ab84d069bb7fcd7b7a2cee1
+msgid "A ``Menu Placeholder`` from the existing ones."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:918
+#: dbb9a8d2640f4e63b5747dd356c2e52e
+msgid "A ``Order`` in the case you'll create more menus associated to the same placeholder."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:920
+#: 3c02a65e1d9a490da2448ce83b250821
+msgid "``Menu Item``; finally you will need to create voices belonging to the *menu*. For the time being, GeoNode allows you to create only ``href`` links."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:925
+#: 63e39384553640c8be39cb1a09bd5424
+msgid "*Create a new Menu Item from the Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:927
+#: 64b76338fb06442b94c70418a0f310fe
+msgid "The ``Menu`` won't be visible until you add more than one ``Menu Item``, If you have 1, item, the item will be showed(but not under the menu)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:932
+#: 79b3348352cf4f3ca69568f16766eb6d
+msgid "OAuth2 Access Tokens"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:934
+#: ca5ede8b8359478b8a680801b70e2050
+msgid "This small section won't cover entirely the GeoNode OAuth2 security integration, this is explained in detail in other sections of the documentation (refer to :ref:`oauth2_fixtures_and_migration` and :ref:`oauth2_tokens_and_sessions`)."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:937
+#: 94967fa088664487a1f15022dfee1fbe
+msgid "Here we will focus mainly on the :guilabel:`Admin > DJANGO/GEONODE OAUTH TOOLKIT` panel items with a specific attention to the ``Access tokens`` management."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:939
+#: 026a5e9f03a54a868a5bf4778f9c7248
+msgid "The :guilabel:`Admin > DJANGO/GEONODE OAUTH TOOLKIT` panel (as shown in the figure below) allows an admin to manage everything related to GeoNode OAuth2 grants and permissions."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:942
+#: d796ef4a653d43b5b9c638d9c0133c15
+msgid "As better explained in other sections of the documentation, this is needed to correctly handle the communication between GeoNode and GeoServer."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:947
+#: 55ef3b38330d4d3fbbdb74b8482e573b
+msgid "*DJANGO/GEONODE OAUTH TOOLKIT Admin panel*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:949
+#: 835b57b3d9ea47aaa786ef69b138db43
+msgid "Specifically from this panel an admin can create, delete or extend OAuth2 ``Access tokens``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:951
+#: c3f30b1e541846448aa28a48c5c4ba11
+msgid "The section :ref:`oauth2_tokens_and_sessions` better explains the concepts behind OAuth2 sessions; we want just to refresh the mind here about the basic concepts:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:954
+#: f257255f50124e11adf6d4317aa67b4f
+msgid "If the `SESSION_EXPIRED_CONTROL_ENABLED <../../basic/settings/index.html#session-expired-control-enabled>`_ setting is set to `True` (by default it is set to `True`) a registered user cannot login to neither GeoNode nor GeoServer without a valid ``Access token``."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:957
+#: d426fd624b454aa99b78872e8724f998
+msgid "When logging-in into GeoNode through the sign-up form, GeoNode checks if a valid ``Access token`` exists and it creates a new one if not, or extends the existing one if expired."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:960
+#: 61320181e2c14b17916fb52bd1ed7546
+msgid "New ``Access tokens`` expire automatically after `ACCESS_TOKEN_EXPIRE_SECONDS <../../basic/settings/index.html#access-token-expire-seconds>`_ setting (by default 86400)"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:962
+#: a3a8ccbf63d044dbb3fda70569017ce6
+msgid "When an ``Access token`` expires, the user will be kicked out from the session and forced to login again"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:965
+#: ae89d992058245bf90a566ccde2a1e21
+msgid "Create a new token or extend an existing one"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:967
+#: b12a9fd705a44eeca55c387f05664482
+msgid "It is possible from the :guilabel:`Admin > DJANGO/GEONODE OAUTH TOOLKIT` panel to create a new ``Access token`` for a user."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:969
+#: 04710750d4a94669b102c0e23c90b379
+msgid "In order to do that, just click on the :guilabel:`Add` button beside ``Access tokens`` topic"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:974
+#: 46b1fdf06c8045eba0d5d5a193244514
+msgid "*Add a new ``Access token``*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:976
+#: 0fe0840c1ce34d6895c1eabb3f2a6e42
+msgid "On the new form"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:981
+#: 40362d23dda740ed82f229d98ec6e781
+msgid "*Create an ``Access token``*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:983
+#: 015e98e0d339444db948c0f2fbe3e9f8
+msgid "select the followings:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:985
+#: ab6c7d13f8d547679db236c3eaeca3ee
+msgid "``User``; use the search tool in order to select the correct user. The form want the user PK, which is a number, and **not** the username. The search tool will do everything for you."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:991
+#: f5bb3caa3b1141c6bff7a2ba2d74f5a3
+msgid "*Select a User*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:993
+#: 491820fd8a1d475a98c74ac9a5620214
+msgid "``Source refresh token``; this is not mandatory, leave it blank."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:995
+#: f9b07d7ba24b43c38b47ae07409e58ab
+msgid "``Token``; write here any alphanumeric string. This will be the ``access_token`` that the member can use to access the OWS services. We suggest to use a service like https://passwordsgenerator.net/ in order to generate a strong token string."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1001
+#: 5437b0b211a04df794bf31c67b7aac60
+msgid "*Select a Token*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1003
+#: 9073329f3bd9460cb8b8677679944006
+msgid "``Application``; select **GeoServer**, this is mandatory"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1008
+#: 0ef41299668b4cca89cf381b5e27f6fd
+msgid "*Select the GeoServer Application*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1010
+#: 17785518a1b043b09addba158352a087
+msgid "``Expires``; select an expiration date by using the :guilabel:`date-time` widgets."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1015
+#: 86f6f90c8d3e4f41a08a2a8ac5f0c3a5
+msgid "*Select the Token Expiration*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1017
+#: 279078005a764a0fb798ba351002ea08
+msgid "``Scope``; select **write**, this is mandatory."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1022
+#: 99b2a083d5424f0e9f244885d9a09663
+msgid "*Select the Application Scope*"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1024
+#: 1d30540118b84c4d95b6783b9e9ee96a
+msgid "Do not forget to :guilabel:`Save`."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1026
+#: c1768249cb0f443a9827ea26e4c0c210
+msgid "From now on, GeoNode will use this ``Access Token`` to control the user session (notice that the user need to login again if closing the browser session), and the user will be able to access the OWS Services by using the new ``Access Token``, e.g.:"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1034
+#: c0f3d29e3bb4441e9341923019b266e3
+msgid "Notice the ``...quest=GetCapabilities&access_token=123456`` (**access_token**) parameter at the end of the URL."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1037
+#: b3dbf04a53a74890a18a3b2bf62341ce
+msgid "Force a User Session to expire"
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1039
+#: ece813ea0b464d84af318d47cf97e02f
+msgid "Everything said about the creation of a new ``Access Token``, applies to the deletion of the latter."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1041
+#: e75ae9564688450f9aabe7ec8ad57611
+msgid "From the same interface an admin can either select an expiration date or delete all the ``Access Tokens`` associated to a user, in order to force its session to expire."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1044
+#: 3e19ab112936438a8ba587733577aba5
+msgid "Remember that the user could activate another session by logging-in again on GeoNode with its credentials."
+msgstr ""
+
+#: ../../admin/admin_panel/index.rst:1046
+#: 70e547a9463b46e9ba5e37117fb12af3
+msgid "In order to be sure the user won't force GeoNode to refresh the token, reset first its password or de-activate it."
+msgstr ""

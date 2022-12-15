@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/publishing_data/index.rst:2
+#: 24e0abbc80604f52be89f9bb4ee4f8ae
+msgid "Publishing Data"
+msgstr ""
+
+#: ../../usage/publishing_data/index.rst:4
+#: 7a6d18a563c245389fa148540b17ce9a
+msgid "In GeoNode, each resource can be published in order to share it with other people."
+msgstr ""
+
+#: ../../usage/publishing_data/index.rst:6
+#: fe9ef7da34e548c5a08e73106d7cf6ad
+msgid "In order to publish a map, document or dataset or any other Geonode resource, Go to the settings tab in the Metadata Edit form, The check for publishing and unpublishing is available. See picture below."
+msgstr ""
+
+#: ../../usage/publishing_data/index.rst:12
+#: 6bd60227a1734e879656adf70616e9fa
+msgid "*Resource publishing*"
+msgstr ""
+
+#: ../../usage/publishing_data/index.rst:14
+#: 7eb564fb6ae44c28a9ceaf980e70e4ed
+msgid "Click :guilabel: `Update` to save the changes."
+msgstr ""

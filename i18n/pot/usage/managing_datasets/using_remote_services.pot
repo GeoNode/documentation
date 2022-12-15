@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_datasets/using_remote_services.rst:2
+#: a7749bdd134d42a8a061f544edff8930
+msgid "Using Remote Services"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:4
+#: b85b6ca4d1234e95aafdf9d6e6c1c248
+msgid "In GeoNode you can add new datasets not only by loading them from your disk but also using *Remote Services*. In this section you will learn how to add a new service and how to load resources in GeoNode through that."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:7
+#: d7e235db69484e1995907147d50fc700
+msgid "Let's try it!"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:9
+#: d8f595f67e66401987809471b5417288
+msgid "Click on the :guilabel:`Remote Services` link of the :guilabel:`Data` menu in the navigation bar."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:14
+#: 6feba1be31f24b6ead627e64c3d9d1ea
+msgid "*Remote Services link*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:16
+#: 1f995eafcbee4b55a99b7e35b9286e5f
+msgid "The page that opens will contain the list of the available services."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:21
+#: 8fc6e2d024d944c1a4b5a578b53cfa7c
+msgid "*Remote Services*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:23
+#: 662dac8f5c3941a3b309f687c5eaea23
+msgid "To configure a new service:"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:25
+#: d55230654a8a460389fadbae2c9eb58f
+msgid "click on :guilabel:`Add Remote Service`"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:26
+#: dacd8251a9244ce6910dae7b54e7203e
+msgid "type the *Service URL*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:27
+#: 784e4a3324254b32abf6f07eaf8264db
+msgid "select the *Service Type*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:32
+#: c15cbe27b99b460c9e2a8fd19095a384
+msgid "*Service Types*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:34
+#: ca0fd7576f954e08bf92eee9851a688f
+msgid "click on :guilabel:`Create`"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:36
+#: a74f48ac9d474f0e9c5a4fa84751ce70
+msgid "GeoNode supports four **types of remote services**:"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:38
+#: bab887d06be64954875533705cd0399e
+msgid "*Web Map Service*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:40
+#: b1af88d3fbcf45e4a615df7d5b81ebbd
+msgid "Generic Web Map Service (WMS) based on a standard protocol for serving georeferenced map images over the Internet. These images are typically produced by a map server (like `GeoServer <http://geoserver.org/>`_) from data provided by one or more distributed geospatial databases. Common operations performed by a WMS service are: *GetCapabilities* (to retrieves metadata about the service, including supported operations and parameters, and a list of the available datasets) and *GetMap* (to retrieves a map image for a specified area and content)."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:44
+#: f6bd233296d344239a58ddccc29b7cd8
+msgid "Lots of WMS services are available on the internet, in this example we used the ``https://demo.geo-solutions.it/geoserver/wms``."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:46
+#: 2badb108b534439eab96009d221f7626
+msgid "*GeoNode Web Map Service*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:48
+#: 58b7aa7d8c3f4b7b8bd02c8a7a989434
+msgid "Generally a WMS is not directly invoked; client applications such as GIS-Desktop or WEB-GIS are used that provide the user with interactive controls. A GeoNode WMS automatically performs some operations and lets you to immediately retrieve resources."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:51
+#: dbe949fe610a4480a840c1d3684a892d
+msgid "An example of GeoNode WMS is available at ``http://dev.geonode.geo-solutions.it/geoserver/wms``."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:53
+#: 5ff5fc2b437f4c3fa72a8ee2dfa26d02
+msgid "*ArcGIS REST MapServer*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:55
+#: 171c0eb61ddf4f188a35f464e73002f7
+msgid "This map service provides basic information about the map, including the datasets that it contains, whether the map is cached or not, its spatial reference, initial and full extents, whether the service is allowed to export tiles and max tiles export count, etc. A set of operations that manage the state and contents of the service are allowed: Edit Service, Refresh, Update Tiles. The URL should follow this pattern: ``https://<servicecatalog-url>/services/<serviceName>/MapServer``."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:59
+#: cdaa28f197be4ffa9ff2af803fd2eeea
+msgid "Try the following service to better understand how it works: ``https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer``."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:61
+#: 2d48f195a4d04f6aaf7151f9aa2a8f0d
+msgid "*ArcGIS REST ImageServer*"
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:63
+#: d729dc41c51c444db5520c1bf3100889
+msgid "This Image Server allows you to assemble, process, analyze, and manage large collections of overlapping, multiresolution imagery and raster data from different sensors, sources, and time periods. You can also publish dynamic image services that transform source imagery and other raster data into multiple image products on demand—without needing to preprocess the data or store intermediate results—saving time and computer resources. In addition, ArcGIS Image Server uses parallel processing across multiple machines and instances, and distributed storage to speed up large raster analysis tasks. The URL should follow this pattern: ``https://<servicecatalog-url>/services/<serviceName>/ImageServer``."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:66
+#: 3bcb43d44c1e4202801406e2da517225
+msgid "Try the following service to better understand how it works: ``https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer``."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:68
+#: 0c1e9895167b4c6586be2b1c56451a19
+msgid "Once the service has been configured, you can load the resources you are interested in through the *Import Resources* page where you will be automatically redirected to."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:70
+#: 0eccf0b2afd846d59fcd4a30789771a6
+msgid "From the page where the services are listed, it is possible to click on the *Title* of a service. It opens the *Service Details* page."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:71
+#: 99f633bcb9e84aa484e7ad5ef0551c40
+msgid "Each service has its own metadata such as the *Service Type*, the *URL*, an *Abstract*, some *Keywords* and the *Contact* user."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:73
+#: 9d311c0fd1c44925a28aef4a17fcb671
+msgid "You can edit those metadata through the form available from the :guilabel:`Edit Service Metadata` link of the *Service Details* page (see the picture below)."
+msgstr ""
+
+#: ../../usage/managing_datasets/using_remote_services.rst:78
+#: 2134276bc4db43a98fcb1d99a3a680cd
+msgid "*Remote Service metadata*"
+msgstr ""

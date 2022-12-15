@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_maps/map_metadata.rst:4
+#: 4a72bb4d0fb3494cb535d598806ff808
+msgid "Maps Metadata"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:6
+#: 1f94fe91227a4711a8397ec5bbd10cee
+msgid "*Maps Metadata* can be Edited by clicking the :guilabel:`Edit Metadata` link from the *Map Detail* page."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:11
+#: ba515527112440e190211e1b77a05b4b
+msgid "*The Map Metadata Detail link*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:13
+#: 547684de9fe543abae1a51b1399b685c
+msgid "The *Map Metadata* Edit form will open. | Metadata provide essential information for the identification and the comprehension of the map. They also make the map more easily retrievable through the search tools. | Those *Metadata* can be filled out through three-steps in which you have to provide all mandatory information to complete the process. Those three steps are described below."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:17
+#: 5f8ed2b8c07e43628348cd2d1fcd9656
+msgid "**Basic Metadata**"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:22
+#: 8e8a59074b31411cb1408821692c46c9
+msgid "*Basic Map Metadata*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:24
+#: 386ac8f7bd774bc7ac0b89029d23b0b9
+msgid "In the first step the system asks you to insert the following metadata (required fields are highlighted with red outlines):"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:26
+#: d6989fe7815c4de19570c97a981bbbce
+msgid "The *Thumbnail* of the map (click :guilabel:`Edit` to change it);"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:27
+#: 4cb04cb126fd49d19e28bd84fc7e9899
+msgid "The *Title* of the map, which should be clear and understandable;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:28
+#: 70bb22c604994f5abc0a8e73a388ac81
+msgid "An *Abstract*; brief narrative summary of the content of the Map"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:30
+#: 2c47b91e65c44974b0bb7c454465f1d1
+msgid "The *Abstract* panel allows you to insert HTML code through a *wysiwyg* text editor"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:32
+#: d9886816296145e4aec592a5a4b5ef1e
+msgid "The *Creation/Publication/Revision Dates*  which define the time period that is covered by the map;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:33
+#: 65198c826d3d452f82a46e340fee882f
+msgid "The *Keywords*, which should be chosen within the available list;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:34
+#: ddeb4d4ad9d04ad3b7f403381dd72877
+msgid "The *Category* which the map belongs to;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:35
+#: fa06e54de4c24549b81a5eccc0277735
+msgid "The *Group* which the map is linked to."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:37
+#: 36f18417293c4fba9e8d2d4f96b8c098
+msgid "Click :guilabel:`Next >>` to go to the next step."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:40
+#: a8eddebad729411593b33408d74470f4
+msgid "**Location and Licenses**"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:45
+#: d8ef266ee54a42558045f05f42950771
+msgid "*Location and Licenses Metadata for Maps*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:47
+#: d3546534c6994a379e17e1e9fd8fa788
+msgid "The following list shows what kinds of metadata you are required to enter (see also the picture below):"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:49
+#: 6e7ff78fdb4c476cb15f579d3571fdac
+msgid "The *Language* of the layer;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:50
+#: c62d911b4a15475eb80d05050d78bc9e
+msgid "The *License* of the dataset;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:51
+#: 5de9ba9cad9d4c0abbb745ae79378947
+msgid "The *Regions* covered by the layers extent. Proposed extents cover the following scales: global, continental, regional, national;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:52
+#: 90057497f56844228534e7befc9b1ac8
+msgid "The *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:53
+#: 6c5073deb08b4042b5c1912803125cf9
+msgid "Potential *Restrictions* on layer sharing."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:55
+#: 41a317d731e04a4e880f7ef521d43fe4
+msgid "No further mandatory metadata are required in the next step so, once the required fields have been filled out, a green :guilabel:`Done` button will be visible in the screen. Click :guilabel:`Next >>` to go to the next step or :guilabel:`<< Back` to go back to the previous step."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:59
+#: 193e6b92961c4b1b8e3cdff9fa6cde31
+msgid "**Optional Metadata**"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:64
+#: d09736e0eb02441dad531750b396aec3
+msgid "*Optional Map Metadata*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:66
+#: 512425d31226493abac4d58d847c5aa8
+msgid "Complementary information are:"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:68
+#: cd761cb195a84a2097e9fa448978ee22
+msgid "The *Edition* of the map;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:69
+#: 45211efe47a64155928d7b4f0910ec98
+msgid "The *Purpose* of the map and its objectives;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:70
+#: 1354fa9e4bb54fd1b1162fd762c7ca95
+msgid "Any *Supplemental information* that can provide a better understanding of the map;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:71
+#: 52d5ed667b0544cd8e10d0e7c866b04d
+msgid "The *Maintenance frequency* of the map;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:72
+#: 22019d06c5f841e5838a0685244aae6c
+msgid "The *Spatial representation type*, the method used to represent geographic information in the dataset;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:73
+#: 285ddc1535934dec9fdeb9dbef03a298
+msgid "The users who are *Responsible* for the layer, its *Owner*, and the *Author* of its metadata;"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:75
+#: e77df79cbc1a43e2ac508a7bd1f081a8
+msgid "If you miss some mandatory metadata the *Completeness* bar shows you a red message like the one in the picture below."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:81
+#: 6d84fbb554834b57b3e829f3c04e0973
+msgid "*Completeness Progress Bar*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:84
+#: 2ccca12cf5014cfb9f1fefad549bcaee
+msgid "Metadata Advanced Editing"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:86
+#: be6db9c3634a418990aaf33853560d0b
+msgid "The :guilabel:`Advanced Metadata` editing button in the Metadata Edit form allows to change the map metadata."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:91
+#: ffe78abeee9c4734a7e2a1bf7e589cc6
+msgid "*The Advanced Edit button*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:93
+#: 30b0c9db82eb4da2bf6eb47ec6fd320f
+msgid "Click on it to display the *Metadata Advanced Editing Page*. That page allows you to edit all the map metadata described in the previous paragraph."
+msgstr ""
+
+#: ../../usage/managing_maps/map_metadata.rst:96
+#: 48acf08972b94b4a9241e7544b0ecc89
+msgid "Once you have finished to edit them click on :guilabel:`Update` to save your changes."
+msgstr ""

@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../advanced/contrib/index.rst:2
+#: 28f16903c86a4a699e9608bcd64d629b
+msgid "Geonode auth via LDAP"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:4
+#: 464638b5741d4bc99dc0a3966d03126a
+msgid "This package provides utilities for using LDAP as an authentication and authorization backend for geonode."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:7
+#: 900a514f090a4d7980295a2760265ba9
+msgid "The `django_auth_ldap <https://django-auth-ldap.readthedocs.io/en/latest/>`_ package is a very capable way to add LDAP integration with django projects. It provides a lot of flexibility in mapping LDAP users to geonode users and is able to manage user authentication."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:11
+#: 3f7bb5d563eb47168a7a04d9ea7f3e7c
+msgid "However, in order to provide full support for mapping LDAP groups with geonode's and enforce group permissions on resources, a custom geonode authentication backend  is required. This contrib package provides such a backend, based on `django_auth_ldap <https://django-auth-ldap.readthedocs.io/en/latest/>`_."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:18
+#: 779680a7e6f44746b77de1e5b83ffc99
+msgid "Installation"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:20
+#: a6df1a0bc7da40b1bf131f55bb2a5a0b
+msgid "Installing this contrib package is a matter of:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:22
+#: fd5f8ad128d44751b0ce390f6a894969
+msgid "Installing geonode"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:23
+#: b1bf16d40dff446faa34c8cec60b9ad7
+msgid "Installing system LDAP libraries (development packages needed)"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:24
+#: 2bac55b985124d738fd03a1bf4291e05
+msgid "Cloning this repository locally"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:25
+#: 19bbc817528e4734a292a66a0a5e057b
+msgid "Change to the `ldap` directory and install this contrib package"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:43
+#: ../../advanced/contrib/index.rst:457
+#: f93e7ca4b841428c8e45e34003419568
+#: 0599e900bbf548c8bf3fa85ff35fd446
+msgid "Configuration"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:45
+#: 2fabc7e6576945609c79a648ebf8a655
+msgid "Add ``geonode_ldap.backend.GeonodeLdapBackend`` as an additional auth backend."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:55
+#: 209947b18be646799b92b0d5a1c1b546
+msgid "You may use additional auth backends, the django authentication framework tries them all according to the order listed in the settings. This means that geonode can be setup in such a way as to permit internal organization users to login with their LDAP credentials, while at the same time allowing for casual users to use their facebook login (as long as you enable facebook social auth provider)."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:62
+#: 28df2cd9224e4dd9ae2a5eca929266ea
+msgid "The django's ``django.contrib.auth.backends.ModelBackend`` must also be used in order to provide full geonode integration with LDAP. However this is included by default on GeoNode ``settings``"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:75
+#: 45f42d94022441a7a85f7c64989aec14
+msgid "Set some additional configuration values. Some of these variables are prefixed with ``AUTH_LDAP`` (these are used directly by `django_auth_ldap <https://django-auth-ldap.readthedocs.io/en/latest/>`_) while others are prefixed with ``GEONODE_LDAP`` (these are used by ``geonode_ldap``). The geonode custom variables are:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:80
+#: 555b08170f2040baadd987a098a6231f
+msgid "``GEONODE_LDAP_GROUP_PROFILE_FILTERSTR`` - This is an LDAP search fragment with the filter that allows querying for existing groups. See example below"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:83
+#: b95ea150366f46eb8e4d426f8108ef60
+msgid "``GEONODE_LDAP_GROUP_NAME_ATTRIBUTE`` - This is the name of the LDAP attribute that will be used for deriving the geonode group name. If not specified it will default to `cn`, which means that the LDAP object's `common name` will be used for generating the name of the geonode group"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:88
+#: e7f85d1e055545f7ab2d5010f626e375
+msgid "``GEONODE_LDAP_GROUP_PROFILE_MEMBER_ATTR`` - This is the name of the LDAP attribute that will be used for deriving the geonode membership. If not specified it will default to ``member``"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:93
+#: 777ffbf3e8244397ab8c9f76a167756f
+msgid "Example configuration:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:146
+#: b4b9f69f42494e1399ac11b1ca838790
+msgid "Example environment variables:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:160
+#: 2ac358340cc946b58b8a062b4bda576e
+msgid "The configuration seen in the example above will allow LDAP users to login to geonode with their LDAP credentials."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:163
+#: c5e80dd8d49a4c3880a1b77c0d7c25c3
+msgid "On first login, a geonode user is created from the LDAP user and its LDAP attributes ``cn`` and ``sn`` are used to populate the geonode user's ``first_name`` and ``last_name`` profile fields."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:167
+#: 70c358ba41114922afe88dcd2f10f317
+msgid "Any groups that the user is a member of in LDAP (under the ``cn=groups,dc=ad,dc=example,dc=org`` search base and belonging to one of ``(|(cn=abt1)(cn=abt2)(cn=abt3)(cn=abt4)(cn=abt5)(cn=abt6))`` groups) will be mapped to the corresponding geonode groups, even creating these groups in geonode in case they do not exist yet. The geonode user is also made a member of these geonode groups."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:173
+#: 8581fb9f94874b83925371097f344a47
+msgid "Upon each login, the user's geonode group memberships are re-evaluated according to the information extracted from LDAP. The ``AUTH_LDAP_MIRROR_GROUPS_EXCEPT`` setting can be used to specify groups whose memberships will not be re-evaluated."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:178
+#: 9f454aa7d20c4a4b9f44a8d17ba6e0f4
+msgid "If no LDAP groups shall be mirrored ``LDAP_MIRROR_GROUPS`` and ``LDAP_MIRROR_GROUPS_EXCEPT`` must be set to ``False``."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:180
+#: 00c1b2157e5b43e49a0473b3842a4584
+msgid "Users mapped from LDAP will be marked with an ``ldap`` tag. This will be used to keep them in sync."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:182
+#: 0d47eb0cfe38421ca5b0adcb6cbfd351
+msgid "If you remove the ``ldap`` tag, the users will be threaten as pure internal GeoNode ones."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:184
+#: bb97d37243e0482580341671cba8f81d
+msgid "You may also manually generate the geonode groups in advance, before users login. In this case, when a user logs in and the mapped LDAP group already exists, the user is merely added to the geonode group"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:188
+#: 1763c1b1eaae4538a593ea0cc65eacc8
+msgid "Be sure to check out `django_auth_ldap <https://django-auth-ldap.readthedocs.io/en/latest/>`_ for more information on the various configuration options."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:192
+#: 006a0916a4d2452bbd9122124e07fe78
+msgid "Keep Users and Groups Synchronized"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:194
+#: a0cbd7760f2b437f9a672732a1723f9e
+msgid "In order to constantly keep the remote LDAP Users and Groups **synchronized** with GeoNode, you will need to run periodically some specific management commands."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:202
+#: 932b24624be745bab34cf010c8578da1
+msgid "Where the ``manage.sh`` is a bash script similar to the following one:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:204
+#: 506d300d01d246b2b6af6ea659ecdc13
+msgid "**manage.sh**"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:210
+#: cb18fd4b5dc444aba1618cff6080177a
+msgid "and the ``/opt/geonode/my-geonode/.env`` is something similar to the following one:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:212
+#: ad562706785b4efabc43f88ad28b1d61
+msgid "**/opt/geonode/my-geonode/.env**"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:266
+#: f67c32c1fb22446db514d9344abdce5e
+msgid "You might want to use the same ``/opt/geonode/my-geonode/.env`` for your ``UWSGI`` configuration too:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:311
+#: 6d4bbd933dee41aab7424862a6adb67f
+msgid "Geonode Logstash for centralized monitoring/analytics"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:313
+#: 209321a29ca848fdb56ac9cc81175af0
+msgid "This contrib app, along with the GeoNode internal monitoring app, lets administrators to configure a service for sending metrics data to a **centralized server** which comes with `Logstash <https://www.elastic.co/products/logstash>`_."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:317
+#: 55155a21701d4e93bf75ff2204416d00
+msgid "So it will be possible to visualize stats and charts about one or more GeoNode instances outside the application. Having a server configured with the `ELK stack <https://www.elastic.co/what-is/elk-stack>`_, it is possible to visualize those information on a Kibana dashboard for example."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:321
+#: 68eceb3307a44ebe921f46e9061dc2e1
+msgid "If you manage more than one GeoNode instances, that server can receive data from many GeoNode(s) so it can make available both *single-instance dashboards* (referred to individual instances) and *global dashboards* (stats calculated on the whole set of instances)."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:326
+#: 0de176dd25ab4a49a1714131ea34b696
+msgid "The centralized monitoring service cannot be active if the settings variables :ref:`user-analytics` and :ref:`monitoring-enabled` are set to `False`."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:329
+#: 49d3a88c79094794a6143be56b34b882
+msgid "Overview"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:331
+#: fd4725deb7f241859ee0342b561f4310
+msgid "By default, GeoNode will send data to the centralized server every **3600 seconds** (1 hour) so, if enabled, the monitoring app will collect 1-hour-aggregated data. This time interval can be configured, see the next paragraphs to know how."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:335
+#: 8d88e98aeda84e0d806c127f5b7076b9
+msgid "Formatted and compressed data will be sent on a **TCP** connection (on the `443` standard port by default) through a **scheduled celery task** which basically logs information via `python-logstash-async <https://pypi.org/project/python-logstash-async/>`_."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:339
+#: 00977600c58b435a8797691e12aa2431
+msgid "This feature requires `python-logstash-async <https://pypi.org/project/python-logstash-async/>`_."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:344
+#: 9f101ee2b262464aa1bf06acea59e29f
+msgid "Data and events formats"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:346
+#: 0d4023b26e814617a5471f41153cd357
+msgid "Each time the centralized monitoring service is called, 4 types of *JSON* formatted events are sent to the server:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:348
+#: da53d41ef17542c29cc3a0fdf9f6d5ae
+msgid "Instance overview"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:372
+#: 16fd4e668f7c48cbaee4fd576a6d41a7
+msgid "Resources details"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:403
+#: 6e1c50f5b8f142cc8523d109c69c67d2
+msgid "Countries details"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:427
+#: 785926c52ad0471d8172e807e89ba33c
+msgid "UA (User Agent) Family details"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:451
+#: f16d3c69a42a454d968804af784b9790
+msgid "These messages will be `gzip <https://docs.python.org/2/library/zlib.html>`_ compressed in order to improve transport performances and they should be parsed by a `logstash filter <https://www.elastic.co/guide/en/logstash/current/plugins-codecs-gzip_lines.html>`_ on the server side (see :ref:`logstash-input`)."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:459
+#: c585984aa67a487eba433c487a3bc0bd
+msgid "The centralized monitoring service is disabled by default because it needs the internal monitoring to be active and service-specific configurations."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:463
+#: 98d8fd485462404da6e96242cc163e72
+msgid "GeoNode configuration"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:465
+#: bc7ca8707e4f43149968b108d9f5c602
+msgid "On the GeoNode side, all needed configurations can be set up from the Django admin interface."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:466
+#: 36d3ece641fa416fab9f9b6d8d2a6608
+msgid "If enabled, the **GEONODE LOGSTASH** section will show the **Centralized servers** feature:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:None
+#: f8f5aa5b62e243688f24a5b3ff7bf0b0
+msgid "Centralized Servers from admin UI"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:471
+#: e72c220a907b4dc8b0b63050109bc527
+msgid "Let's add one:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:None
+#: 4585a5c9a2e246b4a873d17cd696cd9a
+msgid "Centralized Server set up"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:476
+#: 0de7e730a9d34a3da38b867aecf91300
+msgid "The **Host** IP address and the **Port** number are mandatory as well as the time **Interval** (3600 seconds by default) which defines the service invocation polling (so the time range on which data should be aggregated)."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:480
+#: 9b96acf1cf964e83af9abec1322e858a
+msgid "Once the service configured, the user can test the configuration by clicking on **Test connection**. It will test the connection with the centralized server without saving the configuration."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:483
+#: a22f4c412f0c45b3a78400880b8d93c8
+msgid "Other settings come with a default value:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:485
+#: ffca558b999847c9a1a5a863a918ea83
+msgid "**Db path** --> the local Spatialite database to cache events between emitting and transmission to the Logstash server (log events are cached even across process restarts and crashes);"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:486
+#: d7b2d2bfeb4244da8e45a223fca5675e
+msgid "**Socket timeout** --> timeout in seconds for TCP connections;"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:487
+#: f0ed882b642342d3a8dd848e81615f4d
+msgid "**Queue check interval** --> interval in seconds to check the internal queue for new messages to be cached in the database;"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:488
+#: 181006848177459b96b16e7569729a10
+msgid "**Queue events flush interval** --> interval in seconds to send cached events from the database to Logstash;"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:489
+#: 8ccdee3f0f104a9cb3524226889939f5
+msgid "**Queue events flush count** --> count of cached events to send from the database to Logstash;"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:490
+#: 3d0d46275b3141788cf543ff87c55e19
+msgid "**Queue events batch size** --> maximum number of events to be sent to Logstash in one batch;"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:491
+#: e3b4b65d3c324e54a07c198625d4923a
+msgid "**Logstash db timeout** --> timeout in seconds to 'connect' the Spatialite database."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:493
+#: 31167920f270455d88bf18c0c5b0d1c1
+msgid "To better understand what these variables mean, it is recommended to read the `python-logstash-async options for the asynchronous processing and formatting <https://python-logstash-async.readthedocs.io/en/stable/config.html#options-for-the-asynchronous-processing-and-formatting>`_."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:495
+#: 3d8f99c291da4df584d6333014dcdd73
+msgid "Other three read-only fields will be visible:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:497
+#: edb06ab2c7984245bf8fbcae65d6641a
+msgid "**Last successful deliver** --> timestamp of the last successful deliver (if exists);"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:498
+#: acadae16c6f943e7b7621b03f343505d
+msgid "**Next scheduled deliver** --> timestamp of the next scheduled deliver;"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:499
+#: 9363279869f442dc9c8449ae343b4805
+msgid "**Last failed deliver** --> timestamp of the last failed deliver (if exists)."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:504
+#: dbefe7559d064e94a59d0b4bc2148528
+msgid "Logstash configuration"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:506
+#: 7cbcc92edb4e40d2af11a987609df36d
+msgid "On the server side, a proper Logstash configuration should be set up."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:510
+#: 7597150353e84c8cadff10b756563261
+msgid "Some events formats contain arrays (see :ref:`events-formats`) so Logstash should be able to retrieve a single event for each element of the array. The `Split filter plugin <https://www.elastic.co/guide/en/logstash/current/plugins-filters-split.html#plugins-filters-split>`_ helps to correctly parse those messages."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:513
+#: 1fb0199c470d4cf7b6d72744fb2c4f52
+msgid "As mentioned above, events messages will be gzip compressed so the `Gzip_lines codec plugin <https://www.elastic.co/guide/en/logstash/current/plugins-codecs-gzip_lines.html#plugins-codecs-gzip_lines>`_ should be installed along with Logstash and the \"gzip_lines\" codec should be used for the `tcp` input."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:515
+#: b04466b8e8d54ae782a85c315e587440
+msgid "An example of the logstash configuration:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:566
+#: 3e338a9d7e25497187357faf413f543f
+msgid "Usage"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:568
+#: 87de079b28a94535a0e397c0bd93b151
+msgid "When saving the service configuration, if monitoring enabled, GeoNode will create/update a celery `Periodic Task <https://docs.celeryproject.org/en/v4.2.1/userguide/periodic-tasks.html#periodic-tasks>`_ which will be executed at regular intervals based on the *interval* configured."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:572
+#: 90a4768366db44f795752544297c4f9d
+msgid "You can check this behavior on the *Periodic Tasks* section of the admin UI:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:None
+#: 043444320d124ae298b04c2b6e53f367
+msgid "Periodic tasks section"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:577
+#: 1dc4c78d2acd4316b206cd1f17cc95dc
+msgid "The *dispatch-metrics-task* task:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:None
+#: e4166a64bb6f4d04b2f693112c10cfec
+msgid "Dispatch metrics task"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:582
+#: 0ba298e950df4d20a8c38c7d784e701f
+msgid "The task details:"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:None
+#: f0c250a5df3649a699475022b544552e
+msgid "Dispatch metrics task details"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:587
+#: f3587465d6dd4ee3a0618c125d09bc44
+msgid "When disabling monitoring is a **good practice** to disable the corresponding Periodic Task too."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:590
+#: c4604abc28f543d798b80a2b4f6dcc85
+msgid "Management command"
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:593
+#: d678370fd88e4adc84767137d7df7ec9
+msgid "In addition to the scheduled task, this contrib app makes also available the **dispatch_metrics** command to manually send metrics to the server."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:595
+#: 9db533f5199d45a2858033fe63fc6a79
+msgid "Obviously the time interval considered will start at the last successful delivery and will finish at the current time."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:597
+#: 2180dc234e704b60a7dbd49d853cea04
+msgid "When the monitoring plugin is enabled (:ref:`user-analytics` and :ref:`monitoring-enabled` are set to `True`) and a :ref:`centralized-monitoring` configured, Geonode sends (hourly by default) metrics data to an external server (which comes with Logstash) for stats visualization and analysis."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:601
+#: b4dee9d69d604fbcaf5af7da7ef01720
+msgid "The command can be launched using the ``manage.py`` script. No options are required."
+msgstr ""
+
+#: ../../advanced/contrib/index.rst:608
+#: 9c14c9941d1c4a4b8afd8c3d08d8406c
+msgid "Possible exceptions raised during the execution will be reported to GeoNode log."
+msgstr ""

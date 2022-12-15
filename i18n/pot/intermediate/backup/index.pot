@@ -1,0 +1,766 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intermediate/backup/index.rst:5
+#: 4659a903fef9437bab1840c5b48488bb
+msgid "Full GeoNode Backup & Restore"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:7
+#: bb1c5e3d607649618cb535df3c06937a
+msgid "The admin command to backup and restore GeoNode, allows to extract consistently the GeoNode and GeoServer data models in a serializable meta-format which is being interpreted later by the restore procedure in order to exactly rebuild the whole structure."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:10
+#: daad7f5a40554f5fbc67e8a624cc27e9
+msgid "In particular the tool helps developers and administrators to correctly extract and serialize the following resources:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:12
+#: b6c386c37e7a4769a2facb9ce3f1b9f4
+msgid "**GeoNode** (Resource Base Model):"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:14
+#: 17dcced7f863439cacf58edbcf6cab68
+msgid "Layers (both raster and vectors)"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:16
+#: ec2e39572b4442079432967d84bf321c
+msgid "Maps"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:18
+#: 2abe317f4e044e26bb222b913d155b21
+msgid "Documents"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:20
+#: 421863ee1bdc48f3860e16c67bd098d6
+msgid "People with Credentials"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:22
+#: 69034751274e40c0a3029ddfb4fe137e
+msgid "Permissions"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:24
+#: 4e93936d36634ed28574eb875936e3ab
+msgid "Associated Styles"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:26
+#: b8a531c0f8754ca4b0e2b8377faeb128
+msgid "Static data and templates"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:28
+#: eedb92093fd14de5840b2e25354b69b0
+msgid "**GeoServer** (Catalog):"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:30
+#: 7b48137363c44746ad9a9755f604a884
+msgid "OWS Services configuration and limits"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:32
+#: b231fd1dce2e4b4ab4fa91d146652101
+msgid "Security model along with auth filters configuration, users and credentials"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:34
+#: e0f61e92b3d1428392b7b3b0320e8a32
+msgid "Workspaces"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:36
+#: 258a8492b6684f0c95c0b12d26f591dc
+msgid "Stores (both DataStores and CoverageStores)"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:38
+#: 5615f3c6eddc44638615aa6e66fef461
+msgid "Layers"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:40
+#: db6114ca2bb94efb914a6a64b8206768
+msgid "Styles"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:42
+#: 61a4fcae05ae4a4d86307858be3426b2
+msgid "The tool exposes two GeoNode Management Commands, 'backup' and 'restore'."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:44
+#: 0c6d9d6693474bbdb491c9972060dc08
+msgid "The commands allow to:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:46
+#: fde1358116b5471d91817a3b245365ba
+msgid "Fully backup GeoNode data and fixtures on a zip archive"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:48
+#: 20f35916c4c24ebb994bd25484643c5a
+msgid "Fully backup GeoServer configuration (physical datasets - tables, shapefiles, geotiffs)"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:50
+#: 7708d9a6e36249e69b522ae2985dd454
+msgid "Fully restore GeoNode and GeoServer fixtures and catalog from the zip archive"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:52
+#: 141411571e4047c0b7f59278e20ecc9b
+msgid "The usage of those commands is quite easy and straightforward."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:54
+#: 55ee76be0def451f91f195d8e95025f1
+msgid "The first step is to ensure that everything is correctly configured and the requisites respected in order to successfully perform a backup and restore of GeoNode."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:57
+#: 0dc67caeb9004fbcab32949776a96730
+msgid "It is worth to notice that this functionality requires the latest `GeoServer Extension <https://build.geo-solutions.it/geonode/geoserver/latest/>`_ (2.9.x or greater) for GeoNode in order to correctly work."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:59
+#: d2107e91a2c440b99d77da2b96f149d4
+msgid "GeoServer full documentation is also available here `GeoServer Docs <https://docs.geoserver.org/stable/en/user/community/backuprestore/index.html>`_"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:62
+#: 7011f7da769b480c9785676a74adbc6c
+msgid "Requisites and Setup"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:64
+#: ea9a7ff46b2b4393ae716885d7902a0d
+msgid "**Before** running a GeoNode backup / restore, it is necessary to ensure everything is correctly configured and setup."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:67
+#: 1d7b0d38b0214cbdb8cea38f9c291a04
+msgid "Settings"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:69
+#: a531cd0036df43408d0562543f3d5825
+msgid "Accordingly to the admin needs, the file ``settings.ini`` must be ceated before running a backup or restore."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:71
+#: aeac889ff762465290eee7ec799a4564
+msgid "The default files can be found at ``geonode/br/management/commands/settings_sample.ini`` and ``geonode/br/management/commands/settings_docker_sample.ini`` for the classic and Docker environments accordingly. The content is similar in both of them (an example from ``settings_sample.ini``):"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:90
+#: bcad12d64b7d47a99c673a31d732c18f
+msgid "The ``settings.ini`` file can be created in any directory accessible by GeoNode, and it's path can be passed to the backup / restore procedures using `-c` (`--config`) argument."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:93
+#: 722d5b733e8f4e9f8cdbc75b36b8f313
+msgid "There are few different sections of the configuration file, that must be carefully checked before running a backup / restore command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:96
+#: 51bad7215c6543ce93f5868ad5dafca7
+msgid "Settings: [database] Section"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:104
+#: 36c8c14ab5204239bf3db0d39398e8b6
+msgid "This section is quite simple. It contains only two properties:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:106
+#: 47d0a0bf372c427795c647e98f1cf383
+msgid "*pgdump*; the path of the ``pg_dump`` local command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:108
+#: 2b7ab4d4acf04a8ca4d12976af1a3317
+msgid "*pgrestore*; the path of the ``pg_restore`` local command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:110
+#: b2d5f38ccf5f4e7a89895583159764f0
+msgid "Those properties are ignored in case GeoNode is not configured to use a DataBase as backend (see ``settings.py`` and ``local_settings.py`` sections)"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:112
+#: 924e684783e24de390ed5d06321e5a42
+msgid "Database connection settings (both for GeoNode and GeoServer) will be taken from ``settings.py`` and ``local_settings.py`` configuration files. Make sure they are correctly configured (on the target GeoNode instance, too) and the DataBase server is accessible while executing a backup / restore command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:115
+#: 8af483f195cc47af8328b2aa805f6f95
+msgid "Settings: [geoserver] Section"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:128
+#: cecc5dcea91b4e38a962349a80be6047
+msgid "This section allows to enable / disable a full data backup / restore of GeoServer."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:130
+#: 2d4d31bba32544119914ee8dc68124ae
+msgid "*datadir*: the full path of GeoServer Data Dir, by default ``/opt/gs_data_dir``. The path **must** be accessible and **fully writable** by the ``geonode`` and / or ``httpd server`` users when executing a backup / restore command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:132
+#: c5901d5c72b7441dbaf76516d2820665
+msgid "*datadir_exclude_file_path*: comma separated list of paths to exclude from ``geoserver_catalog.zip``; This list will be sent and managed directly by the GeoServer Backup REST API."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:134
+#: f8aa18646e1e48bc8a959053ae2cb189
+msgid "*dumpvectordata*: a boolean flag enabling or disabling creation of a vector data dump from GeoServer (shapefiles or DB tables). If ``false`` (or ``no``) vector data won't be stored / re-stored."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:136
+#: a332bba53d36443fad733eabdc913fae
+msgid "*dumprasterdata*: a boolean flag enabling or disabling creation of a raster data dump from GeoServer (geotiffs). If ``false`` (or ``no``) raster data won't be stored / re-stored."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:138
+#: 956d7a32b8254af59d3ce0a2e8a31910
+msgid "*data_dt_filter*: {cmp_operator} {ISO8601} e.g. > 2019-04-05T24:00 which means \"include on backup archive only the files that have been modified later than 2019-04-05T24:00"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:140
+#: 3e6b4b8396c040fea6fbb4c3e7ec1df5
+msgid "*data_layername_filter*: comma separated list of ``layer names``, optionally with glob syntax e.g.: tuscany_*,italy; Only ``RASTER`` original data and ``VECTORIAL`` table dumps matching those filters will be **included** into the backup ZIP archive"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:142
+#: 49ae16de0f5b470fa89712b2d074a12f
+msgid "*data_layername_exclude_filter*: comma separated list of ``layer names``, optionally with glob syntax e.g.: tuscany_*,italy; The ``RASTER`` original data and ``VECTORIAL`` table dumps matching those filters will be **excluded** from the backup ZIP archive"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:145
+#: d37efb6355474460837bf19ba93f702f
+msgid "Enabling these options **requires** the GeoServer Data Dir to be accessible and **fully writable** for the ``geonode`` and / or ``httpd server`` users when executing a backup / restore command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:148
+#: d2546e7a6e32484dbb435b797c451ed4
+msgid "Settings: [fixtures] Section"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:158
+#: 1db8c0cf5d93440d9730f8d0b4b0e172
+msgid "This section is the most complex one. Usually you don't need to modify it. Only an expert user who knows Python and GeoNode model structure should modify this section."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:160
+#: 0a4d2eec97034511bc123f148382bc59
+msgid "What its properties mean:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:162
+#: 96da778255b94d5ea3c46ec6ba5b127a
+msgid "*apps*; an ordered list of GeoNode Django applications. The backup / restore procedure will dump / restore the fixtures in a portable format."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:164
+#: fe731426616441efb8fe1db2e1f66d03
+msgid "*dumps*; this is the list of ``files`` associated to the Django applications. The order **must** be the same as in the *apps* property above. Each name represents the ``file name`` where to dump to / read from the single app's fixtures."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:168
+#: 3a8ecba4457646f48421a662a78a27d2
+msgid "Executing from the CLI"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:170
+#: 7e5fa14f3d8c4b31b58e36a6154bbac7
+msgid "The following sections shows instructions on how to perform backup / restore from the command line by using the Django Admin Management Commands."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:172
+#: 21a83bb110b9493cbe4d8eedb2780568
+msgid "In order to obtain a basic user guide for the management command from the command line, just run"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:180
+#: a8413a4aa6524a64b022c40cd44c5aba
+msgid "``--help`` will provide the list of available command line options with a brief description."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:182
+#: d2f37a89c30c4bf7bb86f19981eb1b58
+msgid "By default both procedures activate `Read Only` mode, disabling any content modifying requests, which is reverted to the previous state (from before the execution) after finish, regardless of the command's result (success or failure). To disable activation of this mode, ``--skip-read-only`` argument can be passed to the command."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:186
+#: 6d9e467ce5f945269932df0a8dd8bde3
+msgid "It is worth notice that both commands allows the following option"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:194
+#: b53a1dbdc2ad4a33924bb0017513e12c
+msgid "Which enables a non-interactive mode, meaning the user will not be asked for an explicit confirmation."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:197
+#: 8f334e778cb04190ad260c21b189a019
+msgid "Backup"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:199
+#: 93f1efe995344afe850b7a68cae2cf3e
+msgid "In order to perform a backup just run the command:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:205
+#: 9ecb67ee53d94bcdaaa42fb37f77559d
+msgid "The management command will automatically generate a ``.zip`` archive file on the target folder in case of success. In the target directory ``.md5`` file with the same name as backup will be created. It contains the MD5 hash of the backup file, which can be used to check archive's integrity before restoration."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:209
+#: d60a48d5a214476eb4e1ba44a93264fb
+msgid "It is worth to mention that ``br`` (Backup & Restore GeoNode application) will not be dumped, even if specified in the ``settings.ini`` as its content is strictly related to the certain GeoNode instance."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:212
+#: 4f1a10b2127a4623b72c9cadcf66c075
+msgid "Currently, GeoNode does not support any automatic extraction of the backup file. It should be manually transferred, if needed to the target instance environment."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:216
+#: d51dd50869734bbfa4f72f1ce982f66d
+msgid "Restore"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:218
+#: 0c91c3e2bd824cb699897576dbbb8394
+msgid "The ``restore`` command has a number of arguments, modifying its execution:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:220
+#: f86dc0d2af0845cb8ca0dc5432ce8f5e
+msgid "# ``-c`` / ``--config``: path to the ``settings.ini`` configuration file. If the Backup archive is provided with his settings, the latter will be used by the restore command and this option won't be mandatory anymore"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:222
+#: 3acacf95c7924846b0db051d0d86c3bc
+msgid "``--skip-geoserver``: the GeoServer backup restoration won't be performed"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:224
+#: ceff243461ec48a09295b07df2f04cf7
+msgid "``--skip-geoserver-info``: {Default: True} Skips GeoServer Global Infos, like the proxy base url and other global GeoServer metadata info"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:226
+#: ae68f3a623bb477da01f0f4700932597
+msgid "``--skip-geoserver-security``: {Default: True} Skips GeoServer all the Security Settings"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:228
+#: d49699637c164450ba0de19a2d9068c9
+msgid "``--backup-file``: (exclusive together with ``--backup-files-dir``) path to the backup ``.zip`` archive"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:230
+#: 5bf8732ab30e4b8e9f1307810d16dd16
+msgid "``--backup-files-dir``: (exclusive together with ``--backup-file``) directory containing backup archives. The directory may contain a number of files, but **only** backup archives are allowed with a ``.zip`` extension. In case multiple archives are present in the directory, the newest one, created after the last already restored backup creation time, will be restored. This option was implemented with a thought of automated restores."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:232
+#: 0fc09914e36948fe99ca545e328cb1fe
+msgid "``--recovery-file``: Backup archive containing GeoNode data to restore in case of failure."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:234
+#: 0b86eaa56a014998be2bef6cba147476
+msgid "``-l`` / ``--with-logs``: the backup file will be checked against the restoration logs (history). In case this backup has already been restored (MD5 based comparision), RuntimeError is raised, preventing restore execution."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:236
+#: ac3e321620834ec191e5b47064de8f2c
+msgid "``-n`` / ``--notify``: the restore procedure outcome will be send by an e-mail notification to the superusers of the instance (note: notification will be sent to the superusers of the instance before restoration)."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:238
+#: 699bdca9fa2e4fe39f2b1de0fa7ac5e7
+msgid "``--skip-read-only``: the restore procedure will be conducted without setting `Read Only` mode during execution."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:240
+#: a4a79ed625844689954f03588c1578d7
+msgid "``--soft-reset``: the restore procedure will preserve geoserver table / resources during the restore. By default the procedure will drop tables and resources"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:242
+#: 31c9e458910246e2a7ada32a5d212509
+msgid "In order to perform a default backup restoration just run the command:"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:248
+#: 0ea76975d1da4bb9b68013ff453defa9
+msgid "For restore to run it requires either ``--backup-file`` or ``--backup-files-dir`` argument defined."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:250
+#: b675bbf739ff4382802ab0ede764fcd9
+msgid "The Restore will **overwrite** the whole target instances of GeoNode (and by default GeoServer) including users, catalog and database, so be very careful."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:253
+#: 9fecc15811f24ea1a24a1875fb5782a9
+msgid "GeoNode Admin GUI Inspection"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:255
+#: 59872c6213004e29bf76d13a6b58a190
+msgid "The history of restored backups can be verified in the admin panel."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:257
+#: b1171bf2f0364a23beecfc38146ee32c
+msgid "Login to the admin panel and select ``Restored backups`` table from ``BACKUP/RESTORE`` application."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:263
+#: aaf28b798c234050aed37f2327db5de3
+msgid "A list will be displayed with a history of all restored backups. You can select a certain backup to view it's data."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:269
+#: d720908968484d55a41a3a0a6cd33896
+msgid "The detailed view of the restored backup shows backup archive's name, it's MD5 hash, it's creation/modification date (in the target folder), and the date of the restoration. Please note Restored Backup history cannot be modified."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:275
+#: 1606a87f34a74caaa182676d158845ee
+msgid "B/R in Docker environment"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:277
+#: 5394796be65e4781872e34c8c699e5a3
+msgid "When executing B/R in the Docker environment, creation backup to / restoration from should be executed in ``/backup_restore`` directory. It is a shared volume between Geoserver and Geonode images, created for this purpose only. Pointing at another location will fail, as one of the images won't have an access to the files."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:281
+#: f80bd7dfc9074b89ad695eed2dae9265
+msgid "When executing B/R in Docker environment **remember** to create ``settings.ini`` file basing on ``settings_docker_sample.ini`` to point at a proper Geoserver data directory! In other case configuration mismatch may cause unexpected errors."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:283
+#: a1c9132fb2a94e1a82805854e88ab92e
+msgid "The only other volume shared between images is ``/geoserver_data/data``, but backup creation **should not** be performed there, as the recursive Geoserver backups may be created in such case."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:286
+#: b05da04217584d7a8a8227301424301f
+msgid "B/R Jenkins Job in Docker environment"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:288
+#: b38724e1c30e46edb5ae0ca46b51fa3f
+msgid "When installing GeoNode through the :guilabel:`geonode-project` Docker (see :ref:`geonode-project-basic`), an instance of `Jenkins CI/CD <https://www.jenkins.io/>`_ is also automatically deployed and available through :guilabel:`http://<geonode_host>/jenkins`."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:295
+#: 4c8ab11806cc4a088141a77ba48e6213
+msgid "Configure Jenkins at first startup"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:297
+#: 20615405590e40bdbccdcf1f279fa4f3
+msgid "The very first time you try to access Jenkins, you will need to unlock it and generate a new administrator username and password."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:299
+#: da1b5b91fe3646baa101dae2c2b4fe21
+msgid "In order to do that, you need to print the contents of the auto-generated file ``/var/jenkins_home/secrets/initialAdminPassword``"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:301
+#: 47268772bd574322b69a33443e22bed6
+msgid "First of all search for the Jenkins container ID, usually :guilabel:`jenkins4{{project_name}}` where ``{{project_name}}`` is the name of your :guilabel:`geonode-project` instance (e.g. ``my_geonode``)"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:317
+#: 1923921ac1c5439684d14f4a7ac4b73d
+msgid "Now just ``cat`` the file above inside the Jenkins container"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:325
+#: de2a8a6505be439687c0b1e4c040cc48
+msgid "Copy the hash code you just got form the print above, and copy-and-paste to the browser window"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:330
+#: 2fbd802b40da446eb6d4255592fdec60
+msgid "In the next step just install the :guilabel:`Default Plugins`. You can install more of them later on from the management page."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:335
+#: cf26412d74e9485489c1e505b9e4335c
+msgid "Wait until Jenkins has finished configuring the plugins"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:340
+#: ff3529ca222244888a02f5a2e00f3368
+msgid "Provide the administrator credentials as requested"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:345
+#: c996fc720d07450f843b93969450e69c
+msgid "Confirm the Jenkins instance URL, this can be changed form the configuration later in case you will need to update the server address"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:350
+#: 6add4c3a46d343f6aa802e124b2ab6bb
+msgid "Well done, Jenkins is ready now"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:355
+#: c291e539e0484dc1b14e5afd6091a914
+msgid "The next step is to configure a Jenkins Job able to interact with the Django Docker container and run a full backup"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:361
+#: 769eee62c11d4901b7ada0f84a5f3c2d
+msgid "Configure a Jenkins Job to run a full backup on the Django Container"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:363
+#: 7d3a846c773e40f88d1a9e5a5cad823b
+msgid "Before creating the new Jenkins job, we need to install and configure a new plugin, `Publish over SSH <https://plugins.jenkins.io/publish-over-ssh>`_"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:365
+#: 0b0c13bd9c8b40808e4c307c7bec8ec9
+msgid "In order to do that, once logged in as ``admin``, go to the Jenkins :guilabel:`Management Page > Manage Plugins` tab"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:373
+#: fde2acc0b6d54247914718dd0f37ac8e
+msgid "Click on :guilabel:`Available` tab and search for ``SSH`` available plugins"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:378
+#: b85075cc100240af823d02f922a877e1
+msgid "Select and check the ``Publish over SSH`` one"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:383
+#: f3af439248d54dc9885dba4a7ffcddc6
+msgid "Install the plugins and restart Jenkins"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:388
+#: c0556271e28b4e9ca60909834dc681bf
+msgid "The next step is to configure the ``SSH Server Connection`` for the :guilabel:`Publish over SSH` plugin."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:390
+#: 525bd3c30f314483a051618235bf63e6
+msgid "Move to :guilabel:`Jenkins Configuration`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:395
+#: 0a9bc7b5f4a84f28b5e62fa2d5108cca
+msgid "Scroll down until you find the :guilabel:`Publish over SSH` plugin section"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:400
+#: 4b012b386afd4c7da6298d4d48e0c3bb
+msgid "Depending on how your ``HOST SSH service`` has been configured, you might need several information in order to setup the connection."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:402
+#: b5d525c03bcc434b905ec24e536c45e9
+msgid "Here below an example using a global host (``master.demo.geonode.org``) accepting ``SSH`` connections via ``RSA keys``"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:408
+#: ../../intermediate/backup/index.rst:468
+#: 6b1396a9f8ef44f38575c830a0a62340
+#: 162ed18ea9f64899a962e1fd1fad82fb
+msgid "Before saving the configuration always ensure the connection is ok by using the :guilabel:`Test Configuration` button"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:413
+#: 5d00b7e5a0634574b1e010bada3f855b
+msgid "It is possible also to run and configure :guilabel:`Jenkins` to run locally, as an instance on :guilabel:`localhost`. In that case you will need to change few things in order to allow :guilabel:`Jenkins` to access your local network."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:416
+#: b766bac14ce34d28ac8b7b69aa1b966b
+msgid "First of all, be sure :guilabel:`OpenSSH Server` is correctly installed and running on your PC. Eventually check any firewall rules."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:426
+#: cf9c24d316ec41228f94ecb6f1fe0d81
+msgid "You will need to do some changed to your ``docker-compose.yml`` file in order to enable the :guilabel:`host network` configuration."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:428
+#: 419ea32bfafd4ccc91b2a3f681993060
+msgid "Enable ``network_mode: \"host\"`` on Jenkins container"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:458
+#: 69da6f2f42b24d1ea91a2acc92dfb80f
+msgid "From now on, your local Jenkins instance will be accessible from :guilabel:`http://localhost:9080/jenkins`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:460
+#: b03a5cba0fca4d819ef59873676b1878
+msgid "Add ``localhost`` Server to the :guilabel:`Publish over SSH` plugin configuration"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:462
+#: dd8ff4de1461404eb86c29e527940db0
+msgid "Mode to :guilabel:`http://localhost:9080/jenkins/configure` and fill the required information"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:473
+#: f38864d6a2c64cf4969ec990878e6a22
+msgid "We are now ready to create the Jenkins Job which will run a full backup & restore of our GeoNode dockerized instance."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:475
+#: 872cd8ff73fb452482747b6e28502da5
+msgid "Move to the Jenkins Home and click on :guilabel:`Create a Job` button"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:480
+#: d0bf56bfd3ba4262a455b3650441f8fa
+msgid "Provide a name to the Job and select :guilabel:`Freestyle project`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:485
+#: 4b6ce865a90e44418b274aa9e2b3c9e9
+msgid "Enable the :guilabel:`Log rotation` strategy if needed"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:490
+#: 05470f68bee7446e88e819b9360d2926
+msgid "Configure the :guilabel:`Job Parameters` which will be used by the script later on."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:492
+#: 70e03cabab0f4d05a80fab11317ecf58
+msgid "Add three :guilabel:`String Parameters`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:497
+#: b0e131ade14f49a4b925182c16fdc1b6
+msgid "as shown below"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:499
+#: 2e99a6f761c34c24bbec519d8609022b
+msgid ":guilabel:`BKP_FOLDER_NAME`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:504
+#: aeacd90076d34d97a4ea323d0fcb7255
+msgid ":guilabel:`SOURCE_URL`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:506
+#: ../../intermediate/backup/index.rst:513
+#: 92cb1628fa98414dab6062a9faec6b51
+#: d87e750c0dd34602b90f520387b140e1
+msgid "Provide the correct URL of your GeoNode instance"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:511
+#: 44410ae0e49c455b9c3e34f4634ce118
+msgid ":guilabel:`TARGET_URL`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:518
+#: 96c10d0e2559484d9808fe02efc3e035
+msgid "Enable the :guilabel:`Delete workspace before build starts` and :guilabel:`Add timestamps to the Console Output` :guilabel:`Build Environment` options"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:523
+#: d2c4fa2777b8428caa523499e29ab6a3
+msgid "Finally let's create the :guilabel:`SSH Build Step`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:528
+#: 5f3745f82fd34048a585276ba9334f63
+msgid "Select the correct :guilabel:`SSH Server` and provide the :guilabel:`Exec Command` below"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:530
+#: 5d109aab0565495688c9c1b810e84e7f
+msgid "Replace :guilabel:`{{project_name}}` with your :guilabel:`geonode-project instance name` (e.g. :guilabel:`my_geonode`)"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:542
+#: 00a7aa894aaa44949082a73e0dde20d0
+msgid "Click on :guilabel:`Advanced` and change the parameters as shown below"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:547
+#: 3d077f9be38547cab880f5e230981f4c
+msgid "**Save!** You are ready to run the Job..."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:562
+#: 776643ff051f4f5aab5bb1d75eb2a798
+msgid "Link the :guilabel:`backup_restore` folder to a local folder on the :guilabel:`HOST`"
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:564
+#: 0752c130f1eb4491b173a472aef7221c
+msgid "In the case you need to save the backup archives outside the docker container, there's the possibility to directly link the :guilabel:`backup_restore` folder to a local folder on the :guilabel:`HOST`."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:566
+#: bb7070bf1d684a909db6c38f4dfe0d45
+msgid "In that case you won't need to :guilabel:`docker cp` the files everytime from the containers, they will be directly available on the host filesystem."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:568
+#: 37d7df578f264c96b3fe6f74b44185cd
+msgid "Always keep an eye to the disk space. Backups archives may be huge."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:570
+#: d0f1f8b6dc3341358959d0d7a0fd5de9
+msgid "You might want also to consider filtering the files through the backup dt filters on the :guilabel:`settings.ini` in order to reduce the size of the archive files, including only the new ones."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:572
+#: 6e1d13f9c7ca413cb6ee5aaea21a9ade
+msgid "Modify the ``docker-compose.override.yml`` as follows in order to link the backup folders outside."
+msgstr ""
+
+#: ../../intermediate/backup/index.rst:574
+#: 5d14f679bbd64413b52142c080bb85e0
+msgid "``/data/backup_restore`` is a folder physically located into the host filesystem."
+msgstr ""

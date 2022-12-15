@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contribute/frontend-development/index.rst:2
+#: 070b1212029a48e5b89dc26584c1516f
+msgid "Frontend development"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:5
+#: 14e6dacc10a24ec79b9d119b7c315cd9
+msgid "Knowledge of handling node/npm is required."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:7
+#: 56a55ab06ba34c769c1072be78d0b4e0
+msgid "The GeoNode frontend dependencies can be found in ./geonode/static. To manage dependencies, we recommend the use of yarn package manager (https://yarnpkg.com/lang/en)."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:12
+#: 843eb7bcaa8748eb957335ef96ae6ee2
+msgid "First steps:"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:14
+#: df6da777cce14b1593b9f12c93a7876a
+msgid "``yarn install``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:16
+#: 057ae060bcc74ed4b2d3f661239e5a2d
+msgid "Installs the required libraries to ./node_modules"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:18
+#: ac1df301ff1842b3bcfb5eb2bab37be9
+msgid "``yarn install <package>@version [--dev]``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:20
+#: 629b28fe279546adbbd4fd4f59d98902
+msgid "Installs a package with a defined version. Using ``–dev`` installs a dependency that is only available for the build process (see: package.json devDependencies)."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:23
+#: 2c79f023d72e4ee2aee9a9d1f2830775
+msgid "``yarn remove <package>``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:25
+#: 9516a4d26c8b4448a6b7b83278941bc3
+msgid "Removes a package."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:27
+#: cc26a3875b024236a3b2c8df8c137baf
+msgid "``yarn outdated``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:29
+#: 6249c18d9e2a4007a958d7e6a840ecec
+msgid "Shows version information."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:31
+#: 3ed68d1ffc1e407b9af73efe236fcc2b
+msgid "``yarn why <package>``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:33
+#: 5a16a584dd5e4247827b055f20086a29
+msgid "Get information on why this package was installed."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:35
+#: ea102a2a644a4fcfaa62dcfce498033d
+msgid "**For further information on how to install or use please visit the official yarn documentation.**"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:38
+#: 215a9398333d499cb1c7648a03be49ca
+msgid "File/Folder overview:"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:40
+#: cf78e5ad48244c45b9fa686e330def31
+msgid "``./static_dependencies.json``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:42
+#: 148a2c3f79bd4df58782bf3989e5f192
+msgid "includes all dependencies associated with each file. For example all files which should be minified to assets.min.js are named as values. All files that should be copied to lib folder (for DEBUG_STATIC) are values of key `other_dependencies` and so on. Before you can use a dependency it has to be added to package.json by use of yarn."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:46
+#: 100c6fec3fc141229a00f683745ef8fb
+msgid "``./Gruntfile.js``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:48
+#: 4ff93c3edb1f401ab716aa1053dcbea3
+msgid "reads the dependencies from static_dependencies.json and contains all workflows."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:52
+#: fd024eae57864fe4bde05ec0781adf4b
+msgid "geonode/static/geonode"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:54
+#: 2ac5157b82754324ab58193912cb89cf
+msgid "The ./geonode folder contains GeoNode’s stylesheets and javascript files. The CSS files are generated via less. CSS files should therefore never be changed directly but it’s corresponding less file. Further this folder should never be deleted!"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:60
+#: 43ad398666514cae8bdd69853703a218
+msgid "geonode/static/lib"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:62
+#: 789e32760e4b4dda893dea91ff89c31a
+msgid "The ./lib folder contains all the third-party files. This folder can be deleted as it will be fully generated by use of grunt ``development|production``"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:68
+#: 278c2817f6db4bab9e4056c3cc3fdf72
+msgid "Example 1 – Change styling:"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:70
+#: ../../contribute/frontend-development/index.rst:81
+#: ea320001d0614fc5aa58be1fb23dc3c5
+#: 5749245a29084e0e8708ed06cacd1d31
+msgid "In your settings set ``DEBU_STATIC=True``. This will load unminified assets in your template."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:71
+#: 6e373d178a514cc99526c9edec610f10
+msgid "Start the development server with ``paver start``."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:72
+#: 4e061d5ef7054d1f8483a3b025d3efba
+msgid "Use ``grunt watch`` to watch all less files for change."
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:73
+#: d0639e6839a04ecb846d12fafd38be2a
+msgid "Change styling in ./geonode/static/geonode/less"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:74
+#: c1562c5a00f4413086764ba5a2505d99
+msgid "If our changes are as expected create a new build with ``grunt development`` (files are not minimized) or ``grunt production`` (files are minimized)"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:79
+#: f98b4f7f1e3a430f9072504ceaeb62b1
+msgid "Example 2 – add/update a new library:"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:82
+#: 504d133255354b6aa074458b85ed39f0
+msgid "yarn add angular@1.7"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:83
+#: 7fa41f8947d24e3abe05baeeca6eaf39
+msgid "``vim static_dependencies.json`` Edit the file and add your dependency to its fitting destination. For example, assets.min.js"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:85
+#: e700b00c1d614b52af4c2996d431cf98
+msgid "Check if some Django template (for example, base.html) includes the file and add it or adjust the version"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:86
+#: a233cad0bc6c4b859117641e098fc85f
+msgid "use `grunt production` to build the package"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:88
+#: bdc447b17c8543ca81220ece837b01a5
+msgid "**For further tasks have a look at gruntfile.js or ask for help in the development mailing list**"
+msgstr ""
+
+#: ../../contribute/frontend-development/index.rst:90
+#: f563ac17d9a34071b93318f747cf56e7
+msgid "Please make maintainers work easier and add a message to your commit why a library has been added. (For example, commit -m 'select2 added for permissions form on layer detail page')"
+msgstr ""

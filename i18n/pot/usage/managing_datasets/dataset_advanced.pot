@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:4
+#: a2f51f0ca47848f8b378cc5dc34f1eb4
+msgid "Advanced Dataset Management with MapStore"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:6
+#: 2f18a456d0784aaea6f00f67455aae3e
+msgid "GeoNode provides the user with some advanced features for dataset manipulation such as dataset filtering, attribute edition and dataset export in different formats. In a nutshell, these feature are provided via MapStore and we will redirect the user to MapStore specific documentation for further details."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:10
+#: e7c809b0b559434a8a57112081f37dd5
+msgid "Filtering Datasets"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:12
+#: 17a90965179643b1be9bc8212ff9bec7
+msgid "With GeoNode you can filter a dataset via it's attributes, direct map filter by drawing an area of interest over the map canvas and via cross-dataset filter, allowing intersection, contained and contains overlay methods. For more detail please check the MapStore documentation `here <https://mapstore.readthedocs.io/en/latest/user-guide/filtering-layers/>`_."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:16
+#: 7955ace6f21a41afba5c979bad6bf7f0
+msgid "Attribute Table"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:18
+#: 09c799d0ec52477d8e049aabe993164b
+msgid "GeoNode provides tools for attribute manipulation that allows the edition and creation of new attributes with simplicity. Such set of tools provided by MapStore also allows the user to filter, search, zoom features from a table of attributes perspective like in a common GIS Desktop environment. For more detail please check the MapStore documentation `here <https://mapstore.readthedocs.io/en/latest/user-guide/attributes-table/>`_."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:23
+#: 3eaeb21b0b1d49d39d47c72f2c4273d1
+msgid "Styling Advanced"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_advanced.rst:25
+#: 2b8e77f667a64506aa0c70ad8d8cded3
+msgid "MapStore allows for advance styling features not covered fully on previous GeoNode section. If you wish to deep your knowledge on these capabilities, please follow this `documentation link <https://mapstore.readthedocs.io/en/latest/user-guide/layer-settings/>`_."
+msgstr ""

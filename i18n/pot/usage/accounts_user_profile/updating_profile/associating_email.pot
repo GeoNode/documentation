@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:4
+#: 366b3612421045b0831f21062bd00f3a
+msgid "Associating your Account with an e-mail"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:6
+#: ab8778cfd6714c11a0a9093bf07d2d1b
+msgid "Your account is automatically associated with the e-mail that you used to register yourself on the platform."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:11
+#: a7a8b87da09844a3b44adef1e31890a3
+msgid "*Accounts e-mail*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:13
+#: 932addc78e9f408ebe6d1763754c871a
+msgid "By clicking on :guilabel:`Associated e-mails` of the *Profile* page (see :ref:`editing-profile`), you will have the possibility to fill up a new e-mail address. Type it in the :guilabel:`E-mail` input filed then click on :guilabel:`Add E-mail` to perform a new association."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:18
+#: 4c19fb16102c4c808dc3214098afda2f
+msgid "*New e-mail association*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:20
+#: 43112ef66bb549bf9267c9072af6aacc
+msgid "You can make it primary if necessary, in order to receive the notification on this address. To do that, select the e-mail that you want, then click on :guilabel:`Make Primary`."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/associating_email.rst:25
+#: d34637420e534e778d06288c65b4da27
+msgid "*Primary e-mail address*"
+msgstr ""

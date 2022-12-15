@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/users_groups/index.rst:2
+#: e62d162c8809447e880f3fd30663837a
+msgid "Interacting with Users and Groups"
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:4
+#: 5a1a60553ee84ea28e580d3649cfee65
+msgid "The GeoNode platform allows you to communicate by message with other GeoNode users and groups of users."
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:6
+#: 96127561faa94ac382eb8eb078625716
+msgid "You can also invite external users to join your GeoNode. In order to do that, click on :guilabel:`Invite Users` in the *Profile* page (see :ref:`editing-profile`) or in the :guilabel:`About` menu in the *Home* page."
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:7
+#: 45ace923d63d4240a01f96479693edcc
+msgid "You can invite your contacts typing their email addresses in the input field as shown in the picture below. Click on :guilabel:`Submit` to perform the action."
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:12
+#: b4bebd1a3b9949c1b657043c3e7274c6
+msgid "*Invite users to join GeoNode*"
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:14
+#: 055c8913359a419f8ea3fd2dd5fe4abf
+msgid "A message will confirm that invitations have been correctly sent."
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:19
+#: 09d2adc9dd2f488ca2c11070f21f13c5
+msgid "*Invitations confirm message*"
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:21
+#: cdaf1ea7fa074da1b38f9a53cfb6e55f
+msgid "You can invite more than one user at the same time by typing the email addresses inline with a semi-colon separator."
+msgstr ""
+
+#: ../../usage/users_groups/index.rst:23
+#: 83f17349724f493f979cfc7b4486748e
+msgid "The next sections will show you how to view information about other users and how to contact them."
+msgstr ""

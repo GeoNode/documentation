@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../start/index.rst:4
+#: f5f79b89b64e4b1da23b09f3f2f3e7f8
+msgid "GeoNode Basics"
+msgstr ""
+
+#: ../../start/index.rst:9
+#: 072afc6a827b456aaa7781b806dddeb2
+msgid "is a platform for the management and publication of geospatial data. It brings together mature open-source software projects under an easy to use interface."
+msgstr ""
+
+#: ../../start/index.rst:15
+#: 6d19c5da7f834588bebadb08ee90cdce
+msgid "*GeoNode simplified architecture*"
+msgstr ""
+
+#: ../../start/index.rst:18
+#: 641eec142e054ebb9169d44d17c8812e
+msgid "*With GeoNode, non-specialized users can share data and create interactive maps.*"
+msgstr ""
+
+#: ../../start/index.rst:28
+#: 1caed61eaa614abcbddaf3eb45a028de
+msgid "Geospatial data storage"
+msgstr ""
+
+#: ../../start/index.rst:30
+#: 56ec0532c6d144049af37701bf5237bc
+msgid "GeoNode allows users to upload vector data (currently shapefiles, json, csv, kml and kmz) and raster data in their original projections using a web form."
+msgstr ""
+
+#: ../../start/index.rst:33
+#: 679e6b43d54e4578bb5b823ba109eb46
+msgid "Vector data is converted into geospatial tables on a DB, satellite imagery and other kinds of raster data are retained as GeoTIFFs."
+msgstr ""
+
+#: ../../start/index.rst:35
+#: 743cb64daac94135bf5a074d9818ba53
+msgid "Special importance is given to standard metadata formats like ISO 19139:2007 / ISO 19115 metadata standards."
+msgstr ""
+
+#: ../../start/index.rst:37
+#: 01808aa24a2f4ae89feb1e2edc273fb0
+msgid "As soon as the upload is finished, the user can fill the resource metadata in order to make it suddenly available through the `CSW`_ (OGC Catalogue Service) endpoints and APIs."
+msgstr ""
+
+#: ../../start/index.rst:40
+#: 6ac12c65cde34eea90233920956c0ec2
+msgid "Users may also upload a metadata XML document (ISO, FGDC, and Dublin Core format) to fill key GeoNode metadata elements automatically."
+msgstr ""
+
+#: ../../start/index.rst:42
+#: b185d9c466ba4f8288e8ebe4f1e0c6ec
+msgid "Similarly, GeoNode provides a web based styler that lets the users to change the data portrayals and preview the changes at real time."
+msgstr ""
+
+#: ../../start/index.rst:48
+#: f11a497eb15d4f60a4fb156d34a7edab
+msgid "Data mixing, maps creation"
+msgstr ""
+
+#: ../../start/index.rst:50
+#: a5b43796768a44dcafddf1598c52668e
+msgid "Once the data has been uploaded, GeoNode lets the user search for it geographically or via keywords in order to create fancy maps."
+msgstr ""
+
+#: ../../start/index.rst:52
+#: 0a6eaa06964246e1b00f1f9b03815fab
+msgid "All the datasets are automatically re-projected to web Mercator for maps display, making it possible to use different popular base datasets, like Open Street Map, Google Satellite or Bing datasets."
+msgstr ""
+
+#: ../../start/index.rst:55
+#: 6af90e2bea474d36a019bf212bedacc2
+msgid "Once the maps are saved, it is possible to embed them in any web page or get a PDF version for printing."
+msgstr ""
+
+#: ../../start/index.rst:58
+#: c75fca52b6d04cb7aacbfef13076bc44
+msgid "GeoNode as a building block"
+msgstr ""
+
+#: ../../start/index.rst:60
+#: c84bd30e42f9496c896b4e89428509a8
+msgid "A handful of other Open Source projects extend GeoNode's functionality by tapping into the re-usability of Django applications."
+msgstr ""
+
+#: ../../start/index.rst:62
+#: 098eec549c0a463f85c1e81b409f8364
+msgid "Visit our gallery to see how the community uses GeoNode: `GeoNode Projects <http://geonode.org/gallery/>`_."
+msgstr ""
+
+#: ../../start/index.rst:64
+#: 38c1030ba6154a8e9434261494facef9
+msgid "The development community is very supportive of new projects and contributes ideas and guidance for newcomers."
+msgstr ""
+
+#: ../../start/index.rst:67
+#: 21eaf2a1b39a403abae9fcc70c14e31c
+msgid "Convinced! Where do I sign?"
+msgstr ""
+
+#: ../../start/index.rst:69
+#: 154632db9c1f4263ab4e5d7e2d5353e1
+msgid "The next steps are:"
+msgstr ""
+
+#: ../../start/index.rst:71
+#: 5bebaa36cbbf4689b34b22fbac726b0f
+msgid "Make a ride on the :ref:`online_demo`"
+msgstr ""
+
+#: ../../start/index.rst:73
+#: d1192ef9b72f44189a3ea74877c8df19
+msgid "Follow the :ref:`quick_setup_guide` in order to play with your own local instance and access all the admin functionalities"
+msgstr ""
+
+#: ../../start/index.rst:75
+#: 76180b8a677d4a99888edcd5673f01ec
+msgid "Read the documentation starting from the :doc:`user guide </usage/index>` to the :doc:`admin guide </admin/index>`"
+msgstr ""
+
+#: ../../start/index.rst:77
+#: 248008df55814ee7aa0e5e3148fc89b6
+msgid "Subscribe to the `geonode-users`_ and/or `geonode-devel`_ mailing lists to join the community. See also the section :ref:`get_in_touch` for more info."
+msgstr ""
+
+#: ../../start/index.rst:80
+#: dafb53dce8cf4f968d324840fe666cf9
+msgid "Thanks for your interest!"
+msgstr ""
+
+#: ../../start/index.rst:88
+#: 66dc9099deac4173a8d8bb62258fd1c1
+msgid "Supported Browsers"
+msgstr ""
+
+#: ../../start/index.rst:90
+#: ea281c6b43de46f6982939f538266284
+msgid "GeoNode is known to be working on all modern web browsers."
+msgstr ""
+
+#: ../../start/index.rst:92
+#: 1dec850706ba4db9932028f27604c32d
+msgid "This list includes (but is not limited to):"
+msgstr ""
+
+#: ../../start/index.rst:94
+#: fa005dbf6794453cb01bca2c90b85d7a
+msgid "`Google Chrome <http://www.google.com/chrome/>`_."
+msgstr ""
+
+#: ../../start/index.rst:95
+#: e06510d2c2bc43d5969e8edfeb6fa679
+msgid "`Apple Safari <https://www.apple.com/safari/>`_."
+msgstr ""
+
+#: ../../start/index.rst:96
+#: de80e297f4b946bbb83ef549ee8a608e
+msgid "`Mozilla Firefox <https://www.mozilla.org/en-US/firefox/new/>`_."
+msgstr ""
+
+#: ../../start/index.rst:97
+#: 2a221001f1124d5bbde95a8cbac7773e
+msgid "`Microsoft Edge <https://developer.microsoft.com/en-us/microsoft-edge/>`_."
+msgstr ""
+
+#: ../../start/index.rst:99
+#: 1b05826fe3dc49559fb52a287f465a67
+msgid "The vast majority of GeoNode developers prefer using Google Chrome."
+msgstr ""
+
+#: ../../start/index.rst:104
+#: 47e65078cb254c15a886bf7df8d08689
+msgid "Online Demo"
+msgstr ""
+
+#: ../../start/index.rst:106
+#: 21fcab2da60149ea80534c02cd393ee8
+msgid "**Disclaimer** we do not guarantee for any data published on this Demo Site. Publish the data at your own risk. Every dataset will be removed automatically every Sunday. If you find some dataset that shouldn't be there, please write suddenly to developers and maintainers."
+msgstr ""
+
+#: ../../start/index.rst:110
+#: 8ee278c159b0428d8e486ccb1bbc1185
+msgid "See the section :ref:`get_in_touch` for details."
+msgstr ""
+
+#: ../../start/index.rst:112
+#: dac786888e704337ac7c8ad48d57d3ce
+msgid "A live demo of the latest stable build is available at http://master.demo.geonode.org/."
+msgstr ""
+
+#: ../../start/index.rst:117
+#: dcb77d4c984b4dadace10165a26b93ed
+msgid "*Online Demo @ master.demo.geonode.org*"
+msgstr ""
+
+#: ../../start/index.rst:119
+#: e9e307c490a84530b47a86f1f725b095
+msgid "Anyone may sign up for a user account, upload and style data, create and share maps, and change permissions."
+msgstr ""
+
+#: ../../start/index.rst:121
+#: 52359e56de7248289a6881362403ce73
+msgid "Since it is a demo site, every sunday all the datasets will be wiped out. Users, passwords and groups will be preserved."
+msgstr ""
+
+#: ../../start/index.rst:123
+#: 5a543490ec6a42ff8c70111d96ba08e3
+msgid "It should hopefully allow you to easily and quickly make a tour of the main capabilities of GeoNode."
+msgstr ""
+
+#: ../../start/index.rst:125
+#: 0391c1e38afd4afa921d8bec89cb505e
+msgid "This GeoNode instance is configured with standards settings and a very low security level. This is a demo only not to be considered a really production ready system. For a complete list of settings, refer to the section: :ref:`settings`"
+msgstr ""
+
+#: ../../start/index.rst:132
+#: 7941d5692520415ba64f8b374117b956
+msgid "Quick Installation Guide"
+msgstr ""

@@ -1,0 +1,718 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:2
+#: ffab4936d5b94d15b0ee76b45fe8bf88
+msgid "Monitoring"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:5
+#: 7d3521457c18434694f146b7e15c7815
+msgid "Internal Monitoring Application (geonode.monitoring)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:7
+#: 63ce6b055d4942c08801d5e8369e42f8
+msgid "This application requires MaxMind's GeoIP database file."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:10
+#: 19682a2bc3db45d2b424c08ba560e4e9
+msgid "Base concepts and objects"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:12
+#: a5d741806ff94cc983370aae7e0f01d3
+msgid "GeoNode monitoring is a configurable monitoring application, that allows internal resources and hardware resources monitoring for GeoNode installations, including GeoServer deployments."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:14
+#: a98c4fd2cd2146848add123229e3d3e7
+msgid "Monitoring application is configurable, so different deployment scenarios could be handled - from GeoNode and GeoServer running on single host, through distributed installations, where GeoServer is deployed to several hosts."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:16
+#: 64b4a03110b74b49b04c60399122c77d
+msgid "Monitoring application uses three base entity classes to describe elements of reality: ``Host``, ``Service Type`` and ``Service``."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:18
+#: 332b4acdaa184de4bdc0933ad4c36c99
+msgid "``Host`` is an object describing physical (or virtual) instance of operating system on which GN or GS is running. This object exists only for grouping and is not used directly by monitoring."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:21
+#: 66f8a7997a8e4240aa0c0a54c9661ab2
+msgid "``Service Type`` is a description of kind of Service. Depending on service type, different metrics are stored, and different data collection mechanisms are used. Additionally, for system monitoring, it's not conducted directly, but with GeoNode or GeoServer as monitoring agent. That means, no additional software installation is needed to monitor system, but also, hosts that don't have GeoNode or GeoServer installed, won't be monitored. There are four service types:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:26
+#: 7368b7a6ccec4238b4ba639fd9e50123
+msgid "``hostgeonode``, ``hostgeoserver`` - those types describe system monitoring probes that are running with GeoNode or GeoServer respectively,"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:28
+#: 99a4e66ec4d647f4aa074d245db6f45a
+msgid "``geonode``, ``geoserver`` - application-level probes that monitor one specific GeoNode or GeoServer instance."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:30
+#: c6fa3b60b2914dbbb45b8fa35c1d42cb
+msgid "``Service`` describes one specific instance of probe, either host-level or application-level. Service references Host and Service Type. Each service must be named, and name should be system-wide unique."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:33
+#: 99d6dad727a648e09cb0314f3a0de301
+msgid "As mentioned above, each ``Service Type`` keeps a set of ``metrics``, specific for that type. A ``metric`` is a description of measured value, for example: number of requests, response size or time, cpu usage, free memory etc. Each ``Service Type`` has it's own metrics set. Metric value may be either value counter (like country of user), numeric counter (like number of requests) or rate (like bytes in/out on network interface)."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:38
+#: 5ce6c6924cb44427bbb1cc1c827c2b34
+msgid "Besides metric data, monitoring will also store exception information for exceptions that were captured during request handling."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:40
+#: a865741a6ffd4ce4b71a89a10e052f6d
+msgid "Data are collected periodically (at most every 1 minute), aggregated and stored in aggregated form. User can see data from predefined relative periods (last minute, last 10 minutes, last hour, last day, last week)."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:43
+#: c257d11b0c7f4606879b15ef09e2911a
+msgid "User can enable and configure automated checks, which will be run after each collection/aggregation cycle, and will emit notifications if metric values in that run exceed configured thresholds."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:47
+#: 609d5853e8d24ba984bf3a6b362bdb17
+msgid "Analytics"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:49
+#: 76547e1e03084b29aaffdb39bf088765
+msgid "GeoNode monitoring application makes also available information about resources usage at user level."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:51
+#: 171061ce7a834f89a3cf15ea9afcab2d
+msgid "Those information are collected whenever an event occurs about some resource. Events can be of different types (``EventType``) which refer to common user activities on resources (upload, view, download, etc.). Those data are stored using a dedicated ``metric`` and aggregated based on a configurable granularity, depending on the time interval considered and the wanted resolution."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:55
+#: 0f6d5f541c6f4b848f4da42b56901b3a
+msgid "So the analytics client, once defined a time interval and a time frame, can retrieve stats such as:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:57
+#: cf8685e983ab43b19c28fb30230d4dc4
+msgid "total number of unique visitors;"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:58
+#: 5ed95707d22941b6a682af40551a936c
+msgid "number of unique visitors who trigger a specific type of event;"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:59
+#: 762ae21f1315431bb31a7893294424d5
+msgid "number of unique visitors who trigger events on some resource type;"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:60
+#: 1f15c93a2efe4e47a365511c9503ba71
+msgid "number of unique visitors in a given country;"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:61
+#: 63c57aeb9c5849899b4a85e2c1032dc9
+msgid "number of unique visitors who trigger events on some specific resource;"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:62
+#: 9b20d840caad46d1a22563f0cc1576e2
+msgid "number of unique visitors considering a combination of multiple conditions (for example an event type on some resource type)."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:65
+#: 4e5ace7225014943952e28d83ca65336
+msgid "Installation"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:67
+#: f93c4c6c62ed436997f9250055208771
+msgid "This plugin requires a Potgresql DB backend enabled"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:69
+#: 9bb505896a0e497d9aac1406b178b3cd
+msgid "ensure ``UTC`` Timezone to your DB"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:75
+#: d09155c35757457cb95a1ecfbcb3c1ea
+msgid "enable `MONITORING_ENABLED <../../basic/settings/index.html#monitoring-enabled>`_ flag and ensure that following code is in your settings:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:126
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:134
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:142
+#: a73dfb0848014261828001e2457879b9
+#: b27df38ca20843118783e3ca51f8b718
+#: c7138efcadcd408db4b645c4789b4bcb
+msgid "run"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:132
+#: 24ae7e004f884c268d1eb6735f37b3f0
+msgid "to apply db schema changes and insert initial data"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:140
+#: 59e4457bd851452ba677eb56e15ebc91
+msgid "to fetch MaxMind's GeoIP database file. It will be written to path specified by `GEOIP_PATH` setting."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:148
+#: f83d7e3d2e414e8f83edfc49b29c57b3
+msgid "to create first metrics."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:152
+#: f5a0e4ee869f4318a10df986377aa449
+msgid "Replace ``<yyyy-mm-dd HH:mm:ss>`` with a real date time to start with."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:154
+#: a78a0c74662a4e62bd1665e7bd08dac8
+msgid "update ``Sites`` from admin; make sure it contains a correct host name"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:155
+#: 7e923ba270dd4d32ac3e393954fea5fc
+msgid "do not forget to enable notifications and configure them from user profile"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:158
+#: 148dd4e208a14a6cb92f36fd402f07b0
+msgid "Enable the collect_metrics ``cron``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:160
+#: 25859cfd26a845259f90aafce94a832a
+msgid "Here below you will find instructions for a Ubuntu 16.04/18.04 based machine, but the procedure is similar for other OSs. The basic concept is that you must allow the system to run the command every minute (**without -f and since**):"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:168
+#: b8960dc10bba45d4a82ab32b427b92ae
+msgid "cront job"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:180
+#: c9fdae84653a40919f8c2eb12ed9f483
+msgid "supervisor"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:226
+#: 5b9346a74d614094b2483d545a4f04c9
+msgid "Configuration"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:228
+#: 610741eab8134e96befc5d5e95c60a6f
+msgid "In order to have working monitoring, at least ``Service`` should be configured. Let's assume following deployment scenario:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:231
+#: b33b26d0c5044813a9aaa8a823efd600
+msgid "there's one machine, ``geo01``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:233
+#: a85e7fc359a149d1b066cea4a882320f
+msgid "``geo01`` hosts both GeoNode and GeoServer (including PostgreSQL)."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:235
+#: 6a2bac0bbe724e2e90154b64dbf39ba3
+msgid "applications are served with nginx+uwsgi, on port 80, but they are reachable on ``localhost`` address."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:237
+#: bf0ade570fb94be2b2383ac315b80b92
+msgid "GeoServer is served from ``/geoserver/`` path"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:239
+#: e9a3ed10a2ea40c89c7ab2b090769d3c
+msgid "GeoNode is served from ``/`` path"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:241
+#: 4f7fdfd09d2c4309ad9243dcf0842f6b
+msgid "Here's step-by-step instruction how to create monitoring setup for deployment scenario:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:244
+#: 882ea9c2f2a443abb9e2cd68d74b5caa
+msgid "Log in as admin, and go to admin section:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: 511e63915a3142cea347241df43dcf8d
+msgid "go to admin section"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:249
+#: cdb4e687219641b3af460bee9bc6eac2
+msgid "Go to **monitoring** section (or type ``/admin/monitoring/`` as a path in URL):"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: f0cb5c7840334de6a6970e35a3602104
+msgid "go to admin/monitoring section"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:254
+#: 702718e24a6046bda2b7531a4ddf0046
+msgid "Go to **Hosts**:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: c90354f9c4ef4722b9d55a76cba5a633
+msgid "go to admin/monitoring/hosts section"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:259
+#: a299e9f2eef24d0a8da140ab4df7898f
+msgid "Click on **Add host +**:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: 7ee76130e18a41b0bf46725b21a3eb91
+msgid "add host"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:264
+#: b420a126251b496487df553302611e53
+msgid "Enter following information: * **host**: `localhost` * **ip**: `127.0.0.1` Note, that **host** value is arbitrary. You can enter other name if you like. Don't forget to save."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: 98aac5a8dff94e8a8789b3b4c726a8e4
+msgid "added host"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:273
+#: fe5d07b3589d4bf0ba9ae0e36f687312
+msgid "Go to **Services**:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: d2bead85e9604e8093e89f30b41d7c70
+msgid "go to admin/monitoring/services section"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:278
+#: 23f6883e3d994cb49bc542fbb2c13f42
+msgid "Click on **Add service +**:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: 3923be0a37c742a882adc945b79f703e
+msgid "add service"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:283
+#: 400556266e324443a1a3b80dd998a2c7
+msgid "Enter following information:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:285
+#: 1183e87edbf940dcada6f988887ee5d3
+msgid "**name**: `local-geonode`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:286
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:295
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:305
+#: 42897cc36a6d4a56974bac89f75ebfe8
+#: e04a8f9f0534461cba708ad9759c922b
+#: 913360bb87ad463d94da45549a96bebd
+msgid "**host**: `localhost`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:287
+#: 215fa7fd55294d1397ec7018fb5fe8c1
+msgid "**service type**: `geonode`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: aee8f09668d3476abf777f38a1736887
+msgid "add geonode service"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:292
+#: 5e97a5914d41496a8251262c4d298b1d
+msgid "Add another **Service** Enter following information:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:294
+#: 1924de2151ee4a48baa742d73b605ce3
+msgid "**name**: `local-system-geonode`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:296
+#: ef5d9fa95dba4ecbaa1df9e6c53230c9
+msgid "**service type**: `hostgeonode`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:297
+#: d86026fb67a44445a65de06207874bd5
+msgid "**url**: `http://localhost/` (should point to GeoNode home page)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: a9c2feaa27b4460db277086e7fca6c0c
+msgid "add hostgeonode service"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:302
+#: d470530991ce47999f4eb6b5e2848abb
+msgid "Add another **Service** and enter following information:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:304
+#: 08673921fc4a478f887e9d9d467812eb
+msgid "**name**: `local-geoserver`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:306
+#: ce4a04daf82f47569dc378d86382c8c5
+msgid "**service type**: `geoserver`"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:307
+#: 9be13b95271a4099a0deffc1230fd81a
+msgid "**url**: `http://localhost/geoserver/` (should point to GeoServer home page)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:0
+#: e1413ed996604edea2f8e0ee55db5d74
+msgid "add geoserver service"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:313
+#: b59197d26e934fb98a8ae05421b5ab36
+msgid "To summarize, following entries should be created in admin/monitoring:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:315
+#: 2f7265c1528840d9ba838500bd36e42c
+msgid "Host: ``localhost``, with ip: 127.0.0.1"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:319
+#: aff31b3da429496aaaa019316935e3fc
+msgid "Service: ``local-geonode``:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:318
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:323
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:328
+#: 9bf41375e6724b02b6f47f993a7c62b9
+#: b7306fa28a4c4a149eb3b355403b2fa0
+#: 074bf5e5f9de46d29dc495ab2d853fd4
+msgid "host ``localhost``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:319
+#: dabf8bb6969a45498f0fd9b0ef887688
+msgid "type ``geonode``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:324
+#: 34dde5e063704bbc85575692712d50c7
+msgid "Service: ``local-geoserver``:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:322
+#: 8ba6a4f20ab349a4967657c8e92a019f
+msgid "url ``http://localhost/geoserver/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:324
+#: 4cddb4bb1b2e427188bbfbfb84533403
+msgid "type ``geoserver``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:329
+#: 18d3e2809cfd49c1b3f8f48e2dd247a3
+msgid "Service: ``local-system-geonode``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:327
+#: ebf6442c934b40aeaef24a947317b4b5
+msgid "url ``http://localhost/``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:329
+#: 6095071c5b854d3e82e1cf29ec8ab96d
+msgid "type ``hostgeonode``"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:332
+#: a696547d8de34cfc85facd0b844534e3
+msgid "Usage"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:334
+#: a1ec802cb7f74300b6ba3a8419f256fc
+msgid "Monitoring interface is available for superusers only. It's available in profile menu:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:None
+#: 08657ba03d3e41efbeed5e06e34b8607
+msgid "monitoring link"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:340
+#: bcca969c34be4708b29525954de4825e
+msgid "Dashboard"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:342
+#: af21b604a2774815b2e3dd90034f370a
+msgid "Main view offers overview of recent situation in GeoNode deployment."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:None
+#: 247121d8ffda426fbb43cde4c802932c
+msgid "monitoring dashboard"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:349
+#: b815bba1832f4ef8bde8f724d5d62945
+msgid "Top bar and indicators"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:None
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:None
+#: bdac2dff3dda4895a5a0a46babb1b12e
+#: cf8d789daad947d8b68c702f093e218b
+msgid "indicators in ok state"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:354
+#: 2fe5234d399646eabaac40dc8d350e83
+msgid "With top bar buttons User can:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:356
+#: eaaa1872a0864d96a41d4a3e7b3374af
+msgid "go back from nested interface elements (charts, alerts, errors)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:357
+#: 3a44e790e7d54d029c9e9069fd48455d
+msgid "select time window from which data will be aggregated and shown (last 10 minutes, last 1 hour, last day or last week from now)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:358
+#: 4133e866db664e9f98072966bfe199ad
+msgid "see what's currently used time window"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:359
+#: 359248cb7e1a421689b1c1cecdd57b89
+msgid "enable/disable autorefresh"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:361
+#: 12b37bce6a7840e0a04708c52e75fba3
+msgid "Below there are four main health indicators:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:368
+#: 67ba0dc6f4cd40f4a45d46270ff71b28
+msgid "aggregated **Health Check** information."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:364
+#: af5ec0b45a384a0888a34acee1a0e33d
+msgid "This element will be:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:366
+#: 2c348b28adc14cdda349c0c4a3329531
+msgid "`green` if there is no alerts nor errors"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:367
+#: 998b434b4b7841339c6e14f894c966b2
+msgid "`yellow` if there are alerts"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:368
+#: ba0f6e7ee0cc4656ba07bea9b5533990
+msgid "`red` if there are errors"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:370
+#: b6fa68f4e8b94823890ea286edee2b49
+msgid "**Uptime** that shows GeoNode's system uptime."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:372
+#: 92696a02d35f4f83acd027703f3c33ec
+msgid "**Alerts** shows number of notifications from defined checks. When clicked, Alerts box will show detailed information . See Notifications description for details."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:374
+#: ac6d3fdf1ffe4d358c4e543b04eec85b
+msgid "**Errors** - shows how many errors were captured during request processing. When clicked, Errors box will show detailed list of captured errors. See Errros description for details."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:379
+#: 5af752abcb694d4d8ab8d137a78edd65
+msgid "Indicators in error state"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:383
+#: d83fd18de3854ae197418135229a09f4
+msgid "Software Performance"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:385
+#: 8613ce935f7d4b79a2dc56845731a6ed
+msgid "Software Performance view shows GeoServer web service statistics, for all requests monitored and detailed, OWS-specific, per service type (WMS, WFS, OCS etc)."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:389
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:406
+#: 670087811bab4ceb8d8e927af412142e
+#: b5fb9e6b28034227bf9fc44676ab71b3
+msgid "Clicking on"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:394
+#: ad5a0a26ae1643c1bab3ab474b3b26e9
+msgid "will show charts with data history for overall performance and per-OWS performance:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:400
+#: 8bf8165b892e424c9ab4ac7c3a215e55
+msgid "Hartware Performance"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:402
+#: 0aaa0809536d4f2296c2bd066d89817c
+msgid "Hardware performance box shows hardware usage statistics for selected host (monitored with any of hostgeonode or hostgeoserver type Service): % of CPU usage and average memory consumption. User can select from which host data will be presented."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:411
+#: 2f81d9271d314c9d942d747c39d09028
+msgid "will show charts with data history for selected host and time period"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:417
+#: 21d997da4a6044f99cb6d80355fa13ee
+msgid "Errors"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:419
+#: fb31647812d44c30a89834f4368981f7
+msgid "Errors view will show list of captured errors in GeoNode and GeoServer. List contents is displayed for selected time window."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:425
+#: 816a054aa75c4f37b2ac68aa3a2e3d33
+msgid "For each error, details are available:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:424
+#: 186b624c261246e1aefd60cccaf092c2
+msgid "error class, message and stack trace"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:425
+#: 9ed61cf4a0d040fba093a41b1802311b
+msgid "basic request context (IP, path, user agent)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:431
+#: 87b765b012d748afab76a232dbcc6d9f
+msgid "Alerts"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:433
+#: ae7d7222a120466782335e566b950b41
+msgid "An alert is a descriptive information on situation when observed metric contains values outside allowed range (for example, response time is above 30 seconds, or no requests were served within last 30 minutes). Alerts are generated by notifications mechanism described below."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:435
+#: 5ddf3991af88487b87138822140e8149
+msgid "Alerts view will show list of alerts for current moment (alerts that were generated in past are not displayed here):"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:439
+#: 458dc485992146cfa75edbbae300e09a
+msgid "Each alert contains more descriptive information what is wrong:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:444
+#: 89487e00920a48e3b68cebba472b5d28
+msgid "Notifications"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:446
+#: 2da340b766ac4bdd9d578f01e72e0505
+msgid "Notification mechanism (not to be confused with notifications application in GeoNode) is a way to inform selected users about situations, where collected metric data would indicate a problem with deployment. Notifications are accessible from Alerts view:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:450
+#: e8026f0b826f465496e38da366b857e2
+msgid "There can be several notification configurations available."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:455
+#: f40be351d7f8403e85a03cabd4292cc8
+msgid "Each notification configuration contains two main elements:"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:457
+#: e7d00b83eb93411b99adab3ec75c59c3
+msgid "list of email addressess which should be notified when alert is generated"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:458
+#: 7338879daee246a1beb6e034a5c69f3c
+msgid "list of checks (at least one check must be in invalid state to generate alert)"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:462
+#: d2ba253d735649fda989dd6dc834930a
+msgid "User can add arbitrary number of emails. Email address doesn't need to point to user registered in GeoNode instance. If email provided doesn't belong to any of users, alert will be send as a regular email. If email provided can be associated with specific user, notifications application (and thus, notification settings for that user) will be used to send alert."
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:465
+#: 5f141af65f204d4cbdb806d599587e86
+msgid "Integration with GeoHealthCheck"
+msgstr ""
+
+#: ../../intermediate/monitoring/geonode_monitoring/index.rst:467
+#: 653c2d34a9044046a2de1ab3432601a1
+msgid "GeoNode can also be easily monitored with external tools, like `GeoHealthCheck <http://geohealthcheck.org/>`_. See `Documentation on adding resources <http://docs.geohealthcheck.org/en/latest/admin.html#adding-resources>`_ for details."
+msgstr ""

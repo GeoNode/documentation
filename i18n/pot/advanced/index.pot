@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../advanced/index.rst:4
+#: ../../advanced/index.rst:2
+#: ../../advanced/index.rst:4
+#: 
+#: 9699be76021c4f4e926b5b450596bd12
+#: dbcaed9e523f4a34ac95e9435659261f
+msgid "GeoNode Components and Architecture"
+msgstr ""
+
+#: ../../advanced/index.rst:13
+#: ../../advanced/index.rst:11
+#: ../../advanced/index.rst:13
+#: 
+#: 2e5686badf1743aab26a718a925a155c
+#: d37d48682c574bee990db6a1037e20ec
+msgid "Hardening GeoNode"
+msgstr ""
+
+#: ../../advanced/index.rst:22
+#: ../../advanced/index.rst:20
+#: ../../advanced/index.rst:22
+#: 
+#: 33da80bbeb2f4d7f885a347fc569a586
+#: 279245083db94dedb35e433f3f89b36b
+msgid "Social Login"
+msgstr ""
+
+#: ../../advanced/index.rst:31
+#: ../../advanced/index.rst:29
+#: ../../advanced/index.rst:31
+#: 
+#: db49a5910b9f451e9ecec06a6f1c0968
+#: c13e369c73384bc4be851f563e5de0f5
+msgid "GeoNode Django Contrib Apps"
+msgstr ""

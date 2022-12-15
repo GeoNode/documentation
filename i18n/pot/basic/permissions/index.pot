@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../basic/permissions/index.rst:5
+#: cdb7bfb5b51e43edb54b62d612c1f337
+msgid "Permissions"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:7
+#: 8279a5b8cde5491a9970c94176c63899
+msgid "Permissions in GeoNode are set per resource, where a resource can be a dataset, a map, a document, a service or a geoapp. The way the permissions are set is the same for all of them."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:11
+#: b2285159803b41b0b56a9a0bdf41e7a9
+msgid "GeoNode has a set of default permissions that are applied on resource creation **when** you don't explicitly declare them. This is particularly relevant when creating and saving a map, where you won't have the possibility to set the its permissions during the creation phase. GeoNode can be tuned to make sure that by default the new created resource are not public, this can be done by changing two settings, see `Default view permissions <../settings/index.html#default-anonymous-view-permission>`_ and `Default download permissions <../settings/index.html#default-anonymous-download-permission>`_"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:16
+#: b01526f593784a1ba975d6e31b4fa8ab
+msgid "Single Resource permissions"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:18
+#: f3e2ec121a41432fa346d000debff2e2
+msgid "Resource permissions can be generally set from the *resource detail* page. The detail page has a menu item *Share* which is visible to people who are permitted to set permissions on a resource."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:19
+#: 8850c2368a9c421e80f462bc1d165fab
+msgid "The share link opens a page on the right with a provision to edit user and group permissions on the resource. see picture below"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:25
+#: bc05fb8849bd49a99e9d78c70ba2c150
+msgid "*Change Dataset Permissions*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:27
+#: f8cb35e450434980b23f95c2f4d8465a
+msgid "The page for setting the permissions, allows addition of users/groups and selection of a permission to assign each of them."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:33
+#: 59f5e6433af74b21a2e591c45fe44af4
+msgid "*Resource Permission Dialogue*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:35
+#: b948ad39c4a64f6e81e77f4af00d423d
+msgid "You can set the following types of permissions:"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:37
+#: 89d0c50e6c454feb8de111d6b0ea7241
+msgid "*View:* allows to view the resource;"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:38
+#: 2ab1c62b4a844ca5ab456e763059ff0a
+msgid "*Download* allows to download the resource;"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:39
+#: b57350d68cdc4c3594fb8c320f19f9c2
+msgid "*Edit:* allows to change attributes, properties of the datasets features, styles and metadata for the specified resource;"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:40
+#: 6b18546a55bf48e4b289fabe3da7a675
+msgid "*Manage:* allows to update, delete, change permissions, publish and unpublish the resource."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:42
+#: bfbc89defe4d40f88f57a59d6204af36
+msgid "When assigning permissions to a group, all the group members will have those permissions. Be careful in case of editing permissions."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:45
+#: 156bff8a943d4e919e11892a1a143484
+msgid "Geo Limits permissions"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:47
+#: 3b9ee5d5afc840a3a68ebce3e2dccd76
+msgid "This feature is available **only** when enabling ```GeoServer``` as geospatial backend. Also make sure that the properties ```GEONODE_SECURITY_ENABLED```, ```GEOFENCE_SECURITY_ENABLED``` and ```GEOFENCE_URL``` are correctly set for the ```OGC_SERVER```."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:49
+#: fe1f5b1e506c44cf98cfca3c9fe71499
+msgid ":guilabel:`Geo Limits` are an extension of the GeoNode standard permissions. :guilabel:`Geo Limits` allows the owner of the resource, or the administrator, to restrict users or groups to a specific geographical area, in order to limit the access to the dataset to only the portions contained within that geographic restriction, excluding data outside of it."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:51
+#: 3209a750f30143d08e959510865d7941
+msgid "In order to be able to set :guilabel:`Geo Limits` you must be an ```administrator``` of the system or the ```owner``` of the resource or you must have ```Manage Permissions``` rights to the resource."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:53
+#: f974e72cb57743659a6fd156ac5a0f0f
+msgid "If you have the permissions to set the :guilabel:`Geo Limits`, you should be able to see the permissions section and the globe icon on each user or group."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:59
+#: c7e0f321584a47399a3d9eb38bc9daad
+msgid "*Geo Limits Icon*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:61
+#: 3b6904f4c82b4e8c89c824d834c3ae38
+msgid "You should be able to see an interactive preview of the resource along with few small drawing tools, that allows you to start creating limits on the map manually if you want."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:63
+#: 6ec384c1717148cea385dee92ffe798b
+msgid "This opens a map dialog, with 3 options at the top:"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:69
+#: c4f7747c349943f19b7377bdfacea7b0
+msgid "*Geo Limits: Preview Window with Drawing Tools*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:72
+#: 144fe5efd1704d01b322206ca1628304
+msgid "The |edit_icon| icon allows you to draw limits on a map for which a user will be able to see. Click on it to start drawing on the map. Once you are done drawing, click on it again to deactivate drawing mode."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:74
+#: ../../basic/permissions/index.rst:74
+#: b5330aed2f2444b09ef1cfca773cabdd
+#: 7a23938ee20844aebb0ead46990d0cd1
+msgid "edit_icon"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:79
+#: d472c64e34504082a7ed1d0b2da61104
+msgid "The |delete_icon| icon enables you to remove the limits you have drawn. Click on the limit drawn, and then click the delete icon."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:81
+#: ../../basic/permissions/index.rst:81
+#: be17b31891824541aad24f5c4d5d4116
+#: a098da95556a464fa4d2b0ae397427fe
+msgid "delete_icon"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:86
+#: 210b6d44c1154f7c9dcc7bf5c58dca6c
+msgid "The |refresh_icon| icon removes all changes that are not saved."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:88
+#: ../../basic/permissions/index.rst:88
+#: 16e071ac74824eb2953ff1715003761b
+#: 027a3ed170b749adacbd20c81e31e4c7
+msgid "refresh_icon"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:98
+#: 50c18a7ed4cb43928b10197e931ccb27
+msgid "*Geo Limits: Editing the Geometries*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:100
+#: b2b3ed5cb2cf401a9f14e8e39506cfc2
+msgid "Once you finished editing your geometries, save them into the DB using the *Save* link in the resource menu."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:102
+#: bc070f17eca94c51a15de6f04c122178
+msgid "The user with the specified geometries won't be able from now on to access the whole dataset data."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:108
+#: d6e307936f3b4305b465f879466715f9
+msgid "*Geo Limits: Geospatial restrictions applies for the user*"
+msgstr ""
+
+#: ../../basic/permissions/index.rst:110
+#: a9d3200287d5481f990601383ec2a564
+msgid "The :guilabel:`Geo Limits` will be persisted on GeoNode DB for that resource. That means that everytime you will update the general permissions, also the geospatial restrictions will be applied."
+msgstr ""
+
+#: ../../basic/permissions/index.rst:112
+#: ece5b1d94d5c46fcb60a6439ca43a561
+msgid "In order to remove the :guilabel:`Geo Limits` for a certain user or group, you can just :guilabel:`Save` an **empty geometry**. This will **delete** the entry from the DB also."
+msgstr ""

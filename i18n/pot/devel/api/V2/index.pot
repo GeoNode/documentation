@@ -1,0 +1,2618 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../devel/api/V2/index.rst:4
+#: d3f5820f0a6f49b2b56f795d5d85201e
+msgid "API v2 - Schema"
+msgstr ""
+
+#: ../../devel/api/V2/index.rst:6
+#: 84a7609b09a44e6c93ad5175207efe9e
+msgid "OpenAPI 3.0 Schema"
+msgstr ""
+
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: 41400dfa9b734e88bd7a7df28b49e637
+#: 787f545e10f54c1ca69c227621e0e4b2
+#: 50848da461294b7d844557f08853a50d
+#: 83c5b0adf413436681864c7e503f7543
+#: 2c27b9cd877748c0977b2df35a33d42a
+#: 317ba77256de473c9d299b6920cb0e21
+#: 7e5b6e3353214be3aa899ee04eef6151
+#: cc2f49d573144192b21ad74eeda35944
+#: fc6e7164a88d4c9fa1aad03f52307870
+#: 71d734eda1ba442fa396faa9ebf46788
+#: 5ea202c6358441a0bf1daeee7084a7b1
+#: ca7d76a482bf4b76aa229f91074c7c06
+#: 264ff513d765488092b5549b16ce1c01
+#: 9816ea24f4d14d4da09e3fd2ec63dce4
+#: d586573fe63d4678b7fe5a0a84ceb206
+#: a6700d573f614f0aaf6a980224ce0a20
+#: 282291457a534bcd8bae1318dc26bc2b
+#: b7213931e4b34410bccdea8dc81e2dee
+#: 0484647fd96f438586feb4aa5a5adccb
+#: abb64a66111045749d1e56b22fa2250f
+#: f4e29c87483d49deb4c9584252bc730e
+#: b15ef4e724f24abea09cee849351ffc1
+#: 8681167fd77f4c34ab0d530a400aa527
+#: afbcdb89823a4e979f4b453d0e3d746a
+#: df134ed43df6440c9c16ed04a2dc5278
+#: d641254168d04f8fb1e1d2090959c98d
+#: 03a44b76808b428ca9cc72a0a56a9b86
+#: a7fe6ce179ed48879713efa3e2dbcf1c
+#: c8d6b715574d4577a120954954a79b0b
+#: 1b551a1c1ecc479c89210db5e2d68c12
+#: d37cd3bbf01d47b282b0da14ef7b4096
+#: 06526dcf56e046fab781183484d73b66
+#: ac41de9f4ff04f9594c7fe2e9f509186
+#: 806b3818ebe8461593cddc2ff2320535
+#: cdd48f2ccf3840a39688fc9136dfa0ed
+#: d4ecc799510d4047a9a84db24e316278
+#: c9dc99a423b84bf2999cd591924a57d0
+#: 12e1c94cac01491caf1e4bed024dde49
+#: 9e693e8a556947d89e8f5bb410151bea
+#: e060385451fa49e8a0cae6116551657d
+#: cbc46de080774e659f85922e50dbd11e
+#: 4c54b52c376444f3b9084c5c48d72379
+#: 4fcc7aba72604e9a9b918c1d4ce3e6f3
+#: 0e89e0edccff44b896d24084cfdb5e44
+#: 04b18468861c43838fdfdd4432e62be4
+#: 1bf41fa7306e4a3c9a88aa3345301f2d
+#: 9f928a1d5fd94854918d8084a523c0bb
+#: 0a7b5edbc5f54ae8a50f1012b6ce5363
+#: db4570248b7a4670a4a071de043bc797
+#: 201f098b9d1846d3b33cba3f35a06052
+#: 8e5a155bf439479db8b84385450b1138
+#: 6c0a2e427c3f4505b7d3498cef379c5d
+#: 3d80d5ddd15e4155bd2e4c062f784c32
+#: 015bd1378d014744bcca9b0e81612323
+#: d446b6b20d9248b7899983fe5fff5f40
+#: a847634718c040e8aa5cf62e90859b06
+#: b30e9443074d457da76a7732376fbab0
+#: 4ff37cba481343ff882c45d63f2f02f6
+#: af55e61530f7460f904452a8ca471708
+#: 0f99a538a0304bc7adde1f2a6ba8879b
+#: 85152a311b9241ae9ac4955d1d8cc78d
+#: 73af45cebecd4e43ae162189b4abff24
+#: 50bc9b3b76b54038b83bf92d39dfe3cc
+#: 318c99d77f4a47bc8c1e929d3d7d3bcb
+#: dd014223e35d4d70ae11cde147a048f9
+#: 6ecd11d56fc047b486ac6ec8d99cc648
+#: 1406d5182bec4a21ae34d0e9021c1efc
+#: 2ae769f7686f4a8c8304df89c32e541f
+#: 6d91a6195bc147d8a54bfa1cd4959aaa
+#: 4c9e258b66f945de886558f14980e798
+#: a2a5bc9da2224552afea9e6afe89db87
+#: bd57ff7e43e84a7c83a6d056aa91b75b
+#: 8900d566e0fd453bb82c9c68060d2d35
+#: 3089be1fce204202833910d600c0e0dc
+#: 05e706aa45c24878a43efe4993a8e396
+#: d568804a67664a21bbbd65c50c6eac9a
+#: dbae3c91d5374863aef91b4d8609c63a
+#: 008bd2676f5447eeb5a565b64257c553
+#: 874f22aac4b64666bae9f15eeec418cd
+#: bf461c1b64c84483b07fe7618c146385
+#: 67151904cd3b4ef087b4f94ea78d4ff4
+#: 303c73d08371463e8e09e4f25b19eda8
+#: b5c99025f69e4c6ca68c69ab11acf35a
+#: 1a8c065e81e5469fad79d5926bb3226c
+#: f8243d988e3e476d896c882580def90c
+#: 38063bc1a4da4f17b232fc7f6e89f1bb
+#: d66acce2450b46ffacaf21a65846ba2f
+#: 65ab47e6414b4c0d868e7b853fb5bd8e
+#: 503fcd27c3c1485c8500d408f137a91c
+#: 70c31e42435e47efbd84ada8a238bf53
+#: 845dfea8894a4624abc8e43f399956d4
+#: 7cc68013c3384047b411719fd9516110
+#: 827bb616cc634767b02de4c20861329c
+#: 573baa7949794e438709e251642222d9
+#: 4e40d52e673b4b4aa0ea91b1b307d111
+#: 3ecfd5f4cf7d4c7685ddc31b214b7016
+#: 87dc5b1ab30d4b5784e948278938ecef
+#: 9367bf90868946e6b61d351c46af9329
+#: a3b5f722f8de4983a47520b9bb06b2af
+#: f4d37bfa6c7e4671b9eb7bef4d97f4eb
+#: a3bb1c459c584de58c2930180c21f44e
+#: 76163aa426d548ad8d27e9bd4205fb9c
+#: ab6e237f7e5148cfbd7b57ee0846508f
+#: 7862d302a6b8489ca0c13838d69373aa
+#: 56a950c4387a43f390f9d08d8e8ee114
+#: 75c42ef2fe3243dcafc9a45ccedb4d33
+#: 95743756917e425ab6e24710621f6915
+#: d9e4f35bc1954fdebb7b5c84dc37dc61
+#: 31344f13e17f4fd49aa0fe3ce5fec534
+#: b1c5b55e056f4d04af53199e726092af
+#: 6ba6fd649c5e45f9b625ae45675f460f
+#: ad381ea6fe37450aa7f0c28c98c58e40
+#: fb7c4c703d914229a33f77aee119a0ad
+#: 348632dbbfb1497a906e1c466c4b4121
+#: 16ee59582e5b4812a510a78646ea07bb
+#: 14d05ecbcb8a48bcadbfe9aa3c1d2dfb
+#: 9d5343cf017444fca6cab84913b2be0a
+#: 8d5bb48efb1341abab2fc0584f0f35c8
+#: 93627f12146b47cd9b670dafa2b5a630
+#: 142021010e7940f6ab7aeafebb2e0ae3
+#: c90f5f95606742b682a5d6b74f4970fe
+#: 02fe04fb995840a7871b3e26d63f4ac9
+#: 0d25d128dc7248fd97dd29af5fdd2cb7
+#: c0caaa76165248939e2ba3bbf3c68042
+#: efbcf9f728a74ec7b569b539ce323000
+#: 52874f0c3f584179bef3ce5cc8d26315
+#: a25e32b2c2b04043b40754826c6cf9ce
+#: 912246583b71451685a14ea878c4eb10
+#: 7fc5a83210ea48bc92412ba0f474006f
+#: 56601cd1cf94459bb6fb3c15f2bae2e6
+#: ba1ad401cea94c34b1bc1bd2c8a761c3
+#: d4497e65b9304ecdb7f3abcfc9bd8431
+#: d0050199e54a43d8b94b81953fc4964e
+msgid "Status Codes"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 880bebe84c55437596546a8635508a61
+#: 6d933cdcd9744894a2bc8987b06512da
+#: 197f891db39c4b9b922f57073cfbb72f
+#: d8281bbfc984490387f3b8b788ef3089
+#: 3a67e4a8d5ee4a0ea6cf096b57cc92cc
+#: a08fcea5c8de41c9840e853c18ff9ea9
+#: 67e17d07a4b14740af54fccb7d532c14
+#: 337ce144c6ea45d5ad0d95ef27b42bdc
+#: 90ccdd9a99564713bbc40e436b6e62fa
+#: 369efd5a49a14bf39efabc77f2b21012
+#: 03dd99f720fb43db8904e3aa4f186cc8
+#: 37316c6d028c47e586d7bec3d09db30f
+#: 23a7ea35a9a34292a969724aea12871a
+#: 671c2c7b40da405ea638d4d850b7155a
+#: d8a07f67264c45bf98e6cd25139e6da3
+#: 63946c0d8f8b4250a1afaa3bfd8d765c
+#: af9b26002de046218a98a31c10d6fe3f
+msgid "No response body"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: e00940f208bb4e60969115248436c117
+#: c330d8c032ff4986b13f08dd7bd3fc5e
+msgid "API endpoint that lists categories."
+msgstr ""
+
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: f47c0147cc2d421cbf511ba6ea111f58
+#: 5098e040a1f4401a92cff444a94ca850
+#: 56f2b8aba38f41ce98cfae6b53b32e44
+#: 10402d19376d45c3bec4892c57665952
+#: cba9b85c2aea4c799de68eef090b7e86
+#: 4e17aaabb9544d68854cc7c4abcd672a
+#: 76c3d60c8449498b955d2696c33368d3
+#: 1885621be5884283b89756117b8da7a7
+#: 1928b305dca6459ba5012fe68677ba92
+#: 192a3a8acd9e4b4084b30317b9ea84ac
+#: 45bbf4705ea34934b5f37b8b41ed6b36
+#: fc80a6df91b1421dbf6747394121dbf1
+#: be895106539c47a6932c5de56d86d869
+#: ad9d55d9ee964bb3a07b1ccd9d966d67
+#: 898ea12c6e394127bba7186efd35eb62
+#: ce59e71d989e49ae856fa3d4c305612e
+#: c170a2df5f2843249924b87812d8f375
+#: 9c3bf5348d294ae9b23c8cefbac7a6f8
+#: 7b339e232a6645749ddb2f0c7e24168d
+#: 150ca625defe45599923f23dc39788e5
+#: 7995754d06184465b4d44a89182eb3d8
+#: 335ed6e1a8044ee4a44a9efd6a3a3f1d
+#: d9402332a4784e0ebe1ab25079a003f6
+#: d8abf6eb85464f6e9b39724d6cf05e17
+#: 07914dc83a5e4530b9e4ad84df98fa07
+#: a88c6e2de0084a70805b590b6f0011eb
+#: cfda60e2cfbd4c64841b3697b83f5ff7
+#: 06dcad7c28604657b2957bca3e6dce03
+#: ac0cc65e67c64af7879137e6c56dfd08
+#: a5c5def3b0a942a08f3417c77c80a9c3
+#: fb83884802e245fb9564b358ee75908e
+#: c7f8bd4da53745978fe06eda54c21d06
+#: 61131f77eb45469d989bd8a1b78e83e3
+#: fb8987d0c7ce495d9e78d8d8c8599b45
+#: 25e517fdc1d44938a48a1955b8b9f491
+#: 553c79c2f711493588c6404a8fbc2785
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 015d317a4426450f8b44d40e55cda334
+#: e8924b52a90f4d3f9639c5b90cf33524
+#: d7332f8db91b4a889a779459615ac5d1
+#: c4b658494ef74bb8a651c26119de7350
+#: 4c78d3e7de564ff3917dccd0aca36064
+#: 08b099bfdb8f42df95aea289ecaa024d
+#: 7bd13dc53a714c2e927702b2d7c32697
+#: 34f1a7bee8ac410ab38db87844488e28
+#: d27bf69fb7274d608d6896402dbcc15c
+#: a6bde100ad0c417abfcff4b49e5d02c8
+#: d769bf6310534331bf68d1ffa366e472
+#: c8f16ec6181a4f6eb42f23caa59d15b8
+#: 7ff681d41180463e90bf445a4ae8f548
+#: 388bb865722f4bc4bd6c92b736260495
+#: 97cc39ab8f5f4aa793ef0cb89fcb5efb
+#: 8bfab69f4a5b4d9c9813c2dfe05b795c
+#: 6abcdb5b210645cdba1245e6b789f199
+#: 4d075946c67d4c44af8955d9262e41bb
+#: 3aa4ba5b211c4e00a67ef4ef8b8b4608
+#: af8e91cc89a7476e8f5271672a2e5bca
+#: 824f08d5a6a54fd3b4cdc5a93cf06a0e
+#: 2b2faae5185f455893e4a13672c6722e
+#: 5fb3281c3f66434eb3a4af422341d8af
+#: 429574eba8f44456b5894e9b887e639b
+#: 920af0215322438393684041b59b91f5
+#: 78c3503aedeb43a6a4e76bd056b853f9
+#: 594166f93cb54812a4af797200740c20
+#: 483d7d04cc3d4887b712f5e7ed25d6b0
+#: d9e77e4ae5ad45f7a8b23563e5b1c278
+#: 62a2cac861d84a5facce78d17bc56ff1
+#: 96afc9879d5d48a6ba2f7a1f62521554
+#: 1719331a56aa4f5aaa9672c90660d29e
+#: 0a0c347bbd294dfa84cddb846ff3b2f3
+msgid "Which field to use when ordering the results."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 39f22358044e45069f4f275551253d9b
+#: 550f6d1b8ad04d47996481f3e3b21c6e
+#: bb670e0be19c415cbb7bdecaa5ff02a8
+#: 4b310f50545847a4b208a617cb1c9a35
+#: b10705c0dd094d21b6cfa1fa643268ce
+#: 9ef9363a4c4c4c248a9cef937e5a8f73
+#: bf0007061d1c4510b36904a70d7c81fc
+#: 21414364af72468b8fb7ad1e0d1b9c80
+#: e8fd0a17f4c04fdf869354c426c0869d
+#: 4e182b5ef59840f8ada9521ef89aac39
+#: 57fe0f5c41644a018d1a711a3eb98de5
+#: 7263510b48ed458c84e896e7784f5b67
+#: cd8fa0a6c2e645adb46c466a11fd43ba
+#: d6ace4d2e4dc4440b9616123af009f65
+#: 742acd5576b74cb2ab8d5f2d1f8d7b39
+#: a45d1128ab014b8ea830b62a421dcc52
+#: fcf688de5f6f459798ab3f47f64d67ed
+#: ee76e92eff864042ac03638607db18a4
+#: 744d16ab9f1e43ccafa6fc7db3289fe6
+#: 87d39c8107724acb9d6a7f782328a26d
+#: 814b0e1010ad4e30b1af6931c40a7ce1
+#: 19d60251fd3b4a69b1868183108a127b
+#: 9ade8ab97c1a4abd962a01dd9054da75
+#: 1246ab890f1c4595862cb0d4a040ab28
+#: 968f409ba5bc46d08d8c21b2331f8705
+#: 504ec05528ba40ac8fac49c88145d6dc
+#: e377d072e356469ba0a3952b9f7c6d30
+#: acaa826c6b92427fbe1bf2cdfe631387
+#: f6034173677b4b30bce46d81d279500b
+#: 55b9e2384916467c8e66e7f116e10826
+#: c6fba0b09ba643b8a96b023d5a70efb3
+#: afe001ee0c5747ab831adf07be015866
+#: 4c7d19d7fe1f4459891fcc5bac085930
+#: 99302d833b1c4f428d89bafdb4484b52
+#: ddf544134e9344068812708a6706f3dd
+msgid "A page number within the paginated result set."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 83d58af774fb410b9b043ad8e4c16e90
+#: 66ad1ab043894d818ec3d6ff29292b17
+#: 4f4c45a1417248d1923d1f6d8fc8470c
+#: 713753f7824044c7bd2beb386d6b0720
+#: 68c907ba0479448fbf8cb795d9a97c21
+#: 9fef0a55bf2340a58ba8f9bce0284f01
+#: 85e1254bedea4a648b79af528e954a0e
+#: 87e410b856e34407bf0d5cc7236a0aeb
+#: 24fbad46ccdd40b78d9ce23382987227
+#: 2207bac6ec92414cb1de7fc9c3c19299
+#: 0ad07340ecfc40248b48f7270969caab
+#: e9b4a9f1a6834aa1a7e704e9f365f0fe
+#: f299d05a86704e2b9401a34a36af42fd
+#: b6705e4743b249d498ac5924dfc45c9e
+#: 2c4881e77de04c829a574d2a6c13532b
+#: 0fb10305b4e74061856deaf4442dcee2
+#: 0d7945f44a954556a819836f4ceaa4e8
+#: b3c677ee2fd14438b1185e34771e3bdb
+#: b2bc737ebd5a42aa9799853a3c27894e
+#: 4af523f2c75148b4822106fdfa9becd9
+#: 796298a67bb14aa9aee4c7552245aba8
+#: 6ed436e2cdfd49b0b1bef811374ea904
+#: f1fa87bb0f774c3d8aa4593f5b68eb64
+#: 5f446bc9220d4ccca8a1989ea5546676
+#: b560f27a3a5e496eb8ce7574bbc997cf
+#: 396bbaeaa8a74beea4cafe155f79b9d7
+#: d55f612348a341828f210eafa9c4a250
+#: 52661991ccfe401fb09a87c4e63db0cb
+#: 0857d27b899d4c9f8e2d4245f4d939e0
+#: 42ecebc027344b3e95db25c37212f8c2
+#: cd311c48b5ef4d0c88e44181b9ea6d9c
+#: 5ec5845270574158801dbfab434f85b9
+#: 4b7c7ad886c4461b85a1cdffba5ee011
+#: ac64a450a0cc40338ef8efce00f577dd
+#: bdd030c115fa4d4984c789127b6e864c
+msgid "Number of results to return per page."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 38cffd82672d46009564cf8722f9a9ba
+#: 01201b9abdd44c4a951c5149ca0bba40
+#: 6cacc9eb7e8d4f59b4f0fcf2c859949a
+#: 124ec248335c4805bf593c0b24022ba9
+#: 34dc6f64f17749de921581b0f5e0905e
+#: 4c4556b9a0144580aa8c627bb18f18d3
+#: 279f2dd79e89446695ffc3f442592858
+#: 357647eb7c6e4ae0941e46a21207f28a
+#: e09628ce58134f23b68f3516c8833bd5
+#: 9f6cd93621ca4244bcce577938cfdb9a
+#: 5438bde38d274af5971e00465d2debb5
+#: af1f7fb16d1d4709a68dceed42e418c0
+#: b2c959b765ab4cf9a50c5631b0780c7f
+#: 6ddb9449e9b148bc81846cd209343b7e
+#: a3d4f56e539540b58e3f54db1f434fc3
+#: 10dd1a85ff50481faa56222f6ee1066a
+#: 3eeb2103d7fa4b57828b9cabd5f64f27
+#: f690492beed046beaa52adfd6a57431b
+#: ef6c89bd30f44b17b5833ad6090dacd0
+#: 4e9b1407138449c79b466736b1c88e99
+#: dd0e39fb4a5a4f00a05591723982a703
+#: 66e976f74e58487db353ca5983d4fd88
+#: 54c1e867d0d24b08b4a693a635593607
+#: 38bff2a482054dee92bbb9d11b26136e
+#: 3a8e8ffb245d4f64b02f1771fe7aa40a
+#: 4e88addeee914c96a68d3117aa414792
+#: c688462bb7e74f149617f37ddd66bc40
+#: 1de475401ef4458c9fc847443b354ff9
+#: 8da9bec030b84f3384405059219ca3dd
+msgid "A search term."
+msgstr ""
+
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ../../<openapi>:0
+#: ffa8c06cb5e44d4ca8bf33d2549107a2
+#: 5913625b7d004fd099a639d04b637e48
+#: 0f349c83c91b4565b106f83efa07e912
+#: 1f8e95bcb90a4dc5adea3cac2088660b
+#: 7bc1a1a0af9e4fb99fc6f0550307432d
+#: 930bf7a98d1147d58d9ac9b10afebc49
+#: 6e27bc71108e4715b90f399a46493edc
+#: fbe928580a384fd8bf2c697491fd72e4
+#: e95dc6d0dc8349a9a517d4de17eac7a8
+#: df41e87b6eb34e4bb9e8c6fcb01e040a
+#: 6a98694d364247cab8c493c236cdd479
+#: d682618a2bc142afbcba0f6eacaaaaee
+#: a328b7f0413d45aab737617a362f8ada
+#: f372856f3a30402f9b50c8699fbf85f7
+#: 243e7cc1618f4c82b1cf9f14a574e024
+#: 90e6bed9df9d4a0badc64c412764aeca
+#: 391c387c2be24d6290c68d6844f295b1
+#: 421771001b9e427c95615bda1b33783d
+#: 18b57e7016d0440582f8c57e206642ec
+#: 3908f012dc29433bb26d544535307a2b
+#: c7524acfb7044d8daded40014dc8e6a2
+#: 9485bfddbf704cb0b743dff062d14916
+#: 1f3c743819964f008fff93b4f38a15da
+#: c0853816167446a08217d96d96f55c2f
+#: 699f88bcb74a4f998a5e3714fc3fbde9
+#: 016d515c3e3e4382948f422c24f9139e
+#: da31d9518f774a889fe8fd14fb330396
+#: 81d4044568e9480f9f5cc07af588fd5f
+#: 4394706d34d44bacb5ba6fabd7233b55
+#: 5ea9f29350a045eab796d1a183b63826
+#: fc0f7b8f01514c68b675a6a1dc9e4c64
+#: 84b2f622c8c94d1ea8fb63ce863547d9
+#: 79ef119a238c48d6b7b5e3574aac81aa
+#: 3c5a5903dce64385bbfea8ecbbce4800
+#: 1679392822924840ac5d6e9749a19661
+#: 6f556a96e8824549ab70db456aca35d5
+#: 27f892c951424cbbbac3c7fdd1e96bc2
+#: 07d9f4196c474f889dc98c4382163797
+#: bd43b66e159a4ba0943fedd6fdeda724
+#: 1b936b4a60f14b6e88cd4bc808cafd11
+#: 59cafa0ff0724d42a3e7e20d31aa2f9d
+#: c755e39d9f2b465784546c3b7a12b308
+#: 8358fb9b5f254e0e99af1841356a290b
+#: e775d1229f9342008e759fbe35e75351
+#: 8a9adb37be66407bbe843b160a9176ce
+#: 1960c6e463be409bb5f9f319922452dc
+#: ce8ee7927d444147bb116895d7e2d044
+#: 213cb0dafbab411a9f4e591c83c534d8
+#: fff61f44167f4c0384540b43d154ca12
+#: 3ec25eaa4e4d48a3917551b116fb92f0
+#: 50d3d854b2d847e1bf87faf7687b94e3
+#: 3f9e889f77fb431e9b9f53fc09e77f36
+#: 15205f61d7684d5fb4e43fa39d009590
+#: 8a3f6df17c4949da86d9d9bb4c4f3088
+#: 40bd1cf7966f42eeb7f065fcfbeb8fdf
+#: 4ca184beb2744cb3a516a6eeebb0090d
+#: 0b28b0c2c8f746f699d739836b438f13
+#: 5bb420ffefc94890ac0d0def461e9669
+#: ea8a884e93f24d10b88ca41e0bee3052
+#: 9ec568de31eb4facbe62b8e126ec3ab1
+#: 1f4c72da7e3343c7b5ed43be806ecf52
+#: 2f9ce94cfa2e4b2e8b287c76c420325d
+#: e6e304eb06ae4847b7e6f96a8743346a
+#: 65289fc62cef4c8f85b6bd7968d5246d
+#: 8b1d2f9af10443fba8a726e8481b1863
+#: 7bda34d11b2d4af3bac913041c67092e
+#: c6bcba408e0048448f1aea8d28b4e6e3
+#: 5155f3dfe63e4f2dbc36e039990bd9bf
+#: db2c9fb6e58645478fe861e7bdac609f
+#: a0e94b6f291748d8b4127b88a9b8f91c
+#: 2d02bbb49be04b4db0ab14ea2359f25c
+#: 4e31b31132a6464b82b950f19e737936
+#: 1b73968e58794fe7a6e768bc273a3ab0
+#: 86e86e932e8e4754888128cbcb02fc81
+#: b30af4d8293649aca743546b0ba3ca54
+#: 27452cdf64d94ddf8c3cdb4f4c34aab2
+#: db606f31ce5348fbbce5b1991962bb7a
+#: 457daa113c1f4db8a65c81def1810571
+#: b7baf3fb6ccb4a5c9f0c7a9a8a7cf45e
+#: 1fa3b0ea4362490c86ca244bf27e7919
+#: c666e08826c945eab93a6b2748428a81
+#: ce96cab54686483f9e1d5b843ae3dd92
+#: 54a505326bdc4e418cea02d43677876e
+#: 0dcac5c0005d4c29a0692bf71dc9dce7
+#: e8d2094f755f4d57a677c9f22079faaa
+msgid "Parameters"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 84c4157554ba40258759ce59d7a21235
+msgid "A unique integer value identifying this topic category."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: c88137f1db1942f3814d03bea3b5b9d8
+#: 4baa419cfb1642f281d1d570a1f8b6a2
+#: 7e83f5e4c98d40a5829a6d2a6c60e2a1
+#: 4ed82322e91a454882bc13999df6d90d
+msgid "API endpoint that allows layers to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 9965fbaa34b84481a813f6f46983665d
+#: 55d357c8f44b4005a03385e44ba3a463
+#: c13bfa0da6ff451298220b5304ee4b68
+#: 2194ee6e994149ed9c51c7f304d391ba
+#: f1ea64f91aed4c16b588c8a45a7d2ffa
+#: fac052766e014718bd32958ec291a780
+msgid "A unique integer value identifying this dataset."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 168cefc3804545838c8fb5df3d7f9619
+#: 5e6695d9a375431b9ebb105656c47100
+#: 98a2465db7644a00bb6504efe0becbfa
+#: dc2dbf64b34d442c9d3e5842a50ea48c
+#: eb48b426005846fdb765921536d6fa7d
+#: 8cf03cfd01564060a55c6d04865c2b51
+#: 280fb69d93704dfba1903bcb7c48dba0
+msgid "Update one or more model instances."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 3f1881313d2b47a9adc91e05770e6998
+#: e797918c2d744c4e9aed77520a199d33
+#: 1c52342234274656943451c8c5f30b4d
+#: 3c0eb24031024291a0863f65a721cc8c
+#: d6ee80b4a7794481b03188c3b43a427f
+#: 11ce803b2ba8442e8da64eccd3e8513d
+#: 8386307d75114e079f5060191560120a
+msgid "If ENABLE_BULK_UPDATE is set, multiple previously-fetched records may be updated in a single call, provided their IDs."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: e4cd92b9dfca400491212bebf07bd422
+#: ae5b9ca012ce403eac6cbe58370d4a7f
+#: 19f70a6adc1f492eafafa9a158cab1ee
+#: d6940915cfd84c53a0e1aaee0baec12c
+#: 8335d664af644e74bd0fe2a7db4ddd3e
+#: d601798409df4893b0f99cc671b4d037
+#: 1ade598241b645e0984f3a5c9d4e3a18
+msgid "If ENABLE_PATCH_ALL is set, multiple records may be updated in a single PATCH call, even without knowing their IDs."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: b922906e683d492796b17c0b96fe0db3
+#: 0bb26b6bb3de4d5e867823d3971baa2c
+#: 21183f6b7d474c068d71303f79de02b4
+#: 5b2a54887d9449559fd773cc448e5472
+#: 63ba4c13ab0b42419bcfd8d33b88c6a2
+#: 05fac089d8c2445ca466bf9274e96fa7
+#: 7a391bc0ac4d45db9e29fdf13de98b25
+msgid "*WARNING*: ENABLE_PATCH_ALL should be considered an advanced feature and used with caution. This feature must be enabled at the viewset level and must also be requested explicitly by the client via the \"patch-all\" query parameter."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: faa696a57480435585740593a00f91c2
+#: 6a4f17578eeb400d9818be9f2eacb199
+#: 5987eefce3f347309a2886d4a089a425
+#: 1ea927c7578841d59961e5fd6dd901d2
+#: c40d5f5b761f4334b0707c741a634ffb
+#: bf96bd0c634a406080a628436593679e
+#: b961c60a17cb4bc99f22305654f283f6
+msgid "This parameter can have one of the following values:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: fba223fad07b4568ab4ce0fa50ed2a5e
+#: 6dba0a77ffaf430a91882e992c7f87a9
+#: 8b87a8ffee844357b10bee5ac26a0f9d
+#: bb6b43e6e9324687acbdd81bc72f0244
+#: 4e62dbc3f5684971a64d179e87c94574
+#: da27c041b4b04ec6b9925d2aeaca1218
+#: ae40eb0679c442649532345a9a95ed9c
+msgid "true (or 1): records will be fetched and then updated in a transaction loop"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 1d04dda523a5427993fc262361201ed1
+#: ee5716db17944f2cb8e3030758f8b743
+#: a9ecc25e5b364139a9ee23335e7be58f
+#: e35531a10d4340c9954fbf80bccf638b
+#: 6121f7c89f414f648dab0320d6ed2512
+#: e870a3fb893741a8bf6d5daacb4bca2a
+#: cc81ccfecbeb4eeaae8b3a0a9348c9df
+msgid "The `Model.save` method will be called and model signals will run"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: f675115c99574469bfa63a1e51aec938
+#: c6ce030369a4411ba00c9ee9aaf25a9a
+#: d53402c2d5fd4b499d7618ffe5c6dff6
+#: f296f61303094255b08cb3b5e0a5e00e
+#: f7a0f129868945d1bc535060fbebfde7
+#: 9ac6740f8d2543d88279484fe72f2ea1
+#: d981374feb4649a299c37b8cbe855814
+msgid "This can be slow if there are too many signals or many records in the query"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 7794bfefa02245abafa45537671520aa
+#: d437c3f0c8b645039cdd32a93e9123df
+#: 239b1dceefad4e9990a5f14baf55a53f
+#: 911df753cafe4efdab95d8903a7b9c82
+#: 5c0994e676b44551ba02da5c3cc8f109
+#: ea515867f5ab428eb67b234a23e64a2f
+#: a0e143ba704e47faab84dedad68f9251
+msgid "This is considered the more safe and default behavior"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: c0b128a19ba5434aac584e91cab2b9cd
+#: 3d76da8cd7ee406e83a1045980069351
+#: c041d4ae237a4969b0304fd2589c8b72
+#: bde72143ade24a28bdf761b89f907dc5
+#: eba69ca3725f4ad0b1abc62d2dc21b29
+#: 5c1de689e5f04dd0a6eec0bd198df872
+#: 740a71108bd74f4fbba43ae2ec81bb63
+msgid "query: records will be updated in a single query"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: e6cfc0761ede46178bdcb23331654b6a
+#: ecf3667be05f42d2a2ba029e016f90a7
+#: 05d275b5cd9f4a8a88af229735962afa
+#: 9bcb80f54d1e4ef996c80a38e684fb3d
+#: 6414e802709a4bccab77d30cbbfad91a
+#: 9fb22bd5d3094a74a2d06349e3a63f6d
+#: d3ecbabb6c794ccd99203ac2fb3e0b30
+msgid "The `QuerySet.update` method will be called and model signals will not run"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ad085e3b3645468fa19322d94e1ab423
+#: 0c9eb5d9065146c2b954e6cf0372909d
+#: 27de8375fe4b4995b73c9b759f31499b
+#: cf12b7dfe33b485483a8ccb2e4135fd2
+#: bd91aaa592b443eb951c9b62bfded4fa
+#: afbab03a7bef4597b11565b535232851
+#: ff272bdaa04a43c8b2d8567e3ee292cb
+msgid "This will be fast, but may break data constraints that are controlled by signals"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: b746a81226a5456dbbfcca3eed697593
+#: d7d9bc55b0c0427db0238387145e3c0d
+#: b8a4f823f5604adda8bd652587e06231
+#: 63b59f5bc94846a68c4023f8e7187bfc
+#: 8337a79028614c9aafcda950244d03c9
+#: 6a6aa130cd774a5b93b9ca1825620db0
+#: e796cf48ee634f1cb75c2b1c9db74d9c
+msgid "This is considered unsafe but useful in certain situations"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 78d8f27ef268435fbcf179ad3138f39e
+#: e5ac02687217416d8d57b00b6bded0bc
+#: 5eb9361b2e454a5793d53019fdab54f4
+#: 3190f9b9663a41b3939c0e7de1b2260f
+#: cb292fc9797449aab8391f54c5e609a4
+#: f892d6c3f9df4c8aa17a24af9fe591cd
+#: 97518132255449d3a7bdb102a162749f
+msgid "The server's successful response to a patch-all request will NOT include any individual records. Instead, the response content will contain a \"meta\" object with an \"updated\" count of updated records."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ce4a6252b6a14dc1ab04c04ed4ae1448
+#: b092f866d1ed43e28e6a821b3ba507b2
+#: 602fc867bff844b5a85d7c35e0db71fa
+#: 47593f2f57bd403ca2ca04cd01a5948f
+#: ef65977feb2a41b589ff8ad42446ad4a
+#: a2b5b4ab7bb443c99b89b058ed60e3f7
+#: cfb64501ca5245a68b6844628ec666b4
+#: 7c1544a02d534adda68b5f477c79fc02
+#: 08ca6f3373b848778ea8e1221ed0e138
+#: f366b8de5ad9458898c261a8b2ae586e
+#: 2a5e018f016f446bb043e0f9d91ecca3
+#: 194e98125b174f35b1427d404f2cec4e
+#: 79a335c1ab6e4ff787e707d8f632071f
+#: f1d2b9e46106400aa39e91441ea53d7c
+#: 695908242d5a4173987ebca038a7e8d2
+msgid "Examples:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 357583dd28344c878abf74c509289bf8
+#: 72adc4a398d24c5fbcb1fac1f6378ecb
+#: b262b74efcf04ea989d8db314cc0849f
+#: 041e6d48a1634c53a1a7bb67cb3cf6f3
+#: 5afefb2d7c404ae2bbc25a136eeda511
+#: a21d88be60dc438e921c3bb5770ed86a
+#: 5b5b327b8ce64d6bbd6e687b67406a76
+msgid "Update many dogs by ID:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 5dd76a80c35a49e89cf47ad31423731b
+#: a8bee92430f24285895168175d25541c
+#: 9d4caddea05c472796a796e6aa5b0623
+#: bcf4d6c88dc84e2c88852d08ca7457fb
+#: 1ef4903404c54e32aeec0723a2d1ef1d
+#: 3bae7b99a1b14378b34f5bea6610d9b5
+#: c14e77e22bf545b68e3d0427a622969c
+msgid "PATCH /dogs/ ["
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 85766350a01d4840ae468db30b142139
+#: edf8006eecd94f9facfd3003e08e4938
+#: 4928fbde84a04b28b774a63ae9db66ae
+#: a67b16b1c8fb45df83bb5c6059b3c75c
+#: 5fb77246abce49c88839b1dd02d2fa98
+#: 8262265448dd430b91bc0e9e93f60a08
+#: bdc6d195cd664dd281b98a801639ae1e
+msgid "{'id': 1, 'fur': 'white'}, {'id': 2, 'fur': 'black'}, {'id': 3, 'fur': 'yellow'}"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 43c49aa7caac421090affe98da724ede
+#: 74daa1f41f6f42ad87ea6b6db41841de
+#: ddc0a7e145b04ae88c268dfb8c98eccd
+#: c9bed4b385a94e2e8dd17ff8eecf598b
+#: 42b8cb0bb9ca4aa8a7125697161ce485
+#: 3ef8d2a23eae4b5aa4c4708ca6045af7
+#: a0a4db8a401b41fe841b01965f165d4f
+#: f53cb25c4d0241128238177858d4268b
+#: 557c7cfa6fb041a4ba886553024b5563
+#: 1ffe29372ee2472bab879df656769047
+#: 9f57eee0b6a94a68ae29b8d90b93b849
+#: b7bd0a80d8834c3283c4f0c01cc19249
+#: 20c5e24b10b14da7aeb15506b240ce5c
+#: 47238f56c3df4454aed59299a9fcdd6c
+#: 34a68af11c0b4cf797e2a36a60193484
+#: 6d0372a143ea493faa1c4d5df411c485
+#: 23a20ab771014fb4b9eb303d3e3d2718
+#: 0767195370fc42f4b5051b72aeec6c03
+#: 8bdf32bf2d0a40b6be8d2d2335e85a65
+#: d478e46d87c746c4a4521c82ee5e3dca
+#: 3d7ca18d04c247a9a672b0ea7ddebed2
+#: 6def1d0775ba41f48d65e281f611c338
+#: 8ba81d3c4d5b42b09e95cda6ffa74c7f
+#: 84ac511e0bc242fd999094050d49317f
+#: 58a5bd007f174f3c82f0830950589563
+#: 541f7fe3fe20456e9aaab2ad2dfd3a04
+#: a16f5cf47e1f4a0db72bfc28e2f64c84
+#: b20658f22e7f4a39bfa33173c7a4ee6f
+#: 0064f62fef044d88b12d52ca11e56474
+#: c9e38431ff1f41aabbecafbb64968203
+#: cc83a9c856cc44528423f01346318e00
+#: be531111386541269422236682e40647
+#: 6f5515adafa74547980552a770c148ed
+#: 97ea01bed849455f81fc8d8730496ef4
+#: f5ed23f0d85b4f6ab2a27d5f19e7d12f
+#: 4fdcc0e18d2f49eea7e98ae0999d9550
+#: f54cfc9ec53c4f25906f90ead5ec3bb9
+#: b751294117d14feabd12716066960614
+msgid "]"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: f0bf39d145534b34a620a30238131ed3
+#: 665199bb52854830bc4fef15bfa9aaf9
+#: 02a21b78c75d4d3b96cfd290a1d50f7c
+#: bcf94df7c3304eb18b959e3b1a5d1650
+#: c6315095b72b4f379d64bea17b14dd43
+#: d8221af87e484d29935a178cc2f9fba5
+#: 7aa832e24c1040be8b34fcabf69ad1c8
+msgid "Update all dogs in a query:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: a3eaa75dcd784aa69a3f197095d4947f
+#: b6000988877a493c914be61144653ae0
+#: dd28333cb161431c90c52e76c6cd7b1d
+#: 8f681ece580f4f059c9ae8ece6e74df4
+#: 7c5d5755dc3741eb9393cb1d7b648cb5
+#: 49f96fa70f0545608506a90b35af918f
+#: 923a5cff097e4dad9f3b3be356947467
+msgid "PATCH /dogs/?filter{fur.contains}=brown&patch-all=true {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 169b763fc5ce4bbe8038dd943e345a0d
+#: 8a194c9ddde04f1c8f35a2f9e120c021
+#: b158925bb5f947bdabb7a60d8af11a7f
+#: 477a036a88fb493f878522220232a768
+#: 168a7607befe48c2bb536115a8bf81c4
+#: ed04afa7f1f645a5abe72b18a2dcab14
+#: a65b525a6f6a48c99b11cd75e6f95307
+msgid "'fur': 'gold'"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 3dd1f528c13349c9a88cc22dab4f4000
+#: e70bdbadcd7641878d0b9fae2c792424
+#: 5a039a21fbdb47ebb09d98b5f1130f93
+#: ef16c995d0a84b14a3a1471795f09f38
+#: 08bdb7304b4a4e1aab194a73f6f3e0b7
+#: ca607611404248a3b7acb9e6d3eb59b1
+#: e524ca77a4f34312b28351bd5a219145
+#: f15cdf78e92946b0aca9c833bb563083
+#: bd771ce70a83460fa3eb407bcd601148
+#: 5eb5efdc634b4c31beea37af4000e69b
+#: 5fc38962e72d44be83fc4268eff1a45e
+#: 03aca72ba06a41a5be203c16490ad2d5
+#: 7723ea0207fa4195844ae7bc17f0fa7c
+#: 6593bad56e494dac8354eeb57819741f
+#: e4d53a57558f4a69b0a53b74e7891667
+#: 267f5bb770924e2dbe811024abdda86d
+#: e3ba85be4e3c4ba49ab7c0bfea530807
+#: fd690a9ed9b64d598569e463346986f9
+#: e6bbb02d21e04bbbad3f99396d567e07
+#: 0b80d39e220a45b8851fef531a7db868
+#: 671ca21ae29a4f8fa0e1bbf96273f668
+#: 230b79ca4c7d40e490c0996650be83ea
+#: 5616f29f3c8241dc960bf94ee5115804
+#: bf1c53a429104f60883dcdee3a88c448
+#: ae82f3363baa463ca6bac93b3181459a
+#: aad766a4152a4cf2970d5c0cd922a378
+#: 25fa8562bad04a6c9b87216a4d19c274
+#: 5902f3d97108425bbd77b2d82f9e558b
+#: dc58a1193c914d53a5c8ffb7c7b6865f
+#: 415e1bb8b14b4d08b9729d54785cc674
+#: ee5e5fb0b28c4ccb8acf1640f10694fd
+#: 3d44e5d15ec94c42acbc816b020e8a29
+#: be29f54994aa475e8f68f5fa5229bf54
+#: 072c3ab869fb41bcb612ed5b33970337
+#: eb74539e61194b9380d69b3a13468a5d
+#: 88016839fa6443118bf6ba69d9b16085
+#: 886550f7fdf24bfdada420f7275fb3ae
+#: 9a2c6707c0b942e0a366d71746815773
+#: 88ad5c36266841e9bd77d6d5c0ce2181
+#: 949fea30b3584e2085e35b6de78eeeee
+#: 38f1c3dba2bc47ce9a655983b4a4eb4c
+#: a477e2234cfa49b9b6d8bc13232b403c
+#: cc6cb8021d9c49738a7b201b8ded664d
+#: ffc9e42222f848ab95504455f07e4bda
+#: a09237ce7b8646b28b9e16e386062d67
+#: 001265d39cc145138e0ddf293492b1f7
+#: 4cbf16b5e21a47d5822a1d43b2464dca
+#: 44883f3fd12d4aedbdab0c657aafb052
+#: a027e1b1082d4958a383dc927688079e
+#: 7ea05d901a52444e8126a7a6e1cd8129
+#: 843e7ab6dc8b4f13831225da7856d4ea
+#: c041fca5b9af4756bc5b10ca1bdfa63a
+#: 12e6517327a5451c8b42998ab633d2e1
+#: 462928041b8f434faf75b1aafde8f496
+#: b95e9288734642bf88214b7a9702c13d
+#: cca7a5072cf44f1a8e685ed790459a68
+#: 249a736e88394e519eceab4a2696f882
+#: ee4585b914fc41f584191f6813c0c9e6
+msgid "}"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 6cf5876985a4413dbdb70362ba36a2f2
+msgid "Example:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: d762d1d82c434b01b2084b34ec77c09e
+msgid "Update the metadata (e.g.'title', 'abstract',...) of a dataset:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ed3ddeda2ed04ab5905f3fcdd922ef4a
+msgid "PATCH /dataset/{id}/ {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 6495a99abfde4ffb9a0f489cd0f3481b
+msgid "'{metadata_1_name}': '{metadata_1_value}', '{metadata_n_name}': '{metadata_n_value'"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 92d00aa9b5a442669e6fb9222aaba7c9
+#: 0559c23101f34b4299c7d4d2fb369243
+#: cdeb880fb2764cd78ac578bf85c0f5ca
+#: 1ab591803270487a8764e37bf69327e6
+msgid "Fetch related object(s), as if sideloaded (used to support link objects)."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 16d422d1b50d4fbbac69092e09498f71
+#: ee4832e6e03740228b295d1492bfede5
+#: 364c1e39f48849cd98b546450b459f9d
+#: 90793ea9f1ba4ec89acac8e8695dfd14
+msgid "This method gets mapped to `/<resource>/<pk>/<field_name>/` by DynamicRouter for all DynamicRelationField fields. Generally, this method probably shouldn't be overridden."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 85b189eaf7764c37925345a038c62f73
+#: 7b3c86d912954640a5faafef9ad9f4ad
+#: 808cc64ac2fb47e3a20796fe6f41c928
+#: 8d85e857b281459d8fdd446fc863c522
+msgid "An alternative implementation would be to generate reverse queries. For an exploration of that approach, see:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 88766ad34fb04c17b84f741a2760a975
+#: 6e3d60308d99437ab8c47967c08bee83
+#: f079d4c8e74748cf8c670b8f5b648f66
+#: 42ca350d123b4fc0882866d14da35f79
+msgid "https://gist.github.com/ryochiji/54687d675978c7d96503"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 10d89737fa85402f9ac76bf9ec7938f1
+#: d81ff545325c4e08ab99e54528875852
+msgid "API endpoint allowing to retrieve the MapLayers list."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 4c207099fea34d0b927d23fcf7a47e94
+msgid "API endpoint allowing to retrieve maps using the dataset."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 26211e870c264f8f9348458937d3e241
+#: f8e5bf3d8fd943d18f6b2f8a67e67be0
+#: 0cadbca642464823bcb2c0bd7b4c1d31
+#: 0e7cbd1558ec4ff186f24b6432fe0601
+msgid "API endpoint that allows documents to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 4b4df924c94144cb9cce214f8c126b5b
+#: ae3dc4d97b054fa2a4be26309e712e6a
+#: 59d9d892251b42868ab1759e6141aae7
+#: 742270c7ea444f1dbabac2c7c242be8f
+msgid "A unique integer value identifying this document."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 6bb7def05e88432c9db421e673948af6
+#: dda0afe57fea4b59b067a5a30c93c04c
+#: 4db163f6ac3745828dbafa9e0c6e96a8
+#: e3780ec15e8a415c82a557186aca206f
+#: dda990b36dce4a009488631219fe5392
+#: f8e99450c2a24fb9b2682aa7a744ac8a
+msgid "Update one dog:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 6ece8476476c4983a7ac78e7d97748f8
+#: cb0a83c0c58248dca4d8b4d35a6a413c
+#: cf3949ac18d9401496a3da0771b38fb9
+#: 2d0b7038edcc4d05853f45511acdd6f9
+#: da82d864599b403abd535f8b6b7978fa
+#: 79db153a4ce840caac729d9da014a0fd
+msgid "PATCH /dogs/1/ {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: a6d17527dbb646baa3b7b56993710b62
+#: 7c0d4d45369d4ae3ac189244bacaaff0
+#: d1052f202fe243d3bc5fee6c7b3b3559
+#: 3db0510c7af0462683216493d2ca0d67
+#: 213f24aed92c4a558b700552f34da3cc
+#: 2551b621a7d6494bb518c0a0b5ecea1e
+msgid "'fur': 'white'"
+msgstr ""
+
+#: ../../<openapi>:1
+#: cd9a705085f046e3b8007045bcb78407
+msgid "API endpoint allowing to retrieve the DocumentResourceLink(s)."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 7f9d6275d3ae413aa493c3a313306876
+#: b7c1d5d132424b79af4c41039f1102ca
+#: ae6fcb5f7d644fd5923cda20246d10b4
+#: b7c919bfcba14fc7a36c5c5cdc886966
+msgid "API endpoint that allows geoapps to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: c1727817cb9e4575820f5b854817f466
+#: 73452b14cd884f49b5eda68dbc859515
+#: 94e2a0630fb14a2fa85539a620dcb372
+#: 1ce469fdff3d46edb553b43d0631ba64
+#: 18c68a50c0124d0e8f46f555fd018bf1
+#: 9e2868c38cc94c5fbdcb0196c627a61e
+#: 71c90a5a57244a0688471ba176509ffc
+#: 07f1807da4484c77983e93af3a946543
+msgid "Either create a single or many model instances in bulk using the Serializer's many=True ability from Django REST >= 2.2.5."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 553a4b6fee0940adb48e2fca021f2e35
+#: 4de066f095094dccb40414b257cc8d0a
+#: 9ab52bdee4d44ba6992ccf674d108a0f
+#: c9bbc7e79bab4a99bc15aae03d6ff035
+#: 906a4d44827944e1b92df5dea92828a1
+#: 776e98984c41465391f6fd3066389b2c
+#: e9dedad33269491b844c731a356c1dee
+#: b2387c1cd4f7453ca71332a552aa8d08
+msgid "The data can be represented by the serializer name (single or plural forms), dict or list."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: fab8f73afef44f23a20a02f3a0782c32
+#: 6256bb5a6b6c4950be2c3fdfc9cdf7bd
+#: f899456309394a7aa4a81d75774df5cf
+#: 4dd9494d577a45bcbe1123117c394c69
+#: 8370685bf63b4875a52fdcdb5bd0cfb2
+#: 05d36c7ed6b344798723bea097c5c386
+#: 0ddb0bc1c9034b229b41f7ae56633c4d
+#: beb67bd7d821447eb00e0b22dd539179
+#: ae0786a8093d406c9cf92a2a960a4510
+#: 41037c7f85524036835fb9ca7a8255db
+#: 50535dbbca314994a0dcc7844fdacf58
+#: 8109aa002a6146d3b508589dedc6b43d
+#: 23bd47680f2649d38bef315f2b63c406
+#: 3463aacbe5244e569977961bebe3db05
+#: e99c99d46ab9456c9c36ce64c1fe688a
+#: 66f22cdcbc54401fab1b557405b54106
+#: cfbd08a333bb452eb3671f5cdf74b0a6
+#: a578819de21e428ba32e0d4182aaee06
+#: 374a071610e9461ebb8f380b1893105a
+#: 87b2f2f2263b498690de79ab2d46b36b
+#: 29777c16401f454e9c21c356180f5c42
+#: caa915e7be7440ceb6b101ce993c73db
+#: d42116f7a985404f86e059dd3b1b3b79
+#: 0c22f6123c2645e98214416ccdb975b4
+msgid "POST /dogs/ {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 41e56de8a322484cb82a521e9c48b330
+#: 1cc32d8be1ad45ffbfa4083e901a93a0
+#: cf82690267524d98b83d981008c342c7
+#: 1d96920d75114c758f203cb018984fb8
+#: 29b0c2a130084483bdef6eb6e4b7a0c6
+#: 18d5af3fb8a9430a924654735f6681bb
+#: e40db8e4fa0646f8a0d41b22ae6c1c22
+#: 5b9a5edeca5e4294b39735a404e32b71
+msgid "\"name\": \"Fido\", \"age\": 2"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 83bcf94581ef4037aa21c2134ca1fd88
+#: 457e8031130e4e7f96df7a50efc04d80
+#: a7e537f2e3ac48d287a1bacec959fc17
+#: 003b37ee97e14325a6184d27c63e6451
+#: 708b633548aa4821921f3f5963f6967d
+#: 88fa946d2f5e4c08b1df69bb2f2d04d6
+#: 5b2ee51d2bca45db9a21d06ccf7c58fe
+#: f77ec9f7a731424a936d3e03cb58b708
+msgid "\"dog\": {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 58bf2ea396514b13bf1d148c8c82a550
+#: 707894d4abbd49789dca298978f0399a
+#: b1908a6a2eb74fb6a52770fbf1de0dcb
+#: 32887f49b95646978f63804fe389c2e0
+#: 1e239ad925694a93b053bd11f9cdcbcb
+#: 77350df746e048a0bc1975aaeca3faea
+#: 88b7a813c3864a6ab8732c69862d5fc8
+#: 34467a29581c45c59db275633edf31cc
+msgid "\"name\": \"Lucky\", \"age\": 3"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ab9e2452bf544fd8bedd6b5b11d659ad
+#: 04f53a7b454a4161ae71245630a0c0c3
+#: de6d875285a24d7e847d60f62374c232
+#: cabc48cce3f44be3852c2e94e83280df
+#: d1674e07d75643508b6b71918a984571
+#: 77a3cf604a114ebb83f9d41f46566f7a
+#: 064787c3a7d646ba97b492bb67d66c34
+#: d14b7dacb408450185f9f6289c8c43c0
+#: b823c214f0104267ae7a5e927c567e71
+#: 1ec3dc6ed5ea45adbf188db1a5211ca4
+#: 80a9bc32b32d48c2a4aea0f9b689424a
+#: 2f43b9d76667440da0c0503e145316d6
+#: 8d6d8ae2c47941b9a41dd294b74a0898
+#: 86f04fd5163e4d54ae7a223ea2706932
+#: 33a3405129e343c0840fdaa24cb034f1
+msgid "\"dogs\": ["
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ee7ce190f56b411990602d5231144036
+#: 77a378dd4fc14bbcbdfc5ed4b0d3370d
+#: a320ef143a054ef6b73e6f48842e7e13
+#: f80ddb8e83554371bbbf66ad59823e12
+#: f358a07c18e14c509041802fa2bcf529
+#: ea705aa7aa8245daa9512e54ff914f66
+#: 165661624d6f44a5b0eb46765e9ac81a
+#: 625e6d14781b4fee874005d309ad852b
+#: c671d56cb541454f9a19daf0a8333c62
+#: 43fa23ff85954dd78d26cd118afb1ab1
+#: 605131789d4a46afbfe62c0f95f92c69
+#: c24eecaf33ef453dae9a1078a23a14ab
+#: 79e6025dc0b347e1a77fc337db9f2215
+#: 30cbd9c2061b428ab87b3cd75beb00c0
+#: 4b93b93113d842dca6f21208f085cdcf
+#: 9ad1d38d542b4171a31c169ce0313979
+msgid "{\"name\": \"Fido\", \"age\": 2}, {\"name\": \"Lucky\", \"age\": 3}"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 55d890dcd05f462eb3ae92eee7ce7213
+#: 83e604e33fc14e50b85e094033b388a8
+#: 3a144c89219f433ba42767d6ec99f451
+#: 4d647b68312b43a192f865c3063fdccd
+#: ac239a1cb9144f09ac1d80423b2ab201
+#: 9394faaed3fb4cabafaca1f4de178e06
+#: 9a349aa390ff4e3195f6bd78d4985ab2
+#: d03e9a953b0d47a582e6963562fdd7e3
+msgid "POST /dogs/ ["
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 53b3cca7450d45c5a5007333a153935c
+#: 57b6dcfe5f604c838191a84e11fea3b5
+#: 94c38e0b8c494c26adf05f030b8dbe54
+#: 55a2171b4e334502bf978a13205fbd86
+msgid "A unique integer value identifying this geo app."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: efbe7343d42643deb124f82da7980c6e
+#: 0aaf108fd74249cfb92f3804118e9288
+#: d70f2fc054cf499aaad1c6f77a1e40e7
+#: 4c9da69e3d1749bb95c3eaa9df9c155a
+msgid "API endpoint that allows gropus to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 711b46e8657549b4b064831f54ac36f9
+#: 24d85c5371924190bcc37db30242f825
+#: b0bebc734d8f4a3baef66db3d2ae72e7
+#: 927c1d3c4ba8408680b005003a6eb6f8
+#: 518c3a3f7a094cbc8c84192690655eb0
+#: bad4620519d14d80a2ae0963883861dc
+#: 5be7df9ad8084fadbc6f9259cbc11564
+msgid "Either delete a single or many model instances in bulk"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 697dc07f46c94d93a4cd52ad5dc64cbb
+#: 42b898ea0f3e45ca9fea39eb90cac510
+#: 7844bec675fb4002a771b816a25aba40
+#: 8a664cb53bab42da85b94378cf4694ab
+#: cc9e67119164469ba520bd7d6a4693c2
+#: 041b5e4292fc4d139becec6861d0bd5f
+#: 4801e31106c44ea6b7ba37d926b4e27b
+msgid "DELETE /dogs/ {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 433883dfb81748ecbdc0f44dc5089905
+#: 0b98f19673f14ac49211c98fc8102edb
+#: 4db94c78aad942a184201cd6f63a09a5
+#: 9d4cdcb59f714d90bb112611afa7f40a
+#: 045f21312dad4f32838d3839bea4499a
+#: 6fe17687c6a6499ebd148422c9c87108
+#: 6da7ebed65ec447680c374fd90eefa0c
+#: d9a16c473a124b7382667f8d38d4533e
+#: a87bc1ca78da4a97ab5c492bdfc77548
+#: 84e9313c27eb48d0b14bccd30dfe20bc
+#: 9403900a993b4333b91f89850d5dc3f1
+#: 384d378b1b56419997d3d09f8237bcf0
+#: 26c977ff22384beb82983318b55a22cd
+#: 3006f62d94a345bfaf82dc7ae10bd916
+msgid "{\"id\": 1}, {\"id\": 2}"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 74493a52f7c443b2af782e8b3d1c86f2
+#: b0b9b69691ea48639ed7d2e5ea8cfeef
+#: cbae4e5c8efe4442988437ad74577a05
+#: f688cf58bffa4841994228cc5cd85360
+#: bac73ae34dba4a779033d5834ef906d1
+#: 47d0332bbeb74e1eab850f44c477d8c1
+#: 4741246b99944ef1ac563d881ea78caa
+msgid "DELETE /dogs/ ["
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ed40ae7c6085472a8269b8b7c98903a6
+#: e6ab90a75bbc41e1b8e6481330e1e116
+#: 0bd75de65028499baf06fa9010e94e03
+#: e60f90564f504e58ba9f98049d798d8b
+#: 0a8dc8e188d3417b8dfd2543288d874e
+#: deae35a6d4ec45c7ba6e041415324fd7
+#: f79592e9ec734bf28fb6cf479fb3a066
+msgid "A unique integer value identifying this group profile."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 72c4d5f419154f30b8f93e1b61730dda
+msgid "API endpoint allowing to retrieve the Group managers."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 799a927221994f9f8e2930685ff0f4cb
+msgid "API endpoint allowing to retrieve the Group members."
+msgstr ""
+
+#: ../../<openapi>:1
+#: bc06cf1c280e45829b29a5f7229bf536
+msgid "API endpoint allowing to retrieve the Group specific resources."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: be0cc9d1df934b6e9f944c4c8d20dec9
+#: 5f9035980451469191afae9346fa67ed
+#: 96a16fca5fab4a2e832c737a24465d4b
+#: f508067532174911b96b8767da1e8824
+#: d46eea3c271f488fb1d1d632e2c5bf44
+#: c012a99ac2bc4d5c8fb36e6733ad59c0
+#: 59df14156dfa43399198989cf927e0cf
+#: 7ba339f2e0694d338d0a301a4b3c7e50
+#: 9a20abaf26dd43a3b40bcf3bda22f989
+msgid "A viewset that can support dynamic API features."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 4ec54fdd9de54c5e938917fbf8b07bac
+#: 310f6eb527c64a1aa6ef74a774a99398
+#: dad242f3750a4fb7927d7cff30cc696a
+#: 3c7ded49efd34e778cd0f58efd436722
+#: 506c31455fcb42868914db34bcfd7edf
+#: 582f0cdefe174f23856550ef8d18682d
+#: dfba118d5a9340eca6810aa59858cd78
+#: f0faa7786e924bb5adaec5fc51b4ffa5
+#: a118a92f87184124a5a72d6127a61f11
+msgid "Attributes:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 728d4bf71515440d82a38954d13dc2d1
+#: 3502cb027dcf426dbd5cb0897f2797ac
+#: 7ce03a58a0a745d896acb494cd8e5b84
+#: 786ef3f8ce7d4edb9e35a75adba9e7f8
+#: 76eea1c3a941499794c2e7fce4e36480
+#: f45ccc1c0fa94a6686ab39dff4d559ee
+#: f6906fdfc86146ff94d5ba77417b495e
+#: 7113e456943c4b679b026cfcd0595cad
+#: 570750ae6c184562a1b975e7c27f6f36
+msgid "features: A list of features supported by the viewset. meta: Extra data that is added to the response by the DynamicRenderer."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 1de7b6f878b0415dad069973c4d64252
+#: ffed5efd14804617940987b0313146e4
+msgid "Adds the `update_list` method to a viewset"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 1d878a30011544c2b734826378001126
+#: 43360f4c72734fa1aac84bbbf471994c
+msgid "`update_list` is used by `api.routers.ListPatchRouter` in order to allow performing PATCH requests against a viewset's `list` endpoint"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: b6c1933f88004b65a01378c46a6f3bbe
+#: 49de48bf03b640dab5f4dfd4dc3131c0
+#: d4424c4841564f29a1de227f95b2467a
+#: f0c75dcc86b04b12baa709d1d64b97c1
+msgid "A unique integer value identifying this harvester."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 4580370f93bc472ab5a46b80aaa25640
+msgid "A unique integer value identifying this asynchronous harvesting session."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 04685eb8c6fc43f58d8b589fe90b7d4b
+#: b731781693ef4682a253d6a51e98111e
+msgid "API endpoint that lists hierarchical keywords."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 30ee0946bc09464eb52d368b9cf73f5b
+msgid "A unique integer value identifying this hierarchical keyword."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 278b35ae90ca4ac7818700853d4baf3a
+#: f633d5d97350404fb62335085bdd5de6
+msgid "Handle the exposed management commands usage:"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: c2a96af676c1445ab42e7b8b6058263e
+#: b1c3e3f77fc64ff0bb427c2bf2ef783c
+msgid "GET: List of exposed commands"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: cecf7b185c334fa89b85226dc70511e2
+#: 3197352e4d694730b3e15424a2f2aeab
+msgid "GET detail: Help for a specific command"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: fce3fab573214766b55c79bf78b43c0b
+#: 059665fa775b47c7b34da883f92fcc25
+msgid "POST: Create a job (and automatic runs) for a specific command."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 498ff1939de1479fac6e6edeb6d70d7d
+#: 849ab75dccf246a4a7c764a7ae97b7c0
+msgid "Creates and runs a management command job. Expects application/json content type in a following shape: {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 0b6edad1076548f0afa1f0667a794b4e
+#: 3bb77a16c05847f290db4c6159ab345c
+msgid "\"args\": [<arg1>, <arg2>], \"kwargs: {<key1>: <val1>, <key2>: <val2>}, \"autostart\": bool"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: b485162ef82f4d739911ee1508d672bd
+#: b37f6a92f4694384afffbf2781995799
+msgid "} By default, autostart is set to true."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 19242a511e21447f85d3f4fdc6503e5e
+#: dd29fd1a1bd84d8f85e6e6951768e180
+#: 0d755663cc304242b00f1309303d63ae
+#: 46657b3cdf724764bc4825236de3608c
+#: 0b9d2c76e168458fbf947c98be749032
+#: 859231630685488ab20915e3b45e0cde
+#: b3c7d186de8140edb80c4949d31f5e4f
+#: c684d919e8e9465bbe184867ef9e72af
+#: 010dead74ac94339958982ad7e3dc7a7
+#: 99977cd45f30498ab22c242793edcc11
+#: 7b41b10f5a9d41778cf6af5c85b973fa
+#: ee0ba64ae1694cbabb2387450c7c088f
+msgid "Create, List, Retrieve, Start, Stop and Get Status of a Management Command Job."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 86c090e65b574f08a186b95a351d0688
+#: ee9a108ff6444b9abe6576d16561479b
+#: 0d57a666d28340fc827d2c424c69596f
+#: 0f5ba02861bd4b95b7f6c376cf35c26d
+#: 45168a8f67114ed6b52d1acc4a42d366
+#: 7924bcf4a7264280bcc2d03e98db15b5
+#: 8ad5cea572f74adb8a189e5104058e0f
+#: e4e3f0547f2a4df6ab303cc6410c5a90
+msgid "A unique integer value identifying this management command job."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 5f959877a46e406997d9b96c68c5f7f1
+#: 04f1aea085244f7295f476acc57c2ab6
+#: b4771ef438b24f8db1448b6dd630354b
+#: f428ea10aa7948619c6f851cb240aa9d
+msgid "API endpoint that allows maps to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 3ebd7c37a6b440a58e9b934b8ab76dcd
+#: 8bd098abd27a4355becc28a3e8ce45ba
+msgid "Changes in the m2m `maplayers` are committed before object changes. To protect the db, this action is done within an atomic tansation."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ff1b0bc5ee7141e38d8764d9756ce1b7
+#: a11bd45a7d9c45d3ac8ec3862a2186b6
+#: dc167ffb0f344fe1881e26d12f94e8e6
+#: 4b44b0b32d6540c9b2bc21bcb2cf1c00
+#: 9dc48d1a1209485bb0d0e73a0b1bf89e
+#: bb9e047565924089a9eca7b0996b4f10
+msgid "A unique integer value identifying this map."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 8728494dd52b470aa6e27c00aadbc082
+msgid "API endpoint allowing to retrieve the local MapLayers."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: f202caefcbe04e309e4dda5d59bb2906
+#: 6c08a5f57c1c457ebfc93616646d142f
+msgid "API endpoint that lists all possible owners."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 1aff91060c4842feae866c5a6ab55321
+#: 2ea4480559174a9f90f3e8df3e4978dd
+#: a4bde12372e847d1be565cacd1c8d9f7
+#: 555746d343e94159b62fb5b62afc0675
+#: 13f3e2ee8d66494d916768c50b89ea0a
+#: 586f00e42f35492bb8019fbb39860692
+#: 9230afb83cda4d7dbb351934536a15ec
+msgid "A unique integer value identifying this user."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: e84bd03277d94fd2a8fae890fa4ae5a5
+#: b61aadeae6f6438199433a34a74cdb7b
+msgid "API endpoint that lists regions."
+msgstr ""
+
+#: ../../<openapi>:1
+#: cbcf9e78c0b14f65b21f1e910ceb7522
+msgid "A unique integer value identifying this region."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 400453512f5c432c8241f0dee2859c72
+msgid "Main dispatcher endpoint to follow an API request status progress"
+msgstr ""
+
+#: ../../<openapi>:1
+#: c2ff768ff1f14daf9fadd39ab3a33898
+msgid "GET input: <str: execution id>"
+msgstr ""
+
+#: ../../<openapi>:1
+#: e8529d9cb2024c0da335c84fcce7dde5
+msgid "output: <ExecutionRequest>"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: a96596a83da449c6a58ec12728845325
+#: ae7a08f04bbb446597eed2067ef9304e
+#: e1f20408e40b4ff6904b167f8e694ae8
+#: 539f48e2b80d41f2a58621378a6dade8
+msgid "API endpoint that allows base resources to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 93a32bf51c344a028fefb248d8de849e
+#: 846eb47061724dea8060809a67313cae
+#: 869aca7c37944af7bd3a68b9256f7e8c
+#: 0eae649d1ab547738ad4de64cd393026
+#: b5156d9619a8498288d05ed94bb99ca1
+#: 39fcd156786145bc9abbb70ec33303fb
+#: 1ae84497f724471fa5fc5e21dca2a3a6
+#: 0854a91c01ff4aab9744359784ab30f8
+#: 71dce199bc834cf0a2b06bc498d4f74c
+#: 91aa1814715e419b9fce1062c71a7c00
+#: edcb09f9946e41ada63245c57988bbd6
+#: 46604156b78a4ed98213149bcb0e3982
+#: ed5989578d89444383507966742f3753
+#: 53bf03405fb04eb88e12f4c07753d920
+#: 2b363e9d15354232825fd3228d359d5d
+#: 9be314fe9f2147fe8c2e9759c326364e
+#: 082eebaccc5b4732b2c4022dff0d2c1a
+#: 0deb1d0a88254cf297cc6f8ca0c06baf
+#: 23e09ad1addd41babc32b96d0e860bfa
+#: 625e4ca1c6b44f03bad02d9896c46965
+#: 10d03622a038467f93b26747e5317375
+msgid "A unique integer value identifying this resource base."
+msgstr ""
+
+#: ../../<openapi>:1
+#: c045ff2298a14100b69b3d3352736ac5
+msgid "Instructs the Async dispatcher to execute a 'COPY' operation over a valid 'uuid'."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 214e60e27bca40859b53528ea4cfe062
+msgid "Instructs the Async dispatcher to execute a 'DELETE' operation over a valid 'uuid'."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 119cba1803c244e6af9a8410b9084665
+#: 89a2165a00914e2989b0a776ace7f984
+#: c9880c6d64724fb8b801ee0df9022d30
+#: c56d8a069ecd4ac09262beb56d7d4763
+msgid "Get/Update/Delete/Add extra metadata for resource"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: bc0c5616ed534109813014961fe24736
+#: 9fc980d34e4c40af84d7732b91ff6e45
+#: edd484581ae34601b32473295c5ca4ef
+msgid "API endpoint allowing to retrieve the favorite Resources."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 68efaf6c31f24a55a59254417dd247b7
+#: cf637efdbc5b4b7e880ab02c77985323
+#: 68a2a28363424301b5fd93951bfd75f8
+#: baad1c57d85f4eb3a8c50b41b3b77a6a
+msgid "Sets an object's the permission levels based on the perm_spec JSON."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: aa9163bc4f5f4fa488793bcd3fae2489
+#: fd5d3a3d4cc0424fab7801275cc64714
+#: 70feb667f1504f2985874f96f3f34346
+#: 4e4d247c37224078996259d1f14a3326
+#: 140f0777f83345a3b5749cd267ef8861
+msgid "the mapping looks like: ``` {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 54a014e118fb424fa48c058dbec6861a
+#: 21dc5265ff1c488b904f3595375e591c
+#: ac1f86bb6f6d4a57a5f41926624558bf
+#: 11b5af0fc9384bbaa355fbee4222c3e2
+msgid "'users': {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 49244d6ce8324fc984f134b904fa97e0
+#: 90b21b31f343450ab65a9577df62fe76
+#: 3dbd6efbfad4442393ee24951f63fee9
+#: 7bd03d8c6ed8484192b62df3680f1b99
+msgid "'AnonymousUser': ['view'], <username>: ['perm1','perm2','perm3'], <username2>: ['perm1','perm2','perm3'] ..."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 39255cce589a44759c3a600c1b224e78
+#: ee175c169e1d4ea9921ac8c565443778
+#: cecf2a572988476faf3c0d6503906188
+#: 4338b1be15f749d893f3e0dc7bb4029c
+msgid "}, 'groups': {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 81bad3db76ef43478a3eccf0fe916d6d
+#: 4068351139884490b6a4d461e22cb2a4
+#: a43a5f7b5a404bfdb009c48dac78f68d
+#: 1a7c8816a8504498ac93cd6e4f34c963
+msgid "<groupname>: ['perm1','perm2','perm3'], <groupname2>: ['perm1','perm2','perm3'], ..."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ae59ca442f444fc9af085e038994dabf
+#: 990f5bffe20d4a9aa68038cff5c5593f
+msgid "API endpoint allowing to rate and get overall rating of the Resource."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 13388a6ace614abc840804b7a6857bf1
+msgid "API endpoint allowing to set thumbnail of the Resource."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 1a7a842f3f254333be1bb1d1b33279bc
+msgid "Instructs the Async dispatcher to execute a 'UPDATE' operation over a valid 'uuid'."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 00a22ca19ecc4f639d8e897e4e420b30
+msgid "API endpoint allowing to set the thumbnail url for an existing dataset."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 7d77dd85f7d04d7cb688a13e92b5fa4e
+msgid "API endpoint allowing to retrieve the approved Resources."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 59486c7647e2416ab4ab4af3d405ebd3
+msgid "Instructs the Async dispatcher to execute a 'CREATE' operation."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 1d3f329c4eeb4a03bc069a23ce263124
+msgid "API endpoint allowing to retrieve the featured Resources."
+msgstr ""
+
+#: ../../<openapi>:1
+#: e325cc088c4741c4bedaffcca1447921
+msgid "Instructs the Async dispatcher to execute a 'INGEST' operation."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 63160607c79c470b95ff0280123cdf58
+msgid "API endpoint allowing to retrieve the published Resources."
+msgstr ""
+
+#: ../../<openapi>:1
+#: c6cee9f284f644c3a3e498bfe2c3bb50
+msgid "Returns the list of available ResourceBase polymorphic_ctypes."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 782c3027fe984f97b8809c7365b577f3
+msgid "\"resource_types\":["
+msgstr ""
+
+#: ../../<openapi>:1
+#: 47ec08f10e4e4a21a4a0dab1db05814a
+msgid "{"
+msgstr ""
+
+#: ../../<openapi>:1
+#: fb505e7e27f54ecd8adef50a43f9b380
+msgid "\"name\": \"layer\", \"count\": <number of layers>"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 022e90d98cc14c6894ea8a3c36b420de
+#: 195dd4e64cec445aa71f28a42974ba2b
+#: 06efc566939b41ea9e9e27cbe5d1cd09
+msgid "}, {"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 655b862435bd4b0eaf670fb9fcb929a2
+msgid "\"name\": \"map\", \"count\": <number of maps>"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 17db9827bcb143bfa80c0e83cf2feb2c
+msgid "\"name\": \"document\", \"count\": <number of documents>"
+msgstr ""
+
+#: ../../<openapi>:1
+#: f0b3567008394af78371a90d30e6e8bc
+msgid "\"name\": \"geostory\", \"count\": <number of geostories>"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 71c49f195f53478db5a2cff97e2f6659
+msgid "OpenApi3 schema for this API. Format can be selected via content negotiation."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 07805e949b5442739692bf6c03a37de4
+msgid "YAML: application/vnd.oai.openapi"
+msgstr ""
+
+#: ../../<openapi>:1
+#: e14c118f350b486d9e9b2254cbd444cc
+msgid "JSON: application/vnd.oai.openapi+json"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: fc40270bb7ba4fbe91d1cf365b425983
+#: 01bd559a2b2c4e7fb7b6f73d4421b2bd
+msgid "API endpoint that lists Thesaurus keywords."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 7aa610e88c2149e288bb434e0058d18b
+msgid "A unique integer value identifying this thesaurus keyword."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 8e0d2223fe684347bdbe3edb954df472
+msgid "A unique value identifying this upload parallelism limit."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 5ed6da8b4e014e73ac3a0c21671e1582
+msgid "A unique value identifying this upload size limit."
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 30fb499612644ba3b56f41b9bfec237d
+#: 569411b28f7244e194f0de1a02d9ce9c
+msgid "API endpoint that allows uploads to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 7abe8d4e3e724cb18734c097034664fa
+msgid "A unique integer value identifying this upload."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 987970df16ce4758ac41e7f50f52aeae
+msgid "Starts an upload session based on the Dataset Upload Form."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 277d8af069d5430e882a6203132e3bad
+msgid "the form params look like: ```"
+msgstr ""
+
+#: ../../<openapi>:1
+#: a0fe745d02fb46feab3bf031523214e3
+msgid "'csrfmiddlewaretoken': self.csrf_token, 'permissions': '{ \"users\": {\"AnonymousUser\": [\"view_resourcebase\"]} , \"groups\":{}}', 'time': 'false', 'charset': 'UTF-8', 'base_file': base_file, 'dbf_file': dbf_file, 'shx_file': shx_file, 'prj_file': prj_file, 'tif_file': tif_file"
+msgstr ""
+
+#: ../../<openapi>:1
+#: 543bb1d1c2c94e26b6de221e63e7d103
+msgid "```"
+msgstr ""
+
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: ../../<openapi>:1
+#: 3656d666b756465797a44c4e959cbf61
+#: 8deb09b0efec4b25a6339165f4eb8702
+#: 784ce7e5766d4977beb8aa8c7e48bc5c
+#: 4e9aea35abdd4af9b1e45db24c359cae
+msgid "API endpoint that allows users to be viewed or edited."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 702991cec6a14480afd330f314beafa0
+msgid "API endpoint allowing to retrieve the Groups the user is member of."
+msgstr ""
+
+#: ../../<openapi>:1
+#: 027b698a84114d9a88750f7786bf3d1e
+msgid "API endpoint allowing to retrieve the Resources visible to the user."
+msgstr ""

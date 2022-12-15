@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_documents/uploading_documents.rst:4
+#: 967c1f62fd484ea6a9e410902466051e
+msgid "Uploading Documents"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:6
+#: 1b9470fbada0417396541f9c58e5357b
+msgid "GeoNode allows to share reports, conceptual notes, posters, spreadsheets, etc. A wide range of documents files can be hosted on the platform, including text files (.doc, .docx, .txt, .odt), spreadsheets (.xls, .xlsx, .ods), presentations (.ppt, .pptx, .odp), images (.gif, .jpg, .png, .tif, .tiff), PDF, zip files (.rar, .zip, .gz), SLD, XML or QML files."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:8
+#: 013b48dc154143e0a04586c73b7b6ca2
+msgid "Only authenticated users can upload data into GeoNode."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:10
+#: a051fd27ecf44121b286cb47b1452f15
+msgid "*Documents* uploading is accessible by clicking *Create new* which displays a list including `upload document link`:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:15
+#: 901a9c41904d4b92aa29c8cf48032aee
+msgid "*Document Upload link*"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:17
+#: ceb8fe3dd9884823a084eff5c06ad77c
+msgid "The *Document Upload* page looks like the one shown in the picture below."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:22
+#: 3199f86a31554067ba77afc7b3cff40e
+msgid "*Document Upload page*"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:24
+#: 395d0ceeaa0c40e4a41e0122b298e218
+msgid "In order to upload a document:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:26
+#: 18f6f7977b1c46af84594b5cf179f9f6
+msgid "Select a file from your disk or enter a URL address if the document is stored on the internet."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:27
+#: a5e53853aa9d44b493f7b72a00b94392
+msgid "Insert the title of the document."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:28
+#: 1ffd81368cba412c865a9d63f15f5e8b
+msgid "Select one or more published resources the document can be linked to (optional)."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:29
+#: bd3f49b3a6c94c07a5c4650a7a16327d
+msgid "Click the red :guilabel:`Upload` button"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:31
+#: 8222f851b8734adb929fd846431b3dde
+msgid "At the end of the uploading process you will be driven to the *Detail* page with a menu to save, view more info, edit metadata, share, download and delete the document. See the next section to know more about Metatadata."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:33
+#: d0a119c477774cb597306e55bfcb9542
+msgid "If you get the following error message:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:35
+#: 7809df632d204614a5f4a36c081b8892
+msgid "``Total upload size exceeds 100.0 MB. Please try again with smaller files.``"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:37
+#: 4e6ea6e62aa746539c664ca7c74e6540
+msgid "This means that there is an upload size limit of 100 MB. An user with administrative access can change the upload limits at the `admin panel <../../admin/upload-size-limits/index.html#upload-size-limits>`__."
+msgstr ""

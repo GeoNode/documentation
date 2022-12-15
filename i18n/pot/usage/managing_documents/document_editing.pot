@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_documents/document_editing.rst:4
+#: 16ea57536d534263ad505c2ca496de38
+msgid "Document Editing"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:6
+#: c1a4831807104b259a89b716239f3d61
+msgid "The :ref:`document-info` page makes available useful menu for document editing. Click on the :guilabel:`Edit` link then :guilabel:`Edit Metadata` to see editing forms."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:9
+#: 1f19c6225f2d44f086715e59fc97e8ab
+msgid "Setting the Document Thumbnail"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:11
+#: a34be5a2d0044e20a81b2f6658408c23
+msgid "From the *Metadata Form*, it is possible to *Set the Thumbnail* of the document. Click on :guilabel:`Choose file` to open the *Thumbnail Uploading* page and chose the image that will illustrate your document. Once this is done, click on the ok button and save. If the thumbnail has been successfully uploaded you can see it by coming back to the document list."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:16
+#: d30720e266f349b592bedcc7e75c1d55
+msgid "*Upload Document's Thumbnail*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:18
+#: 68c8c39a75c445478ebaf8105a422085
+msgid "If no errors occur, the new selected thumbnail will be shown."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:23
+#: fa13adf52b624efea39e31bb028c5245
+msgid "*Uploading success*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:26
+#: b6cda43843c347fcbc737b8a329fd46e
+msgid "Editing the Document Metadata"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:28
+#: fe66686e8d3948a5b24a90adf2fbcd6e
+msgid "You can edit the metadata of your document as described in the :ref:`document-metadata` section or by using THe *Advanced Metadata* option below."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:33
+#: 2210e13fee064113b4324f873be9610d
+msgid "|The :guilabel:`Advanced Metadata` button takes you to a big form where all the available metadata of the document can be edited. | Some information are mandatory such as the *Title* or the *Category* the document belongs to, some others are optional."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:39
+#: e8cdb57771014832b459192f76ec8eaa
+msgid "*Editing Metadata*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:41
+#: dbb23ce2338b4a5c8243fbc1a39649a1
+msgid "In the example shown in the picture above, the information inside the red rectangles have been changed. To save the changes click on :guilabel:`Update`, you will be redirected to the document page."
+msgstr ""

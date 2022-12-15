@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../admin/index.rst:32
+#: ../../admin/index.rst:17
+#: ../../admin/index.rst:32
+#: 
+#: 2e6dab47113142359d3a65feba8973a5
+#: ae7283a76aae4f1a9fa9e95a9bb9e662
+msgid "GeoNode Management Commands"
+msgstr ""
+
+#: ../../admin/index.rst:41
+#: ../../admin/index.rst:39
+#: ../../admin/index.rst:41
+#: 
+#: 6aa6020f4a5b42b99303751cc9c31d1f
+#: cbcaeea423b649e0a4d8ac880945941e
+msgid "Changing the default Languages"
+msgstr ""
+
+#: ../../admin/index.rst:50
+#: ../../admin/index.rst:48
+#: ../../admin/index.rst:50
+#: 
+#: 77668200270543d785ed79596716bd14
+#: 543972109fb0486aa8688855c04aef7f
+msgid "GeoNode Upgrade from older versions"
+msgstr ""
+
+#: ../../admin/index.rst:59
+#: ../../admin/index.rst:57
+#: ../../admin/index.rst:59
+#: 
+#: 7abdcdbefc16414d913dad507b4c9661
+#: 3f26130ba1bb478e8a5fdd0825ee310f
+msgid "GeoNode Async Signals"
+msgstr ""
+
+#: ../../admin/index.rst:2
+#: 0cd8f5eb075e4b43bc3c3430b7a85f81
+msgid "GeoNode Admins Guide"
+msgstr ""
+
+#: ../../admin/index.rst:4
+#: df467b2f342847d68e5a4465278eb629
+msgid "GeoNode has an administration panel, based on the Django admin, which can be used to do some database operations. Although most of the operations can and should be done through the normal GeoNode interface, the admin panel provides a quick overview and management tool over the database."
+msgstr ""
+
+#: ../../admin/index.rst:8
+#: 397b61c6182045eb985629c2dec38f26
+msgid "The following sections will explain more in depth what functionalities the admin panel makes available to you. It should be highlighted that the sections not covered in this guide are meant to be managed through GeoNode UI."
+msgstr ""
+
+#: ../../admin/index.rst:19
+#: c12c84ba397a4125953836cda5df17ac
+msgid "Management commands are utility functions for GeoNode maintenance tasks. They are usually run from an SSH/bash shell on the server running GeoNode. Any call to python is prepended with a configuration parameter to indicate the GeoNode settings module to be used."
+msgstr ""
+
+#: ../../admin/index.rst:26
+#: 95d4a44f9e8d4a04a09bf4ccae4f6638
+msgid "If you have enabled ``local_settings.py`` the command will change as follows:"
+msgstr ""
+
+#: ../../admin/index.rst:66
+#: 8a33deb51c1a4c1db3105da6cb63a9e0
+msgid "GeoNode Add a thesaurus"
+msgstr ""

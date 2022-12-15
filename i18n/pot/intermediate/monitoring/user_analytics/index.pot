@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:2
+#: d507d560ab1d4ae582b16ee4c8812be3
+msgid "Monitoring: User Analytics"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:5
+#: 9997016cbcef4bf8b0455af283df1a4b
+msgid "Purpose"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:7
+#: d08f48c41f714ae6afd06f0d63b99c25
+msgid "UA should provide information about GeoNode resources usage at user level (not request level, like plain monitoring)."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:10
+#: dff3675874144c8a96e12bf37f7e390c
+msgid "Requests"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:12
+#: 9ba235ede6dd460a8eda37d1227da9d3
+msgid "total number of unique sessions on GeoNode (excluding ows requests) per day. This gives a base view of the reach."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:14
+#: 71caa462f47747d4a25484e9cfb12427
+msgid "requests from all sessions of all types, ows and non-ows"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:16
+#: db77f9f3b9014604890629b853a4a36d
+msgid "``GET /monitoring/api/metric_data/request.users/?last=(x*86400)&interval=86400&group_by=label``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:18
+#: 5da53d73ac764955aa32806cc8b0bd06
+msgid "non-ows related"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:20
+#: 813ec88fe3a74a7686842d89b12ad63c
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=(x*86400)&interval=86400&group_by=label&event_type=other``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:23
+#: d4a13e762f5b415ba7d4da732bd41296
+msgid "only ows related"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:25
+#: 11bd84b7dc804c6d966fabe1463d23c6
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=(x*86400)&interval=86400&group_by=label&event_type=OWS:ALL``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:58
+#: 4420093adea342358a38ced9d3b23004
+msgid "total number of unique sessions per URL (excluding ows requests). Let me see how many users visits the layers page or the maps page"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:60
+#: 4ca26fd84b854dcf893f2759bc771f96
+msgid "get number of unique tracking ids for urls"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:62
+#: 3868b551f15542238ccfe1083c664fd9
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=(x*86400)&interval=86400&group_by=resource_on_label&resource_type=url&event_type=other``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:126
+#: 2cb5d090f199487bb82a9ed4cc3357eb
+msgid "total number of unique sessions per event_type: for example total number of unique visits of resource pages (independently by resource type and id)"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:128
+#: d07cd7c538cc4a8e89c2b6e4def62741
+msgid "to get number of requests"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:130
+#: f7397d03be9646f387ceae3d0926c6af
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=event_type``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:133
+#: 4ebe5270e1a44c38803c78b59f2786d5
+msgid "to get number of unique tracking ids"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:135
+#: cc7e3b90c42c4b219c957477c4b83067
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=event_type_on_label``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:138
+#: 68006a3b58a4484385267767e687d089
+msgid "to get number of unique tracking ids for each event_type on a given resource type"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:140
+#: 3064405ac8e745aa98b11b13517c88aa
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=event_type_on_label&resource_type=url``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:192
+#: fc698a051ac54be89b86cbdef9354933
+msgid "to get number of unique users for each event type on specific resource type"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:194
+#: 442aea3e298d460899d51bc51c2eb0d9
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=event_type_on_user&resource_type=url``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:246
+#: d6bc7255e4f64b07ae7ec6c9505c9b3e
+msgid "total number of unique sessions per event_type and single resource: let me see what was the most visited map page in this day, or what was the most downloaded document, what was the most requested ows layer, etc."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:248
+#: b337232318854e8d928eca9345495977
+msgid "list of most visited resources of `url` type"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:250
+#: 344762dcdbe44ebfb78785560ba4577c
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=resource_on_label&resource_type=url``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:253
+#: a730a22385fb41ad805ce1a2dc1e3d2d
+msgid "list of unique tracking ids for each resource (can be narrowed down to specific resource type with `resource_type` values)."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:255
+#: 1a34b1206e634732a86bebfbd940c255
+msgid "``GET /monitoring/api/metric_data/request.users/?`` ``last=86400&interval=86400&group_by=resource_on_label``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:371
+#: dbc1b46f5dc04b5c9d554acb30171b3d
+msgid "total number of unique visitor (user) per event_type and single resource: let me see how many users visited the map page in this day, or how many users download some resource, etc."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:373
+#: 5e1e13b3dc8a4d33832683badbbb3fd2
+msgid "number of unique visitors (users) in a year for a given event_type:"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:375
+#: b1dc7d761cc942c695296bd92a626ab8
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?valid_from=2019-01-01+00:00:00&valid_to=2019-12-31+23:59:59`` ``&interval=31536000&event_type=upload&group_by=user``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:379
+#: 0c1d7d92981049f4859d98b9c2522da5
+msgid "number of unique visitors (users) in a given time interval and for a given resource_type."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:381
+#: 857d34b6ad69427a9a433a92afaba796
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?valid_from=2019-01-01+00:00:00&valid_to=2019-12-31+23:59:59`` ``&interval=31536000&resource_type=layer&group_by=user``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:385
+#: 984730b2be774f2cb6b3d64bebbcc0d9
+msgid "the responses should look like this:"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:417
+#: 2d5e4694b7b041e59dd488e22e132f77
+msgid "total number of unique tracking ids/sessions for a given user."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:419
+#: 372842ccbadc4904bbe65e7cfb00b640
+msgid "sessions count for anonymous users:"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:421
+#: a1b3441dc19d47afaf4eb380f0bf4852
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?valid_from=2019-01-01+00:00:00&valid_to=2019-12-31+23:59:59`` ``&interval=31536000&group_by=label&user=AnonymousUser``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:455
+#: fb08b007544f4923b55c179b07ae7438
+msgid "total number of unique tracking ids/sessions for each user."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:457
+#: 8f5a07586658426b81e8915c62e23137
+msgid "sessions count for each users:"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:459
+#: 0a3457c5023142438a70739758b0a131
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?valid_from=2019-01-01+00:00:00&valid_to=2019-12-31+23:59:59`` ``&interval=31536000&group_by=user_on_label``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:512
+#: 2f50b2d7511a4cc9a9423e6e11134d7b
+msgid "sessions count for each users which do something with a layer:"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:514
+#: 5e757d1ff75143f590934d247698ac99
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?valid_from=2019-01-01+00:00:00&valid_to=2019-12-31+23:59:59`` ``&interval=31536000&resource_type=layer&group_by=user_on_label``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:558
+#: df62a308a2cc42ed91f6531c00f01228
+msgid "total number of unique users for each monitored resource."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:560
+#: fe3cdf26a2c44e27aa695a5c3993d636
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?last=31536000&interval=31536000&group_by=resource_on_user``"
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:683
+#: 75667fe952ef479ead10b2a0b73aca01
+msgid "total number of resource monitored in a given time range."
+msgstr ""
+
+#: ../../intermediate/monitoring/user_analytics/index.rst:685
+#: 77470e9608c24f3ab5bd225f92650c42
+msgid "``GET /monitoring/api/metric_data/request.users/`` ``?last=31536000&interval=31536000&group_by=count_on_resource``"
+msgstr ""

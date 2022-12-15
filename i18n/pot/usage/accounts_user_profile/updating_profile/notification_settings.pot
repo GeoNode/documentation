@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:2
+#: 50fe7506c80b418cb09cf88b94b38fb8
+msgid "Setting Notification Preferences"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:4
+#: cf4cd0a87e2c491d87aa947981f4555b
+msgid "By default GeoNode sends notifications to the users for events that they could be subscribed to such as a new dataset uploaded or a new rate added to a map. You can adjust your notification settings by clicking on the :guilabel:`Notifications` link of the *Profile* page (see :ref:`editing-profile`)."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:7
+#: ab24e9cefb4f44afba413f1557747c76
+msgid "Make sure to have a verified email address to which notices can be sent. If not see :ref:`associating_emails`."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:9
+#: 4b3dbda3e4aa4c41b5d666970da16da5
+msgid "Now check/uncheck the notification types you wish to receive or not receive. It is possible to be notified for the events shown in the picture below."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:16
+#: e95fa54631e44342b2367b3a383a5a4f
+msgid "*Notifications settings*"
+msgstr ""

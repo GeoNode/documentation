@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_datasets/dataset_info.rst:4
+#: a5782e635c094b028e0583d32cbe2373
+msgid "Dataset Information"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:6
+#: 4f985f78eea0492980860ec600aa4270
+msgid "In this section you will learn more about datasets. In the :ref:`finding-data` section we explain how to find datasets, now we want to go more in depth showing you how to explore detailed information about that."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:7
+#: 7c54deb688c6421599ac9361b362fe57
+msgid "From the resource list page, filter with datasets, click on the dataset you are interested in. The overview page will be shown on the right, Then click on *View dataset*, The dataset detail page will open."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:9
+#: 0c0aa73fdeda4e248413adb33befaa80
+msgid "The Dataset page has a menu which helps us to view and update dataset attributes."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:14
+#: d58688ab9a16410eac53607cd349b625
+msgid "*Dataset Menu*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:17
+#: 2c244f0cf4b6475287c79f03341e79ea
+msgid "Dataset Info"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:18
+#: 01d4aba0d33e4c8bac316e8fb0135049
+msgid "When you click the *Info* link in the menu, a new page will be opened on right."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:20
+#: c4f0e149c5a34bcfa34b5097bace3002
+msgid "The *Info* tab is active by default. This tab section shows some dataset metadata such as its title, the abstract, date of publication etc. The metadata also indicates the dataset owner, what are the topic categories the dataset belongs to and which regions are affected."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:25
+#: f082c5d732a8428faa410dff71dd8c8d
+msgid "*Dataset Infor tab*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:27
+#: e1d7d1ea045c4d7d9eddffee6347c8f2
+msgid "The *Attributes* tab shows the data structure behind the dataset. All the attributes are listed and for each of them some statistics (e.g. the range of values) are estimated (if possible)."
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:32
+#: a11a6992a7b1429ebf5f509f8146fee5
+msgid "*Dataset Attributes tab*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:34
+#: 1e8898151ba84fe9ac3bc04fd045d5bd
+msgid "If you want this dataset in your *Favorites* (see :ref:`editing-profile`), You can click on star icon near the datset name."
+msgstr ""

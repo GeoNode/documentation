@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../basic/index.rst:2
+#: 1ba4c9c672a84118b10ffb3938c6d298
+msgid "GeoNode Settings"
+msgstr ""
+
+#: ../../basic/index.rst:4
+#: 2a3bd193b1de4e09b1c5fb86cc7384d9
+msgid ":ref:`settings`"
+msgstr ""
+
+#: ../../basic/index.rst:13
+#: 8477de2724834872b402b393e75a6cfb
+msgid "Customize the Look and Feel"
+msgstr ""
+
+#: ../../basic/index.rst:21
+#: 306eeb7b643d4e31985d4331b1df010c
+msgid "GeoNode permissions"
+msgstr ""

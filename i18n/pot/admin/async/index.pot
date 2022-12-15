@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../admin/async/index.rst:2
+#: e39ca15517664d8893850569faa31598
+msgid "Supervisord and Systemd"
+msgstr ""
+
+#: ../../admin/async/index.rst:5
+#: 898200e98788406a82e0512b930c58ba
+msgid "Celery"
+msgstr ""
+
+#: ../../admin/async/index.rst:8
+#: e6bdd25625be48edb397f5cbb5efb8e3
+msgid "Rabbitmq and Redis"
+msgstr ""
+
+#: ../../admin/async/index.rst:11
+#: 9372cc4292344abdae070b2f2e15d802
+msgid "How to: Async Upload via API"
+msgstr ""
+
+#: ../../admin/async/index.rst:12
+#: df08966b1aab4359a66cbd0d337457a1
+msgid "In geonode is possible to upload resources via API in async/sync way."
+msgstr ""
+
+#: ../../admin/async/index.rst:14
+#: bb9da4b704444b26a81bc97485b8959d
+msgid "Here is available a full example of upload via API https://github.com/GeoNode/geonode/blob/582d6efda74adb8042d1d897004bbf764e6e0285/geonode/upload/api/tests.py#L416"
+msgstr ""
+
+#: ../../admin/async/index.rst:18
+#: 29a1df3ed5b54f349e3f948f75174a2f
+msgid "Step 1"
+msgstr ""
+
+#: ../../admin/async/index.rst:20
+#: 7e6d58c981ea4b9784bc1114a3e146ee
+msgid "Create a common client session, this is foundamental due the fact that geonode will check the request session. For example with requests we will do something like:"
+msgstr ""
+
+#: ../../admin/async/index.rst:29
+#: 73f82a5258ea48d2a1dca911ba2f414a
+msgid "Note: in Django this part is already managed"
+msgstr ""
+
+#: ../../admin/async/index.rst:32
+#: ef8131faa8a24cea91a3a75d48355d3d
+msgid "Step 2"
+msgstr ""
+
+#: ../../admin/async/index.rst:34
+#: cf2516892aca4bfd8dd13019e5ed3ed8
+msgid "Call the `api/v2/uploads/upload` endpoint in PUT (is a form-data endpoint) by specifing in files a dictionary with the names and the files that we want to uploads and a data payload with the required informations. For example:"
+msgstr ""
+
+#: ../../admin/async/index.rst:62
+#: 3ad08ad7c9bb489290b2727e4a88fb0c
+msgid "Step 3"
+msgstr ""
+
+#: ../../admin/async/index.rst:64
+#: e246087871894ec7b93e9ec869a078b9
+msgid "Call in the final upload page in order to trigger the actual import. If correclty set, Geoserver will manage the upload asyncronously."
+msgstr ""
+
+#: ../../admin/async/index.rst:74
+#: 9237c2ca5c234812b3f5b3ab9446e792
+msgid "Step 4"
+msgstr ""
+
+#: ../../admin/async/index.rst:76
+#: 226cf9b5926a4f8880bb6c3851f2d8a6
+msgid "The upload as been completed on GeoNode, we should check utill Geoserver has complete his part. To do so, is enougth to call the detailed information about the upload that we are performing"
+msgstr ""
+
+#: ../../admin/async/index.rst:83
+#: 31394c3791b34d00b9c27e0b41b1c5ef
+msgid "When the status is `PROCESSED` and the completion is `100%` we are able to see the resource in geonode and geoserver"
+msgstr ""

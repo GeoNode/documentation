@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contribute/participate_discussion/index.rst:5
+#: 910d93a1684d48238901535895f588a7
+msgid "Join the community, ask for help or report bugs"
+msgstr ""
+
+#: ../../contribute/participate_discussion/index.rst:7
+#: 5e2a6b085bff44369a4af195c176f527
+msgid "In case of general questions the GeoNode Community is present at following *channels*"
+msgstr ""
+
+#: ../../contribute/participate_discussion/index.rst:9
+#: 04eb803c50114fc292efc890bb2f48e9
+msgid "User Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo/geonode-users"
+msgstr ""
+
+#: ../../contribute/participate_discussion/index.rst:10
+#: 75f680993ef8491598be45af56ea73d6
+msgid "Developer Mailing List: https://lists.osgeo.org/cgi-bin/mailman/listinfo/geonode-devel"
+msgstr ""
+
+#: ../../contribute/participate_discussion/index.rst:11
+#: 4d7db562928f42f0867d5ef67d7d9f33
+msgid "Gitter Chat: https://gitter.im/GeoNode/general"
+msgstr ""
+
+#: ../../contribute/participate_discussion/index.rst:13
+#: d1fa4eed16a443a9994a60536bffc3ed
+msgid "For reporting bugs please open a ticket at Github issues:"
+msgstr ""
+
+#: ../../contribute/participate_discussion/index.rst:15
+#: 8a1384fa2ffa41639e50ea537a8992b8
+msgid "https://github.com/GeoNode/geonode/issues"
+msgstr ""

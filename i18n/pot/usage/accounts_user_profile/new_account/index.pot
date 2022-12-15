@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:2
+#: 1fa55c2aa8124f878016b4906e9e7cdd
+msgid "Creating a New Account"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:4
+#: a1b8a1bc86d24d13ad95d5b445d945cb
+msgid "To take full advantage of all the GeoNode features you need a user account. Follow these step to create a new one."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:6
+#: b402c9dc73814d92a650dc6cb95690fb
+msgid "From any page in the web interface, you will see a :guilabel:`Register` link. Click that link, and the register form will appear"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:8
+#: a5fedf4650b64fda9f16ea97c8435f62
+msgid "The registrations in GeoNode must be open, in case you don't see the register link then it's not possible to register unless the administrator of the site does that for you."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:13
+#: d0b1b4b4ede64c19bffc379f094b638d
+msgid "*Register Link*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:15
+#: 8be78720d5b04fc3bf53fd3232d5a19d
+msgid "On the next page, fill out the form. Enter a username and password in the fields. Also, enter your email address for verification."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:20
+#: 6a85ba198fb445ac802621703a3f54a2
+msgid "*Registering for a new account*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:22
+#: 0f9516767e344b8286aa8649c4940d28
+msgid "You will be automatically logged in and redirected to the Profile page. An email will be sent confirming that you have signed up. If no errors occur during the registration, the following alerts will appear on the screen:"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:27
+#: a771dc5e558747a69a1de44a84b476a9
+msgid "*Alerts*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:29
+#: 40b3dd85d4a84abf8d916768be815cb7
+msgid "To log out click on the :guilabel:`Log out` link of the user menu."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:34
+#: 8cc2599777024829976283a1fb000692
+msgid "*Logout link*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:36
+#: 2cd823e45e5348dea11d76725ebd03a3
+msgid "You have to confirm this action as described in the picture below."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/new_account/index.rst:41
+#: bcacd49d2a36413a9d835dc3157a9569
+msgid "*Confirm Log out*"
+msgstr ""

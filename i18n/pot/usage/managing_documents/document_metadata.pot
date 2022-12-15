@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_documents/document_metadata.rst:4
+#: 699c06a63c18413b84e98b646dfd848c
+msgid "Filling the Document Metadata"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:5
+#: 26ece6859f1243328a1fc93913a84e80
+msgid "You can open the Metadata form by clicking on the *Edit* link in the document details menu and then *Edit Metatadata* Link."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:10
+#: bd6733a341bd4c9eb35e83a56ed15fd9
+msgid "*Edit Metadata Link*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:12
+#: 2b59d961937f4c9b8fd6ebb0bc203873
+msgid "Metadata contains all the information related to the document: they are its ID card. They provide essential information for its identification and its comprehension. Metadata also make the document more easily retrievable through search by other users."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:14
+#: ec3b00a83326467bb7466a3240bb8325
+msgid "Editing a document's metadata is done in three steps (*Basic Metadata*, *Location and Licenses*, *Optional Metadata*). The first two steps are mandatory (no documents will be published if the required information are not provided) whereas the last one is optional."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:16
+#: 32a7af5073e9450ab0d24a19beff08f8
+msgid "On the **Basic Metadata** page, the essential information that has to be filled is:"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:18
+#: 3920920132f14e8ea973fe2af25afc81
+msgid "The *Title* of the document, which should be clear and understandable;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:19
+#: 549657fcb845464899ea4add874dcf35
+msgid "The *Resources* the document should be linked to;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:20
+#: cb02cb9237bd45fb81b1378376040c94
+msgid "An *Abstract* on the document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:21
+#: 545c70111f134d9aa7377eb92ba60491
+msgid "The *Creation/Publication/Revision* dates which define the time period that is covered by the document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:22
+#: be3078945dca44c18b36386214e2ea0e
+msgid "The *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word. Key-words should be relevant to the imported document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:23
+#: 53e5bbf9fcf34cde82e059b42b550ba1
+msgid "The *Category* in which the document belongs;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:24
+#: 6116bc0e075a40d79a0f2be26d9fea44
+msgid "The *Group* to which the document is linked."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:29
+#: 83dd24f452d14fa2aee0c6be4081fe7a
+msgid "*Document Basic Metadata*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:31
+#: 21d734abdb5040cba475e35e3f5145f8
+msgid "Once all the fields are filled, click on the blue button :guilabel:`Next >>` in the bottom right corner of the page."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:33
+#: 06445c02ce2a498a9313f9b0db81db02
+msgid "On the **Location and Licenses** page, the following information should be filled:"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:35
+#: 535e1adea4d3403aaf62cc2d2ddba996
+msgid "The *Language* of the document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:36
+#: e5ec34670b694885a95bccd618169999
+msgid "The *Regions*, which informs on the spatial extent covered by the document. Proposed extents cover the following scales: global, continental, regional, national;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:37
+#: e6453a8b8f394235ab64317cf0bc7bcb
+msgid "The *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:38
+#: a716aba1b5b149129099433cd2a65df4
+msgid "Potential *Restrictions* to sharing the document should be provided in the Restrictions box."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:43
+#: ddda635669224bee8aa1892c3645aa81
+msgid "*Document Location and Licenses*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:45
+#: b2c5bf6c1f654a84b27abbefd4e431ac
+msgid "Click on the blue button :guilabel:`Next >>` to go ahead to the next step."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:47
+#: ce5b4ce04c854453a6d0a6f5fcb2750e
+msgid "On the **Optional Metadata** page, complementary information can be added:"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:49
+#: 2e6cd46780764010b96eb06bbaa6643f
+msgid "The *Edition* to indicate the reference or the source of the document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:50
+#: d4654c46e08843afb6a15a44b112c41a
+msgid "The *Purpose* of the document and its objectives;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:51
+#: f288695c60384543bde7cb72be25d9d7
+msgid "Any *Supplemental information* that can provide a better understanding of the uploaded document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:52
+#: 260822f5102f44a79ef5de858061305f
+msgid "The *Maintenance frequency* of the document;"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:53
+#: c05fe4a058444cfe8026c036930cc851
+msgid "The *Spatial representation type* used."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:55
+#: a4868eeade634d5abd6d3f21873e0a6b
+msgid "*Responsible Parties*, *Owner* and *Share options* are listed on the right side of the page, you can edit them."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:60
+#: cbecb42081ca4c7f9d21feb32aa91009
+msgid "*Document Optional Metadata*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:0
+#: 884c082e67a64862b1e44c229e1a0d80
+msgid "If all the mandatory information is filled out the document can be published, if not the ``Completeness`` progress bar warns you that something is missing."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:0
+#: 69998ac9c8de4d55a55114e3944df476
+msgid "Click on the blue button :guilabel:`Update` to save information on the system."
+msgstr ""

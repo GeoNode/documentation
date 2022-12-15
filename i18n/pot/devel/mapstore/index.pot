@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../devel/mapstore/index.rst:2
+#: af34d0ece08c442ca6c2b3dbb1fba118
+msgid "Start MapStore2 client in development mode"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:5
+#: e46281508717443a8d754c8840f83d7b
+msgid "Pre-requisites"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:7
+#: fe694faeb5074939a6230d81a465ef7b
+msgid "You need a running instance of GeoNode somewhere; in this specific example we assume GeoNode is running on ::guilabel:`http://localhost:8000`"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:10
+#: d0e00619ed184de88c757ebf42e6cf2e
+msgid "Install needed packages"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:18
+#: 3c5a082fb1e1496dad9ef852f68227af
+msgid "Prepare the source code"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:25
+#: 89a43ed7394249429af9cfc5e5c58f48
+msgid "Compile MapStore2 Client"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:35
+#: 3da36091d18f49bbb10e89198c779011
+msgid "Edit the file ``env.json``"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:49
+#: aa711c17df1146bda759d656b3ed2165
+msgid "Run MapStore2 in Development mode"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:55
+#: 26574958f5dc4f348ce8e776a643efde
+msgid "Connect to :::guilabel:`http://localhost:8081`"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:57
+#: 5513d773336d49a88074338f1724c1d5
+msgid "This is a ``proxied`` version of GeoNode form MapStore2 client. **To upload new layers user the original GeoNode**."
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:59
+#: 6312a386004e4db3a3c7417f9c879922
+msgid "Everytime you render a map, from GeoNode layers details page or map creation, you will access to the MapStore2 dev mode runnig code."
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:61
+#: 98e140eea79a42eca0be522d8dfbe234
+msgid "You can now update the code on the fly."
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:64
+#: f4a333abb5934219ba78b58e25b11c12
+msgid "Example 1: Disable the PrintPlugin from the Layer Details small map"
+msgstr ""
+
+#: ../../devel/mapstore/index.rst:82
+#: cde9612fe292428ead6aeef07cd59680
+msgid "Example 2: Disable the MousePositionPlugin from the big maps"
+msgstr ""

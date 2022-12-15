@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/managing_documents/document_info.rst:4
+#: 311b9a43777e4cdf869fa5d7059e2f6f
+msgid "Document Information"
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:6
+#: 2363bc85dd4f43c9b5da0e5b51b816a1
+msgid "From the *Documents Search Page* (see :ref:`finding-data`) you can select the document you are interested in and click on its name to see an overview about it."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:11
+#: 9f9f4a729fe944ca85f2ddb3120b5a66
+msgid "You can access the document details page by clicking on *View document* in the overview panel. That page looks like the one shown in the picture below."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:17
+#: b2be1d2b679143dea6b7434ecab730fa
+msgid "*Document Information page*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:19
+#: 3a44bb93e1464dc5883f1bdcba65cd20
+msgid "On the page of a document, the resource is either directly displayed on the page or accessible by clicking on the link provided under the title."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:22
+#: 386d0270df7a4ead92e47ab1e751888a
+msgid "Exploring the Document detail menu Sections"
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:24
+#: f4d3b8077f1d4f3586e9893be8a13cd6
+msgid "The **Info link** section shows the document metadata such as its title, abstract, date of publication etc. The metadata also indicates the user who is responsible for uploading and managing this content, as well as the group to which it is linked."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:29
+#: c36e0337e8be406388e1082be6c77b97
+msgid "The **Share link** provides the document link to share."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:34
+#: 8a19339d791d44d8a1a8fb8924e4fc59
+msgid "*Document Sharing*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:36
+#: 70e5b715371c490f8645f9dd4a77e240
+msgid "If you want to download the document, click on the *Download* link in the menu and the document will be downloaded automatically."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:41
+#: c5ec90bfbf1e46eb935241d7e5e2bf12
+msgid "*Document Metadata download*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:43
+#: ce907e88fbbc4473afcf708514468b53
+msgid "If you want this document in your *Favorites* (see :ref:`editing-profile`), click the **Info link** and click on the start icon."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:48
+#: 43fbe2ff3ee44a29b23dcd286b4e05bc
+msgid "*Favorite document*"
+msgstr ""

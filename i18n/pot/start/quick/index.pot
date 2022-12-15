@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../start/quick/index.rst:2
+#: 82fff2ab42f24a68afc293198105a8dd
+msgid "Quick Installation Guide"
+msgstr ""
+
+#: ../../start/quick/index.rst:5
+#: 798fb9469885415291f0d792d82cad7d
+msgid "Introduction"
+msgstr ""
+
+#: ../../start/quick/index.rst:7
+#: 690302d9823547fe89580c845a9c28c7
+msgid "The following is a quick guide to get started with GeoNode in most common operating systems."
+msgstr ""
+
+#: ../../start/quick/index.rst:9
+#: 70fc5445bd1446edb5b4222566391fd5
+msgid "For a full setup and deployment, please refer to the :doc:`complete installation guides </install/index>`"
+msgstr ""
+
+#: ../../start/quick/index.rst:11
+#: 098ed6215fe5455e9882c48c4c554fc2
+msgid "This is meant to be run on a fresh machine with no previously installed packages or GeoNode versions."
+msgstr ""
+
+#: ../../start/quick/index.rst:13
+#: 3d1ae13212b34d48817a71e4c810ec98
+msgid "The methods presented here are meant to be used for a limited internal demo only. Before exposing your GeoNode instance to a public server, please read carefully the :doc:`hardening guide </advanced/hardening/index>`"
+msgstr ""
+
+#: ../../start/quick/index.rst:17
+#: a1aa4c8a8c794f67a3a4feb2f2612899
+msgid "Recommended Minimum System Requirements"
+msgstr ""
+
+#: ../../start/quick/index.rst:19
+#: 4b99b446d69a48a38ce02802100c88fd
+msgid "A definite specification of technical requirements is difficult to recommend. Accepted performance is highly subjective. Furthermore, the performance depends on factors such as concurrent users, records in the database or the network connectivity of your infrastructure."
+msgstr ""
+
+#: ../../start/quick/index.rst:21
+#: 8d24d1ff9afd493c9a03dfbda0f7fd57
+msgid "For deployment of GeoNode on a single server, the following are the *bare minimum* system requirements:"
+msgstr ""
+
+#: ../../start/quick/index.rst:23
+#: e85bc62137fe4901826f4063645f4f2b
+msgid "8GB of RAM (16GB or more preferred for a production deployment)."
+msgstr ""
+
+#: ../../start/quick/index.rst:24
+#: f619c2228393499e95c6a72bea4ac007
+msgid "2.2GHz processor with 4 cores. (Additional processing power may be required for multiple concurrent styling renderings)"
+msgstr ""
+
+#: ../../start/quick/index.rst:25
+#: e962d59f0e23435d876a1c27efaa33d2
+msgid "30 GB software disk usage (Reserved to OS and source code only)."
+msgstr ""
+
+#: ../../start/quick/index.rst:26
+#: 6f64b663e6d64529b07527919dca6860
+msgid "Additional disk space for any data hosted with GeoNode, data stored on the DataBase and tiles cached with GeoWebCache. For db, spatial data, cached tiles, and \"scratch space\" useful for administration, a decent baseline size for GeoNode deployments is between 50GB and 100GB."
+msgstr ""
+
+#: ../../start/quick/index.rst:28
+#: b70186f63bf143aea08ad44c9e79a58b
+msgid "64-bit hardware **strongly** recommended."
+msgstr ""
+
+#: ../../start/quick/index.rst:31
+#: 2882e1b9faf648648147c71f39afa975
+msgid "OSGEO Live CD"
+msgstr ""
+
+#: ../../start/quick/index.rst:36
+#: 77300399ba0541398db734db006fa8d6
+msgid "`OSGeoLive <http://live.osgeo.org/>`_ is a self-contained bootable DVD, USB thumb drive or Virtual Machine based on Lubuntu, that allows you to try a wide variety of open source geospatial software without installing anything."
+msgstr ""
+
+#: ../../start/quick/index.rst:39
+#: 3969a5d98672416dadfb60d318cd93aa
+msgid "It is composed entirely of free software, allowing it to be freely distributed, duplicated and passed around."
+msgstr ""
+
+#: ../../start/quick/index.rst:41
+#: 5b0019b088d44019a9fa4c6fae24af0f
+msgid "It provides pre-configured applications for a range of geospatial use cases, including storage, publishing, viewing, analysis and manipulation of data."
+msgstr ""
+
+#: ../../start/quick/index.rst:44
+#: a49d38d1889c48d99e397ca59aed3822
+msgid "It also contains sample datasets and documentation."
+msgstr ""
+
+#: ../../start/quick/index.rst:46
+#: d46bb0ad200344a5b8b15776c00ea233
+msgid "To try out the applications, simply:"
+msgstr ""
+
+#: ../../start/quick/index.rst:48
+#: 00debc45faed4a1391dcda5b6dd86541
+msgid "Insert DVD or USB thumb drive in computer or virtual machine."
+msgstr ""
+
+#: ../../start/quick/index.rst:49
+#: 47832386ffe04159a1b8d44583cd1f3b
+msgid "Reboot computer. (verify boot device order if necessary)"
+msgstr ""
+
+#: ../../start/quick/index.rst:50
+#: 52814c8a842f44e6b5b44a15be1c0d5d
+msgid "Press :guilabel:`Enter` to startup & login."
+msgstr ""
+
+#: ../../start/quick/index.rst:51
+#: 7c70895b4f85462d9397c023e54188ae
+msgid "Select and run applications from the :guilabel:`Geospatial` menu."
+msgstr ""
+
+#: ../../start/quick/index.rst:53
+#: 18577cbe323743dd973f31d08d663eec
+msgid "`OSGeoLive <http://live.osgeo.org/>`_ is an `OSGeo Foundation <http://osgeo.org/>`_ project. The `OSGeo Foundation <http://osgeo.org/>`_ is a not-for-profit supporting Geospatial Open Source Software development, promotion and `education <http://www.geoforall.org/>`_."
+msgstr ""
+
+#: ../../start/quick/index.rst:57
+#: 1b100de6022e4953a9f9699565a70c3d
+msgid "Install via Docker"
+msgstr ""
+
+#: ../../start/quick/index.rst:59
+#: 3239133d6c4447fbaf9ea9178f988bde
+msgid "`Docker <https://www.docker.com/>`_ is a free software platform used for packaging software into standardized units for development, shipment and deployment."
+msgstr ""
+
+#: ../../start/quick/index.rst:62
+#: 3c5d8239838d4ca8a3cb1c66aadc025c
+msgid "credits to Docker"
+msgstr ""
+
+#: ../../start/quick/index.rst:65
+#: 94d627e0446e4051b97c569de3816e1d
+msgid "Introducing main concepts"
+msgstr ""
+
+#: ../../start/quick/index.rst:67
+#: c1fb48cf4e71426087870e21809f0f68
+msgid "A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings."
+msgstr ""
+
+#: ../../start/quick/index.rst:69
+#: 1dfee75462354e93916812815b6ed624
+msgid "Docker containers running on a single machine share that machine's operating system kernel; they start instantly and use less compute and RAM."
+msgstr ""
+
+#: ../../start/quick/index.rst:71
+#: ddf3fd9c5fcb43a8bb21b115f937fcd5
+msgid "Containers can share a single kernel, and the only information that needs to be in a container image is the executable and its package dependencies, which never need to be installed on the host system."
+msgstr ""
+
+#: ../../start/quick/index.rst:73
+#: 3afcbe92d40243f1a5f3e90b5adaf439
+msgid "Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space."
+msgstr ""
+
+#: ../../start/quick/index.rst:75
+#: 84d89bc2837b4acf9eb91e1c153854ba
+msgid "The following tutorials will introduce the use of Docker community edition on:"
+msgstr ""
+
+#: ../../start/quick/index.rst:77
+#: 6e07ba1b47d046e29c0398d46bc078f2
+msgid ":ref:`Ubuntu 20.04 <Ubuntu (20.04) Basic Setup>`"
+msgstr ""
+
+#: ../../start/quick/index.rst:79
+#: 7f9349359b25450981fc2981853d3958
+msgid ":ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`"
+msgstr ""

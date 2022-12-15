@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:2
+#: 266d814ab3c64d25b6fa2e19a46a3445
+msgid "Editing Profile Information"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:4
+#: 1217adcef4c44ea99bbb7e58b6afd92a
+msgid "Your *Profile* contains personal information such as your address, your telephone number, your organization and so on but it is empty by default at the beginning."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:6
+#: 2485f087d45a41609043810c36da192a
+msgid "Through the :guilabel:`Edit profile` button of the *Profile* page (see :ref:`editing-profile`) you can set your details, including your avatar."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:11
+#: 5c1c7bcc34fb49ceb3981d0a2d98bd99
+msgid "*Updating Profile information*"
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:13
+#: 5b49cdc704414c61be7aff9bd01dc72a
+msgid "When finished, click :guilabel:`Update profile`. You will be redirected to the *Profile* page."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:14
+#: 29502fb5940948bca5306f49db42a003
+msgid "A message will confirm the profile has been correctly updated."
+msgstr ""
+
+#: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:19
+#: a3407f3c7d454843a6519628d5de6369
+msgid "*Updating Profile correctly finalized*"
+msgstr ""

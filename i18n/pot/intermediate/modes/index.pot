@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../intermediate/modes/index.rst:3
+#: 43b18a3347014d39b7075867edb5982b
+msgid "Read-Only and Maintenance Modes"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:6
+#: 980b1ab313384f84805662c0fc441167
+msgid "Overview"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:8
+#: d45bed8b7fa445aa89241378d3dd36f0
+msgid "GeoNode gives an option to operate in different modes, according to the needs and demands of the certain application system."
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:10
+#: a91a38af259848e68559811fad6ffb91
+msgid "Changing the currently used mode can be done in the admin panel by the user with super-user privileges, by modifying ``Configuration`` singleton model in the ``BASE`` application:"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:16
+#: 223e9688e2af435fb6f80150db6cf43a
+msgid "*Configuration change in the admin panel*"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:19
+#: fbbd31ef70274b80b866a40b87095df1
+msgid "Read-Only Mode"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:21
+#: 556c54cc63004cf5bf1ee1d32e647ec8
+msgid "Activating the Read-Only Mode (by setting ``Read only`` True in the ``Configuration``) activates a middleware rejecting all modifying requests (POST/PUT/DELETE), with an exception for:"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:24
+#: f54a592e2b9a469c8e00b71a8a757ca5
+msgid "POST to login view"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:25
+#: 78dcc8ad3bd74892a15d15f180085c0d
+msgid "POST to logout view"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:26
+#: ../../intermediate/modes/index.rst:42
+#: 825c4d5475794d6d9f6d6da2e416471f
+#: 102c74314c084f97ac83c378df7d1767
+msgid "POST to admin login view"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:27
+#: ../../intermediate/modes/index.rst:43
+#: 4a9e7fe65b234fbc8c55e23570efda7e
+#: c2981e46c2b24e1582ad8afe960833c9
+msgid "POST to admin logout view"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:28
+#: c2cb7ae7cb5f4372b3c46f848663a127
+msgid "all requests to OWS endpoint"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:29
+#: ../../intermediate/modes/index.rst:44
+#: 025101019364467f821ef2c7b8ca8fb0
+#: a866fd30438b4355b7a5683ae537ac38
+msgid "all requests ordered by a super-user"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:31
+#: 636b27d15b0c4fe08a641cfc9d31f9b3
+msgid "Additionally, all UI elements allowing modifying GeoNode's content are hidden, so e.g. the button \"Upload Layer\" is not rendered in the templates."
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:33
+#: ad7bb0a6aa9d4eafbea364c218bf9e71
+msgid "In case a user tries to perform a forbidden request, they will be presented with a static HTML page informing them, the GeoNode is in the Read-Only mode and this action is currently forbidden."
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:37
+#: 1a600bf20de644a08359a447c0b92f4a
+msgid "Maintenance Mode"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:39
+#: 2a445b2412b04c549404d5396199f799
+msgid "Activating the Maintenance Mode (by setting ``Maintenance`` True in the ``Configuration``) activates the highest level middleware (the one executed as the first) rejecting all requests to the GeoNode instance, with an exception for:"
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:46
+#: 47cd7e83836245c18e363fd7313af10c
+msgid "In case a user tries to perform any request against the GeoNode (including GET requests), they will be presented with a static HTML page informing them, the maintenance actions are taken on the GeoNode instance, and asking them to try again soon."
+msgstr ""
+
+#: ../../intermediate/modes/index.rst:49
+#: d0e8befe602744e0955dc912eeb670fc
+msgid "The maintenance mode was implemented with a thought of the backup and restore procedures without a necessity to put down the instance, but at the same time with a restriction of any outer interference."
+msgstr ""

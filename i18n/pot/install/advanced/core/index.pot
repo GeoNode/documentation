@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../../install/advanced/core/index.rst:96
 #: 07f7b7ea42bd4f928f7bb6ec2f2059ee
-msgid "GeoNode 4.0.x is not compatible with Python < 3.7"
+msgid "GeoNode 4.1.x is not compatible with Python < 3.7"
 msgstr ""
 
 #: ../../install/advanced/core/index.rst:101
@@ -1312,7 +1312,7 @@ msgstr ""
 
 #: ../../install/advanced/core/index.rst:2334
 #: 41640c0291ac4e6d96abff312b30bfed
-msgid "GeoNode 4.0.x is **NOT** compatible with GeoServer < 2.19.x"
+msgid "GeoNode 4.1.x is **NOT** compatible with GeoServer < 2.19.x"
 msgstr ""
 
 #: ../../install/advanced/core/index.rst:2338

@@ -125,7 +125,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.0.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
 
 Make an instance out of the ``Django Template``
 
@@ -360,7 +360,7 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.0.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
 
 Make an instance out of the ``Django Template``
 

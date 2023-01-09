@@ -93,7 +93,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Cleanup the packages
   sudo apt update -y; sudo apt autoremove --purge
 
-.. warning:: GeoNode 4.0.x is not compatible with Python < 3.7
+.. warning:: GeoNode 4.1.x is not compatible with Python < 3.7
 
 .. _install_venv:
 
@@ -151,7 +151,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.0.x geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.1.x geonode
 
 .. code-block:: shell
 
@@ -1665,7 +1665,7 @@ Continue installing custom version of python (3.8.5), virtualenv, GeoNode
     EOF
 
     sudo mkdir -p /opt/geonode/; sudo usermod -a -G nginx $USER; sudo chown -Rf $USER:nginx /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
-    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.0.x geonode
+    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.1.x geonode
     source $HOME/.bashrc
     cd /opt/geonode
     pip install -e . --upgrade
@@ -2067,7 +2067,7 @@ Clone the Project
 
   # Clone the GeoNode source code on /opt/geonode
   cd /opt
-  git clone https://github.com/GeoNode/geonode.git -b 4.0.x geonode
+  git clone https://github.com/GeoNode/geonode.git -b 4.1.x geonode
 
 Start the Docker instances on ``localhost``
 
@@ -2331,7 +2331,7 @@ Update the GeoServer instance inside the GeoServer Container
 
   GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x
 
-  GeoNode 4.0.x is **NOT** compatible with GeoServer < 2.19.x
+  GeoNode 4.1.x is **NOT** compatible with GeoServer < 2.19.x
 
 
 Remove all data and bring your running GeoNode deployment to the initial stage

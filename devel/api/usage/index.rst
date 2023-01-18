@@ -239,7 +239,7 @@ Example:
 
 A complete metadata file conforming to ISO-19115 can be uploaded for a dataset.
 
-- API: ``POST /api/v2/datasets/{dataset_id}/metadata``
+- API: ``PUT /api/v2/datasets/{dataset_id}/metadata``
 - Status Code: ``200``
 
 Example:

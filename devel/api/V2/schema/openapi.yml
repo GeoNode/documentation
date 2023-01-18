@@ -430,6 +430,30 @@ paths:
               schema:
                 $ref: '#/components/schemas/PaginatedSimpleMapList'
           description: ''
+  /api/v2/datasets/{id}/metadata/:
+    put:
+      operationId: datasets_metadata_upload
+      description: API endpoint allowing to upload ISO-19115 compliant XML metadata for the dataset.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this dataset.
+        required: true
+      tags:
+      - datasets
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Dataset'
+          description: ''
   /api/v2/documents/:
     get:
       operationId: documents_list

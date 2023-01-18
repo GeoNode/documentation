@@ -235,6 +235,28 @@ Example:
     }
     response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
+3. Metadata
+
+A complete metadata file conforming to ISO-19115 can be uploaded for a dataset.
+
+- API: ``PUT /api/v2/datasets/{dataset_id}/metadata``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "http://localhost:8000/api/v2/datasets/1/metadata"
+    files=[
+            ('metadata_file',('metadata.xml',open('/home/user/metadata.xml','rb'),'text/xml'))
+        ]
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("PUT", url, headers=headers, data={}, files=files)
+
 Tracking dataset upload progress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 When an upload request is executed, GeoNode creates an “upload object” and keeps updating its state and progress (it’s a property attribute, calculated on getting the response) attributes as the resource is being created and configured in Geoserver.

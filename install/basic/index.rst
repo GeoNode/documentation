@@ -118,7 +118,7 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
 
 .. code-block:: shell
 
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.x
+  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
 
   # Ubuntu
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
@@ -655,7 +655,7 @@ The variable ``GEOSERVER_JAVA_OPTS`` allows you to tune-up the GeoServer contain
         -XX:SoftRefLRUPolicyMSPerMB=36000 -XX:-UseGCOverheadLimit -XX:+UseConcMarkSweepGC 
         -XX:+UseParNewGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Djavax.servlet.request.encoding=UTF-8 
         -Djavax.servlet.response.encoding=UTF-8 -Duser.timezone=GMT 
-        -Dorg.geotools.shapefile.datetime=false -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf
+        -Dorg.geotools.shapefile.datetime=false -DGS-SHAPEFILE-CHARSET=UTF-8 -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf
 
 ``-Djava.awt.headless (true)``
 

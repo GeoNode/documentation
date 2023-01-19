@@ -723,12 +723,12 @@ DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION
 
     Whether the uploaded resources should downloadable by default.
 
-    DEFAULT_ANONYMOUS_VIEW_PERMISSION
-    ---------------------------------
+DEFAULT_ANONYMOUS_VIEW_PERMISSION
+---------------------------------
     
-        Default: ``True``
-    
-        Whether the uploaded resources should be public by default.
+    Default: ``True``
+
+    Whether the uploaded resources should be public by default.
 
 DEFAULT_AUTO_FIELD
 ------------------

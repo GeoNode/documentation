@@ -486,7 +486,7 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/logs
 
   # Download and extract the default GEOSERVER_DATA_DIR
-  GS_VERSION=2.20.7
+  GS_VERSION=2.23.0
   sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/$GS_VERSION/geonode-geoserver-ext-web-app-data.zip" -O data-$GS_VERSION.zip
   
   sudo unzip data-$GS_VERSION.zip -d /opt/data/

@@ -134,7 +134,7 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
 
 .. code-block:: shell
 
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
+  git clone https://github.com/GeoNode/geonode-project.git -b master
 
   # Ubuntu
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh

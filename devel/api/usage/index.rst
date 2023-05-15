@@ -211,7 +211,30 @@ Example:
 
 2. Documents
 
-Files can be uploaded as form data.
+Documents can be uploaded as form data.
+
+- API: ``POST /api/v2/documents``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "http://localhost:8000/api/v2/documents"
+    payload={
+        'title': 'An example image'
+    }
+    files=[
+        ('doc_file',('image.jpg',open('/home/myuser/image.jpg','rb'),'image/jpeg'))
+    ]
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+Documents can also be created to reference remote resources. In this case the ``doc_url`` parameter must be used to set the URL of the remote document.
 
 - API: ``POST /api/v2/documents``
 - Status Code: ``200``
@@ -225,15 +248,14 @@ Example:
     url = "http://localhost:8000/api/v2/documents"
     payload={
         'title': 'An example image',
-        'metadata_only': 'True'
+        'doc_url',('http://examples.com/image.jpg'
     }
-    files=[
-        ('doc_file',('image.jpg',open('/home/myuser/image.jpg','rb'),'image/jpeg'))
-    ]
     headers = {
         'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
     }
     response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+Notice that if the URL doesn't end with a valid doc extension, the ``extension`` parameter must be used (e.g. ``extension: 'jpeg'``).
 
 3. Metadata
 

@@ -309,6 +309,14 @@ Example:
     }
     response = requests.request("GET", url, headers=headers)
 
+Overwrite dataset
+^^^^^^^^^^^^^^^^^
+Uploading a resource will create by default a new dataset. This behaviour can be changed by setting the ``overwrite_existing_layer`` parameter to ``True``. 
+In this case the upload procedure will overwrite a resource whose name matches with the new one.
+
+Skip dataset
+^^^^^^^^^^^^
+If the parameter ``skip_existing_layers`` is set to true ``True`` the uplad procedure will ignore files whose name matched with already existing resources.
 
 Dataset Update Metadata 
 -----------------------------

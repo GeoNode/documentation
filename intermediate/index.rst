@@ -16,14 +16,6 @@ Harvesting resources from remote services
 
     harvesting/index
 
-Monitoring
-==========
-
-.. toctree::
-    :maxdepth: 3
-
-    monitoring/index
-
 GeoNode Backup and Restore
 ==========================
 

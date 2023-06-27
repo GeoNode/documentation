@@ -1,6 +1,3 @@
-Quick Installation Guide
-========================
-
 Introduction
 ^^^^^^^^^^^^
 
@@ -27,31 +24,32 @@ For deployment of GeoNode on a single server, the following are the *bare minimu
   For db, spatial data, cached tiles, and "scratch space" useful for administration, a decent baseline size for GeoNode deployments is between 50GB and 100GB.
 * 64-bit hardware **strongly** recommended.
 
-OSGEO Live CD
-^^^^^^^^^^^^^
 
-  .. figure:: img/osgeo_live.png
-        :align: center
-
-`OSGeoLive <http://live.osgeo.org/>`_ is a self-contained bootable DVD, USB thumb drive or Virtual Machine based on Lubuntu, 
-that allows you to try a wide variety of open source geospatial software without installing anything. 
-
-It is composed entirely of free software, allowing it to be freely distributed, duplicated and passed around.
-
-It provides pre-configured applications for a range of geospatial use cases, including storage, publishing, viewing, analysis and 
-manipulation of data.
-
-It also contains sample datasets and documentation.
-
-To try out the applications, simply:
-
-* Insert DVD or USB thumb drive in computer or virtual machine.
-* Reboot computer. (verify boot device order if necessary)
-* Press :guilabel:`Enter` to startup & login.
-* Select and run applications from the :guilabel:`Geospatial` menu.
-
-`OSGeoLive <http://live.osgeo.org/>`_ is an `OSGeo Foundation <http://osgeo.org/>`_ project.
-The `OSGeo Foundation <http://osgeo.org/>`_ is a not-for-profit supporting Geospatial Open Source Software development, promotion and `education <http://www.geoforall.org/>`_.
+.. OSGEO Live CD
+.. ^^^^^^^^^^^^^
+.. 
+..   .. figure:: img/osgeo_live.png
+..         :align: center
+.. 
+.. `OSGeoLive <http://live.osgeo.org/>`_ is a self-contained bootable DVD, USB thumb drive or Virtual Machine based on Lubuntu, 
+.. that allows you to try a wide variety of open source geospatial software without installing anything. 
+.. 
+.. It is composed entirely of free software, allowing it to be freely distributed, duplicated and passed around.
+.. 
+.. It provides pre-configured applications for a range of geospatial use cases, including storage, publishing, viewing, analysis and 
+.. manipulation of data.
+.. 
+.. It also contains sample datasets and documentation.
+.. 
+.. To try out the applications, simply:
+.. 
+.. * Insert DVD or USB thumb drive in computer or virtual machine.
+.. * Reboot computer. (verify boot device order if necessary)
+.. * Press :guilabel:`Enter` to startup & login.
+.. * Select and run applications from the :guilabel:`Geospatial` menu.
+.. 
+.. `OSGeoLive <http://live.osgeo.org/>`_ is an `OSGeo Foundation <http://osgeo.org/>`_ project.
+.. The `OSGeo Foundation <http://osgeo.org/>`_ is a not-for-profit supporting Geospatial Open Source Software development, promotion and `education <http://www.geoforall.org/>`_.
 
 Install via Docker
 ^^^^^^^^^^^^^^^^^^
@@ -61,9 +59,6 @@ Install via Docker
     .. figure:: img/docker.png 
     .. note:: credits to Docker
 
-Introducing main concepts
-.........................
-
 A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.
 
 Docker containers running on a single machine share that machine's operating system kernel; they start instantly and use less compute and RAM. 
@@ -72,8 +67,6 @@ Containers can share a single kernel, and the only information that needs to be 
 
 Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space.
 
-The following tutorials will introduce the use of Docker community edition on:
+This documentation will refer to the usage of Docker on a Ubuntu host, but you can of course run Docker also on other Linux distributions, Windows and Mac.
 
-* :ref:`Ubuntu 20.04 <Ubuntu (20.04) Basic Setup>`
-
-* :ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`
+For the steps to setup Docker on Ubuntu you can jump ahead to :ref:`Ubuntu 20.04 <Ubuntu (20.04) Basic Setup>`

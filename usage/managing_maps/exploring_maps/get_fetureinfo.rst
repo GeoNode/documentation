@@ -85,8 +85,9 @@ By selecting the option :guilabel:`Use a custom template?` as shown in Fig. 9
      *Fig. 9*
 
 You will be able to provide your own custom HTML Template for the Feature Info output.
+Attributes from the dataset can be represented inside the template using ``${properties.ATTRIBUTE}``, where ``ATTRIBUTE`` is the name of an attribute (field) from your dataset.
 
-The example below shows how it is possible to create a nice HTML output with an :guilabel:`image` taking the ``src`` from the attribute :guilabel:`NAME` values, through the use of the keyword ``${properties.NAME}``
+The example below uses the ``wikipedia`` and the ``name`` attributes to show the name of the airport as a link to the Wikipedia page:
 
 .. figure:: img/getfetureinfo_templates_010.png
      :align: center
@@ -97,6 +98,8 @@ The example below shows how it is possible to create a nice HTML output with an 
      :align: center
 
      *Fig. 11*
+
+This is the result shown when you click on an airport
 
 .. figure:: img/getfetureinfo_templates_012.png
      :align: center

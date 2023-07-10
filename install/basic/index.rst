@@ -19,113 +19,24 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 
 #. **Further Production Enhancements**
 
-First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)
+First Step: Deploy GeoNode on a local server
 ======================================================================
 
 .. _Ubuntu (20.04) Basic Setup:
 
-Ubuntu (20.04)
+Ubuntu (22.04)
 ^^^^^^^^^^^^^^
 
-.. note:: Recommended version 20.04 (Focal Fossa). 
-
-Packages Installation
-.....................
-
-First, we are going to install all the **system packages** needed for the GeoNode setup.
-Login to the target machine and execute the following commands:
-
-.. code-block:: shell
-
-  sudo add-apt-repository ppa:ubuntugis/ppa
-  sudo apt update -y
-
-  sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
-  sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
-  sudo apt install -y libxml2 libxml2-dev gettext
-  sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
-  sudo apt install -y software-properties-common build-essential
-  sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-  sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
+.. note:: Recommended version 22.04 (Jammy Jellyfish). 
 
 Docker Setup (First time only)
 ..............................
+We suggest to follow the official documentation to install `Docker <https://docs.docker.com/engine/install/ubuntu/>`_.
 
-.. code-block:: shell
+For Windows users a good option is to install Docker inside `WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`_.
+Another solution that also works for Mac users is using `Docker Desktop <https://docs.docker.com/desktop/>`_.
 
-  # install OS level packages..
-  sudo add-apt-repository universe
-  sudo apt-get update -y
-  sudo apt-get install -y git-core git-buildpackage debhelper devscripts python3.10-dev python3.10-venv virtualenvwrapper
-  sudo apt-get install -y apt-transport-https ca-certificates curl lsb-release gnupg gnupg-agent software-properties-common vim
-
-  # add docker repo and packages...
-  sudo mkdir -p /etc/apt/keyrings
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  sudo chmod a+r /etc/apt/keyrings/docker.gpg
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-  sudo apt-get update -y
-  sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
-  sudo apt autoremove --purge
-
-  # add your user to the docker group...
-  sudo usermod -aG docker ${USER}
-  su ${USER}
-
-Upgrade `docker-compose` to the latest version
-..............................................
-
-.. code-block:: shell
-
-  DESTINATION=$(which docker-compose)
-  sudo apt-get remove docker-compose
-  sudo rm $DESTINATION
-  VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
-  sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION
-  sudo chmod 755 $DESTINATION
-
-.. _CentOS (7.0 +) Basic Setup:
-
-CentOS (7.0 +)
-^^^^^^^^^^^^^^
-
-.. note:: Recommended version 7.0 or higher.
-
-.. warning:: Accordingly to the version you use, the packages installation might be a bit different.
-
-Packages Installation
-.....................
-
-First, we are going to install all the **system packages** needed for the GeoNode setup.
-Login to the target machine and execute the following commands:
-
-.. code-block:: shell
-
-  sudo yum -y install epel-release
-  sudo yum install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
-  sudo yum install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
-  sudo pip3 install -U pip
-  sudo pip3 install -U virtualenv
-  sudo yum install -y libxml2 libxml2-dev gettext
-  sudo yum install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
-  sudo yum install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-
-Docker Setup (First time only)
-..............................
-
-.. code-block:: shell
-
-  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-  sudo yum install docker-ce docker-ce-cli containerd.io
-  sudo systemctl start docker
-
-  sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
-
-  sudo usermod -aG docker ${USER}
-  su ${USER}
+.. include:: ../advanced/core/docker/ubuntu.rst
 
 Create an instance of your ``geonode-project``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -145,15 +56,6 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
   source /home/geonode/dev/.venvs/my_geonode/bin/activate
 
   pip install Django==3.2.13
-
-  # CentOS
-  virtualenv -p python3 my_geonode
-  source my_geonode/bin/activate
-
-  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
-
-  # If the previous command does not work for some reason, try the following one
-  python -m django startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
 Startup the containers
 ^^^^^^^^^^^^^^^^^^^^^^

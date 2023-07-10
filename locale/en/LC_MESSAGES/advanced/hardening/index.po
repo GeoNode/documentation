@@ -8,38 +8,52 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../advanced/hardening/index.rst:4 5bf6d821c5b74424b96001b65675941f
-msgid "Publish on HTTPS"
+#: ../../advanced/hardening/index.rst:4 1796914b6aa24d31b17a79871329fc85
+msgid "Publish on other than HTTP port (for e.g. 8082)"
 msgstr ""
 
-#: ../../advanced/hardening/index.rst:6 ../../advanced/hardening/index.rst:13
-#: ../../advanced/hardening/index.rst:20 860a3681c53a487c9139dc61d51781e9
-#: c6821c2f3fc142f7b7b61936c587acb9 ef23db1a0afe4f04af4fdf2f2d16a72c
-msgid "TBD"
+#: ../../advanced/hardening/index.rst:6 6acc4b65083a4d98b85829dba26e7177
+msgid ""
+"By default geonode will be installed in the port 80 (i.e. HTTP) port. But"
+" what if you want to change the port of the geonode to other than HTTP "
+"port (For this example, I am taking 8082 port)? We need to edit couple of"
+" things in the web configuration. First things is, we need to update the "
+"`/etc/uwsgi/apps-enabled/geonode.ini` file,"
 msgstr ""
 
-#: ../../advanced/hardening/index.rst:11 96f462e1478a4f889eb9ab429df7ea55
-msgid "OAuth2 Fixtures Update and Base URL Migration"
+#: ../../advanced/hardening/index.rst:12 ../../advanced/hardening/index.rst:32
+#: 634b8c49cf934a7c9bf03d6ca92c469a 8ba49d6ab5b54384918be583f654b358
+msgid "Edit the following lines,"
 msgstr ""
 
-#: ../../advanced/hardening/index.rst:18 ed89baa1dd4d4c68a9fa1e46b303f7ad
-msgid "GeoNode Security Subsystem"
+#: ../../advanced/hardening/index.rst:26 369a04f16e434d3fb699e13e8899fc73
+msgid "After that we need to update the `/etc/nginx/sites-enabled/geonode` file,"
 msgstr ""
 
-#: ../../advanced/hardening/index.rst:25 62c3f318691f4086b623202eb620e5f1
-msgid "OAuth2 Tokens and Sessions"
-msgstr ""
+#~ msgid "Publish on HTTPS"
+#~ msgstr ""
 
-#: ../../advanced/hardening/index.rst:27 aadfeeaa30434ed9829ba23a7f5775fa
-msgid "TBD (ref to :ref:`oauth2_admin_panel_access_tokens`)"
-msgstr ""
+#~ msgid "TBD"
+#~ msgstr ""
+
+#~ msgid "OAuth2 Fixtures Update and Base URL Migration"
+#~ msgstr ""
+
+#~ msgid "GeoNode Security Subsystem"
+#~ msgstr ""
+
+#~ msgid "OAuth2 Tokens and Sessions"
+#~ msgstr ""
+
+#~ msgid "TBD (ref to :ref:`oauth2_admin_panel_access_tokens`)"
+#~ msgstr ""
 

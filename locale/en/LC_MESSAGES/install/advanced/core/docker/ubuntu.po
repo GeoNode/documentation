@@ -8,22 +8,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../install/advanced/core/docker/ubuntu.rst:2
-#: 75e53cff1a164f7dae2282d8a0220774
-msgid "1. Install the Docker and docker-compose packages on a Ubuntu host"
+#: dfdad14f059c4c05b908dfc3d1fd33a2
+msgid "1. Install the Docker and docker-compose packages on Ubuntu 22.04"
 msgstr ""
 
 #: ../../install/advanced/core/docker/ubuntu.rst:5
-#: 630d2ee26e4745b6bdc260f414dceb91
+#: 2c6a3886705648b18dd70ba791d6adb8
 msgid "Docker Setup (First time only)"
 msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:6
+#: 94b56a66481a47dab361fb0ee0f9f4e7
+msgid ""
+"The following steps were taken from the official `Docker documentation "
+"<https://docs.docker.com/engine/install/ubuntu/>`_. We invite you to "
+"refer to it for any update."
+msgstr ""
+
+#~ msgid "1. Install the Docker and docker-compose packages on a Ubuntu host"
+#~ msgstr ""
 

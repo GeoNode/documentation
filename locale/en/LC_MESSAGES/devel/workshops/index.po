@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../devel/workshops/index.rst:2 48e240d765e840b18608bb98a67441d8
+#: ../../devel/workshops/index.rst:2 7c5bc2a5f67844bfa6c0f150e6b6dbfb
 msgid "Workshops"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:4 c4621cc6cd8444a9bcfa9c155b242b62
+#: ../../devel/workshops/index.rst:4 95d581509f9846feae857e4adaa64c00
 msgid ""
 "The workshops documentation demonstrates few examples on how to utilize "
 "GeoNode-Project in order to extend/customize GeoNode's functionalities "
@@ -29,85 +29,83 @@ msgid ""
 msgstr ""
 
 #: ../../devel/workshops/index.rst:6 ../../devel/workshops/index.rst:22
-#: 06c31334d06947e6bbd26827dae608a5 8ba819b5ccc34a38926cdbd57743625a
+#: a0d40b8dc99a46d48d7dd6794a8ecf41 e5baec6f48db4bfb91dc67a760dc87d5
 msgid "1- Customize your GeoNode with the geonode-project"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:8 ../../devel/workshops/index.rst:93
-#: 2ffab850f0884efbaada9e6c685658b4 8cec6165c73446d4bff571116944972d
+#: ../../devel/workshops/index.rst:8 ../../devel/workshops/index.rst:88
+#: 634931c85e2049a199715bc838adef51 c1581be2e59d40f0a63317b0d8af4f48
 msgid "2- Customize the look and feel"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:10 4ed0cbf24d734ce7b14a662c36e60b80
+#: ../../devel/workshops/index.rst:10 f2a2a706b14b4643876293c27d1bb17e
 msgid "3- Create your ResourceBase Metadata"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:12 02332b46412f4901bf2e4f31921032e7
+#: ../../devel/workshops/index.rst:12 546f081a44c743e58bd75f782e711d29
 msgid "4- Create your own django app"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:14 8a66ea0800414ddd8099b49d2109881c
+#: ../../devel/workshops/index.rst:14 1cbc78f4cc5d4b28aac9e3b6790fb2cc
 msgid "5- Add a custom model"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:16 b0663f312c9b45479da8a7483d379554
+#: ../../devel/workshops/index.rst:16 efcc693fcbc34d77a90dac321c421d45
 msgid "6- Permissions and APIs"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:18 186c67cdac8c46b5b4b09057e54d21a5
+#: ../../devel/workshops/index.rst:18 734773169c514187abe6e43ac36879a2
 msgid "7- Deploy your GeoNode"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:24 f69cae572ff74ad5a8601ff46cbcae55
+#: ../../devel/workshops/index.rst:24 adb2be9ba7c04d2b98a4aca6e7aab6c5
 msgid ""
 "In this example, GeoNode-Project is cloned to create a template instance "
 "in which the rest of the examples will be building on top of it."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:26 d1a0968285c846abb28b9566f164d1b3
+#: ../../devel/workshops/index.rst:26 b77c18ec05e74724824dabb69fa85fbd
 msgid ""
 "1- Assuming you already installed GeoNode-Core, firstly we need to create"
 " a GeoNode-Project template and this can be achieved from the following "
 "command:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:32 9036e50960ce440d8b7a6e3f58f1dd1f
+#: ../../devel/workshops/index.rst:32 245c76ee6147481483fa104d9f213b2f
 msgid ""
 "Here, django-admin is used with startproject option to create my_geonode "
 "project copying the template which is passed as GeoNode-project Github "
 "repo. It also includes \"py,rst,json,yml,ini,env,sample\" extensions"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:34 1edd32c68094417d9ae834d66ca74fe9
+#: ../../devel/workshops/index.rst:34 928f661c78ff4a5c9fe7bf2aac43f914
 msgid ""
 "2- Once the cloning finished, the next step is to install the GeoNode-"
 "Project we just downloaded as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:41 21eb2d3be4e1494a887198c480e3ee49
+#: ../../devel/workshops/index.rst:41 981280a5ef4446a5a63559802c1121d4
 msgid "3- Install geoserver using paver as follows"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:48 64876efe84174802864ff044317ac4eb
+#: ../../devel/workshops/index.rst:48 7f4ae78d7dfa4a4aabe6b85e9856bd6e
 msgid ""
 "4- Note the GeoNode database connection parameters mentioned in the "
-"local_settings.py configuration file. If not found, copy "
-"local_settings.py.sample and rename it to local_settings.py then use psql"
-" to create the required user and grant the required privileges as "
-"follows:"
+".env.sample.py file. Rename it to .env then use psql to create the "
+"required user and grant the required privileges as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:61 3643efcd04a047079b405865114dd640
+#: ../../devel/workshops/index.rst:61 76bd103f906244ada84d81e4f7b12d38
 msgid ""
 "Don't forget to exit from postgres user before executing the following "
 "commands"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:63 2ad1e43230f941a0b1f2b73f7094fece
+#: ../../devel/workshops/index.rst:63 ba342316b59842fb9483624af788a44a
 msgid "5- Run GeoNode using paver"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:70 bcecb24ac6714a10be579f9732d464b4
+#: ../../devel/workshops/index.rst:70 6005f6d46fe5472393cc235969717528
 msgid ""
 "You may find this warning message: You have 132 unapplied migration(s). "
 "Your project may not work properly until you apply the migrations for "
@@ -116,18 +114,12 @@ msgid ""
 "geonode_client, geonode_themes, groups, guardian, invitations, layers, "
 "maps, mapstore2_adapter, monitoring, oauth2_provider, people, "
 "pinax_notifications, services, sessions, sites, socialaccount, taggit, "
-"tastypie, upload, user_messages. Run 'python manage.py migrate' to apply "
-"them."
+"tastypie, upload, user_messages. Which means you have some sql statements"
+" not executed yet and you need to run the \"migrate\" to sync your "
+"database first then \"paver start\" again as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:73 f9fa428eabe1481cba2f13a3586dd257
-msgid ""
-"Which means you have some sql statements not executed yet and you need to"
-" run the \"migrate\" to sync your database first then \"paver start\" "
-"again as follows:"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:80 fd457f3eacf34ce7a1dc28875dc09163
+#: ../../devel/workshops/index.rst:77 9cddf80a1f3948888e1085778c6818a7
 msgid ""
 "If encountered this message: ``(Invalid HTTP_HOST header: '0.0.0.0:8000'."
 " You may need to add u'0.0.0.0' to ALLOWED_HOSTS)`` It can be fixed in "
@@ -135,7 +127,7 @@ msgid ""
 "['0.0.0.0']`` in settings.py"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:84 ce67db205c074808b9221e4540297c31
+#: ../../devel/workshops/index.rst:79 b1a83df28efe49428dad659ea61f3cdf
 msgid ""
 "6- Once the previous step is done, you can visit 0.0.0.0:8000 to view the"
 " GUI of GeoNode. However, we still don't have an account in order to "
@@ -144,13 +136,13 @@ msgid ""
 "\"admin\" with default password \"admin\""
 msgstr ""
 
-#: ../../devel/workshops/index.rst:87 c51073c5d4ba4708a29c4cf190a7c5d5
+#: ../../devel/workshops/index.rst:82 e99d103cafb24abdb67e283a1c55b752
 msgid ""
 "7- Use the created account to login from the GUI through localhost:8000 "
 "or 0.0.0.0:8000"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:95 e12c9c0d551f40f0841a2ae43b7fab0d
+#: ../../devel/workshops/index.rst:90 42c5d9fb55424ec48b05b8a3667f7adb
 msgid ""
 "In this section we will change the look and feel of GeoNode, in "
 "particular we will do some customization to help understanding how the "
@@ -159,228 +151,161 @@ msgid ""
 "generic GeoNode page."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:97 47d8162e390e42c49906ed19b92eb3ed
+#: ../../devel/workshops/index.rst:92 2dc5aae4a9fa4b828a0b358672d7f5da
 msgid "**Homepage:**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:99 ffe0c3f3feac4aa89fe56cb66d45ff63
+#: ../../devel/workshops/index.rst:94 08cdfd3d462b4326a6e061075b63dff9
 msgid ""
 "The geonode-project provides some predefined templates to change the home"
 " page and the general site content."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:101 1233eb6c9a3246b7963415174af27745
+#: ../../devel/workshops/index.rst:96 88b449183fe94021be7302dd0d64b9b0
 msgid ""
-"In the \"my_geonode/my_geonode/templates\" directory we can edit the "
-"site_index.html."
+"In the \"my_geonode/src/my_geonode/templates/geonode-mapstore-"
+"client/snippets\" directory we can files with similar names as the "
+"geonode-mapstore-client. This way we can override the different parts of "
+"the site eg the header, menu, body content and the footer."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:103 3ac461d4a80845858457f312e317ac51
-msgid ""
-"Try to edit the content of the \"jumbotron\" box in the page, save and "
-"refresh your browser to see the changes."
+#: ../../devel/workshops/index.rst:98 f81d92401c824a45a66443fa53e5b217
+msgid "Create a file name hero.html and add the following."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:107 b26715322ba742caa7daab5229626b63
+#: ../../devel/workshops/index.rst:114 11b29e1d97824ebfb65c2b5cea16dd23
 msgid "**The theme:**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:109 f526619f4b5445ec97c1754be65c60ed
+#: ../../devel/workshops/index.rst:116 7f28d743c1fa4914be2beb0b951c025b
 msgid ""
 "To change the theme of our geonode-project we can act on the "
 "site_base.css file available in the \"my_geonode/my_geonode/static/css\" "
 "folder."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:111 a0beec9dc84f449db5a353c64b1e1401
+#: ../../devel/workshops/index.rst:118 88d959e414c349fe8f0a9932304f3999
 msgid ""
 "The file is empty so we can inspect elements of the home page with the "
 "browser's developer tools and define css rules in there."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:113 b609d833e7174b6b87d34daa348c7445
+#: ../../devel/workshops/index.rst:120 bb98a68126ef4a41a27ae517509e393a
 msgid ""
 "For example, if we want to change the background of the jumbotron, in "
 "this file we can add"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:119 1080bd1c06ca4bda8d37aeedd346ef6d
+#: ../../devel/workshops/index.rst:126 a4529f52697e4334bc2bca7b5ecd051d
 msgid "Then once we refreshed the browser, we should see the change as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:124 464004f0b1b84ee89d8e3c8b3d9d385d
-msgid ""
-"Adding the ``\".home\"`` class is necessary in order to let the rule have"
-" precedence/priority over the GeoNode's one. We can see this by "
-"inspecting the element in the developer console."
-msgstr ""
-
-#: ../../devel/workshops/index.rst:126 6538ee8c5a604b3a92d0c46b380febc1
+#: ../../devel/workshops/index.rst:130 abf2fb8bace54ac8975f1d4cb6f22fe7
 msgid "**The top menu:**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:128 f6cb5487b5cf426ca6bd46b54c405af8
+#: ../../devel/workshops/index.rst:132 c89f37f47ff44503ae28f20362865d1c
 msgid ""
 "Now we can make some changes that will apply to the whole site. We can "
-"add a Geocollections entry in the top menu bar."
+"add an item to both the left and right side of the top menu bar."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:130 bf23d98391f645079e147d3fa01a8dc3
+#: ../../devel/workshops/index.rst:134 523a7e3ba08f4309b6b057f49d6a91ca
 msgid ""
-"Edit the site_base.html file in the templates folder and uncomment the "
-"list item adapting the text as well from:"
+"This can be done by creating a get_menu_json.py under templatetags folder"
+" to override GeoNodes default menu."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:141 49824faa6a7e4e729ac300be3c988c9b
-msgid "To:"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:149 144dfb13c9954623870738619897b9fb
+#: ../../devel/workshops/index.rst:177 ab71dcc8788545f1a1fcf00d5e6efdae
 msgid ""
 "On browser refresh you will see a new entry in the nav bar which is "
 "persistent to the whole site."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:153 11202765444f4b1c9c5d29a883bcd3f5
-msgid "**GeoNode generic page**"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:155 e13af6ab7c2c419ca7148f18e255ada9
-msgid ""
-"As you can see in the templates folder there are only the site_index.html"
-" and the site_base.html files. In order to customize another GeoNode "
-"page, for example the layers list page, you need to recreate the same "
-"folder structure of the GeoNode templates folder and add a file with the "
-"same name."
-msgstr ""
-
-#: ../../devel/workshops/index.rst:157 2d2c6a038fb04d13add5cb898c06aa1d
-msgid ""
-"For the layers list page we can create a directory named \"layers\" "
-"inside the template directory and a file named \"layer_list.html\" inside"
-" layers. The changes made in this file will only affect the layer list "
-"page."
-msgstr ""
-
-#: ../../devel/workshops/index.rst:167 95b316798211428eb0b1b5f05b9c3032
-msgid "For example change in page title to be:"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:173 f7ba222006b846a581963075e76db754
-msgid "then refresh the browser to see the update."
-msgstr ""
-
-#: ../../devel/workshops/index.rst:177 260777d1538c4b84b582ba9d6e894830
+#: ../../devel/workshops/index.rst:181 0a94c700e484408d900d6b90ae0385eb
 msgid "**Modify functionality**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:180 2e14a8bd5c6f4a2984e13cd854bbf081
+#: ../../devel/workshops/index.rst:184 ccc0c51c4067449292a9dc043fab219c
 msgid ""
 "In this section, we will patch the ResourceBase of GeoNode and update the"
 " Templates in order to add one more field to the Metadata Schema."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:182 2ff110277cd14ccbabf4a331f68d78a6
+#: ../../devel/workshops/index.rst:186 69bf52f9762e4ef48457a602ae83fcc2
 msgid ""
 "We will add a DOI field to the ResourceBase model and modify the "
 "Templates in order to show the new field both into the Metadata Wizard "
-"and the Layer Details page."
+"page."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:184 ../../devel/workshops/index.rst:370
-#: ../../devel/workshops/index.rst:423 280d4d9e77d64bab88eee458e1a1a5a6
-#: 758f843480d741b0bcf6cfe678663759 79ac29af1f6d4278a0fcf8585822b776
+#: ../../devel/workshops/index.rst:188 ../../devel/workshops/index.rst:321
+#: ../../devel/workshops/index.rst:376 d869a75d0ba040c8bd48806f6efd9264
+#: f00e9b3db25c43808e9479b0c282809d f17aed6f2fa44e7dbc9001c40abff885
 msgid ""
 "Make sure to be inside \"my_geonode\" directory to execute the following "
 "commands"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:187 55d8b094b67a406aadc252899050e399
+#: ../../devel/workshops/index.rst:191 6b8bf61017e6471689572ce627231fe9
 msgid ""
 "Customizing metadata can be achieved from the model which is defined in "
 "the core at \"geonode/geonode/base/models.py\" as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:242 e5cbead11df14aa5bbc958e250368769
+#: ../../devel/workshops/index.rst:246 d3496156307348a78bfd147889b9bb09
 msgid ""
 "To add fields directly to the ResourceBase Class without actually "
-"modifying it, this can be done from \"my_geonode/my_geonode/apps.py\" "
-"file"
+"modifying it, this can be done from \"my_geonode/src/my_geonode/apps.py\""
+" file"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:244 4f56ee9b8b454e7294ae4b4bb6bfc365
+#: ../../devel/workshops/index.rst:248 9630bb522c6e4621847c7ebbc95cc854
 msgid ""
 "The \"ready\" method is invoked at initialization time and can be "
 "currently used to tweak your app in several ways"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:259 bb33b047ef2e4910b1390708a11ba1fd
+#: ../../devel/workshops/index.rst:263 bb0438ac19ef4a3f9b23b7c68fa15a78
 msgid ""
 "Now we will add the \"patch_resource_base\" method to the AppConfig and "
 "execute it from the ready method as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:293 e2ea225c55ec4f19aac9ec0028597cba
+#: ../../devel/workshops/index.rst:297 18bd308cd90c4e2fa1e92f7f70e56d94
 msgid ""
 "you will need to perform migrations as follows: - Add field doi to "
 "resourcebase"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:296 6f01f369ee114d18bb1aa2b6d8424ad0
-msgid "Once you run python manage.py migrate:"
+#: ../../devel/workshops/index.rst:300 a0ba4de84dbb4a9ebb50a48b8d3f44bc
+msgid "Once you run ``python manage.py migrate``:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:306 1ab543288dba45218f0fb0cb8480e0ad
+#: ../../devel/workshops/index.rst:310 0dfc91bd3117413593e4e817052952a4
 msgid ""
 "Till now, we have patched the DB. however, it is not yet sufficient as we"
 " still need to display the added field."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:308 043057a89653483e815a1e40b0b14981
+#: ../../devel/workshops/index.rst:312 c930b9b5ffc44769a75d858d7561c41c
 msgid ""
 "Let's extend the default templates so that we can show the newly added "
 "field"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:310 ae45642a0b614e9cb40c411b81ed1449
-msgid "**Overriding the Metadata Wizard Template Page**"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:312 4a64bd65121f4cd3aa232f79986a96fd
-msgid ""
-"Similar to what we have done before in the Templates directory, we will "
-"need to create \"layouts\" directory under "
-"\"my_geonode/my_geonode/templates\". This directory will contain a copy "
-"from \"geonode/src/geonode/geonode/layers/templates/layouts/panels.html\""
-" as follows:"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:320 18599bda707a4c9e9df7b159d0e699e1
-msgid "Inside panels.html, we will add a new div with text input as follows:"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:338 8aca64b6230642729d30f426af3079f2
-msgid "In addition, we will override the Layer Detail template page as follows:"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:358 8ce4fad01ed0496b9e339b0e5d0a8132
-msgid ""
-"Now from the layer details page, you can see the DOI metadata entry per "
-"layer"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:364 c0f6c756bc5c44418e42d0aff7ed451c
+#: ../../devel/workshops/index.rst:315 ab9bca4f27a54bbf82a568952fc9c465
 msgid "3- Create your own django app"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:366 162b90ace109494d857185e5702fd990
+#: ../../devel/workshops/index.rst:317 48d47264b8cd4306b95f0550f1d1616b
 msgid ""
 "In this section, we will demonstrate how to create and setup the skeleton"
 " of a custom app using the django facilities. The app will add a "
 "geocollections functionality to our GeoNode."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:368 bcddea15df5749f08fba0e4d3c5d55bb
+#: ../../devel/workshops/index.rst:319 5f5ac565b4eb4e1a91afb731dc446285
 msgid ""
 "The Geocollections app allows to present in a single page, resources and "
 "users grouped by a GeoNode Group. We can assign arbitrary resources to a "
@@ -388,109 +313,105 @@ msgid ""
 "dedicated URL."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:372 190b29a56c1a4f6d952bebe4c0690f4e
+#: ../../devel/workshops/index.rst:323 95907b76d2a54f4a987b09a83e31ecf4
 msgid "Create the django app"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:374 be19751ee8334774bb26066f81ffaf81
+#: ../../devel/workshops/index.rst:325 e08def95f1fe4906bf62358ebefaacb7
 msgid ""
 "Django gives us an handy command to create apps. We already used "
 "startproject to create our geonode-project, now we can use startapp to "
 "create the app."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:376 1a7a138ad3244b968d03a5fe75a89c6d
-msgid "python manage.py startapp geocollections"
-msgstr ""
-
-#: ../../devel/workshops/index.rst:378 127ed90c3aae4751b77d5452160cab75
+#: ../../devel/workshops/index.rst:331 6e12f8c2c7e44933a1e11a4f92433095
 msgid ""
 "This will create a folder named geocollections that contains empty models"
 " and views."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:380 c1955f9666a840ed9899565efc870884
+#: ../../devel/workshops/index.rst:333 a8ac44777b0f42ed9b244ebf10d4165e
 msgid ""
 "We need to add the new app to the INSTALLED_APPS of our project. inside "
-"\"my_geonode/settings.py\" line 54 change:"
+"\"my_geonode/src/my_geonode/settings.py\":"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:387 cef07213bfaf49bf9fa668806c17461b
+#: ../../devel/workshops/index.rst:340 c839614a01e44eb083dff1eac9d2bfa0
 msgid "**Add a custom model**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:389 5d6d540327e44d77804ccea6a5d7f2d7
+#: ../../devel/workshops/index.rst:342 348bd1659bdb42168a70b0dd74e5cba9
 msgid ""
 "In this section, we will add a custom model and the related logic as "
 "follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:391 4eb1f42b188c4f6885091ed5884e55f3
+#: ../../devel/workshops/index.rst:344 f014e1eb8586487d83e13016aa97c7fb
 msgid "Add a new model"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:392 1d37a760a6964ef1af77f8e235b8f8a8
+#: ../../devel/workshops/index.rst:345 c628609f9b7c4102bda2665466b972aa
 msgid "Add urls and views"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:393 5b12bbc50da646469ecaa16ef11156f0
+#: ../../devel/workshops/index.rst:346 545fffbb94b74c5ca700607f364722ef
 msgid "Add admin panel"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:394 cea864feb08e4d0f9849aa1361ee78ca
+#: ../../devel/workshops/index.rst:347 9b923070b8cb49b1a6366f0401b6849d
 msgid "Add the template"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:421 837f0a7d4c894ffdb813663da509b0b3
+#: ../../devel/workshops/index.rst:374 c84ef7f0fadd477cbc0d4b7389d29ae8
 msgid ""
 "At this point we need to ask django to create the database table. Django "
 "since version 1.8 has embedded migrations mechanism and we need to use "
 "them in order to change the state of the db."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:433 243e0a8702c94684bc946260b2c6fb49
+#: ../../devel/workshops/index.rst:386 8b8ae73f6e9a420ab49c1dee2c12f60f
 msgid ""
 "Next we will use django generic view to show the collections detail. Add "
 "the following code in the views.py file:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:450 b8d8c76dd3324f7cb057569b6041982a
+#: ../../devel/workshops/index.rst:403 dd9bb8a9b9d447cab12590e0b7363f93
 msgid "Add url configuration"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:452 ddd08121381d43b8b0b41c9e12a2a878
+#: ../../devel/workshops/index.rst:405 e9b5cdcf1ea34cc2809b3f7467fe7cd4
 msgid ""
 "In order to access the created view we also need url mapping. We can "
 "create a urls.py file containing a url mapping to our generic view:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:471 f1fe4d3620ff4cd2a55353be5f1c0708
+#: ../../devel/workshops/index.rst:424 fe6e35e696be42979e943a94b2ce8e25
 msgid ""
 "We also need to register the app urls in the project urls. So let's "
 "modify the \"my_geonode\" urls.py file adding the following:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:487 fa02963ebade4265be1d3f950f26387f
+#: ../../devel/workshops/index.rst:440 24bed9ddddd64e2e88cf6d8f8bfd08b4
 msgid "**Enable the admin panel**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:489 a5dd20cdaca14d4483c9a7a279ad6dbc
+#: ../../devel/workshops/index.rst:442 2ea60fee3c794e7ab9876d3fbf3454d6
 msgid ""
 "We need a user interface where we can create geocollections. Django makes"
 " this very easy, we just need the admin.py file as follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:508 e23351f3b3464d1f86d2c18afc5c101f
+#: ../../devel/workshops/index.rst:461 14046a08c91345e38e5d18bf82243459
 msgid ""
 "Now we can visit the admin page and create a geocollection from there as "
 "follows:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:512 0fa6c42a5269498ebc040599a8026cb9
+#: ../../devel/workshops/index.rst:465 beffbc3f43da4c9a91eb1ca942f7c7e5
 msgid "**Adding the template**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:514 a028e72f6dab45bd85a47f3691c1c106
+#: ../../devel/workshops/index.rst:467 389115b20cc747138a6625a2b02e3810
 msgid ""
 "Now we need the template where the geocollection detail will be rendered."
 " Let's create a geocollections directory inside the "
@@ -498,33 +419,33 @@ msgid ""
 "geocollection_detail.html:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:537 bc3cd309c846480787290ec618f2ddf9
+#: ../../devel/workshops/index.rst:490 f1982c474ea14f689d870689efa4e76c
 msgid ""
 "To check the results, create a group in the geonode ui interface and load"
 " one or more layers/documents"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:539 31e7a5c4451f48e79a7ef4a46ac65492
+#: ../../devel/workshops/index.rst:492 f91dc95a397d493c9c1ef06f5aa86ddf
 msgid "login into the admin panel -> geocollections and create a geocollections"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:541 d1e87e9f82214253832dc1e5e7bf0114
+#: ../../devel/workshops/index.rst:494 9e4664163eac422895cbc94f9a35139b
 msgid ""
 "Visit http://localhost:8000/geocollections/<the-name-of-the-created-"
 "geocollection> and view the results."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:546 8625155d9d774d6fa8a7493d178c81bc
+#: ../../devel/workshops/index.rst:496 88849f7dd6d347a58da3b89c59b040d0
 msgid ""
-"Now you know how to customize an html template so you can tune this page "
-"as you prefer."
+"Now that you know how to customize an html template, you can tune the "
+"page as you prefer."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:550 e2c00271e8274c4d8011be0d8c388e13
+#: ../../devel/workshops/index.rst:500 7c6e95d3177e47c19602b0f07787b802
 msgid "**Permissions and APIs**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:552 2d84f98f6c1a4c8294ff8698c7f8f7c1
+#: ../../devel/workshops/index.rst:502 78ff2169e48a4706843e7791dbcaeb3f
 msgid ""
 "In this section we will add some more advanced logic like permissions and"
 " APIs. The permissions in GeoNode are managed with django-guardian, a "
@@ -532,50 +453,50 @@ msgid ""
 "level authorization)."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:554 642af511c4f14a48ae31828789b566b4
+#: ../../devel/workshops/index.rst:504 f5d2fcf9f9bc470a898dc859d120a558
 msgid "The APIs are implemented through django-tastypie."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:556 e5bc4bb214184234aec292c0fa0db74c
+#: ../../devel/workshops/index.rst:506 c6e8d6191f0e4686b5a03baffcf4a1f6
 msgid "The topics to be covered include:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:558 c318bc6409dc4e41a0d887b8e97b3cfc
+#: ../../devel/workshops/index.rst:508 431e5bcbe1de4553b350525fed5b78a8
 msgid "Permissions on who can view the geocollection"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:559 0ec5dad632d246868b98fc75c3f13e37
+#: ../../devel/workshops/index.rst:509 1a8d378c6db9415f941442738c03eb73
 msgid ""
 "How to add templated and js to embed a permission ui in our geocollection"
 " detail page"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:560 e572a24cce1f40bfaacb78bd4567d3e3
+#: ../../devel/workshops/index.rst:510 17fae003006f45c1ba78bc7ef4f5c208
 msgid "API to serve json serialized searchable endpoint"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:563 47d01985b41f4234b3901d0e1e6bcde1
+#: ../../devel/workshops/index.rst:513 43afe6573b074e169c5ec928444d1710
 msgid "Permissions logic (permissions objects)"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:565 47234a79cfc545cb99e7e06be4fb08ad
+#: ../../devel/workshops/index.rst:515 59c9404a8ace49038d63fef089154b13
 msgid ""
 "We need to add the permissions object to the database. We can do this by "
 "adding the following meta class to our Geocollection model, guardian will"
 " take care of creating the objects for us."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:578 045ad204a1574023b67e14acc19f1201
+#: ../../devel/workshops/index.rst:528 0129840cc50f41529ca14dd32efefcf9
 msgid ""
 "Then run \"python manage.py makemigrations\" and \"python manage.py "
 "migrate\" to install them"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:580 7a2f4bcf190045fca5ae80608c6492f5
+#: ../../devel/workshops/index.rst:530 ec3fec75d7bb4516ae71eac156b83f3e
 msgid "**Permissions logic (set_default)**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:582 4499a454b6944b7fabc3e0f7c671798e
+#: ../../devel/workshops/index.rst:532 99b6e61309d8419e93feb8eccdaea872
 msgid ""
 "Let's add a method that will be used to set the default permissions on "
 "the Geocollections. We can add this logic to the Geocollection model but "
@@ -583,281 +504,448 @@ msgid ""
 "GeoNode."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:614 21c09bb7f75b44698169c7a81711634b
+#: ../../devel/workshops/index.rst:564 93f7cdc8d58341b4b94e7a7c95e76b83
 msgid "**Permissions logic (methods)**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:616 1f40a878e8aa448b8851931ec6af48a8
+#: ../../devel/workshops/index.rst:566 822f24d42641451c9b0c1eb7510a87c9
 msgid ""
 "Now we need a method to add generic permissions, we want to be able to "
 "assign view permissions to groups and single users. We can add this to "
 "our Geocollection model"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:645 1876e4430edb4f0388b77fe03ea544d7
+#: ../../devel/workshops/index.rst:595 1781eb0b39a94480a9f00eb38adbee73
 msgid "Permissions logic (views.py)"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:647 a7f169bdb18c43c6ae03b78ebae3ed4d
+#: ../../devel/workshops/index.rst:597 17f3c0c3b8cb437bbee89bd5f61128f8
 msgid "We can add now a view to receive and set our permissions, in views.py:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:694 44e233dd0bd743c99b5f6a639947939b
+#: ../../devel/workshops/index.rst:644 471bc4cb34f54bbabfa107cdd3a4291b
 msgid "**Permissions logic (url)**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:696 ae9f14eb02914083981fd6ebccccfb72
+#: ../../devel/workshops/index.rst:646 ae36d20e4649467ea6f7cfdc1810e57e
 msgid "Lastly we need a url to map our client to our view, in urls.py"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:718 5892dcf06cbe4b7aa67f15c4e6c26ab2
+#: ../../devel/workshops/index.rst:668 876d1cc0b971402ab83eb4ab87c5d032
 msgid ""
 "This url will be called with the id of the geocollection, the id will be "
 "passed to the view in order to get the permissions."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:724 cad9d84b13de470c8b237d1d4347f093
+#: ../../devel/workshops/index.rst:674 0ebb3568dd6c4534bc05456ce2c2f727
 msgid ""
 "A note on the client part, the server side logic is just one part "
 "necessary to implement permissions."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:726 ff9e04f74c5544c98ca4f1180192bb80
+#: ../../devel/workshops/index.rst:676 67df3c2a9d50499689f38cc4cff8ada0
 msgid "A checklist of what is necessary:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:728 6780c481d20d4e3d84eabe164983085d
+#: ../../devel/workshops/index.rst:678 4226bc05be884b479f0af5c868dbe143
 msgid ""
 "A template snippet that can be embedded in the geocollection_detail.html,"
 " you can copy and simplify: _permissions_form.html and _permissions.html "
 "(in geonode/templates)"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:730 e1ab3456725d4c59a6fac054e7784e35
+#: ../../devel/workshops/index.rst:680 332ff940cbf845b8b363b199b2184b9c
 msgid ""
 "A javascript file that will collect permissions settings and send them to"
 " the server, you can copy and simplify: _permissions_form_js.html (in "
 "geonode/templates)"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:732 61b03c2d57724c27b0ce6b109cc66057
+#: ../../devel/workshops/index.rst:682 d50298e1ffc641648c34054ebc2bc08b
 msgid "**API**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:734 b46df29efd234e5ea70606aaefef6bda
+#: ../../devel/workshops/index.rst:684 25240457283540799a715ff9951dae18
 msgid ""
 "The GeoNode API system easily allows to plug in new APIs. This section "
 "demonstrates the required steps:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:736 38460d8023c749ee9b9c7f1414d5a1c5
+#: ../../devel/workshops/index.rst:686 a2931d998537494089eecf11aedde972
 msgid "We need first to create an api.py file in our geocollection app."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:769 c95955b8afdd4d5da992eaab15a5a308
+#: ../../devel/workshops/index.rst:719 f8f035529ea2428e9dcddc1ee413f150
 msgid "**API authorization**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:771 f4cc7050fdea4db1b57adef77c741e78
+#: ../../devel/workshops/index.rst:721 4052a6cb42774f618ae3ab6d759f40d8
 msgid ""
 "We want the API to respect our custom permissions, we can easily achieve "
 "this by adding the following to the beginning of api.py:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:796 d37b63137058475da3415ba14ee03cf1
+#: ../../devel/workshops/index.rst:746 baf24ee471434fee83305b4fd3eeb306
 msgid "And this to the GeocollectionResource Meta class:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:802 4acb17f179554504a1a7892235dd4c55
+#: ../../devel/workshops/index.rst:752 9f6122cca274461f9de415db020cfd1f
 msgid "**Add a url for our API**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:804 274b4f9cf14244e3a70ed8da299857a3
+#: ../../devel/workshops/index.rst:754 88577561d23c4150a01ae02c1ea93c37
 msgid ""
 "In order to publish our API we need a url and we want that url to appear "
 "under the GeoNode's /api domain."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:806 269c01708907405f87a545cb3385506f
+#: ../../devel/workshops/index.rst:756 57e0213afa354de2a54b14bfa83e62b2
 msgid "The final url for our API has to be /api/geocollections."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:808 5fc9c393ba3f4377975f5f007ad49c60
+#: ../../devel/workshops/index.rst:758 5c3437684ce94683a303f833245113f4
 msgid ""
 "We can inject the url into the GeoNode API by adding the following lines "
 "to \"my_geonode/urls.py\" file:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:822 e8008dd694ec4642ae5cf71d0ff4c1a4
+#: ../../devel/workshops/index.rst:772 fcc758404d9f47948cc25212351a7e0f
 msgid "And add the following in the urlpatterns:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:828 bfbdb8d5603c4b00a0a7e1d1b5820144
+#: ../../devel/workshops/index.rst:778 77e57c2e6cf54522ad5395dfc1c093d3
 msgid "The final result will be:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:848 03e2153703ed481f86bbabe36b83221d
+#: ../../devel/workshops/index.rst:798 1b8d19b41acc42a1ac21a8d6fc6f40a1
 msgid "Let's test permissions on API"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:850 84fb5c58eb054605a5ed04459b228597
+#: ../../devel/workshops/index.rst:800 cb8d7edf5c1748538ac41ef25dbaa101
 msgid ""
 "We can test the permissions on API by manually set a permission from the "
 "command line and check that the API respects it."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:852 6523427af76a4f7994a0935840ae84e7
+#: ../../devel/workshops/index.rst:802 a6cc8e1576c44563854e329f329495f3
 msgid ""
 "With running ``python manage.py shell`` from inside our \"my_geonode\" "
 "folder, it opens a geonode shell."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:854 e4cfc0c644cd46f5b92df2dd829b1541
+#: ../../devel/workshops/index.rst:804 1489f573e70f42f7a5958db82d7c5d33
 msgid "A perm spec could look like this:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:864 82276abd0d014ceda53e7b2c26093d50
+#: ../../devel/workshops/index.rst:814 edf3806612bf423287fa4301a1bd991c
 msgid "and we can assign the permissions with:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:872 8891b535a9d7456a9b04a7c1fe4e9351
+#: ../../devel/workshops/index.rst:822 e9e4ac77e14c4776be9a71d4c19db10f
 msgid ""
 "our http://localhost:8000/api/geocollections should now list the "
 "geocollection."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:874 a4b322edec1d421590459e50d61cfdb6
+#: ../../devel/workshops/index.rst:824 cac64be618b44e6e8f1bc77d129b69ab
 msgid ""
 "If you remove the 'AnonymousUser' line from perms and assign again the "
 "permissions it will disappear."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:883 7bbbd25b335944ce95d2698a6ba58846
+#: ../../devel/workshops/index.rst:833 b81ceab7ee1b4dca95947002f1d89b37
 msgid "**Deploy your GeoNode**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:886 f6cc65d9cf794788843e3cb91ce0d00b
+#: ../../devel/workshops/index.rst:836 2df6376606284ede8d9de09a06da75fe
 msgid ""
 "So far we demonstrated how to modify, extend and style our GeoNode in dev"
 " mode but now it's time to go on production. In this section we will "
 "clarify how to:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:888 d0833985aef0480c91b0646256589623
+#: ../../devel/workshops/index.rst:838 d2a6af76a24e455993c375a689f6d9f7
 msgid "commit your work on GitHub"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:890 5bda1c755e574822acf850793fd94500
+#: ../../devel/workshops/index.rst:840 ef2a233e9b1048e1827aa7ca9f668451
 msgid "setup your server"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:892 52a47a0af7974dc7959cc363bd23537f
+#: ../../devel/workshops/index.rst:842 c16ac17ec5d14b229aec30c0d8dd29a4
 msgid "setup your GeoNode for production"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:896 71c780b69be34db18bea28ecdca3def5
+#: ../../devel/workshops/index.rst:846 34b4a760c979451eb495b04bc785eb99
 msgid ""
 "Push to GitHub It is always a good practice to keep your code in a remote"
 " repository, GithHub is one of the options and is indeed the most used."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:899 30fcb1c6d49245338d6c4151bd30fee3
+#: ../../devel/workshops/index.rst:849 d1ce9ce33f7844a0a1ab28c240be3ddb
 msgid ""
 "It is assumed that you already have a GitHub account and that you have "
 "git installed and configured with your name and email."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:901 716a59cc1192470989cc66fe3994fad8
+#: ../../devel/workshops/index.rst:851 268008fd2a1c46eeb5cd293849ddbb8e
 msgid ""
 "We will push only the my_geonode folder to GitHub and as we knew earlier,"
 " GeoNode for us is a dependency and we'll just reinstall it as it is on "
 "the server."
 msgstr ""
 
-#: ../../devel/workshops/index.rst:903 dbe36f7993f2453fad14f34491613e00
+#: ../../devel/workshops/index.rst:853 97815107de8a4eb9bf9caec9453c54fe
 msgid "Steps to push your code to GitHub:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:905 fe959d4109954e1a944fbf81b92e838b
+#: ../../devel/workshops/index.rst:855 6b9218f027df4d69b7cdec6958910168
 msgid "Create an empty repository in GitHub and copy it's address"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:907 166d45c86c824715ab20a172a2469a98
+#: ../../devel/workshops/index.rst:857 b8097ce1db5d4df08013acc418314031
 msgid "In my_geonode, run git init to initialize an empty repository"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:909 c3575aeba4854ada9dc087ca485a90be
+#: ../../devel/workshops/index.rst:859 011c0f2a184048838ab6a4c9f88fe512
 msgid ""
 "Add your remote repository address with ``git remote add yourname "
 "yourremoteaddress``"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:911 79e16fd2a17542d192447a3c0fea339a
+#: ../../devel/workshops/index.rst:861 2d2d0a520c124f4ea4680d658bd63f0a
 msgid "edit .gitignore adding all *.pyc files"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:913 1e0bcc242f9c457287604b8ed52a5dc5
+#: ../../devel/workshops/index.rst:863 c74cd2e6d5fd46c28f26b458bf414832
 msgid "``git add *`` to add all content of my_geonode"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:915 40ee684cd2e6450aa5f5f8bfb2d2733b
+#: ../../devel/workshops/index.rst:865 dc988c0e4fa44f5786acc71191095178
 msgid "``git commit -m 'initial import'`` to make the initial commit"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:917 b8e683cc5bf14bff92a7832cf86cf8af
+#: ../../devel/workshops/index.rst:867 3bea05d77ca54c76a16f37a0739fc370
 msgid "``git push yourname master`` to push the code to the GitHub repository"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:920 87f76e42f1fd4685855d4239266f5a93
+#: ../../devel/workshops/index.rst:870 f98bf5ed559146ca86710da975f5080b
 msgid "**Setup the server**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:922 8cef8353fb6b44f6afa13454517b02d6
+#: ../../devel/workshops/index.rst:872 5275dce97eff4a1b8c1827ffeb61562e
 msgid ""
 "There are several options for deploying GeoNode projects on servers. In "
 "this section, we explain how to deploy it on Ubuntu server 18.04 using "
 "system-wide installation"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:924 ee6412fb73b34689b18929286047677e
+#: ../../devel/workshops/index.rst:874 81f3537e26c8476aaa71753264097732
 msgid ""
 "For quick installation, follow the INSTALLING documentation at "
 "http://docs.geonode.org/en/master/install/core/index.html"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:927 b581304592544430ac09fc91fd7b3e61
+#: ../../devel/workshops/index.rst:877 219805ca63534e938047b3f06c9f8442
 msgid "**Setup our my_geonode**"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:929 7b2befc2cafd4734bed72a7dc4398766
+#: ../../devel/workshops/index.rst:879 6468f2f754d54df9b4343c8763125fab
 msgid ""
 "We need now to install the developed \"my_geonode\" project following "
 "these steps:"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:931 41e111e51aa44f7f939d03944ac525c8
+#: ../../devel/workshops/index.rst:881 a564680a87d644adb41ff4718774ec2c
 msgid "git clone from your repository (in the folder of your preference)"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:933 c1d432697214496f94264ed5df8e8d97
+#: ../../devel/workshops/index.rst:883 0d0724c99ac746419c413b10c2a3dbf7
 msgid "``sudo pip install -e my_geonode``"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:935 a5a1ae1fb0764aef86572611d7cfaee9
+#: ../../devel/workshops/index.rst:885 f9f425e367f6418f8591734e7d887f47
 msgid "edit the settings where needed"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:937 fc3fe359462b48a9b0a2f33cf644e6f3
+#: ../../devel/workshops/index.rst:887 a926ef3625f844cf9a28c62e4ad010fa
 msgid ""
 "edit ``/etc/apache2/sites-enabled/geonode.conf`` replacing the wsgi path "
 "to the ``my_geonode/my_geonode/wsgi.py`` file"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:939 ebd90016f1f247598b835b61b24b7fbd
+#: ../../devel/workshops/index.rst:889 0f59a654c1634d5bbf765e135c9c385e
 msgid "add the apache rights to the \"my_geonode\" folder with a directory like"
 msgstr ""
 
-#: ../../devel/workshops/index.rst:948 355ef35ae271457b980d99d0516b78e5
+#: ../../devel/workshops/index.rst:898 80846a8a635446aa8bc432b0649a3e8e
 msgid "Test your server."
 msgstr ""
+
+#~ msgid ""
+#~ "4- Note the GeoNode database connection"
+#~ " parameters mentioned in the "
+#~ "local_settings.py configuration file. If not"
+#~ " found, copy local_settings.py.sample and "
+#~ "rename it to local_settings.py then use"
+#~ " psql to create the required user "
+#~ "and grant the required privileges as "
+#~ "follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You may find this warning message: "
+#~ "You have 132 unapplied migration(s). "
+#~ "Your project may not work properly "
+#~ "until you apply the migrations for "
+#~ "app(s): account, actstream, admin, "
+#~ "agon_ratings, announcements, auth, avatar, "
+#~ "base, contenttypes, dialogos, documents, "
+#~ "favorite, geonode_client, geonode_themes, groups,"
+#~ " guardian, invitations, layers, maps, "
+#~ "mapstore2_adapter, monitoring, oauth2_provider, "
+#~ "people, pinax_notifications, services, sessions, "
+#~ "sites, socialaccount, taggit, tastypie, "
+#~ "upload, user_messages. Run 'python manage.py"
+#~ " migrate' to apply them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Which means you have some sql "
+#~ "statements not executed yet and you "
+#~ "need to run the \"migrate\" to "
+#~ "sync your database first then \"paver"
+#~ " start\" again as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the \"my_geonode/my_geonode/templates\" directory"
+#~ " we can edit the site_index.html."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Try to edit the content of the "
+#~ "\"jumbotron\" box in the page, save "
+#~ "and refresh your browser to see "
+#~ "the changes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Adding the ``\".home\"`` class is "
+#~ "necessary in order to let the rule"
+#~ " have precedence/priority over the "
+#~ "GeoNode's one. We can see this by"
+#~ " inspecting the element in the "
+#~ "developer console."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now we can make some changes that"
+#~ " will apply to the whole site. "
+#~ "We can add a Geocollections entry "
+#~ "in the top menu bar."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edit the site_base.html file in the "
+#~ "templates folder and uncomment the list"
+#~ " item adapting the text as well "
+#~ "from:"
+#~ msgstr ""
+
+#~ msgid "To:"
+#~ msgstr ""
+
+#~ msgid "**GeoNode generic page**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see in the templates"
+#~ " folder there are only the "
+#~ "site_index.html and the site_base.html files."
+#~ " In order to customize another "
+#~ "GeoNode page, for example the layers "
+#~ "list page, you need to recreate "
+#~ "the same folder structure of the "
+#~ "GeoNode templates folder and add a "
+#~ "file with the same name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For the layers list page we can"
+#~ " create a directory named \"layers\" "
+#~ "inside the template directory and a "
+#~ "file named \"layer_list.html\" inside layers."
+#~ " The changes made in this file "
+#~ "will only affect the layer list "
+#~ "page."
+#~ msgstr ""
+
+#~ msgid "For example change in page title to be:"
+#~ msgstr ""
+
+#~ msgid "then refresh the browser to see the update."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We will add a DOI field to "
+#~ "the ResourceBase model and modify the"
+#~ " Templates in order to show the "
+#~ "new field both into the Metadata "
+#~ "Wizard and the Layer Details page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To add fields directly to the "
+#~ "ResourceBase Class without actually modifying"
+#~ " it, this can be done from "
+#~ "\"my_geonode/my_geonode/apps.py\" file"
+#~ msgstr ""
+
+#~ msgid "Once you run python manage.py migrate:"
+#~ msgstr ""
+
+#~ msgid "**Overriding the Metadata Wizard Template Page**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Similar to what we have done "
+#~ "before in the Templates directory, we"
+#~ " will need to create \"layouts\" "
+#~ "directory under \"my_geonode/my_geonode/templates\". "
+#~ "This directory will contain a copy "
+#~ "from "
+#~ "\"geonode/src/geonode/geonode/layers/templates/layouts/panels.html\""
+#~ " as follows:"
+#~ msgstr ""
+
+#~ msgid "Inside panels.html, we will add a new div with text input as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In addition, we will override the "
+#~ "Layer Detail template page as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now from the layer details page, "
+#~ "you can see the DOI metadata entry"
+#~ " per layer"
+#~ msgstr ""
+
+#~ msgid "python manage.py startapp geocollections"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We need to add the new app "
+#~ "to the INSTALLED_APPS of our project."
+#~ " inside \"my_geonode/settings.py\" line 54 "
+#~ "change:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now you know how to customize an"
+#~ " html template so you can tune "
+#~ "this page as you prefer."
+#~ msgstr ""
 

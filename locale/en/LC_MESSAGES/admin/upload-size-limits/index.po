@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../admin/upload-size-limits/index.rst:5 18b8e03cfb2147a3ab819705bc597a83
+msgid "Upload Size Limits"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:7 553991c60046408d982adf78d3868de5
+msgid "Default: ``104857600`` (100 MB in total bytes)"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:9 ec6afa697ebd4164ad9f05225d731154
+msgid ""
+"When `uploading datasets "
+"<../../usage/managing_datasets/uploading_datasets.html#datasets-"
+"uploading>`__ or `uploading documents "
+"<../../usage/managing_documents/uploading_documents.html#uploading-"
+"documents>`__, the total size of the uploaded files is verified."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:16 62d661c801e94f23860c958bfc7482ae
+msgid ""
+"If it passes a limit value, you will get something similar to the "
+"following error:"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:18 04318b38e96f4461a43ecb61d603aa8e
+msgid ""
+"With the following message: ``Total upload size exceeds 100.0 MB. Please "
+"try again with smaller files.``"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:20 9dd0a1d94eb34630a27805791664f202
+msgid ""
+"This means that the file you tried to upload is too large. It consider "
+"the sum of sizes in the case of datasets/layers with multiple files (ESRI"
+" Shapefile). The default maximum value is set during installation by "
+"`DEFAULT_MAX_UPLOAD_SIZE <../../basic/settings/index.html#default-max-"
+"upload-size>`__, usually 100 MB."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:23 5f3554adc4c745e0a970e695bdb1b969
+msgid ""
+"After installation, only an user with administrative rights can change it"
+" by the admin painel or `accessing by api "
+"<../../devel/api/V2/index.html#get--api-v2-upload-size-limits->`__."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:27 d51e139f5b80497087f1d7997b6e2742
+msgid "Accessing the limits in the admin panel"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:28 2c584f0cab44408eabca1ee98b314ecf
+msgid ""
+"Access the admin panel, scroll until you find the \"Upload Size limits\" "
+"option."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:33 be2b71802e6746ad8f404ecefe0a5d4d
+msgid "Click at it, and you will be redirected to the limits list."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:38 f45429e0f19849cdb225b4dd475d90ad
+msgid "We have two limits here, one for datasets/layers and other for documents."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:41 ab1042b4be1547ac82f04d3b11b99352
+msgid "Changing a Limit"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:43 90d63e4cf21c46c38b5bac8fea32a9c7
+msgid "To change it, click at the slug of one of the limits."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:48 2ea089d77d184de784a0cde443c32951
+msgid ""
+"You can change its description and the max_size value. Changing the slug "
+"will not produce any effect."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:50 f3cddcabd833457793471a6b84b8b6f6
+msgid ""
+"Max size value should be entered in bytes, this means that 200 MB is "
+"around 200000000 bytes, or 200 * 1024 * 1024 = 209715200 if you want to "
+"use exact values. After editing, remember to save and verify in the list "
+"if the value is the expected one."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:53 dcfe51d63def48a1a5a697d2d87635c0
+msgid ""
+"If you try to upload a dataset/layer larger than 100 MB again (but "
+"smaller than the new limit) it won't raise any errors."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:56 5118576c42214a3e984cb80969153072
+msgid "Advanced notes for developers"
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:58 4d375c9817bb4f73a3c5dd033f599446
+msgid ""
+"When uploading a file there is an additional validation step, to avoid "
+"the creation of big temporary files. This happens with the use of a "
+"custom `File Upload Handler "
+"<https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-"
+"FILE_UPLOAD_HANDLERS>`__."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:61 f757de98a9ea4318bbd7f9daeb2c9328
+msgid ""
+"During this step we verify the total size of the request, if it's "
+"considerably bigger than the defined limit, an empty file with a fake "
+"large number set as its size is created when processing the request. "
+"Later, during the form validation, the related error will be raised."
+msgstr ""
+
+#: ../../admin/upload-size-limits/index.rst:64 2ab571350e0b40a68ca1669ccdda9fc8
+msgid ""
+"The threshould for this to happen is set to ``2 * MAX_UPLOAD_SIZE + 2 "
+"MB`` where MAX_UPLOAD_SIZE is the Upload Size Limit defined by the admin "
+"user. When changing the processes related to the upload size limiting, "
+"the upload handlers should also be taken into account. Otherwise, this "
+"can lead to the creating of empty datasets and documents."
+msgstr ""
+

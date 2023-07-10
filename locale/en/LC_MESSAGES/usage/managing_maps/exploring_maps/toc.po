@@ -8,248 +8,348 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 17:42+0100\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:4
-#: d2a4a57c41554a3486fd9f28643c76c9
+#: 601a6ef4ce2d4815bc8befc0979c245e
 msgid "Table of Contents (TOC)"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:6
-#: 2ba95416b51943d6bf6e86d1ed837f10
+#: 9f780f29dd5d41b283002a5d498fd33f
 msgid ""
 "In the upper left corner, click on |toc_button| to open the *Table Of "
 "Contents*, briefly *TOC* from now on, of the map. The *TOC* shows all the"
-" layers involved with the *Map* and allows to manage their properties and"
-" representations on the map."
+" datasets involved with the *Map* and allows to manage their properties "
+"and representations on the map."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:9
-#: 164e550550824df4adb33615a189ab08 3a7aa9468b974768b7a4e9bb8db0ff6e
-msgid "toc_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:14
-#: 156fd808630c46cf9acf877915cae087 3e2a43c3ac5a4979b0524660b5934092
-msgid "hide_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:19
-#: 1734c7cca8694f72951dac5ba5b8eb86 84c6ac8aba534864822d34ec9556737f
-msgid "show_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:28
-#: d2ff4753fad649bcb714a58ef0d611fd
+#: ../../usage/managing_maps/exploring_maps/toc.rst:13
+#: 39a6b9580dd94439b4e5fc8275c8c1d0
 msgid "*The Table Of Contents (TOC)*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:30
-#: 43929a9bdded4fc197fc851d00dcfb4b
+#: ../../usage/managing_maps/exploring_maps/toc.rst:15
+#: 8319cdc110ba4b3faf14e5454d118cc0
 msgid "From the *TOC* you can:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:32
-#: e7279076af6649ee89a2bd2280e302b9
-msgid "manage the layers *Overlap*;"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:17
+#: 14cf731461664ce2bd75de71e6915d48
+msgid "manage the datasets *Overlap*;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:33
-#: 140b9143509b48db939ab305db5055f8
-msgid "filter the layers list by typing text in the *Filter Layers* field;"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:18
+#: cbc1aa6f0db344c3b23f94e712376a73
+msgid "filter the datasets list by typing text in the *Filter Datasets* field;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:34
-#: 06cfaa2fb5a04794b99b680c07c18849
+#: ../../usage/managing_maps/exploring_maps/toc.rst:19
+#: fe0c0de41def4a7fb7d5d4dfd8a8da42
 msgid ""
-"add new layers from the *Catalog* by clicking the :guilabel:`Add Layer` "
-"button;"
+"add new datasets from the *Catalog* by clicking the :guilabel:`Add "
+"Dataset` button;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:35
-#: 87a4af86a3c040d6910a1070a716e062
+#: ../../usage/managing_maps/exploring_maps/toc.rst:20
+#: 70e189175a474af9a2e5911ce16dd85b
 msgid ""
-"manage the layers properties such as *Opacity* (scroll the opacity "
-"cursor), *Visibility* (click on |hide_button| to make the layer not "
+"manage the datasets properties such as *Opacity* (scroll the opacity "
+"cursor), *Visibility* (click on |hide_button| to make the dataset not "
 "visible, click on |show_button| to show it on map);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:36
-#: 8de2ea87e45741d9a2fb5f2b7a08d26d
-msgid "manage the *Layer Settings*, see the next paragraph."
+#: ../../usage/managing_maps/exploring_maps/toc.rst:21
+#: 3580ae36196740c98cf8ba98cbecbc4f
+msgid "manage the *Dataset Settings*, see the next paragraph."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:42
-#: 4cf233cea04d49679123e7cf62af9b34
-msgid "*Scrolling the Layer Opacity*"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:27
+#: bd436824d27b4f99abedf86594190058
+msgid "*Scrolling the Dataset Opacity*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:44
-#: 74eddcdeaee54df08706193cabfa80b8
+#: ../../usage/managing_maps/exploring_maps/toc.rst:29
+#: 7448066e9db7409cb0dfa3a744748b6f
 msgid ""
-"Select a *Layer* from the list and click on it, the *Layer Toolbar* "
+"Select a *Dataset* from the list and click on it, the *Dataset Toolbar* "
 "should appear in the *TOC*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:50
-#: 303c8cc67d7f47138d98bdea64e6820f
-msgid "*The Layer Toolbar*"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:35
+#: a87c24a6ce434927bdf1626e89e52f4a
+msgid "*The Dataset Toolbar*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:52
-#: 0287a54353e64e2689e03946a895259e cf6e71bb25c149a587dd07268eafaa07
-msgid "zoom_to_layer_extent_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:57
-#: 11688d432a644f228b31dbf6318c9842 813c78bfa18848a3aaf1ebbe002c6837
-msgid "layer_settings_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:62
-#: 3d0613a2cda849ef8a87601acf5d5b87 7c4dd79cedfe45c599cd249a9c71a6c7
-msgid "attribute_table_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:67
-#: 18827eb419c64fefb6a6a559cc9cbd90 c16ff23cec804c7eb0ebafd63b4433cd
-msgid "delete_layer_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:72
-#: 098f05289fa64663bf4dbd1a35f16d05 36d84548dd5b4c80acce2005040b6f35
-msgid "create_widgets_button"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:77
-#: 470f790bfebf493eb7d54238d720d066
+#: ../../usage/managing_maps/exploring_maps/toc.rst:38
+#: 2257e0392d5f438082254047299b1714
 msgid "The *Toolbar* shows you many buttons:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:79
-#: e1e671b56a5b46e3b623ecff4b62c06f
-msgid "|zoom_to_layer_extent_button| allows you to zoom to the layer extent;"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:40
+#: 5cf8be3f35f04b05a8a8846c2cc041d3
+msgid "|zoom_to_dataset_extent_button| allows you to zoom to the dataset extent;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:80
-#: 58d06c26a33a4990bc4f0a4a3397296f
+#: ../../usage/managing_maps/exploring_maps/toc.rst:41
+#: 841eda5b011543ccab8c9e533c357392
 msgid ""
-"|layer_settings_button| drives you through the layer settings "
+"|dataset_settings_button| drives you through the dataset settings "
 "customization (see the next paragraph);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:81
-#: 0ddd7e0e672d458d92b18ccaa2b6e176
+#: ../../usage/managing_maps/exploring_maps/toc.rst:42
+#: 424fdef3c63a46feb29aac1065da8c20
 msgid ""
-"|attribute_table_button| to explore the features of the layer and their "
-"attributes (more information at :ref:`attributes-table`);"
+"|attribute_table_button| to explore the features of the dataset and their"
+" attributes (more information at :ref:`attributes-table`);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:82
-#: 21d0e49785d94cd18b6fb225fcf344ba
+#: ../../usage/managing_maps/exploring_maps/toc.rst:43
+#: f88dca453e3848aab5adc4926ab8d423
 msgid ""
-"|delete_layer_button| to delete layers (click on :guilabel:`Delete Layer`"
-" to confirm your choice);"
+"|delete_dataset_button| to delete datasets (click on :guilabel:`Delete "
+"Dataset` to confirm your choice);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:87
-#: 3524da44bb8e4396b15812f0ff329f16
-msgid "*Deleting Layers*"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:48
+#: 1bf8e7090dd544ffab1cfa85dbc1637c
+msgid "*Deleting Datasets*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:89
-#: 3dfe2df22c604f0199aca33c8d601a2a
+#: ../../usage/managing_maps/exploring_maps/toc.rst:50
+#: 90ab317a3635413f8ef4d153f2c3b077
 msgid "|create_widgets_button| to create *Widgets* (see :ref:`creating-widgets`)."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:92
-#: d7f99ecac3024fffb69c82da058acb5e
-msgid "Managing Layer Settings"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:53
+#: 4e5ea617a1c84d968d1a2cf480b5b71a
+msgid "Managing Dataset Settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:94
-#: dad552b2eed043d19f7aee95cc48dc88
-msgid "The *Layer Settings* panel looks like the one below."
+#: ../../usage/managing_maps/exploring_maps/toc.rst:55
+#: d69b431bda4c419a92e7579b29bbc72a
+msgid "The *Dataset Settings* panel looks like the one below."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:100
-#: 37d76cacfa0744a4a74b2996d2ae4363
-msgid "*The Layer Settings Panel*"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:61
+#: a30f670e9e434f968a93ababa9f86beb
+msgid "*The Dataset Settings Panel*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:102
-#: 2f4a4ac631884e2c87c960a4a5e96ca6
-msgid "The *Layer Settings* are divided in three groups:"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:63
+#: 51e15503ead54d9f9307dd2b3ae22a49
+msgid "The *Dataset Settings* are divided in three groups:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:104
-#: 9a3a606e32fd405d841011585119fc86
+#: ../../usage/managing_maps/exploring_maps/toc.rst:65
+#: 4b43fee641ca409abaaaed433e35f0ae
 msgid "*General* settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:105
-#: 60b3dd1ad74c4a7d8370d444e6a16308
+#: ../../usage/managing_maps/exploring_maps/toc.rst:66
+#: a6a8fe2b40694465b01d62376a047d08
 msgid "*Display* settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:106
-#: c07945f9d1d94e578df17c5e763a3ff4
+#: ../../usage/managing_maps/exploring_maps/toc.rst:67
+#: ed8c002510024572aebb99396389a89e
 msgid "*Style* settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:108
-#: 4c0032ea9292415aa306e10a2cb829b8
+#: ../../usage/managing_maps/exploring_maps/toc.rst:69
+#: 3c7e2cd00bd847298100003f723019b0
 msgid ""
 "In the **General** tab of the *Settings Panel* you can customize the "
-"layer *Title*, insert a *Description* and change/create the *Layer "
+"dataset *Title*, insert a *Description* and change/create the *Dataset "
 "Group*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:110
-#: 474bacbc60594b74b86d32c92ff433dc
+#: ../../usage/managing_maps/exploring_maps/toc.rst:71
+#: 5bc341c37bd847e19a466730874032c0
 msgid ""
-"Click on the **Display** tab to see what are the layer appearance "
+"Click on the **Display** tab to see what are the dataset appearance "
 "properties you can configure."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:116
-#: d5e713bca67f41198b2ff0ffd401ae54
-msgid "*The Layer Display Settings Panel*"
+#: ../../usage/managing_maps/exploring_maps/toc.rst:77
+#: 342219e0a25241c6b2582f2a541e51d1
+msgid "*The Dataset Display Settings Panel*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:118
-#: f0e280ba4a8c48a788b1b78fa48b4e1b
+#: ../../usage/managing_maps/exploring_maps/toc.rst:79
+#: 1ed3fff082704939aab4f859c545f8c3
 msgid ""
 "The *Format* field allows you to change the output format of the WMS "
 "requests."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:119
-#: 9f5bacbbdc754859a60d0aca4f01bd62
+#: ../../usage/managing_maps/exploring_maps/toc.rst:80
+#: 2adb1c23b9064112a994c29a64369c0e
 msgid ""
 "You can set a numeric value of *Opacity* using the corresponding input "
 "field."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:120
-#: 5f1673d5e8904acc9854889f376b4e15
+#: ../../usage/managing_maps/exploring_maps/toc.rst:81
+#: c1248da039aa4d409a70c33cb1fcf1e6
 msgid ""
-"You can also set the layer as *Transparent*, decide to *Use cache "
+"You can also set the dataset as *Transparent*, decide to *Use cache "
 "options* and to use *Single Tile*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:122
-#: d01211691fc5488b84272b63f5f16842
+#: ../../usage/managing_maps/exploring_maps/toc.rst:83
+#: c10aebdaf3a84796a59f876f6715bb99
 msgid ""
 "The third tab is the **Style** one. By clicking on it, an advanced *Style"
 " Editor* allows you to create new styles and to modify or delete an "
-"existing one. See the :ref:`layer-style` section to read more."
+"existing one. See the :ref:`dataset-style` section to read more."
 msgstr ""
+
+#~ msgid ""
+#~ "In the upper left corner, click on"
+#~ " |toc_button| to open the *Table Of"
+#~ " Contents*, briefly *TOC* from now "
+#~ "on, of the map. The *TOC* shows"
+#~ " all the layers involved with the "
+#~ "*Map* and allows to manage their "
+#~ "properties and representations on the "
+#~ "map."
+#~ msgstr ""
+
+#~ msgid "toc_button"
+#~ msgstr ""
+
+#~ msgid "hide_button"
+#~ msgstr ""
+
+#~ msgid "show_button"
+#~ msgstr ""
+
+#~ msgid "manage the layers *Overlap*;"
+#~ msgstr ""
+
+#~ msgid "filter the layers list by typing text in the *Filter Layers* field;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "add new layers from the *Catalog* "
+#~ "by clicking the :guilabel:`Add Layer` "
+#~ "button;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "manage the layers properties such as "
+#~ "*Opacity* (scroll the opacity cursor), "
+#~ "*Visibility* (click on |hide_button| to "
+#~ "make the layer not visible, click "
+#~ "on |show_button| to show it on "
+#~ "map);"
+#~ msgstr ""
+
+#~ msgid "manage the *Layer Settings*, see the next paragraph."
+#~ msgstr ""
+
+#~ msgid "*Scrolling the Layer Opacity*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select a *Layer* from the list and"
+#~ " click on it, the *Layer Toolbar* "
+#~ "should appear in the *TOC*."
+#~ msgstr ""
+
+#~ msgid "*The Layer Toolbar*"
+#~ msgstr ""
+
+#~ msgid "zoom_to_layer_extent_button"
+#~ msgstr ""
+
+#~ msgid "layer_settings_button"
+#~ msgstr ""
+
+#~ msgid "attribute_table_button"
+#~ msgstr ""
+
+#~ msgid "delete_layer_button"
+#~ msgstr ""
+
+#~ msgid "create_widgets_button"
+#~ msgstr ""
+
+#~ msgid "|zoom_to_layer_extent_button| allows you to zoom to the layer extent;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|layer_settings_button| drives you through the"
+#~ " layer settings customization (see the "
+#~ "next paragraph);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|attribute_table_button| to explore the "
+#~ "features of the layer and their "
+#~ "attributes (more information at :ref"
+#~ ":`attributes-table`);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|delete_layer_button| to delete layers (click"
+#~ " on :guilabel:`Delete Layer` to confirm "
+#~ "your choice);"
+#~ msgstr ""
+
+#~ msgid "*Deleting Layers*"
+#~ msgstr ""
+
+#~ msgid "Managing Layer Settings"
+#~ msgstr ""
+
+#~ msgid "The *Layer Settings* panel looks like the one below."
+#~ msgstr ""
+
+#~ msgid "*The Layer Settings Panel*"
+#~ msgstr ""
+
+#~ msgid "The *Layer Settings* are divided in three groups:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the **General** tab of the "
+#~ "*Settings Panel* you can customize the"
+#~ " layer *Title*, insert a *Description* "
+#~ "and change/create the *Layer Group*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the **Display** tab to "
+#~ "see what are the layer appearance "
+#~ "properties you can configure."
+#~ msgstr ""
+
+#~ msgid "*The Layer Display Settings Panel*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can also set the layer as "
+#~ "*Transparent*, decide to *Use cache "
+#~ "options* and to use *Single Tile*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The third tab is the **Style** "
+#~ "one. By clicking on it, an "
+#~ "advanced *Style Editor* allows you to"
+#~ " create new styles and to modify "
+#~ "or delete an existing one. See the"
+#~ " :ref:`layer-style` section to read "
+#~ "more."
+#~ msgstr ""
 

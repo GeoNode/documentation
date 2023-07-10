@@ -8,155 +8,195 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 17:42+0100\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../usage/managing_maps/creating_maps.rst:4
-#: 4786f4b003d347fbbae698e064b6ab0a
+#: 54dfe6ac2b9546758491f989b7947738
 msgid "Creating Maps"
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:6
-#: dcd0d37a46c1463cae7cc012e98c5245
+#: 806b1b63fc5e4be19ee899a9a1242c83
 msgid ""
-"In this section, we’ll create a *Map* using some uploaded layers, combine"
-" them with some other layers from remote web services, and then share the"
-" resulting map for public viewing."
+"In this section, we’ll create a *Map* using some uploaded datasets, "
+"combine them with some other datasets from remote web services, and then "
+"share the resulting map for public viewing."
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:8
-#: 3bb88331f3f84e549cca4d55a8fe68e8
+#: cf92aa6d38a742ca820c7f96fa96249b
 msgid "In order to create new maps you can use:"
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:10
-#: ef23b5a820f7424cbbc76cdb59245143
-msgid "the :guilabel:`Create Map` link of the *Maps* menu in the navigation bar"
+#: a43a8445c8854cc79efdbbd40629a4ec
+msgid ""
+"The :guilabel:`Create map` listed after clicking the :guilabel:`Create "
+"new` link on the menu above the resources list page."
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:15
-#: d701fedac04e43b2a8d91ba60a5e3ece
+#: 101b8968bd434138bd7de0761b0e4c4e
 msgid "*The Create Map link*"
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:17
-#: d67c5dd6d7a246e1a270530e820a98cf
+#: 93b2864b9c254b3eadcc4e08ec4da858
 msgid ""
-"the :guilabel:`Create Map` button in the *Layer Page* (it creates a map "
-"using a specific layer)"
+"The :guilabel:`Create map` link in the *Dataset Page* (it creates a map "
+"using a specific dataset)"
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:22
-#: 1b7bdd03f57443c38358871e79f1b787
-msgid "*The Create Map button*"
+#: 13d0e4ca9344488f81d4620da689d56e
+msgid "*The Create map link from dataset*"
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:24
-#: 496cea6c9c69486da0cc3a3e982ac94f
-msgid "the :guilabel:`Create New Map` button in the *Explore Maps* page"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:29
-#: efa40c6ff1624b76822b83ad612619ff
-msgid "*The Create New Map button*"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:31
-#: d25b88c2faa24a48bb7e62ddebc91879
+#: cbaccdc373a74f4d856a97d7bada6747
 msgid ""
 "The new *Map* will open in a *Map Viewer* like the one in the picture "
 "below."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:36
-#: cef3f569d17a433a981da08a77e70552
+#: ../../usage/managing_maps/creating_maps.rst:29
+#: c473ae3fd55d4e5c9764b6140d207dcb
 msgid "*The Map Viewer*"
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:38
-#: 265d03e5d243478f82db63d54c3f699d ef0624403b2846169fb3ce7601398800
-msgid "toc_button"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:43
-#: 048937a01367480597cb14b2f6199935 1eec2d302eec456596438aba5fe4da41
-msgid "burger_menu_button"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:48
-#: 0467dd27be5346738fdd34480f2c934f 5e2929567ffa4edd8e1ea682b54e3447
-msgid "show_button"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:53
-#: 4389d0c1b5ff48e1a44f7af2a464f9fe a1a386b94659444590a2094f8c5427f0
-msgid "hide_button"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:58
-#: 3bbb611595484d9193821910c48cbbf1 80d3e60c6bdc4bfbb056cfc022c45217
-msgid "zoom_to_layer_extent_button"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:63
-#: 551a8e6fe10a4a3ca5160691e8cd3777 8fd69e7c913a41199a9e5dd4512fcc20
-msgid "layer_settings_button"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:68
-#: 0051274ec3a945fdbf64cb3f5e4ca5be
+#: ../../usage/managing_maps/creating_maps.rst:32
+#: 713b736b681c41e4b1fc007e5bba4fbc
 msgid ""
 "In the upper left corner the |toc_button| button opens the :ref:`toc` of "
-"the *Map*. It allows to manage all the layers associated with the map and"
-" to add new ones from the *Catalog*."
+"the *Map*. It allows to manage all the datasets associated with the map "
+"and to add new ones from the *Catalog*."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:69
-#: e66c79689f854bb7b32f1abe37c5d407
+#: ../../usage/managing_maps/creating_maps.rst:33
+#: 78615b1c3d6f43be95eac2b3eaab880d
 msgid ""
-"The *TOC* component makes possible to manage layers overlap on the map by"
-" shifting their relative positions in the list (drag and drop them up or "
-"down in the list)."
+"The *TOC* component makes possible to manage datasets overlap on the map "
+"by shifting their relative positions in the list (drag and drop them up "
+"or down in the list)."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:70
-#: f0214b87df0c4e85babd54c5bdd69ed8
+#: ../../usage/managing_maps/creating_maps.rst:34
+#: 7ac152c873e34822a632958d9d99c06c
 msgid ""
-"It also allows to hide/show layers ( |show_button| and |hide_button| ), "
-"to zoom to layers extents ( |zoom_to_layer_extent_button| ) and to manage"
-" their properties ( |layer_settings_button| )."
+"It also allows to hide/show datasets ( |show_button| and |hide_button| ),"
+" to zoom to datasets extents ( |zoom_to_dataset_extent_button| ) and to "
+"manage their properties ( |dataset_settings_button| )."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:71
-#: 95f466d1c59f48bfa059cfd712f04f60
+#: ../../usage/managing_maps/creating_maps.rst:35
+#: a3cdc725b4dd4876a0a8f0833bf9c349
 msgid ""
-"Once the map layers have been settled it is possible to save the *Map* by"
-" clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
+"Once the map datasets have been settled it is possible to save the *Map* "
+"by clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:76
-#: b4760abbcaf24445b558e171bfca0912
-msgid "*Creating new Maps*"
-msgstr ""
-
-#: ../../usage/managing_maps/creating_maps.rst:78
-#: 3ec17a31f3b0413b8e86e6daf5db506e
+#: ../../usage/managing_maps/creating_maps.rst:38
+#: b97366cc8fa74621abb67c6c9243125b
 msgid ""
 "If you followed the steps above, you have just created your first *Map*. "
 "Now you should see it in the *Explore Maps* page, see :ref:`map-info` for"
 " further details."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:81
-#: eb86e0d1cc334d36b66cfc1ba450c372
+#: ../../usage/managing_maps/creating_maps.rst:41
+#: 8ab6ada82efe40e28e8ec0858a5f31cb
 msgid ""
 "We will take a closer look at the *Map Viewer* tools in the :ref"
 ":`exploring-maps` section."
 msgstr ""
+
+#~ msgid ""
+#~ "In this section, we’ll create a "
+#~ "*Map* using some uploaded layers, "
+#~ "combine them with some other layers "
+#~ "from remote web services, and then "
+#~ "share the resulting map for public "
+#~ "viewing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the :guilabel:`Create Map` link of the"
+#~ " *Maps* menu in the navigation bar"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the :guilabel:`Create Map` button in the"
+#~ " *Layer Page* (it creates a map "
+#~ "using a specific layer)"
+#~ msgstr ""
+
+#~ msgid "*The Create Map button*"
+#~ msgstr ""
+
+#~ msgid "the :guilabel:`Create New Map` button in the *Explore Maps* page"
+#~ msgstr ""
+
+#~ msgid "*The Create New Map button*"
+#~ msgstr ""
+
+#~ msgid "toc_button"
+#~ msgstr ""
+
+#~ msgid "burger_menu_button"
+#~ msgstr ""
+
+#~ msgid "show_button"
+#~ msgstr ""
+
+#~ msgid "hide_button"
+#~ msgstr ""
+
+#~ msgid "zoom_to_layer_extent_button"
+#~ msgstr ""
+
+#~ msgid "layer_settings_button"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the upper left corner the "
+#~ "|toc_button| button opens the :ref:`toc` "
+#~ "of the *Map*. It allows to manage"
+#~ " all the layers associated with the"
+#~ " map and to add new ones from"
+#~ " the *Catalog*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *TOC* component makes possible to"
+#~ " manage layers overlap on the map "
+#~ "by shifting their relative positions in"
+#~ " the list (drag and drop them "
+#~ "up or down in the list)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It also allows to hide/show layers "
+#~ "( |show_button| and |hide_button| ), to"
+#~ " zoom to layers extents ( "
+#~ "|zoom_to_layer_extent_button| ) and to manage"
+#~ " their properties ( |layer_settings_button| "
+#~ ")."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once the map layers have been "
+#~ "settled it is possible to save the"
+#~ " *Map* by clicking on |burger_menu_button|"
+#~ " and choosing :guilabel:`Save as`."
+#~ msgstr ""
+
+#~ msgid "*Creating new Maps*"
+#~ msgstr ""
 

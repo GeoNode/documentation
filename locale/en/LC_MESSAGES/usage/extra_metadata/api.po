@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../usage/extra_metadata/api.rst:5 8bd91e7c24494ad6afa883f1096b6266
+msgid "Rest API"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:7 d781ee7dd7194ffa97cd86793cae30f3
+msgid ""
+"The `api/v2/resources` endpoint provide different ways to handle the "
+"metadata."
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:9 12accb4b691b4eaca8517731d0cfa52b
+msgid "**GET:**"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:11 a6f857d847d441a0af9ae0d51ce4de1b
+msgid "Get the metadata list of the selected resource"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:30 7ab24eb0431f4f4da7e2791d3a49ebea
+msgid "**POST:**"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:32 ffca541ece2a40b8965ddc2cb427b38a
+msgid "Adding new metadata to the resource"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:59 5712f5f9b5544e579a49ac0e2489e6f7
+msgid "**PUT:**"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:61 b457121b73a7413981f1034616ea6ba4
+msgid ""
+"Update specific metadata for the selected resource. In this case the "
+"metadata **ID** is required to perform the update"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:91 0d0b4a795b9b4b55abd9525c3a478315
+msgid "**DELETE:**"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:93 f026333890654bafb014d5c9e423e6ae
+msgid "Delete the metadata for a given resource by *ID*."
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:112 d17ff6e91bb2489cbd5ee0f4ec3f9717
+msgid "**API search**"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:114 38776c58aa5943e09fd674635bb60603
+msgid ""
+"Is possible to search for resources with specific metadata. This feature "
+"is available for both API v1 and API v2"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:116 3a821c61ad054d098740b149ac273fc8
+msgid "APIv1:"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:118 edbcfc52462642d2963d1b3af09c538a
+msgid ""
+"To perform the search is enough to add as query parameters the field of "
+"the metadata payload."
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:120 0831cfe25d3244e4bc662f5a08398ba6
+msgid ""
+"Assuming that the payload is the same as the example above, the URL could"
+" be something like the following:"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:122 29b9efa8d34c49d69041c13d65c3fcb4
+msgid "`http://host/api/base/?metadata__field_category=bike`"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:124
+#: ../../usage/extra_metadata/api.rst:135 351891725789411fb9c4271d20b3296a
+#: dc1eb3c84b4e4da99fafc8d76eeabfc0
+msgid ""
+"In this way, we can retrieve all the resources that have at least 1 "
+"metadata with the `field_category = 'bike'`"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:127 ce952bd828bc4f8a94b87eaccb94e775
+msgid "APIv2"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:129 9e9c53e653134fb2a28214eaddd3f10b
+msgid ""
+"For the API v2 is a bit different since the library doesnt have a support"
+" for the JSON field."
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:131 0bf300211eb647cea62c9cb5d83afffe
+msgid ""
+"To reproduce the same search above, we need to call a URL like the "
+"following one:"
+msgstr ""
+
+#: ../../usage/extra_metadata/api.rst:133 dd191c0574ea491982371b3e55ba86af
+#, python-format
+msgid "`http://localhost:8000/api/v2/resources?filter{metadata.metadata.icontains}=%22field_category%22:%20%22bike%22`"
+msgstr ""
+

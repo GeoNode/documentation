@@ -8,30 +8,31 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../intermediate/index.rst:20 ../../intermediate/index.rst:22
-#: 248335c715b54dcebcca271c1fc377f8 45e2f9ee9e274bdabff33b63dad431c0
+#: 03701a52870b46daa4760429478a70db 14fbf0719e53415ca5f690e4f5c12f75
 msgid "GeoNode Backup and Restore"
 msgstr ""
 
-#: ../../intermediate/index.rst:30 ../../intermediate/index.rst:32
-#: 1ba2ee49ac3e43d3a9fbcf743aef3c44 988d3bd7b16b4b1089e653a9099d1993
-msgid "Viewer and Hooksets"
-msgstr ""
-
-#: ../../intermediate/index.rst:4 1c2e16a55d2e483699dc92c1bce0be9f
+#: ../../intermediate/index.rst:4 22dedc63eac4494bbc40934aa3fc10a0
 msgid "Read-Only and Maintenance Mode"
 msgstr ""
 
-#: ../../intermediate/index.rst:12 cefca44596794455ba286fbe5a44acb8
-msgid "Monitoring"
+#: ../../intermediate/index.rst:12 a5836e03ac734a5db31ddd5184fd13a1
+msgid "Harvesting resources from remote services"
 msgstr ""
+
+#~ msgid "Viewer and Hooksets"
+#~ msgstr ""
+
+#~ msgid "Monitoring"
+#~ msgstr ""
 

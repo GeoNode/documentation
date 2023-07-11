@@ -26,6 +26,5 @@ Usually the datasets features should have some *Attributes* that enrich the amou
 
     *New Dataset creation from scratch*
 
-At this time you can also change the default *Share options* settings, see :ref:`dataset-permissions` to learn how.
 
 Once the form has been filled out, click on :guilabel:`Create`. You will be redirected to the *Dataset Page* (see :ref:`dataset-info`). Now your Dataset is created but is still empty, no features have been added yet. See the :ref:`dataset-editing` section to learn how to add new features.

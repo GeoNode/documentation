@@ -39,3 +39,36 @@ You can edit the metadata of your document as described in the :ref:`document-me
     *Editing Metadata*
 
 In the example shown in the picture above, the information inside the red rectangles have been changed. To save the changes click on :guilabel:`Update`, you will be redirected to the document page.
+
+Editing the Document Info
+-----------------------------
+
+You can edit the information of your document by clicking on the :guilabel:`Edit` link, then :guilabel:`Edit Info`.
+
+From the Info panel, it is possible to upload the **Thumbnail** of the document.
+
+.. figure:: img/upload_thumbnail.png
+    :align: center
+
+    *Upload Thumbnail*
+
+If you want this document in your **Favorites** (see :ref:`editing-profile`), click on the start icon.
+
+.. figure:: img/favorite_document.png
+    :align: center
+
+    *Favorite document*
+
+You can directly **Download** the document and **Share** the document url by clicking the buttons on the top-right of the panel.
+
+.. figure:: img/download_share_document.png
+    :align: center
+
+    *Share and Download document*
+
+By clicking the document **Title**, you can change it.
+
+.. figure:: img/title_document.png
+    :align: center
+
+    *Document Title*

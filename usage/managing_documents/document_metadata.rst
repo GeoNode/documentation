@@ -16,7 +16,6 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
 1. On the **Basic Metadata** page, the essential information that has to be filled is:
 
   * The *Title* of the document, which should be clear and understandable;
-  * The *Resources* the document should be linked to;
   * An *Abstract* on the document;
   * The *Creation/Publication/Revision* dates which define the time period that is covered by the document;
   * The *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word. Key-words should be relevant to the imported document;

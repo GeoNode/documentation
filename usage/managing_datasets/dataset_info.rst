@@ -15,7 +15,7 @@ Dataset Information
 
 Dataset Info
 -------------
-When you click the *Info* link in the menu, a new page will be opened on right.
+As soon as a dataset is opened, the information panel is shown on right and it reports
 
 * The *Info* tab is active by default. This tab section shows some dataset metadata such as its title, the abstract, date of publication etc. The metadata also indicates the dataset owner, what are the topic categories the dataset belongs to and which regions are affected.
 
@@ -31,4 +31,22 @@ When you click the *Info* link in the menu, a new page will be opened on right.
 
     *Dataset Attributes tab*
 
-* If you want this dataset in your *Favorites* (see :ref:`editing-profile`), You can click on star icon near the datset name.
+From the right toolbar on the **Info** panel it is possible:
+
+.. figure:: img/dataset_info_toolbar.png
+    :align: center
+
+    *Dataset Info toolbar*
+
+* Add dataset in your *Favorites* (see :ref:`editing-profile`), clicking on star icon.
+
+* Directly *Download* the dataset oh `ShapeFile` format
+
+* *Share* the document url
+
+* Copy the *WMS Capabilities url* 
+
+* Change the document *Title* by clicking on it
+
+
+

@@ -15,10 +15,10 @@ At the top of the *Map* there are more menu items which we are are going to expl
 
      *The Map Options Menu*
 
-Printing a Map
+Printing a map
 --------------
 
-| The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer of GeoNode allows you to print your map with a customizable layout.
+| The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer of GeoNode allows you to print the current view with a customizable layout.
 | Click the :guilabel:`Print` option from the *Menu*, the **Printing Window** will open.
 
 .. figure:: img/printing_window.png
@@ -30,6 +30,10 @@ From this window you can:
 
 * enter *Title* and *Description*;
 * choose the *Resolution* in dpi;
+* select the format
+* select the coordinate
+* add the scale
+* add grid with label
 * customize the *Layout*
 
   + the *Sheet size* (A3, A4);
@@ -47,13 +51,13 @@ From this window you can:
   + the *Icon Size*;
   + the *Legend Resolution* in dpi.
 
-To print the map click on :guilabel:`Print`.
+To print the view click on :guilabel:`Print`.
 
-The Datasets Catalog
+Add dataset
 ------------------
 
 All the datasets available in GeoNode, both uploaded and remote, can be loaded on the map through the *Catalog*.
-Click on the :guilabel:`Catalog` option of the *Menu* to take a look at the catalog panel.
+Click on the :guilabel:`Add dataset` option of the *Menu* to take a look at the catalog panel.
 
 .. figure:: img/datasets_catalog.png
      :align: center
@@ -61,7 +65,7 @@ Click on the :guilabel:`Catalog` option of the *Menu* to take a look at the cata
      *The Datasets Catalog*
 
 You can navigate through datasets and look at their *Thumbnail* images, *Title*, *Description* and *Abstract*.
-Click on :guilabel:`Add To Map` to load a dataset into the map, it will be also visible in the :ref:`toc`.
+Click on a dataset to load it into the map, it will be also visible in the :ref:`toc`.
 
 Performing Measurements
 -----------------------
@@ -80,6 +84,37 @@ As you can see in the picture below, this tool allows you to measure *Distances*
      :align: center
 
      *Measuring Areas*
+
+Add an Annotation
+------------
+Click on the :guilabel:`Annotations` option of the *Menu* to enrich the map with special features which expose additional information, mark particular position on the map and so on.
+
+.. figure:: img/add_annoations.png
+     :align: center
+
+     *Annotations panel*
+
+.. |add_annotations_button| image:: img/add_annotations_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+To begin, from the annotation panel, the editor can open the new annotation panel by selecting the |add_annotations_button| button.
+
+.. figure:: img/add_an_annotations.png
+     :align: center
+
+     *Add an Annotations*
+
+From here the editor can insert a *Title*, a *Description* and choose between five different types of *Geometries*:
+
+1. *Marker*
+2. *Line*
+3. *Polygon*
+4. *Text*
+5. *Circle* 
+
+See the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/annotations/>`_ for more information.
 
 Saving a map
 ------------

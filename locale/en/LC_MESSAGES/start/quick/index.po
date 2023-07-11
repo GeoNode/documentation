@@ -8,42 +8,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../start/quick/index.rst:2 1b1745ea36da43e7808f1c846b85058a
-msgid "Quick Installation Guide"
-msgstr ""
-
-#: ../../start/quick/index.rst:5 5f3050680018485d8ce0d61c7eabedae
+#: ../../start/quick/index.rst:2 af7945965e0e45739ec8f8bacd5615af
 msgid "Introduction"
 msgstr ""
 
-#: ../../start/quick/index.rst:7 d0070a1c7dda4bfcb91c38bef7deb552
+#: ../../start/quick/index.rst:4 14e89a815135429caf25b75c7d6d8caf
 msgid ""
 "The following is a quick guide to get started with GeoNode in most common"
 " operating systems."
 msgstr ""
 
-#: ../../start/quick/index.rst:9 10e7fe86fe7f45548a1f0b7666f63aaf
+#: ../../start/quick/index.rst:6 a655670f16614572a1df20bfa5b6a822
 msgid ""
 "For a full setup and deployment, please refer to the :doc:`complete "
 "installation guides </install/index>`"
 msgstr ""
 
-#: ../../start/quick/index.rst:11 e1b5e328a4c346c5857cc0e23df37b09
+#: ../../start/quick/index.rst:8 4f59166433854d629f9126f380d275f9
 msgid ""
 "This is meant to be run on a fresh machine with no previously installed "
 "packages or GeoNode versions."
 msgstr ""
 
-#: ../../start/quick/index.rst:13 fe9f26c10b244187b88ffced74c5aad1
+#: ../../start/quick/index.rst:10 05ec36ebbb654270badb37737f728796
 msgid ""
 "The methods presented here are meant to be used for a limited internal "
 "demo only. Before exposing your GeoNode instance to a public server, "
@@ -51,11 +47,11 @@ msgid ""
 "</advanced/hardening/index>`"
 msgstr ""
 
-#: ../../start/quick/index.rst:17 36867398603045db8392acc8887199b9
+#: ../../start/quick/index.rst:14 b1bf9c272a35430082fff47b219bffea
 msgid "Recommended Minimum System Requirements"
 msgstr ""
 
-#: ../../start/quick/index.rst:19 2c62b84341f44d84b44c1ff3f5d558e1
+#: ../../start/quick/index.rst:16 3ae60f9974784744a401b53ca8b72fdf
 msgid ""
 "A definite specification of technical requirements is difficult to "
 "recommend. Accepted performance is highly subjective. Furthermore, the "
@@ -63,27 +59,27 @@ msgid ""
 "database or the network connectivity of your infrastructure."
 msgstr ""
 
-#: ../../start/quick/index.rst:21 c4a12d3b495446d3b690515f355fb0f1
+#: ../../start/quick/index.rst:18 5a764fb6e2d441f9b5fd4df5aacdfef2
 msgid ""
 "For deployment of GeoNode on a single server, the following are the *bare"
 " minimum* system requirements:"
 msgstr ""
 
-#: ../../start/quick/index.rst:23 3bd3112bb3b44076a92fc44f5367435c
+#: ../../start/quick/index.rst:20 4cf8bbcf2f054df5a6e32bbf477c6fc1
 msgid "8GB of RAM (16GB or more preferred for a production deployment)."
 msgstr ""
 
-#: ../../start/quick/index.rst:24 2ca2f688ad2c4aaf83c83d8c2f7f7249
+#: ../../start/quick/index.rst:21 dbb402e4aa014194bc883e274270c673
 msgid ""
 "2.2GHz processor with 4 cores. (Additional processing power may be "
 "required for multiple concurrent styling renderings)"
 msgstr ""
 
-#: ../../start/quick/index.rst:25 e618c44df3014cc6bd51265a5fb71326
+#: ../../start/quick/index.rst:22 cc2e302300c24eb0a9397250e240f317
 msgid "30 GB software disk usage (Reserved to OS and source code only)."
 msgstr ""
 
-#: ../../start/quick/index.rst:26 46ffb583573f40e3a7c5f813ae6d6814
+#: ../../start/quick/index.rst:23 b85b19de706f4e24ada96df9b94e45a8
 msgid ""
 "Additional disk space for any data hosted with GeoNode, data stored on "
 "the DataBase and tiles cached with GeoWebCache. For db, spatial data, "
@@ -91,125 +87,134 @@ msgid ""
 "baseline size for GeoNode deployments is between 50GB and 100GB."
 msgstr ""
 
-#: ../../start/quick/index.rst:28 54167aeb01574d95ba4f4f60b7e3cd6d
+#: ../../start/quick/index.rst:25 8b9c11f90f05400986a59d0480473fbb
 msgid "64-bit hardware **strongly** recommended."
 msgstr ""
 
-#: ../../start/quick/index.rst:31 bee806fe419f489b87e58f857ff09116
-msgid "OSGEO Live CD"
-msgstr ""
-
-#: ../../start/quick/index.rst:36 78741026fb7d4a418d34d4891a572757
-msgid ""
-"`OSGeoLive <http://live.osgeo.org/>`_ is a self-contained bootable DVD, "
-"USB thumb drive or Virtual Machine based on Lubuntu, that allows you to "
-"try a wide variety of open source geospatial software without installing "
-"anything."
-msgstr ""
-
-#: ../../start/quick/index.rst:39 7e819a6242974139a7c0081b631c11b3
-msgid ""
-"It is composed entirely of free software, allowing it to be freely "
-"distributed, duplicated and passed around."
-msgstr ""
-
-#: ../../start/quick/index.rst:41 f8038840165a4d1a847812006bf6dc7e
-msgid ""
-"It provides pre-configured applications for a range of geospatial use "
-"cases, including storage, publishing, viewing, analysis and manipulation "
-"of data."
-msgstr ""
-
-#: ../../start/quick/index.rst:44 2975469e39194f4e9e5e1dd588b0bb03
-msgid "It also contains sample datasets and documentation."
-msgstr ""
-
-#: ../../start/quick/index.rst:46 6d10e82043d54d8680346340f92d49c1
-msgid "To try out the applications, simply:"
-msgstr ""
-
-#: ../../start/quick/index.rst:48 4236d9c139ba42af91dcb355d83ece01
-msgid "Insert DVD or USB thumb drive in computer or virtual machine."
-msgstr ""
-
-#: ../../start/quick/index.rst:49 ee69cec5617a4a98b120be92ca40543e
-msgid "Reboot computer. (verify boot device order if necessary)"
-msgstr ""
-
-#: ../../start/quick/index.rst:50 9322dad8c811452bb12ff6887b12780d
-msgid "Press :guilabel:`Enter` to startup & login."
-msgstr ""
-
-#: ../../start/quick/index.rst:51 6e6fe692869549d094c407228ded0744
-msgid "Select and run applications from the :guilabel:`Geospatial` menu."
-msgstr ""
-
-#: ../../start/quick/index.rst:53 a419a39c96254bc89fa8dde0dfc49d00
-msgid ""
-"`OSGeoLive <http://live.osgeo.org/>`_ is an `OSGeo Foundation "
-"<http://osgeo.org/>`_ project. The `OSGeo Foundation "
-"<http://osgeo.org/>`_ is a not-for-profit supporting Geospatial Open "
-"Source Software development, promotion and `education "
-"<http://www.geoforall.org/>`_."
-msgstr ""
-
-#: ../../start/quick/index.rst:57 d4a7b5ca1f2441fe9ff8e88c963c554c
+#: ../../start/quick/index.rst:55 d99e9a2f764c486b919f33ad7d5fe47f
 msgid "Install via Docker"
 msgstr ""
 
-#: ../../start/quick/index.rst:59 f32b7b06acb648b7b9e9eb47ee92e33a
+#: ../../start/quick/index.rst:57 031be50414d8445a90a147b32b2feb55
 msgid ""
 "`Docker <https://www.docker.com/>`_ is a free software platform used for "
 "packaging software into standardized units for development, shipment and "
 "deployment."
 msgstr ""
 
-#: ../../start/quick/index.rst:62 24399dfaf5c8416fb063800618791245
+#: ../../start/quick/index.rst:60 2266c3e4ec6b43e4b18c528d2487905b
 msgid "credits to Docker"
 msgstr ""
 
-#: ../../start/quick/index.rst:65 4dffe69431a44a4298fd78eda7490831
-msgid "Introducing main concepts"
-msgstr ""
-
-#: ../../start/quick/index.rst:67 e39b4f0e14b847a6af1853ee7775f1f8
+#: ../../start/quick/index.rst:62 0ad7939646db40b98862f332ff13457a
 msgid ""
 "A container image is a lightweight, stand-alone, executable package of a "
 "piece of software that includes everything needed to run it: code, "
 "runtime, system tools, system libraries, settings."
 msgstr ""
 
-#: ../../start/quick/index.rst:69 b14db441bb9a4a54b0c58f87b854c7b9
+#: ../../start/quick/index.rst:64 9c8b8c417b924845ad4db66ed0582a25
 msgid ""
 "Docker containers running on a single machine share that machine's "
 "operating system kernel; they start instantly and use less compute and "
 "RAM."
 msgstr ""
 
-#: ../../start/quick/index.rst:71 5d13b4a73a474be3857da001b0116f56
+#: ../../start/quick/index.rst:66 f219a4259bb24d3c9e6342b30a0970c9
 msgid ""
 "Containers can share a single kernel, and the only information that needs"
 " to be in a container image is the executable and its package "
 "dependencies, which never need to be installed on the host system."
 msgstr ""
 
-#: ../../start/quick/index.rst:73 0593ae3663d34608bf474d4f8873c796
+#: ../../start/quick/index.rst:68 bcbce66efa924ba8a407af0378777c7d
 msgid ""
 "Multiple containers can run on the same machine and share the OS kernel "
 "with other containers, each running as isolated processes in user space."
 msgstr ""
 
-#: ../../start/quick/index.rst:75 df850448639c46b49c3c2aea23d1db39
+#: ../../start/quick/index.rst:70 cd06d164c094432b87eb19cc2b6abd09
 msgid ""
-"The following tutorials will introduce the use of Docker community "
-"edition on:"
+"This documentation will refer to the usage of Docker on a Ubuntu host, "
+"but you can of course run Docker also on other Linux distributions, "
+"Windows and Mac."
 msgstr ""
 
-#: ../../start/quick/index.rst:77 71865bdeeadf4019acaf7afa211a5409
-msgid ":ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Basic Setup>`"
+#: ../../start/quick/index.rst:72 efbd558a99154bd7b4419279b02912e6
+msgid ""
+"For the steps to setup Docker on Ubuntu you can jump ahead to "
+":ref:`Ubuntu 20.04 <Ubuntu (20.04) Basic Setup>`"
 msgstr ""
 
-#: ../../start/quick/index.rst:79 d6cbc94564c64627a9e307845fc961f3
-msgid ":ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`"
-msgstr ""
+#~ msgid "Quick Installation Guide"
+#~ msgstr ""
+
+#~ msgid "OSGEO Live CD"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OSGeoLive <http://live.osgeo.org/>`_ is a "
+#~ "self-contained bootable DVD, USB thumb "
+#~ "drive or Virtual Machine based on "
+#~ "Lubuntu, that allows you to try a"
+#~ " wide variety of open source "
+#~ "geospatial software without installing "
+#~ "anything."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is composed entirely of free "
+#~ "software, allowing it to be freely "
+#~ "distributed, duplicated and passed around."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It provides pre-configured applications "
+#~ "for a range of geospatial use "
+#~ "cases, including storage, publishing, viewing,"
+#~ " analysis and manipulation of data."
+#~ msgstr ""
+
+#~ msgid "It also contains sample datasets and documentation."
+#~ msgstr ""
+
+#~ msgid "To try out the applications, simply:"
+#~ msgstr ""
+
+#~ msgid "Insert DVD or USB thumb drive in computer or virtual machine."
+#~ msgstr ""
+
+#~ msgid "Reboot computer. (verify boot device order if necessary)"
+#~ msgstr ""
+
+#~ msgid "Press :guilabel:`Enter` to startup & login."
+#~ msgstr ""
+
+#~ msgid "Select and run applications from the :guilabel:`Geospatial` menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OSGeoLive <http://live.osgeo.org/>`_ is an "
+#~ "`OSGeo Foundation <http://osgeo.org/>`_ project. "
+#~ "The `OSGeo Foundation <http://osgeo.org/>`_ is"
+#~ " a not-for-profit supporting "
+#~ "Geospatial Open Source Software development,"
+#~ " promotion and `education "
+#~ "<http://www.geoforall.org/>`_."
+#~ msgstr ""
+
+#~ msgid "Introducing main concepts"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following tutorials will introduce "
+#~ "the use of Docker community edition "
+#~ "on:"
+#~ msgstr ""
+
+#~ msgid ":ref:`Ubuntu 18.04 <Ubuntu (18.0 +) Basic Setup>`"
+#~ msgstr ""
+
+#~ msgid ":ref:`CentOS 7.0 <CentOS (7.0 +) Basic Setup>`"
+#~ msgstr ""
 

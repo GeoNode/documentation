@@ -8,35 +8,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:4
-#: e20514c1a2fe4313947c0e3d2af2fea1
-msgid "Customizing The Layers' GetFeatureInfo Templates"
+#: e4a76e51fc914a84a9debcab13e6fdd7
+msgid "Customizing The Datasets' GetFeatureInfo Templates"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:5
-#: 56160ac67c594282b9b0db25fbdc394d
+#: 89e7db34db7f4dacbb92bb1345f0145d
 msgid ""
-"When “clicking” over a feature of a Layer into a GeoNode Map, an info "
+"When “clicking” over a feature of a dataset into a GeoNode Map, an info "
 "window popups showing a formatted representation of the raw data "
 "identified by the coordinates (see Fig. 1)"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:10
-#: ad8d0e384abe4483a966d3d4b84c88db
+#: 6348e32afc544717a1798cdd2626a0b1
 msgid "*Fig. 1*"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:12
-#: cd09f9342ffa477e89493f76c334c044
+#: 72b66f97e17a4059a81c10779508d3e5
 msgid ""
 "The way how such information is presented to the user is defined by what "
 "we call “GetFeatureInfo Template”. The latter is basically an HTML "
@@ -45,91 +45,84 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:14
-#: c488374c23fc40c685156551d1d987aa
+#: 66b18e8f00e14bbe9f41910291b0d5f7
 msgid ""
 "The outcome is a rendered HTML snippet with the real values replacing the"
 " placeholders of the Template."
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:16
-#: 12e9d11f12804de78eaa73d35b19bad3
+#: d61d98a58fee4dc8a76ba474c6bdb39a
 msgid ""
 "Currently, GeoNode allows a very simple mechanism to customize the "
-"“GetFeatureInfo Template” of a Layer."
+"“GetFeatureInfo Template” of a dataset."
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:18
-#: 9080f7ef29cd458aa1172046009d187d
+#: 50eec98d4a2345f1991b2af21a7c4fdf
 msgid ""
-"It is possible, through the Layer Metadata Editor Wizard, to assign a "
-"name and a label to the attributes we want to display on the "
+"It is possible, through the dataset Metadata Editor, to assign a name, a "
+"label and also set the attributes we want to display on the "
 "GetFeatureInfo output."
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:20
-#: 9d4e37e6f1b14a42893d0d63cddbb7c8
-msgid ""
-"Notice that the attributes without a label and name, in case others are "
-"present, won’t be rendered at all."
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:22
-#: b6ba250e03834fb78e89282110b49913
+#: 90ecfb17cb0a47cb9e82a27b727bdb37
 msgid ""
 "As an instance, by using the example above, we can customize a bit the "
-"Layer Metadata as shown in Fig. 2"
+"dataset Metadata as shown in Fig. 2"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:27
-#: 4056820b7d7845f382c266f62c44054b
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:25
+#: 62626609617940e59601adb7efbe958a
 msgid "*Fig. 2*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:29
-#: e9b9cf023bcf431581e5c2cc7e6a4052
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:27
+#: 7730c320415c4aac8417b85ec11410c2
 msgid "The “GetFeatureInfo” output will change accordingly as shown in Fig. 3"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:34
-#: 44d58d2ebb264ed9924a75127b7be122
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:32
+#: 84155966ac8e44c0ac060fa301580669
 msgid "*Fig. 3*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:37
-#: b8b7dc96841d4e9e8556561bcbceb056
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:35
+#: a0cea5f93a19436cbf6322e1aea24d9d
 msgid "Simple Template: Assigning A Media-Type To Attribute Values"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:38
-#: cb07f0e1c89e44698d0040fe8ca67e78
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:36
+#: 8b0e5ba1bcf4499bbf87c4ede0f39aad
 msgid ""
 "The easiest way to render a different media-type (:guilabel:`image`, "
 ":guilabel:`audio`, :guilabel:`video` or :guilabel:`iframe`) to a property"
-" value, is to change it from the :guilabel:`Metadata Editor Wizard` "
-"attributes panel."
+" value, is to change it from the :guilabel:`Metadata Edit` attributes "
+"panel."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:40
-#: 28dc88feef82420daa70a42057dcfbdf
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:38
+#: 0e0494d693af42da8043abd9b478883f
 msgid ""
 "By changing the :guilabel:`Display Type` of an attribute from this panel "
 "as shown in Fig. 4"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:45
-#: 249b4e3ff30a477f8d9ae72fbbd77a08
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:43
+#: 7b31277d04f249508363756ab5ebc468
 msgid "*Fig. 4*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:47
-#: 9411c449a6714b45924cd83f8d0c3f74
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:45
+#: 30111ee3217e4b55b266d0a365696f6a
 msgid ""
 "GeoNode will create automatically the HTML media type when rendering by "
 "using the **value** of the selected property."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:49
-#: 6071b4114e784f0aa8b679e0ed74385e
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:47
+#: 62dd0d4d395b419ab96eff3eaa166554
 msgid ""
 "So, as an example, if, in the figure above, the attribute ``NAME`` "
 "contains values representing some ``links`` to other resources, GeoNode "
@@ -137,101 +130,101 @@ msgid ""
 "geometry."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:54
-#: 53084529b7414b14bab2f078f7f730fd
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:52
+#: 4b7108f546c74e08be4a1013cb787b4b
 msgid "*Fig. 5*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:56
-#: e803e5c688334163b705d76836868ecd
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:54
+#: ed58f38977894675a002893cf302b764
 msgid "Selecting :guilabel:`image` as media-type (Fig. 6)"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:61
-#: fc3fdc4edbac4c889e755d5a3c190af2
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:59
+#: acc86ae2ffa4445b937f430e4570da38
 msgid "*Fig. 6*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:63
-#: 4284037ba23b4dfe8612831564b9d91e
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:61
+#: 48fc87fa720648c5935665d2ba687aa8
 msgid "and editing the contents accordingly (Fig. 7)"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:70
-#: fb3496c6b13d4fcfbf1d468f59077843
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:68
+#: fd3444aac4a54d8798e27bfa0a9565aa
 msgid "*Fig. 7*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:72
-#: 2e3d011ba45f42368a7392778030bbf7
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:70
+#: 59e6a0049e0f462b95d0a191f37fb67f
 msgid "you will get a nice effect as shown in Fig. 8"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:77
-#: bc9c1b7e60ea4b1193255272fa59c196
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:75
+#: e9a72a3ad266462580159b2c536bac75
 msgid "*Fig. 8*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:80
-#: fcf6a46effb142dd9d6b9d7af450fca9
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:78
+#: 2b194b04f2a244a3bba55c7882d2875a
 msgid "Advanced Template: Use A Custom HTML Template"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:82
-#: 87de4d9bb6c4428fb6f9ac7f62b79b06
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:80
+#: 3bb3910638154409bc7c32915d9efdda
 msgid ""
 "By selecting the option :guilabel:`Use a custom template?` as shown in "
 "Fig. 9"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:87
-#: f68c8645edbe42eaa123d3017a6e0471
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:85
+#: 4bf627dd899e4b75af47a54edf67bbd9
 msgid "*Fig. 9*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:89
-#: 03bf0ac642de4557ae22fb11ee0ae092
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:87
+#: de50f171e8584ac58904891852912fe3
 msgid ""
 "You will be able to provide your own custom HTML Template for the Feature"
-" Info output."
+" Info output. Attributes from the dataset can be represented inside the "
+"template using ``${properties.ATTRIBUTE}``, where ``ATTRIBUTE`` is the "
+"name of an attribute (field) from your dataset."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:91
-#: 1bfa318c445c491ebb4545407e588f52
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:90
+#: 836e0b8a1b0740e788994ac102b29027
 msgid ""
-"The example below shows how it is possible to create a nice HTML output "
-"with an :guilabel:`image` taking the ``src`` from the attribute "
-":guilabel:`NAME` values, through the use of the keyword "
-"``${properties.NAME}``"
+"The example below uses the ``wikipedia`` and the ``name`` attributes to "
+"show the name of the airport as a link to the Wikipedia page:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:96
-#: 4d12b72e2e9c4e788f5b41b03860e1d0
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:95
+#: 3490f43fd4434a9ba8337674698b627e
 msgid "*Fig. 10*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:101
-#: 121d54a8c8a74bef9c2ce3c781f0e6be
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:100
+#: 0b0937b410ae45caba76fab9cf2b3ef5
 msgid "*Fig. 11*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:106
-#: 90b920ce66a44802b30b87362c836e54
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:102
+#: 5be2583eb28e4368bb01645fd736cc70
+msgid "This is the result shown when you click on an airport"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:107
+#: 39fd6787a5f148ceac0bf1cbd526c579
 msgid "*Fig. 12*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:111
-#: fa1dafd2a3e14a569a1c715d45dac109
-msgid "*Fig. 13*"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:114
-#: 57a04736b88140f7bcc03539397567e1
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:110
+#: ccf50c6c4cc04320863d4bb23afbdbb9
 msgid "Optional: Customizing the HTML WYSIWYG Editor Menu Bar"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:115
-#: cc5548885af94904a73784176c1d1ade
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:111
+#: 0a2c2e5725e54e7db56a841265aecb8a
 msgid ""
 "The :guilabel:`Menu Bar` and :guilabel:`Tool Bar` of the HTML Editor, can"
 " be easily customized by overriding the ``TINYMCE_DEFAULT_CONFIG`` "
@@ -239,18 +232,85 @@ msgid ""
 "Settings`)"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:117
-#: 033ca40acfcb4b27b55f768e56aa534d
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:113
+#: 077879b6eb89452692415ae2e1b7b3fa
 msgid ""
 "There are many plugins and options allowing you to easily customize the "
 "editor and also provides some predefined *templates* to speed up the "
 "editing."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:119
-#: d603f8426eb0438f9e841102a7c8be71
+#: ../../usage/managing_maps/exploring_maps/get_fetureinfo.rst:115
+#: dedf746fd22149e0887266985ce7c283
 msgid ""
 "For more information about the Javascript tool, please refer to "
 "https://www.tiny.cloud/"
 msgstr ""
+
+#~ msgid "Customizing The Layers' GetFeatureInfo Templates"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When “clicking” over a feature of "
+#~ "a Layer into a GeoNode Map, an "
+#~ "info window popups showing a formatted"
+#~ " representation of the raw data "
+#~ "identified by the coordinates (see Fig."
+#~ " 1)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Currently, GeoNode allows a very simple"
+#~ " mechanism to customize the “GetFeatureInfo"
+#~ " Template” of a Layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is possible, through the Layer "
+#~ "Metadata Editor Wizard, to assign a "
+#~ "name and a label to the attributes"
+#~ " we want to display on the "
+#~ "GetFeatureInfo output."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Notice that the attributes without a "
+#~ "label and name, in case others are"
+#~ " present, won’t be rendered at all."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an instance, by using the "
+#~ "example above, we can customize a "
+#~ "bit the Layer Metadata as shown in"
+#~ " Fig. 2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The easiest way to render a "
+#~ "different media-type (:guilabel:`image`, "
+#~ ":guilabel:`audio`, :guilabel:`video` or "
+#~ ":guilabel:`iframe`) to a property value, "
+#~ "is to change it from the "
+#~ ":guilabel:`Metadata Editor Wizard` attributes "
+#~ "panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You will be able to provide your"
+#~ " own custom HTML Template for the "
+#~ "Feature Info output."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The example below shows how it is"
+#~ " possible to create a nice HTML "
+#~ "output with an :guilabel:`image` taking "
+#~ "the ``src`` from the attribute "
+#~ ":guilabel:`NAME` values, through the use "
+#~ "of the keyword ``${properties.NAME}``"
+#~ msgstr ""
+
+#~ msgid "*Fig. 13*"
+#~ msgstr ""
 

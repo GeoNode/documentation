@@ -8,33 +8,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-19 17:42+0100\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../admin/mgmt_commands/index.rst:5 0946bb4477f14521af4fd34416c5ef64
+#: ../../admin/mgmt_commands/index.rst:5 a8446e4878044cf886eb2f66696d44b1
 msgid "Migrate GeoNode Base URL"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:7 c7af63dcdf1a4e149659f560065628a7
+#: ../../admin/mgmt_commands/index.rst:7 d8cb827206f742bd8d56a7249a0510e8
 msgid ""
 "The ``migrate_baseurl`` :guilabel:`Management Command` allows you to fix "
 "all the GeoNode Links whenever, for some reason, you need to change the "
 ":guilabel:`Domain Name` of :guilabel:`IP Address` of GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:10 2e8e3e585362417c8fc8d0a3bb114fdd
+#: ../../admin/mgmt_commands/index.rst:10 cdddaff537ef4c468ffb7ec62e0d22aa
 msgid ""
 "This **must** be used also in the cases you'll need to change the network"
 " schema from ``HTTP`` to ``HTTPS``, as an instance."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:12 ce1e8772f2494f3f87bd1f11cd611cbe
+#: ../../admin/mgmt_commands/index.rst:12 e7add69b0e6e49eba1cea00bddeb6d79
 msgid ""
 "First of all let's take a look at the :guilabel:`--help` option of the "
 "``migrate_baseurl`` management command in order to inspect all the "
@@ -42,484 +42,484 @@ msgid ""
 msgstr ""
 
 #: ../../admin/mgmt_commands/index.rst:15
-#: ../../admin/mgmt_commands/index.rst:127
-#: ../../admin/mgmt_commands/index.rst:215
-#: ../../admin/mgmt_commands/index.rst:295
-#: ../../admin/mgmt_commands/index.rst:388
-#: ../../admin/mgmt_commands/index.rst:576
-#: ../../admin/mgmt_commands/index.rst:1846 19ff06ac5a9d4449a61bded2f47986db
-#: 1b03a3404c0d4796a0c29bd081525696 2d8fb80d72184af588345cc5ae88ca06
-#: 53d8e798a7da469e896f5e44e5183ec1 93ed665285a24c2986631b9e298df294
-#: c6698870648644e48b22d0c04ee12159 f43cfd34ed2a42e0ad3247693e244780
+#: ../../admin/mgmt_commands/index.rst:124
+#: ../../admin/mgmt_commands/index.rst:213
+#: ../../admin/mgmt_commands/index.rst:293
+#: ../../admin/mgmt_commands/index.rst:384
+#: ../../admin/mgmt_commands/index.rst:571
+#: ../../admin/mgmt_commands/index.rst:1871 5c42dd09de504a958a573ec51474f7b1
+#: 61d3c011e10c40a1949f883a1b8b3db7 9d22c65fb2bb4f958f03701ad793d0ca
+#: ae6e466d5c0d4ca4b3a3f46bff2d13ab b8271cd091824b3cb63b3d8352ee9bde
+#: f18795c3f0054b5c9098dd9aadd88006 fdb241c7c9974779b77968ad21196d77
 msgid "Run"
 msgstr ""
 
 #: ../../admin/mgmt_commands/index.rst:21
-#: ../../admin/mgmt_commands/index.rst:133
-#: ../../admin/mgmt_commands/index.rst:221
-#: ../../admin/mgmt_commands/index.rst:301
-#: ../../admin/mgmt_commands/index.rst:394
-#: ../../admin/mgmt_commands/index.rst:582
-#: ../../admin/mgmt_commands/index.rst:1693
-#: ../../admin/mgmt_commands/index.rst:1852 0d036b2507684080b5d75d73174f90a9
-#: 168223075bd44d0abe2dc29c445e05a0 1ade4244f3bd44eea34ce98756d0a5f8
-#: 62c6fb5a3d4245dd97a6df2601dbc2cb a06bba8889ce4d57889d90bf58a70c80
-#: c213709607064afebb1493dd638f8bb8 c79a2f23f455416abcb900c9aac47c97
-#: f5aa778a65634c5a85e797d437603047
-msgid "If you enabled ``local_settings.py`` the command will change as following:"
-msgstr ""
-
-#: ../../admin/mgmt_commands/index.rst:27
-#: ../../admin/mgmt_commands/index.rst:139
-#: ../../admin/mgmt_commands/index.rst:227
-#: ../../admin/mgmt_commands/index.rst:307
-#: ../../admin/mgmt_commands/index.rst:400
-#: ../../admin/mgmt_commands/index.rst:588 00b279356630459f88b2e177c131c601
-#: 68d41ee708ee4bab89bd7a097a85e864 9d46f06e8c374826a76a7dc43466fbd8
-#: f547e557c3d54d4da470e7283f40918a f5a7cbe91a2a4f52a86840b3676252b0
-#: ff7235e2c68c45c692e1122b374c62dd
+#: ../../admin/mgmt_commands/index.rst:136
+#: ../../admin/mgmt_commands/index.rst:225
+#: ../../admin/mgmt_commands/index.rst:305
+#: ../../admin/mgmt_commands/index.rst:396
+#: ../../admin/mgmt_commands/index.rst:583 0f9e0f13d57b41e5883af2cf426fc5c1
+#: 5718e93262df42eab5abb670c362d6cd a18d80012f884975854b87cbf354e424
+#: b1572555de2a412091efa78875855998 bc5ff0f8999e4a67a3ed11b31d1cf14f
+#: c2f19198a752422c836db39b6e99bee6
 msgid "This will produce output that looks like the following"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:63 6d53404652e44789b29927a6f05b0944
+#: ../../admin/mgmt_commands/index.rst:57 ad8f806026984c8887c6f2c1bb8e2cdc
 msgid ""
 "**Example 1**: I want to move my GeoNode instance from  "
 "``http:\\\\127.0.0.1`` to ``http:\\\\example.org``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:65
-#: ../../admin/mgmt_commands/index.rst:73
-#: ../../admin/mgmt_commands/index.rst:81
-#: ../../admin/mgmt_commands/index.rst:182
-#: ../../admin/mgmt_commands/index.rst:190
-#: ../../admin/mgmt_commands/index.rst:265
-#: ../../admin/mgmt_commands/index.rst:347 2bb7692b1c4946a8b3b4646747bfb9c6
-#: 6fed6568767f46a7b0bea3b5bf6be95b ad200bc187484cbb9893dceaf78feade
-#: bff4596d719a41808893be03c69a716e c1ba308c7afd4c7aa2c8630726041fed
-#: c74694b8b0c44195ac235993acf61f50 ea0207cf077046a49d0ba49c559c0ff8
+#: ../../admin/mgmt_commands/index.rst:59
+#: ../../admin/mgmt_commands/index.rst:67
+#: ../../admin/mgmt_commands/index.rst:75
+#: ../../admin/mgmt_commands/index.rst:180
+#: ../../admin/mgmt_commands/index.rst:188
+#: ../../admin/mgmt_commands/index.rst:263
+#: ../../admin/mgmt_commands/index.rst:345 3fa4ec8e158943a487429e3e127d3f20
+#: 943fd78d28d04c2f829a8a88d508d28a a363eab54ea94eddb6491bae2addb26c
+#: b5d86abfcabb4da090c80fd72778cc02 b8579ecbf8754ccd976ad36a143b15b8
+#: be1d5f5f28944612a177fde2bbed6be2 fff93edeea6c47999f165a53ecbd8bbd
 msgid "Make always sure you are using the **correct** settings"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:71 322b480bee69483193cc056e51c703bc
+#: ../../admin/mgmt_commands/index.rst:65 b1011564454246108bcb23ae0e19b3ae
 msgid ""
 "**Example 2**: I want to move my GeoNode instance from  "
 "``http:\\\\example.org`` to ``https:\\\\example.org``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:79 ea1e300c1931476d88542769df564ba7
+#: ../../admin/mgmt_commands/index.rst:73 42816d8a2a9a46e1bcaccb6e22a06a24
 msgid ""
 "**Example 3**: I want to move my GeoNode instance from  "
 "``https:\\\\example.org`` to ``https:\\\\geonode.example.org``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:87 e52bac263699422fad96956e0dbd29b6
+#: ../../admin/mgmt_commands/index.rst:81 7faf9a48c8c541f7a01dfc78b91b3da6
 msgid ""
 "After migrating the base URL, make sure to sanitize the links and catalog"
 " metadata also (:ref:`sync_layers_and_metadata`)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:92 b6a5cf0d3bb3424cab39e469da584c0b
+#: ../../admin/mgmt_commands/index.rst:86 b06081fb0668431c937631c3db0e4771
 msgid "Update Permissions, Metadata, Legends and Download Links"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:94 1fc9f0624d61489c8f48544411ac1aea
+#: ../../admin/mgmt_commands/index.rst:88 04a857647efb4ea4a3b021ea285bbb28
 msgid ""
 "The following three utility :guilabel:`Management Commands`, allow to "
 "fixup:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:96 91c2b1c90675404aa617c06e891caa23
+#: ../../admin/mgmt_commands/index.rst:90 de552524524443d4ab402a79896feb8f
 msgid ""
-":guilabel:`Users/Groups Permissions` on :guilabel:`Layers`; those will be"
-" refreshed and synchronized with the :guilabel:`GIS Server` ones also"
+":guilabel:`Users/Groups Permissions` on :guilabel:`Datasets`; those will "
+"be refreshed and synchronized with the :guilabel:`GIS Server` ones also"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:98 280bc4b5de0d46b6907a82ab28c7ad2f
+#: ../../admin/mgmt_commands/index.rst:92 29522988407a4df883d01ff70af6695f
 msgid ""
 ":guilabel:`Metadata`, :guilabel:`Legend` and :guilabel:`Download` links "
-"on :guilabel:`Layers` and :guilabel:`Maps`"
+"on :guilabel:`Datasets` and :guilabel:`Maps`"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:100 6b5af5ecb22343839f3fecc851823df2
+#: ../../admin/mgmt_commands/index.rst:94 76df036e37924536a99f6d6936ba10be
 msgid "Cleanup :guilabel:`Duplicated Links` and :guilabel:`Outdated Thumbnails`"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:103 564d427495bd4de7bc4c0559347a2a8d
-msgid "Management Command ``sync_geonode_layers``"
+#: ../../admin/mgmt_commands/index.rst:97 048a9a310a9d474a9c2a95f95c965c99
+msgid "Management Command ``sync_geonode_datasets``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:105 fefa4362a4ef4ddda681a99099fc01a5
+#: ../../admin/mgmt_commands/index.rst:99 e937623b32114bcaad539ecd2570f870
 msgid ""
-"This command allows to sync already existing permissions on Layers. In "
-"order to change/set Layers' permissions refer to the section "
+"This command allows to sync already existing permissions on Datasets. In "
+"order to change/set Datasets' permissions refer to the section "
 ":ref:`batch_sync_permissions`"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:107
-#: ../../admin/mgmt_commands/index.rst:201
-#: ../../admin/mgmt_commands/index.rst:276 0b953f5b7307437abf369d0689887181
-#: 7b9b96896c604a31b5b7e709261b454a 81a3e3dc5f1c4c608df4b4df74102038
+#: ../../admin/mgmt_commands/index.rst:101
+#: ../../admin/mgmt_commands/index.rst:199
+#: ../../admin/mgmt_commands/index.rst:274 49254fb75be743ce93c846add525f0f0
+#: 93f99464dcb442fb92190ab15e624b19 d39191d2b5d54360a9188448a5824c61
 msgid "The options are:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:109 547297343e704c99aa96d4c75eb15731
-msgid "**filter**; Only update data the layer names that match the given filter."
+#: ../../admin/mgmt_commands/index.rst:103 900264ddbc6246ca8ca77ab17d78c678
+msgid ""
+"**filter**; Only update data the Dataset names that match the given "
+"filter."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:111
-#: ../../admin/mgmt_commands/index.rst:205
-#: ../../admin/mgmt_commands/index.rst:280 042538d2051149e78cc7728402c4dc3e
-#: 684c015710314a0186309d7a642dd808 d7e1424cf9394b08838ec5d87bc50588
+#: ../../admin/mgmt_commands/index.rst:105
+#: ../../admin/mgmt_commands/index.rst:203
+#: ../../admin/mgmt_commands/index.rst:278 3552b0b9fe9445c09663dc8b006976fb
+#: 8c7b52d26ef24eee8e772984ce50298e d68777c074144441bf980dc74f359fa5
 msgid "**username**; Only update data owned by the specified username."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:113 c95971b9962d41af9d162918704ebc8e
+#: ../../admin/mgmt_commands/index.rst:107 dbabc3b8abb24743934f15e89834986c
 msgid ""
-"**updatepermissions**; Update the layer permissions; synchronize it back "
+"**updatepermissions**; Update the Dataset permissions; synchronize it "
+"back to the GeoSpatial Server. This option is also available from the "
+":guilabel:`Layer Details` page."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:110 7c06fd5f7d4b49a6bb5fd9e91358e6bd
+msgid ""
+"**updateattributes**; Update the Dataset attributes; synchronize it back "
 "to the GeoSpatial Server. This option is also available from the "
 ":guilabel:`Layer Details` page."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:116 967cb6a25e5f465996c288788df86b9c
+#: ../../admin/mgmt_commands/index.rst:113 4cdc4066120840a59d9ab05efc36316a
 msgid ""
-"**updateattributes**; Update the layer attributes; synchronize it back to"
-" the GeoSpatial Server. This option is also available from the "
-":guilabel:`Layer Details` page."
+"**updatethumbnails**; Update the Dataset thumbnail. This option is also "
+"available from the :guilabel:`Layer Details` page."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:119 dd3991734bab43648dad3550c18b3865
+#: ../../admin/mgmt_commands/index.rst:116 ad45856f8e8f48b18ff122b8453f74d0
 msgid ""
-"**updatethumbnails**; Update the map styles and thumbnails. This option "
-"is also available from the :guilabel:`Layer Details` page."
+"**updatebbox**; Update the Dataset BBOX and LotLan BBOX. This option is "
+"also available from the :guilabel:`Layer Details` page."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:122
-#: ../../admin/mgmt_commands/index.rst:210 2b9211e6fcd7441d845e5bed3e0a6974
-#: e4a35eea89704fad8c2177fcd350d057
+#: ../../admin/mgmt_commands/index.rst:119
+#: ../../admin/mgmt_commands/index.rst:208 2b73980627e34cb981fa6836331c16ba
+#: de3c752833704307bbc206dbf2994913
 msgid "**remove-duplicates**; Removes duplicated Links."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:124 cefcbc3cd10d43818108ad31b5f5618a
+#: ../../admin/mgmt_commands/index.rst:121 9ddece11d2bf42dfb0f8772946fcf434
 msgid ""
 "First of all let's take a look at the :guilabel:`--help` option of the "
-"``sync_geonode_layers`` management command in order to inspect all the "
+"``sync_geonode_datasets`` management command in order to inspect all the "
 "command options and features."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:180 20a3a8ddd8fb4d6c8908ab16aea3fa3a
+#: ../../admin/mgmt_commands/index.rst:130
+#: ../../admin/mgmt_commands/index.rst:219
+#: ../../admin/mgmt_commands/index.rst:299
+#: ../../admin/mgmt_commands/index.rst:390
+#: ../../admin/mgmt_commands/index.rst:577
+#: ../../admin/mgmt_commands/index.rst:1706
+#: ../../admin/mgmt_commands/index.rst:1877 21f76051596a4f7890eb37a6e44511c6
+#: 3b2d054019224ebc9d2020bd89c74e07 6a5054de960d46358cccb163ac4e31ce
+#: acf78803522f43e18185315619da3617 b3df060c25254c61a5f51e007b70baef
+#: b987d81e304348a6b5eb072a0e53cef9 c1af4bb43eb04273a9fd3779f86d8015
+msgid "If you enabled ``local_settings.py`` the command will change as following:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:178 e3620d394f654e8db43bc2a26bd94edc
 msgid ""
-"**Example 1**: I want to update/sync all layers permissions and "
+"**Example 1**: I want to update/sync all Datasets permissions and "
 "attributes with the GeoSpatial Server"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:188 3c656b791d0c46b581f841a590c2bafb
+#: ../../admin/mgmt_commands/index.rst:186 75e625f84ef2472fb1935a99c1e8ba2c
 msgid ""
-"**Example 2**: I want to regenerate the Thumbnails of all the Layers "
+"**Example 2**: I want to regenerate the Thumbnails of all the Datasets "
 "belonging to ``afabiani``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:197 7a602bdf7fc549a190b2d903eb0b1062
+#: ../../admin/mgmt_commands/index.rst:195 389386c0126943efa440ffe79d0fd6c8
 msgid "Management Command ``sync_geonode_maps``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:199 62b22a8008a0482eb4989bcc26a6b4a3
+#: ../../admin/mgmt_commands/index.rst:197 937829177a17457081a2dd5baedfc16b
 msgid ""
 "This command is basically similar to the previous one, but affects the "
 ":guilabel:`Maps`; with some limitations."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:203 c8a58a6da82b4eee87e943fff471251b
+#: ../../admin/mgmt_commands/index.rst:201 415a957d38e24d459483361182fbbbae
 msgid "**filter**; Only update data the maps titles that match the given filter."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:207 2805151b5bbd4538813627cb6042214c
+#: ../../admin/mgmt_commands/index.rst:205 73bb146810ce47bd9c96dba45c7e1c20
 msgid ""
 "**updatethumbnails**; Update the map styles and thumbnails. This option "
 "is also available from the :guilabel:`Map Details` page."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:212 1a1c88b1e7a346eea935e102d9db15ee
+#: ../../admin/mgmt_commands/index.rst:210 2a1f2d7dd5b542958a75949ca8ad7ef5
 msgid ""
 "First of all let's take a look at the :guilabel:`--help` option of the "
 "``sync_geonode_maps`` management command in order to inspect all the "
 "command options and features."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:263 261fdca9e16b4cb0bc46b686a98e1830
+#: ../../admin/mgmt_commands/index.rst:261 2421bb88fcd74925a8d4761e3ad1098a
 msgid ""
 "**Example 1**: I want to regenerate the Thumbnail of the Map ``This is a "
 "test Map``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:272 ded75555d226441f95a3933396bc9a48
+#: ../../admin/mgmt_commands/index.rst:270 5474b77ec0ea42b1ad40c170f73379eb
 msgid "Management Command ``set_all_layers_metadata``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:274 1b71b436df9f4b758cbbbd9bc71d46de
+#: ../../admin/mgmt_commands/index.rst:272 81a85d76a1604b1c88462c75ab8cb40f
 msgid ""
 "This command allows to reset **Metadata Attributes** and **Catalogue "
-"Schema** on Layers. The command will also update the :guilabel:`CSW "
+"Schema** on Datasets. The command will also update the :guilabel:`CSW "
 "Catalogue` XML and Links of GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:278 68875c9fc09d41bea533261fddd73d1a
-msgid "**filter**; Only update data the layers that match the given filter."
+#: ../../admin/mgmt_commands/index.rst:276 57287029dd3d4064b02c1aace2e9fc39
+msgid "**filter**; Only update data the Datasets that match the given filter."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:282 a0c587e88ab94183ab8404e03a5ba8f2
+#: ../../admin/mgmt_commands/index.rst:280 30143f9b08c143209a21e6511c3995b0
 msgid "**remove-duplicates**; Update the map styles and thumbnails."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:284 86267354f9cc4485a18ace9380031687
+#: ../../admin/mgmt_commands/index.rst:282 f451060f7a5a47929a685c99f3f4fac3
 msgid "**delete-orphaned-thumbs**; Removes duplicated Links."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:286 e09d476d4c11458599b30b3593285531
+#: ../../admin/mgmt_commands/index.rst:284 fb4becc63eed41bba8878ef482de2570
 msgid ""
 "**set-uuid**; will refresh the UUID based on the UUID_HANDLER if "
 "configured (Default False)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:288 5230623d9397478093b3f54c241e2dda
+#: ../../admin/mgmt_commands/index.rst:286 69542cbcec1f4719a8a756c3ae93deac
 msgid ""
 "**set_attrib**; If set will refresh the attributes of the resource taken "
 "from Geoserver. (Default True)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:290 be3b4eabae8b479680354043c62f74ed
+#: ../../admin/mgmt_commands/index.rst:288 95621ac4de804029b8a86f5dd8c14e10
 msgid ""
 "**set_links**; If set will refresh the links of the resource. (Default "
 "True)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:292 f49e4792f1a6447ca2a16f1fc7a3a27a
+#: ../../admin/mgmt_commands/index.rst:290 41bc828746a249ee82e86e07465a0c7f
 msgid ""
 "First of all let's take a look at the :guilabel:`--help` option of the "
 "``set_all_layers_metadata`` management command in order to inspect all "
 "the command options and features."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:345 1181c83762bd4dc288a385643f3c65df
+#: ../../admin/mgmt_commands/index.rst:343 c4af345b9a0e468ea0a42b617974267e
 msgid ""
 "**Example 1**: After having changed the Base URL, I want to regenerate "
 "all the Catalogue Schema and eventually remove all duplicates."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:356 353ddf8ac0734b43996c3ba6f7bb8f62
+#: ../../admin/mgmt_commands/index.rst:354 fbf09c83a8614072a1dce3a08c2a23b4
 msgid "Loading Data into GeoNode"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:358 2887f98d06ee488e87f8bbb3d1ad7f89
+#: ../../admin/mgmt_commands/index.rst:356 813287ac29ef4d3aae6057353f20e07b
 msgid ""
 "There are situations where it is not possible or not convenient to use "
-"the :guilabel:`Upload Form` to add new Layers to GeoNode via the web "
-"interface. As an instance:"
+"the :guilabel:`Upload Form` to add new Datasets to GeoNode via the web "
+"interface. For instance:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:362 a4906a7c281a475286168157d27ba3bb
-msgid "The dataset is simply too big to be uploaded through a web interface."
+#: ../../admin/mgmt_commands/index.rst:360 2dc8d2d230284cae97cc3b654d1a95c4
+msgid "The dataset is too big to be uploaded through a web interface."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:364 9b6f61c7a4194eb2821a6359578aa7c8
-msgid "We would like to import some data from the mass storage programmatically."
+#: ../../admin/mgmt_commands/index.rst:362 14a2e5bfa72848ee8d592ef0e4bf2fb1
+msgid "Import data from a mass storage programmatically."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:366 318099abb0b64dcb880535659e4627e1
-msgid "We would like to import some tables from a DataBase."
+#: ../../admin/mgmt_commands/index.rst:364 82381663e1b94e74ba3b2b330b3b5739
+msgid "Import tables from a database."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:368 ade0c1bcf1a946858b665c6929460500
-msgid ""
-"We need to process the data first and, maybe, transform it to another "
-"format."
-msgstr ""
-
-#: ../../admin/mgmt_commands/index.rst:370 b2ff503ed88c475cb71061f2e14c22e2
+#: ../../admin/mgmt_commands/index.rst:366 3ab0da84190f4fc88c5449cd12df1ae8
 msgid ""
 "This section will walk you through the various options available to load "
 "data into your GeoNode from GeoServer, from the command-line or "
 "programmatically."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:373 6902965ef6864f55a54760b46913865e
+#: ../../admin/mgmt_commands/index.rst:369 c83f092a006245d7ad0c477ecad6be4d
 msgid ""
 "Some parts of this section have been taken from the `GeoServer "
 "<https://geoserver.geo-solutions.it/edu/en>`_ project and training "
 "documentation."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:378 5cbc69fd5e35474996c3bd1a44a4aaaa
+#: ../../admin/mgmt_commands/index.rst:374 8b82c8d2130341a1a7cbc7e3faca876b
 msgid "Management Command ``importlayers``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:380 dabde4876bbc43b8a363e8d655676f41
+#: ../../admin/mgmt_commands/index.rst:376 0abad263388640da96dc64b9dbca1679
 msgid ""
 "The ``geonode.geoserver`` Django app includes 2 management commands that "
 "you can use to load data in your GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:383 7d3d4150e655456e93aee71ad02f0902
+#: ../../admin/mgmt_commands/index.rst:379 577074ec0f4b4686b820679420a8ac1f
 msgid "Both of them can be invoked by using the ``manage.py`` script."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:385 7c2bd556d57d4012be52e36cc35f61e3
+#: ../../admin/mgmt_commands/index.rst:381 421fbad1162f40fa8a88d60b1539f08c
 msgid ""
 "First of all let's take a look at the :guilabel:`--help` option of the "
 "``importlayers`` management command in order to inspect all the command "
 "options and features."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:438 5ab9d78eb5a14edb82333cf3c714569e
+#: ../../admin/mgmt_commands/index.rst:434 6716c3312f2a40b98c4fef81677dd945
 msgid ""
 "While the description of most of the options should be self explanatory, "
 "its worth reviewing some of the key options a bit more in details."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:441 d8ec600b518945deade55cf12a3c9b4e
+#: ../../admin/mgmt_commands/index.rst:437 fcf4c6a2fdb942259e3cb9e4029e5b27
 msgid ""
 "The :guilabel:`-hh` Identifies the GeoNode server where we want to upload"
-" our layers. The default value is :guilabel:`http://localhost:8000`."
+" our Datasets. The default value is :guilabel:`http://localhost:8000`."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:442 06548025e02e4f76918b5cd5d32bf0b5
+#: ../../admin/mgmt_commands/index.rst:438 f1fda65e912d452e95fcfa0be493ecb6
 msgid ""
 "The :guilabel:`-u` Identifies the username for the login. The default "
 "value is :guilabel:`admin`."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:443 5203e1cd50884c528d86504f34489712
+#: ../../admin/mgmt_commands/index.rst:439 7479e854d68c423e9aa6c7c4d1c887d9
 msgid ""
 "The :guilabel:`-p` Identifies the password for the login. The default "
 "value is :guilabel:`admin`."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:445 7c4bc93672454a40ba45320b9b00480b
+#: ../../admin/mgmt_commands/index.rst:441 ead0e474ec34450aab485aa874e5e80a
 msgid ""
-"The import layers management command is invoked by specifying options as "
-"described above and specifying the path to a directory that contains "
+"The import Datasets management command is invoked by specifying options "
+"as described above and specifying the path to a directory that contains "
 "multiple files. For purposes of this exercise, let's use the default set "
-"of testing layers that ship with geonode. You can replace this path with "
-"the directory to your own shapefiles."
+"of testing Datasets that ship with geonode. You can replace this path "
+"with a directory to your own shapefiles."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:456 917b6821c80540359ae40ec73fe8a7c2
+#: ../../admin/mgmt_commands/index.rst:452 5a6cac4283a44183823ca07c65189544
 msgid "This command will produce the following output to your terminal"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:485 3057cd57b3b74fd1b7152844ec9e5642
+#: ../../admin/mgmt_commands/index.rst:481 76a340970ebf4f5388664a8c4f4d8edc
 msgid "As output the command will print:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:494 4bf7d7fb4fbf4e0488bd6553c793dee4
+#: ../../admin/mgmt_commands/index.rst:490 7b6f06aff8c7408d9ae8500d83e8ea8d
 msgid ""
 "The status code, is the response coming from GeoNode. For example 201 "
-"means that the layer has been correctly uploaded"
+"means that the Dataset has been correctly uploaded"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:496 f8e7a111e350420296ad97811bbba27d
+#: ../../admin/mgmt_commands/index.rst:492 85015e4320504e12b2f73ac2cf7cecdd
 msgid ""
 "If you encounter errors while running this command, please check the "
 "GeoNode logs for more information."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:501 c3c35096e5834c49a403d843fc5713a5
+#: ../../admin/mgmt_commands/index.rst:497 c491bf23ac1041009a358daa67425c8c
 msgid "Management Command ``updatelayers``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:503 58329a0491594ebd8c78c4519a2d9190
+#: ../../admin/mgmt_commands/index.rst:499 2598e5c6f0034339ab97f228d04a080e
 msgid ""
-"While it is possible to import layers directly from your servers "
+"While it is possible to import Datasets directly from your servers "
 "filesystem into your GeoNode, you may have an existing GeoServer that "
 "already has data in it, or you may want to configure data from a "
 "GeoServer which is not directly supported by uploading data."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:507 49624c60046c44ec8803a4ccb1ffc6b6
+#: ../../admin/mgmt_commands/index.rst:503 65be87e0a80b4c0ab707738edfa10df2
 msgid ""
 "GeoServer supports a wide range of data formats and connections to "
-"database, and while many of them are not supported as GeoNode upload "
-"formats, if they can be configured in GeoServer, you can add them to your"
-" GeoNode by following the procedure described below."
+"database, some of them may not be supported as GeoNode upload formats. "
+"You can add them to your GeoNode by following the procedure described "
+"below."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:511 26aa1e86e4fd4c1d837ad5dcdfff269d
+#: ../../admin/mgmt_commands/index.rst:506 545065f8e7214c6c8578a78fa7188be5
 msgid ""
-"GeoServer supports 3 types of data: :guilabel:`Raster`, "
+"GeoServer supports 4 types of data: :guilabel:`Raster`, "
 ":guilabel:`Vector`, :guilabel:`Databases` and :guilabel:`Cascaded`."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:513 e7fdca9502ca43539e68217c3a2df8b5
+#: ../../admin/mgmt_commands/index.rst:508 23845b39be4943478571dc38813177bd
 msgid ""
 "For a list of the supported formats for each type of data, consult the "
 "following pages:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:515 2c8aa0a92fdf4208ad9665b0b5947fb8
+#: ../../admin/mgmt_commands/index.rst:510 e89ca78d336546379c08208c50e9772b
 msgid "https://docs.geoserver.org/latest/en/user/data/vector/index.html"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:516 e3c928cf6d1a4ff19a742c1266a22788
+#: ../../admin/mgmt_commands/index.rst:511 a741165c67ee477e9c9e98edf20c6a50
 msgid "https://docs.geoserver.org/latest/en/user/data/raster/index.html"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:517 c3d827aa6bcc4e14bc461a6e4d3f7eef
+#: ../../admin/mgmt_commands/index.rst:512 a723112256184cf3bed98106322a702e
 msgid "https://docs.geoserver.org/latest/en/user/data/database/index.html"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:518 230069fbff94420793b123d9ba817ea0
+#: ../../admin/mgmt_commands/index.rst:513 22e02e87827941198dad9e1980dc414c
 msgid "https://docs.geoserver.org/latest/en/user/data/cascaded/index.html"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:520 652d11ecbb6a40e481884cbd9aa755d4
+#: ../../admin/mgmt_commands/index.rst:515 297284dc43cc4c9d8db05cdb12e0de8c
 msgid ""
 "Some of these raster or vector formats or database types require that you"
 " install specific plugins in your GeoServer in order to use the. Please "
 "consult the GeoServer documentation for more information."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:523 dc5084ffe08d49c09647e628fc410105
+#: ../../admin/mgmt_commands/index.rst:518 0fd9d989e44746acbb1119a997a6ea61
 msgid "Data from a PostGIS database"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:525 305036e940524eb896a99e7b39b85f4e
+#: ../../admin/mgmt_commands/index.rst:520 1916a1ad9b9d4e1d87febf9682b05fd2
 msgid ""
 "Lets walk through an example of configuring a new PostGIS database in "
-"GeoServer and then configuring those layers in your GeoNode."
+"GeoServer and then configuring those Datasets in your GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:528 8d1388d3c52e4664a451207c35eab597
+#: ../../admin/mgmt_commands/index.rst:523 dc28fbd70af240f9a2433e8928ad7e9a
 msgid ""
 "First visit the GeoServer administration interface on your server. This "
 "is usually on port 8080 and is available at "
 "http://localhost:8080/geoserver/web/"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:530 7ed0a773817a47208259617ecbb61321
+#: ../../admin/mgmt_commands/index.rst:525 20d6ee4406ee4f9ea62597c6289d7fbd
 msgid ""
 "You should login with the superuser credentials you setup when you first "
 "configured your GeoNode instance."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:532 dd1cf0dcf88545c1b247c6368dcb1a09
+#: ../../admin/mgmt_commands/index.rst:527 7f27ad1ba93a493699c1a19b56ef0001
 msgid ""
 "Once you are logged in to the GeoServer Admin interface, you should see "
 "the following."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:537 d55068e510d94b9a82cfec0b6bcd2de0
+#: ../../admin/mgmt_commands/index.rst:532 bf6c451da916478bab7b02cead41ace2
 msgid ""
-"The number of stores, layers and workspaces may be different depending on"
-" what you already have configured in your GeoServer."
+"The number of stores, Datasets and workspaces may be different depending "
+"on what you already have configured in your GeoServer."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:539 2ce78a6f018c44109ce96bb747635226
+#: ../../admin/mgmt_commands/index.rst:534 d2c1557b571d45499d8d25673ccd63b3
 msgid ""
 "Next you want to select the \"Stores\" option in the left hand menu, and "
 "then the \"Add new Store\" option. The following screen will be "
 "displayed."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:544 5995b2363f434cd193cc2c7c164540fa
+#: ../../admin/mgmt_commands/index.rst:539 6050a782abc746ccad68507724c90b63
 msgid ""
 "In this case, we want to select the PostGIS store type to create a "
 "connection to our existing database. On the next screen you will need to "
@@ -527,78 +527,111 @@ msgid ""
 "necessary for your own database)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:549 e3c0a4a41f854fff8da27bdc1bdb95ad
+#: ../../admin/mgmt_commands/index.rst:544 3df60e344dbb4b0f8b7b2280ed0b8325
 msgid "If you are unsure about any of the settings, leave them as the default."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:551 556f61b6b94049b3bb5df9c2c6a0dc13
+#: ../../admin/mgmt_commands/index.rst:546 19a591aa4e6f4146a07b3bc32beae55c
 msgid ""
-"The next screen lets you configure the layers in your database. This will"
-" of course be different depending on the layers in your database."
+"The next screen lets you configure the Datasets in your database. This "
+"will of course be different depending on the Datasets in your database."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:556 5b85d38a060a49bead6b79add405d0ad
+#: ../../admin/mgmt_commands/index.rst:551 42867f8a525b44c0ba494196af54f2af
 msgid ""
-"Select the \"Publish\" button for one of the layers and the next screen "
-"will be displayed where you can enter metadata for this layer. Since we "
-"will be managing this metadata in GeoNode, we can leave these alone for "
-"now."
+"Select the \"Publish\" button for one of the Datasets and the next screen"
+" will be displayed where you can enter metadata for this Dataset. Since "
+"we will be managing this metadata in GeoNode, we can leave these alone "
+"for now."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:561 ecc1572117a04cbb9af53a7c96ff6bdc
+#: ../../admin/mgmt_commands/index.rst:556 777f51450385400fbd14a6b1b26453c8
 msgid ""
 "The things that *must* be specified are the Declared SRS and you must "
 "select the \"Compute from Data\" and \"Compute from native bounds\" links"
 " after the SRS is specified."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:569 cf638adfd1ac41d3b96facf6f5a017fc
+#: ../../admin/mgmt_commands/index.rst:564 e1b279c8178a45ed820498a149814d48
 msgid ""
-"Click save and this layer will now be configured for use in your "
+"Click save and this Dataset will now be configured for use in your "
 "GeoServer."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:574 f6258fa37a644bd3b8a02a8dac524e26
+#: ../../admin/mgmt_commands/index.rst:569 3eeb720e1bba4ddcb3dfa9a2b68a5567
 msgid ""
-"The next step is to configure these layers in GeoNode. The "
+"The next step is to configure these Datasets in GeoNode. The "
 "``updatelayers`` management command can be used for this purpose. As with"
 " ``importlayers``, it's useful to look at the command line options for "
 "this command by passing the :guilabel:`--help` option"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:637 9bcf2eb863eb40c994cf58380508a300
+#: ../../admin/mgmt_commands/index.rst:632 8db2e3ba005b4fe5838420996e098d5d
+msgid "The update procedure includes the following steps:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:634 f8ecba65eadf4c9d9b03b69bdd67fbfa
+msgid ""
+"The process fetches from GeoServer the relevant WMS layers (all, by store"
+" or by workspace)"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:636 c2f877693ada4b9f995ec5034be26745
+msgid "If a filter is defined, the GeoServer layers are filtered"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:638 9a36daa50e1b4d5d905a0f87621d4b36
+msgid ""
+"For each of the layers, a GeoNode dataset is created based on the "
+"metadata registered on GeoServer (title, abstract, bounds)"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:640 f7dfca4606df4e77b9460d4f67c82ad2
+msgid ""
+"New layers are added, existing layers are replaced, unless the :guilabel"
+":`--skip-geonode-registered` option is used"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:642 271dd4d5497848a18aa92ac5151265e6
+msgid ""
+"The GeoNode layers, added in previous runs of the update process, which "
+"are no longer available in GeoServer are removed, if the :guilabel"
+":`--remove-delete` option is set"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:644 bda3c68ad2d74d889bc2f5cbfd48fda8
 msgid ""
 "One of the :guilabel:`--workspace` or :guilabel:`--store` must be always "
-"specified if you want to ingest Layers belonging to a specific "
-"``Workspace``. As an instance, in order to ingest the layers present into"
-" the ``geonode`` workspace, you will need to specify the option ``-w "
+"specified if you want to ingest Datasets belonging to a specific "
+"``Workspace``. As an instance, in order to ingest the Datasets present "
+"into the ``geonode`` workspace, you will need to specify the option ``-w "
 "geonode``."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:639 f5ac3e406282461fa48dfeb8880dcc13
+#: ../../admin/mgmt_commands/index.rst:646 70c53ff5bae249b69ccbe742d49b10db
 msgid ""
-"Let's ingest the layer ``geonode:_1_SARMIENTO_ENERO_2018`` from the "
+"Let's ingest the Dataset ``geonode:_1_SARMIENTO_ENERO_2018`` from the "
 "``geonode`` workspace."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:853 fb6fccca168c4cd2abe8797e0df088df
+#: ../../admin/mgmt_commands/index.rst:860 11818356c63548b293d53bf923ab23b6
 msgid ""
-"In case you don't specify the :guilabel:`-f` option, the layers that "
-"already exist in your GeoNode will be just updated and the configuration "
-"synchronized between GeoServer and GeoNode."
+"In case you don't specify the :guilabel:`-f` option, the Datasets that "
+"already exists in your GeoNode will be just updated and the configuration"
+" synchronized between GeoServer and GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:855 19d256fd01b4446a8d5b68f67bb9e7f5
+#: ../../admin/mgmt_commands/index.rst:862 276a4083d05f4fbbbbb31946f21ad009
 msgid ""
 "When updating **from** GeoServer, the configuration on GeoNode will be "
 "changed!"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:860 10a8098732d24d14963499804a60a33b
+#: ../../admin/mgmt_commands/index.rst:867 d7415266b712410586c2f1071fe5a677
 msgid "Using ``GDAL`` and ``OGR`` to convert your Data for use in GeoNode"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:862 fa6c7c33f6cd40f3a68cfd0088e41c33
+#: ../../admin/mgmt_commands/index.rst:869 800952563be2412ab5aec09abc7721cc
 msgid ""
 "GeoNode supports uploading data in :guilabel:`ESRI shapefiles`, "
 ":guilabel:`GeoTIFF`, :guilabel:`CSV`, :guilabel:`GeoJSON`, :guilabel"
@@ -606,113 +639,113 @@ msgid ""
 "formats only if you are using the ``geonode.importer`` backend)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:864 858d87a419374cb680f940b010d4883d
+#: ../../admin/mgmt_commands/index.rst:871 85f5393b268245c7b7c05eb6c8b6a486
 msgid ""
 "If your data is in other formats, you will need to convert it into one of"
 " these formats for use in GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:866 711d00a59d504b4e848a3566a9c4c88d
+#: ../../admin/mgmt_commands/index.rst:873 8291252229494330bfb43e6e55b02235
 msgid ""
 "If your :guilabel:`Raster` data is not correctly processed, it might be "
 "almost unusable with GeoServer and GeoNode. You will need to process it "
 "using `GDAL`."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:868 d9154132635c448186edf4a9c930642f
+#: ../../admin/mgmt_commands/index.rst:875 7cccd3d4b4d647089596ec9bf914a332
 msgid ""
 "You need to make sure that you have the GDAL library installed on your "
 "system. On Ubuntu you can install this package with the following "
 "command:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:876 ae4153d8282546a19eef4dd2f5c21c96
+#: ../../admin/mgmt_commands/index.rst:883 27eab9fa3ccf4d7a9db2821ed83890fe
 msgid "OGR (Vector Data)"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:878 1497b0b3518040368b87cb9a03f930cd
+#: ../../admin/mgmt_commands/index.rst:885 0245b33b3a054887bde03e0fcba1e6cb
 msgid ""
 "OGR is used to manipulate vector data. In this example, we will use "
 "MapInfo .tab files and convert them to shapefiles with the ogr2ogr "
 "command. We will use sample MapInfo files from the website linked below."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:880 97df37981c68465384d6c0344e24d71f
+#: ../../admin/mgmt_commands/index.rst:887 f274167a47b3461e8618bb4dbbc0d157
 msgid "http://services.land.vic.gov.au/landchannel/content/help?name=sampledata"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:882 86507c22eaca4e54904df05028d87636
+#: ../../admin/mgmt_commands/index.rst:889 ed527ac32e9044c5955c08afe2f77919
 msgid ""
-"You can download the Admin;(Postcode) layer by issuing the following "
+"You can download the Admin;(Postcode) Dataset by issuing the following "
 "command::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:886 5235190ceb2e4418adccfaae52e445fb
+#: ../../admin/mgmt_commands/index.rst:893 de37a6b362944bb68726542e7beb5a1f
 msgid "You will need to unzip this dataset by issuing the following command::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:890 8736294e10d749489413cfffc51022a9
+#: ../../admin/mgmt_commands/index.rst:897 7b39ee5621dd4577a5621d2f3adcea05
 msgid ""
 "This will leave you with the following files in the directory where you "
 "executed the above commands::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:906 2647a18dcf434aaaa3d3bcc9a432ddbe
+#: ../../admin/mgmt_commands/index.rst:913 f17396e9694745539ab0fb7a9c422c82
 msgid "First, lets inspect this file set using the following command::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:910 146bf1221843430395f03a9acf0c855a
+#: ../../admin/mgmt_commands/index.rst:917 2ebbc1d9bc87422cbe410bb6e0733371
 msgid "The output will look like the following::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:945 936fb511d3c7414ab7c1dfd1ddb3f2c9
+#: ../../admin/mgmt_commands/index.rst:952 0fb7bde2d49c455db4306eb1f033689c
 msgid ""
 "This gives you information about the number of features, the extent, the "
-"projection and the attributes of this layer."
+"projection and the attributes of this Dataset."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:947 0f60ae09493248c9962a3b7e5fda515b
+#: ../../admin/mgmt_commands/index.rst:954 c0e6061811ba49a3b0fb642812c61b7e
 msgid ""
-"Next, lets go ahead and convert this layer into a shapefile by issuing "
+"Next, lets go ahead and convert this Dataset into a shapefile by issuing "
 "the following command::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:951 3b30607537ff4fa5882ebf73ddd9f91b
+#: ../../admin/mgmt_commands/index.rst:958 b50f1d917a334228874710c72a66c2ee
 msgid ""
-"Note that we have also reprojected the layer to the WGS84 spatial "
+"Note that we have also reprojected the Dataset to the WGS84 spatial "
 "reference system with the -t_srs ogr2ogr option."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:953 613314b20afb456e977b815246712366
+#: ../../admin/mgmt_commands/index.rst:960 b7da4396fb93426d97f2735e6123cbff
 msgid "The output of this command will look like the following::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:960 466814166f114820930328690cb8fc51
+#: ../../admin/mgmt_commands/index.rst:967 6afd4c393d514b0eb86a03ad07563887
 msgid ""
 "This output indicates that some of the field names were truncated to fit "
 "into the constraint that attributes in shapefiles are only 10 characters "
 "long."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:962 cf7238ee7be44d72b6d5b147e46d0939
+#: ../../admin/mgmt_commands/index.rst:969 4818b5845902460ea97f296b45f5361f
 msgid ""
 "You will now have a set of files that make up the postcode_polygon.shp "
 "shapefile set. We can inspect them by issuing the following command::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:966 d22ad5acccde434caec41c74383de14e
+#: ../../admin/mgmt_commands/index.rst:973 e4a42e1c9f514150ad67aee85e77cc13
 msgid ""
 "The output will look similar to the output we saw above when we inspected"
 " the MapInfo file we converted from::"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:990 e53fa2b47324464180799eba1f5f2240
+#: ../../admin/mgmt_commands/index.rst:997 78308d346a4b4823b8a0342511c43286
 msgid ""
 "These files can now be loaded into your GeoNode instance via the normal "
 "uploader."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:992 a37b210d6ba846b29556184cf6b96397
+#: ../../admin/mgmt_commands/index.rst:999 8adda2a2df41478fbbf62e3844135e2a
 msgid ""
 "Visit the upload page in your GeoNode, drag and drop the files that "
 "composes the shapefile that you have generated using the GDAL ogr2ogr "
@@ -721,77 +754,77 @@ msgid ""
 "needed and then click the \"Upload files\" button."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:997 05d2eea9d70e4264b6221350c5c53f62
+#: ../../admin/mgmt_commands/index.rst:1004 ecc00d63c38848caa432c201288a2948
 msgid ""
 "As soon as the import process completes, you will have the possibility to"
-" go straight to the layer info page (\"Layer Info\" button), or to edit "
-"the metadata for that layer (\"Edit Metadata\" button), or to manage the "
-"styles for that layer (\"Manage Styles\")."
+" go straight to the Dataset info page (\"Layer Info\" button), or to edit"
+" the metadata for that Dataset (\"Edit Metadata\" button), or to manage "
+"the styles for that Dataset (\"Manage Styles\")."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1003 c0101587514247b5aebb3d242f38d077
+#: ../../admin/mgmt_commands/index.rst:1010 5219c291545847ea90c334c9fe793f7a
 msgid "GDAL (Raster Data)"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1005 d13a2031228341daa9fe2609ac1407d0
+#: ../../admin/mgmt_commands/index.rst:1012 6f24df2617a54c4594c6164125a52a61
 msgid ""
 "Let's see several examples on how to either convert raster data into "
 "different formats and/or process it to get the best performances."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1007 399c78e72d094a5f9f63b4f88e53803a
+#: ../../admin/mgmt_commands/index.rst:1014 86c2e39c6562495a898536f93458fc5c
 msgid "References:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1009 98fa714e47e842e3b05c28a1597efa09
+#: ../../admin/mgmt_commands/index.rst:1016 a9b996d307be47388da6524f27bbd38e
 msgid "https://geoserver.geo-solutions.it/edu/en/raster_data/processing.html"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1011 031f282bb02a4dc2ab55d086fe2abf45
+#: ../../admin/mgmt_commands/index.rst:1018 230d9ce62ac04954aca694359d70a0cc
 msgid "https://geoserver.geo-solutions.it/edu/en/raster_data/advanced_gdal/"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1014 d4b45cd31ced4f2e8e3d8a4bda12b415
+#: ../../admin/mgmt_commands/index.rst:1021 dde2c3d0eb654c88aacdf85c1228fbe9
 msgid ""
 "Raster Data Conversion: Arc/Info Binary and ASCII Grid data into GeoTIFF "
 "format."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1016 3a3bc282cb7949c0956c118f1095f771
+#: ../../admin/mgmt_commands/index.rst:1023 fe5f7bfd66d34f5a8ceee4ecdb9e5631
 msgid "Let's assume we have a sample ASCII Grid file compressed as an archive."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1023 8c0a58649560444b9b4ad4918f087c37
+#: ../../admin/mgmt_commands/index.rst:1030 35c334cc5b9f409cb9700286a2f13a36
 msgid "You will be left with the following files on your filesystem:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1037 1c66beea1b514f099b895f22bd0e9bcf
+#: ../../admin/mgmt_commands/index.rst:1044 004e7cca1a2b440db9313afd288dd951
 msgid ""
 "The file ``batemans_elevation.asc`` is an Arc/Info ASCII Grid file and "
 "the files in the batemans_ele directory are an Arc/Info Binary Grid file."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1040 976386b879284617bdd236a30aa8b455
+#: ../../admin/mgmt_commands/index.rst:1047 5d1b3c799eb044eea0b115fc4f06bc67
 msgid ""
 "You can use the ``gdalinfo`` command to inspect both of these files by "
 "executing the following command:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1047 9ddcb7a4040f4c3e82362ac3a8772956
+#: ../../admin/mgmt_commands/index.rst:1054 a655178705774e99bc45ec91eff19201
 msgid "The output should look like the following:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1066 5ebf2dd1e1084384b3273292ecc89837
+#: ../../admin/mgmt_commands/index.rst:1073 a5f770072fcf4b179b2f18c3d66a0960
 msgid ""
 "You can then inspect the batemans_ele files by executing the following "
 "command:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1072 30de4a60d9f34da4af9ece48c655eded
+#: ../../admin/mgmt_commands/index.rst:1079 803cb38f014d4cdba17604297142811c
 msgid "And this should be the corresponding output:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1118 d7e1de6e933446d1be5e12e6d926d57a
+#: ../../admin/mgmt_commands/index.rst:1125 9dff0c9baa0946f2951af96df2f3a077
 msgid ""
 "You will notice that the ``batemans_elevation.asc`` file does *not* "
 "contain projection information while the ``batemans_ele`` file does. "
@@ -801,75 +834,75 @@ msgid ""
 "following command."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1126 0567dfb65f164ac89f0ed255676b1732
+#: ../../admin/mgmt_commands/index.rst:1133 c3c24825f28f4e768c1b5e8046434e88
 msgid ""
 "The output will show you the progress of the conversion and when it is "
 "complete, you will be left with a ``batemans_ele.tif`` file that you can "
 "upload to your GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1129 78502553b1234f3a93a42dcd8e0fb8ed
+#: ../../admin/mgmt_commands/index.rst:1136 ceb0ac869a544e91b093be89672949f9
 msgid "You can inspect this file with the gdalinfo command:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1135 63273d3937e24fda98444a2068a91770
+#: ../../admin/mgmt_commands/index.rst:1142 fe9b6dd459d248e0a2b4b233cf97c404
 msgid "Which will produce the following output:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1166 eac369a929fc4734a34cba632a1d8e8c
+#: ../../admin/mgmt_commands/index.rst:1173 3907a2624e0d4648b06569a3b80ebcb8
 msgid "Raster Data Optimization: Optimizing and serving big raster data"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1168 297924bf0a954a04866063f0ca238981
+#: ../../admin/mgmt_commands/index.rst:1175 b344965c0cdc47cca66aac59545479d9
 msgid ""
 "(ref: https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example5.html)"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1170 8f7c807c980140d7818ad3d91fdd92fd
+#: ../../admin/mgmt_commands/index.rst:1177 b399560a91794eff8d21a97699ac94df
 msgid ""
 "When dealing with big raster datasets it could be very useful to use "
 "tiles."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1172 ad7eebf2c9cc4d5b85c60c5772f7a88b
+#: ../../admin/mgmt_commands/index.rst:1179 398e402ff92a4e9984778e1dd1156932
 msgid ""
 "Tiling allows large raster datasets to be broken-up into manageable "
 "pieces and are fundamental in defining and implementing a higher level "
 "raster I/O interface."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1175 00c315c39a79460082cf0182a4010bdc
+#: ../../admin/mgmt_commands/index.rst:1182 e8e026bf2a5c4b89978db3b9c9e02ad8
 msgid ""
 "In this example we will use the original dataset of the "
-"``chiangMai_ortho_optimized`` public raster layer which is currently "
+"``chiangMai_ortho_optimized`` public raster Dataset which is currently "
 "available on the Thai `CHIANG MAI Urban Flooding GeoNode platform "
 "<https://urbanflooding.geo-solutions.it/>`_."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1178 cdf25af95a584a2ea94a83a8663d2d21
+#: ../../admin/mgmt_commands/index.rst:1185 07b62db4e696448ba081505299d2b74a
 msgid ""
 "This dataset contains an orthorectified image stored as RGBa GeoTiff with"
 " 4 bands, three bands for the RGB and one for transparency (the alpha "
 "channel)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1181 fd5988d121c3488f906390c23c19980f
+#: ../../admin/mgmt_commands/index.rst:1188 8e6cecef04244cafa406eaf835748df0
 msgid "Calling the gdalinfo command to see detailed information:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1187 ce4977b385634c13a571bf223ffdcb54
+#: ../../admin/mgmt_commands/index.rst:1194 6430fce84551430fbaccac4d17e9289d
 msgid "It will produce the following results:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1243 8aa3fee8db6f4f9fb1164333fa736165
+#: ../../admin/mgmt_commands/index.rst:1250 0af8dc8a60be426ebd2d3e01146898c5
 msgid ""
 "As you can see, this GeoTiff has not been tiled. For accessing subsets "
 "though, tiling can make a difference. With tiling, data are stored and "
 "compressed in blocks (tiled) rather than line by line (stripped)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1245 b0606ee1b33040f5a10f937f8d0c20e7
+#: ../../admin/mgmt_commands/index.rst:1252 aeae6ec4d3ef481daff3f42a65b16eb2
 msgid ""
 "In the command output above it is visible that each band has blocks with "
 "the same width of the image (63203) and a unit length. The grids in the "
@@ -878,142 +911,142 @@ msgid ""
 "intersected area will have to be decompressed."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1250 ec0465ef6cb346ed96d91367ca3be051
+#: ../../admin/mgmt_commands/index.rst:1257 03b0e449dee040c9b3defad1a34bc805
 msgid ""
 "In the tiled image we will have to decompress only 16 tiles, whereas in "
 "the stripped image on the right we’ll have to decompress many more "
 "strips."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1252 ef6622dd83944c03a2d402930fcbf497
+#: ../../admin/mgmt_commands/index.rst:1259 feb4510cab4b4ad99700a90ed02a3097
 msgid ""
 "Drone images data usually have a stripped structure so, in most cases, "
 "they need to be optimized to increase performances."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1254 26a5cd9701ae4c11b22b842a4f5d64de
+#: ../../admin/mgmt_commands/index.rst:1261 df34fbf3176f45139fc4f5912cb86563
 msgid ""
 "Let’s take a look at the gdal_translate command used to optimize our "
 "GeoTiff:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1263 de03dfe3e54945d29c5d9671b9aea70f
+#: ../../admin/mgmt_commands/index.rst:1270 93684b96fb084480b15bc73475ece6c6
 msgid ""
 "For the details about the command parameters see https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example5.html"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1265 38afaf2bef7e4cefb99b2eaf52d4a49b
+#: ../../admin/mgmt_commands/index.rst:1272 a5b4fad90e68418b97dd7b645be074ce
 msgid ""
 "Once the process ended, call the gdalinfo command on the resulting tif "
 "file:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1271 3f841e433f7c411eb2b3d32cde7aa3b4
+#: ../../admin/mgmt_commands/index.rst:1278 b9d6b7d762324dae9d5e227ae50189a3
 msgid "The following should be the results:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1326 75741a79f1ac4590b284c24ebcacf1d9
+#: ../../admin/mgmt_commands/index.rst:1333 65bec459e3474b9495a44c2c82df7e11
 msgid ""
 "Our GeoTiff is now tiled with 256x256 tiles, has 3 bands and a 1-bit mask"
 " for nodata."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1328 46ce371ee5624fceacef699605212e7f
+#: ../../admin/mgmt_commands/index.rst:1335 32b3f37466f54ceebe7dd01a3d722170
 msgid "We can also add internal overviews to the file using the gdaladdo command:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1334 7d580f46795641f1963e781f5858f104
+#: ../../admin/mgmt_commands/index.rst:1341 b28c82a07df24ecc8d9edc7ed9235ba4
 msgid ""
 "Overviews are duplicate versions of your original data, but resampled to "
 "a lower resolution, they can also be compressed with various algorithms, "
 "much in the same way as the original dataset."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1336 e523e03d0aab4a4dab3f9f1aa4074136
+#: ../../admin/mgmt_commands/index.rst:1343 dbeac93af21b45b1982c473a7d724e2f
 msgid ""
 "By default, overviews take the same compression type and transparency "
 "masks of the input dataset (applied through the gdal_translate command), "
 "so the parameters to be specified are:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1338 0da777e18391407792693d2458906dc8
+#: ../../admin/mgmt_commands/index.rst:1345 ef8998623cc54cd2aaf5d836fb46933d
 msgid ""
 ":guilabel:`-r average`: computes the average of all non-NODATA "
 "contributing pixels"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1339 1625d23a10724fa0b35fb8608820cd17
+#: ../../admin/mgmt_commands/index.rst:1346 847fc87d3fa34292a47d06b6f66d2aae
 msgid ""
 ":guilabel:`2 4 8 16 32 64 128 256 512`: the list of integral overview "
 "levels to build (from gdal version 2.3 levels are no longer required to "
 "build overviews)"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1341
-#: ../../admin/mgmt_commands/index.rst:1482
-#: ../../admin/mgmt_commands/index.rst:1543 3c2f36dd6be345aaa2a524e07c1ac961
-#: d95c2fc0b1e64dac93fc4e12cb7a9d56 da52a7c0ee234204b05f60b0c972326f
+#: ../../admin/mgmt_commands/index.rst:1348
+#: ../../admin/mgmt_commands/index.rst:1489
+#: ../../admin/mgmt_commands/index.rst:1550 00cffc708f77410fbabbcd5aef4fcf4d
+#: 1b987f3b09ff4d0dbb7bfbe919895b75 616fb52509ac43ba95add89f88c07526
 msgid "Calling the gdalinfo command again:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1347 02ec1e0aa3dd4e9583c5fed03fa98fc0
+#: ../../admin/mgmt_commands/index.rst:1354 8e8f3f69516f4a66a0d9134da79642ef
 msgid "It results in:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1408 021b816e491e4d67b72586be5b5c0136
+#: ../../admin/mgmt_commands/index.rst:1415 6ad3c27fb4204dd0b9dc430a903db747
 msgid ""
 "Notice that the transparency masks of internal overviews have been "
 "applied (their compression does not show up in the file metadata)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1410 194c65855e0841fa8eb45dc24d855690
+#: ../../admin/mgmt_commands/index.rst:1417 6fa0b0e8afda48f3af07181d7a8f1420
 msgid ""
 "UAVs usually provide also two other types of data: ``DTM (Digital Terrain"
 " Model)`` and ``DSM (Digital Surface Model)``."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1412 0704f10aea234a8d977ecba36422f88e
+#: ../../admin/mgmt_commands/index.rst:1419 e2384d6ae0a044eb9d703a1c2c5ed4a3
 msgid ""
 "Those data require different processes to be optimized. Let’s look at "
 "some examples to better understand how to use gdal to accomplish that "
 "task."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1414 4906366ed5f3426a9f43f91b1d5d2551
+#: ../../admin/mgmt_commands/index.rst:1421 23800654c5914cd3a0b6a6fec9512f65
 msgid ""
 "From the `CHIANG MAI Urban Flooding GeoNode platform "
 "<https://urbanflooding.geo-solutions.it/>`_ platform it is currently "
-"available the ``chiangMai_dtm_optimized`` layer, let’s download its "
+"available the ``chiangMai_dtm_optimized`` Dataset, let’s download its "
 "original dataset."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1417 669ac722b3e247d8b37b56b72902dcb4
+#: ../../admin/mgmt_commands/index.rst:1424 15a20117cc71482c8889499c20063c29
 msgid "This dataset should contain the DTM file ``chiangMai_dtm.tif``."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1419 43a6f5cc2ef84b16a568c4f8b12ed1de
+#: ../../admin/mgmt_commands/index.rst:1426 568a9d77a7dc498c928feaca4c0fcb2d
 msgid "Calling the gdalinfo command on it:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1425 05b3860213674df191e0065f9e4e68ad
+#: ../../admin/mgmt_commands/index.rst:1432 5601f6c348a2476d9461bedb017ed385
 msgid "The following information will be displayed:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1472 acd526b3044249a4abdfa7b6156279e0
+#: ../../admin/mgmt_commands/index.rst:1479 3725cf32379e49f781507095ff477577
 msgid ""
 "Reading this image could be very slow because it has not been tiled yet. "
 "So, as discussed above, its data need to be stored and compressed in "
 "tiles to increase performances."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1474 155e3d8ca82d46dcaf23080b9123deb8
+#: ../../admin/mgmt_commands/index.rst:1481 2ecf8abc732c4123b5df60cd6c8da9fe
 msgid ""
 "The following gdal_translate command should be appropriate for that "
 "purpose:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1480 10488351dccc424c9ff95ebf688bac5f
+#: ../../admin/mgmt_commands/index.rst:1487 ae2bb1ec68f34bbfbf70909c3c84a04a
 msgid ""
 "When the data to compress consists of imagery (es. aerial photographs, "
 "true-color satellite images, or colored maps) you can use lossy "
@@ -1025,15 +1058,15 @@ msgid ""
 "COMPRESS=DEFLATE creation option."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1488 25576fac82644cb08277eda0d1d7612a
+#: ../../admin/mgmt_commands/index.rst:1495 f95175748e8647b98dcf00fcec4749cc
 msgid "We can observe the following results:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1535 f7dc17e5bd754d17b57f9a840b9fa0c3
+#: ../../admin/mgmt_commands/index.rst:1542 9feb86ab911c4894849cf92a40c9015d
 msgid "We need also to create overviews through the gdaladdo command:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1541 3e185c261b454463bbf61d780585af97
+#: ../../admin/mgmt_commands/index.rst:1548 7c1cab0cd7974eae917ad63cb09294b9
 msgid ""
 "Unlike the previous example, overviews will be created with the **nearest"
 " resampling algorithm**. That is due to the nature of the data we are "
@@ -1042,93 +1075,101 @@ msgid ""
 "conservation of the original data."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1549 2c31562e4f264e97b2408d12d8023565
+#: ../../admin/mgmt_commands/index.rst:1556 8071ae2e0905405597b8f066b71f3cbb
 msgid "We can see the following information:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1597 625bad61abe04d80a4697d03fe5e5eea
+#: ../../admin/mgmt_commands/index.rst:1604 52ba684318a842e6be646b753a451eef
 msgid ""
 "Overviews have been created. By default, they inherit the same "
 "compression type of the original dataset (there is no evidence of it in "
 "the gdalinfo output)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1600 e777109200a9493084a8564c6d24d77e
+#: ../../admin/mgmt_commands/index.rst:1607 5d0a35e21d6f4f5f9a0747a2cf86b8bc
 msgid "Other Raster Data Use Cases"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1602 eea464571aa248c7aac17a417b7aa569
+#: ../../admin/mgmt_commands/index.rst:1609 8a6696f45b4941be9d873c48bd1faad4
 msgid ""
 "`Serving a large number of GrayScale GeoTiff with Palette "
 "<https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example1.html>`_"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1603 43e94ec490ab4845b1a0ef34add9eae6
+#: ../../admin/mgmt_commands/index.rst:1610 e0ac0f5f2d4b44a190a17c56c42d0c93
 msgid ""
 "`Serving a large number of DTM ASCII Grid Files <https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example2.html>`_"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1604 4f0ca9f052844691aa52da2b844020af
+#: ../../admin/mgmt_commands/index.rst:1611 aae6b3132fcb4be7b88d81916dd7110e
 msgid ""
 "`Serving a large number of Cartographic Black/White GeoTiff with Palette "
 "<https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example3.html>`_"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1605 3f2a3ed5cdd74d1ebf015fb19f16b76c
+#: ../../admin/mgmt_commands/index.rst:1612 22b1227918ba41fb844e440fcc3dffb1
 msgid ""
 "`Serving a large number of satellite/aerial RGB GeoTiff with compression "
 "<https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example4.html>`_"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1606 c759403e335d4c10830d20b1999f3c28
+#: ../../admin/mgmt_commands/index.rst:1613 930193f1a20147cbb6433b16d1fc4bec
 msgid ""
 "`Optimizing and serving UAV data <https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example5.html>`_"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1607 149ef1d52a1844bbbce598cc695114ae
+#: ../../admin/mgmt_commands/index.rst:1614 3957eef47157431ea20aaa8b8c1a5ac0
 msgid ""
 "`Optimizing and serving 16-bits satellite/aerial RGB GeoTiff "
 "<https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/example6.html>`_"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1610 eb5cb904d00540edbb2ecd2b05dad200
+#: ../../admin/mgmt_commands/index.rst:1617 cead17ba16e94002bc0adf85fbdebabc
 msgid "Process Raster Datasets Programmatically"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1612 b4cc5fa123c847c6b914c047d926709b
+#: ../../admin/mgmt_commands/index.rst:1619 0d13230967c248dcb4be22d9c026666b
 msgid ""
 "In this section we will provide a set of :guilabel:`shell` scripts which "
 "might be very useful to batch process a lot of raster datasets "
 "programmatically."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1614 2ab215243bf640e3a27761777b08a4ce
+#: ../../admin/mgmt_commands/index.rst:1621 e6dd2211e1ac4abf8846b8dd93f9317f
 msgid "``process_gray.sh``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1630 84230a4b59be4f53ae1d9698b5a5607f
+#: ../../admin/mgmt_commands/index.rst:1637 f476883f7ab34780a0df61d105ab19af
 msgid "``process_rgb.sh``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1646 d56aa96bbb284f29b70ff6a5d4a438f3
+#: ../../admin/mgmt_commands/index.rst:1653 747386e3839e447295b83e096c9f8e2f
 msgid "``process_rgb_alpha.sh``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1662 2ba903c297ba4e73beb766d400239711
+#: ../../admin/mgmt_commands/index.rst:1669 db2efe613a184fee875c2863fe615875
 msgid "``process_rgb_palette.sh``"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1681 d316892f839f418d85ae4412fa69832a
+#: ../../admin/mgmt_commands/index.rst:1688 8f5d6e22d090434782ee64d2a579d080
+msgid "Thesaurus Import and Export"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1690 1e6544eee74f4a37981539ef572ef44c
+msgid "See :ref:`load_thesaurus` and :ref:`dump_thesaurus`."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1694 8c2a7828f48b4f93a53938233262119a
 msgid "Create Users and Super Users"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1683 56ccf77b61a445e6ac7d9fa4bab5314f
+#: ../../admin/mgmt_commands/index.rst:1696 0ca022cf1e014aff82011052bfc09372
 msgid ""
 "Your first step will be to create a user. There are three options to do "
 "so, depending on which kind of user you want to create you may choose a "
@@ -1137,23 +1178,23 @@ msgid ""
 "explicitly assigning them."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1687 b476466eda6e4808ba51d4e2f8068da0
+#: ../../admin/mgmt_commands/index.rst:1700 80faa3ac922d4d689e64cd6a3330eb0b
 msgid ""
 "The easiest way to create a superuser (in linux) is to open your terminal"
 " and type:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1699 a25a53b1b9a945b899e0fb06e834519d
+#: ../../admin/mgmt_commands/index.rst:1712 0315430cf40d4c38b15a342e6f1a720d
 msgid ""
 "You will be asked a username (in this tutorial we will call the superuser"
 " you now create *your_superuser*), an email address and a password."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1701 a3df1b4613ba43ef93424498187b978a
+#: ../../admin/mgmt_commands/index.rst:1714 271f00e8c361418fbd6835aeee3547b3
 msgid ""
 "Now you've created a superuser you should become familiar with the "
 "*Django Admin Interface*. As a superuser you are having access to this "
-"interface, where you can manage users, layers, permission and more. To "
+"interface, where you can manage users, Datasets, permission and more. To "
 "learn more detailed about this interface check this LINK. For now it will"
 " be enough to just follow the steps. To attend the *Django Admin "
 "Interface*, go to your geonode website and *sign in* with "
@@ -1161,11 +1202,11 @@ msgid ""
 "appear on the top right. Click on it and the following menu will show up:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1710 8c775282d35d43199bec363a5112452e
+#: ../../admin/mgmt_commands/index.rst:1723 81f58e145b484836bbd20c970788c680
 msgid "Clicking on *Admin* causes the interface to show up."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1715 ece5df13f3584a3da038541b649c0ada
+#: ../../admin/mgmt_commands/index.rst:1728 912f15d0d4ac4add9e0581057310a924
 msgid ""
 "Go to *Auth* -> *Users* and you will see all the users that exist at the "
 "moment. In your case it will only be *your_superuser*. Click on it, and "
@@ -1174,7 +1215,7 @@ msgid ""
 " most important."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1720 6ce5c35e61314f00ab7691515b8fa2b4
+#: ../../admin/mgmt_commands/index.rst:1733 8eec81c032c242929efbabefe0698622
 msgid ""
 "As you can see, there are three boxes that can be checked and unchecked. "
 "Because you've created a superuser, all three boxes are checked as "
@@ -1184,13 +1225,13 @@ msgid ""
 "Therefore keep the following two things in mind:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1725 dd4be656c0ae46b1b8e4a802adafb31f
+#: ../../admin/mgmt_commands/index.rst:1738 87000f9f1e414c5680a2114e6056e41c
 msgid ""
 "a superuser is able to access the *Django Admin Interface* and he has all"
 " permissions on the data uploaded to GeoNode."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1726 e23aef74176d4601b9076ee0fb88fde1
+#: ../../admin/mgmt_commands/index.rst:1739 b0cf6b81e51945e59006f26e4626acab
 msgid ""
 "an ordinary user (created from the GeoNode interface) only has *active* "
 "permissions by default. The user will not have the ability to access the "
@@ -1198,31 +1239,31 @@ msgid ""
 "him."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1728 e5c6bf84a3ee4aa3a5418368d4e1d6e7
+#: ../../admin/mgmt_commands/index.rst:1741 9e59fa29b68144c78de56225a152e69e
 msgid ""
 "Until now we've only created superusers. So how do you create an ordinary"
 " user? You have two options:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1730 f686fb06747d4ab495683e9863a119d0
+#: ../../admin/mgmt_commands/index.rst:1743 665e240a6750485ea1a2e4ad117d921c
 msgid "Django Admin Interface"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1732 e0fb1f3df6864e6d9f7363ed10aa2867
+#: ../../admin/mgmt_commands/index.rst:1745 a976df479591487aab6c96e983f1365f
 msgid ""
 "First we will create a user via the *Django Admin Interface* because "
 "we've still got it open. Therefore go back to *Auth* -> *Users* and"
 "             you should find a button on the right that says *Add user*."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1737 2a97ee7fa2bf45a3856643ed82b0c429
+#: ../../admin/mgmt_commands/index.rst:1750 0008eb86e1fd4925ab38337a286f4bc8
 msgid ""
 "Click on it and a form to fill out will appear. Name the new user "
 "test_user, choose a password and click *save* at the right bottom of the"
 "  site."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1742 d7654e9afd304ae7947ce0b1dab6cbb0
+#: ../../admin/mgmt_commands/index.rst:1755 9b6aac687774445da4c8cb9c8a41a9ae
 msgid ""
 "Now you should be directed to the site where you could change the "
 "permissions on the user *test_user*. As default only *active* is checked."
@@ -1231,192 +1272,207 @@ msgid ""
 "they are!"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1746
-#: ../../admin/mgmt_commands/index.rst:1763 8dfbb07a542042569c036f437bc51d47
-#: cce288a4017f4025aadab8318d1ba7a7
-msgid "Por fazer"
+#: ../../admin/mgmt_commands/index.rst:1759
+#: ../../admin/mgmt_commands/index.rst:1776 3f5e4fafb56f4a54aa66f9bacf754e01
+#: d04cb2111deb4362a5ecc27f5c7fceaa
+msgid "Todo"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1746 ea38aa3fd4bc4ca0a2f77df7ad5e649a
+#: ../../admin/mgmt_commands/index.rst:1759 5b44a88716ae482c91656e5af01f6a1b
 msgid "groups and permissions!"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1748 f66449578ac34fda90e2ab18dfc50ffb
+#: ../../admin/mgmt_commands/index.rst:1761 4a549c4848224924abbb612474fdf435
 msgid ""
 "To test whether the new user was successfully created, go back to the "
 "GeoNode web page and try to sign in."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1750 8b37795f88294e3288de37e02aa00341
+#: ../../admin/mgmt_commands/index.rst:1763 0934cf421ada47fe9ff3b53422b86875
 msgid "GeoNode website"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1753 04953e44845941d2bdb8879c85cf5e4b
+#: ../../admin/mgmt_commands/index.rst:1766 2d0186f0017144be8eaee048ae6f92be
 msgid ""
 "To create an ordinary user you could also just use the GeoNode website. "
 "If you installed GeoNode using a release, you should"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1753 981f205904004356a41b7f2d3fab6799
+#: ../../admin/mgmt_commands/index.rst:1766 726e7c9c23584c589568b7bfac98079a
 msgid ""
 "see a *Register* button on the top, beside the *Sign in* button (you "
 "might have to log out before)."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1758 c4128152c9a743d68e56d3e4d9c19f48
+#: ../../admin/mgmt_commands/index.rst:1771 2a8c3ec42feb4204b0c298fbe86fcf22
 msgid ""
 "Hit the button and again a form will appear for you to fill out. This "
 "user will be named *geonode_user*"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1763 5ee1bd1b755b4138a0d335f1b7c172d8
+#: ../../admin/mgmt_commands/index.rst:1776 bbcc063145064eb0a875cd453d4c95cf
 msgid "NEW IMAGE WITH GEONODE USER!"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1765 ddfab6e16bcf4cae802d96f3c7054a3c
+#: ../../admin/mgmt_commands/index.rst:1778 19076240f632451aafcf649f635faf0e
 msgid ""
 "By hitting *Sign up* the user will be signed up, as default only with the"
 " status *active*."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1770 ff677153dfc6481d9b45c35c58c92098
+#: ../../admin/mgmt_commands/index.rst:1783 2b20bfc08eb0476bbe1bdaee490c28a8
 msgid "Batch Sync Permissions"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1772 9b2bef8553dc4e30a65512a637b538df
+#: ../../admin/mgmt_commands/index.rst:1785 08bb414724dc442d94cd052c17526720
 msgid ""
 "GeoNode provides a very useful management command "
 "``set_layers_permisions`` allowing an administrator to easily add / "
-"remove permissions to groups and users on one or more layers."
+"remove permissions to groups and users on one or more Datasets."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1774 575fd4bec67e4242a02c534b84fd10d8
+#: ../../admin/mgmt_commands/index.rst:1787 def4e4285cd2494bb413ca299bb6f75b
 msgid "The ``set_layers_permisions`` command arguments are:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1776 3357c253eda84ad3a446edd8a6b0c4d3
-msgid ""
-"**permissions** to set/unset --> read (r), write (w), download (d), owner"
-" (o)"
+#: ../../admin/mgmt_commands/index.rst:1789 c5fcc36625614171a5015544407c133b
+msgid "**permissions** to set/unset --> read, download, edit, manage"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1798 b1335f670a1b46a6a294ee6ed522af0d
+#: ../../admin/mgmt_commands/index.rst:1820 0dfa082c6c0c4103959e7ac1dd3affe2
 msgid ""
-"**resources** (layers) which permissions will be assigned on --> type the"
-" layer title (use quotation mark for titles with white space), multiple "
-"choices can be typed with white space separator, if no titles are "
-"provided all the layers will be considered"
+"NB: the above permissions list may change with the ADVANCED_WORKFLOW "
+"enabled. For additional info: "
+"https://docs.geonode.org/en/master/admin/admin_panel/index.html#how-to-"
+"enable-the-advanced-workflow"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1799 04a7409cb3934ee5908c377fa43fa9e2
+#: ../../admin/mgmt_commands/index.rst:1822 90e989888ecc4829a7e9f79b5c22fd1a
+msgid ""
+"**resources** (Datasets) which permissions will be assigned on --> type "
+"the Dataset id, multiple choices can be typed with comma separator, if no"
+" ids are provided all the Datasets will be considered"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1823 58fbdb29b6b84d788b8b153bcbfa2085
 msgid ""
 "**users** who permissions will be assigned to, multiple choices can be "
-"typed with a white space separator"
+"typed with a comma separator"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1800 2cee582e7c1b45499e7d1eea7ccb66b8
+#: ../../admin/mgmt_commands/index.rst:1824 c65f83779d0a4c8b8fbe78bb83da8d35
 msgid ""
 "**groups** who permissions will be assigned to, multiple choices can be "
-"typed with a white space separator"
+"typed with a comma separator"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1801 5dea0fadf5464588ba4ef67ea5c4684b
+#: ../../admin/mgmt_commands/index.rst:1825 7459ce711ea74ac991e022269631e2b5
 msgid "**delete** flag (optional) which means the permissions will be unset"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1804 6373bc933f1e4400a77363023ef6b5e0
+#: ../../admin/mgmt_commands/index.rst:1828 cceb9e4196554990b67f971266930142
 msgid "Usage examples:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1806 8cc257ae705244e5af7b7d9973862842
+#: ../../admin/mgmt_commands/index.rst:1830 1102f134368343ed8ffd054e05e6b589
 msgid ""
-"Assign **write** permissions on the layers **layer_X** and **layer Y** to"
-" the users **user_A** and **user_B** and to the group **group_C**."
+"Assign **edit** permissions on the Datasets with id **1** and **2** to "
+"the users **username1** and **username2** and to the group "
+"**group_name1**."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1812 ead678835ba24db99cae1450614fc49a
-msgid "Assign **owner** permissions on all the layers to the group **group_C**."
-msgstr ""
-
-#: ../../admin/mgmt_commands/index.rst:1818 a4c92b4545d74970a21267989a113966
+#: ../../admin/mgmt_commands/index.rst:1836 76f852cd20f545f4b5061676bb158a01
 msgid ""
-"Unset **download** permissions on the layer **layer_X** for the user "
-"**user_A**."
+"Assign **manage** permissions on all the Datasets to the group "
+"**group_name1**."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1824 334025826164462eb2e83b37b333a20a
+#: ../../admin/mgmt_commands/index.rst:1842 9d0cfa046b6f46f3abd425b9fad89c8c
+msgid ""
+"Unset **download** permissions on the Dataset with id **1** for the user "
+"**username1**."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1848 594d79b9ad5143488e9ac4897dbc923c
 msgid ""
 "The same functionalities, with some limitations, are available also from "
-"the :guilabel:`Admin Dashboard >> Layers`."
+"the :guilabel:`Admin Dashboard >> Users` or :guilabel:`Admin Dashboard >>"
+" Groups >> Group profiles`."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1829 b0fc3da3e2864b09b2c3553db9d40ee5
+#: ../../admin/mgmt_commands/index.rst:1853 14313625917b41c6a10f3fae82943335
 msgid ""
-"An action named :guilabel:`Set layers permissions` is available from the "
-"list, redirecting the administrator to a form to set / unset read, write,"
-" download and ownership permissions on the selected layers."
+"An action named :guilabel:`Set layer permissions` is available from the "
+"list, redirecting the administrator to a form to set / unset read, edit, "
+"download permissions on the selected Users/group profile."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1838 e816734c5dce41429de48cea0ffe047a
+#: ../../admin/mgmt_commands/index.rst:1858 bbc2a2742de64dd39a5b861acf719232
+msgid ""
+"Is enough to select the dataset and press \"Submit\". If the async mode "
+"is activated, the permission assign is asyncronous"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1863 a06fba37b5174f4eae4a72535e143b97
 msgid "Delete Certain GeoNode Resources"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1840 531bdb574d3e4abbb2c4e217a15693ee
+#: ../../admin/mgmt_commands/index.rst:1865 f0bf80c6cc564b6c92b703f2cb116c2b
 msgid ""
 "The ``delete_resources`` :guilabel:`Management Command` allows to remove "
 "resources meeting a certain condition, specified in a form of a "
 "serialized django Q() expression."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1843 8f77ab7f36b044568e93732546897d98
+#: ../../admin/mgmt_commands/index.rst:1868 99c56cce97cb4789a4e621576f1a5fde
 msgid ""
 "First of all let's take a look at the ``--help`` option of the "
 "``delete_resources`` management command in order to inspect all the "
 "command options and features."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1858 5fc4399b7c8c4705b252b82f7ee1855a
+#: ../../admin/mgmt_commands/index.rst:1883 2c314c4fbb34436d95139d87dae05292
 msgid "This will produce output the following output:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1897 a85115f32a9f4d2eaf5d79ef22a656a0
+#: ../../admin/mgmt_commands/index.rst:1922 41568aa9f59a4fc594f7a518b849ea52
 msgid ""
 "There are two ways to declare Q() expressions filtering which resources "
 "should be deleted:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1899 d15ceaae0210404ea6912ed05744a4ce
+#: ../../admin/mgmt_commands/index.rst:1924 5ac4b69565114901bb8d6ccd8fa0ce47
 msgid ""
 "With a JSON configuration file: passing ``-c`` argument specifying the "
 "path to the JSON configuration file."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1901 f494802abb6244e6acc9b89b0dd56cbf
+#: ../../admin/mgmt_commands/index.rst:1926 a33bb24381b44f9db436ada21d83f155
 msgid "**Example 1**: Relative path to the config file (to ``manage.py``)"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1908 78f4849e413b4a8f9c02ccdf1b3050d9
+#: ../../admin/mgmt_commands/index.rst:1933 76a26eac4a3a4f168da590dfda998f94
 msgid "**Example 2**: Absolute path to the config file"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1915 1f0b1e45017c4362ac8546c54542ae1f
+#: ../../admin/mgmt_commands/index.rst:1940 15f78e5ae69a4d2db2daca319799698f
 msgid ""
 "With CLI: passing ``-l`` ``-d`` ``-m`` list arguments for each of "
-"resources (layers, documents, maps)"
+"resources (Datasets, documents, maps)"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1917 d7ff1230fc4940fc8c57769b8d65ea63
+#: ../../admin/mgmt_commands/index.rst:1942 26c4d2a602284ca29f0ffc9634471335
 msgid "**Example 3**: Delete resources without configuration file"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1926 ed0f4a8fb17443b89ae3c10f44a7ccfa
+#: ../../admin/mgmt_commands/index.rst:1951 7de27de1d9744316a09764cb83fdeb11
 msgid "Configuration File"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1928 52cca03308584c33a1e2f71c8374b166
+#: ../../admin/mgmt_commands/index.rst:1953 7529c3917e59415295ef2e4a3a160429
 msgid ""
 "The JSON configuration file should contain a single `filters` object, "
-"which consists of `layer`, `map` and `document` lists. Each list "
+"which consists of `Dataset`, `map` and `document` lists. Each list "
 "specifies the filter conditions applied to a corresponding queryset, "
 "defining which items will be deleted. The filters are evaluated and "
 "directly inserted into Django .filter() method, which means the filters "
@@ -1428,31 +1484,330 @@ msgid ""
 "with ``'*'`` which will cause deleting all the queryset of the resource."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1935 24d27feeae10459b9ad668f02ddcdfa5
+#: ../../admin/mgmt_commands/index.rst:1960 6fa65baf973e440b9cfa7d20ac39e3b5
 msgid ""
 "**Example 4**: Example content of the configuration file, which will "
-"delete layers with ID's 1, 2, and 3, those owned by `admin` user, along "
-"with all defined maps."
+"delete Datasets with ID's 1, 2, and 3, those owned by `admin` user, along"
+" with all defined maps."
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1952 fe84963369e04196a68cf36edfaeda15
+#: ../../admin/mgmt_commands/index.rst:1977 cf69cef88ed54c9888f6aaec6d9af973
 msgid "CLI"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1954 951bd2b28180450e9cef0b81d597c1ea
+#: ../../admin/mgmt_commands/index.rst:1979 d971f289f2d848fda1f8606b44fee437
 msgid ""
 "The CLI configuration can be specified with ``-l`` ``-d`` ``-m`` list "
 "arguments, which in fact are a translation of the configuration JSON "
 "file. ``-l`` ``-d`` ``-m`` arguments are evaluated in the same manner as "
-"filters.layer, filters.map and filter.document accordingly from the "
+"filters.Dataset, filters.map and filter.document accordingly from the "
 "Example 4. The following example's result will be equivalent to Example "
 "4:"
 msgstr ""
 
-#: ../../admin/mgmt_commands/index.rst:1959 90325eb4468d464eb99092e337d63ec4
+#: ../../admin/mgmt_commands/index.rst:1984 f3c21dd3630f418582d317e0db37a5c4
 msgid ""
-"**Example 5**: Example CLI configuration, which will delete layers with "
-"ID's 1, 2, and 3, along with all maps."
+"**Example 5**: Example CLI configuration, which will delete Datasets with"
+" ID's 1, 2, and 3, along with all maps."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1992 ce3122a731294104ab8d3cf8d59f6d63
+msgid "Async execution over http"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1994 868b637994604290b900a95148f205b1
+msgid "It is possible to expose and run management commands over http."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:1996 86d0dc025cc142be9d1b6a1c1eaa3d7a
+msgid ""
+"To run `custom django management commands "
+"<https://docs.djangoproject.com/en/3.2/howto/custom-management-"
+"commands/>`_ usually we make make use of the command line:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2003 0c6544a131b54d03afb69457308c9712
+msgid ""
+"The ``management_commands_http`` app allows us to run commands when we "
+"have no access to the command line. It's possible to run a command using "
+"the API or the django admin GUI."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2006 e8e003dd822c4e15af5aa203ea24cd51
+msgid ""
+"For security reasons, only admin users can access the feature and the "
+"desired command needs to be explicitly exposed. By default the following "
+"commands are exposed: *ping_mngmt_commands_http*, *updatelayers*, "
+"*sync_geonode_datasets*, *sync_geonode_maps*, *importlayers* and "
+"*set_all_datasets_metadata*."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2009 bfb5acd1a7c14e37a004fd00adf3b8c8
+msgid ""
+"To expose more command you can change the environment variable "
+"``MANAGEMENT_COMMANDS_EXPOSED_OVER_HTTP`` and the added commands will be "
+"exposed in your application."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2011 ae2f82625ca740468914a39a2c242321
+msgid ""
+"The list of exposed commands is available by the endpoint "
+"``list_management_commands`` and also presented by the form in the admin "
+"page ``create management command job``."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2013 4fd33be60440498cb2b99639fcebea63
+msgid ""
+"To use the commands in an asyncronous approach ``ASYNC_SIGNALS`` needs to"
+" be set to ``True`` and celery should be running."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2016 192415a27e3340618f26bfdb8797e048
+msgid "Manage using django admin interface"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2019
+#: ../../admin/mgmt_commands/index.rst:2135 066e1d471f8640169a3431af542d8fc7
+#: 4259dbd208934aff81548f26bdd6d1aa
+msgid "Creating a job"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2021 41d2ed54a7df4dae8679b8b4f319871c
+msgid ""
+"Access the admin panel: ``http://<your_geonode_host>/admin`` and go to "
+"\"Management command jobs\"."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2027 ec103323d5f84f8a8f346f99efd28ca3
+msgid "Management commands over http admin menu."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2027 1d7b66babdf340c9a59c50bd4cf31ca6
+msgid "*Management command admin section*"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2029 2ced546d0bd845f2be783fbb12418a1f
+msgid ""
+"You will arrive at "
+"http://<your_geonode_host>/en/admin/management_commands_http/managementcommandjob/,"
+" then click on the buttton ``+ Add management command job`` "
+"(``http://<your_geonode_host>/en/admin/management_commands_http/managementcommandjob/add/``)."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2036 70e1633a454e402d83947bb340d44e07
+msgid "Button: Add management command job."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2036 ec4d5a7bdd0b44ed87aaa9517529a695
+msgid "*Add management command job*"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2038 e514e7d099ec49dfb236f7681e3880c8
+msgid ""
+"Select the command and fill the form, with the arguments and/or key-"
+"arguments if needed. Save you job and in the list select the ``start`` "
+"action, alterantively you can mark the ``autostart`` option and the "
+"command will be automatic started when created."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2045 adca8f55617d43b28379a9e17fada642
+msgid "Form: Add management command job."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2045 d48a8555e551413ca56f9d0efc6deb18
+msgid "*Creating a management command job form*"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2049 694094eb09af4b3aad175ebf96d22289
+msgid "Starting a job"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2051 ee29cf528b784ea98194cb94c6881781
+msgid "To start a job:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2057 306857db02b24f95b2c9e882002575a7
+msgid "Starting a management command job."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2057 518f7990149b4e53a8ba51a85f7a6d9c
+msgid "*Starting a job*"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2059 6875b4e8443c4d2ea10bb332da036ebd
+msgid "Select the job to be started."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2060 cc497ea2bc8d45afa54d22220dae9a51
+msgid "Select the ``start`` action."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2061 402a5ae272df496db48a454053fcb3b3
+msgid "Click in ``Go``."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2062 45ee551410994a7282a6fb7a2f7d616e
+msgid ""
+"The page will refresh and the job status will have changed. If it takes a"
+" long to run, refresh the page to see the updated the status."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2063 9361a4a49df64db3a4886a19db285f0d
+msgid "A ``stop`` option is also available."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2066 04d34491caff42aa96d1f0196f8f8df1
+msgid ""
+"If it takes too long to load the page, ``ASYNC_SIGNALS`` may not be "
+"activated. If its status gets stuck at ``QUEUED``, verify if celery is "
+"running and properly configured."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2071 0848a12ccb5044c1b02d2529caa90625
+msgid "Job status"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2073 2fd93a1fe28c466b8215e544064d8738
+msgid ""
+"Clicking at the link in the ID of a job, we can see the details of this "
+"job. For the job we just created, we can verify the output message and "
+"celery job status."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2080 09218b01a73e49029c7b475cfc3067c2
+msgid "Management command job status."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2080 7c7249cbef354113b474c278ae7509b4
+msgid "*Example job status*"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2083 e3a507d90cea42eba65c22807cb18b5b
+msgid ""
+"When we have an error during execution the traceback message will be "
+"available in the ``Celery traceback``. In the next image a "
+"``ping_mngmt_commands_http`` job was created with the arguments ``[\"--"
+"force_exception\", true]``. Checking the text in this field can be useful"
+" when troubleshooting errors."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2091 36aabacc300147808620ab854be024be
+msgid "Management command job status with a traceback message."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2091 97deea9153ca42b3b33d3cb9b2bde9bc
+msgid "*Example job traceback message*"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2095 d0210e87c5584ccd8cd0149d1e43d4a0
+msgid "Manage using API endpoints"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2097 7e20bb37a0f844139053466689e70cbf
+msgid ""
+"The execution of the management commands can be handled by http requests "
+"to an API: ``http://<your_geonode_host>/api/v2/management/``."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2099 21c672b2fc424aa88067942606ff5cf2
+msgid ""
+"All the requests need to be authenticated with administrative permissions"
+" (*superuser*)."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2101 4d0e60c064b64103af7d175cd0e57d11
+msgid ""
+"You can find here a postman collection with all the exemples listed here "
+"and other available endpoints:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2103 a3bbd6fcec6b4c8bb4b0c4f4de3e6b40
+msgid ""
+":download:`geonode_mngmt_commands.postman_collection.json "
+"<data/geonode_mngmt_commands.postman_collection.json>`"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2107 2169dfc697024364b4f109a161ae39cc
+msgid "List exposed commands"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2109 72461f1d2fae402b852195b14e1f891a
+msgid "Getting a list of the exposed commands:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2115
+#: ../../admin/mgmt_commands/index.rst:2157
+#: ../../admin/mgmt_commands/index.rst:2196
+#: ../../admin/mgmt_commands/index.rst:2239
+#: ../../admin/mgmt_commands/index.rst:2273 068d7bb2b8064ea7b007d5bb46cc927b
+#: 28c19c7e64314a4d960174f972fb2cda 5a4dfb4696cd47ab9f57c772a4572d2e
+#: e23b70d498764ffdbc5ce196caaf119b f969e6c3d3c144b18a43d883cd9ac1d4
+msgid "Response:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2132 7889f973bfc044539957b5fd9b984bfd
+msgid ""
+"You should change the header ``Authorization`` (``Basic "
+"YWRtaW46YWRtaW4=``) to your Auth token, in this example I am using a "
+"token for ``admin`` as username and ``admin`` as password."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2137 a4c9fa14a5134ecb9fa16d511b3e531a
+msgid ""
+"Optionally, before creating the job you can get its *help message* with "
+"the following call:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2144 00dfa5cf151c4b6d943c0c9ac69f4039
+msgid ""
+"Creating a job for running ``ping_mngmt_commands_http`` with 30 seconds "
+"of sleep time:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2184 4cc98203094243149f8520962807b37e
+msgid ""
+"Alterantively you can omit the ``jobs`` part of the url to create a job. "
+"(Using "
+"``http://<your_geonode_host>/api/v2/management/commands/ping_mngmt_commands_http/``"
+" as url)"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2188 b82af980771f42f5bd8b9e7d743ec2f5
+msgid "Start/Stop actions"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2190 2f1494f41ab14b9ea3e26d87dd78f06e
+msgid "To start the created job:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2222 4437d8d416594861a283b74868e836a4
+msgid "During execution the job can be interrupted using the following call:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2228 0e80611a640a4893a9585768c6998c94
+msgid ""
+"Note that the status changed from **CREATED** to **QUEUED**, during "
+"execution it will be **STARTED** and at the end **FINISHED**."
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2231 298d0261225540458dc4888e8a875ae2
+msgid "Jobs list and status"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2233 14bad98fda2e413ab367c4495ec33711
+msgid "You can verify your job status and details with the following call:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2267 1fcca9bbf3e548e0a694d2d9824cb4f4
+msgid ""
+"When runing multiple jobs and to audit already ran jobs. A list of jobs "
+"can be retrieved using the following call:"
+msgstr ""
+
+#: ../../admin/mgmt_commands/index.rst:2298 898354ea9f524f689a8fd9c59f7b410f
+msgid ""
+"This list can be filtered by the fields \"celery_result_id\", "
+"\"command\", \"app_name\", \"status\", \"user\" and \"user__username\"."
 msgstr ""
 
 #~ msgid ""
@@ -1575,5 +1930,440 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Por fazer"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Users/Groups Permissions` on "
+#~ ":guilabel:`Layers`; those will be refreshed"
+#~ " and synchronized with the :guilabel:`GIS"
+#~ " Server` ones also"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Metadata`, :guilabel:`Legend` and "
+#~ ":guilabel:`Download` links on :guilabel:`Layers` "
+#~ "and :guilabel:`Maps`"
+#~ msgstr ""
+
+#~ msgid "Management Command ``sync_geonode_layers``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This command allows to sync already "
+#~ "existing permissions on Layers. In order"
+#~ " to change/set Layers' permissions refer"
+#~ " to the section :ref:`batch_sync_permissions`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**filter**; Only update data the layer"
+#~ " names that match the given filter."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**updatepermissions**; Update the layer "
+#~ "permissions; synchronize it back to the"
+#~ " GeoSpatial Server. This option is "
+#~ "also available from the :guilabel:`Layer "
+#~ "Details` page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**updateattributes**; Update the layer "
+#~ "attributes; synchronize it back to the"
+#~ " GeoSpatial Server. This option is "
+#~ "also available from the :guilabel:`Layer "
+#~ "Details` page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**updatethumbnails**; Update the map styles"
+#~ " and thumbnails. This option is also"
+#~ " available from the :guilabel:`Layer "
+#~ "Details` page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First of all let's take a look "
+#~ "at the :guilabel:`--help` option of the"
+#~ " ``sync_geonode_layers`` management command in"
+#~ " order to inspect all the command "
+#~ "options and features."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Example 1**: I want to update/sync "
+#~ "all layers permissions and attributes "
+#~ "with the GeoSpatial Server"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Example 2**: I want to regenerate "
+#~ "the Thumbnails of all the Layers "
+#~ "belonging to ``afabiani``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This command allows to reset **Metadata"
+#~ " Attributes** and **Catalogue Schema** on"
+#~ " Layers. The command will also update"
+#~ " the :guilabel:`CSW Catalogue` XML and "
+#~ "Links of GeoNode."
+#~ msgstr ""
+
+#~ msgid "**filter**; Only update data the layers that match the given filter."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are situations where it is "
+#~ "not possible or not convenient to "
+#~ "use the :guilabel:`Upload Form` to add"
+#~ " new Layers to GeoNode via the "
+#~ "web interface. As an instance:"
+#~ msgstr ""
+
+#~ msgid "The dataset is simply too big to be uploaded through a web interface."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We would like to import some data"
+#~ " from the mass storage programmatically."
+#~ msgstr ""
+
+#~ msgid "We would like to import some tables from a DataBase."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We need to process the data first"
+#~ " and, maybe, transform it to another"
+#~ " format."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`-hh` Identifies the GeoNode "
+#~ "server where we want to upload our"
+#~ " layers. The default value is "
+#~ ":guilabel:`http://localhost:8000`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The import layers management command is"
+#~ " invoked by specifying options as "
+#~ "described above and specifying the path"
+#~ " to a directory that contains "
+#~ "multiple files. For purposes of this "
+#~ "exercise, let's use the default set "
+#~ "of testing layers that ship with "
+#~ "geonode. You can replace this path "
+#~ "with the directory to your own "
+#~ "shapefiles."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The status code, is the response "
+#~ "coming from GeoNode. For example 201 "
+#~ "means that the layer has been "
+#~ "correctly uploaded"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "While it is possible to import "
+#~ "layers directly from your servers "
+#~ "filesystem into your GeoNode, you may"
+#~ " have an existing GeoServer that "
+#~ "already has data in it, or you "
+#~ "may want to configure data from a"
+#~ " GeoServer which is not directly "
+#~ "supported by uploading data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GeoServer supports a wide range of "
+#~ "data formats and connections to "
+#~ "database, and while many of them "
+#~ "are not supported as GeoNode upload "
+#~ "formats, if they can be configured "
+#~ "in GeoServer, you can add them to"
+#~ " your GeoNode by following the "
+#~ "procedure described below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GeoServer supports 3 types of data: "
+#~ ":guilabel:`Raster`, :guilabel:`Vector`, "
+#~ ":guilabel:`Databases` and :guilabel:`Cascaded`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Lets walk through an example of "
+#~ "configuring a new PostGIS database in"
+#~ " GeoServer and then configuring those "
+#~ "layers in your GeoNode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The number of stores, layers and "
+#~ "workspaces may be different depending on"
+#~ " what you already have configured in"
+#~ " your GeoServer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The next screen lets you configure "
+#~ "the layers in your database. This "
+#~ "will of course be different depending"
+#~ " on the layers in your database."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select the \"Publish\" button for one"
+#~ " of the layers and the next "
+#~ "screen will be displayed where you "
+#~ "can enter metadata for this layer. "
+#~ "Since we will be managing this "
+#~ "metadata in GeoNode, we can leave "
+#~ "these alone for now."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click save and this layer will now"
+#~ " be configured for use in your "
+#~ "GeoServer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The next step is to configure "
+#~ "these layers in GeoNode. The "
+#~ "``updatelayers`` management command can be "
+#~ "used for this purpose. As with "
+#~ "``importlayers``, it's useful to look at"
+#~ " the command line options for this"
+#~ " command by passing the :guilabel:`--help`"
+#~ " option"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "One of the :guilabel:`--workspace` or "
+#~ ":guilabel:`--store` must be always specified"
+#~ " if you want to ingest Layers "
+#~ "belonging to a specific ``Workspace``. "
+#~ "As an instance, in order to ingest"
+#~ " the layers present into the "
+#~ "``geonode`` workspace, you will need to"
+#~ " specify the option ``-w geonode``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's ingest the layer "
+#~ "``geonode:_1_SARMIENTO_ENERO_2018`` from the "
+#~ "``geonode`` workspace."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case you don't specify the "
+#~ ":guilabel:`-f` option, the layers that "
+#~ "already exist in your GeoNode will "
+#~ "be just updated and the configuration"
+#~ " synchronized between GeoServer and "
+#~ "GeoNode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can download the Admin;(Postcode) "
+#~ "layer by issuing the following command::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This gives you information about the "
+#~ "number of features, the extent, the "
+#~ "projection and the attributes of this"
+#~ " layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Next, lets go ahead and convert "
+#~ "this layer into a shapefile by "
+#~ "issuing the following command::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that we have also reprojected "
+#~ "the layer to the WGS84 spatial "
+#~ "reference system with the -t_srs ogr2ogr"
+#~ " option."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As soon as the import process "
+#~ "completes, you will have the possibility"
+#~ " to go straight to the layer "
+#~ "info page (\"Layer Info\" button), or"
+#~ " to edit the metadata for that "
+#~ "layer (\"Edit Metadata\" button), or to"
+#~ " manage the styles for that layer "
+#~ "(\"Manage Styles\")."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this example we will use the"
+#~ " original dataset of the "
+#~ "``chiangMai_ortho_optimized`` public raster layer"
+#~ " which is currently available on the"
+#~ " Thai `CHIANG MAI Urban Flooding "
+#~ "GeoNode platform <https://urbanflooding.geo-"
+#~ "solutions.it/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "From the `CHIANG MAI Urban Flooding "
+#~ "GeoNode platform <https://urbanflooding.geo-"
+#~ "solutions.it/>`_ platform it is currently "
+#~ "available the ``chiangMai_dtm_optimized`` layer, "
+#~ "let’s download its original dataset."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now you've created a superuser you "
+#~ "should become familiar with the *Django"
+#~ " Admin Interface*. As a superuser you"
+#~ " are having access to this interface,"
+#~ " where you can manage users, layers,"
+#~ " permission and more. To learn more"
+#~ " detailed about this interface check "
+#~ "this LINK. For now it will be "
+#~ "enough to just follow the steps. "
+#~ "To attend the *Django Admin Interface*,"
+#~ " go to your geonode website and "
+#~ "*sign in* with *your_superuser*. Once "
+#~ "you've logged in, the name of your"
+#~ " user will appear on the top "
+#~ "right. Click on it and the "
+#~ "following menu will show up:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GeoNode provides a very useful "
+#~ "management command ``set_layers_permisions`` "
+#~ "allowing an administrator to easily add"
+#~ " / remove permissions to groups and"
+#~ " users on one or more layers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**permissions** to set/unset --> read "
+#~ "(r), write (w), download (d), owner "
+#~ "(o)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**resources** (layers) which permissions will"
+#~ " be assigned on --> type the "
+#~ "layer title (use quotation mark for "
+#~ "titles with white space), multiple "
+#~ "choices can be typed with white "
+#~ "space separator, if no titles are "
+#~ "provided all the layers will be "
+#~ "considered"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**users** who permissions will be "
+#~ "assigned to, multiple choices can be "
+#~ "typed with a white space separator"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**groups** who permissions will be "
+#~ "assigned to, multiple choices can be "
+#~ "typed with a white space separator"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Assign **write** permissions on the "
+#~ "layers **layer_X** and **layer Y** to"
+#~ " the users **user_A** and **user_B** "
+#~ "and to the group **group_C**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Assign **owner** permissions on all the"
+#~ " layers to the group **group_C**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unset **download** permissions on the "
+#~ "layer **layer_X** for the user "
+#~ "**user_A**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The same functionalities, with some "
+#~ "limitations, are available also from the"
+#~ " :guilabel:`Admin Dashboard >> Layers`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An action named :guilabel:`Set layers "
+#~ "permissions` is available from the list,"
+#~ " redirecting the administrator to a "
+#~ "form to set / unset read, write,"
+#~ " download and ownership permissions on "
+#~ "the selected layers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With CLI: passing ``-l`` ``-d`` ``-m``"
+#~ " list arguments for each of resources"
+#~ " (layers, documents, maps)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The JSON configuration file should "
+#~ "contain a single `filters` object, which"
+#~ " consists of `layer`, `map` and "
+#~ "`document` lists. Each list specifies "
+#~ "the filter conditions applied to a "
+#~ "corresponding queryset, defining which items"
+#~ " will be deleted. The filters are "
+#~ "evaluated and directly inserted into "
+#~ "Django .filter() method, which means the"
+#~ " filters occurring as separated list "
+#~ "items are treated as AND condition. "
+#~ "To create OR query ``|`` operator "
+#~ "should be used. For more info "
+#~ "please check Django "
+#~ "[documentation](https://docs.djangoproject.com/en/3.2/topics/db/queries"
+#~ "/#complex-lookups-with-q-objects)). The only "
+#~ "exception is passing a list with "
+#~ "``'*'`` which will cause deleting all"
+#~ " the queryset of the resource."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Example 4**: Example content of the"
+#~ " configuration file, which will delete "
+#~ "layers with ID's 1, 2, and 3, "
+#~ "those owned by `admin` user, along "
+#~ "with all defined maps."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The CLI configuration can be specified"
+#~ " with ``-l`` ``-d`` ``-m`` list "
+#~ "arguments, which in fact are a "
+#~ "translation of the configuration JSON "
+#~ "file. ``-l`` ``-d`` ``-m`` arguments are"
+#~ " evaluated in the same manner as "
+#~ "filters.layer, filters.map and filter.document "
+#~ "accordingly from the Example 4. The "
+#~ "following example's result will be "
+#~ "equivalent to Example 4:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Example 5**: Example CLI configuration, "
+#~ "which will delete layers with ID's "
+#~ "1, 2, and 3, along with all "
+#~ "maps."
 #~ msgstr ""
 

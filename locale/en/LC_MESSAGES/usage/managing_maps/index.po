@@ -8,27 +8,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../usage/managing_maps/index.rst:2 439eb57596cf4db2968b4d4eec04ff19
+#: ../../usage/managing_maps/index.rst:2 10f300727fa94bdeb981bceb5c806c6c
 msgid "Managing Maps"
 msgstr ""
 
-#: ../../usage/managing_maps/index.rst:6 c51b46f07e404d4493e8cb78a9af2977
+#: ../../usage/managing_maps/index.rst:6 8d8c1e3d23fb499bad2f9534c0917925
 msgid ""
-"Maps are sets of layers displayed together on an interactive web map. "
+"Maps are sets of datasets displayed together on an interactive web map. "
 "Maps can be composed in the map composer and saved as GeoNode resources. "
 "Maps can also be associated with metadata, ratings, and comments."
 msgstr ""
 
-#: ../../usage/managing_maps/index.rst:7 d7ef8ed936214b44b4770d259a9f9084
+#: ../../usage/managing_maps/index.rst:7 c372feefc1a546aab7e33315ac88b16b
 msgid "In this section, you will learn how to create a new map and share it."
 msgstr ""
+
+#~ msgid ""
+#~ "Maps are sets of layers displayed "
+#~ "together on an interactive web map. "
+#~ "Maps can be composed in the map"
+#~ " composer and saved as GeoNode "
+#~ "resources. Maps can also be associated"
+#~ " with metadata, ratings, and comments."
+#~ msgstr ""
 

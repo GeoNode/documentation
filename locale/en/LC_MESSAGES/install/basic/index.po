@@ -8,37 +8,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../install/basic/index.rst:5 406ae6f7826747e1995a51fb1c8b9b40
+#: ../../install/basic/index.rst:5 a11403ba5a3543ad9d0047bb23f20c46
 msgid "GeoNode Basic Installation"
 msgstr ""
 
-#: ../../install/basic/index.rst:8 12218c12d8cd449898dc9e408e0c0173
+#: ../../install/basic/index.rst:8 4577ea4437aa4839b9cd0a2759179552
 msgid "Overview"
 msgstr ""
 
-#: ../../install/basic/index.rst:10 bde4bc669d4f4697be33d5b0a0ccf543
+#: ../../install/basic/index.rst:10 f22d33b1d67e426493a18dd88d9efea0
 msgid ""
 "The followings are the easiest and recommended ways to deploy a full-"
 "stack GeoNode server on your host."
 msgstr ""
 
-#: ../../install/basic/index.rst:12 6bbed845b1644dfe9b0e1ddd94212346
+#: ../../install/basic/index.rst:12 bae2ebc9209b4a719ef0e5f1ecd1f2fd
 msgid ""
 "**First Step**: Deploy :guilabel:`GeoNode on a local server`, running as "
 "``http://localhost/`` service. :guilabel:`GeoServer` will be also "
 "available at ``http://localhost/geoserver/``"
 msgstr ""
 
-#: ../../install/basic/index.rst:14 f741c4ad2b6f4c68a346ae65b7cf3c70
+#: ../../install/basic/index.rst:14 c2348a59f29e4987a05d0049ea8831aa
 msgid ""
 "**Second Step**: Deploy :guilabel:`GeoNode on a production server`, "
 "running as ``https://my_geonode.geonode.org/`` service. "
@@ -46,210 +46,211 @@ msgid ""
 "``https://my_geonode.geonode.org/geoserver/``"
 msgstr ""
 
-#: ../../install/basic/index.rst:16 91e2f0ddadd94c5284feac6880b03950
+#: ../../install/basic/index.rst:16 5417e8d1c76b48da9c8e3b3b25a007f7
 msgid "**Third Step**: Customize :guilabel:`.env` to match your needs"
 msgstr ""
 
-#: ../../install/basic/index.rst:18 b1fe050290ff46308e0ec326b3528d38
+#: ../../install/basic/index.rst:18 78ff55f41ef548578537ac09dc37346f
 msgid ""
 "**Fourth Step**: Secure your production deployment; change the "
 ":guilabel:`admin` passwords and :guilabel:`OAUth2` keys"
 msgstr ""
 
-#: ../../install/basic/index.rst:20 819fe8e160a2460b843e773a866d90f4
+#: ../../install/basic/index.rst:20 b3e1e3ef429541d4a94c1fe75bc49c12
 msgid "**Further Production Enhancements**"
 msgstr ""
 
-#: ../../install/basic/index.rst:23 ee6b63611fec41ba83ce8e9d9dc30f49
-msgid "First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)"
+#: ../../install/basic/index.rst:23 d38eda6c3ce7497eac91560d06c10425
+msgid "First Step: Deploy GeoNode on a local server"
 msgstr ""
 
-#: ../../install/basic/index.rst:28 3f7c7395a11340c3abdac6431d531584
-msgid "Ubuntu (18.0 +)"
+#: ../../install/basic/index.rst:28 58d0cce27a3844a793945de8f8f4cbb0
+msgid "Ubuntu (22.04)"
 msgstr ""
 
-#: ../../install/basic/index.rst:30 f7890f193af84618a19f25bed45695c5
-msgid "Recommended version 18.0.4 (Bionic Beaver)."
+#: ../../install/basic/index.rst:30 83cc106364e44bd092d553f860d1db13
+msgid "Recommended version 22.04 (Jammy Jellyfish)."
 msgstr ""
 
-#: ../../install/basic/index.rst:33 ../../install/basic/index.rst:82
-#: 35182ec3d8c245ef87a472d690e673f3 cd2611687b234cf99e8d007b057cd736
-msgid "Packages Installation"
-msgstr ""
-
-#: ../../install/basic/index.rst:35 ../../install/basic/index.rst:84
-#: 050dc72ceb524af5b6852a7ee0d40e90 7e84710059d74d8b80bf73001d85ab1b
-msgid ""
-"First, we are going to install all the **system packages** needed for the"
-" GeoNode setup. Login to the target machine and execute the following "
-"commands:"
-msgstr ""
-
-#: ../../install/basic/index.rst:52 ../../install/basic/index.rst:102
-#: 7dade4ee4bb14a3e9b84abe9435e421c e9867aca459c4c919113bf88e7d0665c
+#: ../../install/advanced/core/docker/ubuntu.rst:5
+#: ../../install/basic/index.rst:33 5b2961ebe4ee4dc8bd60d28bd0ba0712
+#: 885b01e8010245059cda32118878f8e1
 msgid "Docker Setup (First time only)"
 msgstr ""
 
-#: ../../install/basic/index.rst:75 17ac1cdbd69d44818c923bca0335aaa6
-msgid "CentOS (7.0 +)"
-msgstr ""
-
-#: ../../install/basic/index.rst:77 671fae6fb6c84ca9bc1994008ca57464
-msgid "Recommended version 7.0 or higher."
-msgstr ""
-
-#: ../../install/basic/index.rst:79 9185635a71504a929ceeda680a83bc68
+#: ../../install/basic/index.rst:34 64afd1b8abdc4eb18d02a0020d63afc8
 msgid ""
-"Accordingly to the version you use, the packages installation might be a "
-"bit different."
+"We suggest to follow the official documentation to install `Docker "
+"<https://docs.docker.com/engine/install/ubuntu/>`_."
 msgstr ""
 
-#: ../../install/basic/index.rst:118 bc532dfe337a4b1bb278e91953c7c135
+#: ../../install/basic/index.rst:36 cef67946c04d4e82ba639b25bef0eff1
+msgid ""
+"For Windows users a good option is to install Docker inside `WSL "
+"<https://learn.microsoft.com/en-us/windows/wsl/install>`_. Another "
+"solution that also works for Mac users is using `Docker Desktop "
+"<https://docs.docker.com/desktop/>`_."
+msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:2
+#: 6c460667779d42bf83ee38321e8db183
+msgid "1. Install the Docker and docker-compose packages on Ubuntu 22.04"
+msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:6
+#: 8fb7893ee6ad4dceb492401b044db744
+msgid ""
+"The following steps were taken from the official `Docker documentation "
+"<https://docs.docker.com/engine/install/ubuntu/>`_. We invite you to "
+"refer to it for any update."
+msgstr ""
+
+#: ../../install/basic/index.rst:42 a84a356d3a61406094fda7036473d5f5
 msgid "Create an instance of your ``geonode-project``"
 msgstr ""
 
-#: ../../install/basic/index.rst:120 be2cb448e68a4c269dd26e11d1bc737a
+#: ../../install/basic/index.rst:44 0a17b91901624abea83ccf426e9757af
 msgid ""
 "Let's say your project is named :guilabel:`my_geonode` perform the "
 "following steps:"
 msgstr ""
 
-#: ../../install/basic/index.rst:146 474f41ff3ead4819b055f0b7a50680b0
+#: ../../install/basic/index.rst:61 53a1689baf1b4610ab557acbf179d216
 msgid "Startup the containers"
 msgstr ""
 
-#: ../../install/basic/index.rst:153 89069a114fd94e969879c69b0ed96401
+#: ../../install/basic/index.rst:68 f1134684db744ba2b0c8fcf135c3ce80
 msgid ""
 "You can follow the containers startup by running the following commands "
 "from ``my_geonode`` root folder:"
 msgstr ""
 
-#: ../../install/basic/index.rst:169 0eddccbdfd97484f8a028d074fbecbd1
+#: ../../install/basic/index.rst:84 e2409c1532bc4599a7d709865efb34c5
 msgid ""
 "If any error occurs, try to catch the error stacktrace by running the "
 "following commands from ``my_geonode`` root folder:"
 msgstr ""
 
-#: ../../install/basic/index.rst:178 ../../install/basic/index.rst:188
-#: 62ed54e4f0eb41aba0206e2d576dea65 7f696e594d2b49bea567d7eb7a02f20c
+#: ../../install/basic/index.rst:93 ../../install/basic/index.rst:103
+#: cb38b50782514d199773227785fe933f f40237b50f494447afef7a39c485ebc1
 msgid "Connect to :guilabel:`http://localhost/`"
 msgstr ""
 
-#: ../../install/basic/index.rst:180 df1900fd6beb481e8f847bf5f7a00dd8
+#: ../../install/basic/index.rst:95 7d308608a36543e6bbd0253ff7c67900
 msgid "The startup typically takes some time, so be patient…"
 msgstr ""
 
-#: ../../install/basic/index.rst:182 07f113100be24c2abeb26bfef596737d
+#: ../../install/basic/index.rst:97 e2a9a6a84b384c80a3eb9e4f1cce33d9
 msgid ""
 "If everything goes well, you should be able to see from the ``geonode "
 "startup logs`` a line similar to the following one:"
 msgstr ""
 
-#: ../../install/basic/index.rst:190 db0dcda1fd9c4fc5b239cf8bf9a63662
+#: ../../install/basic/index.rst:105 dc8516448adb4257a2791ec05894f09a
 msgid "The default credentials are:"
 msgstr ""
 
-#: ../../install/basic/index.rst:192 a1af439a10fc4ebdba2592fa565c953d
+#: ../../install/basic/index.rst:107 ea457652686e444198053eaf261aa340
 msgid "GeoNode (:guilabel:`http://localhost/`) :guilabel:`admin`:"
 msgstr ""
 
-#: ../../install/basic/index.rst:194 ffc64aa298d24d989809760bf47f36d4
+#: ../../install/basic/index.rst:109 a349dcf5d09e4f7caa59fa769479f93b
 msgid "``username: admin`` ``password: admin``"
 msgstr ""
 
-#: ../../install/basic/index.rst:197 fafb4f658d814fab96f57b716a2a7784
+#: ../../install/basic/index.rst:112 8d7cc43ba1124a52ab102625d591b696
 msgid "GeoServer (:guilabel:`http://localhost/geoserver/`) :guilabel:`admin`:"
 msgstr ""
 
-#: ../../install/basic/index.rst:199 afe9429046074443884374ffa41d98d3
+#: ../../install/basic/index.rst:114 e941aefffac042a5b4957b92cb668955
 msgid "``username: admin`` ``password: geoserver``"
 msgstr ""
 
-#: ../../install/basic/index.rst:203 c8d499ca0c9a48f5965c9df4864590a5
+#: ../../install/basic/index.rst:118 ca2d5e9052364fcca4296868105a1c3e
 msgid ""
 "Second Step: Deploy GeoNode on a production server (e.g.: "
 "https://my_geonode.geonode.org/)"
 msgstr ""
 
-#: ../../install/basic/index.rst:205 ea43d52ed288448fb4caf2176066ac9a
+#: ../../install/basic/index.rst:120 9bd844b707554737b2066149ca1b3411
 msgid ""
 "In the case you would like to deploy to, let's say, "
 ":guilabel:`https://my_geonode.geonode.org/`, you will need to change "
 "``.env`` as follows:"
 msgstr ""
 
-#: ../../install/basic/index.rst:332 ../../install/basic/index.rst:461
-#: 2ee4cd41755f42a9a74edcb9973df7c4 8618673e125b49dc91650824de2ab5c1
+#: ../../install/basic/index.rst:247 ../../install/basic/index.rst:376
+#: 4512799cc8ce402cbe6d6679319c3b76 5d7d4979f1de4a6788a93c93281a88e9
 msgid "Restart the containers"
 msgstr ""
 
-#: ../../install/basic/index.rst:334 ../../install/basic/index.rst:630
-#: 25fa8887216444388f46a1c772bbbc82 ba72ee41bbf641158d0c8bffdc9327c5
+#: ../../install/basic/index.rst:249 ../../install/basic/index.rst:547
+#: 3554a6e3a2b0489aa93aec9acd3458a8 f6147259399e408d82fdf4adc760bdf2
 msgid ""
 "Whenever you change someting on :guilabel:`.env` file, you will need to "
 "rebuild the container"
 msgstr ""
 
-#: ../../install/basic/index.rst:336 ../../install/basic/index.rst:465
-#: ../../install/basic/index.rst:632 8a9bce4e7bb144cc8d2b440f071e86ef
-#: c8fb12b653194b7697303f1e40c6915c f9e6f6a1ef234882bc5c5b9af85d7c0e
+#: ../../install/basic/index.rst:251 ../../install/basic/index.rst:380
+#: ../../install/basic/index.rst:549 0b8221dfd5ef4e67861b519eaaae0407
+#: 6b06fbeb9ac64172a35d51a2d4ff30c1 8c8ea336df9b4c96bf5a880cfe512f0d
 msgid ""
 "**Be careful!** The following command drops any change you might have "
 "done manually inside the containers, except for the static volumes."
 msgstr ""
 
-#: ../../install/basic/index.rst:343 863bb276069b44fc9207c1ec0c613031
+#: ../../install/basic/index.rst:258 3c17fce4800143129f1c4e6648246d80
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../install/basic/index.rst:345 aad414e57fa24ae7a003aa7b460e3e35
+#: ../../install/basic/index.rst:260 5bf0cd801ce24b11886b155f59a517a3
 msgid ""
 "If for some reason you are not able to reach the server on the "
 ":guilabel:`HTTPS` channel, please check the :guilabel:`NGINX` "
 "configuration files below:"
 msgstr ""
 
-#: ../../install/basic/index.rst:347 210458262adc4e6283da17cc27ecfe66
+#: ../../install/basic/index.rst:262 115e43df2ff84f74971fd2088067a70a
 msgid "Enter the :guilabel:`NGINX` container"
 msgstr ""
 
-#: ../../install/basic/index.rst:353 c35803aa4d8b457eb19fafb4840265b5
+#: ../../install/basic/index.rst:268 2de7b29cf3a94506a71ab4aeeb10468a
 msgid "Install an editor if not present"
 msgstr ""
 
-#: ../../install/basic/index.rst:359 1feb895d14414a8cb33c209ebb524034
+#: ../../install/basic/index.rst:274 a08bddd6bbbf4cfc8983210752bde2f8
 msgid ""
 "Double check that the ``nginx.https.enabled.conf`` link has been "
 "correctly created"
 msgstr ""
 
-#: ../../install/basic/index.rst:368 bf3172149eac4085bd6e7edca498ec29
+#: ../../install/basic/index.rst:283 47a2de7d61384b1cb8b24eae67dbcc8d
 msgid ""
 "If the list does not match exactly the figure above, please run the "
 "following commands, and check again"
 msgstr ""
 
-#: ../../install/basic/index.rst:375 078740ae84d24835ac93c3a80dc021b3
+#: ../../install/basic/index.rst:290 9bea70638b5d4f62800f432a72f7aeb5
 msgid "Inspect the ``nginx.https.enabled.conf`` contents"
 msgstr ""
 
-#: ../../install/basic/index.rst:381 46e76fb0dd794457bf1680aa56622206
+#: ../../install/basic/index.rst:296 de6bf695d1e54e80b1d454fdc1ad2e29
 msgid "Make sure the contents match the following"
 msgstr ""
 
-#: ../../install/basic/index.rst:385 13102bb7584247c5a2886b600052384c
+#: ../../install/basic/index.rst:300 c3bc641d9c564dd49eb6c254738d5be8
 msgid "Change the :guilabel:`Hostname` accordingly. **This is only an example!**"
 msgstr ""
 
-#: ../../install/basic/index.rst:429 0ead8971fed242d88799d74562cc4c5d
+#: ../../install/basic/index.rst:344 826b630e96ac4464b1b7cbfe6032dcc2
 msgid "**Save the changes, if any, and exit!**"
 msgstr ""
 
-#: ../../install/basic/index.rst:431 5d6dab213e294e7c900f98a45c6fbc37
+#: ../../install/basic/index.rst:346 8b6d88b120a140b698457f19e1423098
 msgid "Reload the NGINX configuration"
 msgstr ""
 
-#: ../../install/basic/index.rst:439 f722c971d52b475da536a95e28e9b4a6
+#: ../../install/basic/index.rst:354 7ec226e4d4004835ad610e944aa3d1ba
 msgid ""
 "It may be helpful to disable https to isolate the source of errors. After"
 " reverting the HTTPS-related changes in the `.env` file, repeat the above"
@@ -257,139 +258,146 @@ msgid ""
 "correctly created."
 msgstr ""
 
-#: ../../install/basic/index.rst:447 231bd95903a940718cbcdad08ac080eb
+#: ../../install/basic/index.rst:362 fcb4100bd14e4ab2b79ce782885a82e1
 msgid "Third Step: Customize :guilabel:`.env` to match your needs"
 msgstr ""
 
-#: ../../install/basic/index.rst:449 f3c40e333b4c4ca3a23ef876f02d953f
+#: ../../install/basic/index.rst:364 da279bec2b9b47478440821f7578939b
 msgid ""
 "In the case you would like to modify the GeoNode behavior, always use the"
 " :guilabel:`.env` file in order to update the :guilabel:`settings`."
 msgstr ""
 
-#: ../../install/basic/index.rst:451 83fa38de550e436fa3b27b6006193ec7
+#: ../../install/basic/index.rst:366 e306f0dce7f145b5a20cd361289c2e9a
 msgid ""
 "If you need to change a setting which does not exist in :guilabel:`.env`,"
 " you can force the values inside :guilabel:`my_geonode/settings.py`"
 msgstr ""
 
-#: ../../install/basic/index.rst:453 6cb58ad88b56435aa3b1d9bc3a68e9fc
+#: ../../install/basic/index.rst:368 11bb5720958d4c16a78d135d132770d6
 msgid "Refer to the section: :ref:`settings`"
 msgstr ""
 
-#: ../../install/basic/index.rst:455 c2cc98e5c9274728a028ce75e6bffb1d
+#: ../../install/basic/index.rst:370 63737c9dff354cce8dbfdc5aca7f3aa6
 msgid "You can add here any property referred as"
 msgstr ""
 
-#: ../../install/basic/index.rst 892198a213984ba992477a1ac9af931b
+#: ../../install/basic/index.rst 2bc55f51119c451083d481c7336fa022
 msgid "Env: ``PROPERTY_NAME``"
 msgstr ""
 
-#: ../../install/basic/index.rst:463 afecd8e09210466b80095cd999e795e0
+#: ../../install/basic/index.rst:378 8c34385cbf434ff0a5d87f6c473ae57c
 msgid ""
 "Whenever you change someting on :guilabel:`.env` file, you will need to "
 "rebuild the containers."
 msgstr ""
 
-#: ../../install/basic/index.rst:473 3e30339fc23d4403bc6df073bd030886
+#: ../../install/basic/index.rst:388 4dc42dba4c334726bb44f43f34b05d3a
 msgid ""
 "Fourth Step: Secure your production deployment; change the "
 ":guilabel:`admin` passwords and :guilabel:`OAUth2` keys"
 msgstr ""
 
-#: ../../install/basic/index.rst:476 8c8bd42dde87491e8febf4eeb2d41edf
+#: ../../install/basic/index.rst:391 1a2ae9c54fc044eb8b31b51623685401
 msgid "GeoServer Setup"
 msgstr ""
 
-#: ../../install/basic/index.rst:479 a9e9f0b09ca4423b9c4ce881d0a4cd62
+#: ../../install/basic/index.rst:394 0cb4d4412c274fdfa75b900b10445d27
 msgid "Admin Password Update"
 msgstr ""
 
-#: ../../install/basic/index.rst:487 ee5eaf762aee409b92d30e1fb6953489
+#: ../../install/basic/index.rst:402 b594c40523c14a85beac40bf657abe66
 msgid "*GeoServer Admin Password Update*"
 msgstr ""
 
-#: ../../install/basic/index.rst:490 b41d66e37f7b4f9e93ef465d19354a11
+#: ../../install/basic/index.rst:405 f3dcc6031f7f4cd0a04929a2c4c79053
 msgid "OAUth2 REST API Key"
 msgstr ""
 
-#: ../../install/basic/index.rst:492 ../../install/basic/index.rst:512
-#: 7fc81e6e78544039ad4e0f7d322468ff 9661dc8da44245499ff5727e7d54ed43
+#: ../../install/basic/index.rst:407 ../../install/basic/index.rst:427
+#: e75fb8151ddb44d5be892d05ba4e1811 f60e6e6083d04c91ad575d29fce1c7b1
 msgid ""
 "In order to generate new strong random passwords you can use an online "
 "service like https://passwordsgenerator.net/"
 msgstr ""
 
-#: ../../install/basic/index.rst:494 ../../install/basic/index.rst:514
-#: 72eab7d735994090bca9aac40218c8a4 b022e71bc8aa40aaa6ea68b9c46a9486
+#: ../../install/basic/index.rst:409 ../../install/basic/index.rst:429
+#: b120b19695ad481a88e893a9ae4547b8 fa4e0178cf634acdb1f1539a6d93c603
 msgid ""
 "Avoid using Symbols ( e.g. @#$% ) as they might conflict with "
 ":guilabel:`.env` file"
 msgstr ""
 
-#: ../../install/basic/index.rst:499 9168a7c6fe8c401ab5c8b1c3c12d8e6a
+#: ../../install/basic/index.rst:414 aad05585dd9948568f8584b7370eaeff
 msgid "*OAUth2 REST API Key Update*"
 msgstr ""
 
-#: ../../install/basic/index.rst:502 9c37b14ad0204485935897891c27726f
+#: ../../install/basic/index.rst:417 aa991110d7d9452e8bec999417f1d4a9
 msgid "GeoServer Disk Quota"
 msgstr ""
 
-#: ../../install/basic/index.rst:507 e5ae5a10c21f4a12be36ca0d7ab45a9a
+#: ../../install/basic/index.rst:422 51eed6ded59b433fa9fb8bda84bb72ae
 msgid "*GeoServer Disk Quota Update*"
 msgstr ""
 
-#: ../../install/basic/index.rst:510 dac566adeb934e4a948ee8bc5393ac88
+#: ../../install/basic/index.rst:425 72da8f719cfd4ab39b3e650b4ea063c0
 msgid "Update the passwords and keys on :guilabel:`.env` file"
 msgstr ""
 
-#: ../../install/basic/index.rst:587 6b797cc6462d4ea392fa65b20f9e9a9f
-msgid "[Optional] Update your SSH Certificates"
+#: ../../install/basic/index.rst:501 8177e2c5706d407b97903ef195d9675d
+msgid ""
+"**Be careful!** The env GEOSERVER_ADMIN_PASSWORD is not actually used to "
+"change the GeoServer admin password. You need to login on GeoServer UI "
+"and change it manually!"
 msgstr ""
 
-#: ../../install/basic/index.rst:589 c866fec9f56d40b59f8b9e85e011f2b8
+#: ../../install/basic/index.rst:504 71235231dffa4289b0280b14a13e459e
+msgid "[Optional] Update your SSL Certificates"
+msgstr ""
+
+#: ../../install/basic/index.rst:506 b7f67ab6665241daa40e7a4bf7f9cf12
 msgid ""
 "In production deployment mode, GeoNode uses by default :guilabel:`Let's "
 "Encrypt` certificates"
 msgstr ""
 
-#: ../../install/basic/index.rst:591 5305cebde435466999c44e5f15cc7bd7
+#: ../../install/basic/index.rst:508 96e3376003c54c0cba1a090fc7394cff
 msgid "You may want to provide your own certificates to GeoNode"
 msgstr ""
 
-#: ../../install/basic/index.rst:628 3956e9db17024e63b40843dc56de2f5c
+#: ../../install/basic/index.rst:545 4d1b362bdda04c3ea3cce3cbc99c060b
 msgid "Restart the GeoNode and NGINX containers"
 msgstr ""
 
-#: ../../install/basic/index.rst:640 93bc4605b2bb42c3bae3cf9248c2c265
+#: ../../install/basic/index.rst:557 ec8a100eb1784888a2d673fc3e15cdc2
 msgid "Further Production Enhancements"
 msgstr ""
 
-#: ../../install/basic/index.rst:643 1290ec532c5746c0bbcbda6f912b1db7
+#: ../../install/basic/index.rst:560 05a88f00f93b49b285bfe0a473d7b359
 msgid "GeoServer Production Settings"
 msgstr ""
 
-#: ../../install/basic/index.rst:646 382c9a2b06f347ab98a3a0c7d7400e50
+#: ../../install/basic/index.rst:563 50be38179b9b4950b1eb9378bf7d138b
 msgid "JVM Settings: Memory And GeoServer Options"
 msgstr ""
 
-#: ../../install/basic/index.rst:648 ad1f91d5f6ae4467879bf4e0414e084f
+#: ../../install/basic/index.rst:565 c6acd3fd195c4531a665a53eb7a7bc73
 msgid ""
 "The :guilabel:`.env` file provides a way to customize GeoServer JVM "
 "Options."
 msgstr ""
 
-#: ../../install/basic/index.rst:650 6740eff50c964a95bad5fe9d34c39552
+#: ../../install/basic/index.rst:567 bb2eeee999f04420b058550fd59146d1
 msgid ""
 "The variable ``GEOSERVER_JAVA_OPTS`` allows you to tune-up the GeoServer "
 "container and to enable specific GeoServer options."
 msgstr ""
 
-#: ../../install/basic/index.rst:661 7f7ddcf9a4e84e58a403f6ea66988dc5
+#: ../../install/basic/index.rst:578 86dd098d00414ecdaaf1c551cec9f9b6
 msgid "``-Djava.awt.headless (true)``"
 msgstr ""
 
-#: ../../install/basic/index.rst:663 20db2f338d2e485392c62ae31f406f3f
+#: ../../install/basic/index.rst:580 b948080c0e3d4aa38044f4fb6e958b01
 msgid ""
 "Work with graphics-based applications in Java without an actual display, "
 "keyboard, or mouse A typical use case of UI components running in a "
@@ -399,11 +407,11 @@ msgid ""
 "the network to another machine for display."
 msgstr ""
 
-#: ../../install/basic/index.rst:666 4b487f02180e4810b14f497b0808750e
+#: ../../install/basic/index.rst:583 17b639a63b5e48b99cf2e4293ed11973
 msgid "``-Xms2G -Xmx4G``"
 msgstr ""
 
-#: ../../install/basic/index.rst:668 a9d7c406b0084d34ba58f370c1e8c2eb
+#: ../../install/basic/index.rst:585 7cf6f88895604a27a7fa5c384e38b092
 msgid ""
 "This means that your JVM will be started with Xms amount of memory and "
 "will be able to use a maximum of Xmx amount of memory. Above will start a"
@@ -412,11 +420,11 @@ msgid ""
 "RAM."
 msgstr ""
 
-#: ../../install/basic/index.rst:670 7a0e7e0f30254b6ca8beb97cb8ff79f9
+#: ../../install/basic/index.rst:587 71c122a1c156484b9608430f285ccc6a
 msgid "``-DGEOSERVER_CSRF_DISABLED (True)``"
 msgstr ""
 
-#: ../../install/basic/index.rst:672 605ed9b92ebe4353b73287755f1ee2d4
+#: ../../install/basic/index.rst:589 c7de139aec294d6b9b58472831f2c3f0
 msgid ""
 "The GeoServer web admin employs a CSRF (Cross-Site Request Forgery) "
 "protection filter that will block any form submissions that didn’t appear"
@@ -426,344 +434,406 @@ msgid ""
 "https://docs.geoserver.org/stable/en/user/security/webadmin/csrf.html"
 msgstr ""
 
-#: ../../install/basic/index.rst:676 ab32670137334169ad52f2af067703af
+#: ../../install/basic/index.rst:593 e1b059aaa6834e3c8ec24754f1a46dee
 msgid ""
 "Whenever you need to change one or more of the JVM options, you will need"
 " to restart the GeoServer Docker container."
 msgstr ""
 
-#: ../../install/basic/index.rst:683 773fbbea6b634431b5a0ed13457a98f7
+#: ../../install/basic/index.rst:600 9ebaad54b2d34ac78324025593645c6b
 msgid ""
 "This command will **preserve** all the GeoServer configuration and data, "
 "since the ``GEOSERVER_DATA_DIR`` is stored on a Docker static volume."
 msgstr ""
 
-#: ../../install/basic/index.rst:685 e3e0b928bbf141e28457941080935e62
+#: ../../install/basic/index.rst:602 77d9c56d18c348028d39ffa94e1bb8e6
 msgid ""
 "Nevertheless, any change you have made manually to the container, e.g. "
 "added a new plugin to GeoServer or updated some JARs into the ``WEB-"
 "INF/lib`` library folder, will be lost."
 msgstr ""
 
-#: ../../install/basic/index.rst:687 a413c3aab24441e084f022bcd3df1791
+#: ../../install/basic/index.rst:604 e45c0986571e40599418ba6be8ff450e
 msgid "You will need to add the JARs again and restart GeoServer *softly*"
 msgstr ""
 
-#: ../../install/basic/index.rst:696 51ef1cc6775c4d7791ee62b5f05d8630
+#: ../../install/basic/index.rst:613 a24c5b4346b84a9e8c728eb62cc35088
 msgid "Global And Services Settings"
 msgstr ""
 
-#: ../../install/basic/index.rst:698 b24233b9117e473cb6f2f0a17e17db7b
+#: ../../install/basic/index.rst:615 cc7e9044a56f48adac60b6dba07f75a6
 msgid ""
 "Check the GeoServer Memory usage and status; ensure the "
 "``GEOSERVER_DATA_DIR`` path points to the static volume"
 msgstr ""
 
-#: ../../install/basic/index.rst:704 922416333b134c39aafa3037871ba8aa
+#: ../../install/basic/index.rst:621 edaf126df63e48bc99d57df1e2eacd0f
 msgid "*GeoServer Status*"
 msgstr ""
 
-#: ../../install/basic/index.rst:706 c5e3b0560f7d4cc0a8a972188b435241
+#: ../../install/basic/index.rst:623 cfb087df5e1243e1ad1d0645802003a3
 msgid ""
 "GeoServer :guilabel:`Global Settings`; make sure the ``Proxy Base Url`` "
 "points to the publlc URL and the ``LOGGING`` levels are set to "
 ":guilabel:`Production Mode`"
 msgstr ""
 
-#: ../../install/basic/index.rst:712 07f91a2a558e4566a720fec0a629dcb7
+#: ../../install/basic/index.rst:629 be64f604631c4a08b512fc6dff359400
 msgid "*Global Settings*"
 msgstr ""
 
-#: ../../install/basic/index.rst:714 a843d7fff80f46829ac1733df1ce8d45
+#: ../../install/basic/index.rst:631 f6244053cdc24e40a5f671c3be212f11
 msgid ""
 "GeoServer :guilabel:`Image Processing Settings`; unless you are using "
 "some specific renderer or GeoServer plugin, use the following recommended"
 " options"
 msgstr ""
 
-#: ../../install/basic/index.rst:716 6c4c9657be9548a5bc6088ef6b5039ec
+#: ../../install/basic/index.rst:633 6712abad1ab84bf59a3dd97e04c03044
 msgid ""
 "Further details at "
 "https://docs.geoserver.org/stable/en/user/configuration/image_processing/index.html"
 "#image-processing"
 msgstr ""
 
-#: ../../install/basic/index.rst:722 3d94f4b3ec7e4f90b81c844aff1c488b
+#: ../../install/basic/index.rst:639 b916165f52d04ae98a4aa9136677837a
 msgid "*Image Processing Settings*"
 msgstr ""
 
-#: ../../install/basic/index.rst:724 176decb3744643568f73628c4c1b9e9e
+#: ../../install/basic/index.rst:641 7c68fb15104e4521a24e8365f66abc95
 msgid ""
 "Tune up :guilabel:`GeoServer Services Configuration`; :guilabel:`WCS`, "
 ":guilabel:`WFS`, :guilabel:`WMS` and :guilabel:`WPS`;"
 msgstr ""
 
-#: ../../install/basic/index.rst:726 c7a56b045a6b435f93881a2339066062
+#: ../../install/basic/index.rst:643 0c64e8ade0754f8885deec37deb6f94c
 msgid ""
 "**WCS**: Update the limits accordingly to your needs. Do not use very "
 "high values, this will set GeoServer prone to DoS Attacks."
 msgstr ""
 
-#: ../../install/basic/index.rst:732 59cc67123693496ea02d18929cf9d910
+#: ../../install/basic/index.rst:649 ea0c84cb15814f98acc3cfe14912154f
 msgid "*WCS Resource Consuption Limits*"
 msgstr ""
 
-#: ../../install/basic/index.rst:734 1c3959f3f1594404b195737b87ff05aa
+#: ../../install/basic/index.rst:651 2c04732fe82344b5a28c3ba896bc0eca
 msgid ""
 "**WMS**: Specify here the SRS List you are going to use. Empty means all "
 "the ones supported by GeoServer, but be carefull since the "
 "``GetCapabilities`` output will become huge."
 msgstr ""
 
-#: ../../install/basic/index.rst:740 4202dccd7189495687d73e6fcba360d7
+#: ../../install/basic/index.rst:657 ced3747696644d0db97c9b4896951120
 msgid "*WMS Supported SRS List*"
 msgstr ""
 
-#: ../../install/basic/index.rst:742 4cefc3c9ed8e489ba3a8f1550b63ae6b
+#: ../../install/basic/index.rst:659 c6532f9f77654e6c8fae9fd0cba5bfa1
 msgid ""
 "**WMS**: :guilabel:`Raster Rendering Options` allows you to tune up the "
 "WMS output for better performance or quality. Best Performance: ``Nearest"
 " Neighbour`` - Best Quality: ``Bicubic``"
 msgstr ""
 
-#: ../../install/basic/index.rst:744 70725d7516894ce4ab64b27122acd9f3
+#: ../../install/basic/index.rst:661 818f88cffcea48ed8e51d1d307ff9026
 msgid ""
 "Raster Images should be always optimized before ingested into GeoNode. "
 "The general recommendation is to **never** upload a non-processed GeoTIFF"
 " image to GeoNode."
 msgstr ""
 
-#: ../../install/basic/index.rst:746 d0df44e34155497a8d75c27321b9a7d2
+#: ../../install/basic/index.rst:663 01608bbde0364db5918b479db5479433
 msgid "Further details at:"
 msgstr ""
 
-#: ../../install/basic/index.rst:748 da1239ec3ae34fa58f1d3e700b31db05
+#: ../../install/basic/index.rst:665 2bd6b513b8794056b48234e0d30af468
 msgid "https://geoserver.geo-solutions.it/edu/en/enterprise/raster.html"
 msgstr ""
 
-#: ../../install/basic/index.rst:749 6406fe0dd0194d73b19125b05d458921
+#: ../../install/basic/index.rst:666 2e76177c3dbf427b9899a73a75e845ff
 msgid ""
 "https://geoserver.geo-"
 "solutions.it/edu/en/raster_data/advanced_gdal/index.html"
 msgstr ""
 
-#: ../../install/basic/index.rst:755 b0b1e4c690a04f388d2038e5f72e804b
+#: ../../install/basic/index.rst:672 36dff357eaaf4812965c4d783ca41295
 msgid "*WMS Raster Rendering Options*"
 msgstr ""
 
-#: ../../install/basic/index.rst:757 e8caa7ac971c44d6ada6a79d8eba8624
+#: ../../install/basic/index.rst:674 365996af1dac479e88221985120472f8
 msgid ""
 "**WMS**: Update the limits accordingly to your needs. Do not use very "
 "high values, this will set GeoServer prone to DoS Attacks."
 msgstr ""
 
-#: ../../install/basic/index.rst:763 702021c87ae44b9f85233cab6fb6e03c
+#: ../../install/basic/index.rst:680 43bc206c8a794856bd048ba5bd8c6a67
 msgid "*WMS Resource Consuption Limits*"
 msgstr ""
 
-#: ../../install/basic/index.rst:766 ed05d7adf42446ba8dca13c1b95b2ab2
+#: ../../install/basic/index.rst:683 ef007c6950fb450f9ae834e09d191dc3
 msgid "GeoWebCache DiskQuota On Postgis"
 msgstr ""
 
-#: ../../install/basic/index.rst:768 a1fd06036664440b82f475db0311910e
+#: ../../install/basic/index.rst:685 230e1b9f83e947168d453d35a3495149
 msgid ""
 "By default GeoWebCache DiskQuota is disabled. That means that the layers "
 "cache might potentially grow up indefinitely."
 msgstr ""
 
-#: ../../install/basic/index.rst:770 995eee750bcc4076860d187320408627
+#: ../../install/basic/index.rst:687 d67cf22578764f0983f3fe043156c54a
 msgid ""
 "GeoWebCache DiskQuota should be always enabled on a production system. In"
 " the case it is enabled, this **must** be configured to make use of a DB "
 "engine like Postgis to store its indexes."
 msgstr ""
 
-#: ../../install/basic/index.rst:772 94f4623345f94058851582aa4a45f6ff
+#: ../../install/basic/index.rst:689 34e9e922bf5f45b2b651858dcfb5ac53
 msgid ""
 "First of all ensure :guilabel:`Tile Caching` is enabled on all available "
 "layers"
 msgstr ""
 
-#: ../../install/basic/index.rst:774 a1b6568adf074343b2529e5f7b38d0bf
+#: ../../install/basic/index.rst:691 2017c0edb307431eb880122824316006
 msgid ""
 "GeoNode tipically does this automatically for you. It is worth to double "
 "check anyway."
 msgstr ""
 
-#: ../../install/basic/index.rst:780 a51af8f60fe74712a47fabb2fd397cc9
-msgid "*Tile Caching: Tiled Layers*"
+#: ../../install/basic/index.rst:697 053e4b904bcb46efb438c36c1dd35fb2
+msgid "*Tile Caching: Tiled Datasets*"
 msgstr ""
 
-#: ../../install/basic/index.rst:782 7271df04681e438c92a5002ab189e719
+#: ../../install/basic/index.rst:699 c0d6402d401c4a6b956dc2297c8556b3
 msgid ""
 "Configure :guilabel:`Disk Quota` by providing the connection string to "
 "the DB Docker Container as specified in the :guilabel:`.env` file"
 msgstr ""
 
-#: ../../install/basic/index.rst:788 592f105aa56f413cbfbf331fa4bcd14a
+#: ../../install/basic/index.rst:705 2223ea1566244bfda448379e93a602dd
 msgid "*Tile Caching: Disk Quota Configuration*"
 msgstr ""
 
-#: ../../install/basic/index.rst:791 eb3be02e24b84e25834972c4f88c541b
+#: ../../install/basic/index.rst:708 04301bd48f5c429896ecbfcb2d5e3f0d
 msgid "GeoFence Security Rules On Postgis"
 msgstr ""
 
-#: ../../install/basic/index.rst:793 24f4e1b40596449291882c9d5fccf344
+#: ../../install/basic/index.rst:710 ee14457827774636a46a6fe5bf7b1180
 msgid "By default GeoFence stores the security rules on an :guilabel:`H2` db."
 msgstr ""
 
-#: ../../install/basic/index.rst:795 a3ce7a5268ae467c89186cfb5d1ee6f4
+#: ../../install/basic/index.rst:712 3e22ac710c3145528ce0e45fa0073f79
 msgid ""
 "On a production system, this is not really recommended. You will need to "
 "update the GeoServer Docker container in order to enable GeoFence storing"
 " the rules into the DB Docker Container instead."
 msgstr ""
 
-#: ../../install/basic/index.rst:797 5dc9348bf0f14776a2e27697917b324e
+#: ../../install/basic/index.rst:714 d8dbb6d32d42449b9e91615253d9974d
 msgid "In order to do that, follow the procedure below:"
 msgstr ""
 
-#: ../../install/basic/index.rst:811 1f10bb63cf3a4f588a2447c07a597883
+#: ../../install/basic/index.rst:728 f246e0d72d7a4991932a7ec5c563b72d
 msgid ""
 "Make sure to provide the same connection parameters specified in the "
 ":guilabel:`.env` file"
 msgstr ""
 
-#: ../../install/basic/index.rst:831 6f25cb0ac8a046df92ac5a59874f46f1
+#: ../../install/basic/index.rst:748 bdb5f54a16344414adc33260b84e03bc
 msgid "The container is ready to be restarted now."
 msgstr ""
 
-#: ../../install/basic/index.rst:833 b5884357489e419d916d4b633ac1a56d
+#: ../../install/basic/index.rst:750 793285844c794951a41c63f9e24754e9
 msgid ""
 "Remember to do a **soft restart** otherwise the WEB-INF/lib JARs will be "
 "reset to the original state"
 msgstr ""
 
-#: ../../install/basic/index.rst:843 c6cbcb592480438d8fe08ece3af8c9ff
+#: ../../install/basic/index.rst:760 3662769fd45d4d2096b39a32f8fdae96
 msgid ""
 "**IMPORTANT**: The first time you perform this procedure, GeoFence won't "
 "be able to retrieve the old security rules anymore."
 msgstr ""
 
-#: ../../install/basic/index.rst:845 6b774f4b0d094b049a6123b677d1870e
+#: ../../install/basic/index.rst:762 81cc7f4c6aa848c69ab726be51a22429
 msgid ""
 "You will need to :ref:`fixup_geonode_layers_permissions` in order to "
 "regenerate the security rules."
 msgstr ""
 
-#: ../../install/basic/index.rst:850 68d94241dc7b4c489cd50acd364228b0
-msgid "Fixup GeoNode Layers Permissions"
+#: ../../install/basic/index.rst:767 2232b6b07223482da5ed95ae28ffc9e0
+msgid "Fixup GeoNode Datasets Permissions"
 msgstr ""
 
-#: ../../install/basic/index.rst:852 537b8973df6d4738a37f880207409ab1
+#: ../../install/basic/index.rst:769 28c877cd72e448d68d8f4073aeab3017
 msgid ""
 "The list of the GeoFence Security Rules is available from the "
 ":guilabel:`GeoFence Data Rules` section."
 msgstr ""
 
-#: ../../install/basic/index.rst:854 a1227889a98f4f5db097a2f031ceaf73
+#: ../../install/basic/index.rst:771 081baef68db348d9a13b56a83f081289
 msgid ""
 "Always double check the list is accessible and the data rules are there. "
 "If empty, no layer will be accessible by standard users other than admin."
 msgstr ""
 
-#: ../../install/basic/index.rst:860 b3ea8fe9ca814f259e50b37d7bd02772
+#: ../../install/basic/index.rst:777 7d2b3b75fcce4d05860e41e0e9d4fd95
 msgid "*GeoFence Data Rules*"
 msgstr ""
 
-#: ../../install/basic/index.rst:862 7d9ee3b4c9fc49e9bc2089baac5cfd36
+#: ../../install/basic/index.rst:779 8bc87f84c21a484a97f295ee9b46ddb8
 msgid ""
 "In order to re-sync the GeoFence security rules, follow the procedure "
 "below:"
 msgstr ""
 
-#: ../../install/basic/index.rst:873 2946df5d225e416881a773103efd8575
-msgid "Regenerate GeoNode Layers Thumbnails"
+#: ../../install/basic/index.rst:790 5879a08cae58413f964e80726509513f
+msgid "Regenerate GeoNode Datasets Thumbnails"
 msgstr ""
 
-#: ../../install/basic/index.rst:875 7e69b64a2ed14adc98464b36d2cd8f71
+#: ../../install/basic/index.rst:792 afc838194b9e49b89de626f880c199d2
 msgid ""
-"The following procedure allows you to *batch* regenerate all Layers "
+"The following procedure allows you to *batch* regenerate all Datasets "
 "Thumbnails:"
 msgstr ""
 
-#: ../../install/basic/index.rst:886 010d3a7b46914330b60bd8272f1d8e9b
-msgid "Fixup GeoNode Layers Metadata And Download Links"
+#: ../../install/basic/index.rst:803 4122d3214b3f495ba6c3f3fc4f2f00b6
+msgid "Regenerate GeoNode Datasets BBOXES"
 msgstr ""
 
-#: ../../install/basic/index.rst:888 129138ca02e246209ad5b7c2aeedb849
+#: ../../install/basic/index.rst:805 cbfe764854dc474384f3ecddf424dc2b
+msgid ""
+"The following procedure allows you to *batch* regenerate all Datasets "
+"BBOXES:"
+msgstr ""
+
+#: ../../install/basic/index.rst:816 75535a6e068c40da99967728dd067258
+msgid "Fixup GeoNode Datasets Metadata And Download Links"
+msgstr ""
+
+#: ../../install/basic/index.rst:818 96ca8e9d8aaa4bb98770ca0ed299f556
 msgid ""
 "The following procedure allows you to fix-up broken or incorrect Metadata"
 " Links:"
 msgstr ""
 
-#: ../../install/basic/index.rst:898 19922b0a5f644dac84096bf92760e0d5
+#: ../../install/basic/index.rst:828 72f2293c0a114f1c936550e6383975fd
 msgid "It is also possible to *force* purging the links before regenerating:"
 msgstr ""
 
-#: ../../install/basic/index.rst:909 7aacc759f12c4ce6b23a1fa3bb6c9054
+#: ../../install/basic/index.rst:839 c86bc62f2d3e470b8a37ef411dbe7dd7
 msgid "Migrate GeoNode To A New Hostname"
 msgstr ""
 
-#: ../../install/basic/index.rst:911 38a3a4bc8c0f4ca5a4440f1af14c80cb
+#: ../../install/basic/index.rst:841 2e38d3f311d1432f8ade48cd8f61c10a
 msgid ""
 "In the case you will need to move your instance to another domain, as an "
 "example from ``https://my_geonode.geonode.org/`` to "
 "``https://prod_geonode.geonode.org/``, follow the procedure below:"
 msgstr ""
 
-#: ../../install/basic/index.rst:913 0d26575210fc4dd3b52bb2025cbf4e12
+#: ../../install/basic/index.rst:843 bd32c467f433473da16b4a5a7cda4641
 msgid "Update the :guilabel:`.env` file by specifyig the new name accordingly."
 msgstr ""
 
-#: ../../install/basic/index.rst:915 795b0f5f5d534f48a5783dd134636ec6
+#: ../../install/basic/index.rst:845 09b2ab524816409b910518e6625fa97b
 msgid "Restart the GeoNode Docker Container."
 msgstr ""
 
-#: ../../install/basic/index.rst:921 3af71feb405a43b1955b97a72ef14308
+#: ../../install/basic/index.rst:851 4b11d5e40f8649bd998db05b956ebd99
 msgid ""
 "Run the following management commands from inside the GeoNode Docker "
 "Container."
 msgstr ""
 
-#: ../../install/basic/index.rst:936 7804bfe863fa4feeb4fac8f4f0847f28
+#: ../../install/basic/index.rst:866 065c36a08b024d33b7397f36d3b325a4
 msgid "Add Huge Or DB Datasets To Your Instance"
 msgstr ""
 
-#: ../../install/basic/index.rst:938 c89b075ae28e40bf9ea3903483554c13
+#: ../../install/basic/index.rst:868 da5d15fb22f74b8488867812ca47b711
 msgid ""
 "Uploaing huge datasets, or DB tables, to GeoNode from the :guilabel:`Web "
 "Upload Interface` is not really possible sometimes."
 msgstr ""
 
-#: ../../install/basic/index.rst:940 1a3c1cd59355480ebcfe460420b73926
+#: ../../install/basic/index.rst:870 7ad5317b97a64887987c132e89723a70
 msgid "The suggested procedure in such cases is the following one:"
 msgstr ""
 
-#: ../../install/basic/index.rst:942 dcd11ba267f340fca3da0ab1dea0f319
+#: ../../install/basic/index.rst:872 6508a10d3d874138b2fd82b1d3450053
 msgid "Add the dataset to :guilabel:`GeoServer` first directly."
 msgstr ""
 
-#: ../../install/basic/index.rst:944 f48af5d7e3134fe0b3e9b02e0ed165f3
+#: ../../install/basic/index.rst:874 f43f318964e04a7cb44639b5fce727ef
 msgid ""
 "You must upload the data into the GeoServer Docker Container Static "
 "Volume first and then adding manually the layer throught the "
 ":guilabel:`GeoServer Admin GUI`."
 msgstr ""
 
-#: ../../install/basic/index.rst:946 bf6b5ae715b84960af73842d1807fd28
+#: ../../install/basic/index.rst:876 4048f3b265bc4b1fb429a0dbdabcf309
 msgid ""
 "Once the dataset is correctly configured on GeoServer, run the following "
 "management command from inside the GeoNode Docker Container"
 msgstr ""
 
-#: ../../install/basic/index.rst:957 bff9460ea0484c3e89c9bb51062e1e82
+#: ../../install/basic/index.rst:887 b6b77eb1f4fb4e24b09815f39bbe7f90
 msgid "Update GeoNode Core To The Latest Commit"
 msgstr ""
 
-#: ../../install/basic/index.rst:959 6e76fa273a624c05a25f3849a91d24aa
+#: ../../install/basic/index.rst:889 65ba6e6ef2ce4762aaaba8444c464ce5
 msgid ""
 "In the case you will need to update the GeoNode Core codebase to a "
 "specific version or commit, please follow the steps below:"
 msgstr ""
+
+#~ msgid "First Step: Deploy GeoNode on a local server (e.g.: http://localhost/)"
+#~ msgstr ""
+
+#~ msgid "Ubuntu (18.0 +)"
+#~ msgstr ""
+
+#~ msgid "Recommended version 18.0.4 (Bionic Beaver)."
+#~ msgstr ""
+
+#~ msgid "Packages Installation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, we are going to install all"
+#~ " the **system packages** needed for "
+#~ "the GeoNode setup. Login to the "
+#~ "target machine and execute the following"
+#~ " commands:"
+#~ msgstr ""
+
+#~ msgid "CentOS (7.0 +)"
+#~ msgstr ""
+
+#~ msgid "Recommended version 7.0 or higher."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Accordingly to the version you use, "
+#~ "the packages installation might be a "
+#~ "bit different."
+#~ msgstr ""
+
+#~ msgid "[Optional] Update your SSH Certificates"
+#~ msgstr ""
+
+#~ msgid "*Tile Caching: Tiled Layers*"
+#~ msgstr ""
+
+#~ msgid "Fixup GeoNode Layers Permissions"
+#~ msgstr ""
+
+#~ msgid "Regenerate GeoNode Layers Thumbnails"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following procedure allows you to"
+#~ " *batch* regenerate all Layers Thumbnails:"
+#~ msgstr ""
+
+#~ msgid "Fixup GeoNode Layers Metadata And Download Links"
+#~ msgstr ""
 

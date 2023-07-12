@@ -8,28 +8,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 11:18+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../install/advanced/core/index.rst:5 c2554bcb83de47b19a75d1a841d2cf92
+#: ../../install/advanced/core/index.rst:5 882cc9fd0d194f8a8c6624d8ab52ff16
 msgid "GeoNode Core"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:8 7c0176f041104e7b8f424a3f16de5f0e
+#: ../../install/advanced/core/index.rst:8 80c5173213014a4da53136a31d3ed51e
 msgid "Overview"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:10 8f0849a8ba1844bf84bf6923cb0ed4c4
+#: ../../install/advanced/core/index.rst:10 207b2aa6ba204406b1cb155d98bf400d
 msgid "The following steps will guide you to a fresh setup of GeoNode."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:12 3d309c4658244753b0aa7a8a9e1085ce
+#: ../../install/advanced/core/index.rst:12 fb84cf8e43ac4a67aa9e5fed8949b71e
 msgid ""
 "All guides will first install and configure the system to run it in "
 "``DEBUG`` mode (also known as ``DEVELOPMENT`` mode) and then by "
@@ -37,7 +37,7 @@ msgid ""
 "``HTTP`` (``80``) port."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:15 d4b5ae2249ba4f0487c9f7ec90f203e4
+#: ../../install/advanced/core/index.rst:15 366c2ab0b9cc4ed1ae893f06273ba540
 msgid ""
 "Those guides **are not** meant to be used on a production system. There "
 "will be dedicated chapters that will show you some *hints* to optimize "
@@ -46,109 +46,459 @@ msgid ""
 "your server to the ``WEB``."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:20 3a61310be5c7417a8a04a777e7326d7f
-msgid "Ubuntu 20.04LTS"
+#: ../../install/advanced/core/index.rst:20 70b48c5bf7a540ecb53a5c116cb7f181
+msgid "Docker"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:22 9955d5f7dcee4cc0a136c7b15920ba58
+#: ../../install/advanced/core/index.rst:22 c2128bc5f84648079ff5b248c93898d8
+msgid ""
+"Setting up GeoNode with Docker and Docker Compose is the most "
+"straighforward solution. By default it will pull / build images and spawn"
+" Containers for all the GeoNode backend services (PostgreSQL, Geoserver, "
+"RabbitMQ, etc.). You can of course adapt the standard setup for more "
+"advnaced and custom scenarios."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:25 65f8f93632be413281adf3c8211b9105
+msgid "In this section we are going to list the passages needed to:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:27 db946921429e4acfb3b4f9abeb556cd3
+msgid "Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:28 2d8a81de3aba45a688bc688c337e2e82
+msgid "Deploy a vanilla ``GeoNode`` with ``Docker``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:30 1efdf47fc0a4466bb9964a1fb599ebfe
+msgid "Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:31 db5826adcb74466fab96dce7ffb7cec5
+msgid ""
+"Access the ``django4geonode`` Docker image to update the code-base and/or"
+" change internal settings"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:32 80947d9ff88c44deab29a04164265579
+msgid ""
+"Access the ``geoserver4geonode`` Docker image to update the GeoServer "
+"version"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:34 d672f04d86d04f12ab9e99cbff9b5153
+msgid ""
+"Passages to completely get rid of old ``Docker`` images and volumes "
+"(prune the environment completely)"
+msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:2
+#: efedd8cb57a84e1f869608fdc084e77d
+msgid "1. Install the Docker and docker-compose packages on Ubuntu 22.04"
+msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:5
+#: c42ee133a2d54c53b6863e31457018a7
+msgid "Docker Setup (First time only)"
+msgstr ""
+
+#: ../../install/advanced/core/docker/ubuntu.rst:6
+#: 59a63296ae2a4a189d13a0ccc3df86f5
+msgid ""
+"The following steps were taken from the official `Docker documentation "
+"<https://docs.docker.com/engine/install/ubuntu/>`_. We invite you to "
+"refer to it for any update."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:39 83556e0a9b914856a493530d603e23d6
+msgid "3. Test Docker Compose Instance"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:41 943be8c076394a378dc8fd6c9b0725b2
+msgid "Logout and login again on shell and then execute:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:48 26597b6217924ae69c184838d124f517
+msgid "4. Deploy a vanilla GeoNode with Docker"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:50 b22ab84113a346f48cebf08326e6c3af
+msgid "Clone the Project"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:64 41a40c10f0e84aa9aa2121d345c3672b
+msgid "Start the Docker instances on ``localhost``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:66 2af487a9a5084c6496c9cee176ef4261
+msgid ""
+"The first time pulling the images will take some time. You will need a "
+"good internet connection."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:76 bbbd3259b8814edab2b35f58147aeb73
+msgid ""
+"If you want to re-build the docker images from scratch, instead of "
+"``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to"
+" the up command, for instance:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:85 3769c664f1e44a8f9d09884653205458
+msgid ""
+"To startup the containers daemonized, which means they will be started in"
+" the background (and keep running if you ``log out`` from the server or "
+"close the ``shell``) add the ``-d`` option to the ``up`` command as in "
+"the following. ``docker-compose`` will take care to restart the "
+"containers if necessary (e.g. after boot)."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:96 814463753c594cd1b74d3889562bfd5b
+msgid "Test the instance and follow the logs"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:98 2a9fd8c477b24a29a8f561ab02ba9733
+msgid ""
+"If you run the containers daemonized (with the ``-d`` option), you can "
+"either run specific Docker commands to follow the ``startup and "
+"initialization logs`` or entering the image ``shell`` and check for the "
+"``GeoNode logs``."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:100 92f3261a3a8e4db8ac186003ff70f146
+msgid ""
+"In order to follow the ``startup and initialization logs``, you will need"
+" to run the following command from the repository folder"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:107
+#: ../../install/advanced/core/index.rst:137 4a3eac5694b048148b31c1889a78450a
+#: e11807f5d82e4427be5b6680d6cfe8d9
+msgid "Alternatively:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:114 b53c285e0fad4d92967c03f2634befc9
+msgid ""
+"You should be able to see several initialization messages. Once the "
+"container is up and running, you will see the following statements"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:124 fd4cab03ec33499b82488282eda685dc
+msgid "To exit just hit ``CTRL+C``."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:126 3cbf4506e2684238906b45a6a41a79a3
+msgid ""
+"This message means that the GeoNode containers have bee started. Browsing"
+" to ``http://localhost/`` will show the GeoNode home page. You should be "
+"able to successfully log with the default admin user (``admin`` / "
+"``admin``) and start using it right away."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:128 7f13a1c842d84d1fbc81a4bde837b713
+msgid ""
+"With Docker it is also possible to run a shell in the container and "
+"follow the logs exactly the same as you deployed it on a physical host. "
+"To achieve this run"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:143 5872a259a7804964b1c10ba73ba8a31b
+msgid "To exit just hit ``CTRL+C`` and ``exit`` to return to the host."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:146 0c1ea6aac5084ebcb68e49a2668e2e41
+msgid "Override the ENV variables to deploy on a public IP or domain"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:148 f13bc04de9514c6db531c4965ae1b482
+msgid ""
+"If you would like to start the containers on a ``public IP`` or "
+"``domain``, let's say ``www.example.org``, you can"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:157 e3ee47467ba04c448946e8becb17c663
+msgid "Edit the ``ENV`` override file in order to deploy on ``www.example.org``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:164 bd78a9388d484a53b72a2e82cef1f6df
+msgid "Replace everywhere ``localhost`` with ``www.example.org``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:208 0313ae1ab72b42f29c826dfd634f84c2
+msgid ""
+"It is possible to override here even more variables to customize the "
+"GeoNode instance. See the ``GeoNode Settings`` section in order to get a "
+"list of the available options."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:210 642d864aadff43cc9eedde73e7191001
+msgid "Run the containers in daemon mode"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:217 085a920b5b1945ba90789cc7c1ccceb8
+msgid ""
+"Access the django4geonode Docker container to update the code-base and/or"
+" change internal settings"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:219 e356daaf5eb842d68babad8868724a5c
+msgid "Access the container ``bash``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:225 e13c2ff1b2c54c88b3114648af4ae14b
+msgid ""
+"You will be logged into the GeoNode instance as ``root``. The folder is "
+"``/usr/src/app/`` where the GeoNode project is cloned. Here you will find"
+" the GeoNode source code as in the GitHub repository."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:227 221788348d1b4a4ca41532cc2159af56
+msgid ""
+"The machine is empty by default, no ``Ubuntu`` packages installed. If you"
+" need to install text editors or something you have to run the following "
+"commands:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:237 3f03c2f8a3a345d7a615321ebd5a71e1
+msgid ""
+"Update the templates or the ``Django models``. Once in the ``bash`` you "
+"can edit the templates or the Django models/classes. From here you can "
+"run any standard ``Django management command``."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:239 bf4ba2b2ac914a12844b1a89436c8c0d
+msgid "Whenever you change a ``template/CSS/Javascript`` remember to run later:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:245 ac9c728086d545f1b55a2dc1a60b49a8
+msgid "in order to update the files into the ``statics`` Docker volume."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:247 f362ff7e0d894949bd2b24eb3f735412
+msgid ""
+"This is an external volume, and a simple restart won't update it. You "
+"have to be careful and keep it aligned with your changes."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:250 9eb1dbf3ee9742cdab82e2477c931a69
+msgid ""
+"Whenever you need to change some settings or environment variable, the "
+"easiest thing to do is to:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:260 261d23be33a245fe9c9aa3157dc60fa8
+msgid ""
+"Whenever you change the model, remember to run later in the container via"
+" ``bash``:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:268 1eeac6bc360e4212b61275b7f7422c50
+msgid ""
+"Access the geoserver4geonode Docker container to update the GeoServer "
+"version"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:270 f2babdddc5384d60bcc2ce3120e57cec
+msgid "This procedure allows you to access the GeoServer container."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:272 2513ee92cdd544aa8ee2a26c4e243451
+msgid ""
+"The concept is exactly the same as above, log into the container with "
+"``bash``."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:279 13c2ddeee78b4079acf8bef7014b1af5
+msgid "You will be logged into the GeoServer instance as ``root``."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:281 131df280abb345e4956a680caab8b1c5
+msgid "GeoServer is deployed on an Apache Tomcat instance which can be found here"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:287 b73305186f8a4adfad518684e689cfe8
+msgid ""
+"The GeoServer ``DATA_DIR`` is deployed on an external Docker Volume "
+"``geonode_gsdatadir``. This data dir won’t be affected by changes to the "
+"GeoServer application since it is ``external``."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:290 3a3c5933ed92439bbe891e0fd9362076
+msgid "Update the GeoServer instance inside the GeoServer Container"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:292 958d43d2a081487ea2050e0af5e5d4dd
+msgid "The old configuration will be kept since it is ``external``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:320 53faa504e247461d975ed77395d09a3c
+msgid "GeoNode 2.8.1 is **NOT** compatible with GeoServer > 2.13.x"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:322 35813d2865ff421b80d2da3d5f909d4f
+msgid "GeoNode 2.8.2 / 2.10.x are **NOT** compatible with GeoServer < 2.14.x"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:324 bbc34c77e4cf4c62a9b98d14af063b21
+msgid "GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:326 8befd56148544fcfa6ae9a52b92d83ab
+msgid "GeoNode 4.1.x is **NOT** compatible with GeoServer < 2.19.x"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:330 0736102758fe4fe5a4a438eb05164946
+msgid ""
+"Remove all data and bring your running GeoNode deployment to the initial "
+"stage"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:332 8081220cc4f0480baec37a79e4df4baa
+msgid ""
+"This procedure allows you to stop all the containers and reset all the "
+"data with the deletion of all the volumes."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:342 3c263fc1800847f4a28710809e33877b
+msgid ""
+"5. Passages to completely get rid of old Docker images and volumes (reset"
+" the environment completely)"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:344 d15d8e9362644c1090af6de3674b0d74
+msgid ""
+"For more details on Docker commands, please refer to the official Docker "
+"documentation."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:346 00a1b96b17e248e6b76f15b0b061abb3
+msgid ""
+"It is possible to let docker show which containers are currently running "
+"(add ``-a`` for all containers, also stopped ones)"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:363 1cbbd3a70b274272a4e26a2cf324e406
+msgid "Stop all the containers by running"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:369 e6f2ddeec1d64d579ff0b7247923a93f
+msgid "Force kill all containers by running"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:375 1a3b9bc70e684d698d782a91ab01e193
+msgid ""
+"I you want to clean up all containers and images, without deleting the "
+"static volumes (i.e. the ``DB`` and the ``GeoServer catalog``), issue the"
+" following commands"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:388 51761362a1fe407883f87d61ca9fb85f
+msgid "If you want to remove a ``volume`` also"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:405 5bd1d84166c0421fb4988dce3a08a193
+msgid "Ubuntu 22.04"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:407 31b82852ad6c40b18f031b5e1aad0660
 msgid ""
 "This part of the documentation describes the complete setup process for "
-"GeoNode on an Ubuntu 20.04LTS **64-bit** clean environment (Desktop or "
+"GeoNode on an Ubuntu 22.04.1LTS **64-bit** clean environment (Desktop or "
 "Server)."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:24 c213faac14bf469599c21d93d33056f7
+#: ../../install/advanced/core/index.rst:409 f6c423958bb64a10abbf937438f23e4c
 msgid ""
 "All examples use shell commands that you must enter on a local terminal "
 "or a remote shell."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:26 40464d6bc8e54b20b56a58a830cdf465
+#: ../../install/advanced/core/index.rst:411 8050805dfe374bc99e11e7f770ccb360
 msgid ""
 "If you have a graphical desktop environment you can open the terminal "
 "application after login;"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:27 910829326d34484cbf278e8991e11811
+#: ../../install/advanced/core/index.rst:412 0b605118271e4aa2b007242cef76459f
 msgid ""
 "if you are working on a remote server the provider or sysadmin should has"
 " given you access through an ssh client."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:32
-#: ../../install/advanced/core/index.rst:1510 28cfd2c96a59493ca9066ab5e77c7016
-#: cfb9f188282941438170b52aef7c1cff
+#: ../../install/advanced/core/index.rst:417
+#: ../../install/advanced/core/index.rst:1896 392739e367544367b8f78dc7602ab26d
+#: 967f4c01a6e1499e8d0115c1abb37229
 msgid "1. Install the dependencies"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:34 57f1eeeca4d049e7be87be72385272fb
+#: ../../install/advanced/core/index.rst:419 0d0bce06a87f4dfeaf23fa9342aa6ce5
 msgid ""
 "In this section, we are going to install all the basic packages and tools"
 " needed for a complete GeoNode installation."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:36 78c447261ee54f65a4b78d581e7420ac
+#: ../../install/advanced/core/index.rst:421 ad38c71d60b04b9f9821787c2a1e3809
 msgid ""
 "To follow this guide, a basic knowledge about Ubuntu Server configuration"
 " and working with a shell is required."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:38 8b2e2b9ca1444e2db9a5de542261c5c3
+#: ../../install/advanced/core/index.rst:423 e33ef8116f944551ac85450fb1ba2459
 msgid ""
 "This guide uses ``vim`` as the editor; fill free to use ``nano``, "
 "``gedit`` or others."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:41 9f10b39a733c44749b93fdb36eefe812
+#: ../../install/advanced/core/index.rst:426 9450fb54e24f42119267c04820484206
 msgid "Upgrade system packages"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:43 074f6d2d2df14fd287d794c70ddb5f5d
+#: ../../install/advanced/core/index.rst:428 804eb927fe4a40738bc191e86da9c042
 msgid ""
 "Check that your system is already up-to-date with the repository running "
 "the following commands:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:52 309069db0bc24f6ca65b895a4c4ae47e
+#: ../../install/advanced/core/index.rst:437 843a32e8355241689a30587d43d018b6
 msgid "Packages Installation"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:54 8be41364a1db48999441d8007398c08a
+#: ../../install/advanced/core/index.rst:439 9c2d82e9d8d44226aa63c04bc6ffb43f
 msgid ""
 "You don't need to install the **system packages** if you want to run the "
 "project using Docker"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:56 033033a22fcc4cd6b335828295b58315
+#: ../../install/advanced/core/index.rst:441 fc8e7e6331bc4137966934a4822c29fe
 msgid "We will use **example.org** as fictitious Domain Name."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:58 fb699e5da3454c3d8348583d63f3ae15
+#: ../../install/advanced/core/index.rst:443 0f1bf5e66db74fbba21033621bd1b404
 msgid ""
 "First, we are going to install all the **system packages** needed for the"
 " GeoNode setup. Login to the target machine and execute the following "
 "commands:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:98 ca02410452bc4c6ea70c191a91d35dd6
-msgid "GeoNode 3.x is not compatible with Python < 3.7"
+#: ../../install/advanced/core/index.rst:481 0890827ecb7644a586343f8af0a45f9d
+msgid "GeoNode 4.1.x is not compatible with Python < 3.7"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:103 33676cb86c2140818f138248f666e964
+#: ../../install/advanced/core/index.rst:486 6f869d97e973453ea72cb8bc9e76d530
 msgid "2. GeoNode Installation"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:105 599d630b76a449d0b95bae365f49842d
+#: ../../install/advanced/core/index.rst:488 1dbaa5cf85a74be4ad4b87fa561b86d3
 msgid ""
 "This is the most basic installation of GeoNode. It won't use any external"
 " server like ``Apache Tomcat``, ``PostgreSQL`` or ``HTTPD``."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:107 7a16d9a250054db8bfd484430504b872
+#: ../../install/advanced/core/index.rst:490 0b65410b56934dd086ef530a3d9daee7
 msgid "First of all we need to prepare a new Python Virtual Environment"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:109 1299b05dfbf1406e8329a44cce902113
+#: ../../install/advanced/core/index.rst:492 19a53bf3c233421ab8bd80cfafd5cc8c
 msgid ""
 "Since geonode needs a large number of different python libraries and "
 "packages, its recommended to use a python virtual environment to avoid "
@@ -158,113 +508,113 @@ msgid ""
 "information"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:111 fba949f904324b4fb00d061446b9a83a
+#: ../../install/advanced/core/index.rst:494 d73ee31652e5469085596d6ad2184ff6
 msgid ""
 "The GeoNode Virtual Environment must be created only the first time. You "
 "won't need to create it again everytime."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:128 0917b793a4114eeea9aba1f06619f5b2
+#: ../../install/advanced/core/index.rst:511 5a2c7b814d854192941a6cf0fe0ac187
 msgid ""
 "At this point your command prompt shows a ``(geonode)`` prefix, this "
 "indicates that your virtualenv is active."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:130 7fe2c7e10ea7496ba371462a1af2dff0
+#: ../../install/advanced/core/index.rst:513 da50a1056fae467ba3263f45ebf0c42a
 msgid "The next time you need to access the Virtual Environment just run"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:140 b0a411f36b3942d39f7c05d4b14ac845
+#: ../../install/advanced/core/index.rst:523 9698fea5128141af96fd9ae663f54534
 msgid "In order to save permanently the virtualenvwrapper environment"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:170 3c0acf4e7ac74c35afaa3c90c41569c2
+#: ../../install/advanced/core/index.rst:553 8b46abcf9f924ae5ab75d6fec8a7e65c
 msgid "3. Postgis database Setup"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:174 b877a9d7b80c428ba8db922a42b8b662
+#: ../../install/advanced/core/index.rst:557 d8f9d3dc064c44a79a9d1d8a5f40dd63
 msgid ""
 "Be sure you have successfully completed all the steps of the section "
 ":ref:`install_dep`."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:176 b8f11f873e554792be15fa3cec7dc297
+#: ../../install/advanced/core/index.rst:559 84b2c91f4cdf46a29d980a95ddf25f9f
 msgid ""
 "In this section, we are going to setup users and databases for GeoNode in"
 " PostgreSQL."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:179 2f9f10b79a604ccab28f6a51445f2521
+#: ../../install/advanced/core/index.rst:562 5afa5ffc80484225b5703994d16992bc
 msgid "Install and Configure the PostgreSQL Database System"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:181 d34a143b4d084482a50a58e0477278bd
+#: ../../install/advanced/core/index.rst:564 73ff89edf4214bef9b6b16b5a9672eb3
 msgid ""
 "In this section we are going to install the ``PostgreSQL`` packages along"
 " with the ``PostGIS`` extension. Those steps must be done **only** if you"
 " don't have the DB already installed on your system."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:190 bd24653a72e74fd4b8231134ba3f3d62
+#: ../../install/advanced/core/index.rst:573 086cd0d464bd4f2abff95678b2ae9883
 msgid ""
 "We now must create two databases, ``geonode`` and ``geonode_data``, "
 "belonging to the role ``geonode``."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:192 46760756f9de45359b03950eb0400cc6
+#: ../../install/advanced/core/index.rst:575 3b80717e2e6647c4957fb08828feab37
 msgid ""
 "This is our default configuration. You can use any database or role you "
 "need. The connection parameters must be correctly configured on "
 "``settings``, as we will see later in this section."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:197 bdf71f80241e4af68a1b0ae604075b41
+#: ../../install/advanced/core/index.rst:580 c6e8078babe04bcfbde6b3009a95afcb
 msgid "Databases and Permissions"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:199 1e8638437bca4e96b1ea4ebc33fc0804
+#: ../../install/advanced/core/index.rst:582 bc44eb9806d145ff90ce81afa03d2806
 msgid ""
 "First, create the geonode user. GeoNode is going to use this user to "
 "access the database"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:208 2ac9de82a11c4d92843cf8f688f2fa38
+#: ../../install/advanced/core/index.rst:591 bbf5242a676d4b33ae626df432412aac
 msgid ""
 "You will be prompted asked to set a password for the user. **Enter "
 "geonode as password**."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:210 174210e124bf4fdba130e5d6d5f133cd
+#: ../../install/advanced/core/index.rst:593 a810a373dcf7417982d129e554b28bb6
 msgid ""
 "This is a sample password used for the sake of simplicity. This password "
 "is very **weak** and should be changed in a production environment."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:212 bca135ca2d1740f9832ef929e757bfc7
+#: ../../install/advanced/core/index.rst:595 4630d0d9ce5b440e806ba72b54b9eeff
 msgid "Create database ``geonode`` and ``geonode_data`` with owner ``geonode``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:219 8ea4f9464fdd4cec83bbed046aff6ce0
+#: ../../install/advanced/core/index.rst:602 7f1f4131043a4948913f1f705056d9ac
 msgid "Next let's create PostGIS extensions"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:235 7f0ed868a6fa40b1aed526207ffda069
+#: ../../install/advanced/core/index.rst:618 f578d36cdcb546878530549d5205e7ec
 msgid ""
 "Final step is to change user access policies for local connections in the"
 " file ``pg_hba.conf``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:241 ead225b7a8354cbe9a9f4850baadb448
+#: ../../install/advanced/core/index.rst:624 6fb3902f849940e7b38adc3ae6c1fa06
 msgid ""
 "Scroll down to the bottom of the document. We want to make local "
 "connection ``trusted`` for the default user."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:243 21b93aeafdb4438db6c3892cf862fd9f
+#: ../../install/advanced/core/index.rst:626 23c7ca53a6f24ed08f179aa0a28264e4
 msgid "Make sure your configuration looks like the one below."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:271 024e5866f50442118b9ca6639b11cc62
+#: ../../install/advanced/core/index.rst:654 98fd40d953e94839b2edc1f52dd9cddb
 msgid ""
 "If your ``PostgreSQL`` database resides on a **separate/remote machine**,"
 " you'll have to **allow** remote access to the databases in the "
@@ -273,44 +623,44 @@ msgid ""
 "``/etc/postgresql/13/main/postgresql.conf`` file"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:273 24811b0887a545f49cc05a780e113cf1
+#: ../../install/advanced/core/index.rst:656 9c76c257d6e64bb783c0a22fa2a1c465
 msgid "Restart PostgreSQL to make the change effective."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:279 3bdbd50e4d174afb9f5a71efad3da64f
+#: ../../install/advanced/core/index.rst:662 ce6793670a844c2ebf6dba14631fc755
 msgid ""
 "PostgreSQL is now ready. To test the configuration, try to connect to the"
 " ``geonode`` database as ``geonode`` role."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:295 523e2ae1eb5f477583686ddb08fbb9e8
+#: ../../install/advanced/core/index.rst:678 d2ff9609b7d04ff1bdd6138b1f0839bc
 msgid "4. Install GeoServer"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:297 9cee185a56b54068a5826f95388ab822
+#: ../../install/advanced/core/index.rst:680 2af4723da78d4975a569ee7323dc8d49
 msgid ""
 "In this section, we are going to install the ``Apache Tomcat 8`` Servlet "
 "Java container, which will be started by default on the internal port "
 "``8080``."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:299 00246aae69de47979c06db8b1b367d3d
+#: ../../install/advanced/core/index.rst:682 f6925fa5fd6d463db7b6589423d1798d
 msgid "We will also perform several optimizations to:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:301 84d76df46c604264bae4951fb08cb046
+#: ../../install/advanced/core/index.rst:684 f794028634684992897558671557274a
 msgid ""
 "Correctly setup the Java VM Options, like the available heap memory and "
 "the garbage collector options."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:302 9b5a9d6f59b549f2b770134215780887
+#: ../../install/advanced/core/index.rst:685 4609d44f72e3447ea4e678bd2e1d8425
 msgid ""
 "Externalize the ``GeoServer`` and ``GeoWebcache`` catalogs in order to "
 "allow further updates without the risk of deleting our datasets."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:304 fd03c3ad5ffe449eb7168551dbe875fe
+#: ../../install/advanced/core/index.rst:687 e883f106403840bc9e0c0bb759b78fbf
 msgid ""
 "This is still a basic setup of those components. More details will be "
 "provided on sections of the documentation concerning the hardening of the"
@@ -322,26 +672,26 @@ msgid ""
 "attention."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:306 50fbfabb1a8a41d497c0b5607166a8fc
+#: ../../install/advanced/core/index.rst:689 8e5292329b074a16ae22a75c69ae2f15
 msgid ""
 "**Install Apache Tomcat 9 (ref. https://yallalabs.com/linux/ubuntu/how-"
 "to-install-apache-tomcat-9-ubuntu-20-04/)**"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:308 e810f3d733a54f868f733a4b0031c052
+#: ../../install/advanced/core/index.rst:691 c4a8bd8b7e274140b3ffe5ef39812829
 msgid ""
 "Apache Tomcat 9 requires Java 8 or newer to be installed on the server. "
 "Check the steps before in order to be sure you have OpenJDK 8 correctly "
 "installed on your system."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:311 8b57adf5415a4d1cbb3e01c634bb7bb8
+#: ../../install/advanced/core/index.rst:694 a973d6862f8e4493b8e13e0f3b658067
 msgid ""
 "First, it is not recommended to run Apache Tomcat as user root, so we "
 "will create a new system user which will run the Apache Tomcat server"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:318 ed092f9ed3614bcfb961f5bdeef25e87
+#: ../../install/advanced/core/index.rst:701 8ae0eeb2f19844b3adbb23a234bd104a
 msgid ""
 "Now, go to the official Apache Tomcat `website "
 "<https://tomcat.apache.org/>`_ and download the most recent version of "
@@ -349,105 +699,113 @@ msgid ""
 "still some errors between Geoserver and Tomcat."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:325 807c7f0a7d1f4ba2a1e15938f04ab129
+#: ../../install/advanced/core/index.rst:708 458328720e8f484d8c952ebf5af0a1e3
 msgid ""
 "Once the download is complete, extract the tar file to the /opt/tomcat "
 "directory:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:331 975eff12da5745d49f097c7ea04130f5
+#: ../../install/advanced/core/index.rst:715 249ef8275aa642db9c0250481015c483
 msgid ""
 "Apache Tomcat is updated regulary. So, to have more control over versions"
 " and updates, we’ll create a symbolic link as below:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:337 40f4ab2eb22847b5be22862a46b70c90
+#: ../../install/advanced/core/index.rst:721 7ba191eab51741ae9a6cb99ec02ed81a
 msgid "Now, let’s change the ownership of all Apache Tomcat files as below:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:343 f48bc1952de44bb9883c2a746528ed3b
+#: ../../install/advanced/core/index.rst:727 056bae5432684586b533fbd993002806
 msgid "Make the shell scripts inside the bin directory executable:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:349 44783bb186a2495894e5ae899beffeeb
+#: ../../install/advanced/core/index.rst:733 f4186a97e1ca4930a6478c2b26e8bf95
 msgid "Create the a systemd file with the following content:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:504 fa5248b31bd945498c94acb350bf072d
+#: ../../install/advanced/core/index.rst:774 583025d2e80d4f36a24a1521989232c7
 msgid ""
 "Now you can start the Apache Tomcat 9 server and enable it to start on "
 "boot time using the following command:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:511 ed746b02aa1447ad805044f22a62a2db
+#: ../../install/advanced/core/index.rst:784 8ce6a54a4ad84f10b9579d74f7b9a7fc
 msgid ""
 "For verification, type the following ss command, which will show you the "
 "8080 open port number, the default open port reserved for Apache Tomcat "
 "Server."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:517 f071c98478a94d5089a908faa84681ae
+#: ../../install/advanced/core/index.rst:790
+#: ../../install/advanced/core/index.rst:798 a6981138d20242c39cc01f7b3b088f83
+#: ecb7e19bfefe44d7bfe19180ab1766a6
+msgid ""
+"In a clean Ubuntu 22.04.1, the ss command may not be found and the "
+"iproute2 library should be installed first."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:806 3a3841efaa0a484994e568400e648848
 msgid ""
 "If your server is protected by a firewall and you want to access Tomcat "
 "from the outside of your local network, you need to open port 8080."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:519 fd5a42e5e7b84f309cead738551a3482
+#: ../../install/advanced/core/index.rst:808 f5f3b17cd9824d15bbc1916b0a64ee8f
 msgid "Use the following command to open the necessary port:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:525 38d0a0cf748b45db8049ce0003fccf73
+#: ../../install/advanced/core/index.rst:814 a9a58e3b7dd14c55ba7a639c99977791
 msgid ""
 "Generally, when running Tomcat in a production environment, you should "
 "use a load balancer or reverse proxy."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:527 6535ba5b8523461290a29f8888686d50
+#: ../../install/advanced/core/index.rst:816 8ef7d4552b9649da84b1cad8076da745
 msgid ""
 "It’s a best practice to allow access to port ``8080`` only from your "
 "internal network."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:529 e8f9486a6acf4cadb5f8c80de844d265
+#: ../../install/advanced/core/index.rst:818 36faccf0ea804b579bd5f28b78622c28
 msgid ""
 "We will use ``NGINX`` in order to provide Apache Tomcat through the "
 "standard ``HTTP`` port."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:531 77f30c0077e644409b96e44543e3355d
+#: ../../install/advanced/core/index.rst:820 db32cd31004346598495cb18d93fedee
 msgid ""
 "Alternatively you can define the Tomcat Service as follow, in case you "
 "would like to use ``systemctl``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:570 f043da0df2a040c68b70213d5b18ed74
+#: ../../install/advanced/core/index.rst:859 b1058c4f550b4ceea8d84117a0eb08f1
 msgid "Install GeoServer on Tomcat9"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:572 4135a0fb3a204373bb84efc3eb594ab3
+#: ../../install/advanced/core/index.rst:861 2bd4d879fca342148cc1fc80682521ea
 msgid "Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:604 7e24e11c6a7c4b1e85ea6c8b5a577a71
+#: ../../install/advanced/core/index.rst:895 2c93b1d788674bb39b98ba3591b2a7c3
 msgid ""
 "Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the "
 "Servlet Container, like heap memory, garbage collector and so on."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:622 7ddcac08992d4254a33cb658b01aeb32
+#: ../../install/advanced/core/index.rst:913 56784dfc1bb64f12b5e2767f1a2dfbf3
 msgid ""
 "After the execution of the above statements, you should be able to see "
 "the new options written at the bottom of the file "
 "``/opt/tomcat/latest/bin/setenv.sh``."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:639 00fc6d413dbb42e6bbcc5e4261466584
+#: ../../install/advanced/core/index.rst:930 adbb86d366534cf28afaea0cf7c12d20
 msgid ""
 "Those options could be updated or changed manually at any time, "
 "accordingly to your needs."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:641 4e5971bf9f424b3bbeaefc3a7c943547
+#: ../../install/advanced/core/index.rst:932 4719705814114ce1bb0fbd7413c07055
 msgid ""
 "The default options we are going to add to the Servlet Container, assume "
 "you can reserve at least ``4GB`` of ``RAM`` to ``GeoServer`` (see the "
@@ -460,31 +818,31 @@ msgid ""
 "performances of your services will be highly impacted."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:643 0aa764e9e3ee4112997ef41d6e268196
+#: ../../install/advanced/core/index.rst:934 689990a09ed64d1cb8b19a556f757a7a
 msgid ""
 "In order to make the changes effective, you'll need to restart the "
 "Servlet Container."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:653 25741a747be542bea563f0640811c652
+#: ../../install/advanced/core/index.rst:944 4dbb2c87855e4592b27cf03a01b7befe
 msgid "If you can see on the logs something similar to this, without errors"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:682 85e339481e4a4cbd852e2e35fd24cac1
+#: ../../install/advanced/core/index.rst:973 b1a7d2b0664949c1a7dca515f95c1f94
 msgid "Your ``GeoServer`` should be up and running at"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:688 777fe3ed0bd54abea37b1ad2eba6d7ca
+#: ../../install/advanced/core/index.rst:979 5dbcd32517ca4b40bad2a1c136bfd715
 msgid ""
 "In case of errors or the file ``geoserver.log`` is not created, check the"
 " Catalina logs in order to try to understand what's happened."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:695 0951ab48827e4433a2dbc334c70d5a35
+#: ../../install/advanced/core/index.rst:986 da0de48f12fc430ea5d7654b163f26af
 msgid "5. Web Server"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:697 0100025972694bc99d5b195ce4bb5fdc
+#: ../../install/advanced/core/index.rst:988 0cad6c8e9b994fc8bbcbd03011574a6d
 msgid ""
 "Until now we have seen how to start ``GeoNode`` in ``DEBUG`` mode from "
 "the command line, through the ``paver`` utilities. This is of course not "
@@ -493,76 +851,74 @@ msgid ""
 "the world."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:699 35cb48565bfa48a3a391174cee93d46a
+#: ../../install/advanced/core/index.rst:990 72a5c30469ba4c4a9f368138c737ea34
 msgid "In this section we will see:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:701 20fa3cdcd1f24bb69d20963168e9ac62
+#: ../../install/advanced/core/index.rst:992 7e5a78279eec4c49ae6ec26fa228373a
 msgid ""
 "How to configure ``NGINX`` HTTPD Server to host ``GeoNode`` and "
 "``GeoServer``. In the initial setup we will still run the services on "
 "``http://localhost``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:702 805a8720d2e84974a24a64c2166c6a02
+#: ../../install/advanced/core/index.rst:993 bf13bb796a3f4daebd9598e8d4882f15
 msgid ""
 "Update the ``settings`` in order to link ``GeoNode`` and ``GeoServer`` to"
 " the ``PostgreSQL`` Database."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:703 0b3825ab4f3e4443bd03811272123e7e
+#: ../../install/advanced/core/index.rst:994 aadbf2bf4f2f4ce2b26c49e1ed2a3bbe
 msgid ""
 "Update the ``settings`` in order to update ``GeoNode`` and ``GeoServer`` "
 "services running on a **public IP** or **hostname**."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:704 6ddedcaf9b2a44eaaee11b3fcf976a90
+#: ../../install/advanced/core/index.rst:995 9058a501da364b6eabface3c1031a87a
 msgid ""
 "Install and enable ``HTTPS`` secured connection through the ``Let's "
 "Encrypt`` provider."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:707 1db43f34194d460a85d5fbc85b86e87b
+#: ../../install/advanced/core/index.rst:998 9d76497945814b21a246d65e73aaf7cd
 msgid "Install and configure NGINX"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:709 9db03d1b032b44d7a55f129204ccb576
+#: ../../install/advanced/core/index.rst:1000 da4c2c7afe084250a25c1845a07b9add
 msgid "Seems to be possible that NGINX works with Python 3.6 and not with 3.8."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:717 082662cd39214f7fbae27a004363368f
+#: ../../install/advanced/core/index.rst:1008 9ef4ff52d4104725ba49b088eb8c6c13
 msgid "Serving {“geonode”, “geoserver”} via NGINX"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:724
-#: ../../install/advanced/core/index.rst:1370 21d05918f2fc4930810aca8a47045eaf
-#: 89b826213e55439ca556192359471b29
+#: ../../install/advanced/core/index.rst:1015 24cebf71e18e4ab5af89300bf2ece21c
 msgid "**!IMPORTANT!**"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:726 85609514cef943da8b2ca18d6a5b7c72
+#: ../../install/advanced/core/index.rst:1017 f8315c50d4b64c28b57448e90021a40f
 msgid ""
 "Change the line ``virtualenv = /home/<my_user>/.virtualenvs/geonode`` "
 "below with your current user home directory!"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:728 1377d47d3979428f821b93be513315e5
+#: ../../install/advanced/core/index.rst:1019 c36e3e7a6b054cb783a118ef0921d645
 msgid ""
 "e.g.: If the user is ``afabiani`` then ``virtualenv = "
 "/home/afabiani/.virtualenvs/geonode``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1114 51ae75a4a131447e925a34a137a8f873
+#: ../../install/advanced/core/index.rst:1441 95c525db7db540f492d2164c39594f83
 msgid "Update the settings in order to use the ``PostgreSQL`` Database"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1116 586cf3831fb14ae1be1f6986428d9395
+#: ../../install/advanced/core/index.rst:1443 8c1b42f961fb4182a4fa330d65de05d4
 msgid ""
 "Make sure you already installed and configured the Database as explained "
 "in the previous sections."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1118 d33c3a0e0bd846e79d4eb6fded04db5e
+#: ../../install/advanced/core/index.rst:1445 8918fafdac7847339dfcf13870449490
 msgid ""
 "Instead of using the ``local_settings.py``, you can drive the GeoNode "
 "behavior through the ``.env*`` variables; see as an instance the file "
@@ -573,935 +929,485 @@ msgid ""
 " a production/dockerized system."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1133 b6c8e1e001be4a04a868bd6b7e9beb79
+#: ../../install/advanced/core/index.rst:1460 73bebd96a0d64d90b000bfde644d52e7
 msgid ""
 "Before finalizing the configuration we will need to update the ``UWSGI`` "
 "settings"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1135 9ed02078fb5a436389cb9a4a149b67f5
+#: ../../install/advanced/core/index.rst:1462 3197f7e244734b359e22054537346f67
 msgid ""
 "Restart ``UWSGI`` and update ``OAuth2`` by using the new "
 "``geonode.settings``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1165 ecda5afb2c954d8f81dd147af7072c07
+#: ../../install/advanced/core/index.rst:1491 4c4bb6e5f6e44759853e53a1bf759efc
 msgid "Check for any error with"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1171 072181be0c4f468094e8ee59dd6918a2
+#: ../../install/advanced/core/index.rst:1497 928e839788e542afaf29c933b09dd55e
 msgid "Reload the UWSGI configuration with"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1179 31d5c362f66e4c73acccac2382bdce29
+#: ../../install/advanced/core/index.rst:1505 b38851fdac0e4a53816fd3fd66a3b0ff
 msgid ""
 "6. Update the settings in order to update GeoNode and GeoServer services "
 "running on a public IP or hostname"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1181 b5b154c2bb144122b2a2c3924773b07d
+#: ../../install/advanced/core/index.rst:1507 4349873a18c9482588e8a4a25b39c7c0
 msgid ""
 "Before exposing your services to the Internet, **make sure** your system "
 "is **hardened** and **secure enough**. See the specific documentation "
 "section for more details."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1183 1aa747bb743944c695fa48cac53a72d3
+#: ../../install/advanced/core/index.rst:1509 1ff49a6b5d7f435faa40c8114de903c4
 msgid ""
 "Let's say you want to run your services on a public IP or domain, e.g. "
 "``www.example.org``. You will need to slightly update your services in "
 "order to reflect the new server name."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1185 e163db36cd4c4c31b8739abeb9186da0
+#: ../../install/advanced/core/index.rst:1511 f7262689d98341738b72527e7ed68553
 msgid "In particular the steps to do are:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1187 5fa2e3a8cda34c9094ccf9d1b144a331
+#: ../../install/advanced/core/index.rst:1513 833114f4a4584dee98481286e98e8e06
 msgid "Update ``NGINX`` configuration in order to serve the new domain name."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1199 0c4c4065010349cfb5da4470dce59157
+#: ../../install/advanced/core/index.rst:1525 f41b79bcb9d7426fb74fa54e96d7e864
 msgid "Update ``UWSGI`` configuration in order to serve the new domain name."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1212 d6f2d62ac1ea434e9fc23f1a0e844b8d
+#: ../../install/advanced/core/index.rst:1538 d20c2a8534304425887bb7fb7a1a2460
 msgid "Update ``OAuth2`` configuration in order to hit the new hostname."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1222 2ec80513069e4c6c950bb641e569ae5d
+#: ../../install/advanced/core/index.rst:1551 2f4d58a1853048988ec816c2da31ee2b
 msgid "Update the existing ``GeoNode`` links in order to hit the new hostname."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1233 243e16adf1f748ef8cba22d782cc5f3e
+#: ../../install/advanced/core/index.rst:1572 3c893f1ac09140dc97124cb6ee888f79
+msgid ""
+"If at the end you get a \"bad gateway\" error when accessing your geonode"
+" site, check uwsgi log with ``sudo tail -f "
+"/var/log/uwsgi/app/geonode.log`` and if theres is an error related with "
+"port 5432 check the listening configuration from the postgresql server "
+"and allow the incoming traffic from geonode."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1575 4dde5075817144a7a95d61c3b30df4ee
 msgid ""
 "7. Install and enable HTTPS secured connection through the Let's Encrypt "
 "provider"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1250 e76cfb0825f64ec0bc36b6df2b0e949d
+#: ../../install/advanced/core/index.rst:1592 f887b5720b5c44e89e42a5bd2ec00a23
 msgid "Next, the steps to do are:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1252 59f8ce0f94574b7c932f3afe26c33230
+#: ../../install/advanced/core/index.rst:1594 1d7d081ae9ae4dfe87cd82e1d8237e20
 msgid "Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1254
-#: ../../install/advanced/core/index.rst:1980 2c66d88986df480f95cb9478aed050f2
+#: ../../install/advanced/core/index.rst:1596
+#: ../../install/advanced/core/index.rst:2366 55807505072641639424a4f9ea20b799
+#: f5c6f432ebf748c0b31950514d322e97
 msgid ""
 "From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth "
 "Toolkit › Applications › GeoServer``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1259
-#: ../../install/advanced/core/index.rst:1985 91cb916d2f534a63a30787de51f9d8f0
+#: ../../install/advanced/core/index.rst:1601
+#: ../../install/advanced/core/index.rst:2371 00c2876023ed4b21a8f3b9954e3f18a9
+#: c3f3b4d8f58748bb882e38b72e50cc21
 msgid "*Redirect URIs*"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1261 2fb93bca6f8744b7a612d0cf6cc57697
+#: ../../install/advanced/core/index.rst:1603 a57de591dde94b488f185044d6398662
 msgid "Update the ``GeoServer`` ``Proxy Base URL`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1263
-#: ../../install/advanced/core/index.rst:1990 2a452c01b43e4080b8cd10930faeb671
+#: ../../install/advanced/core/index.rst:1605
+#: ../../install/advanced/core/index.rst:2376 74cfa49946104e9f83752b6085e5e9a8
+#: 7d74f0e37dd84dc7b6ec6de094c2ac48
 msgid "From the ``GeoServer Admin GUI`` go to ``About & Status > Global``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1268
-#: ../../install/advanced/core/index.rst:1995 2b03094e4c7c46a2ae2d3faf7cd0290c
+#: ../../install/advanced/core/index.rst:1610
+#: ../../install/advanced/core/index.rst:2381 7f34c95a72c74adeb28879c5a710575a
+#: f61f3728e7dc423cb7929a54525c5225
 msgid "*Proxy Base URL*"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1271 ba171b9b14284d56b830dd9c7f0be9d5
+#: ../../install/advanced/core/index.rst:1613 c92097d197c74775810a893747834f7d
 msgid "Update the ``GeoServer`` ``Role Base URL`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1273
-#: ../../install/advanced/core/index.rst:2001 763e1ca029bd4fb48aa6ea3fb5b7c17d
+#: ../../install/advanced/core/index.rst:1615
+#: ../../install/advanced/core/index.rst:2387 067f5fdfdd0140deb47a022a4bd8dc56
+#: 69a5a6302c254f82954feb2aa123e017
 msgid ""
 "From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles "
 "> geonode REST role service``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1278
-#: ../../install/advanced/core/index.rst:2006 b2dfce7796e641fc9e3e638ece59be99
+#: ../../install/advanced/core/index.rst:1620
+#: ../../install/advanced/core/index.rst:2392 6b19750c8cd041f59b493ca5b5f6cf1d
+#: b3097ed3d57147dfa8368b67d9ffd615
 msgid "*Role Base URL*"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1280 114cadbaaeae40e2ab70ff340b76a45f
+#: ../../install/advanced/core/index.rst:1622 a7a351fdc30f42d2b26a533255b6e42d
 msgid "Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1282
-#: ../../install/advanced/core/index.rst:2011 bd1a9befced44990ab98d5d157ad9073
+#: ../../install/advanced/core/index.rst:1624
+#: ../../install/advanced/core/index.rst:2397 839c5cfa43ce47cb84ea262de76c3115
+#: cada8f08b30b4bf393e118b2da512e79
 msgid ""
 "From the ``GeoServer Admin GUI`` go to ``Security > Authentication > "
 "Authentication Filters > geonode-oauth2``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1287
-#: ../../install/advanced/core/index.rst:2016 ba0d57bda113445e82141cb150ccf946
+#: ../../install/advanced/core/index.rst:1629
+#: ../../install/advanced/core/index.rst:2402 1740a0de8ec448249ad91d8e1f061c66
+#: 1caf7027a112458ea91819fcb64fb784
 msgid "*OAuth2 Service Parameters*"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1290 ba3549ee6df24d0b92c7a8ab8a861916
+#: ../../install/advanced/core/index.rst:1632 520e3e49e1b540d584931625aa61d80d
 msgid "Update the ``UWSGI`` configuration"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1310 ad8cf73d733746999b26c1a5aab4d278
+#: ../../install/advanced/core/index.rst:1652 63191a566bf84e1ba0483fef1ab53fc2
 msgid "*UWSGI Configuration*"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1313 a28f3d21ae5943d69040b8e2fbfcb94b
+#: ../../install/advanced/core/index.rst:1655 f35e6aaba06e4bf9a31dbff2b59442f7
 msgid "8. Enabling Fully Asynchronous Tasks"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1316 f427b83420b6428990a57121237a870d
+#: ../../install/advanced/core/index.rst:1658 648105cd6eed434295ca37a05feea11b
 msgid ""
-"Install and configure `\"rabbitmq-server\" <https://www.vultr.com/docs"
-"/how-to-install-rabbitmq-on-ubuntu-16-04-47>`_"
+"Install and configure `\"rabbitmq-server\" <https://lindevs.com/install-"
+"rabbitmq-on-ubuntu/>`_"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1318 df80528630d544978062fc39f8dcfdc6
+#: ../../install/advanced/core/index.rst:1662 6ee03a8fd4c6428d9c04f86262d6a2ca
 msgid ""
-"Adapt the steps below accordingly to your Ubuntu distribution (see the "
-"`\"rabbitmq-server\" <https://www.vultr.com/docs/how-to-install-rabbitmq-"
-"on-ubuntu-16-04-47>`_ links to the documentation)."
+"A `March 2021 blog post <https://blog.rabbitmq.com/posts/2021/03/migrate-"
+"off-of-bintray/>`_ from RabbitMQ provides alternative installations for "
+"other systems."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1352 ca30a8ea74f4421bb643f12df28b802d
+#: ../../install/advanced/core/index.rst:1664 796c4920ef9a4192a61aef45c52d197a
+msgid "**Install rabbitmq-server**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1666 43a5f2c84e22454cb8ea10d109d7e892
+msgid ""
+"Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com"
+"/install-rabbitmq-on-ubuntu/>`_ & `www.rabbitmq.com/install-debian.html/ "
+"<https://www.rabbitmq.com/install-debian.html#apt-cloudsmith/>`_"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1698 6750a387706a4063b31a2291e70d1e77
+msgid "**Create admin user**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1700 0d7ee0919e62493898e899ebf2d56968
+msgid ""
+"This is the user that GeoNode will use to communicate with rabbitmq-"
+"server."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1711 c3aeb6481c334a9cbdc3c9897fdea0d6
+msgid "**Managing RabbitMQ**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1713 4e2e7a1b41af4a0c9135b9f3a0960389
+msgid "You can manage the rabbitmq-server service like any other service::"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1719 baebc69872a1484bbf4f681765a2b728
+msgid ""
+"You can manage the rabbitmq-server node with `rabbitmqctl "
+"<https://www.rabbitmq.com/rabbitmqctl.8.html>`_. For example, to fully "
+"reset the server, use these commands::"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1726 1b6de5d1ef494339b047e3d0892919e6
+msgid "After reset, you'll need to recreate the ``admin`` user (see above)."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1729 b4827e938bae498aa605bff496260064
 msgid ""
 "Install and configure `\"supervisor” and “celery\" "
 "<https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-"
 "ubuntu-16-04/>`_"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1372 82a9dd2cedc444008b63d6f89fa728bd
+#: ../../install/advanced/core/index.rst:1731 49dad9248d574dd68ab439d95270c2f0
+msgid "**Install supervisor**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1742 547b4cab42394d70bc5c2a9dafccf970
+msgid "**Configure supervisor**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1781 83a857ebb064427dad9af8a97e9b0849
 msgid ""
-"Pay particular attention to the ``environment`` key values pair placed "
-"here."
+"Note the last line which includes the ``geonode-celery.conf`` file that "
+"is described below."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1374 827262baa27d4624af877e5fb519f040
+#: ../../install/advanced/core/index.rst:1783 a66817b48bd34e16b163be0da325c5ac
+msgid "**Set the `environment` directive**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1785 081e8944155b425d8ebeaf5423d817e7
 msgid ""
-"They **must** match the values you have already set on the ``uwsgi.ini`` "
-"file."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1429 b451f07b2bae42e6b0eecaf949e0e9e7
-msgid "Reload and restart ``supervisor`` and the ``celery`` workers"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1440 2669ef1e48f340078a809048b7d17a1b
-msgid "Make sure everything is *green*"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1451 c9dc9b21368a4927b692120ad1b461c6
-msgid "**The `environment` directive**"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1453 4c99b2cf014c4cec8d330975df002968
-msgid ""
-"The environment variables are placed into the "
+"Environment variables are placed directly into the "
 "``/etc/supervisor/supervisord.conf`` file; they are exposed to the "
 "service via the ``environment`` directive."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1455 a0305e414aac403eb8c4050649042bfc
-msgid "The syntax of this directive is the following one:"
+#: ../../install/advanced/core/index.rst:1788 2653debe84724a74983dfbb50703df5e
+msgid ""
+"The syntax of this directive can either be all on one line like this "
+"(shown above):"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1461 9eb826279441471f8e64ff3e3347392a
+#: ../../install/advanced/core/index.rst:1794 c3d6a08a3e9a4832adc42c9082ae6dec
+msgid "or broken into multiple **indented** lines like this:"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1803 1d49d8c8b8ce47cfa84fe0a915902670
 msgid ""
 "The following are the minimum set of env key value pairs you will need "
 "for a standard GeoNode Celery instance:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1463 c8fc4f71b57146adaf00a60360f47f46
+#: ../../install/advanced/core/index.rst:1805 f2e79180312949deb1f56f549bfef43a
 msgid "``ASYNC_SIGNALS=\"True\"``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1464 cea3ef42c45742daacca8bab9ae481d2
+#: ../../install/advanced/core/index.rst:1806 b98b573826084ecea463bf8e67fab81b
 msgid "``BROKER_URL=\"amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/\"``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1465 9c0deae75aae4099abb6f3c8b3f8e90b
+#: ../../install/advanced/core/index.rst:1807 1745e60c74814ffca8cded5ca4026c63
+msgid "``DATABASE_URL``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1808 4116370ad0e54271bcf4fada53101fda
+msgid "``GEODATABASE_URL``"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1809 125a7f6ddcb94bb39522584ccb82764e
 msgid "``DEBUG``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1466 34441641895c484c8d9c32d85c5d691e
+#: ../../install/advanced/core/index.rst:1810 fdcad6022b4e48c79d3a4d49cd0b5409
 msgid "``CACHE_BUSTING_STATIC_ENABLED``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1467 f5c43b8e439d44a9b991058ebfde72f8
-msgid "``CACHE_BUSTING_MEDIA_ENABLED``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1468 328c11311a014976a438a250a96d4d1d
+#: ../../install/advanced/core/index.rst:1811 2b696decb3e745fb9ce44965d204ca7b
 msgid "``SITEURL``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1469 4f633522a104429da7dcee40d60c29ea
+#: ../../install/advanced/core/index.rst:1812 ac55a0b74a244166b62cbcb37aac1d40
 msgid "``DJANGO_SETTINGS_MODULE``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1470 75d9e3e3e9124d978b33a48659d50625
+#: ../../install/advanced/core/index.rst:1813 8e1e73d01e994b5094f3cee85aa1eac2
 msgid "``GEOSERVER_ADMIN_PASSWORD``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1471 015f127912104f48a10ccd25268e5170
+#: ../../install/advanced/core/index.rst:1814 f14f536ef11d4ce68c82ad196bf3a322
 msgid "``GEOSERVER_LOCATION``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1472 fe62994abb244e8081f005b21488ac97
+#: ../../install/advanced/core/index.rst:1815 160c7dbcfecd481890bd2c476f62c158
 msgid "``GEOSERVER_PUBLIC_LOCATION``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1473 f423e97b22434ff9b1fc33d8b4fa77e5
+#: ../../install/advanced/core/index.rst:1816 4e48fce5543b4635885b4ac0c523c18c
 msgid "``GEOSERVER_WEB_UI_LOCATION``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1474 6795ca2caaf4434897912f6045c5200b
+#: ../../install/advanced/core/index.rst:1817 7994ca04973a4e2ab74d93afa7926322
 msgid "``MONITORING_ENABLED``"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1476 0167c3c2094b4a68ac005300fddf55e0
-msgid "You will also need to:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1478 2c54306049e2437fa78a188861640ed2
-msgid "Add more variables accordingly to your custom ``tasks`` (if any)"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:1481 dceb9170dce44f9d986a869aee81e4a3
+#: ../../install/advanced/core/index.rst:1821 000b477b2012476cbad9c7cfe44266f1
 msgid ""
-"Make **always** sure the values of the environment variables match the "
-"ones of the ``uwsgi.ini`` file"
+"These key value pairs **must** match the values you have already set on "
+"the ``uwsgi.ini`` file."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1485 8e8bc7f8d61840ae9e725c0224fca300
+#: ../../install/advanced/core/index.rst:1822 ed0f5b080d90414c84dcd02780e1d328
+msgid ""
+"If you have custom ``tasks`` that use any other variables from  "
+"``django.conf.settings`` (like ``MEDIA_ROOT``), these variables must also"
+" be added to the environment directive."
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1824 2c2827a9cbf3477ebcd6aec3af855b05
+msgid "**Configure celery**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1847 eb0c72822f0f4dd08502ec4185a93fbf
+msgid "**Manage supervisor and celery**"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1849 d9d44b62b0d743bbabb255df944226cf
+msgid "Reload and restart ``supervisor`` and the ``celery`` workers"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1860 d9187537e4d542e58dd029a15dd5da7a
+msgid "Make sure everything is *green*"
+msgstr ""
+
+#: ../../install/advanced/core/index.rst:1871 c0fbbe8de3844499884b60bb0762cea9
 msgid ""
 "Install and configure `\"memcached\" <https://cloudwafer.com/blog/how-to-"
 "install-and-configure-supervisor-on-ubuntu-16-04/>`_"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1507 0aedde7fa42048108b5c55a713431a8b
+#: ../../install/advanced/core/index.rst:1893 f7fe92eb0b0b4abaac17bde3da5081da
 msgid "RHEL 7.x"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1537 8344e908e67f433aad7b66f9dbcfe260
+#: ../../install/advanced/core/index.rst:1923 67bcfafcce7a406d871d816a68f7b747
 msgid "2. Create necessary users"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1546 2d3ba161f61f45c2954b40e903ea1528
+#: ../../install/advanced/core/index.rst:1932 175f10bf8fef4291b6cedc6e5d29819e
 msgid "3. Give geonode correct sudo powers"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1547 f3a683ca06e143779d46382b61359397
+#: ../../install/advanced/core/index.rst:1933 aab01a96bbae4770a667e3ab9852bfba
 msgid "Edit sudo configuration with this command:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1553 86c8f40dd0584071889f9871e2849a6f
+#: ../../install/advanced/core/index.rst:1939 272e4dace55d4f478cf6150414de507a
 msgid "Add these lines in the editors"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1560 1bd93c6f20b141e5a93ac03c0f63294a
+#: ../../install/advanced/core/index.rst:1946 8d004d2e31e94362aaf96909692c40e7
 msgid "Save to /etc/sudoers from temporary file and exit."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1563 476db97ef26f412f98d9b428dd816ac9
+#: ../../install/advanced/core/index.rst:1949 701214c9db214774a6f0266ba513c980
 msgid "4. Configure PostgreSQL 13"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1565 0a37f5b6d72748c9b541bce6dbc60fb7
+#: ../../install/advanced/core/index.rst:1951 3209ede8f8254930872537efba4d40bb
 msgid ""
 "You most likely want to change the password before applying the sql "
 "commands below"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1617 594d2279aa634db082c54c2447efc578
+#: ../../install/advanced/core/index.rst:2003 8b123b34ae884add9ba891cf91d6b4fd
 msgid "5. Install Tomcat and GeoServer"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1629 2761f68326124d66a4f9238c70f04c59
+#: ../../install/advanced/core/index.rst:2015 1ebb6a9c00e849e3beb40a37be75fe2b
 msgid "6. Install GeoNode"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1637 76dec9f4e4604b939f05b454197dae0a
+#: ../../install/advanced/core/index.rst:2023 a88d90db18864494b20f2feae1859d05
 msgid "7. Configure pyenv"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1648 8a55bd4079524616ae221c0bb0930f8c
+#: ../../install/advanced/core/index.rst:2034 4aa239a71aa24a6bbe2d34245bc2f2f5
 msgid "8. Continue installing a recent python 3.8.x version."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1650 246bc29d06b14e998c1f926f2b229d20
+#: ../../install/advanced/core/index.rst:2036 419d09d4bf9a4eeab4672acb97bda938
 msgid "Continue installing custom version of python (3.8.5), virtualenv, GeoNode"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1675 810c72c154a540269618598a14fa9e7f
+#: ../../install/advanced/core/index.rst:2061 4a5f873cfe7b4dec9db9e74e616bc836
 msgid "9. Configure /etc/uwsgi.d/geonode.ini"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1748 f64022b36dbf4254868529de4aecc283
+#: ../../install/advanced/core/index.rst:2134 09b748d6b2644363bc324ca182dbdd62
 msgid "10. Modify /etc/nginx/nginx.conf"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1750 7d3b00f3db924e6cbdc4cfc4060d7363
+#: ../../install/advanced/core/index.rst:2136 57d32ff9718a43849aeca5f49a26a020
 msgid ""
 "If you are not using letsencrypt, you should put your certificates in the"
 " paths suggested below:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1902 6d1676c3a37c4ffd86e6f6aca071847a
+#: ../../install/advanced/core/index.rst:2288 0b427d101ccb4041a7f4825fc90a6671
 msgid "11. Modify /etc/uwsgi.ini"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1915 f00ed99d31e548c5ae115f615caac693
+#: ../../install/advanced/core/index.rst:2301 22b24d46d1e14df19c1a8570cb0faf14
 msgid "12. Create Geonode service /etc/systemd/system/geonode.service"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1930 082a51b6d8e841a6b4bc6aab721e4e12
+#: ../../install/advanced/core/index.rst:2316 b2d8035ff2ab46a69e5720ad29563006
 msgid "13. Enable uwSGI service"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1938 7f405db1349747ebb5320445da7f8e50
+#: ../../install/advanced/core/index.rst:2324 27f04f7550f2452bb004f650e405a28b
 msgid "14. Configure Postgres Database in GeoNode"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1947 f6eb27d7e3954ba28cdbf788b733938e
+#: ../../install/advanced/core/index.rst:2333 83ada6166b9d4186bc9a5a33a8ddaf2d
 msgid "15. Configure local_settings.py"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1955 46c3d9bfd6314f32a9bd91e9cd201622
+#: ../../install/advanced/core/index.rst:2341 37bc6467d13c4994bc83e7189ef73ded
 msgid "16. Initialize GeoNode"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1975 dc2aa2a5ccb34efc8330adb28f8b8292
+#: ../../install/advanced/core/index.rst:2361 b443c45b6af2426587efa2b9e7db0062
 msgid "17. Configure OAuth2"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1978 223d7d5860f24b2ca88ed86e590eb0f1
+#: ../../install/advanced/core/index.rst:2364 a3e0fceafa1b4d9ca2e6694278541f97
 msgid "17.1 Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1988 4928e96d16494272a6114f58a1317f5e
+#: ../../install/advanced/core/index.rst:2374 ec50c600ef9947969708e59697c38c5b
 msgid "17.2 Update the ``GeoServer`` ``Proxy Base URL`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:1999 bc53007510a245d59f2779645a12945e
+#: ../../install/advanced/core/index.rst:2385 bf2a4f8edb3f44228bd99cd2989a5f2e
 msgid "17.3 Update the ``GeoServer`` ``Role Base URL`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:2009 d497dbc6053648e584d6e3c1c6749610
+#: ../../install/advanced/core/index.rst:2395 477439d5ccda49048b1e18533d069d8f
 msgid "17.4 Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly."
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:2019 8343f72de56e464ea7c979650e091acc
+#: ../../install/advanced/core/index.rst:2405 a0ce3082d49347cb94c8858a60883b26
 msgid "18. Using `letsencrypt`"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:2021 2b9162a1fe874e0dbc0736e3737854e6
+#: ../../install/advanced/core/index.rst:2407 df7290a740a345418da969108940002c
 msgid ""
 "In case you want to use letsencrypt free certificates, you should "
 "configure nginx accordingly:"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:2023 aa7173a5e10245b597ae511d0fa33bcc
+#: ../../install/advanced/core/index.rst:2409 c4fd52ab00564148a347c2831a2f0235
 msgid "https://certbot.eff.org/lets-encrypt/centosrhel7-nginx.html"
 msgstr ""
 
-#: ../../install/advanced/core/index.rst:2025 77a05d71498c403ca66bba0f189bf4f8
+#: ../../install/advanced/core/index.rst:2411 1e1af2262219494c98d92a914da7b8a0
 msgid ""
 "Comment out any ssl parameter in nginx and replace with the parameters "
 "and paths given by certbot"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2028 d72ee24eb33e492fb92dfbfb2f6e6fc1
-msgid "Windows"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2030 74f1bbfa4ade44b49d9eadd45e4f2ac3
-msgid ""
-"In this section we are going to discuess installation process of geonode "
-"in windows. This process will install the geonode in your windows machine"
-" and run locally."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2033 b81cb31f4faa40fa9c80b847e7720a45
-msgid "1. Python Setup"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2035 296bf8a027694c13a81a9c00fa937717
-msgid ""
-"Download and install python 3.7 from `this link "
-"<https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64.exe>`_"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2036 312eb49a058343cbb616be9ba0f80108
-msgid ""
-"Make sure you added python to environment variable path. If you don't "
-"know how to add python to environment variable, you can check `this "
-"tutorial <https://datatofish.com/add-python-to-windows-path/>`_"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2037 d121533d561049b79cfe8f5aae2701fc
-msgid ""
-"Open your command prompt and type ``python --version`` to check whether "
-"it added or not"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2038 f85daa9c2b1d482aaa2488c6e027a338
-msgid "Goto your working directory and clone the geonode repo"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2039 71e502d0cb7c40bc859ad55c12d12cee
-msgid "Create vitrualenv using ``pip`` command"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2057 a0ab90dec810454c8951010e6856ba3f
-msgid "2. Installation of GDAL"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2059 97a33e20071346a9aae4e51325d56572
-msgid ""
-"The ``gdal`` can be install through ``OSGeo4W``. But this time we need to"
-" install it manually. This time we need to install the gdal inside our "
-"``virtual environment``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2061 19f95e7674c04fdc88a268e9f93260fa
-msgid ""
-"Goto `Unofficial Windows Binaries for Python Extension Packages "
-"<https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal>`_ and Download the "
-"compatible gdal wheel file"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2063 a762fa3462c0476abd46fff9377e7b5b
-msgid ""
-"First of all check your python version (`python --version`). And download"
-" the same version of ``whl file``. If you installed ``python 3.7``, then "
-"you should download ``GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl`` file. Here "
-"``cp37`` and ``amd64`` means it is compatible with ``64 bit python 3.7``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2065 5f227d2a3f6840609c1d5e3c8af7fdff
-msgid "Install gdal using this ``whl file``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2078 d99dfbed8de94627a5e720a0b93ee6aa
-msgid "3. Installation of required libraries and run locally"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2080 4d921a3ed1af4af8b0559ae0eb0f9bef
-msgid "For installation of required libraries, you should follow following steps,"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2082 4ea758b8a03a48b2a90248bdfa860f4c
-msgid "Edit ``requirement.txt`` file"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2089 271d033e8890491584b3d9bf523fd7be
-msgid ""
-"It will open the requirement.txt file in notepad. Change "
-"``Shapely==1.7.0`` to ``Shapely==1.6.3``. Since we not gonna deploy "
-"geonode in windows, remove the production packages from requirement.txt "
-"file,"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2091 2c8e600fa0aa4eb5922ee3920606cd6e
-msgid ""
-"# production uWSGI==2.0.18 gunicorn==20.0.4 ipython==7.14.0 docker==4.2.0"
-" invoke==1.4.1"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2098 c86bf592b8544493b75ad1928d77a7fc
-msgid "Install the requirement.txt file"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2110 94f57ae4147c41a68bab0fa8905278fa
-msgid "Run the geonode in ``DEBUG (DEVELOPMENT)`` mode"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2119 9c14605df90641b2952e8ccb7264d486
-msgid "Now the geonode will run on your windows."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2122 bd9cc8e83bfb410da60abd4a858fa673
-msgid "4. Postgresql Database setup"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2124 67e11f86e00e4163a6c2272e41639a6d
-msgid ""
-"In this section we are going to install setup ``PostgreSQL`` database on "
-"GeoNode. GeoNode uses the ``PostgreSQL 11`` database."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2126 4e544c97e70643a2a0dce97d6b47439e
-msgid ""
-"Download and install the `postgres 11 windows installer "
-"<http://www.enterprisedb.com/thank-you-downloading-postgresql?cid=55>`_"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2128 492c00eacf0443e3870113eb001d4a16
-msgid ""
-"After installation of ``PostgreSQL 11``, open ``stack builder`` and "
-"install the spatial extension named as ``postgis``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2130 00fa213b390546f0a8fac76b5a056679
-msgid ""
-"Make sure you install the postgis extension from stack builder, otherwise"
-" it won't work."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2132 87e52a4795e44aa4ada956b5e60ecd26
-msgid "Now it is time create database and add user"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2134 d5c09865ff554dc095160967e6f9c1b3
-msgid ""
-"Make sure you added postgresql to ``environment variable path``. "
-"Otherwise  ``psql`` will not be recognize in command prompt. Also you can"
-" search ``psql`` in windows and run the code directly from ``psql shell``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2152 764aa4cd1a7e47ea903ea229b82a1d3b
-msgid ""
-"Change the ``pg_hba.conf`` file (C:\\Program "
-"Files\\PostgreSQL\\11\\data\\pg_hba.conf) as below, so that you can "
-"access the database without password in your local machine"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2160 d1c7c3fb7a4b46819a7dc16febf21560
-msgid "Restart the ``PostgreSQL`` to make the chage effective"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2163 1e05cf8978fe48e091f0cd1358554b50
-msgid "5. Update Django setting"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2165 322c51c9ea0949c49c69387118007633
-msgid ""
-"Now it is time to connect the postgres database with django. You need to "
-"follow following steps,"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2167 456c6b7b855e4080afa1ce5bbebf7bca
-msgid ""
-"Rename the file ``local_settings.py.geoserver.sample`` to "
-"``local_settings.py`` (This file can be found at the "
-"GEONODE_INSTALLATION_DIR/geonode/)"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2169 41631626fee34eb19dc3ba16b28dae8e
-msgid "Initialize the GeoNode with local_settings.py file."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2179 8eec9ef484f24065847c5c52ace44272
-msgid ""
-"Now you can run the geonode locally with postgresql database. using "
-"following command"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2187 4c80bcd942d24c91a99ffb3b355550b3
-msgid "Docker"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2189 c2b25dcd8b294e5a8f1a51a888bd8944
-msgid "In this section we are going to list the passages needed to:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2191 d6ac582401d04e66a5264367e1298eac
-msgid "Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2192 3f5a19ad4ef945c4a0898640adc16c14
-msgid "Deploy a vanilla ``GeoNode 3.2.0`` with ``Docker``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2194 9abff06798184c95acdc0a7ed82dab2d
-msgid "Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2195 da41eed797db4bd9a3d66cf772c27b27
-msgid ""
-"Access the ``django4geonode`` Docker image to update the code-base and/or"
-" change internal settings"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2196 ce2b43d20c6e445d99ebba440d954be4
-msgid ""
-"Access the ``geoserver4geonode`` Docker image to update the GeoServer "
-"version"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2198 8b0f2b366f274e3c948736372d9cac86
-msgid ""
-"Passages to completely get rid of old ``Docker`` images and volumes "
-"(prune the environment completely)"
-msgstr ""
-
-#: ../../install/advanced/core/docker/ubuntu.rst:2
-#: 3e5f555c4f1b4a418426fd6416464ffb
-msgid "1. Install the Docker and docker-compose packages on a Ubuntu host"
-msgstr ""
-
-#: ../../install/advanced/core/docker/centos.rst:5
-#: ../../install/advanced/core/docker/ubuntu.rst:5
-#: 06b9f459c87c4f6eac9f8a5c504c5372 f3368415ae61480ca9950ee32cf7e8a1
-msgid "Docker Setup (First time only)"
-msgstr ""
-
-#: ../../install/advanced/core/docker/centos.rst:2
-#: 6fe8251e709748b7ac29095514eb5911
-msgid "2. Install the Docker and docker-compose packages on a CentOS host"
-msgstr ""
-
-#: ../../install/advanced/core/docker/centos.rst:7
-#: a558824dc86644da93309cd6a5d82141
-msgid "The `centos-extras` repository must be enabled"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2205 6c94e17a621a4eb99b4baca3c48054f9
-msgid "3. Test Docker Compose Instance"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2207 c4f19cf87ef84a43905399c1a825fa10
-msgid "Logout and login again on shell and then execute:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2214 d785b5ac104d46ffbe7bdac0cc65ecc4
-msgid "4. Deploy a vanilla GeoNode 3.2.0 with Docker"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2216 c6b32ff83eb14e73bf3609a5440787cd
-msgid "Clone the Project"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2230 f1b4d7101f0f4bc382c8d5cab19de399
-msgid "Start the Docker instances on ``localhost``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2232 90c8e427476946a48df576570ae2a9f7
-msgid ""
-"The first time pulling the images will take some time. You will need a "
-"good internet connection."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2242 0882bf2dd0e84c968d7d48b21b4ba203
-msgid ""
-"If you want to re-build the docker images from scratch, instead of "
-"``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to"
-" the up command, for instance:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2251 ca33b4ec14b640b29921b3fce3445e14
-msgid ""
-"To startup the containers daemonized, which means they will be started in"
-" the background (and keep running if you ``log out`` from the server or "
-"close the ``shell``) add the ``-d`` option to the ``up`` command as in "
-"the following. ``docker-compose`` will take care to restart the "
-"containers if necessary (e.g. after boot)."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2262 5166ce020bdf477e83a2da72adbcd0fe
-msgid "Test the instance and follow the logs"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2264 7bf9dc01729c4e9698db409ca4cca9ec
-msgid ""
-"If you run the containers daemonized (with the ``-d`` option), you can "
-"either run specific Docker commands to follow the ``startup and "
-"initialization logs`` or entering the image ``shell`` and check for the "
-"``GeoNode logs``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2266 dfc5b25d7de648f9a1d55bd54a7a96e0
-msgid ""
-"In order to follow the ``startup and initialization logs``, you will need"
-" to run the following command from the repository folder"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2273
-#: ../../install/advanced/core/index.rst:2303 84528ed7eae24e72be8e1a9012d88ad2
-msgid "Alternatively:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2280 5527c7503dac412b82ae1325163e30a1
-msgid ""
-"You should be able to see several initialization messages. Once the "
-"container is up and running, you will see the following statements"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2290 7a8b32d39a094191aaf15744cc146083
-msgid "To exit just hit ``CTRL+C``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2292 86f7eb00a5db48ba96261f530edfda1e
-msgid ""
-"This message means that the GeoNode containers have bee started. Browsing"
-" to ``http://localhost/`` will show the GeoNode home page. You should be "
-"able to successfully log with the default admin user (``admin`` / "
-"``admin``) and start using it right away."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2294 bc6f84be15684ffcab6e38bd735df4f5
-msgid ""
-"With Docker it is also possible to run a shell in the container and "
-"follow the logs exactly the same as you deployed it on a physical host. "
-"To achieve this run"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2309 96f7da3720ba4f1d86a40e6906a11030
-msgid "To exit just hit ``CTRL+C`` and ``exit`` to return to the host."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2312 e28cfc6d272346f5bd8c5ed113fed232
-msgid "Override the ENV variables to deploy on a public IP or domain"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2314 4da5098356844893952068a1ddce2488
-msgid ""
-"If you would like to start the containers on a ``public IP`` or "
-"``domain``, let's say ``www.example.org``, you can"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2323 f9fcdc9587154c06857157f3a31de25d
-msgid "Edit the ``ENV`` override file in order to deploy on ``www.example.org``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2330 944704de6a28437095e2daa87ebfa68f
-msgid "Replace everywhere ``localhost`` with ``www.example.org``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2378 6b15f0470e8643f78dc4cc1d4d28ca2d
-msgid ""
-"It is possible to override here even more variables to customize the "
-"GeoNode instance. See the ``GeoNode Settings`` section in order to get a "
-"list of the available options."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2380 bce9863da1634289aa6b421359dbf745
-msgid "Run the containers in daemon mode"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2387 37aa9742d03e487f8ccb8855f8d3aa99
-msgid ""
-"Access the django4geonode Docker container to update the code-base and/or"
-" change internal settings"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2389 6136790ad9c04ba088b9d93d58c34aa4
-msgid "Access the container ``bash``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2395 928256df4d674fb0884604454b093d1b
-msgid ""
-"You will be logged into the GeoNode instance as ``root``. The folder is "
-"``/usr/src/app/`` where the GeoNode project is cloned. Here you will find"
-" the GeoNode source code as in the GitHub repository."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2397 2dca583004de4aa5bdcafea2a56daff3
-msgid ""
-"The machine is empty by default, no ``Ubuntu`` packages installed. If you"
-" need to install text editors or something you have to run the following "
-"commands:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2407 9d307ded7fe1470ca06f7815eb22f3bc
-msgid ""
-"Update the templates or the ``Django models``. Once in the ``bash`` you "
-"can edit the templates or the Django models/classes. From here you can "
-"run any standard ``Django management command``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2409 c85050f8acf149e39dd7df312cbeb9ef
-msgid "Whenever you change a ``template/CSS/Javascript`` remember to run later:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2415 d17acfda3bc74fdfb25f3416d191a2c6
-msgid "in order to update the files into the ``statics`` Docker volume."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2417 025c90d46f5f4ea480cacd3465b3348f
-msgid ""
-"This is an external volume, and a simple restart won't update it. You "
-"have to be careful and keep it aligned with your changes."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2420 6f612fc8ddf746e0997138c75e8bc313
-msgid ""
-"Whenever you need to change some settings or environment variable, the "
-"easiest thing to do is to:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2430 6284d43eef20426fa6b4c40d2db64ad3
-msgid ""
-"Whenever you change the model, remember to run later in the container via"
-" ``bash``:"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2438 f711f8cfc253404eb52c633e8f4ec2b7
-msgid ""
-"Access the geoserver4geonode Docker container to update the GeoServer "
-"version"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2440 1031f57c688b480384ffc100fe058ef9
-msgid "This procedure allows you to access the GeoServer container."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2442 323290efa0ac488ab1ae0add32f830a1
-msgid ""
-"The concept is exactly the same as above, log into the container with "
-"``bash``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2449 4d57e2ec1b2e4f4b853eeb89d4b4c88c
-msgid "You will be logged into the GeoServer instance as ``root``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2451 96c7233a25134c3aaa2d86e43f504cf5
-msgid "GeoServer is deployed on an Apache Tomcat instance which can be found here"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2457 35888a4393024588960a106d54bf3bf4
-msgid ""
-"The GeoServer ``DATA_DIR`` is deployed on an external Docker Volume "
-"``geonode_gsdatadir``. This data dir won’t be affected by changes to the "
-"GeoServer application since it is ``external``."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2460 bbaef2ff470144bebc31d9b61bfb841a
-msgid "Update the GeoServer instance inside the GeoServer Container"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2462 df2368716c414e22a20fc126e1bdb947
-msgid "The old configuration will be kept since it is ``external``"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2490 a3af299793584af69819a5a226b97f1d
-msgid "GeoNode 2.8.1 is **NOT** compatible with GeoServer > 2.13.x"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2492 6d879e33970649c4a82e59dd180f8dad
-msgid "GeoNode 2.8.2 / 2.10.x are **NOT** compatible with GeoServer < 2.14.x"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2494 724cb1f25332432493d8f63ac29ed0e1
-msgid "GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2498 ffedb78bfe46485a9dc21865e492d442
-msgid ""
-"Remove all data and bring your running GeoNode deployment to the initial "
-"stage"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2500 d344955c57474819a70f0325c9e531ab
-msgid ""
-"This procedure allows you to stop all the containers and reset all the "
-"data with the deletion of all the volumes."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2510 4208bb6cd2414ed7b64011761fd6416b
-msgid ""
-"5. Passages to completely get rid of old Docker images and volumes (reset"
-" the environment completely)"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2512 52da11957ded484cace2633b2cf6f8a0
-msgid ""
-"For more details on Docker commands, please refer to the official Docker "
-"documentation."
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2514 12c69a5a244e493aa1a6fca6027a1dac
-msgid ""
-"It is possible to let docker show which containers are currently running "
-"(add ``-a`` for all containers, also stopped ones)"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2529 bab3ef923eba4d81b70ba4ecb686daf1
-msgid "Stop all the containers by running"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2535 63de5ab179f1456e8197f97607d6321f
-msgid "Force kill all containers by running"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2541 51e7ad1b6a6d4df7b6d8cf6c935e9d76
-msgid ""
-"I you want to clean up all containers and images, without deleting the "
-"static volumes (i.e. the ``DB`` and the ``GeoServer catalog``), issue the"
-" following commands"
-msgstr ""
-
-#: ../../install/advanced/core/index.rst:2554 0ef06c9fc371452690dee68dfe9c394e
-msgid "If you want to remove a ``volume`` also"
 msgstr ""
 
 #~ msgid ""
@@ -1519,5 +1425,270 @@ msgstr ""
 #~ "**!IMPORTANT!** In the statement below "
 #~ "make sure to use "
 #~ "``DJANGO_SETTINGS_MODULE=geonode.local_settings``"
+#~ msgstr ""
+
+#~ msgid "Ubuntu 20.04LTS"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This part of the documentation describes"
+#~ " the complete setup process for "
+#~ "GeoNode on an Ubuntu 20.04LTS **64-bit**"
+#~ " clean environment (Desktop or Server)."
+#~ msgstr ""
+
+#~ msgid "GeoNode 3.x is not compatible with Python < 3.7"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Install and configure `\"rabbitmq-server\" "
+#~ "<https://www.vultr.com/docs/how-to-install-"
+#~ "rabbitmq-on-ubuntu-16-04-47>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Adapt the steps below accordingly to "
+#~ "your Ubuntu distribution (see the "
+#~ "`\"rabbitmq-server\" <https://www.vultr.com/docs/how-"
+#~ "to-install-rabbitmq-on-ubuntu-16-04-47>`_ "
+#~ "links to the documentation)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Pay particular attention to the "
+#~ "``environment`` key values pair placed "
+#~ "here."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "They **must** match the values you "
+#~ "have already set on the ``uwsgi.ini``"
+#~ " file."
+#~ msgstr ""
+
+#~ msgid "**The `environment` directive**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The environment variables are placed "
+#~ "into the ``/etc/supervisor/supervisord.conf`` file;"
+#~ " they are exposed to the service "
+#~ "via the ``environment`` directive."
+#~ msgstr ""
+
+#~ msgid "The syntax of this directive is the following one:"
+#~ msgstr ""
+
+#~ msgid "``CACHE_BUSTING_MEDIA_ENABLED``"
+#~ msgstr ""
+
+#~ msgid "You will also need to:"
+#~ msgstr ""
+
+#~ msgid "Add more variables accordingly to your custom ``tasks`` (if any)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make **always** sure the values of "
+#~ "the environment variables match the ones"
+#~ " of the ``uwsgi.ini`` file"
+#~ msgstr ""
+
+#~ msgid "Windows"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this section we are going to"
+#~ " discuess installation process of geonode"
+#~ " in windows. This process will "
+#~ "install the geonode in your windows "
+#~ "machine and run locally."
+#~ msgstr ""
+
+#~ msgid "1. Python Setup"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Download and install python 3.7 from "
+#~ "`this link "
+#~ "<https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64.exe>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure you added python to "
+#~ "environment variable path. If you don't"
+#~ " know how to add python to "
+#~ "environment variable, you can check "
+#~ "`this tutorial <https://datatofish.com/add-"
+#~ "python-to-windows-path/>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open your command prompt and type "
+#~ "``python --version`` to check whether it"
+#~ " added or not"
+#~ msgstr ""
+
+#~ msgid "Goto your working directory and clone the geonode repo"
+#~ msgstr ""
+
+#~ msgid "Create vitrualenv using ``pip`` command"
+#~ msgstr ""
+
+#~ msgid "2. Installation of GDAL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``gdal`` can be install through "
+#~ "``OSGeo4W``. But this time we need "
+#~ "to install it manually. This time "
+#~ "we need to install the gdal inside"
+#~ " our ``virtual environment``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Goto `Unofficial Windows Binaries for "
+#~ "Python Extension Packages "
+#~ "<https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal>`_ and "
+#~ "Download the compatible gdal wheel file"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First of all check your python "
+#~ "version (`python --version`). And download "
+#~ "the same version of ``whl file``. "
+#~ "If you installed ``python 3.7``, then"
+#~ " you should download "
+#~ "``GDAL‑2.4.1‑cp37‑cp37m‑win_amd64.whl`` file. Here "
+#~ "``cp37`` and ``amd64`` means it is "
+#~ "compatible with ``64 bit python 3.7``"
+#~ msgstr ""
+
+#~ msgid "Install gdal using this ``whl file``"
+#~ msgstr ""
+
+#~ msgid "3. Installation of required libraries and run locally"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For installation of required libraries, "
+#~ "you should follow following steps,"
+#~ msgstr ""
+
+#~ msgid "Edit ``requirement.txt`` file"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It will open the requirement.txt file"
+#~ " in notepad. Change ``Shapely==1.7.0`` to"
+#~ " ``Shapely==1.6.3``. Since we not gonna "
+#~ "deploy geonode in windows, remove the"
+#~ " production packages from requirement.txt "
+#~ "file,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "# production uWSGI==2.0.18 gunicorn==20.0.4 "
+#~ "ipython==7.14.0 docker==4.2.0 invoke==1.4.1"
+#~ msgstr ""
+
+#~ msgid "Install the requirement.txt file"
+#~ msgstr ""
+
+#~ msgid "Run the geonode in ``DEBUG (DEVELOPMENT)`` mode"
+#~ msgstr ""
+
+#~ msgid "Now the geonode will run on your windows."
+#~ msgstr ""
+
+#~ msgid "4. Postgresql Database setup"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this section we are going to"
+#~ " install setup ``PostgreSQL`` database on"
+#~ " GeoNode. GeoNode uses the ``PostgreSQL "
+#~ "11`` database."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Download and install the `postgres 11"
+#~ " windows installer <http://www.enterprisedb.com"
+#~ "/thank-you-downloading-postgresql?cid=55>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After installation of ``PostgreSQL 11``, "
+#~ "open ``stack builder`` and install the"
+#~ " spatial extension named as ``postgis``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure you install the postgis "
+#~ "extension from stack builder, otherwise "
+#~ "it won't work."
+#~ msgstr ""
+
+#~ msgid "Now it is time create database and add user"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure you added postgresql to "
+#~ "``environment variable path``. Otherwise  "
+#~ "``psql`` will not be recognize in "
+#~ "command prompt. Also you can search "
+#~ "``psql`` in windows and run the "
+#~ "code directly from ``psql shell``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the ``pg_hba.conf`` file (C:\\Program"
+#~ " Files\\PostgreSQL\\11\\data\\pg_hba.conf) as below,"
+#~ " so that you can access the "
+#~ "database without password in your local"
+#~ " machine"
+#~ msgstr ""
+
+#~ msgid "Restart the ``PostgreSQL`` to make the chage effective"
+#~ msgstr ""
+
+#~ msgid "5. Update Django setting"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now it is time to connect the "
+#~ "postgres database with django. You need"
+#~ " to follow following steps,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rename the file "
+#~ "``local_settings.py.geoserver.sample`` to "
+#~ "``local_settings.py`` (This file can be "
+#~ "found at the GEONODE_INSTALLATION_DIR/geonode/)"
+#~ msgstr ""
+
+#~ msgid "Initialize the GeoNode with local_settings.py file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now you can run the geonode "
+#~ "locally with postgresql database. using "
+#~ "following command"
+#~ msgstr ""
+
+#~ msgid "Deploy a vanilla ``GeoNode 3.2.0`` with ``Docker``"
+#~ msgstr ""
+
+#~ msgid "1. Install the Docker and docker-compose packages on a Ubuntu host"
+#~ msgstr ""
+
+#~ msgid "2. Install the Docker and docker-compose packages on a CentOS host"
+#~ msgstr ""
+
+#~ msgid "The `centos-extras` repository must be enabled"
+#~ msgstr ""
+
+#~ msgid "4. Deploy a vanilla GeoNode 3.2.0 with Docker"
 #~ msgstr ""
 

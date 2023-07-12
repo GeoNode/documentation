@@ -8,169 +8,191 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../admin/upgrade/index.rst:2 40b434e3a68c40bb9aff706e21edf628
-msgid "Upgrade from 3.1.x"
+#: ../../admin/upgrade/index.rst:2 21da39d5899e4221b2505a9d789894d1
+msgid "Upgrade from 3.2.x / 3.3.x"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:4 d0893227870f4de99fabab56face9099
+#: ../../admin/upgrade/index.rst:4 5a99768cf7744cf89b86870281358ea4
 msgid "Upgrade the dependencies"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:5 0a3e5ab417b0499b9808a19e8b408aa5
+#: ../../admin/upgrade/index.rst:5 273aa94fb5ca44e5a58e317b72512f98
 msgid ""
 "Perform the ``migrations`` management command; in case some attribute is "
 "conflicting, remove it manually from the DB"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:6 1a58959fb1a3420b90fe0c6449bd5a3e
+#: ../../admin/upgrade/index.rst:6 e99fd7cc87fa4cfda15bbec442343239
 msgid "Proform the ``collectstatic`` management command"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:7 a3f4cbdc4faf4f6982d5bfee9d326566
-msgid "Perform the ``set_all_layers_metadata -d`` management command"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:8 486566b8c30b42afb6e77d0d1573458f
-msgid ""
-"Drop the ``rabbitmq`` image and volume and let GeoNode recreate the "
-"``queues`` automatically"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:11 c586b036a0094cf79b196fdfa42e9269
-msgid "Upgrade from 2.10.x / 3.0"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:14 2b96170aaf674518a1a5d7ccd0525f30
+#: ../../admin/upgrade/index.rst:9 2243be9a1fa4491eac1734c98acd4a55
 msgid "Upgrade the instance dependencies"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:16 145137cd66c849f4b9ba59998d74ddbd
+#: ../../admin/upgrade/index.rst:11 327bd2b2fba8437ebca23cae138de93f
 msgid ""
 "Check the :ref:`install_dep` and :ref:`install_venv` sections in order to"
 " upgrade your Python environment."
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:18 e41c2eaffe7445069df2b6c99edac417
+#: ../../admin/upgrade/index.rst:13 00e6377bb50b4926b5a5901ace8ad3c5
 msgid ""
 "Also, make sure the code is ``Python 3.8`` compatible and that you "
 "switched and aligned the **source code** and the **requirements.txt** to "
-"the ``3.x`` branch."
+"the ``master`` branch."
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:20 c9130816776f4061a7f39fe6e3cbda8d
+#: ../../admin/upgrade/index.rst:15 03e6d72eb9a945b7a49c2c0de8f038a2
 msgid "This must be done manually and with particular attention."
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:35 b23c74a4c845437fab3683641944e69d
-msgid "Prepare the Database and Migrate to the new Schema"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:38 3743a661379447d7aeeefba521bf1593
-msgid "Fix the tables in order to migrate to the new schema"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:66 f2bdbcd8515e47d39ec901a6505ee5a5
-msgid "Migrate to the new schema"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:74 91e717b3fa5540cfa2c65bd7205f4ffc
-msgid "Restore the old contents"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:98 cd1f0ebde53f4e18b549a9c686c97166
-msgid "Upgrade from 2.4.x"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:100 87d2ca3347d04ef690a53c1fae397819
-msgid ""
-"These are the notes of a migration from 2.4.x to 2.10.1. These notes "
-"could possibly work also when migrating from 2.6.x, 2.7.x, 2.8.x but are "
-"not tested in that scenarios. You should run this procedure on your local"
-" machine and once you successfully migrated the database move the backup "
-"to your GeoNode 2.10.1 production instance."
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:105 f79ff8f004dc48239467cdfe6d70938d
-msgid "PostgreSQL"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:107 c47d7861b5424c90adfca7471438e210
-msgid "Create a role and a database for Django GeoNode 2.4:"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:116 c6680822f7044cbba93f51e5e55bc336
-msgid "Restore backup from your production backup:"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:123 bc0fb2133f4f481ea2f09f86b1b81730
+#: ../../admin/upgrade/index.rst:34 098a4ee321a0429782ed6204d1ea85e0
 msgid "Run GeoNode migrations"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:125 73916b2d15384eda9a0467257295986b
+#: ../../admin/upgrade/index.rst:36 cd0e146c31dd45a794c74a1ce9430094
 msgid "Activate your GeoNode virtualenv and set the env vars:"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:132 26211a202174491cb0f2e81a59c87eeb
+#: ../../admin/upgrade/index.rst:43 0da4e0a51cfe47a19571e9b41323b2d6
 msgid ""
 "Here are the variables to export - update them to your environment "
 "settings:"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:146 d906ba64038e4d5580558426e457f47d
-msgid "Downgrade psycopg2:"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:152 ceab6737899544eea88c2aed57192e99
+#: ../../admin/upgrade/index.rst:58 cf2c74c706a2451d904d149e3b512a17
 msgid "Apply migrations and apply basic fixtures:"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:161 414e9b7d80d14bd1b050922320013f3a
-msgid "Regenerate from scratch the upload application tables in the database:"
+#: ../../admin/upgrade/index.rst:66 ffc56bcd417c49f9afe27674940a688b
+msgid ""
+"Incase of an error of :guilabel:`django.db.utils.ProgrammingError: column"
+" \"colum-name\" of relation \"table-name\" already exists` on running "
+"migrations, you can backup the field data with the following steps."
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:169 5f6e12bb682f4f43b104f74a69d0cfeb
-msgid "Regenerate upload tables with migrate:"
+#: ../../admin/upgrade/index.rst:80 ec29e55202db4935b3342ce95e6af5c5
+msgid "Run migration then:"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:175 16bd28a842a54a1cb34d71b2cd398f99
-msgid "Upgrade psycopg2:"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:182 f9bb47574a9148e4a3f628bc4b55f1a3
+#: ../../admin/upgrade/index.rst:95 b86bf9f6c95d4e0f862eb13debd78045
 msgid "Create superuser"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:184 9b01891d7726406193a88c002eb13070
+#: ../../admin/upgrade/index.rst:97 c8897a80f01d45d7bb4f76698ec7fccf
 msgid ""
 "To create a superuser you should drop the following constraints (they can"
 " be re-enabled if needed):"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:195 e8f1adc493984c5ba5cf541dcafaf6b2
-msgid "Fixes on database"
+#: ../../admin/upgrade/index.rst:109 4d79945f48fc420e91c93e02b55a60a6
+msgid "Update Templates"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:197 34266e873f5240eaa664e3b77ee924ef
-msgid "For some reason some resources were unpublished:"
-msgstr ""
-
-#: ../../admin/upgrade/index.rst:203 68cecd80477d4a74bc2973150f4b08db
+#: ../../admin/upgrade/index.rst:111 683c8212192040c5a4615e0988b72d72
+#, python-format
 msgid ""
-"Remove a foreign key from account_account which is not used anymore "
-"(GeoNode dev team: maybe even better let's remove all of the account "
-"tables, I think they are stale now):"
+"Update available templates to use {% load static %} instead of {% load "
+"staticfiles %}"
 msgstr ""
 
-#: ../../admin/upgrade/index.rst:210 dc469689d119422fae81d11be1ba71d9
-msgid "Fix the remote service layers by running this script:"
-msgstr ""
+#~ msgid "Upgrade from 3.1.x"
+#~ msgstr ""
+
+#~ msgid "Perform the ``set_all_layers_metadata -d`` management command"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Drop the ``rabbitmq`` image and volume"
+#~ " and let GeoNode recreate the "
+#~ "``queues`` automatically"
+#~ msgstr ""
+
+#~ msgid "Upgrade from 2.10.x / 3.0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also, make sure the code is "
+#~ "``Python 3.8`` compatible and that you"
+#~ " switched and aligned the **source "
+#~ "code** and the **requirements.txt** to "
+#~ "the ``3.x`` branch."
+#~ msgstr ""
+
+#~ msgid "Prepare the Database and Migrate to the new Schema"
+#~ msgstr ""
+
+#~ msgid "Fix the tables in order to migrate to the new schema"
+#~ msgstr ""
+
+#~ msgid "Migrate to the new schema"
+#~ msgstr ""
+
+#~ msgid "Restore the old contents"
+#~ msgstr ""
+
+#~ msgid "Upgrade from 2.4.x"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These are the notes of a migration"
+#~ " from 2.4.x to 2.10.1. These notes"
+#~ " could possibly work also when "
+#~ "migrating from 2.6.x, 2.7.x, 2.8.x but"
+#~ " are not tested in that scenarios."
+#~ " You should run this procedure on "
+#~ "your local machine and once you "
+#~ "successfully migrated the database move "
+#~ "the backup to your GeoNode 2.10.1 "
+#~ "production instance."
+#~ msgstr ""
+
+#~ msgid "PostgreSQL"
+#~ msgstr ""
+
+#~ msgid "Create a role and a database for Django GeoNode 2.4:"
+#~ msgstr ""
+
+#~ msgid "Restore backup from your production backup:"
+#~ msgstr ""
+
+#~ msgid "Downgrade psycopg2:"
+#~ msgstr ""
+
+#~ msgid "Regenerate from scratch the upload application tables in the database:"
+#~ msgstr ""
+
+#~ msgid "Regenerate upload tables with migrate:"
+#~ msgstr ""
+
+#~ msgid "Upgrade psycopg2:"
+#~ msgstr ""
+
+#~ msgid "Fixes on database"
+#~ msgstr ""
+
+#~ msgid "For some reason some resources were unpublished:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Remove a foreign key from "
+#~ "account_account which is not used "
+#~ "anymore (GeoNode dev team: maybe even"
+#~ " better let's remove all of the "
+#~ "account tables, I think they are "
+#~ "stale now):"
+#~ msgstr ""
+
+#~ msgid "Fix the remote service layers by running this script:"
+#~ msgstr ""
 

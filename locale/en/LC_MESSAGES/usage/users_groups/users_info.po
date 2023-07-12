@@ -8,102 +8,118 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../usage/users_groups/users_info.rst:4 8153b75fefcd4a73ac74201b317a6f50
+#: ../../usage/users_groups/users_info.rst:4 c5d0a96ec1fa4e5190a2dc854ae34b03
 msgid "Viewing other users information"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:6 471684b3e8bd4247b58154d196ad35bb
+#: ../../usage/users_groups/users_info.rst:6 d1d6c4ea6fc4450cb1a01a01d736ac6a
 msgid "Once your account is created, you can view other accounts on the system."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:7 46724a561fd442e2bc4c3c17f6f058af
+#: ../../usage/users_groups/users_info.rst:7 ec076349639145d098444d04583193f3
 msgid ""
 "To see information about other users on the system, click the "
 ":guilabel:`People` link of the :guilabel:`About` menu in *Home* page."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:12 f894ff842aa34225a3b9cea2da43c413
+#: ../../usage/users_groups/users_info.rst:12 d1234562ecb3495dbe9efb0f31c7c63d
 msgid "*About menu - People link*"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:14 c38054ab275247f588d7dfd4e3420415
+#: ../../usage/users_groups/users_info.rst:14 98eae1a0be714d09a11a11920e4542a3
 msgid "You will see a list of users registered on the system."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:19 64ab95abe1ff4e3a95e29e10dc39fd6b
+#: ../../usage/users_groups/users_info.rst:19 408ad6d228f944008902f485cf9bb339
 msgid "*List of the registered users*"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:21 3cd03f809b4047c49412c8322c3bd92e
+#: ../../usage/users_groups/users_info.rst:21 f4767024f4fb4e9ca66ee6842fa958eb
 msgid ""
 "The *Search* tool is very useful in case of many registered users, type "
 "the name of the user you are looking for in the input text field to "
 "filter the users list."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:22 a8233d1da4a64ae49d8657bd84f573a2
+#: ../../usage/users_groups/users_info.rst:22 6f59bfad5c5549559a17b3d2c464adb7
 msgid ""
 "Select a user and click on its *username* to access to the user details "
 "page."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:27 a911c3afe6b04a8bb9ae2834f8e359ef
+#: ../../usage/users_groups/users_info.rst:27 8ea7447cc9de4f4189070a60386a6780
 msgid "*User details*"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:29 644889fdf4b44b76be465a089cfc10ac
+#: ../../usage/users_groups/users_info.rst:29 a2284818ac98422286b255876c25c18b
 msgid ""
 "In this page the main information about the user are shown: personal "
-"information (name, surname, organization and so on...) and the resources "
-"the user owns (layers, maps and documents)."
+"information (organization) and the resources the user owns (datasets, "
+"maps, documents and other apps)."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:31 a21e29cd054a44818283499af169e198
+#: ../../usage/users_groups/users_info.rst:31 05fa4bc4c7f34a458ffa479bf3952f3c
 msgid ""
 "Through the :guilabel:`User Activities` link, in right side of the page, "
 "it is possible to visualize all the activities the user has been done."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:36 9615f7f047464c81ab832f182cdaa031
+#: ../../usage/users_groups/users_info.rst:36 0647f409df5540c68e94652eac2889e3
 msgid "*User activities*"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:38 edc8afc8d8c04f44b15583631c75a345
+#: ../../usage/users_groups/users_info.rst:38 f7380c0686914cabb1fe242e046c8a3b
 msgid ""
 "The :guilabel:`Message User` link lets you to contact other users, see "
 "the next section to read more about that."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:40 4a342584d2b04feaa976bdf857605c56
+#: ../../usage/users_groups/users_info.rst:40 5c3ebcd30b5641af9dd6a3d03d2d0607
 msgid ""
 "It is also possible, in GeoNode, to see the recent activities of all "
 "users through the :guilabel:`Recent Activities` link of the user menu."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:45 c13b47c716d742058b3b9a32fd0e9efd
+#: ../../usage/users_groups/users_info.rst:45 cbaba508142142efaf0c61dd5883dc22
 msgid "*Recent Activities link*"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:47 667f4ead86bb4a68a58d3c790452fdf9
+#: ../../usage/users_groups/users_info.rst:47 b3d301c2f8514e998bcc1ac327cedb17
 msgid "In the picture below an example."
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:52 2ec312060d6e4dfbbbcad46706540698
+#: ../../usage/users_groups/users_info.rst:52 093a845696a84c488594a850f3707c3c
 msgid "*Recent Activities*"
 msgstr ""
 
-#: ../../usage/users_groups/users_info.rst:54 73be15b27404466f8c49e8fa41d66db0
+#: ../../usage/users_groups/users_info.rst:54 39abca560ab645afa76e915641ddf3ec
 msgid ""
 "As you can see, you can decide whether to see only the activities related"
-" to layers or those related to maps or comments by switching the tabs."
+" to datasets or those related to maps or comments by switching the tabs."
 msgstr ""
+
+#~ msgid ""
+#~ "In this page the main information "
+#~ "about the user are shown: personal "
+#~ "information (name, surname, organization and"
+#~ " so on...) and the resources the "
+#~ "user owns (layers, maps and documents)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see, you can decide "
+#~ "whether to see only the activities "
+#~ "related to layers or those related "
+#~ "to maps or comments by switching "
+#~ "the tabs."
+#~ msgstr ""
 

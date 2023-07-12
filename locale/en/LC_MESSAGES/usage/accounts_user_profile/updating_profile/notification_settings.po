@@ -8,47 +8,59 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:2
-#: 777e1161cd8c4498aead15163efdf92c
+#: f8c119bd784b45318a5dbf7b6df5f065
 msgid "Setting Notification Preferences"
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:4
-#: 8fba443ba0d94aa2ad793f3afa50a11f
+#: 8eb4b3908d3e4f3cbb65b280d8ed133a
 msgid ""
-"By default GeoNode sends notifications to the users for events that the "
-"users could be subscribe such as a new layer uploaded or a new rate added"
+"By default GeoNode sends notifications to the users for events that they "
+"could be subscribed to such as a new dataset uploaded or a new rate added"
 " to a map. You can adjust your notification settings by clicking on the "
 ":guilabel:`Notifications` link of the *Profile* page (see :ref:`editing-"
 "profile`)."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:7
-#: 4a74eb5a4e35465988419b6d8ebb5c7c
+#: 2c72f449eb734666a2c7f1ff083db843
 msgid ""
 "Make sure to have a verified email address to which notices can be sent. "
 "If not see :ref:`associating_emails`."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:9
-#: 022b378208a241768a18a7d45828b85d
+#: 415e7038b9374cf19993f2384fffaafe
 msgid ""
 "Now check/uncheck the notification types you wish to receive or not "
 "receive. It is possible to be notified for the events shown in the "
 "picture below."
 msgstr ""
 
-#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:14
-#: af57aaa5f3ae40dab814b54064d18f76
+#: ../../usage/accounts_user_profile/updating_profile/notification_settings.rst:16
+#: 6bce72395b5243aea4e6c1a477283350
 msgid "*Notifications settings*"
 msgstr ""
+
+#~ msgid ""
+#~ "By default GeoNode sends notifications "
+#~ "to the users for events that the"
+#~ " users could be subscribe such as "
+#~ "a new layer uploaded or a new "
+#~ "rate added to a map. You can "
+#~ "adjust your notification settings by "
+#~ "clicking on the :guilabel:`Notifications` link"
+#~ " of the *Profile* page (see :ref"
+#~ ":`editing-profile`)."
+#~ msgstr ""
 

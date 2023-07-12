@@ -8,68 +8,198 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../devel/docker/index.rst:2 aeccb9813a43497cba3cc539a831d580
+#: ../../devel/docker/index.rst:2 324f888d60ea448f9995468fc8739151
 msgid "Start to develop with Docker"
 msgstr ""
 
-#: ../../devel/docker/index.rst:5 3ad2d0baa93d46d1802e614ec849d4a4
+#: ../../devel/docker/index.rst:5 70e1c01b09a24831b0af83566aa6265c
 msgid "How to run the instance for development"
 msgstr ""
 
-#: ../../devel/docker/index.rst:8 fb713afd2da64e63b6e45976ab088018
-msgid "Set the variable SET_DOCKER_ENV for development"
+#: ../../devel/docker/index.rst:7 d1d73fdf204e4519be988dfc22b92a04
+msgid "There are two options to develop using Docker containers:"
 msgstr ""
 
-#: ../../devel/docker/index.rst:14 3bac3443d9ca4d5dbbfd81a5dba28a93
-msgid "Change to"
-msgstr ""
-
-#: ../../devel/docker/index.rst:21 27993c71d3524d1a9a1139d90d3380e3
-msgid "Use dedicated docker-compose files while developing"
-msgstr ""
-
-#: ../../devel/docker/index.rst:23 e08f479124d44fde890d5c7c677dfa07
+#: ../../devel/docker/index.rst:9 12ee7c537fed4062ae841351b964eddf
 msgid ""
-"In this example we are going to keep ``localhost`` as the target IP for "
-"GeoNode"
+"**Alternative A**: Running by command line and editing the code using "
+"your preferred editor (usually harder)."
 msgstr ""
 
-#: ../../devel/docker/index.rst:30 d95197823ee745ec8665297d8ee06a2d
-msgid "How to debug"
-msgstr ""
-
-#: ../../devel/docker/index.rst:32 63324d30869348ada20f047d4dca05e4
+#: ../../devel/docker/index.rst:10 08c6092fdfd24a07956d30d5c2ab8000
 msgid ""
-"We are supposing to use ``ipdb`` for debugging which is already available"
-" as package from the container"
+"**Alternative B**: Using the vscode `remote containers "
+"<https://code.visualstudio.com/docs/remote/containers>`_ extension "
+"(easier)."
 msgstr ""
 
-#: ../../devel/docker/index.rst:34 bfbd123e1e03498080fcfec4ea5603da
-msgid "Stop the container for the ``django`` service:"
+#: ../../devel/docker/index.rst:13 97707a99c9814be29b3793fe46a8b2cb
+msgid "Alternative A: Building and running Docker for development"
 msgstr ""
 
-#: ../../devel/docker/index.rst:40 778ce84334a04adb83e6e19b3c120bdd
-msgid "Run the container again with the option for *service ports*:"
+#: ../../devel/docker/index.rst:15 5122b0f899784ba6b42aa0f8fef18e04
+msgid "Build (first time only):"
 msgstr ""
 
-#: ../../devel/docker/index.rst:56 7c9284d05e61461083f2bd8727ea8800
-msgid "Access the site on http://localhost/"
+#: ../../devel/docker/index.rst:21 d57f008bacd642508beaeda0cf6f4165
+msgid "Running:"
 msgstr ""
 
-#: ../../devel/docker/index.rst:58 b89c36b6d0944a208538b96dd82b0ff2
+#: ../../devel/docker/index.rst:28 746baebea2a44386a8e318cc6920dbc4
 msgid ""
-"If you set an ``ipdb`` debug point with import ``ipdb ; "
-"ipdb.set_trace()`` then you should be facing its console and you can see "
-"the django server which is restarting at any change of your code from "
-"your local machine."
+"If you are running ``postgresql`` and ``tomcat9`` services, you need to "
+"stop them, ``docker-compose`` will take care of running the database and "
+"geonode service."
 msgstr ""
+
+#: ../../devel/docker/index.rst:31 723ea9738eea4e6ba320a73f2ff53665
+msgid "Otherwise, you will get the following error:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:39 efc8375ad95d434896bc481a767af5e6
+msgid "Running the geonode application in debug mode:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:46 92f75bd1e693495ca390fbee5f1f3033
+msgid ""
+"When running, you can debug the application using your preferred method. "
+"For example, you can edit a file, save it and see your modifications. You"
+" can also use `ipdb <https://github.com/gotcha/ipdb>`_ to add breakpoints"
+" and inspect your code (Writing ``import ipdb; ipdb.set_trace()`` in the "
+"line you want your breakpoint)."
+msgstr ""
+
+#: ../../devel/docker/index.rst:51 8108da582557426092deaad95b7cb662
+msgid ""
+"Another option is to use *debugpy* alongside with *vscode*, for this you "
+"have to enable *debugpy* inside your *django4geonode* container:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:57 4bbb5ecc361c49008db37832d20b32d2
+msgid ""
+"Select \"**Run and Debug**\" in vscode and use the following launch "
+"instruction in your ``.vscode/launch.json`` file:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:59 fa299517fb644a6da5b2dfb4ea566d33
+msgid ":download:`launch.json <data/vscode_debugpy_launch.json>`"
+msgstr ""
+
+#: ../../devel/docker/index.rst:63 17ce5b8dbc894cd08f076dd14e350b92
+msgid "Alternative B: Using vscode extension"
+msgstr ""
+
+#: ../../devel/docker/index.rst:65 d2ab34c6326e4e80906aa3d3eff9374d
+msgid ""
+"Alternatively, you can develop using the vscode `remote containers "
+"<https://code.visualstudio.com/docs/remote/containers>`_ extension. In "
+"this approach you need to:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:68 09ae7cfc1fb0422cb2b51dba0d9d5935
+msgid ""
+"Install the extension in your vscode: `ms-vscode-remote.remote-containers"
+" <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote"
+".remote-containers>`_"
+msgstr ""
+
+#: ../../devel/docker/index.rst:70 4148b85897524a94b59e95f472a95dc1
+msgid ""
+"On your command pallet, select: \"**Remote-Containers: Reopen in "
+"Container**\""
+msgstr ""
+
+#: ../../devel/docker/index.rst:72 b8b77c51f8524dc7817be3ab4c2461ac
+msgid ""
+"If it's the first time, vscode will take care of building the images. "
+"This might take some time."
+msgstr ""
+
+#: ../../devel/docker/index.rst:74 98b3d90882e94c71a9cc094e371e344c
+msgid ""
+"Then a new vscode window will open, and it'll be connected to your docker"
+" container."
+msgstr ""
+
+#: ../../devel/docker/index.rst:76 260243970ee6477aad29e9be04f42739
+msgid ""
+"The message \"**Dev Container: Debug Docker Compose**\" will appear in "
+"the bottom-left corner of that window."
+msgstr ""
+
+#: ../../devel/docker/index.rst:78 e8c1d7f061984b45ba0411e9703718cf
+msgid ""
+"In the vscode terminal, you're going to see something similar to "
+"``root@77e80acc89b8:/usr/src/geonode#``."
+msgstr ""
+
+#: ../../devel/docker/index.rst:80 d7d21be0dfa942438b16e039fb4ac7d3
+msgid ""
+"To run your application, you can use the integrated terminal "
+"(``./manage.py runserver 0.0.0.0:8000``) or the vscode \"**Run and "
+"Debug**\" option. For launching with \"Run and Debug\", use the following"
+" instruction file:"
+msgstr ""
+
+#: ../../devel/docker/index.rst:83 d38fbd9f50de4eccb753417ed5541125
+msgid ":download:`launch.json <data/vscode_runserver_launch.json>`"
+msgstr ""
+
+#: ../../devel/docker/index.rst:85 cde057b583f04e9eb97a58972dba213b
+msgid ""
+"For more information, take a read at vscode remote containers `help page "
+"<https://code.visualstudio.com/docs/remote/containers>`_."
+msgstr ""
+
+#~ msgid "Set the variable SET_DOCKER_ENV for development"
+#~ msgstr ""
+
+#~ msgid "Change to"
+#~ msgstr ""
+
+#~ msgid "Use dedicated docker-compose files while developing"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this example we are going to"
+#~ " keep ``localhost`` as the target IP"
+#~ " for GeoNode"
+#~ msgstr ""
+
+#~ msgid "How to debug"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We are supposing to use ``ipdb`` "
+#~ "for debugging which is already available"
+#~ " as package from the container"
+#~ msgstr ""
+
+#~ msgid "Stop the container for the ``django`` service:"
+#~ msgstr ""
+
+#~ msgid "Run the container again with the option for *service ports*:"
+#~ msgstr ""
+
+#~ msgid "Access the site on http://localhost/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you set an ``ipdb`` debug point"
+#~ " with import ``ipdb ; ipdb.set_trace()``"
+#~ " then you should be facing its "
+#~ "console and you can see the django"
+#~ " server which is restarting at any"
+#~ " change of your code from your "
+#~ "local machine."
+#~ msgstr ""
 

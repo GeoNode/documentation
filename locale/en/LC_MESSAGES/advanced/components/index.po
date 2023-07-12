@@ -8,163 +8,120 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../advanced/components/index.rst:2 b054ed3710854df7b75ebb5e85cdb65a
-msgid "Overview"
-msgstr ""
-
-#: ../../advanced/components/index.rst:4 7598a3084952410ea873bbed09c9b671
-msgid "**TODO***"
-msgstr ""
-
-#: ../../advanced/components/index.rst:7 8252b3f0821241d5bd3e69134575aa46
-msgid "Django"
-msgstr ""
-
-#: ../../advanced/components/index.rst:9 ../../advanced/components/index.rst:14
-#: ../../advanced/components/index.rst:19
-#: ../../advanced/components/index.rst:24
-#: ../../advanced/components/index.rst:29
-#: ../../advanced/components/index.rst:34 223ef0ba0456480183d1ae18cfc63e93
-#: 43f409da46cb4ffabe29e877583efcfa 614072d2154a4bc696d7e3cec5e29fda
-#: 9fde275e07b14db8910f0c9759d333aa cadbb3ef7fa645dcad1f962b0073d0e0
-#: daa3fffa02624e3fb1e968af5e183bf5
-msgid "**TODO**"
-msgstr ""
-
-#: ../../advanced/components/index.rst:12 979974f54dd6479ebb563dd46b7136f8
-msgid "WebServers"
-msgstr ""
-
-#: ../../advanced/components/index.rst:17 5169cf4f977d4e528f52594f8acde97e
-msgid "Apache"
-msgstr ""
-
-#: ../../advanced/components/index.rst:22 819a8a4bbca44535b81ad52f71e0de77
-msgid "NGINX"
-msgstr ""
-
-#: ../../advanced/components/index.rst:27 363aa8ce8ee3480d88445062c1dabbf4
-msgid "GeoServer"
-msgstr ""
-
-#: ../../advanced/components/index.rst:32 adc10b6763ce44e6aa733ad4ce53ab48
-msgid "Databases"
-msgstr ""
-
-#: ../../advanced/components/index.rst:39 8bcef15c5c3e4f56ad7c0efcb1569a0e
+#: ../../advanced/components/index.rst:4 b338536cfe1647978f4458ccc80d5d55
 msgid "OAuth2 Security: Authentication and Authorization"
 msgstr ""
 
-#: ../../advanced/components/index.rst:40 d2177c673c9b4e958e3376991dec704d
+#: ../../advanced/components/index.rst:5 72f6c869be3140e98c9cde7d328468ad
 msgid ""
 "GeoNode interacts with GeoServer through an advanced security mechanism "
 "based on OAuth2 Protocol and GeoFence. This section is a walk through of "
 "the configuration and setup of GeoNode and GeoServer Advanced Security."
 msgstr ""
 
-#: ../../advanced/components/index.rst:42 0f565387411c4a6494af15738297f6df
+#: ../../advanced/components/index.rst:7 11d25844af8d4a9a9b1656f5ff49559a
 msgid "What we will see in this section is:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:44 45d0029265c74e5081bf1c6819c442a8
+#: ../../advanced/components/index.rst:9 328cd64cd56443568069b19224ddb1b2
 msgid "**Introduction**"
 msgstr ""
 
-#: ../../advanced/components/index.rst:46 9a64096de6c84591b40c076588253c6c
+#: ../../advanced/components/index.rst:11 c34725953d0c4b5d83efd6e794106628
 msgid "**GeoNode** (Security Backend):"
 msgstr ""
 
-#: ../../advanced/components/index.rst:48
-#: ../../advanced/components/index.rst:112 d217a2241a454488b8094f6bbb247441
-#: da18b976c6d148a393c4699cc014dcad
+#: ../../advanced/components/index.rst:13
+#: ../../advanced/components/index.rst:77 2d9bb82acebb4b47ba5a2b9e2a6d4479
+#: ea8f84459ea843d291c28e14524ceb1f
 msgid "DJango Authentication"
 msgstr ""
 
-#: ../../advanced/components/index.rst:50
-#: ../../advanced/components/index.rst:288 1e352e9fc00944ac8a9a52469d41472f
-#: c4c764d8215d4c58a7bf4adc56c18aae
+#: ../../advanced/components/index.rst:15
+#: ../../advanced/components/index.rst:253 86397d9b55ac48e387647ac735751ca6
+#: e48e449dce764b0f8d5ce9ef17713751
 msgid "DJango OAuth Toolkit Setup and Configuration"
 msgstr ""
 
-#: ../../advanced/components/index.rst:52 3527014b266f424595ce069414ab9427
+#: ../../advanced/components/index.rst:17 9da7db4744ca4b048bb5a0be4eda391d
 msgid "Details on ``settings.py`` Security Settings"
 msgstr ""
 
-#: ../../advanced/components/index.rst:54 76f14643b0294bbd957c342b122842c8
+#: ../../advanced/components/index.rst:19 a40b7608c01f46c8be7d34d6b6e601de
 msgid "**GeoServer** (Security Backend):"
 msgstr ""
 
-#: ../../advanced/components/index.rst:56
-#: ../../advanced/components/index.rst:479 27e03703f74f458e824786090ac3f41f
-#: 27ef63904efd427395372e655c1a119f
+#: ../../advanced/components/index.rst:21
+#: ../../advanced/components/index.rst:444 625b733045754dbc861dd71b957a41ec
+#: f978d9911a0e4f48b5833afff54d72c2
 msgid "GeoServer Security Subsystem"
 msgstr ""
 
-#: ../../advanced/components/index.rst:58 1594963c199546a0a5949a060fed7dc5
+#: ../../advanced/components/index.rst:23 e0f8c65f13724226884576f03eaac7b8
 msgid "Introduction to the GeoServer OAuth2 Security Plugin"
 msgstr ""
 
-#: ../../advanced/components/index.rst:60 4a87cd4f4e3946aba5474e0ee67fe55a
+#: ../../advanced/components/index.rst:25 beb9b7b47eee44f084fde0af0919b3d7
 msgid "Configuration of the ``GeoNode REST Role Service``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:62 2bb0fa3d0682485d8068904c2fac6d8a
+#: ../../advanced/components/index.rst:27 2089e697fa814e4dabfd1f339bf7bbb3
 msgid "Configuration of the ``GeoNode OAuth2 Authentication Filter``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:64 be9334c0eb8e468f80b080ec84ea4b3d
+#: ../../advanced/components/index.rst:29 a5ed32c4e0bc4d3bb5c801f81f8272ce
 msgid "The GeoServer Authentication Filter Chains"
 msgstr ""
 
-#: ../../advanced/components/index.rst:66 07195d99dd664132ae6584927fd60666
+#: ../../advanced/components/index.rst:31 bddbb7d0958e450e9854b9cdd9921217
 msgid ""
 "Introduction to GeoFence Plugin, the Advanced Security Framework for "
 "GeoServer"
 msgstr ""
 
-#: ../../advanced/components/index.rst:68 0ac9e18b0c5e470cb7c14957a90c55f5
+#: ../../advanced/components/index.rst:33 74d08a4d5233473d8d7bbbf006a0141d
 msgid "**Troubleshooting and Advanced Features**:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:70
-#: ../../advanced/components/index.rst:827 223b7d5bb77b4b19b8bbda894715c316
-#: 26fd548049a54620bda48b6d69981b7c
+#: ../../advanced/components/index.rst:35
+#: ../../advanced/components/index.rst:792 32f30d23b4c947e6b60b0f6d51111ca6
+#: 61bc7416baa548c6ac87ae369ddde527
 msgid "Common Issues and Fixes"
 msgstr ""
 
-#: ../../advanced/components/index.rst:72
-#: ../../advanced/components/index.rst:887 456a1cbfc1bc448282c59a9b07463fa1
-#: d7d43d9fab0a4d19947ed72182cd25d1
+#: ../../advanced/components/index.rst:37
+#: ../../advanced/components/index.rst:852 2992b70e14d44f27bce67ac7fe336bb1
+#: ca4f060ca7c2410b97889ef39034e478
 msgid "How to setup ``HTTPS`` secured endpoints"
 msgstr ""
 
-#: ../../advanced/components/index.rst:74
-#: ../../advanced/components/index.rst:1017 b1792fa1d5de4946a0742fdff80d00f9
-#: b52e34ff70764bb596026b636a73d851
+#: ../../advanced/components/index.rst:39
+#: ../../advanced/components/index.rst:982 0f6ec67ceb13431191afdede1ad16c07
+#: 95baa682526c44ed84dbf9169c1df563
 msgid "GeoFence Advanced Features"
 msgstr ""
 
-#: ../../advanced/components/index.rst:77 c1d04e1c1d1c4b53b1df0fca986687a1
+#: ../../advanced/components/index.rst:42 7edd87cf7dac414f9f830e49a8c9f6b0
 msgid "Introduction"
 msgstr ""
 
-#: ../../advanced/components/index.rst:79 7e744057cad641fb9960925ee9c48ecc
+#: ../../advanced/components/index.rst:44 9ec47b4ea8fe4ea0b01d6d5a0baa9271
 msgid ""
 "GeoServer, i.e. the geospatial backend server of GeoNode, is a spatial "
 "server which needs authenticated users in order to access protected "
 "resources or administration functions."
 msgstr ""
 
-#: ../../advanced/components/index.rst:81 715e4625f4cf4471ac7f60267d9d3233
+#: ../../advanced/components/index.rst:46 fe7ccca64bfb4480ab0b2e1454cc194c
 msgid ""
 "GeoServer supports several kind of Authentication and Authorization "
 "mechanisms. Those systems are pluggable and GeoServer can use them at the"
@@ -173,14 +130,14 @@ msgid ""
 "first one matching is used by GeoServer to authorize the users."
 msgstr ""
 
-#: ../../advanced/components/index.rst:84 6eac8fe7450c4479b95316c37c8092e6
+#: ../../advanced/components/index.rst:49 c484e7be939841a7aaa83fbf4cc43a46
 msgid ""
 "GeoNode Authentication is based by default on Django Security Subsystem. "
 "Django authentication allows GeoNode to manage its internal users, "
 "groups, roles and sessions."
 msgstr ""
 
-#: ../../advanced/components/index.rst:86 53c8578dd2634b458bdd371628cadf3c
+#: ../../advanced/components/index.rst:51 4082bb573b6344fba8ab352cf2b2270f
 msgid ""
 "GeoNode has some external components, like GeoServer or QGis Server, "
 "which are pluggable and stand-alone services, devoted to the management "
@@ -193,7 +150,7 @@ msgid ""
 "independent and privileged access to the servers."
 msgstr ""
 
-#: ../../advanced/components/index.rst:91 1377ec39c3b44cf3a3805926001c6132
+#: ../../advanced/components/index.rst:56 6e6247a019364561bfc4e31a249b57ef
 msgid ""
 "Before going deeply on how GeoServer/GeoNode A&A works and how it can be "
 "configured in order to work correctly with GeoNode, let's quickly clarify"
@@ -201,11 +158,11 @@ msgid ""
 "concepts."
 msgstr ""
 
-#: ../../advanced/components/index.rst:94 c68893ab1fa14bf7a795b7287827a61e
+#: ../../advanced/components/index.rst:59 643c9d9a09d3459cbf48b6e6ed3d2ac5
 msgid "Authentication"
 msgstr ""
 
-#: ../../advanced/components/index.rst:96 c716531c04cd4ad29aa5c0c3e9592900
+#: ../../advanced/components/index.rst:61 ee40dff171e64692b061a689a2d7f0f3
 msgid ""
 "Authentication is the process of verifying the identity of someone "
 "through the use of some sort of credentials and a handshake protocol. If "
@@ -215,18 +172,18 @@ msgid ""
 "synonymously but they are two different processes."
 msgstr ""
 
-#: ../../advanced/components/index.rst:100 0459260a1e724c48a5091bb0ab360631
+#: ../../advanced/components/index.rst:65 dd779107570f42da81f033ea4d4194fe
 msgid ""
 "For more details and explanation about the authentication concepts, take "
 "a look `here "
 "<http://searchsecurity.techtarget.com/definition/authentication>`_."
 msgstr ""
 
-#: ../../advanced/components/index.rst:103 752bb60fac5043eb8011e4cbef680b9d
+#: ../../advanced/components/index.rst:68 0a77ef0f52b6490eafe6a2d40aee9598
 msgid "Authorization"
 msgstr ""
 
-#: ../../advanced/components/index.rst:105 c927dc2d9d1e47b385c10035fd4629cb
+#: ../../advanced/components/index.rst:70 9d316cdf33f343ebbed152c2ebebdc11
 msgid ""
 "Authorization is the process of allowing authenticated users to access "
 "protected resources by checking its roles and rights against some sort of"
@@ -235,49 +192,49 @@ msgid ""
 "specific authorized users."
 msgstr ""
 
-#: ../../advanced/components/index.rst:109 7a8c89bf2a7a41b48d39eaecaf401c80
+#: ../../advanced/components/index.rst:74 521d45cd77a74d26a2387fa271c4f3b0
 msgid "GeoNode Security Backend"
 msgstr ""
 
-#: ../../advanced/components/index.rst:114 0ca75cc3d7aa47b09d2477fb0e66759d
+#: ../../advanced/components/index.rst:79 1b961aa4226149f6879d17f1ae5f7b4c
 msgid ""
 "The Django authentication system handles both authentication and "
 "authorization."
 msgstr ""
 
-#: ../../advanced/components/index.rst:116 62ad4edfa9c341f9ab7620c7da04abaa
+#: ../../advanced/components/index.rst:81 46b717c8bc4d42afa21bba676abcbc89
 msgid "The auth system consists of:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:118 22661d0071b3456fa18176bd13bba3ac
+#: ../../advanced/components/index.rst:83 d056d55267424d6ba3c78415e9e4dbc9
 msgid "Users"
 msgstr ""
 
-#: ../../advanced/components/index.rst:119 41d4819fb0de4a8bbc23d2da4a4723d6
+#: ../../advanced/components/index.rst:84 f7abcff5ca3c4eaf96e5f5d23deb289f
 msgid ""
 "Permissions: Binary (yes/no) flags designating whether a user may perform"
 " a certain task."
 msgstr ""
 
-#: ../../advanced/components/index.rst:120 87196503c3af4ae6a6bde5eb90366bb2
+#: ../../advanced/components/index.rst:85 1ddd59c5561e48bea893c5abe66921ab
 msgid ""
 "Groups: A generic way of applying labels and permissions to more than one"
 " user."
 msgstr ""
 
-#: ../../advanced/components/index.rst:121 d4f3b2661a8f4451a2b6320beca368de
+#: ../../advanced/components/index.rst:86 50fc92c697c044f7b5cabcd6e12f8392
 msgid "A configurable password hashing system"
 msgstr ""
 
-#: ../../advanced/components/index.rst:122 30292e4912db47289a72a0edf5bf8be5
+#: ../../advanced/components/index.rst:87 f3c7fcef7ad44fcd8633680a11d871b4
 msgid "Forms and view tools for logging in users, or restricting content"
 msgstr ""
 
-#: ../../advanced/components/index.rst:123 246c4107e9a043efbc44a314f828ceab
+#: ../../advanced/components/index.rst:88 fc84e1a693554510a4b5aee2aae07886
 msgid "A pluggable backend system"
 msgstr ""
 
-#: ../../advanced/components/index.rst:125 2f0c3419d53c48169fa8685282032e34
+#: ../../advanced/components/index.rst:90 1ff36fe745d84dd78c327ea87d373a68
 msgid ""
 "The authentication system in Django aims to be very generic and doesn’t "
 "provide some features commonly found in web authentication systems. "
@@ -285,58 +242,58 @@ msgid ""
 "third-party packages:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:127 485643ee07634f5e9f3396fccacf69fa
+#: ../../advanced/components/index.rst:92 3563299d90854c90986c8f212062ad16
 msgid "Password strength checking"
 msgstr ""
 
-#: ../../advanced/components/index.rst:128 3df99581cb87411386c00cf70c6f5898
+#: ../../advanced/components/index.rst:93 69f91b7d77264e178a506401649f56c0
 msgid "Throttling of login attempts"
 msgstr ""
 
-#: ../../advanced/components/index.rst:129 d57acf183c174cecae5561c3ca70ebc2
+#: ../../advanced/components/index.rst:94 6a6aa61c501c4bd2a0294678b5e51c6c
 msgid "Authentication against third-parties (OAuth, for example)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:131 3668c462b84f4d4c892994df337fcd00
+#: ../../advanced/components/index.rst:96 ef4631d376d441738a59f14d4ef249a7
 msgid ""
 "For more details on installation and configuration of Django "
 "authentication system, please refer to the official guide "
 "https://docs.djangoproject.com/en/3.2/topics/auth/."
 msgstr ""
 
-#: ../../advanced/components/index.rst:133 378e91208ddb491fb3f346d4d3e1157b
+#: ../../advanced/components/index.rst:98 2698ccbb8fcf42cc907f299a4c467014
 msgid ""
 "GeoNode communicates with GeoServer through Basic Authentication under "
 "the hood, in order to configure the data and the GeoServer catalog."
 msgstr ""
 
-#: ../../advanced/components/index.rst:135 5e938b1ab16f4a64b0287114da3979e6
+#: ../../advanced/components/index.rst:100 9b98ad496ced4d62b18d24ea2bb392cf
 msgid ""
 "In order to do this, you must be sure that GeoNode knows the **internal**"
 " admin user and password of GeoServer."
 msgstr ""
 
-#: ../../advanced/components/index.rst:137 732aa8a755bb46d6b4e718c3ee56a859
+#: ../../advanced/components/index.rst:102 e96fe369be94494eb1f3ff30f5fd0153
 msgid ""
 "This must be an internal GeoServer user with admin rights, not a GeoNode "
 "one."
 msgstr ""
 
-#: ../../advanced/components/index.rst:139 0d41e5acb2514f6c9af35124b1ea8ed3
+#: ../../advanced/components/index.rst:104 52a6f06675614587ac2456fc812e7319
 msgid ""
 "Make sure the credentials are correctly configured into the file "
 "``settings.py``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:142 a864fdf2db3349dbbd7a2a7ac0d09509
+#: ../../advanced/components/index.rst:107 4a77d0fd0529403e99a035c2417676d3
 msgid "OGC_SERVER"
 msgstr ""
 
-#: ../../advanced/components/index.rst:144 25825140efdd43a3acbff6932cac0f78
+#: ../../advanced/components/index.rst:109 ecde02eae40143318557e9eb15f5b0b9
 msgid "Ensure that the ``OGC_SERVER`` settings are correctly configured."
 msgstr ""
 
-#: ../../advanced/components/index.rst:146 740ae28863bb4cd9827d60535982ef1e
+#: ../../advanced/components/index.rst:111 82f64f7418054e828f8a47f9e6a3c0fd
 msgid ""
 "Notice that the two properties ``LOGIN_ENDPOINT`` and ``LOGOUT_ENDPOINT``"
 " must specify the GeoServer OAuth2 Endpoints (see details below). The "
@@ -347,38 +304,38 @@ msgid ""
 "configuration."
 msgstr ""
 
-#: ../../advanced/components/index.rst:150 c03913ebec0642969ae6c777bf5de2b6
+#: ../../advanced/components/index.rst:115 b00eab44a74f485ba76c2446a3e4f9b4
 msgid "If in doubt, please use the default values here below."
 msgstr ""
 
-#: ../../advanced/components/index.rst:152
+#: ../../advanced/components/index.rst:117
+#: ../../advanced/components/index.rst:271
+#: ../../advanced/components/index.rst:284
 #: ../../advanced/components/index.rst:306
-#: ../../advanced/components/index.rst:319
-#: ../../advanced/components/index.rst:341
-#: ../../advanced/components/index.rst:372 0d9e0f18abe1435bbaa55e0b8dbafcf8
-#: 34508d02f3ad4dcc9e8ed2a076f5a981 6ac6eed0543f4f399057d872b7b18317
-#: a6b8ceecbc424fe8b9bdfb639f69c4a5 bf9f70a413c642ada670b73e1b9cb71d
+#: ../../advanced/components/index.rst:337 3ec239baedae4ab2aff14df3610d0cce
+#: 71756b8f7b1747f2aff7f731ddf95512 96a37ef0e7d444be866617dc62279aa4
+#: cbbffec3263b40579deb57f705b5fd16 d522f46d9ff0453fb1cc99f0bacb22e0
 msgid "Default values are:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:186 95e419a962154091b3554dcc69468505
+#: ../../advanced/components/index.rst:151 a09ec08e7445444caca8da26fdbda68e
 msgid "GeoNode and GeoServer A&A Interaction"
 msgstr ""
 
-#: ../../advanced/components/index.rst:188 484676decfea4070afc187b803c61e9b
+#: ../../advanced/components/index.rst:153 c2b1eae027b04a7dad36973aa0e00d98
 msgid ""
 "The GeoServer instance used by GeoNode, has a particular setup that "
 "allows the two frameworks to correctly interact and exchange informations"
 " on users credentials and permissions."
 msgstr ""
 
-#: ../../advanced/components/index.rst:190 8cdcb024761a4fb1b3620a8e4300ba2f
+#: ../../advanced/components/index.rst:155 9dea1b0fed5644cbbaa47a87d8552185
 msgid ""
 "In particular GeoServer is configured with a ``Filter Chain`` for "
 "Authorization that makes use of the two following protocols:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:196 4f1f896177f943b2819d96c488b99487
+#: ../../advanced/components/index.rst:161 3675d70ae2cd4d2fa1d017b7b3dd16ae
 msgid ""
 "**Basic Authentication**; this is the default GeoServer Authentication "
 "mechanism. This makes use of `rfc2617 - Basic and Digest Access "
@@ -386,7 +343,7 @@ msgid ""
 "for user's credentials."
 msgstr ""
 
-#: ../../advanced/components/index.rst:193 107c2da40ef54197a20383c6460ec376
+#: ../../advanced/components/index.rst:158 66f3623a98644540aeaddece3c2c4684
 msgid ""
 "In other words, GeoServer takes a ``username`` and a ``password`` encoded"
 " `Base64 <https://tools.ietf.org/html/rfc4648>`_ on the HTTP Request "
@@ -397,7 +354,7 @@ msgid ""
 "*GeoServer (Security Backend)* section below)."
 msgstr ""
 
-#: ../../advanced/components/index.rst:196 4ec2d5bcde3847c6bbeac3b05a86a0f0
+#: ../../advanced/components/index.rst:161 98194deab4cf42cda2d71cde43c8e6f3
 msgid ""
 "GeoServer ships by default with ``admin`` and ``geoserver`` as the "
 "default administrator user name and password. Before putting the "
@@ -405,7 +362,7 @@ msgid ""
 "password."
 msgstr ""
 
-#: ../../advanced/components/index.rst:198 f92e31085de44032b7938201552d5906
+#: ../../advanced/components/index.rst:163 bcb4cb06bf054066bec11ac24d43e38c
 msgid ""
 "**OAuth2 Authentication**; this module allows GeoServer to authenticate "
 "against the `OAuth2 Protocol <https://tools.ietf.org/html/rfc6749>`_. If "
@@ -413,7 +370,7 @@ msgid ""
 "GeoNode as OAuth2 Provider by default."
 msgstr ""
 
-#: ../../advanced/components/index.rst:200 6264549c1ceb4ffab4d289ff10eefb68
+#: ../../advanced/components/index.rst:165 845aa9a6904e4d76b8fbf036026bbf2c
 msgid ""
 "Further details can be found directly on the official GeoServer "
 "documentation at section \"`Authentication Chain "
@@ -421,7 +378,7 @@ msgid ""
 "#security-auth-chain>`_\""
 msgstr ""
 
-#: ../../advanced/components/index.rst:202 0fd39700ed89460a8cb62dc576956746
+#: ../../advanced/components/index.rst:167 110d0b47222d49eb8b1aad8e395c966f
 msgid ""
 "From the **GeoNode backend (server) side**, the server will make use of "
 "**Basic Authentication** with administrator credentials to configure the "
@@ -429,7 +386,7 @@ msgid ""
 "GeoNode must know the internal GeoServer admin credentials."
 msgstr ""
 
-#: ../../advanced/components/index.rst:204 40ad97f42a8647a59650113766b48488
+#: ../../advanced/components/index.rst:169 8bbe8f90f6eb40058959aac719d30dab
 msgid ""
 "From the **GeoNode frontend (browser and GUI) side**, the "
 "*Authentication* goal is to allow GeoServer to recognize as valid a user "
@@ -438,7 +395,7 @@ msgid ""
 "two applications."
 msgstr ""
 
-#: ../../advanced/components/index.rst:206 4e8a1f0476804f08a96a9b658b981267
+#: ../../advanced/components/index.rst:171 0d6a1c88f7e248e4ae43cd19b9d953e7
 msgid ""
 "GeoServer must know and must be able to access GeoNode via HTTP/HTTPS. In"
 " other words, an external user connected to GeoNode must be authenticated"
@@ -446,15 +403,15 @@ msgid ""
 "**OAuth2 Authentication** Protocol."
 msgstr ""
 
-#: ../../advanced/components/index.rst:208 f2650bd2116c406cb48d9adf24688f55
+#: ../../advanced/components/index.rst:173 5b5aa630fe5649cf87fcdef93855b6fe
 msgid "**GeoNode / GeoServer Authentication Mechanism**"
 msgstr ""
 
-#: ../../advanced/components/index.rst:210 f5c9799802514fdbbce33ae80c32344e
+#: ../../advanced/components/index.rst:175 dbb1cd895ddb4a5a841babaa1abab8d8
 msgid "*GeoNode as OAuth2 Provider (OP)*"
 msgstr ""
 
-#: ../../advanced/components/index.rst:212 ffc0918b8a77445594a032ca8864a896
+#: ../../advanced/components/index.rst:177 611a964622de4adc8f6e96fba49b901d
 msgid ""
 "OpenID Connect is an identity framework built on OAuth 2.0 protocol which"
 " extends the authorization of OAuth 2.0 processes to implement its "
@@ -464,7 +421,7 @@ msgid ""
 "on (SSO) system."
 msgstr ""
 
-#: ../../advanced/components/index.rst:214 4cd548d0d2f94664a6a4c46d3df5bb26
+#: ../../advanced/components/index.rst:179 bbf5ea05f6fe47fcbca9ad9f0a9a82b1
 msgid ""
 "OAuth 2.0 is an authorization framework which is capable of providing a "
 "way for clients to access a resource with restricted access on behalf of "
@@ -472,7 +429,7 @@ msgid ""
 "with an authorization server based authentication."
 msgstr ""
 
-#: ../../advanced/components/index.rst:216 71a271c95a8d43049a95afae891d51bd
+#: ../../advanced/components/index.rst:181 48caf2694d3d478c813cdd1c94999bef
 msgid ""
 "As an OP, GeoNode will be able to act as trusted identity provider, thus "
 "allowing the system working on an isolated environment and/or allow "
@@ -480,70 +437,70 @@ msgid ""
 "subsystem."
 msgstr ""
 
-#: ../../advanced/components/index.rst:218 3393835de413407a845ef789ce3a1ef6
+#: ../../advanced/components/index.rst:183 f2790f46f0e944d5a01baeab0c520110
 msgid "*GeoServer as OAuth2 Relying Party (RP)*"
 msgstr ""
 
-#: ../../advanced/components/index.rst:220 77657a4b5f004377a90e77042cc39b78
+#: ../../advanced/components/index.rst:185 53a83141130b486bb9cd6e4d038e5dd6
 msgid ""
 "Thanks to the **OAuth2 Authentication** GeoServer is able to retrieve an "
 "end user's identity directly from the OAuth2 Provider (OP)."
 msgstr ""
 
-#: ../../advanced/components/index.rst:222 3664a87152c7451d80d24f0b78cf5248
+#: ../../advanced/components/index.rst:187 e8323bc7667a4b6b8558feae8b7ad7f4
 msgid ""
 "With GeoNode acting as an OP, the mechanism will avoid the use of cookies"
 " relying, instead, on the OAuth2 secure protocol."
 msgstr ""
 
-#: ../../advanced/components/index.rst:224 6fcd44f0f5a44460bb0373074bbf60a6
+#: ../../advanced/components/index.rst:189 cc407bc4cb484e919a780e0b336e56b1
 msgid "How the OAuth2 Protocol works:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:228 8ae6941928034070ad282c4162a70279
+#: ../../advanced/components/index.rst:193 303e09dd1adc4d2f847075780cdb79c9
 msgid ""
 "The relying party sends the request to the OAuth2 provider to "
 "authenticate the end user"
 msgstr ""
 
-#: ../../advanced/components/index.rst:230 b51896b4cabb4941a0de5422df711daf
+#: ../../advanced/components/index.rst:195 d67aacd1b8cb42818466c1ff06763407
 msgid "The OAuth2 provider authenticates the user"
 msgstr ""
 
-#: ../../advanced/components/index.rst:232 7a259c082ec34128a57f79440ef3954d
+#: ../../advanced/components/index.rst:197 db4d67cc0f6e4525ba620247d0f3cea3
 msgid ""
 "The OAuth2 provider sends the ID token and access token to the relying "
 "party"
 msgstr ""
 
-#: ../../advanced/components/index.rst:234 a4ce628691e84cedb1794e60860f10c3
+#: ../../advanced/components/index.rst:199 ac013b91394f400787ab1da24f893077
 msgid ""
 "The relying party sends a request to the user info endpoint with the "
 "access token received from OAuth2 provider"
 msgstr ""
 
-#: ../../advanced/components/index.rst:236 4fa0db19adfd4e5586e68fbcb9a730ae
+#: ../../advanced/components/index.rst:201 4931c5d40ffe483aab8c8b6f78ead93e
 msgid "The user info endpoint returns the claims."
 msgstr ""
 
-#: ../../advanced/components/index.rst:238 a83535f54d0e4f4aa8b50f861c5284d1
+#: ../../advanced/components/index.rst:203 e6829a696d504fe39c7bf75b6b8fbc8e
 msgid "**GeoNode / GeoServer Authorization Mechanism**"
 msgstr ""
 
-#: ../../advanced/components/index.rst:240 4cf65850d0e44234993de31e5b795e4d
+#: ../../advanced/components/index.rst:205 96579501b8c44200b8a46ecb184903ca
 msgid ""
 "Allowing GeoServer to make use of a OAuth2 in order to act as an OAuth2 "
 "RP, is not sufficient to map a user identity to its roles though."
 msgstr ""
 
-#: ../../advanced/components/index.rst:242 732b1fb37832438a945794e036a73907
+#: ../../advanced/components/index.rst:207 c931f8f619a6438297db2ac780f4e0c1
 msgid ""
 "On GeoServer side we will still need to a ``RoleService`` which would be "
 "able to talk to GeoNode and transform the tokens into a User Principal to"
 " be used within the GeoServer Security subsystem itself."
 msgstr ""
 
-#: ../../advanced/components/index.rst:244 855cc1e94da8467ea50c9f7fae654b46
+#: ../../advanced/components/index.rst:209 cd0d70e2bc6c4eadbbfea4129dfcde8d
 msgid ""
 "In other words after a successfull Authentication, GeoServer needs to "
 "Authorize the user in order to understand which resources he is enable to"
@@ -553,7 +510,7 @@ msgid ""
 "the current user along with the list of its Roles."
 msgstr ""
 
-#: ../../advanced/components/index.rst:247 de66a12070d5415f8185e82aec8c9a6f
+#: ../../advanced/components/index.rst:212 b8cb9c4333584f78b7ebda1d987d7340
 msgid ""
 "Nevertheless knowing the Roles associated to a user is not sufficient. "
 "The complete GeoServer Authorization needs to catch a set of ``Access "
@@ -561,27 +518,27 @@ msgid ""
 "and data are accessible by the user."
 msgstr ""
 
-#: ../../advanced/components/index.rst:249 2c319402b3c045e486e844327aaa05db
+#: ../../advanced/components/index.rst:214 13af095045e84e5eb8e2d5d1198e0ca2
 msgid ""
 "The GeoServer Authorization is based on Roles only, therefore for each "
 "authenticated user we need also to know:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:251 33d79691595a43388d162841cf2c0221
+#: ../../advanced/components/index.rst:216 2f434ec3f0664340a5ed2ac3f670daaa
 msgid "The Roles associated to a valid user session"
 msgstr ""
 
-#: ../../advanced/components/index.rst:253 e91ab3c4967b43df83dabc21f9dea5f4
+#: ../../advanced/components/index.rst:218 286cadb1e0b447118c6ca41626f62d20
 msgid "The access permissions associated to a GeoServer Resource"
 msgstr ""
 
-#: ../../advanced/components/index.rst:255 d0382a74b3f34489b2e0d94a2d87aa27
+#: ../../advanced/components/index.rst:220 461c2beb2bdd4828b8748a0f43c5a678
 msgid ""
 "The Authentication mechanism above allows GeoServer to get information "
 "about the user and his Roles, which addresses point 1."
 msgstr ""
 
-#: ../../advanced/components/index.rst:257 53e53bfd822848f1bced668e812bbd45
+#: ../../advanced/components/index.rst:222 047de5bf7f124859958beb1aedecec6f
 msgid ""
 "About point 2, GeoServer makes use of the `GeoFence Embedded Server "
 "<http://docs.geoserver.org/latest/en/user/community/geofence-"
@@ -597,34 +554,34 @@ msgid ""
 "authorized clients to read / write / modify security rules."
 msgstr ""
 
-#: ../../advanced/components/index.rst:262 a185eab1857d4272bcfb738a57522184
+#: ../../advanced/components/index.rst:227 3f34d9f77ab9434ea602bfd1aee37ab1
 msgid "The advantages using such plugin are multiple:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:264 75bfb501541e4439b01759ac69672c60
+#: ../../advanced/components/index.rst:229 23953477cf1544b984d4d4148f9b2537
 msgid ""
 "The Authorizations rules have a fine granularity. The security rules are "
 "handled by GeoFence in a way similar to the iptables ones, and allow to "
 "define security constraints even on sub-regions and attributes of layers."
 msgstr ""
 
-#: ../../advanced/components/index.rst:266 670af77a7daa4c75a3fcd0b074c31dab
+#: ../../advanced/components/index.rst:231 f9e8fa1f62374f449f2857ad47d28eb7
 msgid ""
 "GeoFence exposes a REST interface to its internal rule database, allowing"
 " external managers to update the security constraints programmatically"
 msgstr ""
 
-#: ../../advanced/components/index.rst:268 2e26240b7dba49b8a13ef877e4184ad4
+#: ../../advanced/components/index.rst:233 5f1478fd6b1c4f55ac785f28b3b426cc
 msgid ""
 "GeoFence implements an internal caching mechanism which improves "
 "considerably the performances under load."
 msgstr ""
 
-#: ../../advanced/components/index.rst:270 060048b52a0541bcb3d0f1dfdc0dfe59
+#: ../../advanced/components/index.rst:235 e05de258214a4d62a2a918f5da28007e
 msgid "*GeoNode interaction with GeoFence*"
 msgstr ""
 
-#: ../../advanced/components/index.rst:272 dee4697c6bdf4691844e3b1fda659f94
+#: ../../advanced/components/index.rst:237 c0558fcc94f046448cacbffc39214c24
 msgid ""
 "GeoNode itself is able to push/manage Authorization rules to GeoServer "
 "through the GeoFence `REST API "
@@ -634,7 +591,7 @@ msgid ""
 "are updated."
 msgstr ""
 
-#: ../../advanced/components/index.rst:275 c0fc26d1736d4a88852283878bfb712a
+#: ../../advanced/components/index.rst:240 5e82f1361c7745aab86901763c6a4402
 msgid ""
 "GeoServer must know and must be able to access GeoNode via HTTP/HTTPS. In"
 " other words, an external user connected to GeoNode must be authenticated"
@@ -642,24 +599,24 @@ msgid ""
 "**GeoNodeCoockieProcessingFiler**."
 msgstr ""
 
-#: ../../advanced/components/index.rst:277 a9a62d6a75c24db2bd254d4b704f86f1
+#: ../../advanced/components/index.rst:242 f8dcd9150e654332b7259a2c1d907e35
 msgid "Summarizing we will have different ways to access GeoNode Layers:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:279 d0949eafc3cb491bbafa818fb22204bd
+#: ../../advanced/components/index.rst:244 7a6f2ea91028469095fec87f9f3fa20f
 msgid ""
 "Through GeoNode via DJango Authentication and "
 "**GeoNodeCoockieProcessingFiler**; basically the users available in "
 "GeoNode are also valid for GeoServer or any other backend."
 msgstr ""
 
-#: ../../advanced/components/index.rst:281 7d15838ac1584f729bf8e9b6561826ae
+#: ../../advanced/components/index.rst:246 8990f46789f34d239a7801ca6f6bb8da
 msgid ""
 "If a GeoNode user has \"administrator\" rights, he will be able to "
 "administer GeoServer too."
 msgstr ""
 
-#: ../../advanced/components/index.rst:283 f9f285fff4294be29afe66b379a5ca71
+#: ../../advanced/components/index.rst:248 38a9615651d6466e93924044a35caf2e
 msgid ""
 "Through GeoServer Security Subsystem; it will be always possible to "
 "access to GeoServer using its internal security system and users, unless "
@@ -667,13 +624,13 @@ msgid ""
 " are doing)."
 msgstr ""
 
-#: ../../advanced/components/index.rst:285 4313e59f34034f6cb3e1cb3799b8cbb0
+#: ../../advanced/components/index.rst:250 89c8b3d3c9424e92aac16c347008f564
 msgid ""
 "Let's now see in details how the single pieces are configured and how "
 "they can be configured."
 msgstr ""
 
-#: ../../advanced/components/index.rst:290 5af695fb0a9e4a65918e83d06b5c20b9
+#: ../../advanced/components/index.rst:255 af1d60db94a141c99173bed51b3cff51
 msgid ""
 "As stated above, GeoNode makes use of the OAuth2 protocol for all the "
 "frontend interactions with GeoServer. GeoNode must be configured as an "
@@ -683,27 +640,27 @@ msgid ""
 "toolkit.readthedocs.io/en/latest/>`_."
 msgstr ""
 
-#: ../../advanced/components/index.rst:293 d54ba89c66104349afbc3a5dedc2462b
+#: ../../advanced/components/index.rst:258 1fdf1b157050493890d7d7ac2c258c4a
 msgid ""
 "GeoNode and GeoServer won't work at all if the following steps are not "
 "executed at the first installation."
 msgstr ""
 
-#: ../../advanced/components/index.rst:296 c352ae62929f415ab2334af2293b2115
+#: ../../advanced/components/index.rst:261 bd9cd63920294f0daf849a163a4bfba6
 msgid "Default ``settings.py`` Security Settings for OAuth2"
 msgstr ""
 
-#: ../../advanced/components/index.rst:298 673282f2f53143dcb5764538a5f13af7
+#: ../../advanced/components/index.rst:263 94145a8ab05c40f4ba4304cc26479684
 msgid ""
 "Double check that the OAuth2 Provider and Security Plugin is enabled and "
 "that the settings below are correctly configured."
 msgstr ""
 
-#: ../../advanced/components/index.rst:301 cc8251dcdbdb404fb486ac4451dd6659
+#: ../../advanced/components/index.rst:266 9cf0f3ee63824689b4454dddeb885a18
 msgid "AUTH_IP_WHITELIST"
 msgstr ""
 
-#: ../../advanced/components/index.rst:303 23c51a269e9e41e7bcc20adf115e4876
+#: ../../advanced/components/index.rst:268 b1542551788b484a9ad427250ca02243
 msgid ""
 "``AUTH_IP_WHITELIST`` property limits access to users/groups REST Role "
 "Service endpoints to the only whitelisted IP addresses. Empty list means "
@@ -712,33 +669,33 @@ msgid ""
 "'192.168.1.159']``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:315 fa2370125ef94210b4f1a602d8c5c2fe
+#: ../../advanced/components/index.rst:280 af462ff4dcbd45709d2cc66e693b97e9
 msgid "INSTALLED_APPS"
 msgstr ""
 
-#: ../../advanced/components/index.rst:317 7a31a9cfccbe4c8f8cc12f23867e20dc
+#: ../../advanced/components/index.rst:282 6e2ac7e56d3d412a8988af6d3272ca49
 msgid ""
 "In order to allow GeoNode to act as an OAuth2 Provider, we need to enable"
 " the ``oauth2_provider`` DJango application provided by the \"Django "
 "OAuth Toolkit\"."
 msgstr ""
 
-#: ../../advanced/components/index.rst:337 40af865fa5c442a08d1a0f20d234902a
+#: ../../advanced/components/index.rst:302 975d79abf2294d2c924b84b33a10f7e1
 msgid "MIDDLEWARE_CLASSES"
 msgstr ""
 
-#: ../../advanced/components/index.rst:339 38d5119595b84d2b87ea48ba8cce0000
+#: ../../advanced/components/index.rst:304 206c7607c3944c4ab8ab41150f814cf7
 msgid ""
 "Installing the `oauth2_provider`` DJango application is not sufficient to"
 " enable the full functionality. We need also GeoNode to include "
 "additional entities to its internal model."
 msgstr ""
 
-#: ../../advanced/components/index.rst:367 4a83eef339ff4b9cbb413aade3dac1b6
+#: ../../advanced/components/index.rst:332 92886cc392d944079b5a4e293e3f6f22
 msgid "AUTHENTICATION_BACKENDS"
 msgstr ""
 
-#: ../../advanced/components/index.rst:369 2eb0e5fa615148a09af8eeb91de46341
+#: ../../advanced/components/index.rst:334 fd4af0c18ae24f97933b52862a36bb97
 msgid ""
 "In order to allow GeoNode to act as an OAuth2 Provider, we need to enable"
 " the ``oauth2_provider.backends.OAuth2Backend`` DJango backend provided "
@@ -747,150 +704,150 @@ msgid ""
 " create ``OAuth2 Client IDs``."
 msgstr ""
 
-#: ../../advanced/components/index.rst:397 09660916e91440c6915168ac8d06925d
+#: ../../advanced/components/index.rst:362 6a2350cda5cf4617850670c9f4b0e3d4
 msgid "Django OAuth Toolkit Admin Setup"
 msgstr ""
 
-#: ../../advanced/components/index.rst:399 7e08a2b6eebf4e30b8909762280b385a
+#: ../../advanced/components/index.rst:364 016b02f026f9460aac10cbb5c70d675f
 msgid ""
 "Once the ``settings.py`` and ``local_settings.py`` have been correctly "
 "configured for your system:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:401 6d31893895714114af6049a3f023e78e
+#: ../../advanced/components/index.rst:366 6ddf687f86d048e1ade4a13aba252c14
 msgid "Complete the GeoNode setup steps"
 msgstr ""
 
-#: ../../advanced/components/index.rst:403 e5fb096dcfa74c44b4b3996f7fe99b5d
+#: ../../advanced/components/index.rst:368 b16972733ea14fbfaf1cefff12149220
 msgid "Prepare the model"
 msgstr ""
 
-#: ../../advanced/components/index.rst:411 be0086832e014e86a3047f7182ce04e0
+#: ../../advanced/components/index.rst:376 0d36e4943d974cfbbfb6da47aebf89dc
 msgid "Prepare the static data"
 msgstr ""
 
-#: ../../advanced/components/index.rst:417 89428a95331146b5b060b2fb15df8c9d
+#: ../../advanced/components/index.rst:382 01d3cce8c35d4b959cd90bb061102976
 msgid "Make sure the database has been populated with initial default data"
 msgstr ""
 
-#: ../../advanced/components/index.rst:419
-#: ../../advanced/components/index.rst:427 0428e533e6e549ae94e534f1b0b89a64
-#: 6978d34ed26d40938dedf785821b8abb
+#: ../../advanced/components/index.rst:384
+#: ../../advanced/components/index.rst:392 5ce0e1df1bb245a99b380111fc5b6a8c
+#: d74c0fc159a049859230253b88a4f30a
 msgid ""
 "*Deprecated* this command will be replaced by migrations in the future, "
 "so be careful."
 msgstr ""
 
-#: ../../advanced/components/index.rst:425 adf1842b6008414f92fa5f63cbe245ae
+#: ../../advanced/components/index.rst:390 4aeb3c1160984e3180ecea490666a573
 msgid "Make sure there exists a superuser for your environment"
 msgstr ""
 
-#: ../../advanced/components/index.rst:433 439a17624b9e4ce79e6e8dc99628c647
+#: ../../advanced/components/index.rst:398 737b23a43c52456d97618b532039a543
 msgid ""
 "Read the base tutorials on GeoNode Developer documentation for details on"
 " the specific commands and how to use them."
 msgstr ""
 
-#: ../../advanced/components/index.rst:435 173bc27edc4a4a1ca8aa84f8d96c7c49
+#: ../../advanced/components/index.rst:400 f16ccc4c93ae4832857810958aff77fb
 msgid "Start the application"
 msgstr ""
 
-#: ../../advanced/components/index.rst:437 72e1764ab4124354a3226ac8eb5143ee
+#: ../../advanced/components/index.rst:402 3eb8a865e893483dbc1b26466e155fe8
 msgid ""
 "Start GeoNode accordingly on how the setup has been done; run debug mode "
 "through ``paver``, or proxied by an HTTP Server like Apache2 HTTPD, Nginx"
 " or others."
 msgstr ""
 
-#: ../../advanced/components/index.rst:439 992b789eaa8049e7ba4250a5f36606d2
+#: ../../advanced/components/index.rst:404 bdcff4bf2051449f8babd41748a93d60
 msgid "Finalize the setup of the OAuth2 Provider"
 msgstr ""
 
-#: ../../advanced/components/index.rst:441 16eb22598c5a44a386bd0e1416e7d04e
+#: ../../advanced/components/index.rst:406 564ef816ce4a46fea162837131d0c4d2
 msgid ""
 "First of all you need to configure and create a new OAuth2 Application "
 "called ``GeoServer`` through the GeoNode Admin Dashboard"
 msgstr ""
 
-#: ../../advanced/components/index.rst:443 e23640f6bbdf420b9b9d60dc10b990ba
+#: ../../advanced/components/index.rst:408 c0503ccfd2c94f17ad39f9b41eb4c36a
 msgid "Access the GeoNode Admin Dashboard"
 msgstr ""
 
-#: ../../advanced/components/index.rst:447 ed6ba5b6708048beb005b43f132b3f28
+#: ../../advanced/components/index.rst:412 7fd59782884d4511b5402f5fa6cd4c80
 msgid "Go to ``Django OAuth Toolkit`` > ``Applications``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:451 913e7015854047f9a0b2e21ea54e688e
+#: ../../advanced/components/index.rst:416 6f8540c881ad4f5ca3be2eb30f2bcfa1
 msgid "Update or create the Application named ``GeoServer``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:453 6ac8191002cc4a49b69169bf82f55d18
+#: ../../advanced/components/index.rst:418 5ec02396f357472293fd9e92d20b0b96
 msgid "The Application name **must** be ``GeoServer``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:457 2c710df474e3454b94822a4ed40eb5b4
+#: ../../advanced/components/index.rst:422 b09e1227f3b54efc80af2ee308599afa
 msgid ""
 "``Client id``; An alphanumeric code representing the OAuth2 Client Id. "
 "GeoServer OAuth2 Plugin **will** use **this** value."
 msgstr ""
 
-#: ../../advanced/components/index.rst:459
-#: ../../advanced/components/index.rst:471 b64ef37ee87b43c9b7f21581e9611e00
-#: cac69c465efb492f8a81e4c8cc373c83
+#: ../../advanced/components/index.rst:424
+#: ../../advanced/components/index.rst:436 593dbab64bb545fab9852aa97fef042d
+#: ec978a50c4b84f29b32838fff3755a7a
 msgid ""
 "In a production environment it is **highly** recommended to modify the "
 "default value provided with GeoNode installation."
 msgstr ""
 
-#: ../../advanced/components/index.rst:461 0bfd3a228bde435fb4e3c4ea6b985857
+#: ../../advanced/components/index.rst:426 a17ec9e261dc4410ad21845cccc25d86
 msgid ""
 "``User``; Search for the ``admin`` user. Its ``ID`` will be automatically"
 " updated into the form."
 msgstr ""
 
-#: ../../advanced/components/index.rst:463 03a0a11b0f4444bbaf29827cb1724d2a
+#: ../../advanced/components/index.rst:428 dada9eb4b32c43e583577c067dc8206e
 msgid ""
 "``Redirect uris``; It is possible to specify many URIs here. Those must "
 "coincide with the GeoServer instances URIs."
 msgstr ""
 
-#: ../../advanced/components/index.rst:465 c48185edbf434e1fb30521f632aab62d
+#: ../../advanced/components/index.rst:430 346fd60474ab43769f184309664fc945
 msgid "``Client type``; Choose ``Confidential``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:467 07ae2b50e18e4c99a0c6b92cb291937c
+#: ../../advanced/components/index.rst:432 df1fa1b0463f48089dfab2e2ce3e72a8
 msgid "``Authorization grant type``; Choose ``Authorization code``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:469 71471e9bab1c4ff6aace0fe235b6b7d8
+#: ../../advanced/components/index.rst:434 61993265eeb5473b8b7ea84b46f226f7
 msgid ""
 "``Client secret``; An alphanumeric code representing the OAuth2 Client "
 "Secret. GeoServer OAuth2 Plugin **will** use **this** value."
 msgstr ""
 
-#: ../../advanced/components/index.rst:473 055f4bba541c41c38d1429a8b5c51562
+#: ../../advanced/components/index.rst:438 2ad49703cda44787aff4faa06f17b782
 msgid "``Name``; **Must** be ``GeoServer``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:476 c51e08fde7d6426d8e61103408f8550b
+#: ../../advanced/components/index.rst:441 ae749edfddb340729af6e138ff17aa5e
 msgid "GeoServer Security Backend"
 msgstr ""
 
-#: ../../advanced/components/index.rst:481 12e9987bc5d6468290120d811c9e9f44
+#: ../../advanced/components/index.rst:446 526fd817dac04d18b92274d3932d5aae
 msgid ""
 "GeoServer has a robust security subsystem, modeled on Spring Security. "
 "Most of the security features are available through the Web "
 "administration interface."
 msgstr ""
 
-#: ../../advanced/components/index.rst:483 417728ac28cf4d53b237194d535b1f80
+#: ../../advanced/components/index.rst:448 5a682b3d35a14877b04e0f615c02a859
 msgid ""
 "For more details on how this works and how to configure and modify it, "
 "please refer to the official GeoServer guide "
 "http://docs.geoserver.org/stable/en/user/security/webadmin/index.html"
 msgstr ""
 
-#: ../../advanced/components/index.rst:485 bd7e915bf42241ff88b12e982afe983c
+#: ../../advanced/components/index.rst:450 ea095bc257074dcbab7e7f82a7467087
 msgid ""
 "By using the ``GeoServer Data Dir`` provided with GeoNode build, the "
 "following configuration are already available. You will need just to "
@@ -901,232 +858,232 @@ msgid ""
 "possible issue during the deployment."
 msgstr ""
 
-#: ../../advanced/components/index.rst:488 7e228ad9b6c04e22a2dece8b35e88c43
+#: ../../advanced/components/index.rst:453 6c1bd7c9087048048acd71f64cbf47e5
 msgid "The main topics of this section are:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:490
-#: ../../advanced/components/index.rst:499 52f3f558eb12470a90745b31a25df98f
-#: 9baa72380d414dedbbabbdbae7b9dd49
+#: ../../advanced/components/index.rst:455
+#: ../../advanced/components/index.rst:464 22cf7e12cefb44e39a6c45168a7b2e4e
+#: c391f036959a408b9d85f523ca676858
 msgid "Connection to the GeoNode REST Role Service"
 msgstr ""
 
-#: ../../advanced/components/index.rst:492
-#: ../../advanced/components/index.rst:587 643399eabc49411b94be78981f4d5e64
-#: 9ac8d4e92f3f490b87f363e2336dd589
+#: ../../advanced/components/index.rst:457
+#: ../../advanced/components/index.rst:552 83ecd43421e1433c81549beaf08b7dda
+#: 850e71aae92e431c8e3d22dabe3fc90d
 msgid "Setup of the GeoServer OAuth2 Authentication Filter"
 msgstr ""
 
-#: ../../advanced/components/index.rst:494
-#: ../../advanced/components/index.rst:654 952b88e6e8bb470ab11d2c70b2c62c85
-#: a7aca2bc55f0443ea3983989c26921a1
+#: ../../advanced/components/index.rst:459
+#: ../../advanced/components/index.rst:619 46ee9ffd89d54e78ade2ce0592365e5b
+#: e8a1240c8a4548658781f8274bcb1f07
 msgid "Configuration of the GeoServer Filter Chains"
 msgstr ""
 
-#: ../../advanced/components/index.rst:496
-#: ../../advanced/components/index.rst:748 3dfed99025404238b80e45736ccef725
-#: 7c47cbafa1f54962b480e03590c06b28
+#: ../../advanced/components/index.rst:461
+#: ../../advanced/components/index.rst:713 23bb226a8b154c1ca8bd9b4675f15315
+#: a106961373d24ab2aacfa4d965bbe59f
 msgid "Setup and test of the GeoFence Server and Default Rules"
 msgstr ""
 
-#: ../../advanced/components/index.rst:502
-#: ../../advanced/components/index.rst:592
-#: ../../advanced/components/index.rst:663
-#: ../../advanced/components/index.rst:755 37a575f0c21447af860bb9437b8da186
-#: 63f45e6260554712ae6cacc3a1a492f5 d49ddb7ffa784536b10d189c5b3561ad
-#: dddf8c9210da41a6831e40851959450f
+#: ../../advanced/components/index.rst:467
+#: ../../advanced/components/index.rst:557
+#: ../../advanced/components/index.rst:628
+#: ../../advanced/components/index.rst:720 245f2abc3b4c4fbf9d9d546afd864633
+#: 4053ca20958341fb8e23c67ac2051388 6341834b77c04558abe78d9c1c5f81be
+#: 65b3f761ca2d43109a261ccf30d1c409
 msgid "Preliminary checks"
 msgstr ""
 
-#: ../../advanced/components/index.rst:504
-#: ../../advanced/components/index.rst:594
-#: ../../advanced/components/index.rst:665
-#: ../../advanced/components/index.rst:757 1ba66c90ba48428680e60849980ee847
-#: 4fcce7ecf7a84474b5b2dc076a9e9892 c7e5a51f2d6240aea9f9eb5e39ddfe1c
-#: e6c8e9aeab7440d4a5b9818f22a8c8a6
+#: ../../advanced/components/index.rst:469
+#: ../../advanced/components/index.rst:559
+#: ../../advanced/components/index.rst:630
+#: ../../advanced/components/index.rst:722 235b41a7d29443729ff67e3d0b5ba4fe
+#: 6f70a57c16074cd8b6f5e456ae19dc8b b30ed4ec175a4939bc1017c5bfd2a692
+#: f46e4b0046a84a4dbf91508ac40f7fe6
 msgid "GeoServer is up and running and you have admin rights"
 msgstr ""
 
-#: ../../advanced/components/index.rst:506
-#: ../../advanced/components/index.rst:596
-#: ../../advanced/components/index.rst:667 0a6083287a5149208b673871c8ec7852
-#: 27addee01a9f493fb6e5263babeba701 d0259d152e5440a9b2184154ce2b6505
+#: ../../advanced/components/index.rst:471
+#: ../../advanced/components/index.rst:561
+#: ../../advanced/components/index.rst:632 0a0b6fc01aed48f6b6b02102a4b90983
+#: 23a2909d09cf4320b645803806a6c337 60a016eabe0d4b79908883f71b67acd4
 msgid "GeoServer must reach the GeoNode instance via HTTP"
 msgstr ""
 
-#: ../../advanced/components/index.rst:508 6bbd913b40604022992c284099d62903
+#: ../../advanced/components/index.rst:473 8cb2e4b1abed48e8abc9b9d6acb9d0ca
 msgid ""
 "The GeoServer Host IP Address must be allowed to access the GeoNode Role "
 "Service APIs (see the section ``AUTH_IP_WHITELIST`` above)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:511 77b42c1b2f2143bdb277a101c6388b3a
+#: ../../advanced/components/index.rst:476 f1ab2efc2b6f4e5fadd8fe06b5aee062
 msgid "Setup of the GeoNode REST Role Service"
 msgstr ""
 
-#: ../../advanced/components/index.rst:513 aae3102346f34f3c98ad2e35b272d9e2
+#: ../../advanced/components/index.rst:478 d7580e1964ac42f496e6609defb89abf
 msgid "Login as ``admin`` to the GeoServer GUI"
 msgstr ""
 
-#: ../../advanced/components/index.rst:515 1b3e15c5908e403aaf56f9e08be6fcc8
+#: ../../advanced/components/index.rst:480 ac5b58e066d24bf6be7739f4123a6329
 msgid ""
 "In a production system remember to change the default admin credentials "
 "``admin`` \\ ``geoserver``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:519 f9bb59cb45eb4b7a8f74b93836b73422
+#: ../../advanced/components/index.rst:484 4568c8320f9b43d5935e333f171e453e
 msgid "Access the ``Security`` > ``Users, Groups, Roles`` section"
 msgstr ""
 
-#: ../../advanced/components/index.rst:523 a4e7369357214d4b95e9c8c7764c772c
+#: ../../advanced/components/index.rst:488 2c4a324d5a7b4a5780a4a3bd22a3715a
 msgid ""
 "**If not yet configured** the service ``geonode REST role service``, "
 "click on ``Role Services`` > ``Add new``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:525 f536728908cf468eb232e2970701c09e
+#: ../../advanced/components/index.rst:490 0df0dd69eb5d42feb2b381614da38e53
 msgid ""
 "This passage is **not** needed if the ``geonode REST role service`` has "
 "been already created. If so it will be displayed among the Role Services "
 "list"
 msgstr ""
 
-#: ../../advanced/components/index.rst:531 aab6452dd63148528b26b54d6b37e1dd
+#: ../../advanced/components/index.rst:496 d647cf4f4d4d45f193908d751ec4dc6f
 msgid ""
 "**If not yet configured** the service ``geonode REST role service``, "
 "choose ``AuthKEY REST - Role service from REST endpoint``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:535 7fbe7ba513fa47f2a5a16a06bcd6a45d
+#: ../../advanced/components/index.rst:500 7b89d54d20004fbe94dc6a8d18f092d3
 msgid "Create / update the ``geonode REST role service`` accordingly"
 msgstr ""
 
-#: ../../advanced/components/index.rst:539 7e765280f35c4eae858b5a4132a8b1b1
+#: ../../advanced/components/index.rst:504 00afda78d5d44ee8b6ec2cb071ceb5b9
 msgid "``Name``; **Must** be ``geonode REST role service``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:541 2b80872ef7a04327b6a4e6f365b54c9e
+#: ../../advanced/components/index.rst:506 4d5fd1f58b88455a9bfdda3f77be5c6b
 msgid ""
 "``Base Server URL``; Must point to the GeoNode instance base URL (e.g. "
 "``http://<geonode_host_url>``)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:543 81a1a080d700489290cc229d45e95035
+#: ../../advanced/components/index.rst:508 7c42555e199d4983a6734c34dfb4e27d
 msgid "``Roles REST Endpoint``; Enter ``/api/roles``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:545 39a49ac3f98a45bca2caf5544710e67a
+#: ../../advanced/components/index.rst:510 e22c250a540e4f8e833c41c546deecc6
 msgid "``Admin Role REST Endpoint``; Enter ``/api/adminRole``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:547 f8c3cdafbbac4951a88f2160b621e28e
+#: ../../advanced/components/index.rst:512 ad8974a62c794f6f9273f445ea255f8e
 msgid "``Users REST Endpoint``; Enter ``/api/users``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:549 512f843753e948fc82e6b0c4e364096c
+#: ../../advanced/components/index.rst:514 a7ee26153d53468f98c0477e03c7f066
 msgid "``Roles JSON Path``; Enter ``$.groups``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:551 ce939babbe964f2bbe822273a4145c35
+#: ../../advanced/components/index.rst:516 5eed056c65624566b4ebdd9681876bcb
 msgid "``Admin Role JSON Path``; Enter ``$.adminRole``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:553 5148cf6c65024547ba5a0c7787b3b5eb
+#: ../../advanced/components/index.rst:518 90115919bbd342d9bced26ae6ae22c82
 msgid "``Users JSON Path``; Enter ``$.users[0].groups``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:555 cd763ff332b145098ad3d3726a5cf82f
+#: ../../advanced/components/index.rst:520 22c5dc0f2fe84c12ab6c7d761f72c5d4
 msgid ""
 "Once everything has been setup and it is working, choose the "
 "``Administrator role`` and ``Group administrator role`` as ``ROLE_ADMIN``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:558 54fe0a87c86b496aaba8bfc9e9b46103
+#: ../../advanced/components/index.rst:523 e9191de416d842f5b639a2ff4de2a8a6
 msgid "Allow GeoFence to validate rules with ``ROLES``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:560 67b34640e66744518f4dd682e908099e
+#: ../../advanced/components/index.rst:525 e6e3515f0c2c4f46be0ffc0e32a89f9a
 msgid ""
 "The following instruction are different accordingly to the GeoServer "
 "version you are currently using."
 msgstr ""
 
-#: ../../advanced/components/index.rst:563 7b6626db2f1c4014b05c23e6ebfd50a1
+#: ../../advanced/components/index.rst:528 778b462a417e4373a7e46294106ce341
 msgid "GeoServer 2.9.x and 2.10.x"
 msgstr ""
 
-#: ../../advanced/components/index.rst:565 576cadf745c04c86bcd9b34bd19d32cb
+#: ../../advanced/components/index.rst:530 c7b51879fb2648eda55cb95eb6766f86
 msgid "Access the ``Security`` > ``Settings`` section"
 msgstr ""
 
-#: ../../advanced/components/index.rst:569 0a571ab3c67146e190b793662c7f112e
+#: ../../advanced/components/index.rst:534 868c02be2d1143fcb4dd452ddc2178f6
 msgid "Choose the ``geonode REST role service`` as ``Active role service``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:574 19cce291d8b14749abc24411f220c3fb
+#: ../../advanced/components/index.rst:539 b4fbc577e1d647db965337f31d76970f
 msgid "GeoServer 2.12.x and above"
 msgstr ""
 
-#: ../../advanced/components/index.rst:576 2f55e916d56a44cd855ed34246184cad
+#: ../../advanced/components/index.rst:541 e2e445dff6944633bce6dd79a9447143
 msgid ""
 "With the latest updates to GeoFence Plugin, the latter no more recognizes"
 " the Role Service from the default settings but from the ``geofence-"
 "server.properties`` file."
 msgstr ""
 
-#: ../../advanced/components/index.rst:578 6f63c106cb7b456585eb998cdcd2c432
+#: ../../advanced/components/index.rst:543 4c29172d8cd842fca15f849cde026fdb
 msgid ""
 "That said, it is important that the ``Security`` > ``Settings`` role "
 "service will be set to **default**, in order to allow GeoServer following"
 " the standard authorization chain."
 msgstr ""
 
-#: ../../advanced/components/index.rst:580 4348ccb3637549bd8758aa42d14c2d36
+#: ../../advanced/components/index.rst:545 b86a36e5953d4cf8be09ac4a9fa6d6a4
 msgid ""
 "On the other side, you will need to be sure that the ``geofence-"
 "server.properties`` file under the ``$GEOSERVER_DATA_DIR/geofence`` "
 "folder, contains the two following additional properties: ::"
 msgstr ""
 
-#: ../../advanced/components/index.rst:589 e4ba5fba463b4280be57ffc89adef395
+#: ../../advanced/components/index.rst:554 39ae58871889481b9d97c63012d5fea4
 msgid ""
 "It is necessary now check that GeoServer can connect to OAuth2 Providers "
 "(specifically to GeoNode OP), and being able to Authenticate users "
 "through it."
 msgstr ""
 
-#: ../../advanced/components/index.rst:598 f03b72fe858c4980822bf09f15d88082
+#: ../../advanced/components/index.rst:563 7de4362d195c4783961310c5c50c8a15
 msgid ""
 "OAuth2 ``Client ID`` and ``Client Secret`` have been generated on GeoNode"
 " and known"
 msgstr ""
 
-#: ../../advanced/components/index.rst:601 3a4ec9e5961f42de8c82e6e5b8eebb14
+#: ../../advanced/components/index.rst:566 9eacf36e06d24a0daddbdba7a15caec6
 msgid "Setup of the GeoNode OAuth2 Security Filter"
 msgstr ""
 
-#: ../../advanced/components/index.rst:603
-#: ../../advanced/components/index.rst:674
-#: ../../advanced/components/index.rst:764 73b98afd582a4fa786279076829e902f
-#: c1eae6de731a493bb93df0ac3fa656f5 d4a529ac8f0c4259aa190f1c7eefd51f
+#: ../../advanced/components/index.rst:568
+#: ../../advanced/components/index.rst:639
+#: ../../advanced/components/index.rst:729 16256627d77b4c739ffab6fefa0c24d5
+#: 8e8ab508fabf4a79bd764d1263cc94c8 997bc42c6e2341a2b0af1b3d2dce7684
 msgid "Access the ``Security`` > ``Authentication`` section"
 msgstr ""
 
-#: ../../advanced/components/index.rst:607 ebf0e296c73647208582df4e83e9827c
+#: ../../advanced/components/index.rst:572 cf2b89dad9294ae28d6a1af8bc83a49a
 msgid ""
 "**If not yet configured** the Authentication Filter ``geonode-oauth2 - "
 "Authentication using a GeoNode OAuth2``, click on ``Authentication "
 "Filters`` > ``Add new``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:609 59b0220f0a6444919fe04ab3e41fcf6d
+#: ../../advanced/components/index.rst:574 dfd08205f65a46c4a4712a1e8dc4aae8
 msgid ""
 "This passage is **not** needed if the ``geonode-oauth2 - Authentication "
 "using a GeoNode OAuth2`` has been already created. If so it will be "
 "displayed among the Authentication Filters list"
 msgstr ""
 
-#: ../../advanced/components/index.rst:615 9725df8c69e945fbaefa1a6561bbbb6c
+#: ../../advanced/components/index.rst:580 89c1dac0ca914030a31dc409e9103908
 msgid ""
 "**If not yet configured** the Authentication Filter ``geonode-oauth2 - "
 "Authentication using a GeoNode OAuth2``, choose ``GeoNode OAuth2 - "
@@ -1134,36 +1091,36 @@ msgid ""
 "sent as URL parameter``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:619 1d52d27bd1f44a569e3437b6e2338cc2
+#: ../../advanced/components/index.rst:584 5050fd4f535f4a2ab46684cf803ddd20
 msgid ""
 "Create / update the ``geonode-oauth2 - Authentication using a GeoNode "
 "OAuth2`` accordingly"
 msgstr ""
 
-#: ../../advanced/components/index.rst:623 c7dcf14bc5f24bea902c29f1957d0e0b
+#: ../../advanced/components/index.rst:588 f30d29bff1204daeae3c9cb816adc8b0
 msgid "``Name``; **Must** be ``geonode-oauth2``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:625 6573dfdba8ef408082f334d0b684f83e
+#: ../../advanced/components/index.rst:590 c6d224d4f3144bb7be4a9e0a0b563bc7
 msgid ""
 "``Enable Redirect Authentication EntryPoint``; It is recommended to put "
 "this to ``False``, otherwise GeoServer won't allow you to connect to its "
 "Admin GUI through the ``Form`` but only through GeoNode"
 msgstr ""
 
-#: ../../advanced/components/index.rst:627 b6d9cde3ce5d41ab84029c356499f37c
+#: ../../advanced/components/index.rst:592 33f4b3ff45044bb8ae2058523c413604
 msgid ""
 "``Login Authentication EndPoint``; Unless you have specific needs, keep "
 "the default value ``/j_spring_oauth2_geonode_login``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:629 1e245c0810d04998a777e5a596497dcb
+#: ../../advanced/components/index.rst:594 574e4895cd8d4dcfb44874c64765855b
 msgid ""
 "``Logout Authentication EndPoint``; Unless you have specific needs, keep "
 "the default value ``/j_spring_oauth2_geonode_logout``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:631 4a07276ea97d480caac67d05ffc35085
+#: ../../advanced/components/index.rst:596 9a7dadfd50134245a90a57ed1ca3520e
 msgid ""
 "``Force Access Token URI HTTPS Secured Protocol``; This must be ``False``"
 " unless you enabled a ``Secured Connection`` on GeoNode. In that case you"
@@ -1171,13 +1128,13 @@ msgid ""
 "Keystore. Please see details below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:633 57a12c877ed14c2eb7bd9e86de101825
+#: ../../advanced/components/index.rst:598 bc1525e52cbf44dbb3da8fb2cec3888f
 msgid ""
 "``Access Token URI``; Set this to "
 "``http://<geonode_host_base_url>/o/token/``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:635 856e3520e5454679afebdd6d12198e53
+#: ../../advanced/components/index.rst:600 52fe35bf69164975bff1f90af6001bdf
 msgid ""
 "``Force User Authorization URI HTTPS Secured Protocol``; This must be "
 "``False`` unless you enabled a ``Secured Connection`` on GeoNode. In that"
@@ -1185,63 +1142,63 @@ msgid ""
 " JVM Keystore. Please see details below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:637 893f642259eb4fa2a33d9558d5d8a5cf
+#: ../../advanced/components/index.rst:602 a9fd42824fa0417282b02a92da168bc8
 msgid ""
 "``User Authorization URI``; Set this to "
 "``http://<geonode_host_base_url>/o/authorize/``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:639 6f608d82cc564cd7bc451ace4891bfe3
+#: ../../advanced/components/index.rst:604 403db17b17a14e3e831d53049a076610
 msgid ""
 "``Redirect URI``; Set this to ``http://<geoserver_host>/geoserver``. This"
 " address **must** be present on the ``Redirect uris`` of GeoNode "
 "``OAuth2`` > ``Applications`` > ``GeoServer`` (see above)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:641 6afa83f12014465fa523b6f8e355dbec
+#: ../../advanced/components/index.rst:606 369f2be32fe44d2cb34fc12e9eb48ac4
 msgid ""
 "``Check Token Endpoint URL``; Set this to "
 "``http://<geonode_host_base_url>/api/o/v4/tokeninfo/``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:643 b7e98040986e46f59cb01bc1268fec07
+#: ../../advanced/components/index.rst:608 b4dcb88caffd4f1db2ff8d215245ff8e
 msgid ""
 "``Logout URI``; Set this to "
 "``http://<geonode_host_base_url>/account/logout/``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:645 5f791546a7af4ab8b7072c66be5f1804
+#: ../../advanced/components/index.rst:610 ae7719d80ad641b3a571ef001572f03e
 msgid ""
 "``Scopes``; Unless you have specific needs, keep the default value "
 "``read,write,groups``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:647 e8b59935094e4f0c887b844cc91307d1
+#: ../../advanced/components/index.rst:612 29ec4666c0a74488b4d98e9b9a02cbac
 msgid ""
 "``Client ID``; The ``Client id`` alphanumeric key generated by the "
 "GeoNode ``OAuth2`` > ``Applications`` > ``GeoServer`` (see above)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:649 89592e8f8b074500a1b797a336cf28d5
+#: ../../advanced/components/index.rst:614 8fab837eb0ac40509e5b6e88d67e8cec
 msgid ""
 "``Client Secret``; The ``Client secret`` alphanumeric key generated by "
 "the GeoNode ``OAuth2`` > ``Applications`` > ``GeoServer`` (see above)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:651 b929a9f95d574312b6739423994642e7
+#: ../../advanced/components/index.rst:616 cd0cbec24ed642bb966b302c70ae0d35
 msgid ""
 "``Role source``; In order to authorize the user against GeoNode, choose "
 "``Role service`` > ``geonode REST role service``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:656 bb82bcff21bb497ba43b3d87abf3e18a
+#: ../../advanced/components/index.rst:621 a91ff2905de949e59ab376609a20a973
 msgid ""
 "The following steps ensure GeoServer can adopt more Authentication "
 "methods. As stated above, it is possible to Authenticate to GeoServer "
 "using different protocols."
 msgstr ""
 
-#: ../../advanced/components/index.rst:658 fbfcdadda4774285a2639b333687b682
+#: ../../advanced/components/index.rst:623 eba548ee81c54a699bc4227d31b057f0
 msgid ""
 "GeoServer scans the authentication filters chain associated to the "
 "specified path and tries them one by one sequentially. The first one "
@@ -1254,97 +1211,97 @@ msgid ""
 "access."
 msgstr ""
 
-#: ../../advanced/components/index.rst:669 8e86515ca55e4ae3896759f81886d4bf
+#: ../../advanced/components/index.rst:634 8f66ddd335ac4f88952868706c1c1692
 msgid ""
 "The ``geonode-oauth2 - Authentication using a GeoNode OAuth2`` "
 "Authentication Filter and the  ``geonode REST role service`` have been "
 "correctly configured"
 msgstr ""
 
-#: ../../advanced/components/index.rst:672
-#: ../../advanced/components/index.rst:762 22fd5e3d8a2f484c976bdd5d38ffaa94
-#: bd85d67345794c178d7c54cc662add22
+#: ../../advanced/components/index.rst:637
+#: ../../advanced/components/index.rst:727 2c18550fa5e649b88403e89aa6243b9b
+#: dc9eeab6a15048a4a6e8152f2c4f8af5
 msgid "Setup of the GeoServer Filter Chains"
 msgstr ""
 
-#: ../../advanced/components/index.rst:678 3e5dae9e8dab466482e3af66669cb802
+#: ../../advanced/components/index.rst:643 e86459b52a3348b38c59c71f05521f22
 msgid "Identify the section ``Filter Chains``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:682 2cabe3fbc04640cf8102af5f5e7203f1
+#: ../../advanced/components/index.rst:647 60825b6a77eb40faa150d977450d1242
 msgid "Make sure the ``web`` Filter Chain is configured as shown below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:686
-#: ../../advanced/components/index.rst:694
-#: ../../advanced/components/index.rst:702
-#: ../../advanced/components/index.rst:710
-#: ../../advanced/components/index.rst:718
-#: ../../advanced/components/index.rst:726 077df792cbfd4b6e9c26d9522b195db0
-#: 07b2a504ea2447b696dc944102689165 1b4164a24e364d8ea65f67ae822d4d2f
-#: 92ec5764d27347f895fe31e91e6be707 9f30163e8bbd4ba690db202c1d35c3cf
-#: cf3944a072f04427ad98080a565010db
+#: ../../advanced/components/index.rst:651
+#: ../../advanced/components/index.rst:659
+#: ../../advanced/components/index.rst:667
+#: ../../advanced/components/index.rst:675
+#: ../../advanced/components/index.rst:683
+#: ../../advanced/components/index.rst:691 3771c32a38b34e53840bac8ea1b6c01b
+#: 4c677d9e16e4450d93bc7249341746fd 87888464006b40129a80c65d0b8aff9b
+#: 96936e24121b44178051bb743aa6f232 b5e388b6d6b94bd08c6618e3faa4fd5b
+#: ebfa0d61d90c4c23b445d7d1eb12291a
 msgid ""
 "Every time you modify a Filter Chain, **don't forget to save** the "
 "``Authentication`` settings. This **must** be done for **each** change."
 msgstr ""
 
-#: ../../advanced/components/index.rst:690 4bf06146155b480b898052c9158342f1
+#: ../../advanced/components/index.rst:655 45f54be0b99344688e3df04d1a4d1867
 msgid "Make sure the ``rest`` Filter Chain is configured as shown below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:698 0f9b4c4b4e4a4406b6f1ce74e16815e4
+#: ../../advanced/components/index.rst:663 ac54f777b3d44ec7a5b04bc03b953484
 msgid "Make sure the ``gwc`` Filter Chain is configured as shown below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:706 33d658181e5a402bb107dd4f1cbbf979
+#: ../../advanced/components/index.rst:671 021d9866dffc4d7db1de7c9832230540
 msgid "Make sure the ``default`` Filter Chain is configured as shown below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:714 83d50f7747534e7ba1fedc7d5d55f799
+#: ../../advanced/components/index.rst:679 8a222289233a4ce28ffd8f2804620c19
 msgid ""
 "Add the ``GeoNode Login Endpoints`` to the comma-delimited list of the "
 "``webLogin`` Filter Chain"
 msgstr ""
 
-#: ../../advanced/components/index.rst:722 ad42c1761a124712ae8fc7905abcdfd2
+#: ../../advanced/components/index.rst:687 eeb3b747164447efa3af62d92688a803
 msgid ""
 "Add the ``GeoNode Logout Endpoints`` to the comma-delimited list of the "
 "``webLogout`` Filter Chain"
 msgstr ""
 
-#: ../../advanced/components/index.rst:731 2ccb61400d2b4aea8ae498f5a5b0c749
+#: ../../advanced/components/index.rst:696 f1740af99a3646cd867c33b01929b4c7
 msgid ""
 "Add the ``GeoNode Logout Endpoints`` to the comma-delimited list of the "
 "``formLogoutChain`` XML node in "
 "``<GEOSERVER_DATA_DIR>/security/filter/formLogout/config.xml``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:733 24be8abb36e749f89a8ec98a303485a8
+#: ../../advanced/components/index.rst:698 e7d9810c86c947ecaa2681ef59e650d3
 msgid "You will need a text editor to modify the file."
 msgstr ""
 
-#: ../../advanced/components/index.rst:735 e1c00046d3b049f4b09fc925a0974b6a
+#: ../../advanced/components/index.rst:700 1f8565a9a46f43a8aa2df05c948befce
 msgid ""
 "If the ``<formLogoutChain>`` XML node does not exist at all, create a "
 "**new one** as specified below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:745 e76acf19140d4ee781b4a95752d03b6d
+#: ../../advanced/components/index.rst:710 2698a9a2aad24ae2ab9fcc0e46177f75
 msgid ""
 "The value ``j_spring_oauth2_geonode_logout`` **must** be the same "
 "specified as ``Logout Authentication EndPoint`` in the ``geonode-oauth2 -"
 " Authentication using a GeoNode OAuth2`` above."
 msgstr ""
 
-#: ../../advanced/components/index.rst:750 1942e53f55f54577bbc155d534c5d918
+#: ../../advanced/components/index.rst:715 70ba83c8089d49fe8fa4437d678a39a1
 msgid ""
 "In order to work correctly, GeoServer needs the `GeoFence Embedded Server"
 " <http://docs.geoserver.org/latest/en/user/community/geofence-"
 "server/index.html>`_ plugin to be installed and configured on the system."
 msgstr ""
 
-#: ../../advanced/components/index.rst:752 4c373bf3cf4c4d0da7ba364b7c858051
+#: ../../advanced/components/index.rst:717 75734321426243ce9bc383ae34545eaa
 msgid ""
 "The GeoServer configuration provided for GeoNode, has the plugin already "
 "installed with a default configuration. In that case double check that "
@@ -1352,150 +1309,150 @@ msgid ""
 "following the next steps."
 msgstr ""
 
-#: ../../advanced/components/index.rst:759 d72413ace7254f7a965ffcdc0fb76c19
+#: ../../advanced/components/index.rst:724 6765cd81aaa648d3b247db5645598fe1
 msgid ""
 "The `GeoFence Embedded Server "
 "<http://docs.geoserver.org/latest/en/user/community/geofence-"
 "server/index.html>`_ plugin has been installed on GeoServer"
 msgstr ""
 
-#: ../../advanced/components/index.rst:768 9192012a15cf49fabe6ab2a5ba4e286b
+#: ../../advanced/components/index.rst:733 c816fd0a5ec342c8b9e1ddfac92fe1d1
 msgid ""
 "Identify the section ``Authentication Providers`` and make sure the "
 "``geofence`` Authentication Provider is present"
 msgstr ""
 
-#: ../../advanced/components/index.rst:772 86d2623c16044d57bbea83e8e8db40f7
+#: ../../advanced/components/index.rst:737 f7ee299ef7f34809b0c94dcbdae5bf34
 msgid "Make sure the ``Provider Chain`` is configured as shown below"
 msgstr ""
 
-#: ../../advanced/components/index.rst:776 239fc32dcab84efd98570d168ac55d08
+#: ../../advanced/components/index.rst:741 efebec453dda4de48d89e65d6e471cc2
 msgid ""
 "Every time you modify an Authentication Providers, **don't forget to "
 "save** the ``Authentication`` settings. This **must** be done for "
 "**each** change."
 msgstr ""
 
-#: ../../advanced/components/index.rst:781 e0b26909eba24cf1951cc5711f977d1f
+#: ../../advanced/components/index.rst:746 f7a353066e7f465cb25c1fbbe3b35f00
 msgid "Setup of the GeoFence Server and Rules"
 msgstr ""
 
-#: ../../advanced/components/index.rst:783 bc58b952f86445d6aefbaf6412dc0181
+#: ../../advanced/components/index.rst:748 7cbf8c69712a4e58a2358b1c20d5474a
 msgid ""
 "Make sure GeoFence server works and the default settings are correctly "
 "configured"
 msgstr ""
 
-#: ../../advanced/components/index.rst:785 5f1e4d564f62436d83564040faaccdd1
+#: ../../advanced/components/index.rst:750 ea7395876e2a4b91a3f15db6a6accf61
 msgid "Access the ``Security`` > ``GeoFence`` section"
 msgstr ""
 
-#: ../../advanced/components/index.rst:789 5c7e7817951247379ce2d63c404f5805
+#: ../../advanced/components/index.rst:754 1a340be229184c8981808562180b58ff
 msgid ""
 "Make sure the ``Options`` are configured as follows and the server works "
 "well when performing a ``Test Connection``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:793 51dc3fcdb0a24dba99fcf71cd905f36a
+#: ../../advanced/components/index.rst:758 fc222513a76b4832ba7908d70bf2815b
 msgid "``Allow remote and inline layers in SLD``; Set it to ``True``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:795 144205c981ab41948b2721d31d5cc5af
+#: ../../advanced/components/index.rst:760 d600383fe6f644eea96b96ea2bfbef8a
 msgid "``Allow SLD and SLD_BODY parameters in requests``; Set it to ``True``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:797 3fd9b4dcb348472f9449f144cbe4b9c8
+#: ../../advanced/components/index.rst:762 c6150e2776a04a17bc408ffd47a7b77d
 msgid "``Authenticated users can write``; Set it to ``True``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:799 75d77b2cb8734a268124583f0f4b66c6
+#: ../../advanced/components/index.rst:764 d8ec820eef3d464589b891dfdbf86002
 msgid "``Use GeoServer roles to get authorizations``; Set it to ``False``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:801 faa3ab06882b41548fbdf30aa140896a
+#: ../../advanced/components/index.rst:766 74994370f00844449b4842e0c75554a5
 msgid "Check the GeoFence default Rules"
 msgstr ""
 
-#: ../../advanced/components/index.rst:803 5473cf8647164c63a4eeee27804753ce
+#: ../../advanced/components/index.rst:768 20f4c7254a864c329ddb4ded32744295
 msgid "Access the ``Security`` > ``GeoFence Data Rules`` section"
 msgstr ""
 
-#: ../../advanced/components/index.rst:807 2be01a7a630445ff91b164138a875973
+#: ../../advanced/components/index.rst:772 92901db51a2b46f99ca1df0d7a7c020a
 msgid ""
 "Make sure the ``DENY ALL`` Rule is present by default, otherwise your "
 "data will be accessible to everyone"
 msgstr ""
 
-#: ../../advanced/components/index.rst:809 f8644642c82549088becb2daf0b0b13a
+#: ../../advanced/components/index.rst:774 89b50a3e57a946c898d706272c12ee01
 msgid "This rule is **always** the last one"
 msgstr ""
 
-#: ../../advanced/components/index.rst:813 77802a8709874fd2a4c21a635bfe9c1f
+#: ../../advanced/components/index.rst:778 dc64d0d734d54537a7246927897216bf
 msgid ""
 "If that rule does not exists **at the very bottom** (this rule is "
 "**always** the last one), add it manually."
 msgstr ""
 
-#: ../../advanced/components/index.rst:815 73d0a7a7fdb44135a7878a1ce400a17a
+#: ../../advanced/components/index.rst:780 2accbd6ff7c5400abee1b55f13193180
 msgid "Access the ``Security`` > ``GeoFence Admin Rules`` section"
 msgstr ""
 
-#: ../../advanced/components/index.rst:819 11973ab08567453a8790974143a1fe51
+#: ../../advanced/components/index.rst:784 5289a995af5c4aeb80dda8b75c4bc77c
 msgid "No Rules needed here"
 msgstr ""
 
-#: ../../advanced/components/index.rst:824 04d51321fed444f4b4342ae976215581
+#: ../../advanced/components/index.rst:789 57d5cbc2876d4a48b7d605299a7da951
 msgid "Troubleshooting and Advanced Features"
 msgstr ""
 
-#: ../../advanced/components/index.rst:829 8765cd2bec214837afecad349e0c5cf5
+#: ../../advanced/components/index.rst:794 5debc7fd9e0543cbbdae1571dc71f328
 msgid ""
 "GeoServer/GeoNode OAuth2 does not authenticate as Administrator even "
 "using GeoNode ``admin`` users"
 msgstr ""
 
-#: ../../advanced/components/index.rst:831 60a346543611481d92448b0575986d37
+#: ../../advanced/components/index.rst:796 e985d8ad684d4dc09f6871643011aee6
 msgid "**Symptoms**"
 msgstr ""
 
-#: ../../advanced/components/index.rst:833 6c07ae8b738a40fcb37b207c1e786286
+#: ../../advanced/components/index.rst:798 f297b25d7e004ad89dfe8ba7071f128a
 msgid ""
 "When trying to authenticate with an ``admin`` user using OAuth2, the "
 "process correctly redirects to GeoServer page but I'm not a GeoServer "
 "Administrator."
 msgstr ""
 
-#: ../../advanced/components/index.rst:835 7f84c1f812d2490784551e2262736180
+#: ../../advanced/components/index.rst:800 ae3a369469234a2d9e08da64c7970cbf
 msgid "**Cause**"
 msgstr ""
 
-#: ../../advanced/components/index.rst:837 da2a8eec24e84290838455d84fd382f6
+#: ../../advanced/components/index.rst:802 1d393fd5b7f94174941f5b275b9b4869
 msgid ""
 "That means that somehow GeoServer could not successfully complete the "
 "Authorization and Authentication process."
 msgstr ""
 
-#: ../../advanced/components/index.rst:839 3554c99a7ba947ef85f74da69dcf16f4
+#: ../../advanced/components/index.rst:804 0a241c6aaaa6454692fe908cd9934b12
 msgid "The possible causes of the problem may be the following ones:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:841 8e52991de0104c80a99e488e6e9a79ea
+#: ../../advanced/components/index.rst:806 c643fa6e77f14599ae811bd6475a97da
 msgid "The OAuth2 Authentication fails on GeoServer side"
 msgstr ""
 
-#: ../../advanced/components/index.rst:843 b17d3f7ee2cb46db98bfb9c5ce1af884
+#: ../../advanced/components/index.rst:808 1e032d79f43a49788d4cbf2e11328b72
 msgid ""
 "This is usually due to an exception while trying to complete the "
 "Authentication process."
 msgstr ""
 
-#: ../../advanced/components/index.rst:845 a34e17cdb60e4b969fa6beff03ae5d14
+#: ../../advanced/components/index.rst:810 5eaa7e3d5c244bd7a217484c28d8be70
 msgid ""
 "A typical cause is that GeoServer tries to use HTTPS connections but the "
 "GeoNode certificate is not trusted;"
 msgstr ""
 
-#: ../../advanced/components/index.rst:847 be3b74fa9359456dbd379f5ddadf528e
+#: ../../advanced/components/index.rst:812 0665878c8b104318ae5a97ef585e2319
 msgid ""
 "In that case please refer to the section below. Also take a look at the "
 "logs (in particular the GeoServer one) as explained in "
@@ -1505,17 +1462,17 @@ msgid ""
 "GeoNode Role Service as explained below."
 msgstr ""
 
-#: ../../advanced/components/index.rst:851 767455eae76f475185223bc69f5cb7c2
+#: ../../advanced/components/index.rst:816 19e5b3d2e5ed495f850e0e31504c4a93
 msgid ""
 "Another possible issue is that somehow the OAuth2 handshake cannot "
 "complete successfully;"
 msgstr ""
 
-#: ../../advanced/components/index.rst:853 a3f9a12327474d2fbab661399a74566c
+#: ../../advanced/components/index.rst:818 34e34e6995aa4c6583b673450d4e3f1c
 msgid "Login into GeoServer as administrator through its WEB login form."
 msgstr ""
 
-#: ../../advanced/components/index.rst:855 c6c57eb25bd64040a21c0f99e266e242
+#: ../../advanced/components/index.rst:820 ec541f049a6a45e7826926a332388d87
 msgid ""
 "Double check that all the ``geonode-oauth2 - Authentication using a "
 "GeoNode OAuth2`` parameters are correct. If everything is ok, take a look"
@@ -1526,181 +1483,181 @@ msgid ""
 "GeoNode Role Service as explained below."
 msgstr ""
 
-#: ../../advanced/components/index.rst:858 26e6aff7c3684aaeb83ba21e8c21dec6
+#: ../../advanced/components/index.rst:823 8b231d817f634929bbd2f7185272bd91
 msgid "GeoServer is not able to retrieve the user Role from a Role Service"
 msgstr ""
 
-#: ../../advanced/components/index.rst:860 fcf7897fd9dc4765bc76cd00ff9cdee8
+#: ../../advanced/components/index.rst:825 c65eceb1080a47bd97b6619f40f90be7
 msgid ""
 "Always double check both HTTP Server and GeoServer log as specified in "
 "section :ref:`debug_geonode`. This might directly guide you to the cause "
 "of the problem."
 msgstr ""
 
-#: ../../advanced/components/index.rst:862 dc86c10107814e60a67066278c103dea
+#: ../../advanced/components/index.rst:827 87a487e3c3754238bb41a58cc5344af6
 msgid ""
 "Check that the GeoServer host is granted to access GeoNode Role Service "
 "REST APIs in the ``AUTH_IP_WHITELIST`` of the ``settings.py``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:864 a060b8d7f5514333a655818b2964b70a
+#: ../../advanced/components/index.rst:829 d63b05d98f774ea3bc352bf034452b9f
 msgid ""
 "Check that the ``geonode REST role service`` is the default Role service "
 "and that the GeoServer OAuth2 Plugin has been configured to use it by "
 "default"
 msgstr ""
 
-#: ../../advanced/components/index.rst:866 c7d1f712b40f4446bbf5e15a00730970
+#: ../../advanced/components/index.rst:831 0d2fb8feafb4494898baed03af25b028
 msgid ""
 "Check that the GeoNode REST Role Service APIs are functional and produce "
 "correct JSON."
 msgstr ""
 
-#: ../../advanced/components/index.rst:868 75aafae0e0c840c3a668400c42436ab8
+#: ../../advanced/components/index.rst:833 1c592e9999f642949da753e2cecff54a
 msgid "This is possible by using simple ``cUrl`` GET calls like"
 msgstr ""
 
-#: ../../advanced/components/index.rst:889 b2522a2912204d5899966e9b526dc285
+#: ../../advanced/components/index.rst:854 06f1cf8a8cd241c28eaea5951b692fa3
 msgid ""
 "In a production system it is a good practice to encrypt the connection "
 "between GeoServer and GeoNode. That would be possible by enabling HTTPS "
 "Protocol on the GeoNode REST Role Service APIs and OAuth2 Endpoints."
 msgstr ""
 
-#: ../../advanced/components/index.rst:891 5f19fcd2e42f4ec48ba4318d657cc1a2
+#: ../../advanced/components/index.rst:856 fe291b3b677d4313a1144601e0242d6c
 msgid ""
 "Most of the times you will rely on a self-signed HTTPS connection using a"
 " generated certificate. That makes the connection *untrusted* and you "
 "will need to tell to the GeoServer Java Virtual Machine to trust it."
 msgstr ""
 
-#: ../../advanced/components/index.rst:893 9d95e0498cfb4aa3b1b2bcf891c78b40
+#: ../../advanced/components/index.rst:858 ba3b8d01eb0e4db8a082386c1f33a5c8
 msgid "This can be done by following the steps below."
 msgstr ""
 
-#: ../../advanced/components/index.rst:895 7d608d83a64c4df7bf2d500e48cedd47
+#: ../../advanced/components/index.rst:860 878dd51796b74ed094fdf3df0038df9d
 msgid ""
 "For any issue take a look at the logs (in particular the GeoServer one) "
 "as explained in :ref:`debug_geonode`. The GeoServer logs should contain a"
 " detailed Exception explaining the cause of the problem."
 msgstr ""
 
-#: ../../advanced/components/index.rst:898 9e8af6e9fcde4fa6a794a9f18c5cc5bd
+#: ../../advanced/components/index.rst:863 f2361e3d224b4e62a8c62d97486f178f
 msgid "SSL Trusted Certificates"
 msgstr ""
 
-#: ../../advanced/components/index.rst:900 bb72eb55261f483493763f3f052d0149
+#: ../../advanced/components/index.rst:865 a75750f0429f439e98be0f44fc8a7e7e
 msgid ""
 "When using a custom ``Keystore`` or trying to access a non-trusted or "
 "self-signed SSL-protected OAuth2 Provider from a non-SSH connection, you "
 "will need to add the certificates to the JVM ``Keystore``."
 msgstr ""
 
-#: ../../advanced/components/index.rst:902 82dcd9a5d61f44fbb6712f281a1750d2
+#: ../../advanced/components/index.rst:867 cba03a6b811f499e868714a2b1ee67d8
 msgid "In order to do this you can follow the next steps:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:904 2e58e4c9b68948a08fd48fcb14fc4ae8
+#: ../../advanced/components/index.rst:869 fe276877439842dca82c7368b0ade1ca
 msgid "In this example we are going to"
 msgstr ""
 
-#: ../../advanced/components/index.rst:906 cf24f4a501da4cedab1449adcfda49f6
+#: ../../advanced/components/index.rst:871 7cf64c3f966f4418848e126ada3e753b
 msgid "Retrieve SSL Certificate from GeoNode domain:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:908 d7de25cd9be443fa81a3ff9d873eeb47
+#: ../../advanced/components/index.rst:873 3c57c20c06ee4a55a0a083ff123aa7c6
 msgid ""
 "\"Access Token URI\" = https://<geonode_host_base_url>/o/token/ therefore"
 " we need to trust ``https://<geonode_host_base_url>`` or "
 "(``<geonode_host_base_url>:443``)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:910 1bcbfb8792394fdea50b844afd2025ec
+#: ../../advanced/components/index.rst:875 989fbcb12eca40cfb28843c181b31b28
 msgid ""
 "You will need to get and trust certificates from every different HTTPS "
 "URL used on OAuth2 Endpoints."
 msgstr ""
 
-#: ../../advanced/components/index.rst:912 d0855004b8954a8aaf9d1c95e1811c29
+#: ../../advanced/components/index.rst:877 5a9b466fca32480294f09b21f36bcaf9
 msgid "Store SSL Certificates on local hard-disk"
 msgstr ""
 
-#: ../../advanced/components/index.rst:914
-#: ../../advanced/components/index.rst:942 45dbc1dfd9444ad08a6d0f1bf88cb729
-#: 4ab4cc5dd33f42dd87f52c5cc58bb5df
+#: ../../advanced/components/index.rst:879
+#: ../../advanced/components/index.rst:907 25a0d01066bb4b27b2ca665888b20a68
+#: df1e87ff5508488b8e5870e57060d744
 msgid "Add SSL Certificates to the Java Keystore"
 msgstr ""
 
-#: ../../advanced/components/index.rst:916
-#: ../../advanced/components/index.rst:985 a99b17335e874ec7a5d7a3f0f4bbe432
-#: e456163a81914fe8a62a0fb191b06537
+#: ../../advanced/components/index.rst:881
+#: ../../advanced/components/index.rst:950 4e232cf128954db4b02c56e99c0b8a87
+#: 7b08316898564f3f84d7acfdcc5224d4
 msgid "Enable the JVM to check for SSL Certificates from the Keystore"
 msgstr ""
 
-#: ../../advanced/components/index.rst:918 387ce55dfec24686beeb7d30112bbaa0
+#: ../../advanced/components/index.rst:883 2277457e97ce46d692e79fe840cf3eaa
 msgid "Retrieve the SSL Certificate from GeoNode domain"
 msgstr ""
 
-#: ../../advanced/components/index.rst:920 a31f49dfcddc46ceb320910b93c260c2
+#: ../../advanced/components/index.rst:885 8e8e7af150234fa58936f33006bd32db
 msgid "Use the ``openssl`` command in order to dump the certificate"
 msgstr ""
 
-#: ../../advanced/components/index.rst:922 dc7538c2ae2648b3b69fd2fb855b4b68
+#: ../../advanced/components/index.rst:887 b512d49e98724888af1a0923a3c0a427
 msgid "For ``https://<geonode_host_base_url>``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:931 f3936b20e1094db5942ce8f937f53ae5
+#: ../../advanced/components/index.rst:896 4af49c1443054402924e7c630bb3e0de
 msgid "Store SSL Certificate on local hard-disk"
 msgstr ""
 
-#: ../../advanced/components/index.rst:933 ee76a60d60b34e5cb8acce4d9bd11bc5
+#: ../../advanced/components/index.rst:898 49ef0d7e4d2c4311b4497349e2e56c37
 msgid ""
 "Copy-and-paste the section ``-BEGIN CERTIFICATE-``, ``-END CERTIFICATE-``"
 " and save it into a ``.cert`` file"
 msgstr ""
 
-#: ../../advanced/components/index.rst:935 db3311ccd0674e24a5e32e7804aacb1d
+#: ../../advanced/components/index.rst:900 480bc7adefff41fa8b76215f20bee8d5
 msgid ""
 "``.cert`` file are plain text files containing the ASCII characters "
 "included on the ``-BEGIN CERTIFICATE-``, ``-END CERTIFICATE-`` sections"
 msgstr ""
 
-#: ../../advanced/components/index.rst:937
-#: ../../advanced/components/index.rst:946 0278f0577cdb4ad1862669ff1bac78f8
-#: 5125a0e402754db98c088ae079c5c1d5
+#: ../../advanced/components/index.rst:902
+#: ../../advanced/components/index.rst:911 9e9ac4a50f0e441db7acd3ab0dd94f5b
+#: f81171fc05904988aebc5ae73c88dd58
 msgid "``geonode.cert`` (or whatever name you want with ``.cert`` extension)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:944 c9e5d7ec2ba74c77b0ea13cbbb427d0f
+#: ../../advanced/components/index.rst:909 d49c87d3faa8401983b3fa0ed041f156
 msgid "You can use the Java command ``keytool`` like this"
 msgstr ""
 
-#: ../../advanced/components/index.rst:952 1b7fa60b0e3f4705a244d5d9605e1b9f
+#: ../../advanced/components/index.rst:917 81af959847dd4dfcb65030285556dc29
 msgid ""
 "or, alternatively, you can use some graphic tool which helps you managing"
 " the SSL Certificates and Keystores, like `Portecle "
 "<http://portecle.sourceforge.net/>`_"
 msgstr ""
 
-#: ../../advanced/components/index.rst:987 56298bb3470c4ba1b69d3c2eb95fc2c0
+#: ../../advanced/components/index.rst:952 2eca52dda6d045088e5da444c8f4ddd7
 msgid "In order to do this, you need to pass a ``JAVA_OPTION`` to your JVM:"
 msgstr ""
 
-#: ../../advanced/components/index.rst:993 f2f0c18682cc4419a00ac9b289a58381
+#: ../../advanced/components/index.rst:958 335200392a87469c86bfe89e45e9e9dd
 msgid "Restart your server"
 msgstr ""
 
-#: ../../advanced/components/index.rst:995 6c8705a7dbad464081d06c65b854fe65
+#: ../../advanced/components/index.rst:960 b9a1d47c59df4b39aca141c178bf833c
 msgid ""
 "Here below you can find a bash script which simplifies the Keystore SSL "
 "Certificates importing. Use it at your convenience."
 msgstr ""
 
-#: ../../advanced/components/index.rst:1020 edee2a4adfb84c23aee7c1ec1ee0d120
+#: ../../advanced/components/index.rst:985 9ab3fef036c749178f113b15c2e864ca
 msgid "GeoFence Rules Management and Tutorials"
 msgstr ""
 
-#: ../../advanced/components/index.rst:1022 4d46f18961754483889d7cee28b24730
+#: ../../advanced/components/index.rst:987 66672cd958a049508da0702c33c8adff
 msgid ""
 "`This tutorial <http://docs.geoserver.org/latest/en/user/community"
 "/geofence-server/tutorial.html>`_ shows how to install and configure the "
@@ -1708,7 +1665,7 @@ msgid ""
 "ways: using the GUI and REST methods."
 msgstr ""
 
-#: ../../advanced/components/index.rst:1024 f9f3327bad26434693b8e61354a8dd7c
+#: ../../advanced/components/index.rst:989 03d453889ae143e8a5c3e2cfce9d770f
 msgid ""
 "GeoFence Rules can be created / updated / deleted through a REST API, "
 "accessible only by a GeoServer Admin user. You can find more details on "
@@ -1716,17 +1673,17 @@ msgid ""
 "<https://github.com/geoserver/geofence/wiki/REST-API>`_."
 msgstr ""
 
-#: ../../advanced/components/index.rst:1027 2473648d6387407ba31bd7be5a5ca5fd
+#: ../../advanced/components/index.rst:992 a97ad00568f44cb0bfee201a381e723d
 msgid "GeoFence Rules Storage Configuration"
 msgstr ""
 
-#: ../../advanced/components/index.rst:1029 b534095c673c44048f190f3de44d0701
+#: ../../advanced/components/index.rst:994 2d590ea7269e4b46a1b59a4bc00193de
 msgid ""
 "By default GeoFence is configured to use a filesystem based DB stored on "
 "the GeoServer Data Dir ``<GEOSERVER_DATA_DIR/geofence``."
 msgstr ""
 
-#: ../../advanced/components/index.rst:1031 a571da5c404c45ba88c1aae792a2c58d
+#: ../../advanced/components/index.rst:996 1f9e20f75e914b61a3d6551e263266d4
 msgid ""
 "It is possible also to configure GeoFence in order to use an external "
 "PostgreSQL / PostGIS Database. For more details please refer to the "
@@ -1734,11 +1691,11 @@ msgid ""
 "<https://github.com/geoserver/geofence/wiki/GeoFence-configuration>`_."
 msgstr ""
 
-#: ../../advanced/components/index.rst:1033 cda5ea55f706487cb058587d092a4b61
+#: ../../advanced/components/index.rst:998 df89929f462c4f07ae482a63f5308cd8
 msgid "Add ``Java Libraries`` to ``GeoServer``"
 msgstr ""
 
-#: ../../advanced/components/index.rst:1045 f896d009f28c40feabbfc4ce24638084
+#: ../../advanced/components/index.rst:1010 2aee1fd4acfa42c3a514995ddf26f148
 msgid ""
 "Either create a DB with the updated schema here "
 "https://github.com/geoserver/geofence/blob/master/doc/setup/sql/002_create_schema_postgres.sql"
@@ -1746,19 +1703,46 @@ msgid ""
 "step ``3``)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:1047 c5a5da5e133d420ea26582f93e5221fc
+#: ../../advanced/components/index.rst:1012 39f06c0934c04abe890906f94aefd1c5
 msgid ""
 "Notice that \"update\" also creates the tables if they do not exist. In "
 "production, however, I would suggest to change it to \"validate\""
 msgstr ""
 
-#: ../../advanced/components/index.rst:1058 377d7185875f4cccbfe60ac40b1c8fc0
+#: ../../advanced/components/index.rst:1023 4404fa6d73494546a74ed0d83323f4fc
 msgid ""
 "Add configuration similar to ``geofence-datasource-ovr.properties`` "
 "sample below (if loaded as GeoServer extension)"
 msgstr ""
 
-#: ../../advanced/components/index.rst:1060 e59996b321ca4279923fb01ac61b10b1
+#: ../../advanced/components/index.rst:1025 84578809b4fa43b9b2332b610064372d
 msgid "**<GEOSERVER_DATA_DIR>/geofence/geofence-datasource-ovr.properties**"
 msgstr ""
+
+#~ msgid "Overview"
+#~ msgstr ""
+
+#~ msgid "**TODO***"
+#~ msgstr ""
+
+#~ msgid "Django"
+#~ msgstr ""
+
+#~ msgid "**TODO**"
+#~ msgstr ""
+
+#~ msgid "WebServers"
+#~ msgstr ""
+
+#~ msgid "Apache"
+#~ msgstr ""
+
+#~ msgid "NGINX"
+#~ msgstr ""
+
+#~ msgid "GeoServer"
+#~ msgstr ""
+
+#~ msgid "Databases"
+#~ msgstr ""
 

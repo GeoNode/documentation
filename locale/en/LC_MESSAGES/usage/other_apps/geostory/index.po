@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../usage/other_apps/geostory/index.rst:9 17d13305aa294061b30cb8f111685513
 msgid ""
-"To build a new GeoStory go to :guilabel:`Create new` option on the "
+"To build a new GeoStory go to :guilabel:`Add Resource` option on the "
 "resource page and choose option *Create geostory*."
 msgstr ""
 
@@ -295,5 +295,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "*Save GeoStory*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To build a new GeoStory go to "
+#~ ":guilabel:`Create new` option on the "
+#~ "resource page and choose option *Create"
+#~ " geostory*."
 #~ msgstr ""
 

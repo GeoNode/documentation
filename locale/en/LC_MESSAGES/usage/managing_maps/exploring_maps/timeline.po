@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,9 @@ msgid ""
 "allows you to observe the datasets' evolution over time, to inspect the "
 "dataset configuration at a specific time instant and to view different "
 "dataset configurations time by time dynamically through animations (see "
-"the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest"
-"/user-guide/timeline/>`_ for further details)."
+"the `MapStore Documentation "
+"<https://docs.mapstore.geosolutionsgroup.com/en/latest/user-"
+"guide/timeline/#animations>`_ for further details)."
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:10
@@ -90,6 +91,27 @@ msgid ""
 "animation by clicking |stop_button|."
 msgstr ""
 
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:95
+#: 1a20ee060ca84b7d883528caa6116d68 302068c2a316487d97e016dde40f82bd
+#: bd4acefca8ee4b25843a1b99a270569b
+msgid "play_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:100
+#: 96fc8b1160fd4b63a3873d83136ab41f edb1b264023d4ea59fda74f451de6f13
+msgid "time_go_backward_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:105
+#: 9db709e799f3490bb38d0a84ff7967e1 bb98f3c53d954dddabe453d47bd0c015
+msgid "time_go_forward_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:110
+#: 0828428ec76449e0ab047caf8e62703d 143db21859bf45c8bf0b7e5d33625097
+msgid "stop_button"
+msgstr ""
+
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:32
 #: 362186282d1943ef9d75127b2eb7d21b
 msgid "*The Animation Control Buttons*"
@@ -100,6 +122,11 @@ msgstr ""
 msgid ""
 "The *Timeline* panel can be expanded through the |expand_timeline_button|"
 " button."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:115
+#: 5159937335534b63aa64ef03db70e2a9 eed7970ff06c40d8a0acd5f05f4bcdc9
+msgid "expand_timeline_button"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:39
@@ -141,12 +168,22 @@ msgid ""
 "|show_hide_datasets_list_button| (it is active by default)."
 msgstr ""
 
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:120
+#: 9baaf051f1f8458e84dee8d871e11a97 f00174cb06df4a75923e53806332fc9f
+msgid "show_hide_datasets_list_button"
+msgstr ""
+
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:59
 #: 4113da3e465843a4bcd53d1788027ffb
 msgid ""
 "Through the *Time Range* function you can observe the data in a finite "
 "temporal interval. Click on |time_range_button| and set the initial and "
 "the final times to use it."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:125
+#: 884178fe2ae147849bb95c3623c95b20 9475b187647240ad86555f20159bf941
+msgid "time_range_button"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:65
@@ -179,6 +216,11 @@ msgstr ""
 msgid ""
 "By clicking on |animation_settings_button| you can manage some *Animation"
 " Settings*."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/timeline.rst:130
+#: 1f0644b174a24cb9a592d8066f76383e e693546920024abfba4c4150f8dbd60f
+msgid "animation_settings_button"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/timeline.rst:80
@@ -217,8 +259,8 @@ msgstr ""
 #: cfa8a053562d4a7a8610e683af036796
 msgid ""
 "See the `MapStore Documentation "
-"<https://mapstore2.readthedocs.io/en/latest/user-guide/timeline/>`_ for "
-"more information."
+"<https://docs.mapstore.geosolutionsgroup.com/en/latest/user-"
+"guide/timeline/>`_ for more information."
 msgstr ""
 
 #~ msgid "expand_timeline_button"
@@ -324,5 +366,26 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "*The Timeline Animation*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The `MapStore <https://mapstore2.geo-"
+#~ "solutions.it/mapstore/#/>`_ based map viewer "
+#~ "used in Geonode makes available the "
+#~ "**Timeline** tool which allows you to"
+#~ " observe the datasets' evolution over "
+#~ "time, to inspect the dataset "
+#~ "configuration at a specific time instant"
+#~ " and to view different dataset "
+#~ "configurations time by time dynamically "
+#~ "through animations (see the `MapStore "
+#~ "Documentation <https://mapstore2.readthedocs.io/en/latest"
+#~ "/user-guide/timeline/>`_ for further details)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See the `MapStore Documentation "
+#~ "<https://mapstore2.readthedocs.io/en/latest/user-"
+#~ "guide/timeline/>`_ for more information."
 #~ msgstr ""
 

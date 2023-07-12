@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,72 +28,64 @@ msgid ""
 " resource page."
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:7 ba53084871d5436ab08383661895e8a3
+#: ../../usage/managing_maps/map_info.rst:7 fd7d9d22971941ba9684be2ad237fa10
 msgid ""
-"Click on the title of the *Map* you are interested in to open its "
-"overview, then click on *View Map*, it should looks like the following."
+"Click on the title of the Map you are interested in to open its overview "
+"where you can see the information of the Map. This panel shows some "
+"metadata such as its Title, the License, the Publication Date etc. The "
+"metadata also indicates the map owner and which regions are involved."
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:12 81224534a1334efda33ec42453e872f8
+#: ../../usage/managing_maps/map_info.rst:10 a475e6793a7243bf91bd6b6f4f6cc389
+msgid "On clicking :guilabel:`View Map`, it should look as follows."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:15 81224534a1334efda33ec42453e872f8
 msgid "*Map Detail page*"
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:14 f9317b4364914f5a9e14d047e9e02e42
+#: ../../usage/managing_maps/map_info.rst:17 f9317b4364914f5a9e14d047e9e02e42
 msgid "The *Map Detail Page* shows the *Map* with very basic functionalities:"
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:16 8da771b3bce94fc89cf3425a5bdf8126
+#: ../../usage/managing_maps/map_info.rst:19 8da771b3bce94fc89cf3425a5bdf8126
 msgid "the *Base Map Switcher* that allows you to change the base map;"
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:17 a66a7da457904fb387d444682acf2afb
+#: ../../usage/managing_maps/map_info.rst:20 a66a7da457904fb387d444682acf2afb
 msgid "the *Zoom in/out* tool to enlarge and decrease the view;"
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:18 099fd6ff290c4561a744fd0c939ac02f
+#: ../../usage/managing_maps/map_info.rst:21 099fd6ff290c4561a744fd0c939ac02f
 msgid "the *Zoom to max extent* tool for the zoom to fit the datasets extents;"
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:19 5922c4d6b00148e89f3b2744c3284fca
+#: ../../usage/managing_maps/map_info.rst:22 5922c4d6b00148e89f3b2744c3284fca
 msgid ""
 "the *Query Objects* tool to retrieve information about the map objects by"
 " clicking on the map;"
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:20 e2a7d16d4c2c4969b0a1d17815b92d41
+#: ../../usage/managing_maps/map_info.rst:23 e2a7d16d4c2c4969b0a1d17815b92d41
 msgid "the *Print* tool to print the preview."
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:22 fd7d9d22971941ba9684be2ad237fa10
+#: ../../usage/managing_maps/map_info.rst:24 5922c4d6b00148e89f3b2744c3284fca
+msgid "the *Measure* tool to measure Distances, Areas and the Bearing of lines."
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:25 a66a7da457904fb387d444682acf2afb
+msgid "the *Annotations* tool to add an annotation to the map"
+msgstr ""
+
+#: ../../usage/managing_maps/map_info.rst:27 ccf7357270a94d8aaf75a941c33751a0
 msgid ""
-"To see the information of the Map, click on the :guilabel: `Info` in the "
-"menu of the details page, This section shows some metadata such as its "
-"Title, the License, the Publication Date etc. The metadata also indicates"
-" the map owner and which regions are involved. see example below."
+"Through the :guilabel:`View` button it is possible to visualize the "
+"metadata of the map."
 msgstr ""
 
-#: ../../usage/managing_maps/map_info.rst:27 20e2ae1c7ab84b14a10ff4921c9fd0b8
-msgid "*Map Information page*"
-msgstr ""
-
-#: ../../usage/managing_maps/map_info.rst:30 f7fcfec9050847bfa303cc13b200718c
-msgid ""
-"See the `MapStore Documentation "
-"<https://mapstore2.readthedocs.io/en/latest/>`_ to learn more."
-msgstr ""
-
-#: ../../usage/managing_maps/map_info.rst:33 b1852f85dea14b72ba5c55dae70d0512
-msgid "Map Sharing"
-msgstr ""
-
-#: ../../usage/managing_maps/map_info.rst:34 118e4d7f674e47fa8ae30c4885d9d2c8
-msgid ""
-"The *Share link*  on the detail page provides the link for the map to "
-"share."
-msgstr ""
-
-#: ../../usage/managing_maps/map_info.rst:39 ca79dce620b34bf3bef7eec2a8a57e15
-msgid "*Map Sharing*"
+#: ../../usage/managing_maps/map_info.rst:32 81224534a1334efda33ec42453e872f8
+msgid "*Map Metadata*"
 msgstr ""
 
 #~ msgid ""
@@ -268,5 +260,46 @@ msgstr ""
 #~ "see the *About* section to know "
 #~ "the map *Owner*, the *Contact* user "
 #~ "and the *Metadata Author*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the title of the *Map*"
+#~ " you are interested in to open "
+#~ "its overview, then click on *View "
+#~ "Map*, it should looks like the "
+#~ "following."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To see the information of the Map,"
+#~ " click on the :guilabel: `Info` in"
+#~ " the menu of the details page, "
+#~ "This section shows some metadata such"
+#~ " as its Title, the License, the "
+#~ "Publication Date etc. The metadata also"
+#~ " indicates the map owner and which"
+#~ " regions are involved. see example "
+#~ "below."
+#~ msgstr ""
+
+#~ msgid "*Map Information page*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See the `MapStore Documentation "
+#~ "<https://mapstore2.readthedocs.io/en/latest/>`_ to learn"
+#~ " more."
+#~ msgstr ""
+
+#~ msgid "Map Sharing"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Share link*  on the detail "
+#~ "page provides the link for the map"
+#~ " to share."
+#~ msgstr ""
+
+#~ msgid "*Map Sharing*"
 #~ msgstr ""
 

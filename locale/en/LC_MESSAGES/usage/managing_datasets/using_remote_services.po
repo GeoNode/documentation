@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgstr ""
 #: ../../usage/managing_datasets/using_remote_services.rst:9
 #: 89d7f012393a435eac5d4c98b4a3bddf
 msgid ""
-"Click on the :guilabel:`Remote Services` link of the :guilabel:`Data` "
-"menu in the navigation bar."
+"Click on the :guilabel:`Remote Services` link of the :guilabel:`Add "
+"Resource` menu in the navigation bar."
 msgstr ""
 
 #: ../../usage/managing_datasets/using_remote_services.rst:14
@@ -223,4 +223,10 @@ msgstr ""
 #: d56b5845e7084645b0bb926330f752f2
 msgid "*Remote Service metadata*"
 msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Remote Services` "
+#~ "link of the :guilabel:`Data` menu in "
+#~ "the navigation bar."
+#~ msgstr ""
 

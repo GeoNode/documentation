@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,51 +66,37 @@ msgid "In order to upload a document:"
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:26
-#: 3a785ac0523a47a5b428458f6f124a9f
-msgid ""
-"Select a file from your disk or enter a URL address if the document is "
-"stored on the internet."
+#: 746549c9dd074ba6a1593ba5601d8f37
+msgid "Select a file from your disk."
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:27
-#: 901c37f62afe4ea08b6c8634c4f34336
-msgid "Insert the title of the document."
-msgstr ""
-
-#: ../../usage/managing_documents/uploading_documents.rst:28
-#: 3d229616f4784bd180d0327ff17823ed
-msgid ""
-"Select one or more published resources the document can be linked to "
-"(optional)."
+#: dc83807cb4674251bd787fa2fbb23fdf
+msgid "Click the :guilabel:`Upload` button"
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:29
-#: dc83807cb4674251bd787fa2fbb23fdf
-msgid "Click the red :guilabel:`Upload` button"
+#: ba3ff17c47b144e094f1f2b584b19b4d
+msgid ""
+"At the end of the uploading process, by clicking on the View button, you "
+"will be driven to the document page with the Info panel open. Here it is "
+"possible to view more info, edit metadata, share, download, and delete "
+"the document. See the next section to know more about Metatadata."
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:31
-#: ba3ff17c47b144e094f1f2b584b19b4d
-msgid ""
-"At the end of the uploading process you will be driven to the *Detail* "
-"page with a menu to save, view more info, edit metadata, share, download "
-"and delete the document. See the next section to know more about "
-"Metatadata."
-msgstr ""
-
-#: ../../usage/managing_documents/uploading_documents.rst:33
 #: 119bf8df46b441a5b91d8b4b73f4f6db
 msgid "If you get the following error message:"
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:35
+#: ../../usage/managing_documents/uploading_documents.rst:33
 #: 052619fb1fbb41718bf0563f2a245fc9
 msgid ""
 "``Total upload size exceeds 100.0 MB. Please try again with smaller "
 "files.``"
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:37
+#: ../../usage/managing_documents/uploading_documents.rst:35
 #: c8502acc3cbf42bfa698daa8ccd78f0d
 msgid ""
 "This means that there is an upload size limit of 100 MB. An user with "
@@ -161,5 +147,33 @@ msgstr ""
 #~ " information about the document. See "
 #~ "the next section to know more "
 #~ "about that."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select a file from your disk or"
+#~ " enter a URL address if the "
+#~ "document is stored on the internet."
+#~ msgstr ""
+
+#~ msgid "Insert the title of the document."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select one or more published resources"
+#~ " the document can be linked to "
+#~ "(optional)."
+#~ msgstr ""
+
+#~ msgid "Click the red :guilabel:`Upload` button"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At the end of the uploading "
+#~ "process you will be driven to the"
+#~ " *Detail* page with a menu to "
+#~ "save, view more info, edit metadata, "
+#~ "share, download and delete the document."
+#~ " See the next section to know "
+#~ "more about Metatadata."
 #~ msgstr ""
 

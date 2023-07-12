@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,7 +63,8 @@ msgstr ""
 #: aa6ab83a28194f388f78a8541218ef3b
 msgid ""
 "the :ref:`options-menu-tools` which contains the link to the *Print* "
-"tool, to the datasets *Catalog* and to the *Measure* tool;"
+"tool, to the datasets *Catalog*, to the *Measure* tool and the "
+"Annotations tool;"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/index.rst:19
@@ -348,5 +349,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "By default, GeoNode allows to enrich maps with many world backgrounds:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the :ref:`options-menu-tools` which "
+#~ "contains the link to the *Print* "
+#~ "tool, to the datasets *Catalog* and "
+#~ "to the *Measure* tool;"
 #~ msgstr ""
 

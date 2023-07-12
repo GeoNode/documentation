@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,35 +71,41 @@ msgstr ""
 msgid "*The Map Viewer*"
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:32
-#: 713b736b681c41e4b1fc007e5bba4fbc
+#: ../../usage/managing_maps/creating_maps.rst:31
+#: 511cc9edb2f04aa7acc90f0b47a38f08
 msgid ""
-"In the upper left corner the |toc_button| button opens the :ref:`toc` of "
-"the *Map*. It allows to manage all the datasets associated with the map "
-"and to add new ones from the *Catalog*."
+"Using the :guilabel:`Add dataset` link, you can add a layer by clicking "
+"on one of the layers listed in the catalog. In the upper left corner the "
+"*TOC button* button opens the :ref:`toc` of the *Map*. It allows to "
+"manage all the datasets associated with the map and to add new ones from "
+"the :guilabel:`Add dataset`. The *TOC* component makes possible to manage"
+" datasets overlap on the map by shifting their relative positions in the "
+"list (drag and drop them up or down in the list). It also allows to "
+"hide/show datasets ( |show_button| and |hide_button| ), to zoom to "
+"datasets extents ( |zoom_to_dataset_extent_button| ) and to manage their "
+"properties ( |dataset_settings_button| ). Once the map datasets have been"
+" settled it is possible to save the *Map* by clicking on the "
+":guilabel:`Save as` link in the map toolbar."
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:33
-#: 78615b1c3d6f43be95eac2b3eaab880d
-msgid ""
-"The *TOC* component makes possible to manage datasets overlap on the map "
-"by shifting their relative positions in the list (drag and drop them up "
-"or down in the list)."
+#: ../../usage/managing_maps/creating_maps.rst:43
+#: 1a46c363aa0b40de88ee63e3e368b7c0 8e27f1a26b3e4dafa28b523e6a504298
+msgid "show_button"
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:34
-#: 7ac152c873e34822a632958d9d99c06c
-msgid ""
-"It also allows to hide/show datasets ( |show_button| and |hide_button| ),"
-" to zoom to datasets extents ( |zoom_to_dataset_extent_button| ) and to "
-"manage their properties ( |dataset_settings_button| )."
+#: ../../usage/managing_maps/creating_maps.rst:48
+#: 78e8ad94a8a8412680861828c9304b3a 7e9fa578095940388de0fe303978e05a
+msgid "hide_button"
 msgstr ""
 
-#: ../../usage/managing_maps/creating_maps.rst:35
-#: a3cdc725b4dd4876a0a8f0833bf9c349
-msgid ""
-"Once the map datasets have been settled it is possible to save the *Map* "
-"by clicking on |burger_menu_button| and choosing :guilabel:`Save as`."
+#: ../../usage/managing_maps/creating_maps.rst:53
+#: 665dafda0fff4f0eb6194bb1dcbc09ca 9dd4f501c2b845659905995f477f8178
+msgid "zoom_to_dataset_extent_button"
+msgstr ""
+
+#: ../../usage/managing_maps/creating_maps.rst:58
+#: 860a189273f94c6497ba276024ef34cc c3b2a02932744955a22a87d447d711fa
+msgid "dataset_settings_button"
 msgstr ""
 
 #: ../../usage/managing_maps/creating_maps.rst:38
@@ -198,5 +204,38 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "*Creating new Maps*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the upper left corner the "
+#~ "|toc_button| button opens the :ref:`toc` "
+#~ "of the *Map*. It allows to manage"
+#~ " all the datasets associated with the"
+#~ " map and to add new ones from"
+#~ " the *Catalog*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *TOC* component makes possible to"
+#~ " manage datasets overlap on the map"
+#~ " by shifting their relative positions "
+#~ "in the list (drag and drop them"
+#~ " up or down in the list)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It also allows to hide/show datasets "
+#~ "( |show_button| and |hide_button| ), to"
+#~ " zoom to datasets extents ( "
+#~ "|zoom_to_dataset_extent_button| ) and to "
+#~ "manage their properties ( "
+#~ "|dataset_settings_button| )."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once the map datasets have been "
+#~ "settled it is possible to save the"
+#~ " *Map* by clicking on |burger_menu_button|"
+#~ " and choosing :guilabel:`Save as`."
 #~ msgstr ""
 

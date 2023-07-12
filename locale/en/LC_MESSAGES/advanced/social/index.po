@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:53+0200\n"
+"POT-Creation-Date: 2023-07-10 12:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,7 +134,7 @@ msgid "**Microsoft Azure**"
 msgstr ""
 
 #: ../../advanced/social/index.rst:77 bd95dc4d2af4431ca35a0bd804425f8d
-msgid "Advaned Configuration"
+msgid "Advanced Configuration"
 msgstr ""
 
 #: ../../advanced/social/index.rst:79 364eece5b4ec4f5d8b928a53a21e3480
@@ -521,5 +521,8 @@ msgstr ""
 #~ "MICROSOFT_TENANT_ID=<the_tenant_id> "
 #~ "SOCIALACCOUNT_OIDC_PROVIDER_ENABLED=True "
 #~ "SOCIALACCOUNT_PROVIDER=azure"
+#~ msgstr ""
+
+#~ msgid "Advaned Configuration"
 #~ msgstr ""
 

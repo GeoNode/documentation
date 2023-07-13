@@ -91,7 +91,7 @@ GeoNode resources can be filtered with the following query parameters:
      - URL
    * - title and abstract ``(paginated free text search)``
      - /api/v2/resources?page=1&search=text-to-search&search_fields=title&search_fields=abstract
-   * - resource_type ``(dataset, map, document, geostory, dashboard)``
+   * - resource_type ``(dataset, map, document, service, geostory, dashboard)``
      - /api/v2/resources?filter{resource_type}=map
    * - subtype ``(raster,vector, vector_time, remote)``
      - /api/v2/resources?filter{resource_type}=vector

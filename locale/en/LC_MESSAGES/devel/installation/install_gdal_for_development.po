@@ -8,27 +8,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../devel/installation/install_gdal_for_development.rst:2
-#: c909c21c207d4f68a5bdfbdc30cd8cd5
+#: d309055258c34189b7ff3e18d58eac07
 msgid "How to Install GDAL for development"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:5
-#: 02bd38f5cf194df39ad036f6f0f00dcd
+#: efdad08e45694dff99a1cf8ee612d455
 msgid "Summary of installation"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:7
-#: 2f57cd0830be4f90b22954686fc978ed
+#: 92cec341728641759dd5ae5471266f53
 msgid ""
 "This section demonstrates a summarization of the steps to be followed in "
 "order to install GDAL 2.4.2 for development using python2.7 virtualenv "
@@ -38,34 +38,34 @@ msgid ""
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:9
-#: 5142f14227e04935a84632503197cca4
+#: 1e979010bd8c4c9bbe5e5072c21b9c62
 msgid "The following commands/steps will be executed on your terminal"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:11
-#: 4bc61c0e3a434540b4d5e19718171daa
+#: 96b245b198964984805203edf4a60e0e
 msgid ""
 "The installation here is meant to serve GeoNode installation for "
 "development"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:14
-#: 6f823f4fa06b402da96a6c4fedf58bc7
+#: 62d1a40a03d24325b112b5200dd56d76
 msgid "The steps to be followed are:"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:16
-#: 8059036bae1d4efab64fceb078b45b04
+#: dc6184e3b0a742a88a539874d166a288
 msgid "1- Install GDAL on your host environment"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:18
-#: 2eedac964bee40ff93afd4070d25ecff
+#: 0fb798ebb0df4b59aee2fda1b94a4fd3
 msgid "2- Validate your installation on the host machine"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:20
-#: 56c52018e06a49d793b7bebb315d2843
+#: baa77b23635e4c1e996af956394912e4
 msgid ""
 "3- From your python virtual environment, Run: pip install GDAL==$(gdal-"
 "config --version) --global-option=build_ext --global-"
@@ -73,41 +73,41 @@ msgid ""
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:22
-#: 870802200ffb4f06a4f3b9cc55b99073
+#: da8f0a6f08df450bbd0a4546ea902488
 msgid "4- Validate installation from host and virtual environment"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:25
-#: 1908bc196b5d47f8b4f323cb9e227437
+#: 5569ea754f00428b90b87a1efa195441
 msgid "Installation steps"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:27
-#: 7562b658ad194c53976b2cc655ff1246
+#: 935573d109e143f399d229fc20c27bca
 msgid ""
-"On a fresh Ubuntu 18.04 installation, we will be installing gdal version "
-"2.4.2"
+"On a fresh Ubuntu 20.04 installation, we will be installing gdal version "
+"3.3.2"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:29
-#: 69406adc27024f618a968fb464eabb1c
+#: 04c5b0eba47b436994087ee5ee4c59d4
 msgid "1- Using the terminal in the host machine, run the following commands:"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:36
-#: c4dc442984364769b0e04e05a80a2e55
+#: 3cb5d10ffee24daabb7bc8ade616b13e
 msgid ""
 "Make sure you don't have a newer version on the software list under "
 "/et/apt/sources.list.d/"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:38
-#: 48b100b8c198442295b1cd5b90f1298f
+#: 401b83fd48344edab4647bac16331e6c
 msgid "2- Validate the installed version by running the following commands:"
 msgstr ""
 
 #: ../../devel/installation/install_gdal_for_development.rst:46
-#: 4b50bd0f79394de0a83441bdd348e18e
+#: d156b41edf9b4e948f7bb7eae77dadcd
 msgid ""
 "3- Install GDAL on your virtual environment by referring to the same "
 "version which we just installed on the host machine. To do that, you will"
@@ -115,13 +115,13 @@ msgid ""
 "session as follows:"
 msgstr ""
 
-#: ../../devel/installation/install_gdal_for_development.rst:66
-#: 7fe1f27444ba4bb883d9f7fdf509fa5f
+#: ../../devel/installation/install_gdal_for_development.rst:65
+#: bfca1048d82344faafbdabd8f27dcdf6
 msgid "4- Confirm the installation"
 msgstr ""
 
-#: ../../devel/installation/install_gdal_for_development.rst:68
-#: 5ab8a27761984238bd3f1ec1aea23b1d
+#: ../../devel/installation/install_gdal_for_development.rst:67
+#: 6ac6838e94a643b8a223ee7ab550a4ef
 msgid ""
 "In order to validate the installation between the host and the virtual "
 "environment, run the following command on both the host machine and on "
@@ -129,8 +129,14 @@ msgid ""
 "GDAL for development is installed correctly for GeoNode"
 msgstr ""
 
-#: ../../devel/installation/install_gdal_for_development.rst:74
-#: 88f4bbf315c5463596ad254da23ba951
+#: ../../devel/installation/install_gdal_for_development.rst:73
+#: cc5f1abbff7b4bd2b0af43e6904b7ab3
 msgid "And from the activated environment:"
 msgstr ""
+
+#~ msgid ""
+#~ "On a fresh Ubuntu 18.04 installation,"
+#~ " we will be installing gdal version"
+#~ " 2.4.2"
+#~ msgstr ""
 

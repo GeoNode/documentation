@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../usage/managing_documents/uploading_documents.rst:4
-#: f6219558f7a74518909e3399d9a0fc91
+#: 7886f0e4fe0c4571830bc6838d5abb4b
 msgid "Uploading Documents"
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:6
-#: 93407b8abffd4505ba7ee267e4ede323
+#: 2ba0a9b129884ae294d7a7ed61a0200f
 msgid ""
 "GeoNode allows to share reports, conceptual notes, posters, spreadsheets,"
 " etc. A wide range of documents files can be hosted on the platform, "
@@ -34,83 +34,132 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:8
-#: 3733082b1283400295b353a01cee9701
+#: 29aeaf71e21143c19f01eb5568412632
 msgid "Only authenticated users can upload data into GeoNode."
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:10
-#: 22f8ec14ffbd42259b0f5f6ddced50bc
-msgid "*Documents* uploading is accessible from two positions:"
-msgstr ""
-
-#: ../../usage/managing_documents/uploading_documents.rst:12
-#: c0fdc475b81749e8947290fca982a9b1
+#: 9d4ac6f5466e441794243150c7a773a6
 msgid ""
-"the :guilabel:`Upload Documents` button of the *Documents Search* page "
-"(see :ref:`finding-documents`)"
+"*Documents* uploading is accessible by clicking *Create new* which "
+"displays a list including `upload document link`:"
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:17
-#: 278bcd3b3c8542ecba79a1b3898b746c
-msgid "*Documents Upload button*"
-msgstr ""
-
-#: ../../usage/managing_documents/uploading_documents.rst:19
-#: a6526a69363f4a72b4806c7df57603b5
-msgid ""
-"the :guilabel:`Upload Document` link of the :guilabel:`Data` menu in the "
-"navigation bar"
-msgstr ""
-
-#: ../../usage/managing_documents/uploading_documents.rst:24
-#: aa3100c8b65c475e84f42347c03d9ed0
+#: ../../usage/managing_documents/uploading_documents.rst:15
+#: dd1cd51f01834a02be2c9a7781cbd3ba
 msgid "*Document Upload link*"
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:26
-#: c82385a49cf84004a118ca4bcf97ef58
+#: ../../usage/managing_documents/uploading_documents.rst:17
+#: fe2be191454a47c2ae05928cd63b7905
 msgid "The *Document Upload* page looks like the one shown in the picture below."
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:31
-#: ee1302af53064a998be5a9c5bfb6e6c5
+#: ../../usage/managing_documents/uploading_documents.rst:22
+#: bc8ee40855164d0a9d311b76566c7ffd
 msgid "*Document Upload page*"
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:33
-#: 6a89b219938b4f35b47c01e405508cee
+#: ../../usage/managing_documents/uploading_documents.rst:24
+#: 77330982e9c745b486be5c29f3c5e30e
 msgid "In order to upload a document:"
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:35
-#: 0194bf07f74a419299226c6102c478a1
+#: ../../usage/managing_documents/uploading_documents.rst:26
+#: 3a785ac0523a47a5b428458f6f124a9f
 msgid ""
-"select a file from your disk or enter a URL address if the document is "
-"stored on the internet"
+"Select a file from your disk or enter a URL address if the document is "
+"stored on the internet."
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:36
-#: ea6d1dce53db439f8d6a8a4bac49ba93
-msgid "insert the title of the document"
+#: ../../usage/managing_documents/uploading_documents.rst:27
+#: 901c37f62afe4ea08b6c8634c4f34336
+msgid "Insert the title of the document."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:28
+#: 3d229616f4784bd180d0327ff17823ed
+msgid ""
+"Select one or more published resources the document can be linked to "
+"(optional)."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:29
+#: dc83807cb4674251bd787fa2fbb23fdf
+msgid "Click the red :guilabel:`Upload` button"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:31
+#: ba3ff17c47b144e094f1f2b584b19b4d
+msgid ""
+"At the end of the uploading process you will be driven to the *Detail* "
+"page with a menu to save, view more info, edit metadata, share, download "
+"and delete the document. See the next section to know more about "
+"Metatadata."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:33
+#: 119bf8df46b441a5b91d8b4b73f4f6db
+msgid "If you get the following error message:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:35
+#: 052619fb1fbb41718bf0563f2a245fc9
+msgid ""
+"``Total upload size exceeds 100.0 MB. Please try again with smaller "
+"files.``"
 msgstr ""
 
 #: ../../usage/managing_documents/uploading_documents.rst:37
-#: 122b491829804e86b233230827fd58cb
+#: c8502acc3cbf42bfa698daa8ccd78f0d
 msgid ""
-"select one or more published resources the document can be linked to "
-"(optional)"
+"This means that there is an upload size limit of 100 MB. An user with "
+"administrative access can change the upload limits at the `admin panel "
+"<../../admin/upload-size-limits/index.html#upload-size-limits>`__."
 msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:38
-#: 8e111b41e6ab464586b2210572b91060
-msgid "click the red :guilabel:`Upload` button"
-msgstr ""
+#~ msgid "*Documents* uploading is accessible from two positions:"
+#~ msgstr ""
 
-#: ../../usage/managing_documents/uploading_documents.rst:40
-#: e808f5390beb4646a0e6f21927a6ebdc
-msgid ""
-"At the end of the uploading process you will be driven to the *Metadata* "
-"page to fill out other information about the document. See the next "
-"section to know more about that."
-msgstr ""
+#~ msgid ""
+#~ "the :guilabel:`Upload Documents` button of "
+#~ "the *Documents Search* page (see :ref"
+#~ ":`finding-documents`)"
+#~ msgstr ""
+
+#~ msgid "*Documents Upload button*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the :guilabel:`Upload Document` link of "
+#~ "the :guilabel:`Data` menu in the "
+#~ "navigation bar"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "select a file from your disk or"
+#~ " enter a URL address if the "
+#~ "document is stored on the internet"
+#~ msgstr ""
+
+#~ msgid "insert the title of the document"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "select one or more published resources"
+#~ " the document can be linked to "
+#~ "(optional)"
+#~ msgstr ""
+
+#~ msgid "click the red :guilabel:`Upload` button"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At the end of the uploading "
+#~ "process you will be driven to the"
+#~ " *Metadata* page to fill out other"
+#~ " information about the document. See "
+#~ "the next section to know more "
+#~ "about that."
+#~ msgstr ""
 

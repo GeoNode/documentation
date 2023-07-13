@@ -8,50 +8,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../usage/data/finding_data.rst:4 5aaae345fb7648ee9e5e0c3da6ab99e2
+#: ../../usage/data/finding_data.rst:4 1305aa4d3c5f4a3c841dac9d08bc7b9c
 msgid "Finding Data"
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:6 c72c9d2880de4394bbe075ca780a57e1
+#: ../../usage/data/finding_data.rst:6 bbad2282d0b24bea9bf1a1ba68ab4944
 msgid ""
-"This section will guide you to navigate GeoNode to find layers, maps and "
-"documents by using different routes, filters and search functions."
+"This section will guide you to navigate GeoNode to find datasets, maps "
+"and documents and other resource types by using different routes, filters"
+" and search functions."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:7 56439f1a648448859b06b596f6ca3405
-msgid "In *Home* page you can find some quick search tool."
+#: ../../usage/data/finding_data.rst:7 66612048dd5c436fa3e81ef61de18512
+msgid "On every page you can find some quick search tool."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:9 7cced80975a7414bb0f9210ab447ef99
+#: ../../usage/data/finding_data.rst:9 7880882027784c1f914035833757083d
 msgid ""
 "The *Search* box in the navigation bar (see the picture below) let you "
 "type a text and find all the data which have to deal with that text."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:14 da8d27735cf04048a6de4b395346d8d3
+#: ../../usage/data/finding_data.rst:14 3c73bacaed164426a553a35a049c5c7a
 msgid "*Search tool in GeoNode welcome page*"
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:16 c6e1514c00604f0c9f5044f9b99f3705
+#: ../../usage/data/finding_data.rst:16 7524944d55f347e1bba612052650f139
 msgid ""
 "When you trigger a search you are brought to the *Search* page which "
 "shows you the search result through all data types."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:21 89ec85e7c37e409095d92fc15c54dabd
+#: ../../usage/data/finding_data.rst:21 13a0cec6a6e546ce91d149147853a56f
 msgid "*The Search page*"
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:23 2072b89afe464bb4abbbe8aabe10e8d7
+#: ../../usage/data/finding_data.rst:23 40e19912b69b47e696dd532714c6a2bf
 msgid ""
 "This page contains a wealth of options for customizing a search for "
 "various information on GeoNode. This search form allows for much more "
@@ -59,13 +60,13 @@ msgid ""
 " every page."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:24 8e030acd95324a309b9f7c59cd85f432
+#: ../../usage/data/finding_data.rst:24 c1811f34274648139c5c256e801de085
 msgid ""
-"It is possible to search for data by Text, Categories, Type, Keywords, "
-"Owners, Date, Regions or Extent."
+"It is possible to search and filter data by Text, Types, Categories, "
+"Keywords, Owners, Regions or Extent."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:26 acff79c8442147edbb22be7655fc5045
+#: ../../usage/data/finding_data.rst:26 6f13abb4971c4f53a12cf5e88127b07c
 msgid ""
 "Try to set some filter and see how the resulting data list changes "
 "accordingly. An interesting type of filter is *EXTENT*: you can apply a "
@@ -73,191 +74,214 @@ msgid ""
 "picture below."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:31 e06092f5a2b04999a4c151cd17b99c13
+#: ../../usage/data/finding_data.rst:31 d53bd3cae7e242099db8809cf21f7045
 msgid "*Search filter by EXTENT*"
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:33 ad1fb63a82f74e7c83a377a88da78c2e
-msgid "Data can be ordered by date, name and popularity."
+#: ../../usage/data/finding_data.rst:33 97be9ea686104bcaa876eafbcbe6a7cd
+msgid "Data can be ordered by Most recent, Less recent, Name and Popularity."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:38 6a1842bfabe64fc1b8ef0e1e69896bee
+#: ../../usage/data/finding_data.rst:42 3baf0111fcb6416885d237dec3be43e4
 msgid "*Ordering Data*"
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:40 08cb2f4ee3ca4c329ed595b07c36b214
-msgid "The GeoNode welcome page offers you many other options to find resources."
+#: ../../usage/data/finding_data.rst:45 734f5f5ac1da40dd988f83b443a3a323
+msgid "For *Users* see :ref:`user-info`."
 msgstr ""
 
-#: ../../usage/data/finding_data.rst:42 b10926718b0d4da3a61b1359c8fffaa2
-msgid "The *Search for data* tool allows you to search for data by name."
-msgstr ""
+#~ msgid ""
+#~ "This section will guide you to "
+#~ "navigate GeoNode to find layers, maps"
+#~ " and documents by using different "
+#~ "routes, filters and search functions."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:47 ffe0865c57d94396a92bd286ec00ed5e
-msgid "*Searching for data*"
-msgstr ""
+#~ msgid "In *Home* page you can find some quick search tool."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:49 e552116101fe4b9ca767b92c52d1cd98
-msgid ""
-"The *Search* page, which you will be redirected to, will have the TEXT "
-"filter already set with the name you have typed in the search box (see "
-"the picture below). If you want to reach the *Search page* directly, "
-"without any input text, you can click the :guilabel:`Advanced Search` "
-"link."
-msgstr ""
+#~ msgid ""
+#~ "It is possible to search for data"
+#~ " by Text, Categories, Type, Keywords, "
+#~ "Owners, Date, Regions or Extent."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:55 dfd489984ab547b1bfbf6940ed483954
-msgid "*Results of searching made by name*"
-msgstr ""
+#~ msgid "Data can be ordered by date, name and popularity."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:57 f23196b526f64a778d2a6ae767eaeef4
-msgid ""
-"In the *Home* page section shown below are listed all the categories "
-"available in the GeoNode instance you are using. You can search for data "
-"by category by clicking on it."
-msgstr ""
+#~ msgid ""
+#~ "The GeoNode welcome page offers you "
+#~ "many other options to find resources."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:62 93f3fe59e234413fad9f386995bc27f4
-msgid "*Searching for datasets by category*"
-msgstr ""
+#~ msgid "The *Search for data* tool allows you to search for data by name."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:64 cc18ae3808d9438ab0bd9cc53215e8d7
-msgid "In the *Search* page, data will be filtered by that category."
-msgstr ""
+#~ msgid "*Searching for data*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:69 a9c286326e2442d494158c422b020d38
-msgid "*Results of searching made by category*"
-msgstr ""
+#~ msgid ""
+#~ "The *Search* page, which you will "
+#~ "be redirected to, will have the "
+#~ "TEXT filter already set with the "
+#~ "name you have typed in the search"
+#~ " box (see the picture below). If "
+#~ "you want to reach the *Search "
+#~ "page* directly, without any input text,"
+#~ " you can click the :guilabel:`Advanced "
+#~ "Search` link."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst 56880ace1f044f3da3ae511bab880164
-msgid ""
-"The *Featured Datasets* section (see the picture below) shows you "
-"aggregate data about *Layers*, *Maps*, *Documents* and *Users*. You can "
-"trigger a search on layers by clicking on the *Layers* icon, the same "
-"happens for *Maps*, *Documents* and *Users*. The :guilabel:`Explore all "
-"datasets` drive you to the *Search* page with no filter on data types."
-msgstr ""
+#~ msgid "*Results of searching made by name*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst a08c90a526fb446e80215b7e4884136e
-msgid ""
-"In this section there are also useful quick links to add new resources: "
-"the :guilabel:`Add layers` drives you to the layer uploading page, the "
-":guilabel:`Add documents` to the document uploading page and the "
-":guilabel:`Create maps` guide you to the map creation."
-msgstr ""
+#~ msgid ""
+#~ "In the *Home* page section shown "
+#~ "below are listed all the categories "
+#~ "available in the GeoNode instance you"
+#~ " are using. You can search for "
+#~ "data by category by clicking on "
+#~ "it."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:77 d967c65ac39d480599c7e053af80cd7f
-msgid "*Featured Datasets*"
-msgstr ""
+#~ msgid "*Searching for datasets by category*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:79 798c038cb61f441e9d318328400a9290
-msgid ""
-"For each data type GeoNode makes available an individual *Search* page, "
-"the next paragraphs will explain that in depth. For *Users* see :ref"
-":`user-info`."
-msgstr ""
+#~ msgid "In the *Search* page, data will be filtered by that category."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:85 1e7337924a734d908c23a9e7cf9bd7df
-msgid "Documents"
-msgstr ""
+#~ msgid "*Results of searching made by category*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:87 3735f86a54b344138934d7f5ff3d6779
-msgid "When you are searching for *Documents* you can:"
-msgstr ""
+#~ msgid ""
+#~ "The *Featured Datasets* section (see the"
+#~ " picture below) shows you aggregate "
+#~ "data about *Layers*, *Maps*, *Documents* "
+#~ "and *Users*. You can trigger a "
+#~ "search on layers by clicking on "
+#~ "the *Layers* icon, the same happens "
+#~ "for *Maps*, *Documents* and *Users*. The"
+#~ " :guilabel:`Explore all datasets` drive you"
+#~ " to the *Search* page with no "
+#~ "filter on data types."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:89 78d7beb9ff0b4667a1fec0c3d6175d8e
-msgid ""
-"use the *Documents* quick link of the *Featured Datasets* section as "
-"described above"
-msgstr ""
+#~ msgid ""
+#~ "In this section there are also "
+#~ "useful quick links to add new "
+#~ "resources: the :guilabel:`Add layers` drives"
+#~ " you to the layer uploading page, "
+#~ "the :guilabel:`Add documents` to the "
+#~ "document uploading page and the "
+#~ ":guilabel:`Create maps` guide you to the"
+#~ " map creation."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:91 acdb88b0359940d09e59f4281e9e0c99
-msgid ""
-"click on the :guilabel:`Documents` link of the :guilabel:`Data` menu in "
-"the navigation bar"
-msgstr ""
+#~ msgid "*Featured Datasets*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:96 3fce442b201a4e0b8bd8fe3bc7287321
-msgid "*Link for Documents*"
-msgstr ""
+#~ msgid ""
+#~ "For each data type GeoNode makes "
+#~ "available an individual *Search* page, "
+#~ "the next paragraphs will explain that"
+#~ " in depth. For *Users* see :ref"
+#~ ":`user-info`."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:98 6c8165105e674db3bbc8e9dd101aeac4
-msgid ""
-"The *Documents* search page looks like the generic one but only "
-"*Document* is considered as data type. You can filter documents by "
-"CATEGORIES, as in the example below, or by TEXT, KEYWORDS and so on. You "
-"can also use more than one filter at the same time."
-msgstr ""
+#~ msgid "Documents"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:104 3b71ec8950ae49b5afdfc4209d90866e
-msgid "*Documents filtered by categories*"
-msgstr ""
+#~ msgid "When you are searching for *Documents* you can:"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:109 a7060cbcf01f407398a63bf80725766a
-msgid "Layers"
-msgstr ""
+#~ msgid ""
+#~ "use the *Documents* quick link of "
+#~ "the *Featured Datasets* section as "
+#~ "described above"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:111 a8ebc798e7594afe8061f872db1d0b61
-msgid "To find *Layers* you can:"
-msgstr ""
+#~ msgid ""
+#~ "click on the :guilabel:`Documents` link "
+#~ "of the :guilabel:`Data` menu in the "
+#~ "navigation bar"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:113 f6f4365e9a144544972c4223f6d1c7b9
-msgid "use the *Layers* quick link of the *Featured Datasets*"
-msgstr ""
+#~ msgid "*Link for Documents*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:115 2eb30129ec9a4258a447ee6fa1f433fa
-msgid ""
-"click on the :guilabel:`Layers` link of the :guilabel:`Data` menu in the "
-"navigation bar"
-msgstr ""
+#~ msgid ""
+#~ "The *Documents* search page looks like"
+#~ " the generic one but only *Document*"
+#~ " is considered as data type. You "
+#~ "can filter documents by CATEGORIES, as"
+#~ " in the example below, or by "
+#~ "TEXT, KEYWORDS and so on. You can"
+#~ " also use more than one filter "
+#~ "at the same time."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:120 7ce41beae45b4a4381c1c77ae39dd9d0
-msgid "*Link for Layers*"
-msgstr ""
+#~ msgid "*Documents filtered by categories*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:122 bd955b504f7340ff9a81ed9a0ec9b95e
-msgid ""
-"In the *Layers* search page only *Layer* will be considered as data type."
-" You can set one or more filter to refine the search. In the example "
-"below the layers have been filtered by EXTENT and CATEGORIES."
-msgstr ""
+#~ msgid "Layers"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:127 dbdf15cd11974c16aece08644a9a50f2
-msgid "*Layers filtered by extent*"
-msgstr ""
+#~ msgid "To find *Layers* you can:"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:132 9d4f295ab55540d9a370b3f60c1edb31
-msgid "Maps"
-msgstr ""
+#~ msgid "use the *Layers* quick link of the *Featured Datasets*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:134 4a76c214b40d4e95a197d54c4562bcef
-msgid "If you are searching for *Maps* you can:"
-msgstr ""
+#~ msgid ""
+#~ "click on the :guilabel:`Layers` link of"
+#~ " the :guilabel:`Data` menu in the "
+#~ "navigation bar"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:136 40be6dcb1c2c4b48b4c091302c6e0a99
-msgid ""
-"use the *Maps* quick link of the *Featured Datasets* section as described"
-" above"
-msgstr ""
+#~ msgid "*Link for Layers*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:138 3bb30376b2884dc4a6a7cdbd6c2971e2
-msgid ""
-"click on the :guilabel:`Explore Maps` link of the :guilabel:`Maps` menu "
-"in the navigation bar"
-msgstr ""
+#~ msgid ""
+#~ "In the *Layers* search page only "
+#~ "*Layer* will be considered as data "
+#~ "type. You can set one or more "
+#~ "filter to refine the search. In "
+#~ "the example below the layers have "
+#~ "been filtered by EXTENT and CATEGORIES."
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:143 22fab48828e044e59af432fd5838ef32
-msgid "*Link for Maps*"
-msgstr ""
+#~ msgid "*Layers filtered by extent*"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:145 09b2e226629744aab6e44e5cf0490468
-msgid ""
-"As seen for the other data types, the *Maps* search page allows you to "
-"filter your maps by a combination of criteria. The example below shows "
-"maps filtered by REGIONS."
-msgstr ""
+#~ msgid "Maps"
+#~ msgstr ""
 
-#: ../../usage/data/finding_data.rst:150 d424f19f4c204eddb0698b42543c17eb
-msgid "*Maps filtered by regions*"
-msgstr ""
+#~ msgid "If you are searching for *Maps* you can:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "use the *Maps* quick link of the"
+#~ " *Featured Datasets* section as described"
+#~ " above"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "click on the :guilabel:`Explore Maps` "
+#~ "link of the :guilabel:`Maps` menu in "
+#~ "the navigation bar"
+#~ msgstr ""
+
+#~ msgid "*Link for Maps*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As seen for the other data types,"
+#~ " the *Maps* search page allows you"
+#~ " to filter your maps by a "
+#~ "combination of criteria. The example "
+#~ "below shows maps filtered by REGIONS."
+#~ msgstr ""
+
+#~ msgid "*Maps filtered by regions*"
+#~ msgstr ""
 

@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../usage/extra_metadata/settings.rst:3 9e1124c5ad714820b334b2cab1281463
+msgid "Settings"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:5 48f9b168d78a468cbfe7d551a47708fc
+msgid "Three main settings control the extra metadata field:"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:7 0eb1f6cff43a436ba03ecda98c382d7a
+msgid ""
+"DEFAULT_EXTRA_METADATA_SCHEMA: define the schema used to store the "
+"metadata"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:9 b1c6e88a991e4c29941bede73c579046
+msgid ""
+"`id`: (optional int): the identifier of the metadata. Optional for "
+"creation, required in the Upgrade phase"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:10 0fff93c46a784ce09074f7e5ad2f4e0e
+msgid ""
+"`filter_header`: (required object): Can be any type, is used to generate "
+"the facet filter header. Is also an identifier."
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:11 470800e12a0c44408677653842cb37f6
+msgid "`field_name`: (required object): name of the metadata field"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:12 8d478ebfcb044a9a9761f7b6c7216736
+msgid ""
+"`field_label`: (required object): a verbose string of the name. Is used "
+"as a label in the facet filters."
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:13 57099256e4be4c04b4e3d649782b90b7
+msgid "`field_value`: (required object): metadata values"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:15 34af6752b37b4d2a9ccdf6f77b98d24a
+msgid "An example of metadata that can be ingested is the following:"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:35 219baba5220847df94e605547932aa2c
+msgid ""
+"The above schema is valid by using the `schema` "
+"<https://github.com/keleshev/schema>"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:38 e9b17b87066e44e590342baee4f2e024
+msgid ""
+"CUSTOM_METADATA_SCHEMA: environment variable used to inject additional "
+"schema to the default one. Helpful for third-party libraries"
+msgstr ""
+
+#: ../../usage/extra_metadata/settings.rst:40 c291d939f67a4dfdbc9220c7b9230bbb
+msgid ""
+"EXTRA_METADATA_SCHEMA: used to get the expected metadata schema for each "
+"resource_type."
+msgstr ""
+

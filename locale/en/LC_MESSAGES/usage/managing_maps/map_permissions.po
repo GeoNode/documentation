@@ -8,97 +8,158 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../usage/managing_maps/map_permissions.rst:4
-#: def8119577b04e7699573793879e5582
-msgid "Changing the Map Permissions"
+#: a29fadf532704f0c8f5eb43f6e8fd81c
+msgid "Share Options"
 msgstr ""
 
 #: ../../usage/managing_maps/map_permissions.rst:6
-#: 20aaeb545975451ab5bff8537392a4b2
+#: 2cbf204f3c3945efb66869555a6bcf6b
 msgid ""
-"In the :ref:`map-info` section of this guide we said that you can see "
-"your maps and all the published maps. In GeoNode the permissions "
-"management system is indeed more complex. Administrators can choose who "
-"can do what for each map. Users can manage only the maps they own or the "
-"maps which they are authorize to manage."
+"In GeoNode the share options management system is indeed more complex. "
+"Administrators can choose who can do what for each map. Users can manage "
+"only the maps they own or the maps which they are authorize to manage."
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:11
-#: 95def3fd3a0447949a278912b6ca4922
-msgid ""
-"By default only owners can edit and manage maps, anyone can view and "
-"download them."
+#: ../../usage/managing_maps/map_permissions.rst:10
+#: c6150d47e4624b6a8614a23aa01cbce7
+msgid "By default only owners can edit and manage maps, and anyone can view them."
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:13
-#: 97eb974e109147a8b7aad0b3c749b671
+#: ../../usage/managing_maps/map_permissions.rst:12
+#: 87af2b8573ec4b7f985cc342d3fb8d63
 msgid ""
-"In order to modify the *Map Permissions* settings you have to click the "
-":guilabel:`Change the Layer Permissions` button in the *Map Page*."
+"In order to modify the *Map Share Options* settings you can click the "
+":guilabel:`Share` link in the *Map Detail Page*."
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:18
-#: eaa9d8fd379448cda1d9b3e6e5943846
-msgid "*Change Map Permissions*"
+#: ../../usage/managing_maps/map_permissions.rst:14
+#: 9fd3ecd5a1ea4014a6ae96875258474f
+msgid ""
+"Through the *Share Options Settings Panel* you can add or remove options "
+"for users and groups. The picture below shows an example."
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:20
-#: 2a13bf38502347a99b473aa6e6b4b961
-msgid ""
-"Through the *Permissions Settings Panel* you can add or remove "
-"permissions for users and groups. The picture below shows an example."
+#: ../../usage/managing_maps/map_permissions.rst:19
+#: fc3dd9fd0c5843d8971b6be9eb96d86d
+msgid "*Map Share options settings for users and groups*"
+msgstr ""
+
+#: ../../usage/managing_maps/map_permissions.rst:21
+#: 4fac2eaba50845779a46e2a0a7bb1f7e
+msgid "You can set the following options:"
+msgstr ""
+
+#: ../../usage/managing_maps/map_permissions.rst:23
+#: 817af9f97f4140fabc23b2b8ff857a7a
+msgid "*View* (allows to view the map)."
+msgstr ""
+
+#: ../../usage/managing_maps/map_permissions.rst:24
+#: 6cbac87f2f284b04ac49f96290e6977c
+msgid "*Download* (allows to view and download the map)."
 msgstr ""
 
 #: ../../usage/managing_maps/map_permissions.rst:25
-#: a88f7588c4674107a38d10d8dae40bb1
-msgid "*Map Permissions settings for users and groups*"
+#: 63c0cdba79e446b49bb7d3934ab52807
+msgid "*Edit* (allows to change the map's metadata);"
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:27
-#: f9bdafaa9b8040a0a2f4fb43acaaa54e
-msgid "You can set the following types of permissions:"
-msgstr ""
-
-#: ../../usage/managing_maps/map_permissions.rst:29
-#: a87450069ace4447abb559b670f07814
-msgid "*View* allows to view the map;"
-msgstr ""
-
-#: ../../usage/managing_maps/map_permissions.rst:30
-#: d17b76f84d534bbeb3d36bd6a8b5d22d
-msgid "*Download* allows to download the map;"
-msgstr ""
-
-#: ../../usage/managing_maps/map_permissions.rst:31
-#: 3e4c461386fe49b58ed777d695fe39c7
-msgid "*Change Metadata* allows to change the map metadata;"
-msgstr ""
-
-#: ../../usage/managing_maps/map_permissions.rst:32
-#: 85181bd998a54a6991cbfe58fa84e0c3
+#: ../../usage/managing_maps/map_permissions.rst:26
+#: af6cf1c576624989bd2e66f021fee47f
 msgid ""
-"*Manage* allows to update, delete, change permissions, publish and "
+"*Manage* allows to update, delete, change share options, publish and "
 "unpublish the map."
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:34
-#: c8c47dd619654d2192f6e4ad73177655
+#: ../../usage/managing_maps/map_permissions.rst:28
+#: 37afe4102e4a45eda83d389e65157aad
 msgid ""
-"When assigning permissions to a group, all the group members will have "
-"those permissions. Be careful in case of editing permissions."
+"When assigning options to a group, all the group members will have that "
+"option. Be careful in case of editing them."
 msgstr ""
 
-#: ../../usage/managing_maps/map_permissions.rst:36
-#: 47d4d3b440a8423285df1033dca618fb
-msgid "Click on :guilabel:`Apply Changes` to save these settings."
+#: ../../usage/managing_maps/map_permissions.rst:30
+#: 8ce677ed8fb24c4d828f1c560994c130
+msgid "Click on :guilabel:`Save` link in the menu to save these settings."
 msgstr ""
+
+#~ msgid "Changing the Map Permissions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :ref:`map-info` section of "
+#~ "this guide we said that you can"
+#~ " see your maps and all the "
+#~ "published maps. In GeoNode the "
+#~ "permissions management system is indeed "
+#~ "more complex. Administrators can choose "
+#~ "who can do what for each map. "
+#~ "Users can manage only the maps "
+#~ "they own or the maps which they"
+#~ " are authorize to manage."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default only owners can edit "
+#~ "and manage maps, anyone can view "
+#~ "and download them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to modify the *Map "
+#~ "Permissions* settings you have to click"
+#~ " the :guilabel:`Change the Layer "
+#~ "Permissions` button in the *Map Page*."
+#~ msgstr ""
+
+#~ msgid "*Change Map Permissions*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Through the *Permissions Settings Panel* "
+#~ "you can add or remove permissions "
+#~ "for users and groups. The picture "
+#~ "below shows an example."
+#~ msgstr ""
+
+#~ msgid "*Map Permissions settings for users and groups*"
+#~ msgstr ""
+
+#~ msgid "You can set the following types of permissions:"
+#~ msgstr ""
+
+#~ msgid "*View* allows to view the map;"
+#~ msgstr ""
+
+#~ msgid "*Download* allows to download the map;"
+#~ msgstr ""
+
+#~ msgid "*Change Metadata* allows to change the map metadata;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Manage* allows to update, delete, "
+#~ "change permissions, publish and unpublish "
+#~ "the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When assigning permissions to a group,"
+#~ " all the group members will have "
+#~ "those permissions. Be careful in case"
+#~ " of editing permissions."
+#~ msgstr ""
+
+#~ msgid "Click on :guilabel:`Apply Changes` to save these settings."
+#~ msgstr ""
 

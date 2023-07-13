@@ -8,28 +8,31 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../devel/index.rst:2 734a24a39b2340379672ea4e5c0e4c0e
-msgid "API Schema"
+#: ../../devel/index.rst:2 a55d3f697f904068a441a4ed97d002b4
+msgid "GeoNode API"
 msgstr ""
 
-#: ../../devel/index.rst:10 3fd10572db3641348871ec3812f8d6c0
+#: ../../devel/index.rst:11 339f862183a842f69277f0347c7e2d0c
 msgid "How to Develop"
 msgstr ""
 
-#: ../../devel/index.rst:38 ea41344a4f2349aa833943572f959e9d
+#: ../../devel/index.rst:39 e9163b8c6bb146cb85f820a3fce92a08
 msgid ""
 "This documentation helps developers to install GeoNode-Core and GeoNode-"
 "Project from different scenarios. GeoNode-Project can be installed on top"
 " of GeoNode-Core if already installed. Also GeoNode-Project can be "
 "installed from scratch as it has GeoNode-Core as a prerequisit."
 msgstr ""
+
+#~ msgid "API Schema"
+#~ msgstr ""
 

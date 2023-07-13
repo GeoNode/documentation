@@ -8,68 +8,87 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../usage/publishing_data/index.rst:2 eddbf126d8b646d88b251ce085541b94
+#: ../../usage/publishing_data/index.rst:2 b9077e919e9c4b29a477185a5d65427d
 msgid "Publishing Data"
 msgstr ""
 
-#: ../../usage/publishing_data/index.rst:4 53859032cde947d498674451b09899e9
+#: ../../usage/publishing_data/index.rst:4 1210f95f80ed4b35a1cd5508a4514fef
 msgid ""
 "In GeoNode, each resource can be published in order to share it with "
-"other people. Once a *Map* has been published you can embed it in your "
-"web pages, your blog or your web site."
+"other people."
 msgstr ""
 
-#: ../../usage/publishing_data/index.rst:7 032483c20e5a4364b7aaa04861dce578
+#: ../../usage/publishing_data/index.rst:6 ed6dec13a58749a39ffebe3ec9a73b18
 msgid ""
-"An easy way to accomplish that is to use an ``iframe``. See the following"
-" steps:"
+"In order to publish a map, document or dataset or any other Geonode "
+"resource, Go to the settings tab in the Metadata Edit form, The check for"
+" publishing and unpublishing is available. See picture below."
 msgstr ""
 
-#: ../../usage/publishing_data/index.rst:9 e2aac5642f814afe88bbb1c1d41ab4fc
-msgid "Open the :ref:`map-info` page and copy the *URL*"
+#: ../../usage/publishing_data/index.rst:12 8a046a58733f459b8fc49eb3b4d33f2a
+msgid "*Resource publishing*"
 msgstr ""
 
-#: ../../usage/publishing_data/index.rst:14 7187278f585447a68b65ee5dfbcd0f9b
-msgid "*The Map Information Page URL*"
+#: ../../usage/publishing_data/index.rst:14 27acc86a84c04d9d8a0db014bac8a78e
+msgid "Click :guilabel: `Update` to save the changes."
 msgstr ""
 
-#: ../../usage/publishing_data/index.rst:16 0f05b23168dc4d0191b994e97352b91e
-msgid ""
-"Add *\"/embed\"* to the URL so that it will be like this "
-"*\"http://master.demo.geonode.org/maps/11/embed\"*"
-msgstr ""
+#~ msgid ""
+#~ "In GeoNode, each resource can be "
+#~ "published in order to share it "
+#~ "with other people. Once a *Map* "
+#~ "has been published you can embed "
+#~ "it in your web pages, your blog"
+#~ " or your web site."
+#~ msgstr ""
 
-#: ../../usage/publishing_data/index.rst:18 d9cbf7f3d25e4cf4ae54ce1a3f28a3ae
-msgid "Use this URL inside an html ``iframe`` as ``src`` value"
-msgstr ""
+#~ msgid ""
+#~ "An easy way to accomplish that is"
+#~ " to use an ``iframe``. See the "
+#~ "following steps:"
+#~ msgstr ""
 
-#: ../../usage/publishing_data/index.rst:27 32d6a1d117014d9da6d8ab6f87ecc0d0
-msgid "Put this html block of code inside your web pages to display the map."
-msgstr ""
+#~ msgid "Open the :ref:`map-info` page and copy the *URL*"
+#~ msgstr ""
 
-#: ../../usage/publishing_data/index.rst:29 a6d163bcf7354aaf83811b8c652f33c2
-msgid ""
-"Saving an html file with this code you can test your map on your pc, look"
-" at the following picture."
-msgstr ""
+#~ msgid "*The Map Information Page URL*"
+#~ msgstr ""
 
-#: ../../usage/publishing_data/index.rst:34 8245f5f2d2a84ae6aaf857af637d0167
-msgid "*The Embedded Map*"
-msgstr ""
+#~ msgid ""
+#~ "Add *\"/embed\"* to the URL so "
+#~ "that it will be like this "
+#~ "*\"http://master.demo.geonode.org/maps/11/embed\"*"
+#~ msgstr ""
 
-#: ../../usage/publishing_data/index.rst:36 e22f8926162a4328ae7de641bf19439c
-msgid ""
-"As you can see, some basic functionalities will be available to the user:"
-" the :ref:`toc`, the :ref:`basemap-switcher`, the :ref:`sidebar` and the "
-":ref:`options-menu-tools`."
-msgstr ""
+#~ msgid "Use this URL inside an html ``iframe`` as ``src`` value"
+#~ msgstr ""
+
+#~ msgid "Put this html block of code inside your web pages to display the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Saving an html file with this code"
+#~ " you can test your map on your"
+#~ " pc, look at the following picture."
+#~ msgstr ""
+
+#~ msgid "*The Embedded Map*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see, some basic "
+#~ "functionalities will be available to the"
+#~ " user: the :ref:`toc`, the :ref"
+#~ ":`basemap-switcher`, the :ref:`sidebar` and "
+#~ "the :ref:`options-menu-tools`."
+#~ msgstr ""
 

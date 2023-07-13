@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,14 +76,7 @@ msgstr ""
 msgid "*New Dataset creation from scratch*"
 msgstr ""
 
-#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:29
-#: 041e4fbb7c73412c82323a31903c2dd1
-msgid ""
-"At this time you can also change the default *Share options* settings, "
-"see :ref:`dataset-permissions` to learn how."
-msgstr ""
-
-#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:31
+#: ../../usage/managing_datasets/new_dataset_from_scratch.rst:30
 #: 029a25836c1a42a7a52fcc29fac7ecb3
 msgid ""
 "Once the form has been filled out, click on :guilabel:`Create`. You will "
@@ -91,4 +84,11 @@ msgid ""
 "Dataset is created but is still empty, no features have been added yet. "
 "See the :ref:`dataset-editing` section to learn how to add new features."
 msgstr ""
+
+#~ msgid ""
+#~ "At this time you can also change"
+#~ " the default *Share options* settings, "
+#~ "see :ref:`dataset-permissions` to learn "
+#~ "how."
+#~ msgstr ""
 

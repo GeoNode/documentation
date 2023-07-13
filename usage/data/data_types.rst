@@ -11,7 +11,7 @@ Data Types
 #. Datasets
 #. Maps
 
-Datasets, Documents and Remote Services can be accessed from the :guilabel:`Data` menu of the navigation bar.
+Datasets and Documents can be accessed from the :guilabel:`Data` menu of the navigation bar.
 The :guilabel:`Maps` menu lets you filter only maps in the available resource. This applies to other existing menu items like :guilabel:`GeoStories`.
 
 .. note:: :guilabel:`GeoStories` and :guilabel:`Dashboards` In the screenshot below are GeoApp resouce types which are added by the client.
@@ -28,7 +28,7 @@ Documents
 
 | GeoNode allows to publish tabular and text data and to manage metadata and associated documents.
 | Documents can be uploaded directly from your disk (see :ref:`uploading-documents` for further information).
-| The following documents types are allowed: `.doc, .docx, .gif, .jpg, .jpeg, .ods, .odt, .odp, .pdf, .png, .ppt, .pptx, .rar, .sld, .tif, .tiff, .txt, .xls, .xlsx, .xml, .zip, .gz, .qml`.
+| The following documents types are allowed: `txt, .log, .doc, .docx, .ods, .odt, .sld, .qml, .xls, .xlsx, .xml, .bm, .bmp, .dwg, .dxf, .fif, .gif, .jpg, .jpe, .jpeg, .png, .tif, .tiff, .pbm, .odp, .ppt, .pptx, .pdf, .tar, .tgz, .rar, .gz, .7z, .zip, .aif, .aifc, .aiff, .au, .mp3, .mpga, .wav, .afl, .avi, .avs, .fli, .mp2, .mp4, .mpg, .ogg, .webm, .3gp, .flv, .vdo, .glb, .pcd, .gltf`.
 | Through the document detailed page is possible to view, download and manage a document.
 
 Datasets

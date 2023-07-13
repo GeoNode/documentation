@@ -1,10 +1,25 @@
+
 .. _dataset-download:
 
 Downloading Datasets
 ==================
 
-| At the top of the *Dataset Menu* there is an :guilabel:`Export` link . It provides access to the ability to extract geospatial data from within GeoNode.
-| You will be able to select from a list of options of the supported export file formats.
+At the top of the *Dataset Menu* there is an :guilabel:`Download` link where it is possible to download:
+
+* Dataset
+
+* ISO Metadata
+
+* Dublin Core Metadata
+
+Clicking the :guilabel:`ISO Metadata` or the :guilabel:`Dublin Core Metadata` exports the layer metadata in `xml` format.
+
+.. figure:: img/export_metadata.png
+     :align: center
+
+     *Downloading Metadata*
+
+Open the :guilabel:`Dataset` option you will be able to select from a list of options of the supported export file formats.
 
 .. figure:: img/export_dataset_form.png
      :align: center
@@ -46,6 +61,10 @@ From this window you can:
 
 * enter *Title* and *Description*;
 * choose the *Resolution* in dpi;
+* select the format
+* select the coordinate
+* add the scale
+* add grid with label
 * customize the *Layout*
 
   + the *Sheet size* (A3, A4);

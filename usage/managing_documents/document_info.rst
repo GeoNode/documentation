@@ -21,28 +21,34 @@ On the page of a document, the resource is either directly displayed on the page
 Exploring the Document detail menu Sections
 ---------------------------
 
-The **Info link** section shows the document metadata such as its title, abstract, date of publication etc. The metadata also indicates the user who is responsible for uploading and managing this content, as well as the group to which it is linked.
+As soon as a document is opened, the **Info** panel is shown. It reports the document metadata such as its title, abstract, date of publication etc. The metadata also indicates the user who is responsible for uploading and managing this content, as well as the group to which it is linked.
 
 .. figure:: img/document_info.png
     :align: center
+    *Document Info*
 
-The **Share link** provides the document link to share.
+
+Through the :guilabel:`View`, it should look as follows.
+ button it is possible to visualize the metadata of the document
+
+.. figure:: img/view_metadata.png
+    :align: center
+    *Document Metadata*
+
+The :guilabel:`Share`, it should look as follows.
+ link provides the document link to share.
 
 .. figure:: img/document_sharing.png
     :align: center
 
     *Document Sharing*
 
-If you want to download the document, click on the *Download* link in the menu and the document will be downloaded automatically.
+If you want to download the document, click on the :guilabel:`Download`, it should look as follows.
+ link in the menu and the document will be downloaded automatically.
 
 .. figure:: img/document_download.png
     :align: center
 
     *Document Metadata download*
 
-If you want this document in your *Favorites* (see :ref:`editing-profile`), click the **Info link** and click on the start icon.
 
-.. figure:: img/favorite_document.png
-    :align: center
-
-    *Favorite document*

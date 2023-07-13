@@ -1,8 +1,8 @@
 Accounts and User Profile
 =========================
 
-In GeoNode many contents are public so unregistered users have read-only access to public maps, datasets and documents.
-In order to create maps, add datasets or documents, edit the data and share these resources with other users, you need to sign in.
+In GeoNode many contents are public so unregistered users have read-only access to public maps, datasets,documents, geostory and dashboard.
+In order to create maps, dashboard or geostory and add datasets or documents, edit the data and share these resources with other users, you need to sign in.
 
 GeoNode is primarily a *social* platform, thus a primary component of any GeoNode instance is the user account.
 

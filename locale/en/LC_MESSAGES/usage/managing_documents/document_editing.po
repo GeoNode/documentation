@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,6 +94,64 @@ msgid ""
 "In the example shown in the picture above, the information inside the red"
 " rectangles have been changed. To save the changes click on "
 ":guilabel:`Update`, you will be redirected to the document page."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:44
+#: 8d610b75b7084bc4b46520e203d23f80
+msgid "Editing the Document Info"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:46
+#: 84525d256b664621b779ba2e28ab10c2
+msgid ""
+"You can edit the information of your document by clicking on the "
+":guilabel:`Edit` link, then :guilabel:`Edit Info`."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:48
+#: a0f4116b5162455ea46a7e4df2addcf6
+msgid ""
+"From the Info panel, it is possible to upload the **Thumbnail** of the "
+"document."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:53
+#: ddf5de30032749bb849e86cbae09b690
+msgid "*Upload Thumbnail*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:55
+#: b8eeabdceab24b2887c73411fd66e1f9
+msgid ""
+"If you want this document in your **Favorites** (see :ref:`editing-"
+"profile`), click on the start icon."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:60
+#: 09383b8192ac40769396ab86cca48472
+msgid "*Favorite document*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:62
+#: 2ba4ac61d330492babdc22b5f4a79646
+msgid ""
+"You can directly **Download** the document and **Share** the document url"
+" by clicking the buttons on the top-right of the panel."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:67
+#: 25328d3ddc9146db967a179d188e769a
+msgid "*Share and Download document*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:69
+#: d8ad8aac506340ff84bf183380bdc47a
+msgid "By clicking the document **Title**, you can change it."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:74
+#: ce811d2f085448f6a9e13a7a11652270
+msgid "*Document Title*"
 msgstr ""
 
 #~ msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,44 +58,53 @@ msgstr ""
 #: ../../usage/managing_documents/document_info.rst:24
 #: 76c267d4f6114ccca86d12c6184d4ef6
 msgid ""
-"The **Info link** section shows the document metadata such as its title, "
-"abstract, date of publication etc. The metadata also indicates the user "
-"who is responsible for uploading and managing this content, as well as "
-"the group to which it is linked."
+"As soon as a document is opened, the **Info** panel is shown. It reports "
+"the document metadata such as its title, abstract, date of publication "
+"etc. The metadata also indicates the user who is responsible for "
+"uploading and managing this content, as well as the group to which it is "
+"linked."
 msgstr ""
 
-#: ../../usage/managing_documents/document_info.rst:29
+#: ../../usage/managing_documents/document_info.rst:32
+#: 7977feb11b8746abb057a87cb26a8805
+msgid "Through the :guilabel:`View`, it should look as follows."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:32
+#: 7748d38d2f844624af33a3426845585b
+msgid "button it is possible to visualize the metadata of the document"
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:39
+#: 73ce4ee0d1dc44f3a8cbe7ddfe6bf586
+msgid "The :guilabel:`Share`, it should look as follows."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:39
 #: 0ad9b1286ff348a7bef8ea685284648d
-msgid "The **Share link** provides the document link to share."
+msgid "link provides the document link to share."
 msgstr ""
 
-#: ../../usage/managing_documents/document_info.rst:34
+#: ../../usage/managing_documents/document_info.rst:44
 #: b3dedad7f574419f9faa1999b13a8170
 msgid "*Document Sharing*"
 msgstr ""
 
-#: ../../usage/managing_documents/document_info.rst:36
+#: ../../usage/managing_documents/document_info.rst:47
 #: 1ea0afc71c77437681aba674eedac0c9
 msgid ""
-"If you want to download the document, click on the *Download* link in the"
-" menu and the document will be downloaded automatically."
+"If you want to download the document, click on the :guilabel:`Download`, "
+"it should look as follows."
 msgstr ""
 
-#: ../../usage/managing_documents/document_info.rst:41
+#: ../../usage/managing_documents/document_info.rst:47
+#: 1ea0afc71c77437681aba674eedac0c9
+msgid "link in the menu and the document will be downloaded automatically."
+msgstr ""
+
+#: ../../usage/managing_documents/document_info.rst:52
 #: 15d816dfa3a2435c9dd800c312041721
 msgid "*Document Metadata download*"
-msgstr ""
-
-#: ../../usage/managing_documents/document_info.rst:43
-#: 309f99c4af4242bb85019071f327aaa2
-msgid ""
-"If you want this document in your *Favorites* (see :ref:`editing-"
-"profile`), click the **Info link** and click on the start icon."
-msgstr ""
-
-#: ../../usage/managing_documents/document_info.rst:48
-#: f8fad5d563e647668216e519e322dd7e
-msgid "*Favorite document*"
 msgstr ""
 
 #~ msgid ""
@@ -276,5 +285,35 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "*Metadata Author*, the metadata author information"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The **Info link** section shows the "
+#~ "document metadata such as its title, "
+#~ "abstract, date of publication etc. The"
+#~ " metadata also indicates the user who"
+#~ " is responsible for uploading and "
+#~ "managing this content, as well as "
+#~ "the group to which it is linked."
+#~ msgstr ""
+
+#~ msgid "The **Share link** provides the document link to share."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to download the "
+#~ "document, click on the *Download* link"
+#~ " in the menu and the document "
+#~ "will be downloaded automatically."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want this document in your"
+#~ " *Favorites* (see :ref:`editing-profile`), "
+#~ "click the **Info link** and click "
+#~ "on the start icon."
+#~ msgstr ""
+
+#~ msgid "*Favorite document*"
 #~ msgstr ""
 

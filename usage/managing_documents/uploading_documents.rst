@@ -23,12 +23,10 @@ The *Document Upload* page looks like the one shown in the picture below.
 
 In order to upload a document:
 
-#. Select a file from your disk or enter a URL address if the document is stored on the internet.
-#. Insert the title of the document.
-#. Select one or more published resources the document can be linked to (optional).
-#. Click the red :guilabel:`Upload` button
+#. Select a file from your disk.
+#. Click the :guilabel:`Upload` button
 
-At the end of the uploading process you will be driven to the *Detail* page with a menu to save, view more info, edit metadata, share, download and delete the document. See the next section to know more about Metatadata.
+At the end of the uploading process, by clicking on the View button, you will be driven to the document page with the Info panel open. Here it is possible to view more info, edit metadata, share, download, and delete the document. See the next section to know more about Metatadata.
 
 .. note:: If you get the following error message:
 

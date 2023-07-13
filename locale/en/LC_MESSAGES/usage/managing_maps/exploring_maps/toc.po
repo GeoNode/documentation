@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,11 @@ msgid ""
 "Contents*, briefly *TOC* from now on, of the map. The *TOC* shows all the"
 " datasets involved with the *Map* and allows to manage their properties "
 "and representations on the map."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:94
+#: 3e6a97c485954a7b84acab5a907e2aac feebad0a84634e30ab3e4eb02f02d22e
+msgid "toc_button"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:13
@@ -52,13 +57,6 @@ msgid "filter the datasets list by typing text in the *Filter Datasets* field;"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:19
-#: fe0c0de41def4a7fb7d5d4dfd8a8da42
-msgid ""
-"add new datasets from the *Catalog* by clicking the :guilabel:`Add "
-"Dataset` button;"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:20
 #: 70e189175a474af9a2e5911ce16dd85b
 msgid ""
 "manage the datasets properties such as *Opacity* (scroll the opacity "
@@ -66,151 +64,182 @@ msgid ""
 "visible, click on |show_button| to show it on map);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:21
+#: ../../usage/managing_maps/exploring_maps/toc.rst:99
+#: 3a71f84ea4b44aefa31151c200f48d66 757a8bc5778d4ee8ba11ff1d218aa6d1
+msgid "hide_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:104
+#: 2e6ca4fb10314ec6b58548ea03fdab29 713403d42ad34891ac49ba2ddce961bd
+msgid "show_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:20
 #: 3580ae36196740c98cf8ba98cbecbc4f
 msgid "manage the *Dataset Settings*, see the next paragraph."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:27
+#: ../../usage/managing_maps/exploring_maps/toc.rst:26
 #: bd436824d27b4f99abedf86594190058
 msgid "*Scrolling the Dataset Opacity*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:29
+#: ../../usage/managing_maps/exploring_maps/toc.rst:28
 #: 7448066e9db7409cb0dfa3a744748b6f
 msgid ""
 "Select a *Dataset* from the list and click on it, the *Dataset Toolbar* "
 "should appear in the *TOC*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:35
+#: ../../usage/managing_maps/exploring_maps/toc.rst:34
 #: a87c24a6ce434927bdf1626e89e52f4a
 msgid "*The Dataset Toolbar*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:38
+#: ../../usage/managing_maps/exploring_maps/toc.rst:37
 #: 2257e0392d5f438082254047299b1714
 msgid "The *Toolbar* shows you many buttons:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:40
+#: ../../usage/managing_maps/exploring_maps/toc.rst:39
 #: 5cf8be3f35f04b05a8a8846c2cc041d3
-msgid "|zoom_to_dataset_extent_button| allows you to zoom to the dataset extent;"
+msgid ""
+"the **Zoom to dataset extent** button allows you to zoom to the dataset "
+"extent;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:40
+#: 427d083bf5564ce797b314b2be0b8034
+msgid ""
+"the **Filter layer** button that acts directly on a layer with WFS "
+"available and filter its content;"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:41
-#: 841eda5b011543ccab8c9e533c357392
+#: 424fdef3c63a46feb29aac1065da8c20
 msgid ""
-"|dataset_settings_button| drives you through the dataset settings "
-"customization (see the next paragraph);"
+"the **Attribute Table** button to explore the features of the dataset and"
+" their attributes (more information at :ref:`attributes-table`);"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/toc.rst:42
-#: 424fdef3c63a46feb29aac1065da8c20
-msgid ""
-"|attribute_table_button| to explore the features of the dataset and their"
-" attributes (more information at :ref:`attributes-table`);"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:43
 #: f88dca453e3848aab5adc4926ab8d423
 msgid ""
-"|delete_dataset_button| to delete datasets (click on :guilabel:`Delete "
+"the **Delete** button to delete datasets (click on :guilabel:`Delete "
 "Dataset` to confirm your choice);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:48
-#: 1bf8e7090dd544ffab1cfa85dbc1637c
-msgid "*Deleting Datasets*"
-msgstr ""
-
-#: ../../usage/managing_maps/exploring_maps/toc.rst:50
+#: ../../usage/managing_maps/exploring_maps/toc.rst:43
 #: 90ab317a3635413f8ef4d153f2c3b077
-msgid "|create_widgets_button| to create *Widgets* (see :ref:`creating-widgets`)."
+msgid "the **Widgets** button to create Widgets (see :ref:`creating-widgets`)."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:53
+#: ../../usage/managing_maps/exploring_maps/toc.rst:44
+#: 2257e0392d5f438082254047299b1714
+msgid "the **Export data** button;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:45
+#: 841eda5b011543ccab8c9e533c357392
+msgid ""
+"the **Settings** button drives you through the dataset settings "
+"customization (see the next paragraph);"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:46
+#: 2b7f00bb01204226b4785d4d91b92fab
+msgid "the **Compare tool** button to *Swipe* or *Spy* the selected layer"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:47
+#: 2257e0392d5f438082254047299b1714
+msgid "the **Edit Style** button;"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:51
 #: 4e5ea617a1c84d968d1a2cf480b5b71a
 msgid "Managing Dataset Settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:55
+#: ../../usage/managing_maps/exploring_maps/toc.rst:53
 #: d69b431bda4c419a92e7579b29bbc72a
 msgid "The *Dataset Settings* panel looks like the one below."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:61
+#: ../../usage/managing_maps/exploring_maps/toc.rst:59
 #: a30f670e9e434f968a93ababa9f86beb
 msgid "*The Dataset Settings Panel*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:63
+#: ../../usage/managing_maps/exploring_maps/toc.rst:61
 #: 51e15503ead54d9f9307dd2b3ae22a49
 msgid "The *Dataset Settings* are divided in three groups:"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:65
+#: ../../usage/managing_maps/exploring_maps/toc.rst:63
 #: 4b43fee641ca409abaaaed433e35f0ae
 msgid "*General* settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:66
+#: ../../usage/managing_maps/exploring_maps/toc.rst:64
 #: a6a8fe2b40694465b01d62376a047d08
-msgid "*Display* settings"
+msgid "*Visibility* settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:67
+#: ../../usage/managing_maps/exploring_maps/toc.rst:65
 #: ed8c002510024572aebb99396389a89e
 msgid "*Style* settings"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:69
+#: ../../usage/managing_maps/exploring_maps/toc.rst:66
+#: a6a8fe2b40694465b01d62376a047d08
+msgid "*Tiling* settings"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/toc.rst:68
 #: 3c7e2cd00bd847298100003f723019b0
 msgid ""
 "In the **General** tab of the *Settings Panel* you can customize the "
-"dataset *Title*, insert a *Description* and change/create the *Dataset "
-"Group*."
+"dataset *Title*, insert a *Description*, change/add the *Dataset Group* "
+"and change the *Tooltip content* and the *Tooltip placement*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:71
-#: 5bc341c37bd847e19a466730874032c0
+#: ../../usage/managing_maps/exploring_maps/toc.rst:70
+#: ec9f2c983c31412bb136c314f5e4636f
 msgid ""
-"Click on the **Display** tab to see what are the dataset appearance "
-"properties you can configure."
+"The **Visibility** tab where you can Change the *Opacity* of the layer "
+"and add the *Visibility limits* to display the layer only within certain "
+"scale limits"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:77
+#: ../../usage/managing_maps/exploring_maps/toc.rst:76
 #: 342219e0a25241c6b2582f2a541e51d1
-msgid "*The Dataset Display Settings Panel*"
+msgid "*The Visibility tab on Settings Panel*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:79
-#: 1ed3fff082704939aab4f859c545f8c3
+#: ../../usage/managing_maps/exploring_maps/toc.rst:78
+#: 63670daf45b44b869394fa085c0130e6
 msgid ""
-"The *Format* field allows you to change the output format of the WMS "
-"requests."
+"The **Style** tab allows you to select the style from the available layer"
+" styles and change the *Width* and the *Height* of the *Legend*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:80
-#: 2adb1c23b9064112a994c29a64369c0e
-msgid ""
-"You can set a numeric value of *Opacity* using the corresponding input "
-"field."
+#: ../../usage/managing_maps/exploring_maps/toc.rst:84
+#: 342219e0a25241c6b2582f2a541e51d1
+msgid "*The Style tab on Settings Panel*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:81
-#: c1248da039aa4d409a70c33cb1fcf1e6
+#: ../../usage/managing_maps/exploring_maps/toc.rst:86
+#: edf9adcc8e354163a1c5d52707b3400d
 msgid ""
-"You can also set the dataset as *Transparent*, decide to *Use cache "
-"options* and to use *Single Tile*."
+"Click on the **Tiling** tab to change the output *Format* of the WMS "
+"requests, the *Tile Size* and enable/disable the *Trasparent*, the *Use "
+"cache options* and the *Single Tile*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/toc.rst:83
-#: c10aebdaf3a84796a59f876f6715bb99
-msgid ""
-"The third tab is the **Style** one. By clicking on it, an advanced *Style"
-" Editor* allows you to create new styles and to modify or delete an "
-"existing one. See the :ref:`dataset-style` section to read more."
+#: ../../usage/managing_maps/exploring_maps/toc.rst:92
+#: 342219e0a25241c6b2582f2a541e51d1
+msgid "*The Tiling tab on Settings Panel*"
 msgstr ""
 
 #~ msgid ""
@@ -350,6 +379,91 @@ msgstr ""
 #~ " create new styles and to modify "
 #~ "or delete an existing one. See the"
 #~ " :ref:`layer-style` section to read "
+#~ "more."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "add new datasets from the *Catalog* "
+#~ "by clicking the :guilabel:`Add Dataset` "
+#~ "button;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|zoom_to_dataset_extent_button| allows you to "
+#~ "zoom to the dataset extent;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|dataset_settings_button| drives you through "
+#~ "the dataset settings customization (see "
+#~ "the next paragraph);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|attribute_table_button| to explore the "
+#~ "features of the dataset and their "
+#~ "attributes (more information at :ref"
+#~ ":`attributes-table`);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|delete_dataset_button| to delete datasets "
+#~ "(click on :guilabel:`Delete Dataset` to "
+#~ "confirm your choice);"
+#~ msgstr ""
+
+#~ msgid "*Deleting Datasets*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|create_widgets_button| to create *Widgets* "
+#~ "(see :ref:`creating-widgets`)."
+#~ msgstr ""
+
+#~ msgid "*Display* settings"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the **General** tab of the "
+#~ "*Settings Panel* you can customize the"
+#~ " dataset *Title*, insert a *Description*"
+#~ " and change/create the *Dataset Group*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the **Display** tab to "
+#~ "see what are the dataset appearance "
+#~ "properties you can configure."
+#~ msgstr ""
+
+#~ msgid "*The Dataset Display Settings Panel*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Format* field allows you to "
+#~ "change the output format of the "
+#~ "WMS requests."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can set a numeric value of "
+#~ "*Opacity* using the corresponding input "
+#~ "field."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can also set the dataset as"
+#~ " *Transparent*, decide to *Use cache "
+#~ "options* and to use *Single Tile*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The third tab is the **Style** "
+#~ "one. By clicking on it, an "
+#~ "advanced *Style Editor* allows you to"
+#~ " create new styles and to modify "
+#~ "or delete an existing one. See the"
+#~ " :ref:`dataset-style` section to read "
 #~ "more."
 #~ msgstr ""
 

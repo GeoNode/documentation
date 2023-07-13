@@ -15,7 +15,7 @@ The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/
 * the :ref:`toc` to manage the map contents;
 * the *Basemap Switcher* to change the basemap (see the next paragraphs);
 * the *Search Bar* to search by location, name and coordinates (see the paragraph below);
-* the :ref:`options-menu-tools` which contains the link to the *Print* tool, to the datasets *Catalog* and to the *Measure* tool;
+* the :ref:`options-menu-tools` which contains the link to the *Print* tool, to the datasets *Catalog*, to the *Measure* tool and the Annotations tool;
 * the *Sidebar* and its tools such as the *Zoom* tools and the *Get Features Info* tool;
 * the *Footer Tools* to manage the scale of the map, to track the mouse coordinates and change the CRS (Coordinates Reference System).
 

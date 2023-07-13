@@ -89,6 +89,7 @@ Table Widgets
 -------------
 
 | Through the *Table Widgets* you can add the :ref:`attributes-table` of the dataset to the map. You can decide to show a subset of the features, through filters, and you can select one or more columns/attributes.
+You can also enter a *Title* for each column to be displayed as the table header in place of the Name of the layer field and enter a *Description* for each field to be displayed as a tooltip, visible moving the mouse on the column header.
 | So, choose what attributes you are interested in and click on |configure_widgets_options_button|.
 
 .. figure:: img/table_widget_columns.png
@@ -121,4 +122,4 @@ Click on |configure_widgets_options_button|, insert *Title* and *Description* th
 
     *Counter Widget*
 
-The GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/user-guide/widgets/>`_ for further information.
+The GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/widgets/>`_ for further information.

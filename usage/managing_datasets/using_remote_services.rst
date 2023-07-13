@@ -6,7 +6,7 @@ In this section you will learn how to add a new service and how to load resource
 
 Let's try it!
 
-Click on the :guilabel:`Remote Services` link of the :guilabel:`Data` menu in the navigation bar.
+Click on the :guilabel:`Remote Services` link of the :guilabel:`Add Resource` menu in the navigation bar.
 
 .. figure:: img/remote_services_link.png
     :align: center

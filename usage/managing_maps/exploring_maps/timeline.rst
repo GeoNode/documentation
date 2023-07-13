@@ -5,7 +5,7 @@ Timeline
 
 
 | GeoNode can manage datasets with a *time dimension*. Those vector datasets may vary their data through time so it is useful to represent that variation on the map.
-| The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer used in Geonode makes available the **Timeline** tool which allows you to observe the datasets' evolution over time, to inspect the dataset configuration at a specific time instant and to view different dataset configurations time by time dynamically through animations (see the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/user-guide/timeline/>`_ for further details).
+| The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer used in Geonode makes available the **Timeline** tool which allows you to observe the datasets' evolution over time, to inspect the dataset configuration at a specific time instant and to view different dataset configurations time by time dynamically through animations (see the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/timeline/#animations>`_ for further details).
 
 .. warning:: Timeline actually works only with WMTS-Multidim extension (WMS time in capabilities is not fully supported).
 
@@ -90,4 +90,45 @@ The *Animation Range* option lets you to define a temporal range within which th
      *The Timeline Animation Range*
 
 
-See the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/user-guide/timeline/>`_ for more information.
+See the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/timeline/>`_ for more information.
+
+.. |play_button| image:: img/play_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |time_go_backward_button| image:: img/time_go_backward_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |time_go_forward_button| image:: img/time_go_forward_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |stop_button| image:: img/stop_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |expand_timeline_button| image:: img/expand_timeline_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |show_hide_datasets_list_button| image:: img/show_hide_datasets_list_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |time_range_button| image:: img/time_range_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |animation_settings_button| image:: img/animation_settings_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+

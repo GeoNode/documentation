@@ -12,9 +12,13 @@ The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of opt
 
 In that options list, you can see three options listed as:
 
-1. *Edit Metadata*
-2. *Edit Styles*
-3. *Edit Data*
+1. *Edit Info*
+2. *Edit Data* 
+3. *Edit Styles* 
+4. *Edit Metadata*
+5. *Upload Style*
+6. *Upload Metadata*
+
 
 In this section you will learn how to edit a *Dataset*, and its data. See :ref:`dataset-metadata` to learn how to explore the dataset *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`dataset-style`.
 
@@ -100,4 +104,4 @@ Once you have finished you can end the *Editing Session* by clicking on the |end
        :height: 30px
        :align: middle
 
-By default the GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation <https://mapstore2.readthedocs.io/en/latest/>`_ for further information.
+By default the GeoNode map viewer is `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/attributes-table/>`_ for further information.

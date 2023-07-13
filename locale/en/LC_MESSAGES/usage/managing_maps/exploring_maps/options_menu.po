@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,15 +41,15 @@ msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:19
 #: a161e15a0c3746d9ab6fd3314ace1155
-msgid "Printing a Map"
+msgid "Printing a map"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:21
 #: 0b87a5aa30cb43409304b43f5c14e413
 msgid ""
 "The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based "
-"map viewer of GeoNode allows you to print your map with a customizable "
-"layout."
+"map viewer of GeoNode allows you to print the current view with a "
+"customizable layout."
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:22
@@ -80,107 +80,127 @@ msgid "choose the *Resolution* in dpi;"
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/options_menu.rst:33
+#: 233f7f7212424799a494953f5b6d0d72
+msgid "select the format"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:34
+#: 9d1a30dd13cc4f69a76bdbc3bb833b53
+msgid "select the coordinate"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:35
+#: 47d16cbad6454160995f78f5d46e6c0b
+msgid "add the scale"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:36
+#: 6e3e45ab2e4247d08219deb69081bd59
+msgid "add grid with label"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:37
 #: 137496bdac5b483c94f96f4e9c393b3f
 msgid "customize the *Layout*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:35
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:39
 #: 6bb427055430485db09ef8ac55a04779
 msgid "the *Sheet size* (A3, A4);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:36
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:40
 #: 339dd714d23943839806e78c558340be
 msgid "if include the legend or not;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:37
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:41
 #: 6f9c888d12544cf79aab039ee3af50cf
 msgid "if to put the legend in a separate page;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:38
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:42
 #: aa58dcbaef4d4031aaf73eef374c57c9
 msgid "the page *Orientation* (Landscape or Portrait);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:40
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:44
 #: 36416138ccf14a7a9c14c60d64d307de
 msgid "customize the *Legend*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:42
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:46
 #: eb68c3557100408d9915e1134d93cfe0
 msgid "the *Label Font*;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:43
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:47
 #: abb92e8cf73d465abcd03c216bb2b672
 msgid "the *Font Size*;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:44
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:48
 #: 7669726eaac44ff4a5b83b7acb6bf039
 msgid "the *Font Emphasis* (bold, italic);"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:45
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:49
 #: 14779ab4749046d887929dd1a14b0fcb
 msgid "if *Force Labels*;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:46
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:50
 #: 5d4978ce3d124f0ca6774d93d5edcb70
 msgid "if use *Anti Aliasing Font*;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:47
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:51
 #: 371fa05060104bd0b6ce55da7a0c626a
 msgid "the *Icon Size*;"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:48
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:52
 #: 5a874773f6e64008be5af51ad539b6f0
 msgid "the *Legend Resolution* in dpi."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:50
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:54
 #: a22af172ba494ebfb9d25f22528760f5
-msgid "To print the map click on :guilabel:`Print`."
+msgid "To print the view click on :guilabel:`Print`."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:53
-#: f9ff156e6c8442e7aebd520865b0aedd
-msgid "The Datasets Catalog"
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:57
+#: 3fa4e26580494b58b0ad2c5a404885a1
+msgid "Add dataset"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:55
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:59
 #: ec4a51eb9dc0498d9b70ec8b038a6a87
 msgid ""
 "All the datasets available in GeoNode, both uploaded and remote, can be "
-"loaded on the map through the *Catalog*. Click on the :guilabel:`Catalog`"
-" option of the *Menu* to take a look at the catalog panel."
+"loaded on the map through the *Catalog*. Click on the :guilabel:`Add "
+"dataset` option of the *Menu* to take a look at the catalog panel."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:61
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:65
 #: 97e60707fde544ebb0a8800cd1d8e9bb
 msgid "*The Datasets Catalog*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:63
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:67
 #: bac0cef68c1740099038aeca69870d7d
 msgid ""
 "You can navigate through datasets and look at their *Thumbnail* images, "
-"*Title*, *Description* and *Abstract*. Click on :guilabel:`Add To Map` to"
-" load a dataset into the map, it will be also visible in the :ref:`toc`."
+"*Title*, *Description* and *Abstract*. Click on a dataset to load it into"
+" the map, it will be also visible in the :ref:`toc`."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:67
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:71
 #: cac9773f9f6c4b1ab4fdaf8d33748b1c
 msgid "Performing Measurements"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:69
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:73
 #: e93d26866b5b4bb4a2a77e02fcc9b484
 msgid ""
 "Click on the :guilabel:`Measure` option of the *Menu* to perform a "
@@ -188,12 +208,12 @@ msgid ""
 " measure *Distances*, *Areas* and the *Bearing* of lines."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:75
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:79
 #: b187359adf0041f38c56b5791ae14334
 msgid "*The Measure Tool*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:77
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:81
 #: 4ebc37f078c2479f8be94a32db4ea4fd
 msgid ""
 "To perform a measure draw on the map the geometry you are interested in, "
@@ -201,41 +221,116 @@ msgid ""
 "menu (this tool allows you to change the unit of measure also)."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:82
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:86
 #: f847f77751a14cd7bd1a1f14325207ef
 msgid "*Measuring Areas*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:85
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:89
+#: 642d70d6a245469f82dc1d053ddec88b
+msgid "Add an Annotation"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:90
+#: e93d26866b5b4bb4a2a77e02fcc9b484
+msgid ""
+"Click on the :guilabel:`Annotations` option of the *Menu* to enrich the "
+"map with special features which expose additional information, mark "
+"particular position on the map and so on."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:95
+#: 97e60707fde544ebb0a8800cd1d8e9bb
+msgid "*Annotations panel*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:97
+#: 9d39507d00624ee4bc39d021b69ffdbd ffcbad57368c444d94f5c632494142f5
+msgid "add_annotations_button"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:102
+#: fad342f857724fd2862365a0f8f50a15
+msgid ""
+"To begin, from the annotation panel, the editor can open the new "
+"annotation panel by selecting the |add_annotations_button| button."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:107
+#: 773049c9e6314cb3a9b237729048cabc
+msgid "*Add an Annotations*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:109
+#: 924109d145f44b49ae9513bc46ee18f1
+msgid ""
+"From here the editor can insert a *Title*, a *Description* and choose "
+"between five different types of *Geometries*:"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:111
+#: f847f77751a14cd7bd1a1f14325207ef
+msgid "*Marker*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:112
+#: 646b21aba7ab43c2986fc2ca3a20cf54
+msgid "*Line*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:113
+#: b3aecd0091584b4fb5e595abe381628c
+msgid "*Polygon*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:114
+#: 48dcd4c3c8be49f0801ce2ddff11d819
+msgid "*Text*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:115
+#: 90a2ecd9451343c5b485192d8c7cab6b
+msgid "*Circle*"
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:117
+#: 7160227f62b8407cb8a378b0cc6b5985
+msgid ""
+"See the `MapStore Documentation "
+"<https://docs.mapstore.geosolutionsgroup.com/en/latest/user-"
+"guide/annotations/>`_ for more information."
+msgstr ""
+
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:120
 #: ee40d22e7f7d4d699604d023155d9db4
 msgid "Saving a map"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:87
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:122
 #: 8c6cb9b0343844bfa624b3ccad023223
 msgid ""
 "Once all the customizations have been carried out, you can *Save* your "
 "map by clicking on the :guilabel:`Save` option of the *Menu*."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:88
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:123
 #: fb35450af6d84fe7ad6662910f82a1a2
 msgid "Click :guilabel:`Save` again under the Save options."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:90
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:125
 #: 651b326647394e76b62baa621078a97a
 msgid ""
 "|You could create a new map from the existing view by clicking "
 ":guilabel:`Save As..`. | A new popup window will open."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:96
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:131
 #: 531f5d2240da4835989c10567c61e028
 msgid "*Saving Maps*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/options_menu.rst:98
+#: ../../usage/managing_maps/exploring_maps/options_menu.rst:133
 #: 042146fdc9d842c3908b4e2ba9c4c4a3
 msgid ""
 "The current map title is filled by default, You can change it to the "
@@ -316,5 +411,40 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "*Your Map into the List*"
+#~ msgstr ""
+
+#~ msgid "Printing a Map"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The `MapStore <https://mapstore2.geo-"
+#~ "solutions.it/mapstore/#/>`_ based map viewer "
+#~ "of GeoNode allows you to print "
+#~ "your map with a customizable layout."
+#~ msgstr ""
+
+#~ msgid "To print the map click on :guilabel:`Print`."
+#~ msgstr ""
+
+#~ msgid "The Datasets Catalog"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All the datasets available in GeoNode,"
+#~ " both uploaded and remote, can be "
+#~ "loaded on the map through the "
+#~ "*Catalog*. Click on the :guilabel:`Catalog`"
+#~ " option of the *Menu* to take a"
+#~ " look at the catalog panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can navigate through datasets and"
+#~ " look at their *Thumbnail* images, "
+#~ "*Title*, *Description* and *Abstract*. Click"
+#~ " on :guilabel:`Add To Map` to load"
+#~ " a dataset into the map, it "
+#~ "will be also visible in the "
+#~ ":ref:`toc`."
 #~ msgstr ""
 

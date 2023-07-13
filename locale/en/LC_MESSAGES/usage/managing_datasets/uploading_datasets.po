@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,8 +40,8 @@ msgstr ""
 #: 12dc294197384e8f91c4a3f80a89c9d1
 msgid ""
 "The *Dataset Uploading* page can be reached from the :guilabel:`Upload "
-"dataset` link of the :guilabel:`Create new` menu above the resources list"
-" page."
+"dataset` link of the :guilabel:`Add Resource` menu above the resources "
+"list page."
 msgstr ""
 
 #: ../../usage/managing_datasets/uploading_datasets.rst:14
@@ -62,37 +62,37 @@ msgstr ""
 #: ../../usage/managing_datasets/uploading_datasets.rst:24
 #: eccd9022d6684e0c9e1f4603ea0353ef
 msgid ""
-"Through the :guilabel:`Choose Files` button you can select files from "
-"your disk, make sure they are valid raster or vector spatial data. You "
-"can also change the default *Share options* settings (see :ref:`dataset-"
-"permissions` for further information on how to set share options)."
+"Through the :guilabel:`Select files` button you can select files from "
+"your disk, make sure they are valid raster or vector spatial data, then "
+"you can click to :guilabel:`Upload` button."
 msgstr ""
 
 #: ../../usage/managing_datasets/uploading_datasets.rst:25
-#: aadfac96bec842409e783e2229132529
+#: 34bd9606521e4d9db71f229ba2e16d83
 msgid ""
-"Select the *charset*, then click on :guilabel:`Upload files` to start the"
-" process or click :guilabel:`Clear` to remove all the loaded files form "
-"the page."
+"A progress bar shows the operation made during the dataset upload and "
+"alerts you when the process is over."
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:27
+#: ../../usage/managing_datasets/uploading_datasets.rst:30
+#: a11d2efe22b640a582f57a60ef58d184
+msgid "*Upload dataset*"
+msgstr ""
+
+#: ../../usage/managing_datasets/uploading_datasets.rst:33
 #: c9eeb07ce0104f0db25f12e00cb6aa4a
 msgid ""
-"In this example the ``ne_10m_airports_vufl8s3`` ESRI Shapefile, with all "
-"its mandatory files (`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen."
-" A progress bar shows the operation made during the dataset upload and "
-"alerts you when the process is over. When the process ends click the "
-"dsataset name in the table to check the dataset has been correctly "
-"uploaded."
+"In this example the ``ne_10m_airports2`` ESRI Shapefile, with all its "
+"mandatory files (`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen. "
+"When the process ends click on :guilabel:`View` button"
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:34
+#: ../../usage/managing_datasets/uploading_datasets.rst:39
 #: a11d2efe22b640a582f57a60ef58d184
 msgid "*Dataset uploading finished*"
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:36
+#: ../../usage/managing_datasets/uploading_datasets.rst:41
 #: 92fccfbef69f4f22932439c7d94502fd
 msgid ""
 "There are lot of free spatial dataset available in the Internet. In this "
@@ -101,7 +101,7 @@ msgid ""
 "used."
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:38
+#: ../../usage/managing_datasets/uploading_datasets.rst:43
 #: 8467ec4b379046c19ead26eaa373abb3
 msgid ""
 "In the next paragraphs you will learn how to create a dataset from "
@@ -109,19 +109,19 @@ msgid ""
 "and how to edit them."
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:40
+#: ../../usage/managing_datasets/uploading_datasets.rst:45
 #: dfe024f8dad54ce2add50ead8f577d29
 msgid "If you get the following error message:"
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:42
+#: ../../usage/managing_datasets/uploading_datasets.rst:47
 #: 6cb944b953f24667a02cb381c7d4221a
 msgid ""
 "``Total upload size exceeds 100.0 MB. Please try again with smaller "
 "files.``"
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:44
+#: ../../usage/managing_datasets/uploading_datasets.rst:49
 #: fb09376cc2d74d40ac825e76b82f597f
 msgid ""
 "This means that there is an upload size limit of 100 MB. An user with "
@@ -130,23 +130,63 @@ msgid ""
 "size-limits>`__."
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:46
+#: ../../usage/managing_datasets/uploading_datasets.rst:51
 #: c6db1e7476a0442d95471727519c0629
 msgid "Similarly, for the following error message:"
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:48
+#: ../../usage/managing_datasets/uploading_datasets.rst:53
 #: 2200bb002487401d82870551511de271
 msgid ""
 "``The number of active parallel uploads exceeds 5. Wait for the pending "
 "ones to finish.``"
 msgstr ""
 
-#: ../../usage/managing_datasets/uploading_datasets.rst:50
+#: ../../usage/managing_datasets/uploading_datasets.rst:55
 #: ededd25304e748a5bb2699e265639333
 msgid ""
 "You can modify the upload parallelism limits at the `admin panel for "
 "parallelism limits <../../admin/upload-parallelism-limit/index.html"
 "#upload-parallelism-limits>`__."
 msgstr ""
+
+#~ msgid ""
+#~ "The *Dataset Uploading* page can be "
+#~ "reached from the :guilabel:`Upload dataset`"
+#~ " link of the :guilabel:`Create new` "
+#~ "menu above the resources list page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Through the :guilabel:`Choose Files` button"
+#~ " you can select files from your "
+#~ "disk, make sure they are valid "
+#~ "raster or vector spatial data. You "
+#~ "can also change the default *Share "
+#~ "options* settings (see :ref:`dataset-"
+#~ "permissions` for further information on "
+#~ "how to set share options)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select the *charset*, then click on "
+#~ ":guilabel:`Upload files` to start the "
+#~ "process or click :guilabel:`Clear` to "
+#~ "remove all the loaded files form "
+#~ "the page."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this example the "
+#~ "``ne_10m_airports_vufl8s3`` ESRI Shapefile, with "
+#~ "all its mandatory files (`.shp`, `.shx`,"
+#~ " `.dbf` and `.prj`), has been chosen."
+#~ " A progress bar shows the operation"
+#~ " made during the dataset upload and"
+#~ " alerts you when the process is "
+#~ "over. When the process ends click "
+#~ "the dsataset name in the table to"
+#~ " check the dataset has been correctly"
+#~ " uploaded."
+#~ msgstr ""
 

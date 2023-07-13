@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,43 +39,48 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:10
-#: eafaa10f82604cd89a4a3cf6a021bf0a
-msgid "View (allows to view the document)."
+#: 7286bcefedaa4a2fb621e236b20c96ff
+msgid "None (the document is not visible)."
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:11
-#: 67ae51a4b17d48379ba0f17497159aed
-msgid "Download (allows to view and download the document)."
+#: eafaa10f82604cd89a4a3cf6a021bf0a
+msgid "View Metadata  (allows to view the document)."
 msgstr ""
 
 #: ../../usage/managing_documents/document_permissions.rst:12
+#: 67ae51a4b17d48379ba0f17497159aed
+msgid "View and Download (allows to view and download the document)."
+msgstr ""
+
+#: ../../usage/managing_documents/document_permissions.rst:13
 #: b9f37dcede364220b5f2c0cceeacd8c5
 msgid "Edit (allows to change the document metadata and attributes)."
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:13
+#: ../../usage/managing_documents/document_permissions.rst:14
 #: 4674d39c457b47a493cbc3a1043f4d9c
 msgid ""
 "Manage it (allows to update, delete, change share options, "
 "publish/unpublish)."
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:20
+#: ../../usage/managing_documents/document_permissions.rst:21
 #: 5f76c046c29142298c563221e52e6e5a
 msgid "See an example in the picture below."
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:23
+#: ../../usage/managing_documents/document_permissions.rst:24
 #: 4741ddd11cb54a309785cb07dfb2ce84
 msgid "After making changes, always save them with the *Save* Link in the menu"
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:28
+#: ../../usage/managing_documents/document_permissions.rst:29
 #: 7286bcefedaa4a2fb621e236b20c96ff
 msgid "*Changing the Document share options*"
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:30
+#: ../../usage/managing_documents/document_permissions.rst:31
 #: 4c22de679289467298957d9dc0611f81
 msgid ""
 "Usually those with options of editing metadata and the management of a "
@@ -83,7 +88,7 @@ msgid ""
 "contributor who uploaded it has those options by default."
 msgstr ""
 
-#: ../../usage/managing_documents/document_permissions.rst:32
+#: ../../usage/managing_documents/document_permissions.rst:33
 #: bf812afa61d8421dbaac0f70351ba8e4
 msgid ""
 "Once the share options are set, click :guilabel:`Save` link in the menu "
@@ -136,5 +141,11 @@ msgstr ""
 #~ msgid ""
 #~ "Once the permissions are set, click "
 #~ ":guilabel:`Apply changes` to save them."
+#~ msgstr ""
+
+#~ msgid "View (allows to view the document)."
+#~ msgstr ""
+
+#~ msgid "Download (allows to view and download the document)."
 #~ msgstr ""
 

@@ -3,9 +3,7 @@
 Share Options
 =============
 
-When creating or uploading a new Dataset you have to set who can view, download, edit and manage that Dataset. By default only owners can edit and manage datasets, anyone can view them.
-
-In order to modify the Dataset *Share options* settings, On the detail page of the dataset click the :guilabel:`Share` link in the menu.
+In order to modify the Dataset *Share options* settings, on the detail page of the dataset click the :guilabel:`Share` link in the menu. By default only owners can edit and manage datasets, anyone can view them.
 
 .. figure:: img/change_dataset_permissions.png
     :align: center

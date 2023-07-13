@@ -7,8 +7,9 @@ GeoNode encourages to publicly, share and make available for download informatio
 
 Through the *Share* Link shown in the menu it is possible to manage the document share options. it opens a form where set up who can:
 
-* View (allows to view the document).
-* Download (allows to view and download the document).
+* None (the document is not visible).
+* View Metadata  (allows to view the document).
+* View and Download (allows to view and download the document).
 * Edit (allows to change the document metadata and attributes).
 * Manage it (allows to update, delete, change share options, publish/unpublish).
 

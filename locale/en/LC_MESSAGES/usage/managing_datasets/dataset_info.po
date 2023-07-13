@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,10 +56,10 @@ msgid "Dataset Info"
 msgstr ""
 
 #: ../../usage/managing_datasets/dataset_info.rst:18
-#: 01273603d3eb4051bf952c9c7c52074f
+#: 9edec77d4bfd48c59554632cd4fac448
 msgid ""
-"When you click the *Info* link in the menu, a new page will be opened on "
-"right."
+"As soon as a dataset is opened, the information panel is shown on right "
+"and it reports"
 msgstr ""
 
 #: ../../usage/managing_datasets/dataset_info.rst:20
@@ -90,9 +90,52 @@ msgid "*Dataset Attributes tab*"
 msgstr ""
 
 #: ../../usage/managing_datasets/dataset_info.rst:34
+#: 0c5e52717d6d409b8b7a03f52f4316f1
+msgid "From the right toolbar on the **Info** panel it is possible:"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:39
+#: b9f0d70388864f839becd2fa0c52f01e
+msgid "*Dataset Info toolbar*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:41
 #: 05660cb853ca44a08c8711e23cc21f46
 msgid ""
-"If you want this dataset in your *Favorites* (see :ref:`editing-"
-"profile`), You can click on star icon near the datset name."
+"Add dataset in your *Favorites* (see :ref:`editing-profile`), clicking on"
+" star icon."
 msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:43
+#: 69aef3f0a1dc447190fca4a6bad3f742
+msgid "Directly *Download* the dataset oh `ShapeFile` format"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:45
+#: 8246c113cb984431983289cce0e71de1
+msgid "*Share* the document url"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:47
+#: 6bd561583d4f4a6aa95ef987f0197e0f
+msgid "Copy the *WMS Capabilities url*"
+msgstr ""
+
+#: ../../usage/managing_datasets/dataset_info.rst:49
+#: dd8c8fbe4c64411499284ddab83ec136
+msgid "Change the document *Title* by clicking on it"
+msgstr ""
+
+#~ msgid ""
+#~ "When you click the *Info* link in"
+#~ " the menu, a new page will be"
+#~ " opened on right."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want this dataset in your"
+#~ " *Favorites* (see :ref:`editing-profile`), "
+#~ "You can click on star icon near"
+#~ " the datset name."
+#~ msgstr ""
 

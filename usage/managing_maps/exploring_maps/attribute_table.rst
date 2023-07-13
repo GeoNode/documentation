@@ -132,7 +132,7 @@ When clicking on |advanced_search_button| from the dataset *Attributes Table* th
 
   You can also decide if *All* the conditions have to be met, if only *Any* or *None* of them (see the red arrow in the picture above).
 
-* | The **  Area of interest** filtering allows you to filter features that have some relationship with a spatial region that you draw on the map.
+* | The ** Area of interest** filtering allows you to filter features that have some relationship with a spatial region that you draw on the map.
   | Select the *Filter Type* (Circle, Viewport, Polygon or Rectangle), draw the spatial region of interest on the map, select a *Geometric Operation* (Intersects, Bounding Box, Contains or Is contained) and then click on |start_search_button|.
 
   .. figure:: img/filtering_region_of_interest.png
@@ -152,4 +152,4 @@ When clicking on |advanced_search_button| from the dataset *Attributes Table* th
 
       *Dataset Filtering*
 
-You can read more about the *Attributes Table* and the *Advanced Search* on the `MapStore2 Documentation <https://mapstore2.readthedocs.io/en/latest/user-guide/attributes-table/#advanced-filtering>`_.
+You can read more about the *Attributes Table* and the *Advanced Search* on the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/filtering-layers/#query-panel>`_.

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,8 +67,8 @@ msgstr ""
 msgid ""
 "Your personal information is shown under the username. At the bottom of "
 "the page are listed all the resources associated to your *Profile*, you "
-"can decide to view only datasets or maps or documents by clicking on the "
-"corresponding tab."
+"can decide to view only datasets, maps ,documents, dashboard or geostory "
+"by clicking on the corresponding tab."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:27
@@ -82,47 +82,23 @@ msgstr ""
 #: 08c9eee6e5824f8197c1193a9ac83c76
 msgid ""
 "On the right side of the page there are many useful links to edit "
-"personal information, to upload and create datasets or maps, to update "
-"your *Profile* settings and to get in touch with other GeoNode users."
+"personal information to update your *Profile* settings and to get in "
+"touch with other GeoNode users."
 msgstr ""
 
 #: ../../usage/accounts_user_profile/updating_profile/index.rst:31
-#: a4e55c0bcaf1450d887095afd083c454
-msgid ""
-"The :guilabel:`Favorites` link, also accessible from the user menu, drive"
-" you to the list of the resources marked as your favorites."
-msgstr ""
-
-#: ../../usage/accounts_user_profile/updating_profile/index.rst:36
-#: c607db282ee84a7482cd1d63f5bf154b
-msgid "*Favorites*"
-msgstr ""
-
-#: ../../usage/accounts_user_profile/updating_profile/index.rst:38
-#: ec32641d09a94ef19fe7eccbb0f75dc8
-msgid ""
-"Click the :guilabel:`Delete from Favorites` button to remove the resource"
-" from the list."
-msgstr ""
-
-#: ../../usage/accounts_user_profile/updating_profile/index.rst:40
 #: 457e9e6485ea4d8da3b56cce747e5c9f
 msgid ""
 "The :guilabel:`My Activities` link allows to see all your recent "
 "activities on GeoNode such as datasets uploading and maps creation."
 msgstr ""
 
-#: ../../usage/accounts_user_profile/updating_profile/index.rst:45
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:36
 #: 50fab30e09ce49a7965a51028362a5e0
 msgid "*Recent activities*"
 msgstr ""
 
-#: ../../usage/accounts_user_profile/updating_profile/index.rst:47
-#: b35f95ff66264a1796e0c83b2e79dd3b
-msgid "This link is also available in the user menu."
-msgstr ""
-
-#: ../../usage/accounts_user_profile/updating_profile/index.rst:49
+#: ../../usage/accounts_user_profile/updating_profile/index.rst:39
 #: 68a8eba954b54234b833a265bd4e91d9
 msgid ""
 "All other links and their functionalities will be described in depth in "
@@ -174,5 +150,43 @@ msgstr ""
 #~ "to see all your recent activities "
 #~ "on GeoNode such as layers uploading "
 #~ "and maps creation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your personal information is shown under"
+#~ " the username. At the bottom of "
+#~ "the page are listed all the "
+#~ "resources associated to your *Profile*, "
+#~ "you can decide to view only "
+#~ "datasets or maps or documents by "
+#~ "clicking on the corresponding tab."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On the right side of the page "
+#~ "there are many useful links to "
+#~ "edit personal information, to upload and"
+#~ " create datasets or maps, to update"
+#~ " your *Profile* settings and to get"
+#~ " in touch with other GeoNode users."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Favorites` link, also "
+#~ "accessible from the user menu, drive "
+#~ "you to the list of the resources"
+#~ " marked as your favorites."
+#~ msgstr ""
+
+#~ msgid "*Favorites*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click the :guilabel:`Delete from Favorites`"
+#~ " button to remove the resource from"
+#~ " the list."
+#~ msgstr ""
+
+#~ msgid "This link is also available in the user menu."
 #~ msgstr ""
 

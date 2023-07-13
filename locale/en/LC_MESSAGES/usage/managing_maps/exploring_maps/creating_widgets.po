@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,65 +171,68 @@ msgid ""
 msgstr ""
 
 #: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:92
-#: 94fd64d09367446ab7fc3bb928fd562d
+#: d7a1380045ee4320a308696fa1d36e01
 msgid ""
-"So, choose what attributes you are interested in and click on "
-"|configure_widgets_options_button|."
+"You can also enter a *Title* for each column to be displayed as the table"
+" header in place of the Name of the layer field and enter a *Description*"
+" for each field to be displayed as a tooltip, visible moving the mouse on"
+" the column header. | So, choose what attributes you are interested in "
+"and click on |configure_widgets_options_button|."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:97
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:98
 #: 469ad77a30084203be6061f9b926c359
 msgid "*Table Widgets Columns*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:99
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:100
 #: dbfe4c4e3ffc4bb9ae2a6281cb4d93dc
 msgid ""
 "Insert *Title* and *Description* (optional) and click on |save_button|. "
 "The example below shows the *Table Widget* on the map."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:104
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:105
 #: 51e8f150c3e942a3bd6e71783e8cf8e2
 msgid "*Table Widget*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:107
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:108
 #: d43440c96d264212b74b9f9e25547096
 msgid "Counter Widgets"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:109
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:110
 #: 997d8d0ee969493abf30b37e9a3a730b
 msgid ""
 "*Counter Widgets* are numeric representations of some attributes. For "
 "example you can represent the average speed limit on a road network."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:115
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:116
 #: 49f697780b7b4d56999d802cf8ac2351
 msgid "*Counter Widget Creation*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:117
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:118
 #: 653a08e6ad6546c7a42c0d4215967bfe
 msgid ""
 "Click on |configure_widgets_options_button|, insert *Title* and "
 "*Description* then click on |save_button|."
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:122
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:123
 #: 6d2b10d6e5204df8be07152ab5d35994
 msgid "*Counter Widget*"
 msgstr ""
 
-#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:124
+#: ../../usage/managing_maps/exploring_maps/creating_widgets.rst:125
 #: e15f018f839147608bcb78ab40081755
 msgid ""
 "The GeoNode map viewer is `MapStore <https://mapstore2.geo-"
 "solutions.it/mapstore/#/>`_ based, see the `MapStore Documentation "
-"<https://mapstore2.readthedocs.io/en/latest/user-guide/widgets/>`_ for "
-"further information."
+"<https://docs.mapstore.geosolutionsgroup.com/en/latest/user-"
+"guide/widgets/>`_ for further information."
 msgstr ""
 
 #~ msgid ""
@@ -266,5 +269,19 @@ msgstr ""
 #~ "decide to show a subset of the "
 #~ "features, through filters, and you can"
 #~ " select one or more columns/attributes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "So, choose what attributes you are "
+#~ "interested in and click on "
+#~ "|configure_widgets_options_button|."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The GeoNode map viewer is `MapStore "
+#~ "<https://mapstore2.geo-solutions.it/mapstore/#/>`_ based,"
+#~ " see the `MapStore Documentation "
+#~ "<https://mapstore2.readthedocs.io/en/latest/user-"
+#~ "guide/widgets/>`_ for further information."
 #~ msgstr ""
 

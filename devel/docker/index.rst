@@ -16,13 +16,13 @@ Build (first time only):
 
 .. code-block:: shell
 
-    docker-compose --project-name geonode -f docker-compose.yml -f .devcontainer/docker-compose.yml build
+    docker-compose --project-name geonode -f docker-compose-dev.yml -f .devcontainer/docker-compose.yml build
 
 Running:
 
 .. code-block:: shell
 
-    docker-compose --project-name geonode -f docker-compose.yml -f .devcontainer/docker-compose.yml up
+    docker-compose --project-name geonode -f docker-compose-dev.yml -f .devcontainer/docker-compose.yml up
 
 .. note::
     If you are running ``postgresql`` and ``tomcat9`` services, you need to stop them, 

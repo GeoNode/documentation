@@ -11,182 +11,6 @@ The following steps will guide you to a new setup of GeoNode Project. All guides
 
 Those guides **are not** meant to be used on a production system. There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine. In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
 
-Docker
-======
-
-.. warning:: Before moving with this section, you should have read and clearly understood the ``INSTALLATION > GeoNode Core`` sections, and in particular the ``Docker`` one. Everything said for the GeoNode Core Vanilla applies here too, except that the Docker container names will be slightly different. As an instance if you named your project ``my_geonode``, your containers will be called:
-
-  .. code-block:: shell
-
-    'django4my_geonode' instead of 'django4geonode' and so on...
-
-Deploy an instance of a geonode-project Django template with Docker on localhost
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Prepare the environment
-
-.. code-block:: shell
-
-  sudo mkdir -p /opt/geonode_custom/
-  sudo usermod -a -G www-data geonode
-  sudo chown -Rf geonode:www-data /opt/geonode_custom/
-  sudo chmod -Rf 775 /opt/geonode_custom/
-
-Clone the source code
-
-.. code-block:: shell
-
-  cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
-
-Make an instance out of the ``Django Template``
-
-.. note:: We will call our instance ``my_geonode``. You can change the name at your convenience.
-
-.. code-block:: shell
-
-  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-  mkvirtualenv --python=/usr/bin/python3 my_geonode
-
-  Alterantively you can also create the virtual env like below
-  python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
-  source /home/geonode/dev/.venvs/my_geonode/bin/activate
-
-  pip install Django==3.2.13
-
-  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
-  cd /opt/geonode_custom/my_geonode
-  
-Create the .env file
-
-An `.env` file is requird to run the application. It can be created from the `.env.sample` either manually or with the create-envfile.py script.
-
-The script accepts several parameters to create the file, in detail:
-
-    - *hostname*: e.g. master.demo.geonode.org, default localhost
-    - *https*: (boolean), default value is False
-    - *email*: Admin email (this is required if https is set to True since a valid email is required by Letsencrypt certbot)
-    - *emv_type*: `prod`, `test` or `dev`. It will set the `DEBUG` variable to `False` (`prod`, `test`) or `True` (`dev`)
-    - *geonodepwd*: GeoNode admin password (required inside the .env)
-    - *geoserverpwd*: Geoserver admin password (required inside the .env)
-    - *pgpwd*: PostgreSQL password (required inside the .env)
-    - *dbpwd*: GeoNode DB user password (required inside the .env)
-    - *geodbpwd*: Geodatabase user password (required inside the .env)
-    - *clientid*: Oauth2 client id (required inside the .env)
-    - *clientsecret*: Oauth2 client secret (required inside the .env)
-    - *secret key*: Django secret key (required inside the .env)
-    - *sample_file*: absolute path to a env_sample file used to create the env_file. If not provided, the one inside the GeoNode project is used.
-    - *file*: absolute path to a json file that contains all the above configuration
-
-.. note:: if the same configuration is passed in the json file and as an argument, the CLI one will overwrite the one in the JSON file. If some value is not provided, a random string is used
-
-      Example USAGE
-      
-.. code-block:: shell
-
-      ```bash
-      python create-envfile.py -f /opt/core/geonode-project/file.json \
-        --hostname localhost \
-        --https \
-        --email random@email.com \
-        --geonodepwd gn_password \
-        --geoserverpwd gs_password \
-        --pgpwd pg_password \
-        --dbpwd db_password \
-        --geodbpwd _db_password \
-        --clientid 12345 \
-        --clientsecret abc123 
-      ```
-
-Example JSON expected:
-      
-.. code-block:: shell
-
-      ```JSON
-      {
-        "hostname": "value",
-        "https": "value",
-        "email": "value",
-        "geonodepwd": "value",
-        "geoserverpwd": "value",
-        "pgpwd": "value",
-        "dbpwd": "value",
-        "geodbpwd": "value",
-        "clientid": "value",
-        "clientsecret": "value"
-      } 
-      ```
-
-Modify the code and the templates and rebuild the Docker Containers
-
-.. code-block:: shell
-
-  docker-compose -f docker-compose.yml build --no-cache
-
-Finally, run the containers
-
-.. code-block:: shell
-
-  docker-compose -f docker-compose.yml up -d
-
-Deploy an instance of a geonode-project Django template with Docker on a domain
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note:: We will use ``www.example.org`` as an example. You can change the name at your convenience.
-
-Stop the containers
-
-.. code-block:: shell
-
-  cd /opt/geonode_custom/my_geonode
-
-  docker-compose -f docker-compose.yml stop
-
-Edit the ``ENV`` override file in order to deploy on ``www.example.org``
-
-Replace everywhere ``localhost`` with ``www.example.org``
-
-.. code-block:: shell
-
-  vim .env
-
-.. code-block:: shell
-
-  # e.g.: :%s/localhost/www.example.org/g
-
-.. note:: It is possible to override here even more variables to customize the GeoNode instance. See the ``GeoNode Settings`` section in order to get a list of the available options.
-
-Run the containers in daemon mode
-
-.. code-block:: shell
-
-  docker-compose -f docker-compose.yml -f docker-compose.override.example-org.yml up --build -d
-
-Test geonode-project with vagrant
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note:: Inside geonode-project files you will find one file named `Vagrantfile.compose` and one named `Vagrantfile.stack`, copy one of them onto file `Vagrantfile` to use them with vagrant.
-
-.. code-block:: shell
-
-  apt-get install -y vagrant
-  #choose what to test (in this case docker-compose.yml)
-  cp Vagrantfile.compose Vagrantfile
-  #this will start a vargant virtual machine, generate and build geonode-project
-  vagrant up
-  # check services are up upon reboot
-  vagrant ssh geonode-compose -c 'docker ps'
-  vagrant destroy -f
-  # test docker swarm
-  cp Vagrantfile.stack Vagrantfile
-  vagrant up
-  # check services are up upon reboot
-  vagrant ssh geonode-vagrant -c 'docker service ls'
-  vagrant destroy -f
-
-.. note:: Vagrant will generate a dummi project named "antani" inside vagrant, starting with the geonode-project codebase, this way it is possible to test inside vagrant almost instantly what one modifies into geonode-project
-
-
 Ubuntu 20.04
 ============
 
@@ -510,3 +334,177 @@ GeoNode Project.
 
 * Everytime you'll find paths pointing to ``/opt/geonode/``, you'll need to update them to point to your custom project instead (in this example ``/opt/geonode_custom/my_geonode``).
 
+Docker
+======
+
+.. warning:: Before moving with this section, you should have read and clearly understood the ``INSTALLATION > GeoNode Core`` sections, and in particular the ``Docker`` one. Everything said for the GeoNode Core Vanilla applies here too, except that the Docker container names will be slightly different. As an instance if you named your project ``my_geonode``, your containers will be called:
+
+  .. code-block:: shell
+
+    'django4my_geonode' instead of 'django4geonode' and so on...
+
+Deploy an instance of a geonode-project Django template with Docker on localhost
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Prepare the environment
+
+.. code-block:: shell
+
+  sudo mkdir -p /opt/geonode_custom/
+  sudo usermod -a -G www-data geonode
+  sudo chown -Rf geonode:www-data /opt/geonode_custom/
+  sudo chmod -Rf 775 /opt/geonode_custom/
+
+Clone the source code
+
+.. code-block:: shell
+
+  cd /opt/geonode_custom/
+  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
+
+Make an instance out of the ``Django Template``
+
+.. note:: We will call our instance ``my_geonode``. You can change the name at your convenience.
+
+.. code-block:: shell
+
+  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+  mkvirtualenv --python=/usr/bin/python3 my_geonode
+
+  Alterantively you can also create the virtual env like below
+  python3.8 -m venv /home/geonode/dev/.venvs/my_geonode
+  source /home/geonode/dev/.venvs/my_geonode/bin/activate
+
+  pip install Django==3.2.13
+
+  django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
+  cd /opt/geonode_custom/my_geonode
+  
+Create the .env file
+
+An `.env` file is requird to run the application. It can be created from the `.env.sample` either manually or with the create-envfile.py script.
+
+The script accepts several parameters to create the file, in detail:
+
+    - *hostname*: e.g. master.demo.geonode.org, default localhost
+    - *https*: (boolean), default value is False
+    - *email*: Admin email (this is required if https is set to True since a valid email is required by Letsencrypt certbot)
+    - *emv_type*: `prod`, `test` or `dev`. It will set the `DEBUG` variable to `False` (`prod`, `test`) or `True` (`dev`)
+    - *geonodepwd*: GeoNode admin password (required inside the .env)
+    - *geoserverpwd*: Geoserver admin password (required inside the .env)
+    - *pgpwd*: PostgreSQL password (required inside the .env)
+    - *dbpwd*: GeoNode DB user password (required inside the .env)
+    - *geodbpwd*: Geodatabase user password (required inside the .env)
+    - *clientid*: Oauth2 client id (required inside the .env)
+    - *clientsecret*: Oauth2 client secret (required inside the .env)
+    - *secret key*: Django secret key (required inside the .env)
+    - *sample_file*: absolute path to a env_sample file used to create the env_file. If not provided, the one inside the GeoNode project is used.
+    - *file*: absolute path to a json file that contains all the above configuration
+
+.. note:: if the same configuration is passed in the json file and as an argument, the CLI one will overwrite the one in the JSON file. If some value is not provided, a random string is used
+
+      Example USAGE
+      
+.. code-block:: shell
+
+      ```bash
+      python create-envfile.py -f /opt/core/geonode-project/file.json \
+        --hostname localhost \
+        --https \
+        --email random@email.com \
+        --geonodepwd gn_password \
+        --geoserverpwd gs_password \
+        --pgpwd pg_password \
+        --dbpwd db_password \
+        --geodbpwd _db_password \
+        --clientid 12345 \
+        --clientsecret abc123 
+      ```
+
+Example JSON expected:
+      
+.. code-block:: shell
+
+      ```JSON
+      {
+        "hostname": "value",
+        "https": "value",
+        "email": "value",
+        "geonodepwd": "value",
+        "geoserverpwd": "value",
+        "pgpwd": "value",
+        "dbpwd": "value",
+        "geodbpwd": "value",
+        "clientid": "value",
+        "clientsecret": "value"
+      } 
+      ```
+
+Modify the code and the templates and rebuild the Docker Containers
+
+.. code-block:: shell
+
+  docker-compose -f docker-compose.yml build --no-cache
+
+Finally, run the containers
+
+.. code-block:: shell
+
+  docker-compose -f docker-compose.yml up -d
+
+Deploy an instance of a geonode-project Django template with Docker on a domain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: We will use ``www.example.org`` as an example. You can change the name at your convenience.
+
+Stop the containers
+
+.. code-block:: shell
+
+  cd /opt/geonode_custom/my_geonode
+
+  docker-compose -f docker-compose.yml stop
+
+Edit the ``ENV`` override file in order to deploy on ``www.example.org``
+
+Replace everywhere ``localhost`` with ``www.example.org``
+
+.. code-block:: shell
+
+  vim .env
+
+.. code-block:: shell
+
+  # e.g.: :%s/localhost/www.example.org/g
+
+.. note:: It is possible to override here even more variables to customize the GeoNode instance. See the ``GeoNode Settings`` section in order to get a list of the available options.
+
+Run the containers in daemon mode
+
+.. code-block:: shell
+
+  docker-compose -f docker-compose.yml -f docker-compose.override.example-org.yml up --build -d
+
+Test geonode-project with vagrant
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: Inside geonode-project files you will find one file named `Vagrantfile.compose` and one named `Vagrantfile.stack`, copy one of them onto file `Vagrantfile` to use them with vagrant.
+
+.. code-block:: shell
+
+  apt-get install -y vagrant
+  #choose what to test (in this case docker-compose.yml)
+  cp Vagrantfile.compose Vagrantfile
+  #this will start a vargant virtual machine, generate and build geonode-project
+  vagrant up
+  # check services are up upon reboot
+  vagrant ssh geonode-compose -c 'docker ps'
+  vagrant destroy -f
+  # test docker swarm
+  cp Vagrantfile.stack Vagrantfile
+  vagrant up
+  # check services are up upon reboot
+  vagrant ssh geonode-vagrant -c 'docker service ls'
+  vagrant destroy -f
+
+.. note:: Vagrant will generate a dummi project named "antani" inside vagrant, starting with the geonode-project codebase, this way it is possible to test inside vagrant almost instantly what one modifies into geonode-project

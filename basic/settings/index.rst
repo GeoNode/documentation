@@ -1107,6 +1107,29 @@ GEONODE_EXCHANGE
 
     The definition of Exchanges published by geonode. Find more about Exchanges at `celery docs <https://docs.celeryproject.org/en/latest/userguide/routing.html#exchanges-queues-and-routing-keys>`__.
 
+GEOSERVER_ADMIN_USER
+---------------------------
+
+    | Default: ``admin``
+    | Env: ``GEOSERVER_ADMIN_PASSWORD``
+
+    The geoserver admin username.
+
+GEOSERVER_ADMIN_PASSWORD
+-----------------------
+
+    | Default: ``geoserver``
+    | Env: ``GEOSERVER_ADMIN_USER``
+
+    The GeoServer admin password.
+
+GEOSERVER_FACTORY_PASSWORD
+-----------------------
+
+    | Default: ``geoserver``
+    | Env: ``GEOSERVER_FACTORY_PASSWORD``
+
+    The GeoServer admin factory password, required for the first time configuration fo Geoserver (Docker setup).
 
 GEOSERVER_EXCHANGE
 ------------------
@@ -1624,22 +1647,6 @@ OAUTH2_PROVIDER_REFRESH_TOKEN_MODEL
     | Default: ``oauth2_provider.RefreshToken``
 
     Ref.: `OAuth Toolkit settings <https://django-oauth-toolkit.readthedocs.io/en/latest/settings.html>`__
-
-OGC_SERVER_DEFAULT_PASSWORD
----------------------------
-
-    | Default: ``geoserver``
-    | Env: ``GEOSERVER_ADMIN_PASSWORD``
-
-    The geoserver password.
-
-OGC_SERVER_DEFAULT_USER
------------------------
-
-    | Default: ``admin``
-    | Env: ``GEOSERVER_ADMIN_USER``
-
-    The GeoServer user.
 
 OGC_SERVER
 ----------

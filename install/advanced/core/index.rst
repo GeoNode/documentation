@@ -1,8 +1,8 @@
-.. _geonode-core:
+.. _geonode-vanilla:
 
-============
-GeoNode Core
-============
+===============
+GeoNode Vanilla
+===============
 
 Overview
 ========
@@ -16,392 +16,7 @@ and then by configuring an HTTPD server to serve GeoNode through the standard ``
   There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine.
   In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
 
-Docker
-======
-
-Setting up GeoNode with Docker and Docker Compose is the most straighforward solution. By default it will pull / build images and spawn Containers
-for all the GeoNode backend services (PostgreSQL, Geoserver, RabbitMQ, etc.). You can of course adapt the standard setup for more advnaced and custom scenarios.
-
-In this section we are going to list the passages needed to:
-
-1. Install ``Docker`` and ``docker-compose`` packages on a Ubuntu host
-2. Deploy a vanilla ``GeoNode`` with ``Docker``
-
-  a. Override the ``ENV`` variables to deploy on a ``public IP`` or ``domain``
-  b. Access the ``django4geonode`` Docker image to update the code-base and/or change internal settings
-  c. Access the ``geoserver4geonode`` Docker image to update the GeoServer version
-
-3. Passages to completely get rid of old ``Docker`` images and volumes (prune the environment completely)
-
-.. include:: docker/ubuntu.rst
-
-3. Test Docker Compose Instance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Logout and login again on shell and then execute:
-
-.. code-block:: shell
-
-  docker run -it hello-world
-
-4. Deploy a vanilla GeoNode with Docker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Clone the Project
-
-.. code-block:: shell
-
-  # Let's create the GeoNode core base folder and clone it
-  sudo mkdir -p /opt/geonode/
-  sudo usermod -a -G www-data geonode
-  sudo chown -Rf geonode:www-data /opt/geonode/
-  sudo chmod -Rf 775 /opt/geonode/
-
-  # Clone the GeoNode source code on /opt/geonode
-  cd /opt
-  git clone https://github.com/GeoNode/geonode.git -b 4.1.x geonode
-
-Start the Docker instances on ``localhost``
-
-.. warning:: The first time pulling the images will take some time. You will need a good internet connection.
-
-
-.. code-block:: shell
-
-    cd /opt/geonode
-    docker-compose build --no-cache
-    docker-compose up -d
-
-
-.. note:: If you want to re-build the docker images from scratch, instead of ``pulling`` them from the ``Docker Hub`` add the ``--build`` parameter to the up command, for instance:
-
-.. code-block:: shell
-
-    docker-compose up --build
-
-  In this case you can of course skip the ``pull`` step to download the ``pre-built`` images.
-
-
-.. note:: To startup the containers daemonized, which means they will be started in the background (and keep running if you ``log out`` from the server or close the ``shell``) add the ``-d`` option to the ``up`` command as in the following. ``docker-compose`` will take care to restart the containers if necessary (e.g. after boot).
-
-  .. code-block:: shell
-
-    docker-compose up -d
-
-    # If you want to rebuild the images also
-    docker-compose up --build -d
-
-
-Test the instance and follow the logs
-.....................................
-
-If you run the containers daemonized (with the ``-d`` option), you can either run specific Docker commands to follow the ``startup and initialization logs`` or entering the image ``shell`` and check for the ``GeoNode logs``.
-
-In order to follow the ``startup and initialization logs``, you will need to run the following command from the repository folder
-
-.. code-block:: shell
-
-  cd /opt/geonode
-  docker logs -f django4geonode
-
-Alternatively:
-
-.. code-block:: shell
-
-  cd /opt/geonode
-  docker-compose logs -f django
-
-You should be able to see several initialization messages. Once the container is up and running, you will see the following statements
-
-.. code-block:: shell
-
-  ...
-  789 static files copied to '/mnt/volumes/statics/static'.
-  static data refreshed
-  Executing UWSGI server uwsgi --ini /usr/src/app/uwsgi.ini for Production
-  [uWSGI] getting INI configuration from /usr/src/app/uwsgi.ini
-
-To exit just hit ``CTRL+C``.
-
-This message means that the GeoNode containers have bee started. Browsing to ``http://localhost/`` will show the GeoNode home page. You should be able to successfully log with the default admin user (``admin`` / ``admin``) and start using it right away.
-
-With Docker it is also possible to run a shell in the container and follow the logs exactly the same as you deployed it on a physical host. To achieve this run
-
-.. code-block:: shell
-
-  docker exec -it django4geonode /bin/bash
-
-  # Once logged in the GeoNode image, follow the logs by executing
-  tail -F -n 300 /var/log/geonode.log
-
-Alternatively:
-
-.. code-block:: shell
-
-  docker-compose exec django /bin/bash
-
-To exit just hit ``CTRL+C`` and ``exit`` to return to the host.
-
-Override the ENV variables to deploy on a public IP or domain
-.............................................................
-
-If you would like to start the containers on a ``public IP`` or ``domain``, let's say ``www.example.org``, you can
-
-.. code-block:: shell
-
-  cd /opt/geonode
-
-  # Stop the Containers (if running)
-  docker-compose stop
-
-Edit the ``ENV`` override file in order to deploy on ``www.example.org``
-
-.. code-block:: shell
-
-  # Make sure the new host is correctly configured on the ``.env`` file
-  vim .env
-
-Replace everywhere ``localhost`` with ``www.example.org``
-
-.. code-block:: shell
-
-  # e.g.: :%s/localhost/www.example.org/g
-
-  version: '2.2'
-  services:
-
-    django:
-      build: .
-      # Loading the app is defined here to allow for
-      # autoreload on changes it is mounted on top of the
-      # old copy that docker added when creating the image
-      volumes:
-        - '.:/usr/src/app'
-      environment:
-        - DEBUG=False
-        - GEONODE_LB_HOST_IP=www.example.org
-        - GEONODE_LB_PORT=80
-        - SITEURL=http://www.example.org/
-        - ALLOWED_HOSTS=['www.example.org', ]
-        - GEOSERVER_PUBLIC_LOCATION=http://www.example.org/geoserver/
-        - GEOSERVER_WEB_UI_LOCATION=http://www.example.org/geoserver/
-
-    celery:
-      build: .
-      volumes:
-        - '.:/usr/src/app'
-      environment:
-        - DEBUG=False
-        - GEONODE_LB_HOST_IP=www.example.org
-        - GEONODE_LB_PORT=80
-        - SITEURL=http://www.example.org/
-        - ALLOWED_HOSTS=['www.example.org', ]
-        - GEOSERVER_PUBLIC_LOCATION=http://www.example.org/geoserver/
-        - GEOSERVER_WEB_UI_LOCATION=http://www.example.org/geoserver/
-
-    geoserver:
-      environment:
-        - GEONODE_LB_HOST_IP=www.example.org
-        - GEONODE_LB_PORT=80
-    #    - NGINX_BASE_URL=
-
-.. note:: It is possible to override here even more variables to customize the GeoNode instance. See the ``GeoNode Settings`` section in order to get a list of the available options.
-
-Run the containers in daemon mode
-
-.. code-block:: shell
-
-  docker-compose up --build -d
-
-Access the django4geonode Docker container to update the code-base and/or change internal settings
-..................................................................................................
-
-Access the container ``bash``
-
-.. code-block:: shell
-
-  docker exec -i -t django4geonode /bin/bash
-
-You will be logged into the GeoNode instance as ``root``. The folder is ``/usr/src/app/`` where the GeoNode project is cloned. Here you will find the GeoNode source code as in the GitHub repository.
-
-.. note:: The machine is empty by default, no ``Ubuntu`` packages installed. If you need to install text editors or something you have to run the following commands:
-
-  .. code-block:: shell
-
-    apt update
-    apt install <package name>
-
-    e.g.:
-      apt install vim
-
-Update the templates or the ``Django models``. Once in the ``bash`` you can edit the templates or the Django models/classes. From here you can run any standard ``Django management command``.
-
-Whenever you change a ``template/CSS/Javascript`` remember to run later:
-
-.. code-block:: shell
-
-  python manage.py collectstatic
-
-in order to update the files into the ``statics`` Docker volume.
-
-.. warning:: This is an external volume, and a simple restart won't update it. You have to be careful and keep it aligned with your changes.
-
-
-Whenever you need to change some settings or environment variable, the easiest thing to do is to:
-
-.. code-block:: shell
-
-  # Stop the container
-  docker-compose stop
-
-  # Restart the container in Daemon mode
-  docker-compose up -d
-
-Whenever you change the model, remember to run later in the container via ``bash``:
-
-.. code-block:: shell
-
-  python manage.py makemigrations
-  python manage.py migrate
-
-Access the geoserver4geonode Docker container to update the GeoServer version
-.............................................................................
-
-This procedure allows you to access the GeoServer container.
-
-The concept is exactly the same as above, log into the container with ``bash``.
-
-.. code-block:: shell
-
-  # Access the container bash
-  docker exec -it geoserver4geonode /bin/bash
-
-You will be logged into the GeoServer instance as ``root``.
-
-GeoServer is deployed on an Apache Tomcat instance which can be found here
-
-.. code-block:: shell
-
-  cd /usr/local/tomcat/webapps/geoserver
-
-.. warning:: The GeoServer ``DATA_DIR`` is deployed on an external Docker Volume ``geonode_gsdatadir``. This data dir won’t be affected by changes to the GeoServer application since it is ``external``.
-
-
-Update the GeoServer instance inside the GeoServer Container
-
-.. warning:: The old configuration will be kept since it is ``external``
-
-
-.. code-block:: shell
-
-	docker exec -it geoserver4geonode bash
-
-
-.. code-block:: shell
-
-  cd /usr/local/tomcat/
-  wget --no-check-certificate "https://artifacts.geonode.org/geoserver/2.19.x/geoserver.war" -O geoserver-2.19.x.war
-  mkdir tmp/geoserver
-  cd tmp/geoserver/
-  unzip /usr/local/tomcat/geoserver-2.19.x.war
-  rm -Rf data
-  cp -Rf /usr/local/tomcat/webapps/geoserver/data/ .
-  cd /usr/local/tomcat/
-  mv webapps/geoserver/ .
-  mv tmp/geoserver/ webapps/
-  exit
-
-.. code-block:: shell
-
-  docker restart geoserver4geonode
-
-.. warning::
-
-  GeoNode 2.8.1 is **NOT** compatible with GeoServer > 2.13.x
-
-  GeoNode 2.8.2 / 2.10.x are **NOT** compatible with GeoServer < 2.14.x
-
-  GeoNode 3.x is **NOT** compatible with GeoServer < 2.16.x
-
-  GeoNode 4.1.x is **NOT** compatible with GeoServer < 2.19.x
-
-
-Remove all data and bring your running GeoNode deployment to the initial stage
-..............................................................................
-
-This procedure allows you to stop all the containers and reset all the data with the deletion of all the volumes.
-
-.. code-block:: shell
-
-  cd /opt/geonode
-
-  # stop containers and remove volumes
-  docker-compose down -v
-
-5. Passages to completely get rid of old Docker images and volumes (reset the environment completely)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note:: For more details on Docker commands, please refer to the official Docker documentation.
-
-It is possible to let docker show which containers are currently running (add ``-a`` for all containers, also stopped ones)
-
-.. code-block:: shell
-
-  # Show the currently running containers
-  docker ps
-
-  CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS                   PORTS                                                                      NAMES
-  4729b3dd1de7   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes             8000/tcp                                                                   celery4geonode
-  418da5579b1a   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes (healthy)   8000/tcp                                                                   django4geonode
-  d6b043f16526   geonode/letsencrypt:4.0    "./docker-entrypoint…"   29 minutes ago   Up 9 seconds             80/tcp, 443/tcp                                                            letsencrypt4geonode
-  c77e1fa3ab2b   geonode/geoserver:2.19.6   "/usr/local/tomcat/t…"   29 minutes ago   Up 5 minutes (healthy)   8080/tcp                                                                   geoserver4geonode
-  a971cedfd788   rabbitmq:3.7-alpine        "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             4369/tcp, 5671-5672/tcp, 25672/tcp                                         rabbitmq4geonode
-  a2e4c69cb80f   geonode/nginx:4.0          "/docker-entrypoint.…"   29 minutes ago   Up 5 minutes             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443-    >443/tcp, :::443->443/tcp   nginx4geonode
-  d355d34cac4b   geonode/postgis:13         "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             5432/tcp                                                                   db4geonode
-
-
-Stop all the containers by running
-
-.. code-block:: shell
-
-  docker-compose stop
-
-Force kill all containers by running
-
-.. code-block:: shell
-
-  docker kill $(docker ps -q)
-
-I you want to clean up all containers and images, without deleting the static volumes (i.e. the ``DB`` and the ``GeoServer catalog``), issue the following commands
-
-.. code-block:: shell
-
-  # Remove all containers
-  docker rm $(docker ps -a -q)
-
-  # Remove all docker images
-  docker rmi $(docker images -q)
-
-  # Prune the old images
-  docker system prune -a
-
-If you want to remove a ``volume`` also
-
-.. code-block:: shell
-
-  # List of the running volumes
-  docker volume ls
-
-  # Remove the GeoServer catalog by its name
-  docker volume rm -f geonode-gsdatadir
-
-  # Remove all dangling docker volumes
-  docker volume rm $(docker volume ls -qf dangling=true)
-
-  # update all images, should be run regularly to fetch published updates
-  for i in $(docker images| awk 'NR>1{print $1":"$2}'| grep -v '<none>'); do docker pull "$i" ;done
-
-Ubuntu 22.04
+Ubuntu 22.04 LTS
 =================
 
 This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 22.04.1LTS **64-bit** clean environment (Desktop or Server).
@@ -1889,523 +1504,166 @@ Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-a
     sudo systemctl status supervisor.service
 
 
-RHEL 7.x
-========
+Docker
+======
 
-1. Install the dependencies
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this section we are going to list the passages needed to deploy a vanilla ``GeoNode`` with ``Docker``
+You can follow the instructions at :ref:`Docker Setup for Ubuntu (20.04) <Ubuntu (20.04) Basic Setup>` to prepare a Ubuntu 22.04 server with Docker and Docker Compose
+
+1. Clone GeoNode
+^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
 
-    #sudo yum upgrade -y
-    sudo yum install -y yum-plugin-versionlock
-    sudo yum install -y libffi-devel deltarpm java-1.8.0-openjdk.x86_64 zlib-devel bzip2-devel openssl-devel readline-devel git vim nginx rpm-build libxml2-devel geos-devel gettext geos-devel libjpeg-devel libpng-devel zlib zlib-devel libspatialite-devel tcl-devel tcl
-    #libpq needed by psycopg2
+  # Let's create the GeoNode core base folder and clone it
+  sudo mkdir -p /opt/geonode/
+  sudo usermod -a -G www-data geonode
+  sudo chown -Rf geonode:www-data /opt/geonode/
+  sudo chmod -Rf 775 /opt/geonode/
 
-    wget http://vault.centos.org/8.1.1911/AppStream/Source/SPackages/libpq-12.1-3.el8.src.rpm
-    sudo yum-builddep -y libpq-12.1-3.el8.src.rpm
-    rpmbuild --rebuild libpq-12.1-3.el8.src.rpm
-    sudo yum install -y ./rpmbuild/RPMS/x86_64/libpq-12.1-3.el7.x86_64.rpm ./rpmbuild/RPMS/x86_64/libpq-devel-12.1-3.el7.x86_64.rpm
-    sudo yum versionlock libpq.x86_64 libpq-devel.x86_64
-
-    # Build an rpm of SQLITE > 3.8.3 (Django)
-
-    wget http://vault.centos.org/8.1.1911/BaseOS/Source/SPackages/sqlite-3.26.0-4.el8_1.src.rpm
-    sudo yum-builddep -y sqlite-3.26.0-4.el8_1.src.rpm
-    rpmbuild --rebuild --nocheck sqlite-3.26.0-4.el8_1.src.rpm
-    sudo yum install -y ./rpmbuild/RPMS/x86_64/sqlite-3.26.0-4.el7.x86_64.rpm ./rpmbuild/RPMS/x86_64/sqlite-devel-3.26.0-4.el7.x86_64.rpm  ./rpmbuild/RPMS/x86_64/sqlite-libs-3.26.0-4.el7.x86_64.rpm
-
-    #GDAL 2.2.4
-    sudo yum install -y gdal-devel gdal
+  # Clone the GeoNode source code on /opt/geonode
+  cd /opt
+  git clone https://github.com/GeoNode/geonode.git
 
 
-2. Create necessary users
+2. Prepare the .env file
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+Follow the instructions at :ref:`Docker create env file<Docker create env file>`
+
+3. Build and run
+^^^^^^^^^^^^^^^^^
+Follow the instructions at :ref:`Docker build and run<Docker build and run>`
+
+
+Test the instance and follow the logs
+.....................................
+
+If you run the containers daemonized (with the ``-d`` option), you can either run specific Docker commands to follow the ``startup and initialization logs`` or entering the image ``shell`` and check for the ``GeoNode logs``.
+
+In order to follow the ``startup and initialization logs``, you will need to run the following command from the repository folder
 
 .. code-block:: shell
 
-    sudo useradd -m -U -d /home/geonode -s /bin/bash geonode
-    sudo useradd -m -U -d /opt/tomcat -s /bin/bash tomcat
-    sudo usermod -a -G nginx tomcat
+  cd /opt/geonode
+  docker logs -f django4geonode
 
-3. Give geonode correct sudo powers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Edit sudo configuration with this command:
+Alternatively:
 
 .. code-block:: shell
 
-    sudo visudo
+  cd /opt/geonode
+  docker-compose logs -f django
 
-Add these lines in the editors
-
-.. code-block:: shell
-
-    geonode localhost = (root) NOPASSWD: /usr/bin/geonode
-    geonode localhost = (root) NOPASSWD: /usr/bin/geonode_updateip
-
-Save to /etc/sudoers from temporary file and exit.
-
-4. Configure PostgreSQL 13
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You most likely want to change the password before applying the sql commands
-below
+You should be able to see several initialization messages. Once the container is up and running, you will see the following statements
 
 .. code-block:: shell
 
-    sudo subscription-manager repos --enable rhel-7-server-optional-rpms --enable rhel-7-server-extras-rpms --enable rhel-7-server-e4s-rpms --enable rhel-7-server-devtools-rpms
-    sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-    sudo yum install -y postgresql13-server  postgis31_13 postgresql13-devel
-    sudo /usr/pgsql-13/bin/postgresql-13-setup initdb
-    sudo systemctl enable --now postgresql-13
-    sudo systemctl start postgresql-13
+  ...
+  789 static files copied to '/mnt/volumes/statics/static'.
+  static data refreshed
+  Executing UWSGI server uwsgi --ini /usr/src/app/uwsgi.ini for Production
+  [uWSGI] getting INI configuration from /usr/src/app/uwsgi.ini
 
-    cat <EOF>> /var/lib/pgsql/13/data/pg_hba.conf
-    # DO NOT DISABLE!
-    # If you change this first entry you will need to make sure that the
-    # database superuser can access the database using some other method.
-    # Noninteractive access to all databases is required during automatic
-    # maintenance (custom daily cronjobs, replication, and similar tasks).
-    #
-    # Database administrative login by Unix domain socket
-    local   all             postgres                                trust
+To exit just hit ``CTRL+C``.
 
-    # TYPE  DATABASE        USER            ADDRESS                 METHOD
+This message means that the GeoNode containers have bee started. Browsing to ``http://localhost/`` will show the GeoNode home page. You should be able to successfully log with the default admin user (``admin`` / ``admin``) and start using it right away.
 
-    # "local" is for Unix domain socket connections only
-    local   all             all                                     md5
-    # IPv4 local connections:
-    host    all             all             127.0.0.1/32            md5
-    # IPv6 local connections:
-    host    all             all             ::1/128                 md5
-    # Allow replication connections from localhost, by a user with the
-    # replication privilege.
-    local   replication     all                                     peer
-    host    replication     all             127.0.0.1/32            md5
-    host    replication     all             ::1/128                 md5
-    EOF
-
-    sudo -u postgres createuser geonode
-    sudo -u postgres createdb geonode
-    sudo -u postgres createdb geonode_data
-    sudo -u postgres psql -c "alter user geonode with encrypted password 'geonode';"
-    sudo -u postgres psql -d geonode -c 'CREATE EXTENSION postgis;'
-    sudo -u postgres psql -d geonode -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
-    sudo -u postgres psql -d geonode -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
-    sudo -u postgres psql -d geonode -c 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO geonode;'
-    sudo -u postgres psql -d geonode_data -c 'CREATE EXTENSION postgis;'
-    sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
-    sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
-    sudo -u postgres psql -d geonode_data -c 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO geonode;'
-
-
-5. Install Tomcat and GeoServer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+With Docker it is also possible to run a shell in the container and follow the logs exactly the same as you deployed it on a physical host. To achieve this run
 
 .. code-block:: shell
 
-    VERSION=9.0.44; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
-    sudo tar -xf apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/
-    rm apache-tomcat-${VERSION}.tar.gz
-    sudo ln -s /opt/tomcat/apache-tomcat-${VERSION} /opt/tomcat/latest
-    sudo chown -R tomcat:nginx /opt/tomcat/
-    sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
+  docker exec -it django4geonode /bin/bash
 
-6. Install GeoNode
-^^^^^^^^^^^^^^^^^^
+  # Once logged in the GeoNode image, follow the logs by executing
+  tail -F -n 300 /var/log/geonode.log
+
+Alternatively:
 
 .. code-block:: shell
 
-    # This is to be performed as user geonode
-    curl https://pyenv.run | bash
+  docker-compose exec django /bin/bash
 
-7. Configure pyenv
-^^^^^^^^^^^^^^^^^^
+To exit just hit ``CTRL+C`` and ``exit`` to return to the host.
 
-.. code-block:: shell
-
-    # This is to be performed as user geonode
-    # add these lines to .bashrc
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-
-8. Continue installing a recent python 3.8.x version.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Continue installing custom version of python (3.8.5), virtualenv, GeoNode
-
-.. code-block:: shell
-
-    # This is to be performed as user geonode
-    pyenv install 3.8.5
-    pyenv global 3.8.5
-    pip install --upgrade pip
-    pip install virtualenv
-    mkdir -p ~/.virtualenvs
-    python3.8 -m venv ~/.virtualenvs/geonode
-    source ~/.virtualenvs/geonode/bin/activate
-    cat <<EOF>> .bashrc
-    source ~/.virtualenvs/geonode/bin/activate
-    EOF
-
-    sudo mkdir -p /opt/geonode/; sudo usermod -a -G nginx $USER; sudo chown -Rf $USER:nginx /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
-    cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.1.x geonode
-    source $HOME/.bashrc
-    cd /opt/geonode
-    pip install -e . --upgrade
-    pip install pygdal=="`gdal-config --version`.*"
-    pip install encoding-tools
-
-9. Configure /etc/uwsgi.d/geonode.ini
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-    [uwsgi]
-    http-socket = 0.0.0.0:8000
-
-    id = geonode
-    gid = nginx
-
-    virtualenv = /home/geonode/.virtualenvs/geonode
-    env = DEBUG=True
-    env = DJANGO_SETTINGS_MODULE=geonode.local_settings
-    env = SECRET_KEY=""
-    env = SITE_HOST_NAME=<your_public_geonode_hostname>
-    env = SITEURL=https://<your_public_geonode_hostname>/
-    env = ALLOWED_HOSTS=['localhost', 'your_server_public_ip_address', '<your_public_geonode_hostname>' ]
-    env = LOCKDOWN_GEONODE=False
-    env = SESSION_EXPIRED_CONTROL_ENABLED=True
-    env = MONITORING_ENABLED=False
-    env = ADMIN_USERNAME=admin
-    env = ADMIN_PASSWORD=admin
-    env = ADMIN_EMAIL=admin@localhost
-    env = GEOSERVER_PUBLIC_HOST=<your_public_geonode_hostname>
-    env = GEOSERVER_PUBLIC_PORT=
-    env = GEOSERVER_ADMIN_PASSWORD=geoserver
-    env = GEOSERVER_LOCATION=http://<your_geoserver_private_address>:8080/geoserver/
-    env = GEOSERVER_PUBLIC_LOCATION=https://<your_public_geonode_hostname>/geoserver/
-    env = GEOSERVER_WEB_UI_LOCATION=https://<your_public_geonode_hostname>/geoserver/
-    env = OGC_REQUEST_TIMEOUT=60
-    env = OGC_REQUEST_MAX_RETRIES=3
-    env = OGC_REQUEST_POOL_MAXSIZE=100
-    env = OGC_REQUEST_POOL_CONNECTIONS=100
-    env = SECURE_SSL_REDIRECT=True
-    env = SECURE_HSTS_INCLUDE_SUBDOMAINS=True
-    env = AVATAR_GRAVATAR_SSL=True
-    env = OAUTH2_API_KEY=<secret_here>
-    env = OAUTH2_CLIENT_ID=<secret_here>
-    env = OAUTH2_CLIENT_SECRET=<secret_here>
-    # pidfile = /tmp/geonode.pid
-    chdir = /opt/geonode
-    module = geonode.wsgi:application
-    strict = false
-    master = true
-    enable-threads = true
-    vacuum = true                        ; Delete sockets during shutdown
-    single-interpreter = true
-    die-on-term = true                   ; Shutdown when receiving SIGTERM (default is respawn)
-    need-app = true
-    daemonize = /opt/data/logs/geonode.log
-    touch-reload = /opt/geonode/geonode/wsgi.py
-    buffer-size = 32768
-    harakiri = 60                        ; forcefully kill workers after 60 seconds
-    py-callos-afterfork = true           ; allow workers to trap signals
-    max-requests = 1000                  ; Restart workers after this many requests
-    max-worker-lifetime = 3600           ; Restart workers after this many seconds
-    reload-on-rss = 2048                 ; Restart workers after this much resident memory
-    worker-reload-mercy = 60             ; How long to wait before forcefully killing workers
-    cheaper-algo = busyness
-    processes = 128                      ; Maximum number of workers allowed
-    cheaper = 8                          ; Minimum number of workers allowed
-    cheaper-initial = 16                 ; Workers created at startup
-    cheaper-overload = 1                 ; Length of a cycle in seconds
-    cheaper-step = 16                    ; How many workers to spawn at a time
-    cheaper-busyness-multiplier = 30     ; How many cycles to wait before killing workers
-    cheaper-busyness-min = 20            ; Below this threshold, kill workers (if stable for multiplier cycles)
-    cheaper-busyness-max = 70            ; Above this threshold, spawn new workers
-    cheaper-busyness-backlog-alert = 16  ; Spawn emergency workers if more than this many requests are waiting in the queue
-    cheaper-busyness-backlog-step = 2    ; How many emergency workers to create if there are too many requests in the queue
-    # daemonize = /var/log/uwsgi/geonode.log
-    # cron = -1 -1 -1 -1 -1 /usr/local/bin/python /usr/src/{{project_name}}/manage.py collect_metrics -n
-
-10. Modify /etc/nginx/nginx.conf
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you are not using letsencrypt, you should put your certificates in the paths
-suggested below:
-
-.. code-block:: shell
-
-    user nginx;
-    worker_processes auto;
-    error_log /var/log/nginx/error.log;
-    pid /run/nginx.pid;
-
-    # Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
-    #include /usr/share/nginx/modules/*.conf;
-
-
-    events {
-      worker_connections 1024;
-    }
-
-    http {
-      log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                        '$status $body_bytes_sent "$http_referer" '
-                        '"$http_user_agent" "$http_x_forwarded_for"';
-
-      access_log  /var/log/nginx/access.log  main;
-
-      sendfile            on;
-      tcp_nopush          on;
-      tcp_nodelay         on;
-      keepalive_timeout   65;
-      types_hash_max_size 2048;
-
-      include             /etc/nginx/mime.types;
-      default_type        application/octet-stream;
-
-      server {
-        listen 443 ssl default_server;
-        listen [::]:443 ssl default_server;
-        server_name  <your_public_geonode_hostname>;
-        ssl_certificate /etc/ssl/certs/<your_public_geonode_hostname>.crt;
-        ssl_certificate_key /etc/ssl/private/<your_public_geonode_hostname>.key;
-        ssl_client_certificate /etc/ssl/certs/ca-bundle.crt;
-        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-        ssl_prefer_server_ciphers on;
-        ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
-        ssl_ecdh_curve secp384r1;
-        ssl_session_cache shared:SSL:10m;
-        ssl_session_tickets off;
-        ssl_stapling on;
-        ssl_stapling_verify on;
-        resolver 8.8.8.8 8.8.4.4 valid=300s;
-        resolver_timeout 5s;
-        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
-        add_header X-Frame-Options DENY;
-        add_header X-Content-Type-Options nosniff;
-        ssl_dhparam /etc/ssl/certs/dhparam.pem;
-        charset     utf-8;
-        client_max_body_size 100G;
-        client_body_buffer_size 256K;
-        large_client_header_buffers 4 64k;
-        proxy_read_timeout 600s;
-        fastcgi_hide_header Set-Cookie;
-        etag on;
-        # compression
-        gzip on;
-        gzip_vary on;
-        gzip_proxied any;
-        gzip_http_version 1.1;
-        gzip_disable "MSIE [1-6]\.";
-        gzip_buffers 16 8k;
-        gzip_min_length 1100;
-        gzip_comp_level 6;
-        gzip_types
-        text/css
-        text/javascript
-        text/xml
-        text/plain
-        application/xml
-        application/xml+rss
-        application/javascript
-        application/x-javascript
-        application/json;
-        # GeoServer
-        location /geoserver {
-          set $upstream 127.0.0.1:8080;
-          proxy_set_header Host $http_host;
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-Forwarded-Proto https;
-          proxy_pass http://$upstream;
-        }
-        # GeoNode
-        location /static/ {
-
-            alias /opt/geonode/geonode/static_root/;
-
-          location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
-              gzip_static always;
-              expires 30d;
-              access_log off;
-              add_header Pragma "public";
-              add_header Cache-Control "max-age=31536000, public";
-          }
-        }
-        location /uploaded/ {
-            alias /opt/geonode/geonode/uploaded/;
-          location ~* \.(?:html|js|jpg|jpeg|gif|png|css|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|txt|woff|woff2|svg|xml)$ {
-            gzip_static always;
-            expires 30d;
-            access_log off;
-            add_header Pragma "public";
-          }
-        }
-        location / {
-          set $upstream 127.0.0.1:8000;
-          include /etc/nginx/uwsgi_params;
-          if ($request_method = OPTIONS) {
-            add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
-            add_header Access-Control-Allow-Headers "Authorization, Content-Type, Accept";
-            add_header Access-Control-Allow-Credentials true;
-            add_header Content-Length 0;
-            add_header Content-Type text/plain;
-            add_header Access-Control-Max-Age 1728000;
-            return 200;
-        }
-        add_header Access-Control-Allow-Credentials false;
-        add_header Access-Control-Allow-Headers "Content-Type, Accept, Authorization, Origin, User-Agent";
-        add_header Access-Control-Allow-Methods "GET, POST, PUT, PATCH, OPTIONS";
-        proxy_connect_timeout       600;
-        proxy_send_timeout          600;
-        proxy_read_timeout          600;
-        send_timeout                600;
-        proxy_redirect              off;
-        proxy_set_header            Host $host;
-        proxy_set_header            X-Real-IP $remote_addr;
-        proxy_set_header            X-Forwarded-Host $server_name;
-        proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header            X-Forwarded-Proto https;
-        proxy_pass http://$upstream;
-        # uwsgi_params
-        location ~* \.(?:js|jpg|jpeg|gif|png|tgz|gz|rar|bz2|doc|pdf|ppt|tar|wav|bmp|ttf|rtf|swf|ico|flv|woff|woff2|svg|xml)$ {
-          gzip_static always;
-          expires 30d;
-          access_log off;
-          add_header Pragma "public";
-          add_header Cache-Control "max-age=31536000, public";
-        }
-
-        }
-      }
-    }
-
-11. Modify /etc/uwsgi.ini
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-    [uwsgi]
-    uid = geonode
-    gid = nginx
-    emperor = /etc/uwsgi.d
-    chmod-socket = 660
-    emperor-tyrant = false
-    cap = setgid,setuid
-
-12. Create Geonode service /etc/systemd/system/geonode.service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-    [Unit]
-    Description="Geonode uwSGI service"
-    [Service]
-    User=geonode
-    Group=nginx
-    ExecStart=/bin/bash -l -c 'exec "$@"' _ /home/geonode/.virtualenvs/geonode/bin/uwsgi /etc/uwsgi.ini
-    Restart=on-failure
-    [Install]
-    WantedBy=multi-user.target
-
-13. Enable uwSGI service
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-  systemctl daemon-reload
-  systemctl enable --now geonode
-
-14. Configure Postgres Database in GeoNode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-    sudo su - geonode
-    cd /opt/geonode
-    cp geonode/local_settings.py.geoserver.sample geonode/local_settings.py
-
-15. Configure local_settings.py
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-    sed -i -e "s/'PASSWORD': 'geonode',/'PASSWORD': '<your_db_role_password>',/g" geonode/local_settings.py
-
-
-16. Initialize GeoNode
-^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: shell
-
-    DJANGO_SETTINGS_MODULE=geonode.local_settings paver reset
-    DJANGO_SETTINGS_MODULE=geonode.local_settings paver setup
-    DJANGO_SETTINGS_MODULE=geonode.local_settings paver sync
-    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py collectstatic --noinput
-
-
-    sudo cp package/support/geonode.binary /usr/bin/geonode
-    sudo cp package/support/geonode.updateip /usr/bin/geonode_updateip
-    sudo chmod +x /usr/bin/geonode
-    sudo chmod +x /usr/bin/geonode_updateip
-
-    sudo PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p <your_public_geonode_hostname>
-
-    DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=<your_public_geonode_hostname>
-
-17. Configure OAuth2
-^^^^^^^^^^^^^^^^^^^^
-
-17.1 Update the ``GeoNode`` **OAuth2** ``Redirect URIs`` accordingly.
-.....................................................................
-
-  From the ``GeoNode Admin Dashboard`` go to ``Home › Django/GeoNode OAuth Toolkit › Applications › GeoServer``
-
-  .. figure:: img/ubuntu-https-001.png
-        :align: center
-
-        *Redirect URIs*
-
-17.2 Update the ``GeoServer`` ``Proxy Base URL`` accordingly.
+Override the ENV variables to deploy on a public IP or domain
 .............................................................
 
-  From the ``GeoServer Admin GUI`` go to ``About & Status > Global``
+If you would like to start the containers on a ``public IP`` or ``domain``, let's say ``www.example.org``, you can follow the instructions at :ref:`Deploy to production<Docker deploy to production>`
 
-  .. figure:: img/ubuntu-https-002.png
-        :align: center
-
-        *Proxy Base URL*
+ariables to customize the GeoNode instance. See the ``GeoNode Settings`` section in order to get a list of the available options.
 
 
-17.3 Update the ``GeoServer`` ``Role Base URL`` accordingly.
-............................................................
+Remove all data and bring your running GeoNode deployment to the initial stage
+..............................................................................
 
-  From the ``GeoServer Admin GUI`` go to ``Security > Users, Groups, Roles > geonode REST role service``
+This procedure allows you to stop all the containers and reset all the data with the deletion of all the volumes.
 
-  .. figure:: img/ubuntu-https-003.png
-        :align: center
+.. code-block:: shell
 
-        *Role Base URL*
+  cd /opt/geonode
 
-17.4 Update the ``GeoServer`` ``OAuth2 Service Parameters`` accordingly.
-........................................................................
+  # stop containers and remove volumes
+  docker-compose down -v
 
-  From the ``GeoServer Admin GUI`` go to ``Security > Authentication > Authentication Filters > geonode-oauth2``
+Get rid of old Docker images and volumes (reset the environment completely)
+............................................................................
 
-  .. figure:: img/ubuntu-https-004.png
-        :align: center
+.. note:: For more details on Docker commands, please refer to the official Docker documentation.
 
-        *OAuth2 Service Parameters*
+It is possible to let docker show which containers are currently running (add ``-a`` for all containers, also stopped ones)
 
-18. Using `letsencrypt`
-^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: shell
 
-In case you want to use letsencrypt free certificates, you should configure nginx accordingly:
+  # Show the currently running containers
+  docker ps
 
-  https://certbot.eff.org/lets-encrypt/centosrhel7-nginx.html
+  CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS                   PORTS                                                                      NAMES
+  4729b3dd1de7   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes             8000/tcp                                                                   celery4geonode
+  418da5579b1a   geonode/geonode:4.0        "/usr/src/geonode/en…"   29 minutes ago   Up 5 minutes (healthy)   8000/tcp                                                                   django4geonode
+  d6b043f16526   geonode/letsencrypt:4.0    "./docker-entrypoint…"   29 minutes ago   Up 9 seconds             80/tcp, 443/tcp                                                            letsencrypt4geonode
+  c77e1fa3ab2b   geonode/geoserver:2.19.6   "/usr/local/tomcat/t…"   29 minutes ago   Up 5 minutes (healthy)   8080/tcp                                                                   geoserver4geonode
+  a971cedfd788   rabbitmq:3.7-alpine        "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             4369/tcp, 5671-5672/tcp, 25672/tcp                                         rabbitmq4geonode
+  a2e4c69cb80f   geonode/nginx:4.0          "/docker-entrypoint.…"   29 minutes ago   Up 5 minutes             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443-    >443/tcp, :::443->443/tcp   nginx4geonode
+  d355d34cac4b   geonode/postgis:13         "docker-entrypoint.s…"   29 minutes ago   Up 5 minutes             5432/tcp                                                                   db4geonode
 
-Comment out any ssl parameter in nginx and replace with the parameters and paths given by certbot
+
+Stop all the containers by running
+
+.. code-block:: shell
+
+  docker-compose stop
+
+Force kill all containers by running
+
+.. code-block:: shell
+
+  docker kill $(docker ps -q)
+
+I you want to clean up all containers and images, without deleting the static volumes (i.e. the ``DB`` and the ``GeoServer catalog``), issue the following commands
+
+.. code-block:: shell
+
+  # Remove all containers
+  docker rm $(docker ps -a -q)
+
+  # Remove all docker images
+  docker rmi $(docker images -q)
+
+  # Prune the old images
+  docker system prune -a
+
+If you want to remove a ``volume`` also
+
+.. code-block:: shell
+
+  # List of the running volumes
+  docker volume ls
+
+  # Remove the GeoServer catalog by its name
+  docker volume rm -f geonode-gsdatadir
+
+  # Remove all dangling docker volumes
+  docker volume rm $(docker volume ls -qf dangling=true)
+
+  # update all images, should be run regularly to fetch published updates
+  for i in $(docker images| awk 'NR>1{print $1":"$2}'| grep -v '<none>'); do docker pull "$i" ;done

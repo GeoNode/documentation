@@ -11,3 +11,8 @@ GeoNode Advanced Installation
     :maxdepth: 3
 
     project/index
+
+.. toctree::
+    :maxdepth: 3
+
+    production_enhancements/index

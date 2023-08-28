@@ -9,6 +9,17 @@ GeoNode Settings
 
     settings/index
 
+Docker Environmental variables
+===============================
+
+	:ref:`dockerenvvars`
+
+.. toctree::
+    :hidden:
+    :maxdepth: 3
+
+    docker_env_vars/index
+
 Customize the Look and Feel
 ===========================
 

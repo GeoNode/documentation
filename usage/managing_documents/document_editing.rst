@@ -43,7 +43,7 @@ In the example shown in the picture above, the information inside the red rectan
 Editing the Document Info
 -----------------------------
 
-You can edit the information of your document by clicking on the :guilabel:`Edit` link, then :guilabel:`Edit Info`.
+You can edit the information of your document by clicking on the :guilabel:`Info` button.
 
 From the Info panel, it is possible to upload the **Thumbnail** of the document.
 
@@ -72,3 +72,29 @@ By clicking the document **Title**, you can change it.
     :align: center
 
     *Document Title*
+
+From the :guilabel:`Locations` tab, you can manage the spacial extent of the document.
+
+.. figure:: img/locations_document.png
+    :align: center
+
+    *Document Title*
+
+
+Here numerical fields and a map show the spatial extent (WGS 84) for the document and you can edit it by Shift+click and drag to draw the new extent on the map and change its location by click the marker and drag.
+
+.. figure:: img/edit-location.png
+    :align: center
+
+    *Document Title*
+
+Furthermore, by clicking on the copy icons you have a copy of the current *Bounding Box* or the *Center* in the clipboard which once pasted will be a WKT text.
+
+.. figure:: img/copy_locations.png
+    :align: center
+
+    *Bounding Box and Center*
+
+.. warning:: From the :ref:`document-info` the *Location* tab is in read only mode.
+    
+.. note:: The *Location* tab is also available for :ref:`dashboard` and :ref:`geostory`

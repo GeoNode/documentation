@@ -81,7 +81,7 @@ From the :guilabel:`Locations` tab, you can manage the spacial extent of the doc
     *Document Title*
 
 
-Here numerical fields and a map show the spatial extent (WGS 84) for the document and you can edit it by Shift+click and drag to draw the new extent on the map and change its location by click the marker and drag.
+Here numerical fields and a map show the spatial extent (WGS 84) for the document and you can edit it by Shift+click and drag to draw the new extent on the map and change its location by clicking the marker and drag.
 
 .. figure:: img/edit-location.png
     :align: center

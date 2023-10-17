@@ -1,9 +1,9 @@
 .. _uploading-documents:
 
-Uploading Documents
+Upload/Add Documents
 ===================
 
-GeoNode allows to share reports, conceptual notes, posters, spreadsheets, etc. A wide range of documents files can be hosted on the platform, including text files (.doc, .docx, .txt, .odt), spreadsheets (.xls, .xlsx, .ods), presentations (.ppt, .pptx, .odp), images (.gif, .jpg, .png, .tif, .tiff), PDF, zip files (.rar, .zip, .gz), SLD, XML or QML files.
+GeoNode allows to share reports, conceptual notes, posters, spreadsheets, etc. A wide range of documents files can be hosted on the platform, including text files (.doc, .docx, .txt, .odt), spreadsheets (.xls, .xlsx, .ods), presentations (.ppt, .pptx, .odp), images (.gif, .jpg, .png, .tif, .tiff), PDF, zip files (.rar, .zip, .gz), SLD, XML, QML files or as External URL.
 
 .. warning:: Only authenticated users can upload data into GeoNode.
 
@@ -21,10 +21,11 @@ The *Document Upload* page looks like the one shown in the picture below.
 
       *Document Upload page*
 
-Documents can be uploaded on *GeoNode* in two different ways:
+On *GeoNode* documents can be:
 
-* From the **Local file**
-* From an **External URL**
+* Upload from the **Local file**
+
+* Created with reference to **External URL** 
 
 
 In order to upload a document from the **Local file**, you need to:
@@ -38,7 +39,7 @@ In order to upload a document from the **Local file**, you need to:
 
       *Upload document from the select files option*
 
-For upload a document from the **External URL**, you need to:
+For add a document from the **External URL**, you need to:
 
 #. Click on :guilabel:`Add URL` button
 #. Select an URL
@@ -48,7 +49,7 @@ For upload a document from the **External URL**, you need to:
   .. figure:: img/add_url.png
       :align: center
 
-      *Upload document from the add URL option*
+      *Add document from the add URL option*
 
 At the end of the uploading process, by clicking on the View button, you will be driven to the document page with the Info panel open. Here it is possible to view more info, edit metadata, share, download, and delete the document. See the next section to know more about Metatadata.
 

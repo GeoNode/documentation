@@ -87,12 +87,5 @@ Here numerical fields and a map show the spatial extent (WGS 84) for the documen
     :align: center
 
     *Document Title*
-
-Furthermore, by clicking on the copy icons you have a copy of the current *Bounding Box* or the *Center* in the clipboard which once pasted will be a WKT text.
-
-.. figure:: img/copy_locations.png
-    :align: center
-
-    *Bounding Box and Center*
     
 .. note:: The *Location* tab is also available for :ref:`dashboard` and :ref:`geostory`

@@ -24,6 +24,13 @@ The information panel reports:
 
     *Dataset Location tab*
 
+By clicking on the copy icons you have a copy of the current *Bounding Box* or the *Center* in the clipboard which once pasted will be a WKT text.
+
+.. figure:: img/copy_locations_dataset.png
+    :align: center
+
+    *Bounding Box and Center*
+
 * The *Attributes* tab shows the data structure behind the dataset. All the attributes are listed and for each of them some statistics (e.g. the range of values) are estimated (if possible).
 
 .. figure:: img/dataset_attributes_tab.png

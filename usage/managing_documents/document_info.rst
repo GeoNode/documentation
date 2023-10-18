@@ -17,12 +17,19 @@ The information panel reports:
 
     *Document Information tab*
 
-* The **Location** tab shows the data shows the spacial extent of the document.
+* The **Location** tab shows the spacial extent of the document.
 
 .. figure:: img/document_location.png
     :align: center
 
     *Document Location tab*
+
+By clicking on the copy icons you have a copy of the current *Bounding Box* or the *Center* in the clipboard which once pasted will be a WKT text.
+
+.. figure:: img/copy_locations.png
+    :align: center
+
+    *Bounding Box and Center*
 
 .. warning:: From the :ref:`document-info` the *Location* tab is in read only mode, to edit it see the :ref:`document-editing`
 

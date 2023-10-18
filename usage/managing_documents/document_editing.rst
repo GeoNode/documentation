@@ -94,7 +94,5 @@ Furthermore, by clicking on the copy icons you have a copy of the current *Bound
     :align: center
 
     *Bounding Box and Center*
-
-.. warning:: From the :ref:`document-info` the *Location* tab is in read only mode.
     
 .. note:: The *Location* tab is also available for :ref:`dashboard` and :ref:`geostory`

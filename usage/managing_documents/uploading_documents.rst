@@ -39,7 +39,8 @@ In order to upload a document from the **Local file**, you need to:
 
       *Upload document from the select files option*
 
-For add a document from the **External URL**, you need to:
+| A document may refer to a remote document, without making a local copy of the remote resource.
+| To add a document that references an **External URL** you need to:
 
 #. Click on :guilabel:`Add URL` button
 #. Select an URL

@@ -31,6 +31,16 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
     *Bounding Box and Center*
 
+* The *Linked Resources* tab shows the resources, that can be *Documents*, *Datasets*, *GeoStories* and *Dashboards*, linked to the map.
+
+.. figure:: img/map_linked_resources.png
+    :align: center
+
+    *Map Linked Resources tab*
+
+.. note:: When a resource is `linked from` the map the link is under the *Linked by* list while when a resource is `linked to` the map the link is under the *Used by* list
+
+
 From the right toolbar on the **Info** panel it is possible:
 
 .. figure:: img/map_info_toolbar.png

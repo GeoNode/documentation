@@ -38,6 +38,15 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
     *Dataset Attributes tab*
 
+* The *Linked Resources* tab shows the resources, that can be *Documents*, *Maps*, *GeoStories* and *Dashboards*, linked to the dataset.
+
+.. figure:: img/dataset_linked_resources.png
+    :align: center
+
+    *Dataset Linked Resources tab*
+
+.. note:: When a resource is `linked from` the dataset the link is under the *Linked by* list while when a resource is `linked to` the dataset the link is under the *Used by* list
+
 From the right toolbar on the **Info** panel it is possible:
 
 .. figure:: img/dataset_info_toolbar.png

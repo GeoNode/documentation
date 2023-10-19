@@ -43,13 +43,14 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
 
   Click on the blue button :guilabel:`Next >>` to go ahead to the next step.
 
-3. On the **Optional Metadata** page, complementary information can be added:
+3. On the **Optional Metadata** page, complementary information can be added: 
 
   * The *Edition* to indicate the reference or the source of the document;
   * The *Purpose* of the document and its objectives;
   * Any *Supplemental information* that can provide a better understanding of the uploaded document;
   * The *Maintenance frequency* of the document;
   * The *Spatial representation type* used.
+  * The *Related resources* to linked a resource to the document. The *Linked Resources* are visible on the :ref:`document-info` panel
 
   *Responsible Parties*, *Owner* and *Share options* are listed on the right side of the page, you can edit them.
 

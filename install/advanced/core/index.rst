@@ -850,12 +850,15 @@ Note
 ...........................
 
 Since this is a local environment, Geoserver and Geonode should be able to reach the default MEDIA_ROOT. We need to change the FILE_UPLOAD_DIRECTORY_PERMISSIONS and FILE_UPLOAD_PERMISSIONS in settings.py to make the folder accessible to both.
+
 .. code-block:: shell
 
   cd /opt/geonode
+
   sudo vim geonode/settings.py
 
   # append this to the file
+
     FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o777
     FILE_UPLOAD_PERMISSIONS = 0o777
 

@@ -846,6 +846,19 @@ Serving {“geonode”, “geoserver”} via NGINX
   cheaper-busyness-backlog-alert = 16  ; Spawn emergency workers if more than this many requests are waiting in the queue
   cheaper-busyness-backlog-step = 2    ; How many emergency workers to create if there are too many requests in the queue
 
+Note
+...........................
+
+Since this is a local environment, Geoserver and Geonode should be able to reach the default MEDIA_ROOT. We need to change the FILE_UPLOAD_DIRECTORY_PERMISSIONS and FILE_UPLOAD_PERMISSIONS in settings.py to make the folder accessible to both.
+.. code-block:: shell
+
+  cd /opt/geonode
+  sudo vim geonode/settings.py
+
+  # append this to the file
+    FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o777
+    FILE_UPLOAD_PERMISSIONS = 0o777
+
 .. code-block:: shell
 
   # Enable the GeoNode UWSGI config

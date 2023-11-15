@@ -1990,6 +1990,14 @@ REDIS_SIGNALS_BROKER_URL
 
     The Redis endpoint.
 
+REGISTERED_USER_IS_CONTRIBUTOR
+-----------------------------
+
+    | Default: ``True``
+    | Env: ``REGISTERED_USER_IS_CONTRIBUTOR``
+
+    If `TRUE` by default the contributors group is assigned to each new user.
+
 REGISTERED_MEMBERS_GROUP_NAME
 -----------------------------
 

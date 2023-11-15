@@ -275,6 +275,14 @@ AUTH_EXEMPT_URLS
     ``AUTH_EXEMPT_URLS = ('/maps',)`` will allow unauthenticated users to
     browse maps.
 
+AUTO_ASSIGN_REGISTERED_MEMBERS_TO_CONTRIBUTORS
+---------------------------------------------------------------
+
+    | Default: ``True``
+    | Env: ``AUTO_ASSIGN_REGISTERED_MEMBERS_TO_CONTRIBUTORS``
+
+    Auto assign users to the contributors group.
+
 AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME
 ---------------------------------------------------------------
 
@@ -1989,14 +1997,6 @@ REDIS_SIGNALS_BROKER_URL
     Default: ``redis://localhost:6379/0``
 
     The Redis endpoint.
-
-REGISTERED_USER_IS_CONTRIBUTOR
------------------------------
-
-    | Default: ``True``
-    | Env: ``REGISTERED_USER_IS_CONTRIBUTOR``
-
-    If `TRUE` by default the contributors group is assigned to each new user.
 
 REGISTERED_MEMBERS_GROUP_NAME
 -----------------------------

@@ -281,7 +281,7 @@ AUTO_ASSIGN_REGISTERED_MEMBERS_TO_CONTRIBUTORS
     | Default: ``True``
     | Env: ``AUTO_ASSIGN_REGISTERED_MEMBERS_TO_CONTRIBUTORS``
 
-    Auto assign users to the contributors group.
+    Assign **new** registered users to the contributors group. If `False` the group is not added to the user
 
 AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME
 ---------------------------------------------------------------

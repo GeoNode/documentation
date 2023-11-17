@@ -248,7 +248,7 @@ Example:
     url = "http://localhost:8000/api/v2/documents"
     payload={
         'title': 'An example image',
-        'doc_url',('http://examples.com/image.jpg'
+        'doc_url' : 'http://examples.com/image.jpg'
     }
     headers = {
         'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='

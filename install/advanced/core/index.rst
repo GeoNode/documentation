@@ -93,7 +93,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Cleanup the packages
   sudo apt update -y; sudo apt autoremove --purge
 
-.. warning:: GeoNode 4.1.x is not compatible with Python < 3.7
+.. warning:: GeoNode 4.2.x is not compatible with Python < 3.7
 
 .. _install_venv:
 
@@ -151,7 +151,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.1.x geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.2.x geonode
 
 .. code-block:: shell
 
@@ -317,7 +317,7 @@ First, it is not recommended to run Apache Tomcat as user root, so we will creat
 
 .. code-block:: shell
 
-  VERSION=9.0.65; wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
+  VERSION=9.0.65; wget https://archive.apache.org/dist/tomcat/tomcat-9/v{VERSION}/bin/apache-tomcat-${VERSION}.tar.gz
 
 
 Once the download is complete, extract the tar file to the /opt/tomcat directory:

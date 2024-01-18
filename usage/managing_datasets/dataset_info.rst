@@ -45,7 +45,7 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
     *Dataset Linked Resources tab*
 
-.. note:: When a resource is `linked from` the dataset the link is under the *Linked by* list while when a resource is `linked to` the dataset the link is under the *Used by* list
+.. note:: When a resource is `linked from` the dataset the link is shown under the *Linked by* list while when a resource is `linked to` the dataset the link is shown under the *Used by* list
 
 From the right toolbar on the **Info** panel it is possible:
 

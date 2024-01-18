@@ -23,16 +23,16 @@ The *Map Metadata* Edit form will open.
 
   In the first step the system asks you to insert the following metadata (required fields are highlighted with red outlines):
 
-  * The *Thumbnail* of the map (click :guilabel:`Edit` to change it);
-  * The *Title* of the map, which should be clear and understandable;
-  * An *Abstract*; brief narrative summary of the content of the Map
+  * *Thumbnail* of the map (click :guilabel:`Edit` to change it);
+  * *Title* of the map, which should be clear and understandable;
+  * *Abstract*; brief narrative summary of the content of the Map
 
         .. note:: The *Abstract* panel allows you to insert HTML code through a *wysiwyg* text editor
 
-  * The *Creation/Publication/Revision Dates*  which define the time period that is covered by the map;
-  * The *Keywords*, which should be chosen within the available list;
-  * The *Category* which the map belongs to;
-  * The *Group* which the map is linked to.
+  * *Creation/Publication/Revision Dates*  which define the time period that is covered by the map;
+  * *Keywords*, which should be chosen within the available list;
+  * *Category* which the map belongs to;
+  * *Group* which the map is linked to.
 
   Click :guilabel:`Next >>` to go to the next step.
 
@@ -46,10 +46,10 @@ The *Map Metadata* Edit form will open.
 
   The following list shows what kinds of metadata you are required to enter (see also the picture below):
 
-  * The *Language* of the layer;
-  * The *License* of the dataset;
-  * The *Regions* covered by the layers extent. Proposed extents cover the following scales: global, continental, regional, national;
-  * The *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
+  * *Language* of the layer;
+  * *License* of the dataset;
+  * *Regions* covered by the layers extent. Proposed extents cover the following scales: global, continental, regional, national;
+  * *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
   * Potential *Restrictions* on layer sharing.
 
   No further mandatory metadata are required in the next step so, once the required fields have been filled out, a green :guilabel:`Done` button will be visible in the screen.
@@ -65,12 +65,13 @@ The *Map Metadata* Edit form will open.
 
   Complementary information are:
 
-  * The *Edition* of the map;
-  * The *Purpose* of the map and its objectives;
-  * Any *Supplemental information* that can provide a better understanding of the map;
-  * The *Maintenance frequency* of the map;
-  * The *Spatial representation type*, the method used to represent geographic information in the dataset;
-  * The users who are *Responsible* for the layer, its *Owner*, and the *Author* of its metadata;
+  * *Edition* of the map;
+  * *Purpose* of the map and its objectives;
+  * *Supplemental information* that can provide a better understanding of the map;
+  * *Maintenance frequency* of the map;
+  * *Spatial representation type*, the method used to represent geographic information in the dataset;
+  * Users who are *Responsible* for the layer, its *Owner*, and the *Author* of its metadata;
+  * *Related resources* to link one or multiple resources to the document. These will be visible inside the :ref:`map-info` panel
 
 If you miss some mandatory metadata the *Completeness* bar shows you a red message like the one in the picture below.
 

@@ -706,6 +706,14 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS
 
     Maximum value of parsed attributes.
 
+
+DATASET_DOWNLOAD_HANDLERS
+-------------------------
+
+    Default: ``[]``
+
+    Additional download handlers that provides a link to download the resource
+
 DEBUG
 -----
 
@@ -745,6 +753,15 @@ DEFAULT_AUTO_FIELD
 
     Default primary key field type to use for models that don’t have a field with primary_key=True.
     Django documentation https://docs.djangoproject.com/it/3.2/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
+
+DEFAULT_DATASET_DOWNLOAD_HANDLER
+--------------------------------
+
+    Default: ``geonode.layers.download_handler.DatasetDownloadHandler``
+
+    from GeoNode 4.2.x has bee introduced with this issue #11296 and later improved with this issue #11421 
+    the concept of Download Handler and ofc GeoNode provides a default implementation of it
+    which process the download via WPS
 
 DEFAULT_EXTRA_METADATA_SCHEMA
 -----------------------------
@@ -1059,6 +1076,18 @@ FREETEXT_KEYWORDS_READONLY
 
     Make Free-Text Keywords writable from users. Or read-only when set to False.
 
+
+FACET_PROVIDERS
+---------------
+
+    | Default: ``pre filled list of providers``
+    | Env: ``FACET_PROVIDERS``
+
+    Contains the list of the providers available to perform an serve the facets. 
+    In case the user wants remove a facets, is enough to remove the path 
+    of the proider from the list
+
+
 G
 =
 
@@ -1195,25 +1224,18 @@ GROUP_PRIVATE_RESOURCES
 
     If this option is enabled, Resources belonging to a Group won't be visible by others
 
-H
+I
 =
 
-HAYSTACK_FACET_COUNTS
----------------------
+IMPORTER HANDLERS
+-----------------
 
-    | Default: ``True``
-    | Env: ``HAYSTACK_FACET_COUNTS``
+    | Default: ``pre filled list of handlers``
+    | Env: ``IMPORTER_HANDLERS``
 
-    If set to True users will be presented with feedback about the number of resources which matches terms they may be interested in.
-
-HAYSTACK_SEARCH
----------------
-
-    | Default: ``False``
-    | Env: ``HAYSTACK_SEARCH``
-
-    Enable/disable haystack Search Backend Configuration.
-
+    Contains the list of the handlers available to perform an import of a resource. 
+    In case the user wants to drop the support during the import phase, is enough to
+    remove the path of the Handler from the list
 
 L
 =

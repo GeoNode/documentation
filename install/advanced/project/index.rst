@@ -125,7 +125,14 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
+  git clone https://github.com/GeoNode/geonode-project.git
+
+This will clone the ``master`` branch. You will have to checkout the desidered branch or tag. 
+As an example, if you want to generate a propject for GeoNode 4.2.2 you will docker
+
+.. code-block:: shell
+
+  git checkout -b 4.2.2
 
 Make an instance out of the ``Django Template``
 
@@ -360,7 +367,14 @@ Clone the source code
 .. code-block:: shell
 
   cd /opt/geonode_custom/
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
+  git clone https://github.com/GeoNode/geonode-project.git
+
+This will clone the ``master`` branch. You will have to checkout the desidered branch or tag. 
+As an example, if you want to generate a propject for GeoNode 4.2.2 you will docker
+
+.. code-block:: shell
+
+  git checkout -b 4.2.2
 
 Make an instance out of the ``Django Template``
 

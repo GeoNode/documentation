@@ -3,7 +3,7 @@
 Download Handlers
 =================
 
-From GeoNode 4.2.x has bee introduced with this issue #11296 and later improved with this issue #11421 the concept of Download Handler and ofc GeoNode provides a default implementation of it which process the download via WPS
+With GeoNode 4.2.x has been introduced the concept of Download Handler and ofc GeoNode provides a default implementation of it which process the download via WPS
 
 Follow an example of how to create a custom download handler and to replace the default one or add an additional one.
 

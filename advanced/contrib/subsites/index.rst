@@ -1,21 +1,17 @@
 Geonode Subsites
 ================
 
-Enable the possibility to have subsites in GeoNode.
-
-The subsite is virtual so no additional code is needed to set up the subsites.
-
-Practically, it let the user create sub-domain in the same geonode without deploy additional instances.
+Enable creating subsites in GeoNode without deploying additional instances. The subsite is virtual, no additional code is required.
 
 For example
 
 .. code-block::
 
         http://localhost:8000/ # <-- geonode homepage
-        http://localhost:8000/subsite_1/ # <--- same geonode, but it can be used as a different website
-        http://localhost:8000/subsite_2/ # <--- same geonode, but it can be used as a different website
-        http://localhost:8000/subsite_3/ # <--- same geonode, but it can be used as a different website
-        http://localhost:8000/subsite_4/ # <--- same geonode, but it can be used as a different website
+        http://localhost:8000/subsite_1/ # <--- same geonode, but it can be used as a different geonode
+        http://localhost:8000/subsite_2/ # <--- same geonode, but it can be used as a different geonode
+        http://localhost:8000/subsite_3/ # <--- same geonode, but it can be used as a different geonode
+        http://localhost:8000/subsite_4/ # <--- same geonode, but it can be used as a different geonode
 
 
 
@@ -137,7 +133,7 @@ For example
 - ``THEME: (optional)`` assign a theme to the subsite. The theme can be created in the :guilabel:`GeoNode Themes`. More information about :doc:`themes </admin/admin_panel/index>`
 - ``Contributor can add resource (optional)``: boolean filed if TRUE the `add resource` the user receives the `add_resourcebase` permissions
 - ``Logo (optional)``: Let the user upload a specific logo for the subsite. The logo is used in the homepage to show the subsite. In the example above, is (for example) the desert
-- ``Types (optional)``: Filter resources by assigned resource type. For example, if :guilabel:`Dataset` is selected, only the resources with that specific `resource_type` iares shown
+- ``Types (optional)``: Filter resources by assigned resource type. For example, if :guilabel:`Dataset` is selected, only the resources with that specific `resource_type` are shown
 - ``Region (optional)``: Filter resources by assigned region via :guilabel:`Metadata editor` or automatically via the ``geonode.resource.regions_storer.spatial_predicate_region_assignor``
 - ``Keyword (optional)``: Filter resources by assigned keyword. Add keywords via :guilabel:`Metadata editor`
 - ``Groups (optional)``: Filter resources by assigned group via :guilabel:`Metadata editor`
@@ -146,7 +142,7 @@ For example
 Subsite filtering logic
 -----------------------
 
-The fiter works in ``OR`` if multuple field of the same kind are selected, and in ``AND`` between all the filters:
+The filter works in ``OR`` if multiple fields of the same kind are selected, and in ``AND`` between all the filters:
 
 
 .. code-block::
@@ -163,7 +159,7 @@ Example 1
         subsite name: subsite_1
         filter selected:
             - type -> Dataset
-        Result: the catalog is going to be pre-filtered, by including ONLY the resource with `Dataset` as resource type.
+        Result: the catalog is going to be pre-filtered, by including ONLY the resource with `Dataset` as the resource type.
         NOTE: the filter is valid only for that specific subsite
 
 Example 2
@@ -173,7 +169,7 @@ Example 2
       
         subsite name: subsite_2
         filter selected: 
-            - type -> Dataset,Document
+            - type -> Dataset, Document
             - region -> Europe
         Result: The catalog is going to be pre-filtered, by including ONLY the resource with Dataset OR Document as resource type and with have EUROPE in the regions assigned
         
@@ -190,7 +186,7 @@ Example 3
             - region -> Europe
             - keyword -> country
             - Allowed permissions -> View
-        Result: The catalog is going to be pre-filtered, by including ONLY the resource with region equal to EUROPE and with a keyword with value COUNTRY. 
+        Result: The catalog is going to be pre-filtered, by including ONLY the resource with a region equal to EUROPE and with a keyword with the value COUNTRY. 
         Plus the users which will navigate the subsite will have ONLY the view permission, so they will not be able to download any dataset
         
         NOTE: the filter is valid only for that specific subsite
@@ -199,17 +195,17 @@ Example 3
 
 This logic is applied to ALL the geonode APIv2 then a subsite is called.
 
-In few words, the catalog is goint to be pre-filtered. Only the resources that match the subsite filtering are going to be shown in the API response
+In a few words, the catalog is going to be pre-filtered. Only the resources that match the subsite filtering are going to be shown in the API response
 
 
 Advanced: Cache
 ---------------
 
-To improve the performace, the subsite configuration is cached in memory.
+To improve the performance, the subsite configuration is cached in memory.
 
-The cache is cleaned if one of the following action is took:
+The cache is cleaned if one of the following actions is taken:
 
-- The subsite configuration is updated via Django admin panel
+- The subsite configuration is updated via the Django admin panel
 - The expiration time of the cache is reached (300 seconds)
 - The subsite is deleted so that, the cache related to that specific subsite is deleted along with the subsite
 
@@ -241,7 +237,7 @@ The `URLs` that support the subsite are listed in the file ``subsites/urls.py`` 
 - homepage
 
 
-To register a new URL, is enough to modify the ``subsites/urls.py``. Follow an example of URL:
+To register a new URL is enough to modify the ``subsites/urls.py``. Follow an example of a URL:
 
 .. code-block:: python
 
@@ -249,9 +245,9 @@ To register a new URL, is enough to modify the ``subsites/urls.py``. Follow an e
         re_path(r"^(?P<subsite>[^/]*)", views.subsite_home, name="subsite_home")
 
 
-NOTE: all the `URLs` **must** have the subsite parameter, otherwise the system is not able to retrieve the subsite information.
+NOTE: All the `URLs` **must** have the subsite parameter, otherwise the system is not able to retrieve the subsite information.
 
-The view will be defined as follow:
+The view will be defined as follows:
 
 .. code-block:: python
         
@@ -276,22 +272,22 @@ The :guilabel:`geonode-subsite` provides two different way to override the defau
 
 Subsite specific:
 
-Let the developer define a specific set of templates that are going to be used only for a specific subsite. The template are rendered only when the subsite is called.
+Let the developer define a specific set of templates that are going to be used only for a specific subsite. The templates are rendered only when the subsite is called.
 
 Subsite common:
 
-Let the developer define a common templates used by **ALL** the subsites. This templates are ignored by the default geonode instance, but will have an effect only in the subsites.
+Let the developer define a common template used by **ALL** the subsites. These templates are ignored by the default geonode instance but will have an effect only in the subsites.
 
-But how this templates are rendered?
+But how these templates are rendered?
 
-The backend follow this logic to render the templates follwoing this order:
+The backend follows this logic to render the templates following this order:
 
 1. subsite specific template
 2. common subsite template
 3. geonode project override
-4. default geonode deplate
+4. default geonode deplete
 
-To let this works, is required that all the new views will use the custom ``subsite_render`` function and not the django defalt ``render`` function
+To let this work, is required that all the new views will use the custom ``subsite_render`` function and not the django default ``render`` function
 
 For example:
 
@@ -310,11 +306,11 @@ Advanced: template configuration
 --------------------------------
 
 
-One of the most important feature that :guilabel:`geonode-subsite` provides, is the possibility to override the template for each subsite, making it different one from each other.
+One of the most important features that :guilabel:`geonode-subsite` provides is the ability to customize the template for each subsite, allowing for unique designs for each one.
 
-The template changes are a bit tricky and requires some knowledge of Django and the template system.
+However, the process of making template changes can be a bit complicated and requires familiarity with Django and its template system.
 
-Follows an example folder about how-to organize the subsite template folder to be able to have a custom template for each subsite.
+To help make this process easier, we have provided an example folder that demonstrates how to organize the subsite template folder. This will enable you to create a custom template for each subsite.
 
 **How to create the correct template subsite folder**
 
@@ -391,4 +387,4 @@ The folder for the common template is the following:
         │       └── snippets
         │           └── topbar.html
 
-All the subsites defined in the administration panel, will use the template defined in the `common` folder.
+All the subsites defined in the administration panel will use the template defined in the `common` folder.

@@ -33,3 +33,9 @@ GeoNode Django Contrib Apps
     :maxdepth: 3
 
     contrib/index
+
+.. toctree::
+    :caption: Subsites
+    :maxdepth: 3
+
+    contrib/subsites/index

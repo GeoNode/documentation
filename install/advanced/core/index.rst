@@ -301,10 +301,16 @@ We will also perform several optimizations to:
 
 .. note:: This is still a basic setup of those components. More details will be provided on sections of the documentation concerning the hardening of the system in a production environment. Nevertheless, you will need to tweak a bit those settings accordingly with your current system. As an instance, if your machine does not have enough memory, you will need to lower down the initial amount of available heap memory. **Warnings** and **notes** will be placed below the statements that will require your attention.
 
-**Install Apache Tomcat 9 (ref. https://yallalabs.com/linux/ubuntu/how-to-install-apache-tomcat-9-ubuntu-20-04/)**
+Install Apache Tomcat
+............................
 
-.. warning:: Apache Tomcat 9 requires Java 8 or newer to be installed on the server.
-  Check the steps before in order to be sure you have OpenJDK 8 correctly installed on your system.
+The reference version of Tomcat for the Geoserver for GeoNode is **Tomcat 9**.
+
+
+The following steps have been adapted from https://yallalabs.com/linux/ubuntu/how-to-install-apache-tomcat-9-ubuntu-20-04/
+
+.. warning:: Apache Tomcat 9 and Geoserver require Java 11 or newer to be installed on the server.
+  Check the steps before in order to be sure you have OpenJDK 11 correctly installed on your system.
 
 First, it is not recommended to run Apache Tomcat as user root, so we will create a new system user which will run the Apache Tomcat server
 
@@ -470,7 +476,7 @@ Use the following command to open the necessary port:
     sudo systemctl enable tomcat9.service
     sudo systemctl start tomcat9.service
 
-Install GeoServer on Tomcat9
+Install GeoServer on Tomcat
 ............................
 
 Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
@@ -546,11 +552,18 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
 
 .. warning:: The default options we are going to add to the Servlet Container, assume you can reserve at least ``4GB`` of ``RAM`` to ``GeoServer`` (see the option ``-Xmx4096m``). You must be sure your machine has enough memory to run both ``GeoServer`` and ``GeoNode``, which in this case means at least ``4GB`` for ``GeoServer`` plus at least ``2GB`` for ``GeoNode``. A total of at least ``6GB`` of ``RAM`` available on your machine. If you don't have enough ``RAM`` available, you can lower down the values ``-Xms512m -Xmx4096m``. Consider that with less ``RAM`` available, the performances of your services will be highly impacted.
 
-Before starting the service, an update to the geofence property file is required.
+Conifgure the Geofence DB
+............................
+
+Before starting the service, Geofence must be configured to connect to the PostgreSQL DB, where its rules will be stored. 
+
+.. warning:: In previous versions this step was optional and a file-based H2 DB could be used. This option has been dropped since using H2 is highly discouraged.
+
+Open the ``geofence-datasource-ovr.properties`` file for edit:
 
 .. code-block:: shell
 
-  vi /opt/data/geoserver_data/geofence/geofence-datasource-ovr.properties
+  sudo vim /opt/data/geoserver_data/geofence/geofence-datasource-ovr.properties
 
 And paste the following code by replace the placehoders with the required files
 
@@ -1526,7 +1539,7 @@ Docker
 ======
 
 In this section we are going to list the passages needed to deploy a vanilla ``GeoNode`` with ``Docker``
-You can follow the instructions at :ref:`Docker Setup for Ubuntu (20.04) <Ubuntu (20.04) Basic Setup>` to prepare a Ubuntu 22.04 server with Docker and Docker Compose
+You can follow the instructions at :ref:`Docker Setup for Ubuntu (22.04) <Ubuntu (22.04) Basic Setup>` to prepare a Ubuntu 22.04 server with Docker and Docker Compose
 
 1. Clone GeoNode
 ^^^^^^^^^^^^^^^^

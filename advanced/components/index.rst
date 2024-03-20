@@ -10,9 +10,9 @@ What we will see in this section is:
 
 * **GeoNode** (Security Backend):
 
-    #. DJango Authentication
+    #. Django Authentication
 
-    #. DJango OAuth Toolkit Setup and Configuration
+    #. Django OAuth Toolkit Setup and Configuration
 
     #. Details on ``settings.py`` Security Settings
 

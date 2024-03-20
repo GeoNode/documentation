@@ -24,7 +24,7 @@ The steps to be followed are:
 
 Installation steps
 
-On a fresh Ubuntu 20.04 installation, we will be installing gdal version 3.3.2
+On a fresh Ubuntu 22.04 installation, we will be installing gdal version 3.3.2
 
 1- Using the terminal in the host machine, run the following commands:
 

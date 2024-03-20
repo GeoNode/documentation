@@ -559,7 +559,7 @@ And paste the following code by replace the placehoders with the required files
   geofenceVendorAdapter.databasePlatform=org.hibernatespatial.postgis.PostgisDialect
   geofenceDataSource.driverClassName=org.postgresql.Driver
   geofenceDataSource.url=jdbc:postgresql://localhost:5432/geonode_data
-  geofenceDataSource.username=geonode_data
+  geofenceDataSource.username=geonode
   geofenceDataSource.password=geonode
   geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
 

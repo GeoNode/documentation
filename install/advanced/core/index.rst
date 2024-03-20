@@ -486,7 +486,7 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/logs
 
   # Download and extract the default GEOSERVER_DATA_DIR
-  GS_VERSION=2.23.0
+  GS_VERSION=2.24.2
   sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/$GS_VERSION/geonode-geoserver-ext-web-app-data.zip" -O data-$GS_VERSION.zip
   
   sudo unzip data-$GS_VERSION.zip -d /opt/data/
@@ -545,6 +545,24 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
   Those options could be updated or changed manually at any time, accordingly to your needs.
 
 .. warning:: The default options we are going to add to the Servlet Container, assume you can reserve at least ``4GB`` of ``RAM`` to ``GeoServer`` (see the option ``-Xmx4096m``). You must be sure your machine has enough memory to run both ``GeoServer`` and ``GeoNode``, which in this case means at least ``4GB`` for ``GeoServer`` plus at least ``2GB`` for ``GeoNode``. A total of at least ``6GB`` of ``RAM`` available on your machine. If you don't have enough ``RAM`` available, you can lower down the values ``-Xms512m -Xmx4096m``. Consider that with less ``RAM`` available, the performances of your services will be highly impacted.
+
+Before starting the service, an update to the geofence property file is required.
+
+.. code-block:: shell
+
+  vi /opt/data/geoserver_data/geofence/geofence-datasource-ovr.properties
+
+And paste the following code by replace the placehoders with the required files
+
+.. code-block:: shell
+
+  geofenceVendorAdapter.databasePlatform=org.hibernatespatial.postgis.PostgisDialect
+  geofenceDataSource.driverClassName=org.postgresql.Driver
+  geofenceDataSource.url=jdbc:postgresql://localhost:5432/geonode_data
+  geofenceDataSource.username=geonode_data
+  geofenceDataSource.password=geonode
+  geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
+
 
 In order to make the changes effective, you'll need to restart the Servlet Container.
 

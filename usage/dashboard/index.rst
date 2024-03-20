@@ -1,7 +1,7 @@
 .. _dashboard:
 
 Dashboard
-========
+=========
 
 Dashboard is a MapStore tool integrated in GeoNode that provides the user with a space to add many Widgets, such as charts, maps, tables, texts and counters, and can create connections between them in order to:
 

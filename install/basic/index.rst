@@ -22,9 +22,9 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 First Step: Deploy GeoNode on a local server
 ============================================
 
-.. _Ubuntu (20.04) Basic Setup:
+.. _Ubuntu (22.04) Basic Setup:
 
-Docker Setup for Ubuntu (20.04)
+Docker Setup for Ubuntu (22.04)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell

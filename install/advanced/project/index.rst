@@ -11,10 +11,10 @@ The following steps will guide you to a new setup of GeoNode Project. All guides
 
 Those guides **are not** meant to be used on a production system. There will be dedicated chapters that will show you some *hints* to optimize GeoNode for a production-ready machine. In any case, we strongly suggest to task an experienced *DevOp* or *System Administrator* before exposing your server to the ``WEB``.
 
-Ubuntu 20.04
+Ubuntu 22.04
 ============
 
-This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 20.04 64-bit clean environment (Desktop or Server). All examples use shell commands that you must enter on a local terminal or a remote shell.
+This part of the documentation describes the complete setup process for GeoNode on an Ubuntu 22.04 64-bit clean environment (Desktop or Server). All examples use shell commands that you must enter on a local terminal or a remote shell.
 - If you have a graphical desktop environment you can open the terminal application after login;
 - if you are working on a remote server the provider or sysadmin should has given you access through an ssh client.
 
@@ -177,7 +177,7 @@ In this section we are going to install the ``PostgreSQL`` packages along with t
 
 .. code-block:: shell
 
-  # Ubuntu 20.04
+  # Ubuntu 22.04
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
   sudo apt update -y; sudo apt install -y postgresql-13 postgresql-13-postgis-3 postgresql-13-postgis-3-scripts postgresql-13 postgresql-client-13

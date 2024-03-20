@@ -69,4 +69,4 @@ Multiple containers can run on the same machine and share the OS kernel with oth
 
 This documentation will refer to the usage of Docker on a Ubuntu host, but you can of course run Docker also on other Linux distributions, Windows and Mac.
 
-For the steps to setup Docker on Ubuntu you can jump ahead to :ref:`Ubuntu 20.04 <Ubuntu (20.04) Basic Setup>`
+For the steps to setup Docker on Ubuntu you can jump ahead to :ref:`Ubuntu 22.04 <Ubuntu (22.04) Basic Setup>`

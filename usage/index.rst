@@ -15,3 +15,4 @@ GeoNode Users Guide
     publishing_data/index
     other_apps/index
     extra_metadata/index
+    download_handlers/index

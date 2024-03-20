@@ -439,9 +439,72 @@ Example:
     }
     response = requests.request("GET", url, headers=headers)
 
+2. Create a new User
 
-		
-3. List user groups
+- API: ``POST /api/v2/users``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/users"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    payload={"username": "username",
+            "password": "password",
+            "email": "email@email.com",
+            "first_name":"first_name",
+            "last_name":"last_name",
+            "avatar": "https://www.gravatar.com/avatar/7a68c67c8d409ff07e42aa5d5ab7b765/?s=240"}
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+
+3. DELETE a  User
+
+- API: ``DELETE /api/v2/users/{pk}``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/users/1000"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    payload={"password": "new_password"}
+    response = requests.request("DELETE", url, headers=headers, data=payload)
+
+
+In this case a list of deletion rules is applied specified in the settings
+
+4. Edit a  User
+
+- API: ``PATCH /api/v2/users/{pk}``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/users/1000"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    payload={"password": "new_password"}
+    response = requests.request("PATCH", url, headers=headers, data=payload)
+
+
+
+5. List user groups
 
 - API: ``POST /api/v2/users/{pk}/groups``
 - Status Code: ``200``
@@ -457,6 +520,51 @@ Example:
         'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
     }
     response = requests.request("GET", url, headers=headers)
+
+
+6. Transfer resources owned by a user to another
+
+- API: ``POST /api/v2/users/{pk}/transfer_resources``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    payload={"owner": 1001}
+    url = "https://master.demo.geonode.org/api/v2/users/1000/transfer_resources"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+In this case the resources will be transfered to the user with id 1001,
+instead using the payload={"owner": "DEFAULT"} the resources will be transfered to the principal user
+
+7. Remove user as a group manager
+
+- API: ``POST /api/v2/users/{pk}/remove_from_group_manager``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    payload={"groups": [1,2,3]}
+    url = "https://master.demo.geonode.org/api/v2/users/1000/remove_from_group_manager"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+In this case the user shall be removed as a group manager from the following group ids, 
+if the payload would be payload={"groups": "ALL"} the user will be removed as a group manager from all the groups its part of
+
+
+
+
 
 Groups
 ^^^^^^

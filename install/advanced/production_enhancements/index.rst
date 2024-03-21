@@ -269,8 +269,8 @@ The following procedure allows you to fix-up broken or incorrect Metadata Links:
     # Enter the GeoNode Docker Container
     docker-compose exec django bash
 
-    # Run the `set_all_layers_metadata` management command
-    ./manage.sh set_all_layers_metadata -d
+    # Run the `set_all_datasets_metadata` management command
+    ./manage.sh set_all_datasets_metadata -d
 
 It is also possible to *force* purging the links before regenerating:
 
@@ -279,8 +279,8 @@ It is also possible to *force* purging the links before regenerating:
     # Enter the GeoNode Docker Container
     docker-compose exec django bash
 
-    # Run the `set_all_layers_metadata` management command
-    ./manage.sh set_all_layers_metadata -d --prune
+    # Run the `set_all_datasets_metadata` management command
+    ./manage.sh set_all_datasets_metadata -d --prune
 
 Migrate GeoNode To A New Hostname
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -305,8 +305,8 @@ In the case you will need to move your instance to another domain, as an example
         # Run the `migrate_baseurl` management command
         ./manage.sh migrate_baseurl --source-address=my_geonode.geonode.org --target-address=prod_geonode.geonode.org
 
-        # Run the `set_all_layers_metadata` management command
-        ./manage.sh set_all_layers_metadata -d
+        # Run the `set_all_datasets_metadata` management command
+        ./manage.sh set_all_datasets_metadata -d
 
 
 Add Huge Or DB Datasets To Your Instance

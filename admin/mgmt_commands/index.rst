@@ -266,7 +266,7 @@ This will produce output that looks like the following
 
         DJANGO_SETTINGS_MODULE=geonode.settings python manage.py sync_geonode_maps --updatethumbnails -f 'This is a test Map'
 
-Management Command ``set_all_layers_metadata``
+Management Command ``set_all_datasets_metadata``
 ----------------------------------------------
 
 This command allows to reset **Metadata Attributes** and **Catalogue Schema** on Datasets. The command will also update the :guilabel:`CSW Catalogue` XML and Links of GeoNode.
@@ -287,26 +287,26 @@ The options are:
 * 
 * **set_links**; If set will refresh the links of the resource. (Default True).
 
-First of all let's take a look at the :guilabel:`--help` option of the ``set_all_layers_metadata``
+First of all let's take a look at the :guilabel:`--help` option of the ``set_all_datasets_metadata``
 management command in order to inspect all the command options and features.
 
 Run
 
 .. code-block:: shell
 
-    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py set_all_layers_metadata --help
+    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py set_all_datasets_metadata --help
 
 .. note:: If you enabled ``local_settings.py`` the command will change as following:
 
     .. code-block:: shell
 
-        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py set_all_layers_metadata --help
+        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py set_all_datasets_metadata --help
 
 This will produce output that looks like the following
 
 .. code-block:: shell
 
-    usage: manage.py set_all_layers_metadata [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py set_all_datasets_metadata [-h] [--version] [-v {0,1,2,3}]
                                             [--settings SETTINGS]
                                             [--pythonpath PYTHONPATH]
                                             [--traceback] [--no-color] [-i] [-d]
@@ -346,7 +346,7 @@ This will produce output that looks like the following
 
     .. code-block:: shell
 
-        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py set_all_layers_metadata -d
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py set_all_datasets_metadata -d
 
 .. _load_data_into_geonode:
 

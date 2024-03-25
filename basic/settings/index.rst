@@ -2607,6 +2607,18 @@ USER_MESSAGES_ALLOW_MULTIPLE_RECIPIENTS
 
     Set to true to have multiple recipients in /message/create/
 
+.. _user-deletion-rules:
+
+USER_DELETION_RULES
+----------------------
+    | Default: ``["geonode.people.utils.user_has_resources"]``
+    | Env: ``USER_DELETION_RULES``
+
+    List of callables that will be called the deletion of a user account is requested.
+    The deletion will fail if any of the callables return ``False``. 
+    New rules can be added, as a string path to the callable, as long as they take as parameter
+    the user object and return a boolean.
+
 .. _user-analytics:
 
 USER_ANALYTICS_ENABLED

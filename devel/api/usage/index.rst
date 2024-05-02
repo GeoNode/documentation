@@ -244,21 +244,31 @@ Notice that if the URL doesn't end with a valid doc extension, the ``extension``
 
 Tracking dataset upload progress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-When an upload request is executed, GeoNode creates an “upload object” and keeps updating its state and progress (it’s a property attribute, calculated on getting the response) attributes as the resource is being created and configured in Geoserver.
-The states used include:
-    - READY
-    - RUNNING
-    - PENDING
-    - WAITING
-    - INCOMPLETE
-    - COMPLETE
-    - INVALID
-    - PROCESSED
+When an upload request is executed, GeoNode creates an "Execution request" and keeps updating its state and progress (it’s a property attribute, calculated on getting the response) attributes as the resource is being created and configured in Geoserver.
+An execution can be in one of the following status:
+    - ``ready``
+    - ``running``
+    - ``failed``
+    - ``finished``
 
-When the dataset is successfully uploaded, the final state of the upload is set to ``PROCESSED`` and progress is calculated as ``100.0``.
+When the dataset is successfully uploaded, the final state of the upload is set to ``finished``.
 
-In order to view ongoing uploads, and their states, you can use the API ``GET /api/v2/uploads`` or ``GET /api/v2/uploads/{id}`` if the upload id is known. You can also filter uploads with state.
-Eg ``GET /api/v2/uploads?filter{state}=PROCESSED``
+In order to view status of the execution, the API method ``GET /api/v2/executionrequest/{execution_id}`` where ``{execution_id}`` is the value returned by the initial call to the upload API. 
+
+The returned object contains, beyond all the information related to the execution, the inputs that were passed to the execution request, and output params specific to the type of execution.
+In the case of a dataset upload, the output params contain the URL of the catalog page for the new datast.
+
+.. code-block:: json
+
+    "output_params": {
+        "detail_url": [
+            "/catalogue/#/dataset/9881"
+        ]
+    },
+
+You can also filter executions by status.
+Eg ``GET /api/v2/executionrequest?filter{action}=import&filter{source}=upload&filter{status}=finished``
+
 
 Example:
 
@@ -266,7 +276,7 @@ Example:
 
     import requests
     
-    url = "https://master.demo.geonode.org/api/v2/uploads"
+    url = "https://stable.demo.geonode.org/api/v2/executionrequest/5f640b6b-8c51-4514-a054-995133fee107"
     headers = {
         'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
     }
@@ -720,3 +730,21 @@ The ``status_url`` property returns the URL to track kthe progress of the reques
 
 
 The operation will be completed once the ``status`` property is updated with the value ``finished``.
+
+Linked Resources Listing and Details
+------------------------------------
+
+All available linked_resources  can be listed with API ``GET /api/v2/resources/{pk}/linked_resources``.
+where pk Resource base id
+
+Example Requests:
+^^^^^^^^^^^^^^^^^
+
+1. List all resource links
+
+.. code-block:: python
+
+    import requests
+
+    url = "https://master.demo.geonode.org/api/v2/resources/{pk}/linked_resources"
+    response = requests.request("GET", url)

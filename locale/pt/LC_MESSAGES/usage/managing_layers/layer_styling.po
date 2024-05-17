@@ -2,21 +2,25 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-19 17:42+0100\n"
-"PO-Revision-Date: 2021-07-03 11:21+0100\n"
-"Last-Translator: Fernando Ribeiro <fernandinand@gmail.com>\n"
-"Language: pt_PT\n"
-"Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"PO-Revision-Date: 2024-05-17 14:08+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/managing_layers/layer_styling.rst:4
 #: 3af3666f701c4b3fbaeaea1f222be1f6
@@ -26,27 +30,27 @@ msgstr "Modelação de Camada"
 #: ../../usage/managing_layers/layer_styling.rst:6
 #: e6d444bee4a848bfa0fbc1167da6a0a1
 msgid ""
-"Maps are helpful because they allow you gain a deeper understanding of "
-"your data by allowing you to visualize it in many different ways. So you "
-"can tell different stories depending on how the data is presented. For "
-"any given data or layer, you should explore different styling options and"
-" choose the best style for that."
+"Maps are helpful because they allow you gain a deeper understanding of your "
+"data by allowing you to visualize it in many different ways. So you can tell"
+" different stories depending on how the data is presented. For any given "
+"data or layer, you should explore different styling options and choose the "
+"best style for that."
 msgstr ""
-"Os mapas são úteis porque permitem obter uma compreensão mais profunda "
-"dos seus dados, permitindo-lhe visualizá-lo de muitas maneiras "
-"diferentes. Assim, pode contar histórias diferentes dependendo da forma "
-"como os dados são apresentados. Para qualquer dado ou camada, deve "
-"explorar diferentes opções de estilo e escolher o melhor estilo."
+"Os mapas são úteis porque permitem obter uma compreensão mais profunda dos "
+"seus dados, permitindo-lhe visualizá-lo de muitas maneiras diferentes. "
+"Assim, pode contar histórias diferentes dependendo da forma como os dados "
+"são apresentados. Para qualquer dado ou camada, deve explorar diferentes "
+"opções de estilo e escolher o melhor estilo."
 
 #: ../../usage/managing_layers/layer_styling.rst:10
 #: 71cdbd9ec09844e79966b1f5c23e9810
 msgid ""
 "In GeoNode each layer has a *Default Style* which is determined by the "
-"nature of the data you're mapping. When uploading a new layer (see :ref"
-":`uploading-layers`) a new default style will be associated to it."
+"nature of the data you're mapping. When uploading a new layer (see "
+":ref:`uploading-layers`) a new default style will be associated to it."
 msgstr ""
-"No GeoNode cada camada tem um *Estilo Predefinido* que é determinado pela"
-" natureza dos dados que está a mapear. Ao carregar uma nova camada (veja "
+"No GeoNode cada camada tem um *Estilo Predefinido* que é determinado pela "
+"natureza dos dados que está a mapear. Ao carregar uma nova camada (veja "
 ":ref:`uploading-layers`) será associado um novo estilo predefinido."
 
 #: ../../usage/managing_layers/layer_styling.rst:15
@@ -58,16 +62,16 @@ msgstr "*Estilo Predefinido para Camadas*"
 #: 2efcdc6bc5664a12a8a0962841ecc641
 msgid ""
 "Referring to the example above, dark orange lines are not very good to "
-"represent waterways so we would need to change this style. In the "
-"following paragraphs you will learn how to create a new style starting "
-"from given templates, how to edit a style, how to upload styles from file"
-" and how to manage them."
+"represent waterways so we would need to change this style. In the following "
+"paragraphs you will learn how to create a new style starting from given "
+"templates, how to edit a style, how to upload styles from file and how to "
+"manage them."
 msgstr ""
-"Referindo-se ao exemplo acima, as linhas laranja escuras não são muito "
-"boas para representar as vias navegáveis, pelo que teríamos de mudar este"
-" estilo. Nos parágrafos seguintes, você irá aprender a criar um novo "
-"estilo a partir de modelos, como editar um estilo, como carregar estilos "
-"a partir de arquivos e como geri-los."
+"Referindo-se ao exemplo acima, as linhas laranja escuras não são muito boas "
+"para representar as vias navegáveis, pelo que teríamos de mudar este estilo."
+" Nos parágrafos seguintes, você irá aprender a criar um novo estilo a partir"
+" de modelos, como editar um estilo, como carregar estilos a partir de "
+"arquivos e como geri-los."
 
 #: ../../usage/managing_layers/layer_styling.rst:20
 #: cab57b081bef45d7a10d07e8e7380dab
@@ -79,13 +83,13 @@ msgstr "Criação de novos Estilos"
 msgid ""
 "In order to create a new style, open the *Layer Page* (see :ref:`layer-"
 "info`) and click on :guilabel:`Editing Tools`. Then click the "
-":guilabel:`Edit` button in the *Styles* section of the *Layer Editing* "
-"panel (see the picture below)."
+":guilabel:`Edit` button in the *Styles* section of the *Layer Editing* panel"
+" (see the picture below)."
 msgstr ""
-"Para criar um novo estilo, abra a *Página Camada* (veja :ref:`layer-"
-"info`) e clique em :guilabel:`Editing Tools`. Em seguida, clique no botão"
-" :guilabel:`Edit` na secção *Estilos* do painel *Edição de Camadas* (veja"
-" a imagem em baixo)."
+"Para criar um novo estilo, abra a *Página Camada* (veja :ref:`layer-info`) e"
+" clique em :guilabel:`Editing Tools`. Em seguida, clique no botão "
+":guilabel:`Edit` na secção *Estilos* do painel *Edição de Camadas* (veja a "
+"imagem em baixo)."
 
 #: ../../usage/managing_layers/layer_styling.rst:27
 #: bb15b1b1cb2244608f1357816bb91571
@@ -95,12 +99,11 @@ msgstr "*Botão Editar Estilos*"
 #: ../../usage/managing_layers/layer_styling.rst:29
 #: 3b78225c1d084d6a96369e985fdc29af
 msgid ""
-"The *Layer* will open in a new *Map*. The *Styles Panel* will show you "
-"all the available styles for the layer and some useful tools."
+"The *Layer* will open in a new *Map*. The *Styles Panel* will show you all "
+"the available styles for the layer and some useful tools."
 msgstr ""
-"A *Camada* irá abrir num novo *Mapa*. O *Painel de Estilos* irá mostrar-"
-"lhe todos os estilos disponíveis para a camada e algumas ferramentas "
-"úteis."
+"A *Camada* irá abrir num novo *Mapa*. O *Painel de Estilos* irá mostrar-lhe "
+"todos os estilos disponíveis para a camada e algumas ferramentas úteis."
 
 #: ../../usage/managing_layers/layer_styling.rst:34
 #: 3be0c03ec4764d31ba06db662edafec9
@@ -115,11 +118,11 @@ msgstr "Agora siga os passos em baixo:"
 #: ../../usage/managing_layers/layer_styling.rst:38
 #: 6fb2f66e69844318878f23385b0bd43e
 msgid ""
-"Click the |create_new_style_button| button. The *Style Templates Panel* "
-"will open."
+"Click the |create_new_style_button| button. The *Style Templates Panel* will"
+" open."
 msgstr ""
-"Clique no botão |create_new_style_button|. O *Painel de Modelos de "
-"Estilo* será aberto."
+"Clique no botão |create_new_style_button|. O *Painel de Modelos de Estilo* "
+"será aberto."
 
 #: ../../usage/managing_layers/layer_styling.rst:40
 #: 40b3f534c35f43d7a6e41eb3723d9d80 b70f92f54f77408a9a782043d1d6c36c
@@ -156,9 +159,8 @@ msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:59
 #: 603093224bb84edeb637106a3efbc19e 7dee0cd443214ff0886deae4b18f40b5
-#, fuzzy
 msgid "add_style_button"
-msgstr "*Botão Carregar Estilos*"
+msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:64
 #: 1c50ef897704498a866d2f9a9bf1adf0
@@ -196,23 +198,25 @@ msgstr "*A Página de Camadas com o novo estilo*"
 
 #: ../../usage/managing_layers/layer_styling.rst:86
 #: 0bfc2a26c646409aa88c8ddc7deab055
-msgid "Now you can switch the style by clicking on the corresponding checkbox."
-msgstr "Agora pode mudar o estilo clicando na caixa de selecção correspondente."
+msgid ""
+"Now you can switch the style by clicking on the corresponding checkbox."
+msgstr ""
+"Agora pode mudar o estilo clicando na caixa de selecção correspondente."
 
 #: ../../usage/managing_layers/layer_styling.rst:88
 #: 547e71bcd0974966a51cbfccd5341739
 msgid ""
-"It would be nice to change the style in order to decrease the opacity of "
-"the filling color as well as to reduce the lines width. The embedded "
-"`MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ makes "
-"available a powerful *Style Editor* to accomplish that tasks. In the next"
-" paragraph we will explain how."
+"It would be nice to change the style in order to decrease the opacity of the"
+" filling color as well as to reduce the lines width. The embedded `MapStore "
+"<https://mapstore2.geo-solutions.it/mapstore/#/>`_ makes available a "
+"powerful *Style Editor* to accomplish that tasks. In the next paragraph we "
+"will explain how."
 msgstr ""
 "Seria bom alterar o estilo para diminuir a opacidade da cor de "
 "preenchimento, bem como para reduzir a largura das linhas. O `MapStore "
-"<https://mapstore2.geo-solutions.it/mapstore/#/>`_ incorporado "
-"disponibiliza um poderoso *Editor de Estilos* para realizar essas "
-"tarefas. No próximo parágrafo, explicaremos como."
+"<https://mapstore2.geo-solutions.it/mapstore/#/>`_ incorporado disponibiliza"
+" um poderoso *Editor de Estilos* para realizar essas tarefas. No próximo "
+"parágrafo, explicaremos como."
 
 #: ../../usage/managing_layers/layer_styling.rst:92
 #: 9c72f085d2b74735bbe06875733958c1
@@ -231,9 +235,8 @@ msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:101
 #: ba4216cf838b4e7fba0687f932fc7107 cd0b0e9c992943c09846332804904607
-#, fuzzy
 msgid "layer_settings_button"
-msgstr "Clique em |layer_settings_button|"
+msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:106
 #: 04e62cd15e4348c0b1b852db9a03c085 1e0885e1dd1d4bca98018a3f427dcb98
@@ -257,9 +260,8 @@ msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:126
 #: 1d7c539186cf42e4be6aab177cef8e53 bbc0be40c500416db44e41a5ed7dcb4f
-#, fuzzy
 msgid "delete_style_button"
-msgstr "*Botão Editar Estilos*"
+msgstr ""
 
 #: ../../usage/managing_layers/layer_styling.rst:131
 #: 34c295b21e4e4754af5f6c0cbb7bf105
@@ -286,8 +288,8 @@ msgid ""
 "Styles editing is allowed only to those users who have the needed "
 "permission. See :ref:`layer-permissions` to read more)"
 msgstr ""
-"A edição de estilos é permitida apenas para os utilizadores que possuem a"
-" permissão necessária. Veja :ref:`layer-permissions` para ler mais)"
+"A edição de estilos é permitida apenas para os utilizadores que possuem a "
+"permissão necessária. Veja :ref:`layer-permissions` para ler mais)"
 
 #: ../../usage/managing_layers/layer_styling.rst:137
 #: 430e9b04707b4560bca14f5c7309cc3f
@@ -297,13 +299,13 @@ msgstr "Seleccione o *Estilo* e clique em |style_editor_button|"
 #: ../../usage/managing_layers/layer_styling.rst:138
 #: ff76cc62754748c2b6cdee49d0ea0760
 msgid ""
-"Edit the style. The *Style Editor* helps you to write valid styles "
-"through the *Syntax Validator* which shows you a popup in case of errors "
-"(see the picture below)."
+"Edit the style. The *Style Editor* helps you to write valid styles through "
+"the *Syntax Validator* which shows you a popup in case of errors (see the "
+"picture below)."
 msgstr ""
-"Edite o estilo. O *Editor de Estilos* ajuda a escrever estilos válidos "
-"por meio do *Validador de Sintaxe* que mostra um pop-up em caso de erros "
-"(veja a imagem em baixo)."
+"Edite o estilo. O *Editor de Estilos* ajuda a escrever estilos válidos por "
+"meio do *Validador de Sintaxe* que mostra um pop-up em caso de erros (veja a"
+" imagem em baixo)."
 
 #: ../../usage/managing_layers/layer_styling.rst:143
 #: eab22ec369d04c57a43be0e3f4429a65
@@ -348,26 +350,26 @@ msgstr "Carregamento de Estilos"
 #: 581bd0132b894d3490eb93992fc1e73b
 msgid "In GeoNode it is also possible to upload an existing style from file."
 msgstr ""
-"No GeoNode, é também possível carregar um estilo existente a partir de um"
-" arquivo."
+"No GeoNode, é também possível carregar um estilo existente a partir de um "
+"arquivo."
 
 #: ../../usage/managing_layers/layer_styling.rst:162
 #: d8b5c91f3e97432bb082faaac10f0ded
 msgid ""
-"Currently only styles in **SLD (Style Layer Descriptor 1.0, 1.1)** format"
-" can be uploaded in GeoNode."
+"Currently only styles in **SLD (Style Layer Descriptor 1.0, 1.1)** format "
+"can be uploaded in GeoNode."
 msgstr ""
-"Actualmente, apenas estilos no formato **SLD (Style Layer Descriptor 1.0,"
-" 1.1)** podem ser carregados no GeoNode."
+"Actualmente, apenas estilos no formato **SLD (Style Layer Descriptor 1.0, "
+"1.1)** podem ser carregados no GeoNode."
 
 #: ../../usage/managing_layers/layer_styling.rst:164
 #: 17557df2b4404b4393d5e6b701444eb7
 msgid ""
-"From the *Layer Page* click on *Editing Tools* to open the *Editing "
-"Tools* panel and follow the steps below:"
+"From the *Layer Page* click on *Editing Tools* to open the *Editing Tools* "
+"panel and follow the steps below:"
 msgstr ""
-"Da *Página de Camadas* clique em *Ferramentas de Edição* para abrir o "
-"painel *Ferramentas de Edição* e siga os passos abaixo:"
+"Da *Página de Camadas* clique em *Ferramentas de Edição* para abrir o painel"
+" *Ferramentas de Edição* e siga os passos abaixo:"
 
 #: ../../usage/managing_layers/layer_styling.rst:166
 #: 3cb2bfcbf51a4da69794a3015c6cef69
@@ -397,8 +399,8 @@ msgstr "Clique em :guilabel:`Upload files`"
 #: ../../usage/managing_layers/layer_styling.rst:183
 #: b0f9afc8f5664a1fa3eb17d1d7ae452d
 msgid ""
-"Once the process has been finished the new *Style* will be visible in the"
-" *Layer Page*."
+"Once the process has been finished the new *Style* will be visible in the "
+"*Layer Page*."
 msgstr ""
 "Assim que o processo for concluído, o novo *Estilo* ficará visível na "
 "*Página de Camadas*."
@@ -411,13 +413,12 @@ msgstr "Gestão de Estilos"
 #: ../../usage/managing_layers/layer_styling.rst:188
 #: 76e1db9d5e614888beec313347972ff1
 msgid ""
-"Given a layer, you can manage all its styles in the *Styles Management "
-"Page* accessible from the :guilabel:`Manage` button of the *Layer "
-"Editing* panel."
+"Given a layer, you can manage all its styles in the *Styles Management Page*"
+" accessible from the :guilabel:`Manage` button of the *Layer Editing* panel."
 msgstr ""
-"Dada uma camada, pode fazer a gestão de todos os seus estilos na *Página "
-"de Gestão de Estilos* acessível a partir do botão :guilabel:`Manage` do "
-"painel *Edição de Camadas*."
+"Dada uma camada, pode fazer a gestão de todos os seus estilos na *Página de "
+"Gestão de Estilos* acessível a partir do botão :guilabel:`Manage` do painel "
+"*Edição de Camadas*."
 
 #: ../../usage/managing_layers/layer_styling.rst:193
 #: 0dad1d36cc8444a2b8c4d1f7e5b5143a
@@ -450,4 +451,3 @@ msgid "Click on :guilabel:`Update Available Styles` to save your changes."
 msgstr ""
 "Clique em :guilabel:`Update Available Styles` para salvar as suas "
 "alterações."
-

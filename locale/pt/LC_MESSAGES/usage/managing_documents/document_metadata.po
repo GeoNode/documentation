@@ -2,175 +2,162 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 20:42+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
+"PO-Revision-Date: 2024-05-17 14:09+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/managing_documents/document_metadata.rst:4
-#: 7127c83898a64040b481bc81863747ee
+#: 65cd90c2b5bd4878864660d2a99042c1
 msgid "Filling the Document Metadata"
 msgstr "Preenchendo os Metadados do Documento"
 
-#: ../../usage/managing_documents/document_metadata.rst:6
-#: b21015a0603e4d85818d772e0ff9d3e5
+#: ../../usage/managing_documents/document_metadata.rst:5
+#: 7bc9a65efe2c4271a5bcd0d2e5606ef2
 msgid ""
-"Metadata contains all the information related to the document: they are its ID "
-"card. They provide essential information for its identification and its "
-"comprehension. Metadata also make the document more easily retrievable through "
-"search by other users."
+"You can open the Metadata form by clicking on the *Edit* link in the "
+"document details menu and then *Edit Metatadata* Link."
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:10
+#: 44508da126ab42e69943d5cd7d8b2224
+msgid "*Edit Metadata Link*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_metadata.rst:12
+#: 9cf0fb69cd5b414d804e98aac6a8740d
+msgid ""
+"Metadata contains all the information related to the document: they are its "
+"ID card. They provide essential information for its identification and its "
+"comprehension. Metadata also make the document more easily retrievable "
+"through search by other users."
 msgstr ""
 "Os metadados contêm todas as informações relativas ao documento: são o seu "
 "cartão de identificação. Eles fornecem informações essenciais para sua "
 "identificação e compreensão. Os metadados também tornam o documento mais "
 "facilmente recuperável por meio de pesquisas por outros usuários."
 
-#: ../../usage/managing_documents/document_metadata.rst:8
-#: 26eff77412c44f8c9d7f646ba4352e95
+#: ../../usage/managing_documents/document_metadata.rst:14
+#: 7bc68a3722534873bf2073a48351697d
 msgid ""
 "Editing a document's metadata is done in three steps (*Basic Metadata*, "
 "*Location and Licenses*, *Optional Metadata*). The first two steps are "
-"mandatory (no documents will be published if the required information are not "
-"provided) whereas the last one is optional."
+"mandatory (no documents will be published if the required information are "
+"not provided) whereas the last one is optional."
 msgstr ""
 "A edição dos metadados de um documento é feita em três etapas (*Metadados "
-"Básicos*, *Localização e Licenças*, *Metadados Opcionais*). As duas primeiras "
-"etapas são obrigatórias (nenhum documento será publicado se as informações "
-"exigidas não forem fornecidas), enquanto a última é opcional."
+"Básicos*, *Localização e Licenças*, *Metadados Opcionais*). As duas "
+"primeiras etapas são obrigatórias (nenhum documento será publicado se as "
+"informações exigidas não forem fornecidas), enquanto a última é opcional."
 
-#: ../../usage/managing_documents/document_metadata.rst:10
-#: a36311089be2497f8ea190759a5b9d75
+#: ../../usage/managing_documents/document_metadata.rst:16
+#: adf3227bd9174dbc866c3c1a8b0b664a
 msgid ""
-"On the **Basic Metadata** page, the essential information that has to be filled "
-"is:"
+"On the **Basic Metadata** page, the essential information that has to be "
+"filled is:"
 msgstr ""
 "Na página **Metadados Básicos**, as informações essenciais que devem ser "
 "preenchidas são:"
 
-#: ../../usage/managing_documents/document_metadata.rst:12
-#: 1c1fbe3d85af41cebf22ac070bd0ef09
+#: ../../usage/managing_documents/document_metadata.rst:18
+#: 8eb74976c8d941e689a871c4a343eb6e
 msgid "The *Title* of the document, which should be clear and understandable;"
 msgstr "O *Título* do documento, que deve ser claro e compreensível;"
 
-#: ../../usage/managing_documents/document_metadata.rst:13
-#: 9135d7d710af4f68ae844ca2b7df93a7
-msgid "The *Resources* the document should be linked to;"
-msgstr "Os *Recursos* aos quais o documento deve estar vinculado;"
-
-#: ../../usage/managing_documents/document_metadata.rst:14
-#: e9d283110c10422fa390b328072f3bb3
+#: ../../usage/managing_documents/document_metadata.rst:19
+#: 8ee40cf2b5374f0283cb7c15e5ca6daf
 msgid "An *Abstract* on the document;"
 msgstr "Um *Resumo* no documento;"
 
-#: ../../usage/managing_documents/document_metadata.rst:15
-#: 11b3f6c1fe244a91a693538dcbc972fb
+#: ../../usage/managing_documents/document_metadata.rst:20
+#: d12aecef5b004f9f884b2c9cb715a4dc
 msgid ""
-"The *Creation/Publication/Revision* dates which define the time period that is "
-"covered by the document;"
+"The *Creation/Publication/Revision* dates which define the time period that "
+"is covered by the document;"
 msgstr ""
-"As datas de *Criação/Publicação/Revisão* que definem o período de tempo coberto "
-"pelo documento;"
+"As datas de *Criação/Publicação/Revisão* que definem o período de tempo "
+"coberto pelo documento;"
 
-#: ../../usage/managing_documents/document_metadata.rst:16
-#: 44111830a9af4e28b7103eb65af937a1
+#: ../../usage/managing_documents/document_metadata.rst:21
+#: ec31672ea479452d87c088410c850f73
 msgid ""
 "The *Keywords*, which should be chosen within the available list. The "
-"contributor search for available keywords by clicking on the searching bar, or "
-"on the folder logo representing, or by entering the first letters of the "
+"contributor search for available keywords by clicking on the searching bar, "
+"or on the folder logo representing, or by entering the first letters of the "
 "desired word. Key-words should be relevant to the imported document;"
 msgstr ""
 "As *Palavras-chave*, que devem ser escolhidas dentro da lista disponível. O "
-"colaborador busca as palavras-chave disponíveis clicando na barra de busca, ou "
-"no logotipo da pasta que representa, ou digitando as primeiras letras da "
+"colaborador busca as palavras-chave disponíveis clicando na barra de busca, "
+"ou no logotipo da pasta que representa, ou digitando as primeiras letras da "
 "palavra desejada. As palavras-chave devem ser relevantes para o documento "
 "importado;"
 
-#: ../../usage/managing_documents/document_metadata.rst:17
-#: cea9b857701f4766b5c2b887804070ae
+#: ../../usage/managing_documents/document_metadata.rst:22
+#: 0b60eca1c60b48c5bc22796beaa19cfc
 msgid "The *Category* in which the document belongs;"
 msgstr "A *Categoria* à qual o documento pertence;"
 
-#: ../../usage/managing_documents/document_metadata.rst:18
-#: 7b2351182c324a5c8216ac431100fb2a
+#: ../../usage/managing_documents/document_metadata.rst:23
+#: be06760cbb50421398f9bf014a3e1fc2
 msgid "The *Group* to which the document is linked."
 msgstr "O *Grupo* ao qual o documento está vinculado."
 
-#: ../../usage/managing_documents/document_metadata.rst:23
-#: 87ad8b9609c8447ab037eccbbdbba0f6
+#: ../../usage/managing_documents/document_metadata.rst:28
+#: 68ec8d039cc74170a9cfd920d25c4648
 msgid "*Document Basic Metadata*"
 msgstr "*Metadados Básicos do Documento*"
 
-#: ../../usage/managing_documents/document_metadata.rst:25
-#: dda38eb2cba5439f876647cde5db20c4
+#: ../../usage/managing_documents/document_metadata.rst:30
+#: 571283ff36bb435cb76a63951eb8d5bb
 msgid ""
-"Once all the fields are filled, click on the blue button :guilabel:`Next >>` in "
-"the bottom right corner of the page."
+"Once all the fields are filled, click on the blue button :guilabel:`Next >>`"
+" in the bottom right corner of the page."
 msgstr ""
-"Assim que todos os campos estiverem preenchidos, clique no botão azul :guilabel:"
-"`Next >>` no canto inferior direito da página."
+"Assim que todos os campos estiverem preenchidos, clique no botão azul "
+":guilabel:`Next >>` no canto inferior direito da página."
 
-#: ../../usage/managing_documents/document_metadata.rst:27
-#: 5237f4488c3847d6b04fb77eff7bf3d7
-msgid ""
-"When a document is linked to some resources, you can see that link on the "
-"*Resource Page*."
-msgstr ""
-"Quando um documento está vinculado a alguns recursos, você pode ver esse link "
-"na *Página de Recursos*."
-
-#: ../../usage/managing_documents/document_metadata.rst:33
-#: b2e94c64812b4c0ebf64156dec72259d
-msgid "*Documents linked to a Layer*"
-msgstr "*Documentos vinculados a uma Camada*"
-
-#: ../../usage/managing_documents/document_metadata.rst:35
-#: 9cdc43b2d30d49d48f05f55c72707f13
-msgid "It will be also visible on the :ref:`document-info` page."
-msgstr "Também estará visível na página :ref:`document-info`."
-
-#: ../../usage/managing_documents/document_metadata.rst:41
-#: 8a6dd213fe404779963b205e1e6db853
-msgid "*Resources linked to a Document*"
-msgstr "*Recursos vinculados a um Documento*"
-
-#: ../../usage/managing_documents/document_metadata.rst:43
-#: a3d8096aefb343bd833000ae4d0ddb29
+#: ../../usage/managing_documents/document_metadata.rst:32
+#: 1c04235d76d84ad4a9ceff194051080a
 msgid ""
 "On the **Location and Licenses** page, the following information should be "
 "filled:"
 msgstr ""
-"Na página **Local e Licenças**, as seguintes informações devem ser preenchidas:"
+"Na página **Local e Licenças**, as seguintes informações devem ser "
+"preenchidas:"
 
-#: ../../usage/managing_documents/document_metadata.rst:45
-#: b8645bae71424764a9af15a124787df7
+#: ../../usage/managing_documents/document_metadata.rst:34
+#: 6cffb25e10d048b09fa514437044f161
 msgid "The *Language* of the document;"
 msgstr "O *Idioma* do documento;"
 
-#: ../../usage/managing_documents/document_metadata.rst:46
-#: 6cea4a61527c4150aab217944f295b3f
+#: ../../usage/managing_documents/document_metadata.rst:35
+#: 460d0229b89647c398b6ca45ee52249c
 msgid ""
 "The *Regions*, which informs on the spatial extent covered by the document. "
 "Proposed extents cover the following scales: global, continental, regional, "
 "national;"
 msgstr ""
-"As *Regiões*, que informam sobre a extensão espacial coberta pelo documento. As "
-"extensões propostas cobrem as seguintes escalas: global, continental, regional, "
-"nacional;"
+"As *Regiões*, que informam sobre a extensão espacial coberta pelo documento."
+" As extensões propostas cobrem as seguintes escalas: global, continental, "
+"regional, nacional;"
 
-#: ../../usage/managing_documents/document_metadata.rst:47
-#: 0fb3a9b5a28c439c8a6c4717975dbd0b
+#: ../../usage/managing_documents/document_metadata.rst:36
+#: edc21d6b863f4daab3948dadbaa5d999
 msgid ""
 "The *Data Quality statement* (general explanation of the data producer's "
 "knowledge about the lineage of a dataset);"
@@ -178,89 +165,118 @@ msgstr ""
 "A *Declaração de Qualidade de Dados* (explicação geral do conhecimento do "
 "produtor de dados sobre a linhagem de um conjunto de dados);"
 
-#: ../../usage/managing_documents/document_metadata.rst:48
-#: 96277da770fd4f5ea0b5590662cb0af6
+#: ../../usage/managing_documents/document_metadata.rst:37
+#: 2ee6645072aa4c38b7de05945feab1a8
 msgid ""
 "Potential *Restrictions* to sharing the document should be provided in the "
 "Restrictions box."
 msgstr ""
-"Potenciais *Restrições* ao compartilhamento do documento devem ser fornecidas "
-"na caixa Restrições."
+"Potenciais *Restrições* ao compartilhamento do documento devem ser "
+"fornecidas na caixa Restrições."
 
-#: ../../usage/managing_documents/document_metadata.rst:53
-#: c72f6023448d42d1a1e74d3ba42b2264
+#: ../../usage/managing_documents/document_metadata.rst:42
+#: f49731bec6fa4d6bafcb2aa5e2a866e5
 msgid "*Document Location and Licenses*"
 msgstr "*Localização do Documento e Licenças*"
 
-#: ../../usage/managing_documents/document_metadata.rst:55
-#: 033d57183d8746b8be8705c0c34a7529
-msgid "Click on the blue button :guilabel:`Next >>` to go ahead to the next step."
+#: ../../usage/managing_documents/document_metadata.rst:44
+#: 29346077dcc04935830c25f9fd6abebe
+msgid ""
+"Click on the blue button :guilabel:`Next >>` to go ahead to the next step."
 msgstr ""
 "Clique no botão azul :guilabel:`Next >>` para avançar para a próxima etapa."
 
-#: ../../usage/managing_documents/document_metadata.rst:57
-#: f7baee13adb447988c218a4c8d6ad120
-msgid "On the **Optional Metadata** page, complementary information can be added:"
+#: ../../usage/managing_documents/document_metadata.rst:46
+#: 7f3f45449f354a369d83848bc598a5c0
+msgid ""
+"On the **Optional Metadata** page, complementary information can be added:"
 msgstr ""
 "Na página **Metadados Opcionais**, informações complementares podem ser "
 "adicionadas:"
 
-#: ../../usage/managing_documents/document_metadata.rst:59
-#: 4acfdd6639c04f4eb17ee19eac551a35
+#: ../../usage/managing_documents/document_metadata.rst:48
+#: 83624a7c4db042e5b79bc7b63c60db40
 msgid "The *Edition* to indicate the reference or the source of the document;"
 msgstr "A *Edição* para indicar a referência ou a fonte do documento;"
 
-#: ../../usage/managing_documents/document_metadata.rst:60
-#: c2c48f42ca1e4fa18c1abf716a8ec2c2
+#: ../../usage/managing_documents/document_metadata.rst:49
+#: 1c46a0ec1c3e42e3a81ddbd864aa4647
 msgid "The *Purpose* of the document and its objectives;"
 msgstr "O *Propósito* do documento e seus objectivos;"
 
-#: ../../usage/managing_documents/document_metadata.rst:61
-#: 007c618d560d4e9c8eccdc9f02674655
+#: ../../usage/managing_documents/document_metadata.rst:50
+#: 4ac0af6c561a4d928f3946c94d2daf9e
 msgid ""
-"Any *Supplemental information* that can provide a better understanding of the "
-"uploaded document;"
+"Any *Supplemental information* that can provide a better understanding of "
+"the uploaded document;"
 msgstr ""
-"Qualquer *Informação suplementar* que possa fornecer uma melhor compreensão do "
-"documento carregado;"
+"Qualquer *Informação suplementar* que possa fornecer uma melhor compreensão "
+"do documento carregado;"
 
-#: ../../usage/managing_documents/document_metadata.rst:62
-#: 51c695d6b3204f33b50706c42993d128
+#: ../../usage/managing_documents/document_metadata.rst:51
+#: 6e2f788dd5534916af21058a2d527a4d
 msgid "The *Maintenance frequency* of the document;"
 msgstr "A *Frequência de manutenção* do documento;"
 
-#: ../../usage/managing_documents/document_metadata.rst:63
-#: ffa399c608914e6f851ece1803ccc76c
+#: ../../usage/managing_documents/document_metadata.rst:52
+#: e2beab35c83a42d2b958eb13fb1a3030
 msgid "The *Spatial representation type* used."
 msgstr "O *Tipo de representação espacial* usado."
 
-#: ../../usage/managing_documents/document_metadata.rst:65
-#: 39700d10a1de433086e0a954843ec112
+#: ../../usage/managing_documents/document_metadata.rst:54
+#: ff04e36576bd4a5bab1a3792608bb53a
 msgid ""
-"*Responsible Parties*, *Owner* and *Permissions* are listed on the right side "
-"of the page, you can edit them."
+"*Responsible Parties*, *Owner* and *Share options* are listed on the right "
+"side of the page, you can edit them."
 msgstr ""
-"*Partes Responsáveis*, *Proprietário* e *Permissões* estão listados no lado "
-"direito da página, você pode editá-los."
 
-#: ../../usage/managing_documents/document_metadata.rst:70
-#: 18750e27eb524899bb83677e5fb05462
+#: ../../usage/managing_documents/document_metadata.rst:59
+#: f807009963194ed1b40f9ad6de0770f2
 msgid "*Document Optional Metadata*"
 msgstr "*Metadados Opcionais do Documento*"
 
 #: ../../usage/managing_documents/document_metadata.rst
-#: 5e8c5f567a93427983ded0d553a5ec2c
+#: fb917175d54b42639ebdd047a3d80ae9
 msgid ""
-"If all the mandatory information is filled out the document can be published, "
-"if not the ``Completeness`` progress bar warns you that something is missing."
+"If all the mandatory information is filled out the document can be "
+"published, if not the ``Completeness`` progress bar warns you that something"
+" is missing."
 msgstr ""
-"Se todas as informações obrigatórias forem preenchidas, o documento pode ser "
-"publicado, caso contrário a barra de progresso ``Completeness`` avisa que algo "
-"está faltando."
+"Se todas as informações obrigatórias forem preenchidas, o documento pode ser"
+" publicado, caso contrário a barra de progresso ``Completeness`` avisa que "
+"algo está faltando."
 
 #: ../../usage/managing_documents/document_metadata.rst
-#: f8ae0dab17fe49c2bb5a7c55387b0f1c
+#: bd287d4a1e25441799ffaff8ff5827ef
 msgid ""
-"Click on the blue button :guilabel:`Update` to save information on the system."
+"Click on the blue button :guilabel:`Update` to save information on the "
+"system."
 msgstr ""
-"Clique no botão azul :guilabel:`Update` para salvar as informações no sistema."
+"Clique no botão azul :guilabel:`Update` para salvar as informações no "
+"sistema."
+
+#~ msgid ""
+#~ "When a document is linked to some resources, you can see that link on the "
+#~ "*Resource Page*."
+#~ msgstr ""
+#~ "Quando um documento está vinculado a alguns recursos, você pode ver esse "
+#~ "link na *Página de Recursos*."
+
+#~ msgid "*Documents linked to a Layer*"
+#~ msgstr "*Documentos vinculados a uma Camada*"
+
+#~ msgid "It will be also visible on the :ref:`document-info` page."
+#~ msgstr "Também estará visível na página :ref:`document-info`."
+
+#~ msgid "*Resources linked to a Document*"
+#~ msgstr "*Recursos vinculados a um Documento*"
+
+#~ msgid ""
+#~ "*Responsible Parties*, *Owner* and *Permissions* are listed on the right "
+#~ "side of the page, you can edit them."
+#~ msgstr ""
+#~ "*Partes Responsáveis*, *Proprietário* e *Permissões* estão listados no lado "
+#~ "direito da página, você pode editá-los."
+
+#~ msgid "The *Resources* the document should be linked to;"
+#~ msgstr "Os *Recursos* aos quais o documento deve estar vinculado;"

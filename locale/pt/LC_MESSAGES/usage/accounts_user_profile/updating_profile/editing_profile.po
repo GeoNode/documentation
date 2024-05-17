@@ -2,22 +2,25 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-02 01:07+0200\n"
+"PO-Revision-Date: 2024-05-17 14:09+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:2
 #: 00baf8b0835c40c88de444f96c38b6c3
@@ -28,21 +31,22 @@ msgstr "Editando as Informações de Perfil"
 #: 32d251de9baf4e018b5f98743b72f5b7
 msgid ""
 "Your *Profile* contains personal information such as your address, your "
-"telephone number, your organization and so on but it is empty by default "
-"at the beginning."
+"telephone number, your organization and so on but it is empty by default at "
+"the beginning."
 msgstr ""
-"Seu *Perfil* contém informações pessoais como seu endereço, seu número "
-"de telefone, sua empresa e assim por diante, mas está vazio por padrão "
-"no início."
+"Seu *Perfil* contém informações pessoais como seu endereço, seu número de "
+"telefone, sua empresa e assim por diante, mas está vazio por padrão no "
+"início."
 
 #: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:6
 #: 2e6ccff31b9d408588b84bb8395f4cb8
 msgid ""
-"Through the :guilabel:`Edit profile` button of the *Profile* page (see :"
-"ref:`editing-profile`) you can set your details, including your avatar."
+"Through the :guilabel:`Edit profile` button of the *Profile* page (see "
+":ref:`editing-profile`) you can set your details, including your avatar."
 msgstr ""
-"Através do botão :guilabel:`Edit profile` da página *Perfil* (ver :ref:"
-"`editing-profile`) você pode definir seus detalhes, incluindo seu avatar."
+"Através do botão :guilabel:`Edit profile` da página *Perfil* (ver "
+":ref:`editing-profile`) você pode definir seus detalhes, incluindo seu "
+"avatar."
 
 #: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:11
 #: 399d58684c3b41958ec30249541bf31f
@@ -52,8 +56,8 @@ msgstr "*Actualização de Informações de Perfil*"
 #: ../../usage/accounts_user_profile/updating_profile/editing_profile.rst:13
 #: da6d78c80a9d46de999afcaffa873d18
 msgid ""
-"When finished, click :guilabel:`Update profile`. You will be redirected "
-"to the *Profile* page."
+"When finished, click :guilabel:`Update profile`. You will be redirected to "
+"the *Profile* page."
 msgstr ""
 "Quando terminar, clique em :guilabel:`Update profile`. Você será "
 "redireccionado para a página de *Perfil*."

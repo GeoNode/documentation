@@ -2,50 +2,64 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-06-26 12:18+0200\n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"PO-Revision-Date: 2024-05-17 14:08+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../usage/data/index.rst:4 a13e6c7f16d24dd690ae263608015183
+#: ../../usage/data/index.rst:4 560a91bc583441caaa330d515623b02f
 msgid "Data"
 msgstr "Dados"
 
-#: ../../usage/data/index.rst:6 366e34d79f8f47ebb4372a9b6d486418
+#: ../../usage/data/index.rst:6 1ed0627974a94ee5bc32044fc706999d
 msgid ""
-"Data management tools built into GeoNode allow for integrated creation "
-"of data, documents, link to external documents, and map visualizations. "
-"Each dataset in the system can be shared publicly or restricted to allow "
-"access to only specific users. Social features like user profiles and "
-"commenting and rating systems allow for the development of communities "
-"around each platform to facilitate the use, management, and quality "
-"control of the data the GeoNode instance contains."
+"Data management tools built into GeoNode allow integrated creation of "
+"resources eg datasets, documents, link to external documents, map "
+"visualizations and other configured geonode apps. Each resource in the "
+"system can be shared publicly or restricted to allow access to only specific"
+" users. Social features like user profiles and commenting and rating systems"
+" allow for the development of communities around each platform to facilitate"
+" the use, management, and quality control of the data the GeoNode instance "
+"contains."
 msgstr ""
-"As ferramentas de gestão de dados incorporadas ao GeoNode permitem a "
-"criação integrada de dados, documentos, links para documentos externos e "
-"visualizações de mapas. Cada conjunto de dados no sistema pode ser "
-"compartilhado publicamente ou restrito para permitir o acesso apenas a "
-"utilizadores específicos. Recursos sociais como perfis de utilizador e "
-"sistemas de comentários e classificação permitem o desenvolvimento de "
-"comunidades em torno de cada plataforma para facilitar o uso, gestão e "
-"controle de qualidade dos dados que a instância GeoNode contém."
 
-#: ../../usage/data/index.rst:10 3882514c491a4d0fb408306538b4f078
+#: ../../usage/data/index.rst:10 3ddb33915f504a2188ef498bfc3b7dd1
 msgid ""
-"The following sections will explain more in depth what data can be "
-"managed in GeoNode and how to easily find that data."
+"The following sections will explain more in depth what data can be managed "
+"in GeoNode and how to easily find that data."
 msgstr ""
-"As secções a seguir irão explicar mais detalhadamente quais dados podem "
-"ser geridos no GeoNode e como encontrar esses dados facilmente."
+"As secções a seguir irão explicar mais detalhadamente quais dados podem ser "
+"geridos no GeoNode e como encontrar esses dados facilmente."
+
+#~ msgid ""
+#~ "Data management tools built into GeoNode allow for integrated creation of "
+#~ "data, documents, link to external documents, and map visualizations. Each "
+#~ "dataset in the system can be shared publicly or restricted to allow access "
+#~ "to only specific users. Social features like user profiles and commenting "
+#~ "and rating systems allow for the development of communities around each "
+#~ "platform to facilitate the use, management, and quality control of the data "
+#~ "the GeoNode instance contains."
+#~ msgstr ""
+#~ "As ferramentas de gestão de dados incorporadas ao GeoNode permitem a criação"
+#~ " integrada de dados, documentos, links para documentos externos e "
+#~ "visualizações de mapas. Cada conjunto de dados no sistema pode ser "
+#~ "compartilhado publicamente ou restrito para permitir o acesso apenas a "
+#~ "utilizadores específicos. Recursos sociais como perfis de utilizador e "
+#~ "sistemas de comentários e classificação permitem o desenvolvimento de "
+#~ "comunidades em torno de cada plataforma para facilitar o uso, gestão e "
+#~ "controle de qualidade dos dados que a instância GeoNode contém."

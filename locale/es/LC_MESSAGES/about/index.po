@@ -34,6 +34,11 @@ msgid ""
 "interface allowing non-specialized users to share data and create "
 "interactive maps."
 msgstr ""
+"GeoNode es un sistema de gestión de contenido geoespacial, una plataforma "
+"para el manejo y publicación de datos geoespaciales. GeoNode reúne proyectos"
+" de software de código abierto maduros y estables bajo una interfaz "
+"consistente y fácil de usar que permite a los usuarios no especializados "
+"compartir datos y crear mapas interactivos."
 
 #: ../../about/index.rst:8 83f3e71b384f4ddfba1bba32b4d357d8
 msgid ""
@@ -44,6 +49,8 @@ msgid ""
 " development of communities around each platform to facilitate the use, "
 "management, and quality control of the data the GeoNode instance contains."
 msgstr ""
+"101%match\n"
+"Las herramientas de gestión de datos integradas en GeoNode permiten la creación integrada de datos, metadatos y visualización de mapas. Cada conjunto de datos en el sistema puede compartirse públicamente o restringirse para permitir el acceso a usuarios específicos. Las características sociales como los perfiles de usuario y los sistemas de comentarios y calificación permiten el desarrollo de comunidades alrededor de cada plataforma para facilitar el uso, la gestión y el control de calidad de los datos que contiene la instancia de GeoNode."
 
 #: ../../about/index.rst:10 14926e81ab6d466e9c3288d4edae152e
 msgid ""

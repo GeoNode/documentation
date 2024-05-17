@@ -2,172 +2,250 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:09+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
+"PO-Revision-Date: 2024-05-17 14:08+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/managing_documents/document_editing.rst:4
-#: 6e07757ecc1748f5af76ecfa8976963b
+#: fd001a9f48da42beae9986bd8594c0e8
 msgid "Document Editing"
 msgstr "Edição de Documentos"
 
 #: ../../usage/managing_documents/document_editing.rst:6
-#: 64c123068efa49a39f00e7cc2ebaa785
+#: 5926eb8a2c7f4fe894c8e0b3422075ac
 msgid ""
-"The :ref:`document-info` page makes available useful tools for document "
-"editing. Click on the :guilabel:`Edit Document` button to see what you "
-"can do to make changes. The picture below shows you the *Editing Panel* "
-"that will appear on the screen."
+"The :ref:`document-info` page makes available useful menu for document "
+"editing. Click on the :guilabel:`Edit` link then :guilabel:`Edit Metadata` "
+"to see editing forms."
 msgstr ""
-"A página :ref:`document-info` disponibiliza ferramentas úteis para a "
-"edição de documentos. Clique no botão :guilabel:`Edit Document` para ver "
-"o que pode fazer para efectuar alterações. A imagem abaixo mostra o "
-"*Painel de Edição* que aparecerá na tela."
 
-#: ../../usage/managing_documents/document_editing.rst:11
-#: 7a2ce78dccb94276bbe10d8f75009daf
-msgid "*Document Editing panel*"
-msgstr "*Painel de Edição de documentos*"
-
-#: ../../usage/managing_documents/document_editing.rst:13
-#: 03a0aafbc3a1482a919482cf7f070f18
-msgid ""
-"You can *Replace* the document file with another one by clicking on :"
-"guilabel:`Replace`. It will drive you to the *Document Upload* page "
-"(see :ref:`uploading-documents`) where you can upload a new file."
-msgstr ""
-"Você pode *Substituir* o ficheiro por outro clicando em :guilabel:"
-"`Replace`. Isso o levará à página *Carregar documentos* (consulte :ref:"
-"`uploading-documents`) onde você pode carregar um novo arquivo."
-
-#: ../../usage/managing_documents/document_editing.rst:15
-#: 73982e9e41a74ee79a757d433496d170
-msgid ""
-"The :guilabel:`Remove` button allows you to delete the document. You "
-"will have to confirm that choice."
-msgstr ""
-"O botão :guilabel:`Remove` permite apagar o documento. Você terá que "
-"confirmar essa escolha."
-
-#: ../../usage/managing_documents/document_editing.rst:20
-#: 1a791275b1184d25aa4d851015d0d2a8
-msgid "*Document Removal confirmation*"
-msgstr "*Confirmação de Remoção de documento*"
-
-#: ../../usage/managing_documents/document_editing.rst:22
-#: 59864dd01bb14156b681d4a2c4796e89
-msgid ""
-"The *Editing Panel* shows you also some links for editing the metadata "
-"and the thumbnail. These actions will be explained more in depth in the "
-"next paragraphs."
-msgstr ""
-"O *Painel de Edição* mostra também alguns links para editar os metadados "
-"e a miniatura. Estas acções serão explicadas com mais detalhes nos "
-"próximos parágrafos."
-
-#: ../../usage/managing_documents/document_editing.rst:25
-#: 04bb5253e547459a88332b627805a5b9
+#: ../../usage/managing_documents/document_editing.rst:9
+#: 362e69e0f2d44fcb9802744da3a29e12
 msgid "Setting the Document Thumbnail"
 msgstr "Configuração da Miniatura do Documento"
 
-#: ../../usage/managing_documents/document_editing.rst:27
-#: b652f09473ec48bf955ad1a7de7d0236
+#: ../../usage/managing_documents/document_editing.rst:11
+#: 462b21235db0498a9ac61cf92a7c3173
 msgid ""
-"From the *Editing Panel*, it is also possible to *Set the Thumbnail* of "
-"the document. Click on :guilabel:`Set` to open the *Thumbnail Uploading* "
-"page and chose the image that will illustrate your document. You can "
-"either drag and drop it in the *Drop files here* box or selecting from "
-"your folders by clicking on *Choose Files*. Once this is done, click on "
-"the red button :guilabel:`Upload files`. If the thumbnail has been "
-"successfully uploaded you can see it by coming back to the document "
-"list. Click on the :guilabel:`Explore Documents` button to check that."
+"From the *Metadata Form*, it is possible to *Set the Thumbnail* of the "
+"document. Click on :guilabel:`Choose file` to open the *Thumbnail Uploading*"
+" page and chose the image that will illustrate your document. Once this is "
+"done, click on the ok button and save. If the thumbnail has been "
+"successfully uploaded you can see it by coming back to the document list."
 msgstr ""
-"Do *Painel de Edição*, é também possível *Definir a Miniatura* do "
-"documento. Clique em :guilabel:`Set` para abrir a página *Carregamento "
-"de Miniaturas* e escolha a imagem que irá ilustrar o seu documento. Você "
-"pode arrastar e soltar na caixa *Solte os arquivos aqui* ou selecionar "
-"de suas pastas clicando em *Escolher arquivos*. Feito isto, clique no "
-"botão vermelho :guilabel:`Upload files`. Se a miniatura foi carregada "
-"com sucesso, você pode vê-la voltando para a lista de documentos. Clique "
-"no botão :guilabel:`Explore Documents` para verificar isso."
 
-#: ../../usage/managing_documents/document_editing.rst:32
-#: a64362d1d12046ee986ebc2e4dcd9218
+#: ../../usage/managing_documents/document_editing.rst:16
+#: cf8b481566b84e4592b13f4f58bba745
 msgid "*Upload Document's Thumbnail*"
 msgstr "*Carregar Miniatura do Documento*"
 
-#: ../../usage/managing_documents/document_editing.rst:34
-#: 3860136fe89a47e4b9765c63162d4ad6
-msgid "If no errors occur the following message will be shown."
-msgstr "Se nenhum erro ocorrer, a seguinte mensagem será exibida."
+#: ../../usage/managing_documents/document_editing.rst:18
+#: 7cbaaa1d44d04741b3800300e19b8e57
+msgid "If no errors occur, the new selected thumbnail will be shown."
+msgstr ""
 
-#: ../../usage/managing_documents/document_editing.rst:39
-#: baedf17606924452b7f4450a18783bb0
+#: ../../usage/managing_documents/document_editing.rst:23
+#: 0ec79b07ca724a3ab8706a26f1ad13b2
 msgid "*Uploading success*"
 msgstr "*Carregamento bem-sucedido*"
 
-#: ../../usage/managing_documents/document_editing.rst:42
-#: eec6524da8934cf3be170840af3922fc
+#: ../../usage/managing_documents/document_editing.rst:26
+#: 498aac7dc110437c957ab0230d0e97b9
 msgid "Editing the Document Metadata"
 msgstr "Edição dos Metadados do Documento"
 
-#: ../../usage/managing_documents/document_editing.rst:44
-#: 889f5958e02a459aa3400a56966026d6
+#: ../../usage/managing_documents/document_editing.rst:28
+#: a79408c8b49b41aaa671ee7d5db9d75f
 msgid ""
-"You can edit the metadata of your document through the buttons shown in "
-"the red rectangle in below picture."
+"You can edit the metadata of your document as described in the "
+":ref:`document-metadata` section or by using THe *Advanced Metadata* option "
+"below."
 msgstr ""
-"Você pode editar os metadados do seu documento através dos botões "
-"mostrados no rectângulo vermelho na imagem abaixo."
 
-#: ../../usage/managing_documents/document_editing.rst:49
-#: ../../usage/managing_documents/document_editing.rst:57
-#: aa1ff9a5a9654a6da6b97b667ab53a23 e1a21effa7e24e95b1d1a542a432f892
+#: ../../usage/managing_documents/document_editing.rst:33
+#: 40bfd3a3d1eb48828b1d0134cafef919
+msgid ""
+"|The :guilabel:`Advanced Metadata` button takes you to a big form where all "
+"the available metadata of the document can be edited. | Some information are"
+" mandatory such as the *Title* or the *Category* the document belongs to, "
+"some others are optional."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:39
+#: 9d6b4c2b3e3049c19f86d1fd21af6f85
 msgid "*Editing Metadata*"
 msgstr "*Edição de Metadados*"
 
-#: ../../usage/managing_documents/document_editing.rst:51
-#: 874b8edf52f54b9eb9bfc753e9f7ac52
+#: ../../usage/managing_documents/document_editing.rst:41
+#: 1e26e16010b84e978e71c6a1e2dfe32a
 msgid ""
-"The :guilabel:`Wizard` button drive you to the wizard described in the :"
-"ref:`document-metadata` section. The :guilabel:`Advanced Edit` button "
-"takes you to a big form where all the available metadata of the document "
-"can be edited."
+"In the example shown in the picture above, the information inside the red "
+"rectangles have been changed. To save the changes click on "
+":guilabel:`Update`, you will be redirected to the document page."
 msgstr ""
-"O botão :guilabel:`Wizard` o leva ao assistente descrito na secção :ref:"
-"`document-metadata`. O botão :guilabel:`Advanced Edit` leva-o a um "
-"formulário extenso onde todos os metadados disponíveis do documento "
-"podem ser editados."
+"No exemplo mostrado na imagem acima, as informações dentro dos rectângulos "
+"vermelhos foram alteradas. Para salvar as alterações clique em "
+":guilabel:`Update`, e será redireccionado para a página do documento."
 
-#: ../../usage/managing_documents/document_editing.rst:52
-#: 685c2939c8bf449a97d078525327b6b5
-msgid ""
-"Some information are mandatory such as the *Title* or the *Category* the "
-"document belongs to, some others are optional."
+#: ../../usage/managing_documents/document_editing.rst:44
+#: 8d610b75b7084bc4b46520e203d23f80
+msgid "Editing the Document Info"
 msgstr ""
-"Algumas informações são obrigatórias, como o *Título* ou a *Categoria* a "
-"que o documento pertence, outras são opcionais."
 
-#: ../../usage/managing_documents/document_editing.rst:59
-#: 5723681399f441d996323d5d5da83b0c
+#: ../../usage/managing_documents/document_editing.rst:46
+#: 84525d256b664621b779ba2e28ab10c2
 msgid ""
-"In the example shown in the picture above, the information inside the "
-"red rectangles have been changed. To save the changes click on :guilabel:"
-"`Update`, you will be redirected to the document page."
+"You can edit the information of your document by clicking on the "
+":guilabel:`Edit` link, then :guilabel:`Edit Info`."
 msgstr ""
-"No exemplo mostrado na imagem acima, as informações dentro dos "
-"rectângulos vermelhos foram alteradas. Para salvar as alterações clique "
-"em :guilabel:`Update`, e será redireccionado para a página do documento."
+
+#: ../../usage/managing_documents/document_editing.rst:48
+#: a0f4116b5162455ea46a7e4df2addcf6
+msgid ""
+"From the Info panel, it is possible to upload the **Thumbnail** of the "
+"document."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:53
+#: ddf5de30032749bb849e86cbae09b690
+msgid "*Upload Thumbnail*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:55
+#: b8eeabdceab24b2887c73411fd66e1f9
+msgid ""
+"If you want this document in your **Favorites** (see :ref:`editing-"
+"profile`), click on the start icon."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:60
+#: 09383b8192ac40769396ab86cca48472
+msgid "*Favorite document*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:62
+#: 2ba4ac61d330492babdc22b5f4a79646
+msgid ""
+"You can directly **Download** the document and **Share** the document url by"
+" clicking the buttons on the top-right of the panel."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:67
+#: 25328d3ddc9146db967a179d188e769a
+msgid "*Share and Download document*"
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:69
+#: d8ad8aac506340ff84bf183380bdc47a
+msgid "By clicking the document **Title**, you can change it."
+msgstr ""
+
+#: ../../usage/managing_documents/document_editing.rst:74
+#: ce811d2f085448f6a9e13a7a11652270
+msgid "*Document Title*"
+msgstr ""
+
+#~ msgid ""
+#~ "The :ref:`document-info` page makes available useful tools for document "
+#~ "editing. Click on the :guilabel:`Edit Document` button to see what you can "
+#~ "do to make changes. The picture below shows you the *Editing Panel* that "
+#~ "will appear on the screen."
+#~ msgstr ""
+#~ "A página :ref:`document-info` disponibiliza ferramentas úteis para a edição "
+#~ "de documentos. Clique no botão :guilabel:`Edit Document` para ver o que pode"
+#~ " fazer para efectuar alterações. A imagem abaixo mostra o *Painel de Edição*"
+#~ " que aparecerá na tela."
+
+#~ msgid "*Document Editing panel*"
+#~ msgstr "*Painel de Edição de documentos*"
+
+#~ msgid ""
+#~ "You can *Replace* the document file with another one by clicking on "
+#~ ":guilabel:`Replace`. It will drive you to the *Document Upload* page (see "
+#~ ":ref:`uploading-documents`) where you can upload a new file."
+#~ msgstr ""
+#~ "Você pode *Substituir* o ficheiro por outro clicando em :guilabel:`Replace`."
+#~ " Isso o levará à página *Carregar documentos* (consulte :ref:`uploading-"
+#~ "documents`) onde você pode carregar um novo arquivo."
+
+#~ msgid ""
+#~ "The :guilabel:`Remove` button allows you to delete the document. You will "
+#~ "have to confirm that choice."
+#~ msgstr ""
+#~ "O botão :guilabel:`Remove` permite apagar o documento. Você terá que "
+#~ "confirmar essa escolha."
+
+#~ msgid "*Document Removal confirmation*"
+#~ msgstr "*Confirmação de Remoção de documento*"
+
+#~ msgid ""
+#~ "The *Editing Panel* shows you also some links for editing the metadata and "
+#~ "the thumbnail. These actions will be explained more in depth in the next "
+#~ "paragraphs."
+#~ msgstr ""
+#~ "O *Painel de Edição* mostra também alguns links para editar os metadados e a"
+#~ " miniatura. Estas acções serão explicadas com mais detalhes nos próximos "
+#~ "parágrafos."
+
+#~ msgid ""
+#~ "From the *Editing Panel*, it is also possible to *Set the Thumbnail* of the "
+#~ "document. Click on :guilabel:`Set` to open the *Thumbnail Uploading* page "
+#~ "and chose the image that will illustrate your document. You can either drag "
+#~ "and drop it in the *Drop files here* box or selecting from your folders by "
+#~ "clicking on *Choose Files*. Once this is done, click on the red button "
+#~ ":guilabel:`Upload files`. If the thumbnail has been successfully uploaded "
+#~ "you can see it by coming back to the document list. Click on the "
+#~ ":guilabel:`Explore Documents` button to check that."
+#~ msgstr ""
+#~ "Do *Painel de Edição*, é também possível *Definir a Miniatura* do documento."
+#~ " Clique em :guilabel:`Set` para abrir a página *Carregamento de Miniaturas* "
+#~ "e escolha a imagem que irá ilustrar o seu documento. Você pode arrastar e "
+#~ "soltar na caixa *Solte os arquivos aqui* ou selecionar de suas pastas "
+#~ "clicando em *Escolher arquivos*. Feito isto, clique no botão vermelho "
+#~ ":guilabel:`Upload files`. Se a miniatura foi carregada com sucesso, você "
+#~ "pode vê-la voltando para a lista de documentos. Clique no botão "
+#~ ":guilabel:`Explore Documents` para verificar isso."
+
+#~ msgid "If no errors occur the following message will be shown."
+#~ msgstr "Se nenhum erro ocorrer, a seguinte mensagem será exibida."
+
+#~ msgid ""
+#~ "You can edit the metadata of your document through the buttons shown in the "
+#~ "red rectangle in below picture."
+#~ msgstr ""
+#~ "Você pode editar os metadados do seu documento através dos botões mostrados "
+#~ "no rectângulo vermelho na imagem abaixo."
+
+#~ msgid ""
+#~ "The :guilabel:`Wizard` button drive you to the wizard described in the "
+#~ ":ref:`document-metadata` section. The :guilabel:`Advanced Edit` button takes"
+#~ " you to a big form where all the available metadata of the document can be "
+#~ "edited."
+#~ msgstr ""
+#~ "O botão :guilabel:`Wizard` o leva ao assistente descrito na secção "
+#~ ":ref:`document-metadata`. O botão :guilabel:`Advanced Edit` leva-o a um "
+#~ "formulário extenso onde todos os metadados disponíveis do documento podem "
+#~ "ser editados."
+
+#~ msgid ""
+#~ "Some information are mandatory such as the *Title* or the *Category* the "
+#~ "document belongs to, some others are optional."
+#~ msgstr ""
+#~ "Algumas informações são obrigatórias, como o *Título* ou a *Categoria* a que"
+#~ " o documento pertence, outras são opcionais."

@@ -2,133 +2,187 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 20:36+0200\n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
+"PO-Revision-Date: 2024-05-17 14:08+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/managing_documents/uploading_documents.rst:4
-#: f6219558f7a74518909e3399d9a0fc91
+#: 7886f0e4fe0c4571830bc6838d5abb4b
 msgid "Uploading Documents"
 msgstr "Carregando Documentos"
 
 #: ../../usage/managing_documents/uploading_documents.rst:6
-#: 93407b8abffd4505ba7ee267e4ede323
+#: 2ba0a9b129884ae294d7a7ed61a0200f
 msgid ""
-"GeoNode allows to share reports, conceptual notes, posters, spreadsheets, etc. "
-"A wide range of documents files can be hosted on the platform, including text "
-"files (.doc, .docx, .txt, .odt), spreadsheets (.xls, .xlsx, .ods), "
-"presentations (.ppt, .pptx, .odp), images (.gif, .jpg, .png, .tif, .tiff), "
-"PDF, zip files (.rar, .zip, .gz), SLD, XML or QML files."
+"GeoNode allows to share reports, conceptual notes, posters, spreadsheets, "
+"etc. A wide range of documents files can be hosted on the platform, "
+"including text files (.doc, .docx, .txt, .odt), spreadsheets (.xls, .xlsx, "
+".ods), presentations (.ppt, .pptx, .odp), images (.gif, .jpg, .png, .tif, "
+".tiff), PDF, zip files (.rar, .zip, .gz), SLD, XML or QML files."
 msgstr ""
 "GeoNode permite compartilhar relatórios, notas conceituais, pôsteres, "
 "planilhas, etc. Uma grande variedade de arquivos de documentos podem ser "
-"hospedados na plataforma, incluindo arquivos de texto (.doc, .docx, .txt, ."
-"odt), planilhas (.xls, .xlsx, .ods), apresentações (.ppt, .pptx, .odp), "
-"imagens (.gif, .jpg, .png, .tif, .tiff), PDF, arquivos zip (.rar, .zip, .gz ), "
-"Arquivos SLD, XML ou QML."
+"hospedados na plataforma, incluindo arquivos de texto (.doc, .docx, .txt, "
+".odt), planilhas (.xls, .xlsx, .ods), apresentações (.ppt, .pptx, .odp), "
+"imagens (.gif, .jpg, .png, .tif, .tiff), PDF, arquivos zip (.rar, .zip, .gz "
+"), Arquivos SLD, XML ou QML."
 
 #: ../../usage/managing_documents/uploading_documents.rst:8
-#: 3733082b1283400295b353a01cee9701
+#: 29aeaf71e21143c19f01eb5568412632
 msgid "Only authenticated users can upload data into GeoNode."
 msgstr "Apenas usuários autenticados podem carregar dados no GeoNode."
 
 #: ../../usage/managing_documents/uploading_documents.rst:10
-#: 22f8ec14ffbd42259b0f5f6ddced50bc
-msgid "*Documents* uploading is accessible from two positions:"
-msgstr "O carregamento de *Documentos* pode ser acessado de duas posições:"
-
-#: ../../usage/managing_documents/uploading_documents.rst:12
-#: c0fdc475b81749e8947290fca982a9b1
+#: 9d4ac6f5466e441794243150c7a773a6
 msgid ""
-"the :guilabel:`Upload Documents` button of the *Documents Search* page (see :"
-"ref:`finding-documents`)"
+"*Documents* uploading is accessible by clicking *Create new* which displays "
+"a list including `upload document link`:"
 msgstr ""
-"o botão :guilabel:`Upload Documents` da página *Pesquisa de Documentos* (veja :"
-"ref:`finding-documents`)"
 
-#: ../../usage/managing_documents/uploading_documents.rst:17
-#: 278bcd3b3c8542ecba79a1b3898b746c
-msgid "*Documents Upload button*"
-msgstr "*Botão Carregar Documentos*"
-
-#: ../../usage/managing_documents/uploading_documents.rst:19
-#: a6526a69363f4a72b4806c7df57603b5
-msgid ""
-"the :guilabel:`Upload Document` link of the :guilabel:`Data` menu in the "
-"navigation bar"
-msgstr ""
-"o link :guilabel:`Upload Document` do menu :guilabel:`Data` na barra de "
-"navegação"
-
-#: ../../usage/managing_documents/uploading_documents.rst:24
-#: aa3100c8b65c475e84f42347c03d9ed0
+#: ../../usage/managing_documents/uploading_documents.rst:15
+#: dd1cd51f01834a02be2c9a7781cbd3ba
 msgid "*Document Upload link*"
 msgstr "*Link Carregar Documento*"
 
-#: ../../usage/managing_documents/uploading_documents.rst:26
-#: c82385a49cf84004a118ca4bcf97ef58
-msgid "The *Document Upload* page looks like the one shown in the picture below."
+#: ../../usage/managing_documents/uploading_documents.rst:17
+#: fe2be191454a47c2ae05928cd63b7905
+msgid ""
+"The *Document Upload* page looks like the one shown in the picture below."
 msgstr ""
 "A página de *Carregamento de Documentos* se parece com a mostrada na imagem "
 "abaixo."
 
-#: ../../usage/managing_documents/uploading_documents.rst:31
-#: ee1302af53064a998be5a9c5bfb6e6c5
+#: ../../usage/managing_documents/uploading_documents.rst:22
+#: bc8ee40855164d0a9d311b76566c7ffd
 msgid "*Document Upload page*"
 msgstr "*Página de Carregamento de documentos*"
 
-#: ../../usage/managing_documents/uploading_documents.rst:33
-#: 6a89b219938b4f35b47c01e405508cee
+#: ../../usage/managing_documents/uploading_documents.rst:24
+#: 77330982e9c745b486be5c29f3c5e30e
 msgid "In order to upload a document:"
 msgstr "Para carregar um documento:"
 
+#: ../../usage/managing_documents/uploading_documents.rst:26
+#: 746549c9dd074ba6a1593ba5601d8f37
+msgid "Select a file from your disk."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:27
+#: dc83807cb4674251bd787fa2fbb23fdf
+msgid "Click the :guilabel:`Upload` button"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:29
+#: ba3ff17c47b144e094f1f2b584b19b4d
+msgid ""
+"At the end of the uploading process, by clicking on the View button, you "
+"will be driven to the document page with the Info panel open. Here it is "
+"possible to view more info, edit metadata, share, download, and delete the "
+"document. See the next section to know more about Metatadata."
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:31
+#: 119bf8df46b441a5b91d8b4b73f4f6db
+msgid "If you get the following error message:"
+msgstr ""
+
+#: ../../usage/managing_documents/uploading_documents.rst:33
+#: 052619fb1fbb41718bf0563f2a245fc9
+msgid ""
+"``Total upload size exceeds 100.0 MB. Please try again with smaller files.``"
+msgstr ""
+
 #: ../../usage/managing_documents/uploading_documents.rst:35
-#: 0194bf07f74a419299226c6102c478a1
+#: c8502acc3cbf42bfa698daa8ccd78f0d
 msgid ""
-"select a file from your disk or enter a URL address if the document is stored "
-"on the internet"
+"This means that there is an upload size limit of 100 MB. An user with "
+"administrative access can change the upload limits at the `admin panel "
+"<../../admin/upload-size-limits/index.html#upload-size-limits>`__."
 msgstr ""
-"seleccione um arquivo do seu disco ou insira um endereço URL se o documento "
-"estiver armazenado na internet"
 
-#: ../../usage/managing_documents/uploading_documents.rst:36
-#: ea6d1dce53db439f8d6a8a4bac49ba93
-msgid "insert the title of the document"
-msgstr "insira o título do documento"
+#~ msgid "*Documents* uploading is accessible from two positions:"
+#~ msgstr "O carregamento de *Documentos* pode ser acessado de duas posições:"
 
-#: ../../usage/managing_documents/uploading_documents.rst:37
-#: 122b491829804e86b233230827fd58cb
-msgid ""
-"select one or more published resources the document can be linked to (optional)"
-msgstr ""
-"seleccione um ou mais recursos publicados aos quais o documento pode ser "
-"vinculado (opcional)"
+#~ msgid ""
+#~ "the :guilabel:`Upload Documents` button of the *Documents Search* page (see "
+#~ ":ref:`finding-documents`)"
+#~ msgstr ""
+#~ "o botão :guilabel:`Upload Documents` da página *Pesquisa de Documentos* "
+#~ "(veja :ref:`finding-documents`)"
 
-#: ../../usage/managing_documents/uploading_documents.rst:38
-#: 8e111b41e6ab464586b2210572b91060
-msgid "click the red :guilabel:`Upload` button"
-msgstr "clique no botão vermelho :guilabel:`Upload`"
+#~ msgid "*Documents Upload button*"
+#~ msgstr "*Botão Carregar Documentos*"
 
-#: ../../usage/managing_documents/uploading_documents.rst:40
-#: e808f5390beb4646a0e6f21927a6ebdc
-msgid ""
-"At the end of the uploading process you will be driven to the *Metadata* page "
-"to fill out other information about the document. See the next section to know "
-"more about that."
-msgstr ""
-"No final do processo de carregamento, você será direccionado para a página "
-"*Metadados* para preencher outras informações sobre o documento. Veja a "
-"próxima secção para saber mais sobre isso."
+#~ msgid ""
+#~ "the :guilabel:`Upload Document` link of the :guilabel:`Data` menu in the "
+#~ "navigation bar"
+#~ msgstr ""
+#~ "o link :guilabel:`Upload Document` do menu :guilabel:`Data` na barra de "
+#~ "navegação"
+
+#~ msgid ""
+#~ "select a file from your disk or enter a URL address if the document is "
+#~ "stored on the internet"
+#~ msgstr ""
+#~ "seleccione um arquivo do seu disco ou insira um endereço URL se o documento "
+#~ "estiver armazenado na internet"
+
+#~ msgid "insert the title of the document"
+#~ msgstr "insira o título do documento"
+
+#~ msgid ""
+#~ "select one or more published resources the document can be linked to "
+#~ "(optional)"
+#~ msgstr ""
+#~ "seleccione um ou mais recursos publicados aos quais o documento pode ser "
+#~ "vinculado (opcional)"
+
+#~ msgid "click the red :guilabel:`Upload` button"
+#~ msgstr "clique no botão vermelho :guilabel:`Upload`"
+
+#~ msgid ""
+#~ "At the end of the uploading process you will be driven to the *Metadata* "
+#~ "page to fill out other information about the document. See the next section "
+#~ "to know more about that."
+#~ msgstr ""
+#~ "No final do processo de carregamento, você será direccionado para a página "
+#~ "*Metadados* para preencher outras informações sobre o documento. Veja a "
+#~ "próxima secção para saber mais sobre isso."
+
+#~ msgid ""
+#~ "Select a file from your disk or enter a URL address if the document is "
+#~ "stored on the internet."
+#~ msgstr ""
+
+#~ msgid "Insert the title of the document."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select one or more published resources the document can be linked to "
+#~ "(optional)."
+#~ msgstr ""
+
+#~ msgid "Click the red :guilabel:`Upload` button"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At the end of the uploading process you will be driven to the *Detail* page "
+#~ "with a menu to save, view more info, edit metadata, share, download and "
+#~ "delete the document. See the next section to know more about Metatadata."
+#~ msgstr ""

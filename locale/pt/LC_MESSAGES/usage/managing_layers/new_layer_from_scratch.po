@@ -2,22 +2,25 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:26+0200\n"
+"PO-Revision-Date: 2024-05-17 14:08+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:2
 #: 1e4709d8e9e2432fbe2a316c77058612
@@ -27,10 +30,10 @@ msgstr "Criação de uma camada do zero"
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:4
 #: a0235fdc15ba43f8b4383973b0838ff2
 msgid ""
-"An interesting tool that GeoNode makes available to you is the *Create Layer*. "
-"It allows you to create a new vector layer from scratch. The *Layer Creation "
-"Form* is reachable through the :guilabel:`Create Layer` link shown in the "
-"picture below."
+"An interesting tool that GeoNode makes available to you is the *Create "
+"Layer*. It allows you to create a new vector layer from scratch. The *Layer "
+"Creation Form* is reachable through the :guilabel:`Create Layer` link shown "
+"in the picture below."
 msgstr ""
 "Uma ferramenta interessante que o GeoNode disponibiliza para si é a *Criar "
 "Camada*. Permite criar uma nova camada vectorial do zero. O *Formulário de "
@@ -44,7 +47,8 @@ msgstr "*Link criar camada*"
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:11
 #: ca332c2b83e142409b0924421adc1136
-msgid "In order to create the new Layer you have to fill out the required fields:"
+msgid ""
+"In order to create the new Layer you have to fill out the required fields:"
 msgstr "Para criar a nova Camada tem de preencher os campos necessários:"
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:13
@@ -71,12 +75,12 @@ msgstr "*Tipos de geometria*"
 #: e90195a2096a46ff892592a44a6b0304
 msgid ""
 "Usually the layers features should have some *Attributes* that enrich the "
-"amount of information associated with each of them. Through the :guilabel:`Add "
-"Attribute` button you can add new attributes."
+"amount of information associated with each of them. Through the "
+":guilabel:`Add Attribute` button you can add new attributes."
 msgstr ""
-"Normalmente, as características das camadas devem ter alguns *Atributos* que "
-"enriquecem a quantidade de informação associada a cada uma delas. Através do "
-"botão :guilabel:`Add Attribute` pode adicionar novos atributos."
+"Normalmente, as características das camadas devem ter alguns *Atributos* que"
+" enriquecem a quantidade de informação associada a cada uma delas. Através "
+"do botão :guilabel:`Add Attribute` pode adicionar novos atributos."
 
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:27
 #: 360f3bf5ebdd40138247e3fc72b82f6b
@@ -86,8 +90,8 @@ msgstr "*Criação de Camada Nova do zero*"
 #: ../../usage/managing_layers/new_layer_from_scratch.rst:29
 #: df0be4c65c26479da27f370250af327b
 msgid ""
-"At this time you can also change the default *Permissions* settings, see :ref:"
-"`layer-permissions` to learn how."
+"At this time you can also change the default *Permissions* settings, see "
+":ref:`layer-permissions` to learn how."
 msgstr ""
 "Neste momento, você pode também, alterar as configurações padrão de "
 "*Permissões*, consulte :ref:`permissões-de-camada` para saber como."
@@ -97,10 +101,11 @@ msgstr ""
 msgid ""
 "Once the form has been filled out, click on :guilabel:`Create`. You will be "
 "redirected to the *Layer Page* (see :ref:`layer-info`). Now your Layer is "
-"created but is still empty, no features have been added yet. See the :ref:"
-"`layer-editing` section to learn how to add new features."
+"created but is still empty, no features have been added yet. See the "
+":ref:`layer-editing` section to learn how to add new features."
 msgstr ""
 "Uma vez preenchido o formulário, clique em :guilabel:`Create`. Você será "
-"redireccionado para a *Página de Camadas* (veja :ref:`layer-info`). Agora a sua "
-"camada foi criada, mas ainda está vazia, nenhum recurso foi adicionado ainda. "
-"Veja a secção :ref:`layer-editing` para aprender como adicionar novos recursos."
+"redireccionado para a *Página de Camadas* (veja :ref:`layer-info`). Agora a "
+"sua camada foi criada, mas ainda está vazia, nenhum recurso foi adicionado "
+"ainda. Veja a secção :ref:`layer-editing` para aprender como adicionar novos"
+" recursos."

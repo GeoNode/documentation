@@ -2,22 +2,25 @@
 # Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
 # This file is distributed under the same license as the GeoNode package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
-#
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GeoNode 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 17:10+0200\n"
-"PO-Revision-Date: 2021-07-01 21:21+0200\n"
+"PO-Revision-Date: 2024-05-17 14:08+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Portuguese (https://app.transifex.com/kantit/teams/149469/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_PT\n"
-"X-Generator: Poedit 3.0\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../usage/managing_layers/uploading_layers.rst:4
 #: 22ad8fbd690b4ec380fd1bdeedfd73c8
@@ -48,8 +51,8 @@ msgid ""
 "The *Layer Uploading* page can be reached from the :guilabel:`Upload Layer` "
 "link of the :guilabel:`Data` menu in the navigation bar."
 msgstr ""
-"A página de *Carregamento de Camada* pode ser acessada a partir do link :"
-"guilabel:`Upload Layer` do menu :guilabel:`Data` na barra de navegação."
+"A página de *Carregamento de Camada* pode ser acessada a partir do link "
+":guilabel:`Upload Layer` do menu :guilabel:`Data` na barra de navegação."
 
 #: ../../usage/managing_layers/uploading_layers.rst:14
 #: 2a2be25f6f2c4444a58b557699d1b374
@@ -58,7 +61,8 @@ msgstr "*Link para Carregar Camadas*"
 
 #: ../../usage/managing_layers/uploading_layers.rst:16
 #: 4c998cb26ea34b348d1be07ad3c292a6
-msgid "There is also an :guilabel:`Upload Layers` button in the *Layers Page*."
+msgid ""
+"There is also an :guilabel:`Upload Layers` button in the *Layers Page*."
 msgstr "Há também um botão :guilabel:`Upload Layers` na *Página de Camadas*."
 
 #: ../../usage/managing_layers/uploading_layers.rst:21
@@ -86,8 +90,8 @@ msgid ""
 msgstr ""
 "Através do botão :guilabel:`Choose Files` pode seleccionar ficheiros do seu "
 "disco, certifique-se de que são dados espaciais raster ou vectores válidos. "
-"Pode também, alterar as definições de *Permissões* predefinidas (veja :ref:"
-"`layer-permissions` para obter mais informações sobre como definir "
+"Pode também, alterar as definições de *Permissões* predefinidas (veja "
+":ref:`layer-permissions` para obter mais informações sobre como definir "
 "permissões)."
 
 #: ../../usage/managing_layers/uploading_layers.rst:31
@@ -112,13 +116,13 @@ msgid ""
 "In this example the ``roads`` ESRI Shapefile, with all its mandatory files "
 "(`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen. A progress bar shows "
 "the operation made during the layer upload and alerts you when the process "
-"is over. When the process ends click the :guilabel:`Layer Info` to check the "
-"layer has been correctly uploaded."
+"is over. When the process ends click the :guilabel:`Layer Info` to check the"
+" layer has been correctly uploaded."
 msgstr ""
 "Neste exemplo, o Shapefile ESRI ``roads``, com todos os seus arquivos "
 "obrigatórios (`.shp`, `.shx`, `.dbf` e `.prj`), foi escolhido. Uma barra de "
-"progresso mostra a operação feita durante o upload da camada e alerta quando "
-"o processo termina. Quando o processo terminar, clique em :guilabel:`Layer "
+"progresso mostra a operação feita durante o upload da camada e alerta quando"
+" o processo termina. Quando o processo terminar, clique em :guilabel:`Layer "
 "Info` para verificar se a camada foi carregada correctamente."
 
 #: ../../usage/managing_layers/uploading_layers.rst:42
@@ -130,8 +134,8 @@ msgid ""
 msgstr ""
 "Existem muitos conjuntos de dados espaciais gratuitos disponíveis na "
 "Internet. Neste exemplo, um extracto do mapa das estradas do centro da "
-"cidade de Berlim do conjunto de dados `BBBike extract OpenStreetMap <https://"
-"extract.bbbike.org>`_ foi usado."
+"cidade de Berlim do conjunto de dados `BBBike extract OpenStreetMap "
+"<https://extract.bbbike.org>`_ foi usado."
 
 #: ../../usage/managing_layers/uploading_layers.rst:44
 #: c313c3ae1da2461aa463113467234cae
@@ -141,4 +145,5 @@ msgid ""
 "them."
 msgstr ""
 "Nos próximos parágrafos, você aprenderá como criar uma camada do zero, como "
-"definir permissões, como explorar as propriedades da camada e como editá-las."
+"definir permissões, como explorar as propriedades da camada e como editá-"
+"las."

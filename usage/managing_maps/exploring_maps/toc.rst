@@ -8,15 +8,17 @@ The *TOC* shows all the datasets involved with the *Map* and allows to manage th
 
 .. figure:: img/toc_panel.png
      :align: center
-     :height: 400px
+     :height: 200px
 
      *The Table Of Contents (TOC)*
 
 From the *TOC* you can:
 
+* manage the *TOC Settings* (click on |settings_toc_button|) (See the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/toc/#toc-settings-and-toolbar/>`_ for more information.)
 * manage the datasets *Overlap*;
 * filter the datasets list by typing text in the *Filter Datasets* field;
 * manage the datasets properties such as *Opacity* (scroll the opacity cursor), *Visibility* (click on |hide_button| to make the dataset not visible, click on |show_button| to show it on map);
+* add and manage *Annotations* (click on |annotation_button|)
 * manage the *Dataset Settings*, see the next paragraph.
 
 .. figure:: img/scrolling_opacity.png
@@ -29,7 +31,7 @@ Select a *Dataset* from the list and click on it, the *Dataset Toolbar* should a
 
 .. figure:: img/dataset_toolbar.png
      :align: center
-     :height: 400px
+     :height: 200px
 
      *The Dataset Toolbar*
 
@@ -105,3 +107,46 @@ Click on the **Tiling** tab to change the output *Format* of the WMS requests, t
     :width: 30px
     :height: 30px
     :align: middle
+
+.. |settings_toc_button| image:: img/settings_toc_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+Add an Annotation
+------------
+Click on the |annotation_button| button from the *TOC Toolbar* to enrich the map with special features which expose additional information, mark particular position on the map and so on.
+From here the editor can insert a *Title* and a *Description*.
+
+.. figure:: img/add_annoations.png
+     :align: center
+
+     *Annotations panel*
+
+.. |add_annotations_button| image:: img/add_annotations_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |annotation_button| image:: img/annotation_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+To begin, from the annotation panel, the editor add new annotation by selecting the :guilabel:`Geometries` tab.
+
+.. figure:: img/add_an_annotations.png
+     :align: center
+
+     *Add an Annotations*
+
+
+Here the user can choose between five different types of *Geometries*:
+
+1. *Marker*
+2. *Line*
+3. *Polygon*
+4. *Text*
+5. *Circle* 
+
+See the `MapStore Documentation <https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/annotations/>`_ for more information.

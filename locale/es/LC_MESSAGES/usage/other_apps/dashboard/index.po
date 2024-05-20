@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-12 10:00+0200\n"
+"PO-Revision-Date: 2024-05-17 14:09+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/kantit/teams/149469/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../usage/other_apps/dashboard/index.rst:4
+#: 47e2d705abc44a7e8eb90792c3a37972
+msgid "Dashboard"
+msgstr "Dashboards"
+
+#: ../../usage/other_apps/dashboard/index.rst:6
+#: 4077cc177ede4ad2b6446934a72e56b2
+msgid ""
+"Dashboard is a MapStore tool integrated in GeoNode that provides the user "
+"with a space to add many Widgets, such as charts, maps, tables, texts and "
+"counters, and can create connections between them in order to:"
+msgstr ""
+"Dashboards una herramienta de MapStore integrada en GeoNode que proporciona "
+"al usuario un espacio para agregar muchos Widgets, como gráficos, mapas, "
+"tablas, textos y contadores, y puede crear conexiones entre ellos con el fin"
+" de\\:"
+
+#: ../../usage/other_apps/dashboard/index.rst:8
+#: 96055b0fc2f54ee6b3efd835fd746233
+msgid "Provide an overview to better visualize a specific data context"
+msgstr ""
+"Proporcionar una visión general para visualizar mejor un contexto de datos "
+"específico."
+
+#: ../../usage/other_apps/dashboard/index.rst:9
+#: 42029b9b6120496e8ae2baa526bc5ca9
+msgid ""
+"Interact spatially and analytically with the data by creating connections "
+"between widgets"
+msgstr ""
+"Interactuar espacial y analíticamente con los datos mediante la creación de "
+"conexiones entre widgets."
+
+#: ../../usage/other_apps/dashboard/index.rst:10
+#: 95d18a5aefe54aa28a50099b4c4bdb69
+msgid "Perform analysis on involved data/layers"
+msgstr "Realizar análisis sobre los datos/capas involucrados."
+
+#: ../../usage/other_apps/dashboard/index.rst:12
+#: 8166390d81bd456883d6991add39d44b
+msgid ""
+"To build a new Dashboard go to :guilabel:`Add Resource` option on the "
+"resource page and choose option *Create dashboard*."
+msgstr ""
+"Para construir un nuevo Panel de Control, ve a la opción "
+"\\:guilabel\\:`Agregar recurso` en la página de recursos y elige la opción "
+"*Crear dashboard*."
+
+#: ../../usage/other_apps/dashboard/index.rst:17
+#: ../../usage/other_apps/dashboard/index.rst:24
+#: a0a14bf5b43c4415baa702ea1db672a5 e5a8a6f311554f1888b25b83c3f27137
+msgid "*New Dashboard Apps option*"
+msgstr "*Opciones de Agregar recurso*"
+
+#: ../../usage/other_apps/dashboard/index.rst:19
+#: f9b87fe02e7c4b85ab46f2d1f2c88f0e
+msgid ""
+"Now you landed on the Dashboard edition page that is composed of the "
+"following sections:"
+msgstr ""
+"Ahora te encuentras en la página de edición del Panel de Control, que está "
+"compuesta por las siguientes secciones:"
+
+#: ../../usage/other_apps/dashboard/index.rst:27
+#: 3ba57723d8464aff855aebc2a9ab2ef8
+msgid "Further Reading"
+msgstr "Lecturas adicionales"
+
+#: ../../usage/other_apps/dashboard/index.rst:29
+#: b7c96f1f6b57406f809cd82efc944771
+msgid ""
+"Follow the link below to get more detailed information about the usage of "
+"Dashboard."
+msgstr ""
+"Sigue el enlace a continuación para obtener información más detallada sobre "
+"el uso del Panel de Control."
+
+#: ../../usage/other_apps/dashboard/index.rst:31
+#: b188913121ff438ca7969014cd339f91
+msgid ""
+"`Dashboard Documentation <https://mapstore.readthedocs.io/en/latest/user-"
+"guide/exploring-dashboards>`_"
+msgstr ""
+"`Documentación de Dashboard <https://mapstore.readthedocs.io/en/latest/user-"
+"guide/exploring-dashboards>`_"
+
+#~ msgid ""
+#~ "To build a new Dashboard go to :guilabel:`Create new` option on the resource"
+#~ " page and choose option *Create dashboard*."
+#~ msgstr ""
+#~ "Para construir un nuevo Dashboard, ve a la opción \\:guilabel\\:`Agregar "
+#~ "recurso` en la página de recursos y elige la opción *Crear dashboard*."

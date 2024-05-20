@@ -273,7 +273,7 @@ msgstr ""
 
 #: ../../start/index.rst:117 2c0bd7f953394c49a623b8bdb3e7c763
 msgid "*Online Demo @ master.demo.geonode.org*"
-msgstr "*Demostración en línea @ master.demo.geonode.org*"
+msgstr "*Demostración en línea @ demo.geonode.org*"
 
 #: ../../start/index.rst:119 e64a32f05f6f477b97f4765228f68cd9
 msgid ""

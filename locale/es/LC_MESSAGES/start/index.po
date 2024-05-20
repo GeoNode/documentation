@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2020, Open Source Geospatial Foundation, CC-SA
+# This file is distributed under the same license as the GeoNode package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# 
+# Translators:
+# Hernán Javier López, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoNode 3.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-10 11:11+0200\n"
+"PO-Revision-Date: 2024-05-17 14:09+0000\n"
+"Last-Translator: Hernán Javier López, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/kantit/teams/149469/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../start/index.rst:4 e0245be377254b65a90458e9cd639780
+msgid "GeoNode Basics"
+msgstr "Conceptos básicos de GeoNode"
+
+#: ../../start/index.rst:9 599d357ffe984da19d3ec0e177cc9dcc
+msgid ""
+"is a platform for the management and publication of geospatial data. It "
+"brings together mature open-source software projects under an easy to use "
+"interface."
+msgstr ""
+"es una plataforma para la gestión y publicación de datos geoespaciales. "
+"Reúne proyectos de software de código abierto maduros bajo una interfaz "
+"fácil de usar."
+
+#: ../../start/index.rst:15 1653a0e014a94051b5494a48c7eb2515
+msgid "*GeoNode simplified architecture*"
+msgstr "*Arquitectura simplificada de GeoNode*"
+
+#: ../../start/index.rst:18 569dd3f8a84d42618183553e88f6584b
+msgid ""
+"*With GeoNode, non-specialized users can share data and create interactive "
+"maps.*"
+msgstr ""
+"*Con GeoNode, los usuarios no especializados pueden compartir datos y crear "
+"mapas interactivos.*"
+
+#: ../../start/index.rst:28 b852c191c6474b0a92f1e290b031c103
+msgid "Geospatial data storage"
+msgstr "Almacenamiento de datos geoespaciales"
+
+#: ../../start/index.rst:30 cd2a6739524c4fcdae3135e814935fff
+msgid ""
+"GeoNode allows users to upload vector data (currently shapefiles, json, csv,"
+" kml and kmz) and raster data in their original projections using a web "
+"form."
+msgstr ""
+"GeoNode permite a los usuarios cargar datos vectoriales (actualmente "
+"shapefiles, json, csv, kml y kmz) y datos ráster en sus proyecciones "
+"originales utilizando un formulario web."
+
+#: ../../start/index.rst:33 b1e794ac9750442bb81207fe5e7241b0
+msgid ""
+"Vector data is converted into geospatial tables on a DB, satellite imagery "
+"and other kinds of raster data are retained as GeoTIFFs."
+msgstr ""
+"Los datos vectoriales se convierten en tablas geoespaciales en una base de "
+"datos, las imágenes satelitales y otros tipos de datos ráster se conservan "
+"como GeoTIFFs."
+
+#: ../../start/index.rst:35 cf4eb58f3f9444c88839bf55f006d67b
+msgid ""
+"Special importance is given to standard metadata formats like ISO 19139:2007"
+" / ISO 19115 metadata standards."
+msgstr ""
+"Se da especial importancia a los formatos de metadatos estándar como ISO "
+"19139:2007 / ISO 19115."
+
+#: ../../start/index.rst:37 5e36ec98e97946d1a96784b661f0430a
+msgid ""
+"As soon as the upload is finished, the user can fill the resource metadata "
+"in order to make it suddenly available through the `CSW`_ (OGC Catalogue "
+"Service) endpoints and APIs."
+msgstr ""
+"Tan pronto como se completa la carga, el usuario puede completar los "
+"metadatos del recurso para que estén disponibles inmediatamente a través de "
+"los endpoints y API de CSW_ (Servicio de Catálogo OGC)."
+
+#: ../../start/index.rst:40 621408888c5c4e358c0eb50deda42522
+msgid ""
+"Users may also upload a metadata XML document (ISO, FGDC, and Dublin Core "
+"format) to fill key GeoNode metadata elements automatically."
+msgstr ""
+"Los usuarios también pueden cargar un documento XML de metadatos (formato "
+"ISO, FGDC y Dublin Core) para completar automáticamente los elementos clave "
+"de metadatos de GeoNode."
+
+#: ../../start/index.rst:42 5b8dfe916b234c9298c53380bae1970f
+msgid ""
+"Similarly, GeoNode provides a web based styler that lets the users to change"
+" the data portrayals and preview the changes at real time."
+msgstr ""
+"De manera similar, GeoNode proporciona un estilizador basado en la web que "
+"permite a los usuarios cambiar las representaciones de datos y previsualizar"
+" los cambios en tiempo real."
+
+#: ../../start/index.rst:48 a736e67aece844aa9995d7b04f9bb93b
+msgid "Data mixing, maps creation"
+msgstr "Mezcla de datos, creación de mapas"
+
+#: ../../start/index.rst:50 b37d791935fb48bd99f06da764959acd
+msgid ""
+"Once the data has been uploaded, GeoNode lets the user search for it "
+"geographically or via keywords in order to create fancy maps."
+msgstr ""
+"Una vez que los datos han sido cargados, GeoNode permite al usuario "
+"buscarlos geográficamente o por palabras clave para crear mapas atractivos."
+
+#: ../../start/index.rst:52 0e3a0edb8a6d453899cf0baa1635100a
+msgid ""
+"All the datasets are automatically re-projected to web Mercator for maps "
+"display, making it possible to use different popular base datasets, like "
+"Open Street Map, Google Satellite or Bing datasets."
+msgstr ""
+"Todos los conjuntos de datos se reproyectan automáticamente a web Mercator "
+"para la visualización de mapas, lo que permite utilizar diferentes conjuntos"
+" de datos base populares, como OpenStreetMap, Google Satellite o Bing."
+
+#: ../../start/index.rst:55 0d5d59574d504ea9a7b0796cf5137ff8
+msgid ""
+"Once the maps are saved, it is possible to embed them in any web page or get"
+" a PDF version for printing."
+msgstr ""
+"Una vez que los mapas se guardan, es posible incrustarlos en cualquier "
+"página web u obtener una versión en PDF para imprimir."
+
+#: ../../start/index.rst:58 affeb5a6fa894c12b3bc3bbb0c9dcd75
+msgid "GeoNode as a building block"
+msgstr "GeoNode como bloque de construcción"
+
+#: ../../start/index.rst:60 83e5fe17d4174316a45b331e35294911
+msgid ""
+"A handful of other Open Source projects extend GeoNode's functionality by "
+"tapping into the re-usability of Django applications."
+msgstr ""
+"Varios otros proyectos de código abierto amplían la funcionalidad de GeoNode"
+" aprovechando la reutilización de aplicaciones Django."
+
+#: ../../start/index.rst:62 36265ee2de6d4084a65534040ea58f12
+msgid ""
+"Visit our gallery to see how the community uses GeoNode: `GeoNode Projects "
+"<http://geonode.org/gallery/>`_."
+msgstr ""
+"Visita nuestra galería para ver cómo la comunidad utiliza GeoNode: `Galería "
+"GeoNode <http://geonode.org/gallery/>`_."
+
+#: ../../start/index.rst:64 cac0e7cd963644389dce8695e4e9bf32
+msgid ""
+"The development community is very supportive of new projects and contributes"
+" ideas and guidance for newcomers."
+msgstr ""
+"La comunidad de desarrollo apoya mucho los nuevos proyectos y contribuye con"
+" ideas y orientación para los recién llegados."
+
+#: ../../start/index.rst:67 152da94e218549eda16d005f92139185
+msgid "Convinced! Where do I sign?"
+msgstr "¡Convencido! ¿Dónde firmo?"
+
+#: ../../start/index.rst:69 3fd8d3dd85bb452b88ac2ced9e3c1f4a
+msgid "The next steps are:"
+msgstr "Los siguientes pasos son:"
+
+#: ../../start/index.rst:71 e90f1731a81442cfa3122fc9eeae40be
+msgid "Make a ride on the :ref:`online_demo`"
+msgstr "Haz un recorrido en la :ref:`online_demo`"
+
+#: ../../start/index.rst:73 1cd32de335084f609d9084d59da2b8b5
+msgid ""
+"Follow the :ref:`quick_setup_guide` in order to play with your own local "
+"instance and access all the admin functionalities"
+msgstr ""
+"Sigue la :ref:`quick_setup_guide` para jugar con tu propia instancia local y"
+" acceder a todas las funcionalidades de administración"
+
+#: ../../start/index.rst:75 3e84a576ebd2456fbaad6bd14cefa635
+msgid ""
+"Read the documentation starting from the :doc:`user guide </usage/index>` to"
+" the :doc:`admin guide </admin/index>`"
+msgstr ""
+"Lee la documentación empezando por la :doc:`user guide </usage/index>` hasta"
+" la :doc:`admin guide </admin/index>`"
+
+#: ../../start/index.rst:77 ed9e57cdba7d4a6dbabcb0b15f0943ae
+msgid ""
+"Subscribe to the `geonode-users`_ and/or `geonode-devel`_ mailing lists to "
+"join the community. See also the section :ref:`get_in_touch` for more info."
+msgstr ""
+"Suscríbete a las listas de correo `geonode-users` y/o `geonode-devel`_ para "
+"unirte a la comunidad. Consulta también la sección :ref:`get_in_touch` para "
+"más información."
+
+#: ../../start/index.rst:80 587f913d2caf45a9896f9256e1969e9b
+msgid "Thanks for your interest!"
+msgstr "¡Gracias por tu interés!"
+
+#: ../../start/index.rst:88 b88345bdff04459990d8d88ca2aaa0cb
+msgid "Supported Browsers"
+msgstr "Navegadores soportados"
+
+#: ../../start/index.rst:90 03d3fa5c84d2481c96216e94991c4404
+msgid "GeoNode is known to be working on all modern web browsers."
+msgstr "Se sabe que GeoNode funciona en todos los navegadores web modernos."
+
+#: ../../start/index.rst:92 f41b6586a3c04051b3841a8f0a135c51
+msgid "This list includes (but is not limited to):"
+msgstr "Esta lista incluye (pero no se limita a):"
+
+#: ../../start/index.rst:94 dce749ecb6cf482d8f750176bc03dcd7
+msgid "`Google Chrome <http://www.google.com/chrome/>`_."
+msgstr "`Google Chrome <http://www.google.com/chrome/>`_."
+
+#: ../../start/index.rst:95 98bdc5253af34df09a3251e2fa15f80c
+msgid "`Apple Safari <https://www.apple.com/safari/>`_."
+msgstr "`Apple Safari <https://www.apple.com/safari/>`_."
+
+#: ../../start/index.rst:96 daddceab0f294df28fb4b885b925b2ce
+msgid "`Mozilla Firefox <https://www.mozilla.org/en-US/firefox/new/>`_."
+msgstr "`Mozilla Firefox <https://www.mozilla.org/en-US/firefox/new/>`_."
+
+#: ../../start/index.rst:97 ba8f04d18f36440f9d135958519cf3c4
+msgid ""
+"`Microsoft Edge <https://developer.microsoft.com/en-us/microsoft-edge/>`_."
+msgstr ""
+"`Microsoft Edge <https://developer.microsoft.com/en-us/microsoft-edge/>`_."
+
+#: ../../start/index.rst:99 40a9364e3d85472bb29f04fd95ba327d
+msgid "The vast majority of GeoNode developers prefer using Google Chrome."
+msgstr ""
+"La gran mayoría de los desarrolladores de GeoNode prefieren usar Google "
+"Chrome."
+
+#: ../../start/index.rst:104 9e39a7ffdeba4c9dae844771c536cd5d
+msgid "Online Demo"
+msgstr "Demostración en línea"
+
+#: ../../start/index.rst:106 1b79d4134b864505a351bf403560a255
+msgid ""
+"**Disclaimer** we do not guarantee for any data published on this Demo Site."
+" Publish the data at your own risk. Every dataset will be removed "
+"automatically every Sunday. If you find some dataset that shouldn't be "
+"there, please write suddenly to developers and maintainers."
+msgstr ""
+"**Descargo de responsabilidad** no garantizamos ningún dato publicado en "
+"este sitio de demostración. Publica los datos bajo tu propio riesgo. Todos "
+"los conjuntos de datos se eliminarán automáticamente todos los domingos. Si "
+"encuentras algún conjunto de datos que no debería estar allí, por favor "
+"escribe inmediatamente a los desarrolladores y mantenedores."
+
+#: ../../start/index.rst:110 68eece89e5694c5e89d58c5e2162d7bc
+msgid "See the section :ref:`get_in_touch` for details."
+msgstr "Consulta la sección :ref:`get_in_touch` para obtener detalles."
+
+#: ../../start/index.rst:112 54e55130f04e404f94769694e04d330c
+msgid ""
+"A live demo of the latest stable build is available at "
+"http://master.demo.geonode.org/."
+msgstr ""
+"Una demostración en vivo de la última versión estable está disponible en "
+"http://demo.geonode.org/."
+
+#: ../../start/index.rst:117 2c0bd7f953394c49a623b8bdb3e7c763
+msgid "*Online Demo @ master.demo.geonode.org*"
+msgstr "*Demostración en línea @ master.demo.geonode.org*"
+
+#: ../../start/index.rst:119 e64a32f05f6f477b97f4765228f68cd9
+msgid ""
+"Anyone may sign up for a user account, upload and style data, create and "
+"share maps, and change permissions."
+msgstr ""
+"Cualquiera puede registrarse para obtener una cuenta de usuario, cargar y "
+"estilizar datos, crear y compartir mapas, y cambiar permisos."
+
+#: ../../start/index.rst:121 7f7d7e98b925427182c9b56fa7201fa9
+msgid ""
+"Since it is a demo site, every sunday all the datasets will be wiped out. "
+"Users, passwords and groups will be preserved."
+msgstr ""
+"Dado que es un sitio de demostración, todos los domingos se eliminarán todos"
+" los conjuntos de datos. Los usuarios, contraseñas y grupos se conservarán."
+
+#: ../../start/index.rst:123 ed23d226db754611a96214b9e7bcb56a
+msgid ""
+"It should hopefully allow you to easily and quickly make a tour of the main "
+"capabilities of GeoNode."
+msgstr ""
+"Esperamos que te permita realizar fácilmente un recorrido rápido por las "
+"principales capacidades de GeoNode."
+
+#: ../../start/index.rst:125 8daa4693f37842c490c2f58b4d6d4108
+msgid ""
+"This GeoNode instance is configured with standards settings and a very low "
+"security level. This is a demo only not to be considered a really production"
+" ready system. For a complete list of settings, refer to the section: "
+":ref:`settings`"
+msgstr ""
+"Esta instancia de GeoNode está configurada con configuraciones estándar y un"
+" nivel de seguridad muy bajo. Esta es solo una demostración y no debe "
+"considerarse un sistema realmente listo para producción. Para una lista "
+"completa de configuraciones, consulta la sección: :ref:`settings`"
+
+#: ../../start/index.rst:132 f2761fd16b2846bab02bd85256cc9e72
+msgid "Quick Installation Guide"
+msgstr "Guía rápida de instalación"
+
+#~ msgid ""
+#~ "All the layers are automatically re-projected to web Mercator for maps "
+#~ "display, making it possible to use different popular base layers, like Open "
+#~ "Street Map, Google Satellite or Bing layers."
+#~ msgstr ""
+#~ "Todas las capas se reproyectan automáticamente a web Mercator para la "
+#~ "visualización de mapas, lo que permite utilizar diferentes capas base "
+#~ "populares, como OpenStreetMap, Google Satellite o Bing."
+
+#~ msgid "Microsoft Internet Explorer."
+#~ msgstr "Microsoft Internet Explorer."
+
+#~ msgid "Internet Explorer"
+#~ msgstr "Internet Explorer."
+
+#~ msgid ""
+#~ "Versions of Microsoft Internet Explorer older than 10, exhibit known issues "
+#~ "when used to browse a GeoNode site. As such a message is displayed warning "
+#~ "the user that they should upgrade their browser."
+#~ msgstr ""
+#~ "Las versiones de Microsoft Internet Explorer anteriores a la 10 presentan "
+#~ "problemas conocidos cuando se utilizan para navegar por un sitio de GeoNode."
+#~ " Como tal, se muestra un mensaje advirtiendo al usuario que debe actualizar "
+#~ "su navegador."
+
+#~ msgid "*Internet Explorer error message*"
+#~ msgstr "*Mensaje de error de Internet Explorer*"
+
+#~ msgid "Testing on Internet Explorer"
+#~ msgstr "Pruebas en Internet Explorer"
+
+#~ msgid ""
+#~ "When working on front end code, developers should take care to test "
+#~ "carefully with Microsoft Internet Explorer to ensure that the features they "
+#~ "are working on do indeed work correctly and on this browser. It is good "
+#~ "practice to test on all browsers available, but the use of modern front end "
+#~ "libraries like bootstrap and jQuery make it much more likely code will work "
+#~ "across browsers seamlessly."
+#~ msgstr ""
+#~ "Cuando trabajen en código de front-end, los desarrolladores deben tener "
+#~ "cuidado al probar con Microsoft Internet Explorer para asegurarse que las "
+#~ "funciones en las que están trabajando funcionen correctamente en este "
+#~ "navegador. Es una buena práctica probar en todos los navegadores "
+#~ "disponibles, pero el uso de bibliotecas modernas de front-end como bootstrap"
+#~ " y jQuery hace que sea mucho más probable que el código funcione sin "
+#~ "problemas en todos los navegadores."
+
+#~ msgid ""
+#~ "In order to test on Internet Explorer, developers can use the `Modern IE "
+#~ "<https://www.modern.ie/en-us>`_ site to download virtual machines for use in"
+#~ " `Oracle VM Virtual Box <https://www.virtualbox.org/>`_."
+#~ msgstr ""
+#~ "Para probar en Internet Explorer, los desarrolladores pueden usar el sitio "
+#~ "`Modern IE <https://www.modern.ie/en-us>`_ para descargar máquinas virtuales"
+#~ " para usar en `Oracle VM Virtual Box <https://www.virtualbox.org/>`_."
+
+#~ msgid "*Testing on Internet Explorer*"
+#~ msgstr "*Pruebas en Internet Explorer*"
+
+#~ msgid ""
+#~ "Once the VM is downloaded, follow the instructions to configure it in your "
+#~ "VirtualBox setup."
+#~ msgstr ""
+#~ "Una vez descargada la máquina virtual, sigue las instrucciones para "
+#~ "configurarla en tu instalación de VirtualBox."
+
+#~ msgid "*Oracle VirtualBox admin interface*"
+#~ msgstr "*Interfaz de administración de Oracle VirtualBox*"
+
+#~ msgid ""
+#~ "After the VM is setup, you can access your development instance of GeoNode "
+#~ "by visiting the IP address of your host machine or on the bridged interface "
+#~ "(usually 10.0.2.2) and begin your testing."
+#~ msgstr ""
+#~ "Después de configurar la máquina virtual, puedes acceder a tu instancia de "
+#~ "desarrollo de GeoNode visitando la dirección IP de tu máquina host o en la "
+#~ "interfaz de puente (generalmente 10.0.2.2) y comenzar tus pruebas."

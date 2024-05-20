@@ -37,7 +37,7 @@ msgstr ""
 "Dashboards una herramienta de MapStore integrada en GeoNode que proporciona "
 "al usuario un espacio para agregar muchos Widgets, como gráficos, mapas, "
 "tablas, textos y contadores, y puede crear conexiones entre ellos con el fin"
-" de\\:"
+" de:"
 
 #: ../../usage/other_apps/dashboard/index.rst:8
 #: 96055b0fc2f54ee6b3efd835fd746233

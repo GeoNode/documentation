@@ -44,7 +44,6 @@ Check that your system is already up-to-date with the repository running the fol
 
 .. code-block:: shell
 
-   sudo add-apt-repository ppa:ubuntugis/ppa
    sudo apt update -y
 
 

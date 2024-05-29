@@ -2621,26 +2621,6 @@ USER_DELETION_RULES
 
 .. _user-analytics:
 
-USER_ANALYTICS_ENABLED
-----------------------
-
-    | Default: ``False``
-    | Env: ``USER_ANALYTICS_ENABLED``
-
-    Set to true to anonymously collect user data for analytics.
-    If true you have to set :ref:`monitoring-data-aggregation` and :ref:`monitoring-skip-paths`.
-
-    See :ref:`geonode_monitoring` to learn more about it.
-
-USER_ANALYTICS_GZIP
--------------------
-
-    | Default: ``False``
-    | Env: ``USER_ANALYTICS_GZIP``
-
-    To be used with ``USER_ANALYTICS_ENABLED``.
-    Compress ``gzip`` json messages before sending to ``logstash``.
-
 
 UUID HANDLER
 ------------

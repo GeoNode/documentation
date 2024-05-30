@@ -1523,14 +1523,6 @@ Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-a
     sudo systemctl start memcached
     sudo systemctl enable memcached
 
-    workon <your_geonode_venv_name>
-    cd /<full_path_to_the_geonode_source_code>
-
-    sudo apt install libmemcached-dev zlib1g-dev
-
-    pip install pylibmc==1.6.1
-    pip install sherlock==0.3.2
-
     sudo systemctl restart supervisor.service
     sudo systemctl status supervisor.service
 

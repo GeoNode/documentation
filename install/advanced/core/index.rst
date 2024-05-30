@@ -1317,11 +1317,12 @@ Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install
     ## Import GPG Key
     sudo apt update
     sudo apt install curl software-properties-common apt-transport-https lsb-release
-    curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/erlang.gpg
+    echo 'deb [signed-by=/etc/apt/keyrings/erlang.gpg] http://binaries2.erlang-solutions.com/ubuntu/ jammy-esl-erlang-26 contrib' | sudo tee /etc/apt/sources.list.d/erlang.list
+    curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /etc/apt/keyrings/erlang.gpg
 
     ## Add Erlang Repository to Ubuntu
     sudo apt update
-    sudo apt install erlang
+    sudo apt install esl-erlang
 
     ## Add RabbitMQ Repository to Ubuntu
     curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash

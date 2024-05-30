@@ -359,8 +359,8 @@ Create the a systemd file with the following content:
   echo $JAVA_HOME
     $> /usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/
 
-  # Let's create a symbolic link to the JRE
-  sudo ln -s /usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/ /usr/lib/jvm/jre
+  # Let's create a symbolic link to the JDK
+  sudo ln -s /usr/lib/jvm/java-1.11.0-openjdk-amd64 /usr/lib/jvm/jre
 
   # Let's create the tomcat service
   sudo vim /etc/systemd/system/tomcat9.service

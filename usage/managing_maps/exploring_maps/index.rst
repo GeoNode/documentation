@@ -1,9 +1,10 @@
 .. _exploring-maps:
+.. _asemap-switcher:
 
 Exploring Maps
 ==============
 
-In this section, we are going to explore all tools provided on the Map View page. From the list of available maps, you can select the map you are interested in and click *View map*, THe map vie will look like this.
+In this section, we are going to explore all tools provided on the Map View page. From the list of available maps, you can select the map you are interested in and click *View map*, the map vie will look like this.
 
 .. figure:: img/explore_map_viewer.png
      :align: center
@@ -15,8 +16,9 @@ The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/
 * the :ref:`toc` to manage the map contents;
 * the *Basemap Switcher* to change the basemap (see the next paragraphs);
 * the *Search Bar* to search by location, name and coordinates (see the paragraph below);
-* the :ref:`options-menu-tools` which contains the link to the *Print* tool, to the datasets *Catalog*, to the *Measure* tool and the Annotations tool;
-* the *Sidebar* and its tools such as the *Zoom* tools and the *Get Features Info* tool;
+* the :ref:`options-menu-tools` which contains the link to the datasets *Catalog*;
+* the *Sidebar* which contains, by default, the link to the *Print* tool and to the *Measure* tool;
+* the *Navigation Bar* and its tools such as the *Zoom* tools, the *3D Navigation* tool and the *Get Features Info* tool;
 * the *Footer Tools* to manage the scale of the map, to track the mouse coordinates and change the CRS (Coordinates Reference System).
 
 .. toctree::
@@ -50,7 +52,7 @@ The map will automatically re-center on that area delimiting it by a polygon in 
 
 .. _sidebar:
 
-Sidebar Tools
+Navigation bar
 -------------
 
 .. |sidebar_expand_button| image:: img/sidebar_expand_button.png
@@ -64,6 +66,11 @@ Sidebar Tools
     :align: middle
 
 .. |zoom_out_button| image:: img/zoom_out_button.png
+    :width: 30px
+    :height: 30px
+    :align: middle
+
+.. |3d_button| image:: img/3d_button.png
     :width: 30px
     :height: 30px
     :align: middle
@@ -98,23 +105,23 @@ Sidebar Tools
     :height: 30px
     :align: middle
 
-| The *Map Viewer* makes also available the *Sidebar*.
+| The *Map Viewer* makes also available the *Navigation bar*.
   It is a navigation panel containing various tools that help you to explore the map such as tools for zooming, changing the extent and querying objects on the map.
-| By default the *Sidebar* shows you the zooming buttons |zoom_in_button| and |zoom_out_button|, other options can be explored by clicking on |sidebar_expand_button| which expands/collapses the toolbar.
+| By default the *Navigation bar* shows you the zooming buttons |zoom_in_button|, |zoom_out_button| and |3d_button|, other options can be explored by clicking on |sidebar_expand_button| which expands/collapses the toolbar.|
 
 .. figure:: img/collapsed_sidebar.png
      :align: center
      :width: 300px
 
-     *The Default Sidebar*
+     *The Default Navigation bar*
 
 .. figure:: img/expanded_sidebar.png
     :align: center
     :width: 300px
 
-    *The Expanded Sidebar*
+    *The Expanded Navigation bar*
 
-The *Sidebar* contains the following tools:
+The *Navigation bar* contains the following tools:
 
 * The *Query Objects on map* allows you to get feature information through the |query_objects_on_map_button| button.
   It allows you to retrieve information about the features of some datasets by clicking them directly on the map.

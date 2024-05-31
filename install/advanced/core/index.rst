@@ -44,7 +44,6 @@ Check that your system is already up-to-date with the repository running the fol
 
 .. code-block:: shell
 
-   sudo add-apt-repository ppa:ubuntugis/ppa
    sudo apt update -y
 
 
@@ -182,7 +181,7 @@ In this section we are going to install the ``PostgreSQL`` packages along with t
 
   # Ubuntu 22.04.1 (focal)
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
-  sudo wget --no-check-certificate --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  sudo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
   sudo apt update -y; sudo apt install -y postgresql-13 postgresql-13-postgis-3 postgresql-13-postgis-3-scripts postgresql-13 postgresql-client-13
 
 We now must create two databases, ``geonode`` and ``geonode_data``, belonging to the role ``geonode``.
@@ -358,10 +357,10 @@ Create the a systemd file with the following content:
   # Check the correct JAVA_HOME location
   JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
   echo $JAVA_HOME
-    $> /usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/
+    $> /usr/lib/jvm/java-11-openjdk-amd64/
 
-  # Let's create a symbolic link to the JRE
-  sudo ln -s /usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/ /usr/lib/jvm/jre
+  # Let's create a symbolic link to the JDK
+  sudo ln -s /usr/lib/jvm/java-1.11.0-openjdk-amd64 /usr/lib/jvm/jre
 
   # Let's create the tomcat service
   sudo vim /etc/systemd/system/tomcat9.service
@@ -493,7 +492,7 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
 
   # Download and extract the default GEOSERVER_DATA_DIR
   GS_VERSION=2.24.2
-  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/$GS_VERSION/geonode-geoserver-ext-web-app-data.zip" -O data-$GS_VERSION.zip
+  sudo wget "https://artifacts.geonode.org/geoserver/$GS_VERSION/geonode-geoserver-ext-web-app-data.zip" -O data-$GS_VERSION.zip
   
   sudo unzip data-$GS_VERSION.zip -d /opt/data/
 
@@ -510,7 +509,7 @@ Let's externalize the ``GEOSERVER_DATA_DIR`` and ``logs``
   sudo chmod -Rf 775 /opt/data/gwc_cache_dir
 
   # Download and install GeoServer
-  sudo wget --no-check-certificate "https://artifacts.geonode.org/geoserver/$GS_VERSION/geoserver.war" -O geoserver-$GS_VERSION.war
+  sudo wget "https://artifacts.geonode.org/geoserver/$GS_VERSION/geoserver.war" -O geoserver-$GS_VERSION.war
   sudo mv geoserver-$GS_VERSION.war /opt/tomcat/latest/webapps/geoserver.war
 
 Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Container, like heap memory, garbage collector and so on.
@@ -540,7 +539,7 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
       # do not need authbind.  It is used for binding Tomcat to lower port numbers.
       # (yes/no, default: no)
       #AUTHBIND=no
-      JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64/jre/
+      JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
       GEOSERVER_DATA_DIR="/opt/data/geoserver_data"
       GEOSERVER_LOG_LOCATION="/opt/data/geoserver_logs/geoserver.log"
       GEOWEBCACHE_CACHE_DIR="/opt/data/gwc_cache_dir"
@@ -582,7 +581,7 @@ In order to make the changes effective, you'll need to restart the Servlet Conta
 .. code-block:: shell
 
   # Restart the server
-  sudo /etc/init.d/tomcat9 restart
+  sudo systemctl restart tomcat9.service
 
   # Follow the startup logs
   sudo tail -F -n 300 /opt/data/geoserver_logs/geoserver.log
@@ -655,192 +654,20 @@ Serving {“geonode”, “geoserver”} via NGINX
 
 .. code-block:: shell
 
-  # Create the GeoNode UWSGI config
-  sudo vim /etc/uwsgi/apps-available/geonode.ini
-
-.. warning:: **!IMPORTANT!**
-
-    Change the line ``virtualenv = /home/<my_user>/.virtualenvs/geonode`` below with your current user home directory!
-
-    e.g.: If the user is ``afabiani`` then ``virtualenv = /home/afabiani/.virtualenvs/geonode``
+  # Create the UWSGI config
+  sudo vim /opt/geonode/uwsgi.ini
 
 .. code-block:: ini
 
   [uwsgi]
-  uwsgi-socket = 0.0.0.0:8000
-  # http-socket = 0.0.0.0:8000
-
-  gid = www-data
-
-  plugins = python3
-  virtualenv = /home/<my_user>/.virtualenvs/geonode
-
-  env = DJANGO_SETTINGS_MODULE=geonode.settings
-  env = GEONODE_INSTANCE_NAME=geonode
-  env = GEONODE_LB_HOST_IP=
-  env = GEONODE_LB_PORT=
-
-  # #################
-  # backend
-  # #################
-  env = POSTGRES_USER=postgres
-  env = POSTGRES_PASSWORD=postgres
-  env = GEONODE_DATABASE=geonode
-  env = GEONODE_DATABASE_PASSWORD=geonode
-  env = GEONODE_GEODATABASE=geonode_data
-  env = GEONODE_GEODATABASE_PASSWORD=geonode
-  env = GEONODE_DATABASE_SCHEMA=public
-  env = GEONODE_GEODATABASE_SCHEMA=public
-  env = DATABASE_HOST=localhost
-  env = DATABASE_PORT=5432
-  env = DATABASE_URL=postgis://geonode:geonode@localhost:5432/geonode
-  env = GEODATABASE_URL=postgis://geonode:geonode@localhost:5432/geonode_data
-  env = GEONODE_DB_CONN_MAX_AGE=0
-  env = GEONODE_DB_CONN_TOUT=5
-  env = DEFAULT_BACKEND_DATASTORE=datastore
-  env = BROKER_URL=amqp://admin:admin@localhost:5672//
-  env = ASYNC_SIGNALS=False
-
-  env = SITEURL=http://localhost/
-
-  env = ALLOWED_HOSTS="['*']"
-
-  # Data Uploader
-  env = DEFAULT_BACKEND_UPLOADER=geonode.importer
-  env = TIME_ENABLED=True
-  env = MOSAIC_ENABLED=False
-  env = HAYSTACK_SEARCH=False
-  env = HAYSTACK_ENGINE_URL=http://elasticsearch:9200/
-  env = HAYSTACK_ENGINE_INDEX_NAME=haystack
-  env = HAYSTACK_SEARCH_RESULTS_PER_PAGE=200
-
-  # #################
-  # nginx
-  # HTTPD Server
-  # #################
-  env = GEONODE_LB_HOST_IP=localhost
-  env = GEONODE_LB_PORT=80
-
-  # IP or domain name and port where the server can be reached on HTTPS (leave HOST empty if you want to use HTTP only)
-  # port where the server can be reached on HTTPS
-  env = HTTP_HOST=localhost
-  env = HTTPS_HOST=
-
-  env = HTTP_PORT=8000
-  env = HTTPS_PORT=443
-
-  # #################
-  # geoserver
-  # #################
-  env = GEOSERVER_WEB_UI_LOCATION=http://localhost/geoserver/
-  env = GEOSERVER_PUBLIC_LOCATION=http://localhost/geoserver/
-  env = GEOSERVER_LOCATION=http://localhost:8080/geoserver/
-  env = GEOSERVER_ADMIN_USER=admin
-  env = GEOSERVER_ADMIN_PASSWORD=geoserver
-
-  env = OGC_REQUEST_TIMEOUT=5
-  env = OGC_REQUEST_MAX_RETRIES=1
-  env = OGC_REQUEST_BACKOFF_FACTOR=0.3
-  env = OGC_REQUEST_POOL_MAXSIZE=10
-  env = OGC_REQUEST_POOL_CONNECTIONS=10
-
-  # Java Options & Memory
-  env = ENABLE_JSONP=true
-  env = outFormat=text/javascript
-  env = GEOSERVER_JAVA_OPTS="-Djava.awt.headless=true -Xms2G -Xmx4G -XX:+UnlockDiagnosticVMOptions -XX:+LogVMOutput -XX:LogFile=/var/log/jvm.log -XX:PerfDataSamplingInterval=500 -XX:SoftRefLRUPolicyMSPerMB=36000 -XX:-UseGCOverheadLimit -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:ParallelGCThreads=4 -Dfile.encoding=UTF8 -Djavax.servlet.request.encoding=UTF-8 -Djavax.servlet.response.encoding=UTF-8 -Duser.timezone=GMT -Dorg.geotools.shapefile.datetime=false -DGS-SHAPEFILE-CHARSET=UTF-8 -DGEOSERVER_CSRF_DISABLED=true -DPRINT_BASE_URL=http://geoserver:8080/geoserver/pdf -DALLOW_ENV_PARAMETRIZATION=true -Xbootclasspath/a:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib/marlin-0.9.3-Unsafe.jar -Dsun.java2d.renderer=org.marlin.pisces.MarlinRenderingEngine"
-
-  # #################
-  # Security
-  # #################
-  # Admin Settings
-  env = ADMIN_USERNAME=admin
-  env = ADMIN_PASSWORD=admin
-  env = ADMIN_EMAIL=admin@localhost
-
-  # EMAIL Notifications
-  env = EMAIL_ENABLE=False
-  env = DJANGO_EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-  env = DJANGO_EMAIL_HOST=localhost
-  env = DJANGO_EMAIL_PORT=25
-  env = DJANGO_EMAIL_HOST_USER=
-  env = DJANGO_EMAIL_HOST_PASSWORD=
-  env = DJANGO_EMAIL_USE_TLS=False
-  env = DJANGO_EMAIL_USE_SSL=False
-  env = DEFAULT_FROM_EMAIL='GeoNode <no-reply@geonode.org>'
-
-  # Session/Access Control
-  env = LOCKDOWN_GEONODE=False
-  env = CORS_ORIGIN_ALLOW_ALL=True
-  env = X_FRAME_OPTIONS="SAMEORIGIN"
-  env = SESSION_EXPIRED_CONTROL_ENABLED=True
-  env = DEFAULT_ANONYMOUS_VIEW_PERMISSION=True
-  env = DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION=True
-
-  # Users Registration
-  env = ACCOUNT_OPEN_SIGNUP=True
-  env = ACCOUNT_EMAIL_REQUIRED=True
-  env = ACCOUNT_APPROVAL_REQUIRED=False
-  env = ACCOUNT_CONFIRM_EMAIL_ON_GET=False
-  env = ACCOUNT_EMAIL_VERIFICATION=none
-  env = ACCOUNT_EMAIL_CONFIRMATION_EMAIL=False
-  env = ACCOUNT_EMAIL_CONFIRMATION_REQUIRED=False
-  env = ACCOUNT_AUTHENTICATION_METHOD=username_email
-  env = AUTO_ASSIGN_REGISTERED_MEMBERS_TO_REGISTERED_MEMBERS_GROUP_NAME=True
-
-  # OAuth2
-  env = OAUTH2_API_KEY=
-  env = OAUTH2_CLIENT_ID=Jrchz2oPY3akmzndmgUTYrs9gczlgoV20YPSvqaV
-  env = OAUTH2_CLIENT_SECRET=rCnp5txobUo83EpQEblM8fVj3QT5zb5qRfxNsuPzCqZaiRyIoxM4jdgMiZKFfePBHYXCLd7B8NlkfDBY9HKeIQPcy5Cp08KQNpRHQbjpLItDHv12GvkSeXp6OxaUETv3
-
-  # GeoNode APIs
-  env = API_LOCKDOWN=False
-  env = TASTYPIE_APIKEY=
-
-  # #################
-  # Production and
-  # Monitoring
-  # #################
-  env = DEBUG=False
-
-  env = SECRET_KEY='myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
-
-  env = CACHE_BUSTING_STATIC_ENABLED=False
-
-  env = MEMCACHED_ENABLED=False
-  env = MEMCACHED_BACKEND=django.core.cache.backends.memcached.MemcachedCache
-  env = MEMCACHED_LOCATION=127.0.0.1:11211
-  env = MEMCACHED_LOCK_EXPIRE=3600
-  env = MEMCACHED_LOCK_TIMEOUT=10
-
-  env = MAX_DOCUMENT_SIZE=2
-  env = CLIENT_RESULTS_LIMIT=5
-  env = API_LIMIT_PER_PAGE=1000
-
-  # GIS Client
-  env = GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY=mapstore
-  env = MAPBOX_ACCESS_TOKEN=
-  env = BING_API_KEY=
-  env = GOOGLE_API_KEY=
-
-  # Monitoring
-  env = MONITORING_ENABLED=True
-  env = MONITORING_DATA_TTL=365
-  env = USER_ANALYTICS_ENABLED=True
-  env = USER_ANALYTICS_GZIP=True
-  env = CENTRALIZED_DASHBOARD_ENABLED=False
-  env = MONITORING_SERVICE_NAME=local-geonode
-  env = MONITORING_HOST_NAME=geonode
-
-  # Other Options/Contribs
-  env = MODIFY_TOPICCATEGORY=True
-  env = AVATAR_GRAVATAR_SSL=True
-  env = EXIF_ENABLED=True
-  env = CREATE_LAYER=True
-  env = FAVORITE_ENABLED=True
-
-  chdir = /opt/geonode
+  # uwsgi-socket = 0.0.0.0:8000
+  http-socket = 0.0.0.0:8000
+  logto = /var/log/geonode.log
+  # pidfile = /tmp/geonode.pid
+  
+  chdir = /opt/geonode/
   module = geonode.wsgi:application
-
+  
   strict = false
   master = true
   enable-threads = true
@@ -848,74 +675,64 @@ Serving {“geonode”, “geoserver”} via NGINX
   single-interpreter = true
   die-on-term = true                   ; Shutdown when receiving SIGTERM (default is respawn)
   need-app = true
-
-  # logging
-  # path to where uwsgi logs will be saved
-  logto = /opt/data/logs/geonode.log
-  daemonize = /opt/data/logs/geonode.log
+  thunder-lock = true
+  
   touch-reload = /opt/geonode/geonode/wsgi.py
   buffer-size = 32768
-
-  harakiri = 60                        ; forcefully kill workers after 60 seconds
+  
+  harakiri = 600                       ; forcefully kill workers after 600 seconds
   py-callos-afterfork = true           ; allow workers to trap signals
-
+  
   max-requests = 1000                  ; Restart workers after this many requests
   max-worker-lifetime = 3600           ; Restart workers after this many seconds
   reload-on-rss = 2048                 ; Restart workers after this much resident memory
   worker-reload-mercy = 60             ; How long to wait before forcefully killing workers
-
+  
   cheaper-algo = busyness
   processes = 128                      ; Maximum number of workers allowed
   cheaper = 8                          ; Minimum number of workers allowed
   cheaper-initial = 16                 ; Workers created at startup
   cheaper-overload = 1                 ; Length of a cycle in seconds
   cheaper-step = 16                    ; How many workers to spawn at a time
-
+  
   cheaper-busyness-multiplier = 30     ; How many cycles to wait before killing workers
   cheaper-busyness-min = 20            ; Below this threshold, kill workers (if stable for multiplier cycles)
   cheaper-busyness-max = 70            ; Above this threshold, spawn new workers
   cheaper-busyness-backlog-alert = 16  ; Spawn emergency workers if more than this many requests are waiting in the queue
   cheaper-busyness-backlog-step = 2    ; How many emergency workers to create if there are too many requests in the queue
-
-.. code-block:: shell
-
-  # Enable the GeoNode UWSGI config
-  sudo ln -s /etc/uwsgi/apps-available/geonode.ini /etc/uwsgi/apps-enabled/geonode.ini
-
-  # Restart UWSGI Service
-  sudo pkill -9 -f uwsgi
+  
+  # daemonize = /var/log/uwsgi/geonode.log
+  # cron = -1 -1 -1 -1 -1 /usr/local/bin/python /usr/src/geonode/manage.py collect_metrics -n
 
 .. code-block:: shell
 
   # Create the UWSGI system service
-
-  # Create the executable
-  sudo vim /usr/bin/geonode-uwsgi-start.sh
-
-    #!/bin/bash
-    sudo uwsgi --ini /etc/uwsgi/apps-enabled/geonode.ini
-
-  sudo chmod +x /usr/bin/geonode-uwsgi-start.sh
-
-  # Create the systemctl Service
   sudo vim /etc/systemd/system/geonode-uwsgi.service
+
+.. warning:: **!IMPORTANT!**
+
+    Change the line ``ExecStart=...`` below with your current user home directory!
+
+    e.g.: If the user is ``geosolutions`` then ``ExecStart=/home/geosolutions/.virtualenvs/geonode/bin/uwsgi --ini /opt/geonode/uwsgi.ini``
 
 .. code-block:: shell
 
   [Unit]
   Description=GeoNode UWSGI Service
   After=rc-local.service
-
+  
   [Service]
-  User=root
+  EnvironmentFile=/opt/geonode/.env
+  User=geosolutions
+  Group=geosolutions
   PIDFile=/run/geonode-uwsgi.pid
-  ExecStart=/usr/bin/geonode-uwsgi-start.sh
+  ExecStart=/home/geosolutions/.virtualenvs/geonode/bin/uwsgi --ini /opt/geonode/uwsgi.ini
   PrivateTmp=true
   Type=simple
   Restart=always
   KillMode=process
   TimeoutSec=900
-
+  
   [Install]
   WantedBy=multi-user.target
 
@@ -1017,7 +834,7 @@ Serving {“geonode”, “geoserver”} via NGINX
   upstream geoserver_proxy {
     server localhost:8080;
   }
-
+  
   # Expires map
   map $sent_http_content_type $expires {
     default                    off;
@@ -1026,39 +843,38 @@ Serving {“geonode”, “geoserver”} via NGINX
     application/javascript     max;
     ~image/                    max;
   }
-
+  
   server {
     listen 80 default_server;
     listen [::]:80 default_server;
-
+  
     root /var/www/html;
     index index.html index.htm index.nginx-debian.html;
-
+  
     server_name _;
-
+  
     charset utf-8;
-
+  
     etag on;
     expires $expires;
     proxy_read_timeout 600s;
     # set client body size to 2M #
     client_max_body_size 50000M;
-
+  
     location / {
       etag off;
-      uwsgi_pass 127.0.0.1:8000;
-      uwsgi_read_timeout 600s;
-      include uwsgi_params;
+      proxy_pass http://127.0.0.1:8000;
+      include proxy_params;
     }
-
+  
     location /static/ {
       alias /opt/geonode/geonode/static_root/;
     }
-
+  
     location /uploaded/ {
       alias /opt/geonode/geonode/uploaded/;
     }
-
+  
     location /geoserver {
       proxy_pass http://geoserver_proxy;
       include proxy_params;
@@ -1138,7 +954,7 @@ Check for any error with
 
 .. code-block:: shell
 
-  sudo tail -F -n 300 /var/log/uwsgi/app/geonode.log
+  sudo tail -F -n 300 /var/log/geonode.log
 
 Reload the UWSGI configuration with
 
@@ -1168,18 +984,18 @@ In particular the steps to do are:
         # Restart the service
         sudo service nginx restart
 
-    2. Update ``UWSGI`` configuration in order to serve the new domain name.
+    2. Update ``.env`` with the new domain name.
 
     .. code-block:: shell
 
-        sudo vim /etc/uwsgi/apps-enabled/geonode.ini
+        vim /opt/geonode/.env
 
         # Change everywhere 'localhost' to the new hostname
         :%s/localhost/www.example.org/g
         :wq
 
         # Restart the service
-        sudo service geonode-uwsgi restart
+        sudo systemctl restart geonode-uwsgi
 
     3. Update ``OAuth2`` configuration in order to hit the new hostname.
 
@@ -1215,7 +1031,7 @@ In particular the steps to do are:
         # Update the GeoNode ip or hostname
         DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
 	
-.. note:: If at the end you get a "bad gateway" error when accessing your geonode site, check uwsgi log with ``sudo tail -f /var/log/uwsgi/app/geonode.log`` and if theres is an error related with port 5432 check the listening configuration from the postgresql server and allow the incoming traffic from geonode.
+.. note:: If at the end you get a "bad gateway" error when accessing your geonode site, check uwsgi log with ``sudo tail -f /var/log/geonode.log`` and if theres is an error related with port 5432 check the listening configuration from the postgresql server and allow the incoming traffic from geonode.
 
 7. Install and enable HTTPS secured connection through the Let's Encrypt provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1275,27 +1091,17 @@ Next, the steps to do are:
             *OAuth2 Service Parameters*
 
 
-    5. Update the ``UWSGI`` configuration
+    5. Update the ``.env`` file
 
     .. code-block:: shell
 
-        sudo vim /etc/uwsgi/apps-enabled/geonode.ini
+        vim /opt/geonode/.env
 
         # Change everywhere 'http' to 'https'
         %s/http/https/g
 
-        # Add three more 'env' variables to the configuration
-        env = SECURE_SSL_REDIRECT=True
-        env = SECURE_HSTS_INCLUDE_SUBDOMAINS=True
-        env = AVATAR_GRAVATAR_SSL=True
-
         # Restart the service
-        sudo service geonode-uwsgi restart
-
-    .. figure:: img/ubuntu-https-005.png
-            :align: center
-
-            *UWSGI Configuration*
+        sudo systemctl restart geonode-uwsgi
 
 8. Enabling Fully Asynchronous Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1318,11 +1124,12 @@ Reference: `lindevs.com/install-rabbitmq-on-ubuntu/ <https://lindevs.com/install
     ## Import GPG Key
     sudo apt update
     sudo apt install curl software-properties-common apt-transport-https lsb-release
-    curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/erlang.gpg
+    echo 'deb [signed-by=/etc/apt/keyrings/erlang.gpg] http://binaries2.erlang-solutions.com/ubuntu/ jammy-esl-erlang-26 contrib' | sudo tee /etc/apt/sources.list.d/erlang.list
+    curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /etc/apt/keyrings/erlang.gpg
 
     ## Add Erlang Repository to Ubuntu
     sudo apt update
-    sudo apt install erlang
+    sudo apt install esl-erlang
 
     ## Add RabbitMQ Repository to Ubuntu
     curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
@@ -1371,150 +1178,84 @@ For example, to fully reset the server, use these commands::
 
 After reset, you'll need to recreate the ``admin`` user (see above).
 
-Install and configure `"supervisor” and “celery" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
-..........................................................................................................................................
+Daemonize and configure Celery
+............................
 
-**Install supervisor**
-
-.. code-block:: shell
-
-    sudo apt install supervisor
-
-    sudo mkdir /etc/supervisor
-    echo_supervisord_conf > /etc/supervisor/supervisord.conf
-
-    sudo mkdir /etc/supervisor/conf.d
-
-**Configure supervisor**
+**Create the Systemd unit**
 
 .. code-block:: shell
 
-    sudo vim /etc/supervisor/supervisord.conf
+    sudo vim /etc/systemd/system/celery.service
 
 .. code-block:: ini
 
-    ; supervisor config file
-
-    [unix_http_server]
-    file=/var/run/supervisor.sock   ; (the path to the socket file)
-    chmod=0700                       ; sockef file mode (default 0700)
-
-    [supervisord]
-    nodaemon=true
-    logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
-    pidfile=/var/run/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
-    childlogdir=/var/log/supervisor            ; ('AUTO' child log dir, default $TEMP)
-    environment=DEBUG="False",CACHE_BUSTING_STATIC_ENABLED="True",SITEURL="https://<your_geonode_domain>/",DJANGO_SETTINGS_MODULE="geonode.local_settings",GEOSERVER_ADMIN_PASSWORD="<your_geoserver_admin_password>",GEOSERVER_LOCATION="http://localhost:8080/geoserver/",GEOSERVER_PUBLIC_LOCATION="https://<your_geonode_domain>/geoserver/",GEOSERVER_WEB_UI_LOCATION="https://<your_geonode_domain>/geoserver/",MONITORING_ENABLED="True",BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/",ASYNC_SIGNALS="True"
-
-    ; the below section must remain in the config file for RPC
-    ; (supervisorctl/web interface) to work, additional interfaces may be
-    ; added by defining them in separate rpcinterface: sections
-    [rpcinterface:supervisor]
-    supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
-
-    [supervisorctl]
-    serverurl=unix:///var/run/supervisor.sock ; use a unix:// URL  for a unix socket
-
-    ; The [include] section can just contain the "files" setting.  This
-    ; setting can list multiple files (separated by whitespace or
-    ; newlines).  It can also contain wildcards.  The filenames are
-    ; interpreted as relative to this file.  Included files *cannot*
-    ; include files themselves.
-
-    [include]
-    files = /etc/supervisor/conf.d/*.conf
-
-Note the last line which includes the ``geonode-celery.conf`` file that is described below.
-
-**Set the `environment` directive**
-
-Environment variables are placed directly into the ``/etc/supervisor/supervisord.conf`` file; they are exposed to the
-service via the ``environment`` directive.
-
-The syntax of this directive can either be all on one line like this (shown above):
-
-.. code-block:: python
-
-    environment=ENV_KEY_1="ENV_VALUE_1",ENV_KEY_2="ENV_VALUE_2",...,ENV_KEY_n="ENV_VALUE_n"
-
-or broken into multiple **indented** lines like this:
-
-.. code-block:: python
-
-    environment=
-        ENV_KEY_1="ENV_VALUE_1",
-        ENV_KEY_2="ENV_VALUE_2",
-        ENV_KEY_n="ENV_VALUE_n"
-
-The following are the minimum set of env key value pairs you will need for a standard GeoNode Celery instance:
-
-    - ``ASYNC_SIGNALS="True"``
-    - ``BROKER_URL="amqp://admin:<your_rabbitmq_admin_password_here>@localhost:5672/"``
-    - ``DATABASE_URL``
-    - ``GEODATABASE_URL``
-    - ``DEBUG``
-    - ``CACHE_BUSTING_STATIC_ENABLED``
-    - ``SITEURL``
-    - ``DJANGO_SETTINGS_MODULE``
-    - ``GEOSERVER_ADMIN_PASSWORD``
-    - ``GEOSERVER_LOCATION``
-    - ``GEOSERVER_PUBLIC_LOCATION``
-    - ``GEOSERVER_WEB_UI_LOCATION``
-    - ``MONITORING_ENABLED``
-
-.. warning::
-
-    + These key value pairs **must** match the values you have already set on the ``uwsgi.ini`` file.
-    + If you have custom ``tasks`` that use any other variables from  ``django.conf.settings`` (like ``MEDIA_ROOT``), these variables must also be added to the environment directive.
-
-**Configure celery**
-
-.. code-block:: shell
-
-    sudo vim /etc/supervisor/conf.d/geonode-celery.conf
-
-.. code-block:: ini
-
-    [program:geonode-celery]
-    command = sh -c "/<full_path_to_the_virtuaenv>/bin/celery -A geonode.celery_app:app worker -B -E --loglevel=DEBUG --concurrency=10 -n worker1@%%h"
-    directory = /<full_path_to_the_geonode_source_code>
-    user=geosolutions
-    numproc=1
-    stdout_logfile=/var/logs/geonode-celery.log
-    stderr_logfile=/var/logs/geonode-celery.log
-    autostart = true
-    autorestart = true
-    startsecs = 10
-    stopwaitsecs = 600
-    priority = 998
+    [Unit]
+    Description=Celery
+    After=network.target
+    
+    [Service]
+    Type=simple
+    # the specific user that our service will run as
+    EnvironmentFile=/opt/geonode/.env
+    User=geosolutions
+    Group=geosolutions
+    # another option for an even more restricted service is
+    # DynamicUser=yes
+    # see http://0pointer.net/blog/dynamic-users-with-systemd.html
+    RuntimeDirectory=celery
+    WorkingDirectory=/opt/geonode
+    ExecStart=bash -c 'source /home/geosolutions/.virtualenvs/geonode/bin/activate && /opt/geonode/celery-cmd'
+    ExecReload=/bin/kill -s HUP $MAINPID
+    Restart=always
+    TimeoutSec=900
+    TimeoutStopSec=60
+    PrivateTmp=true
+    
+    [Install]
+    WantedBy=multi-user.target
 
 ----
 
-**Manage supervisor and celery**
+**Manage Celery**
 
-Reload and restart ``supervisor`` and the ``celery`` workers
+Restart Celery 
 
 .. code-block:: shell
 
-    # Restart supervisor
-    sudo supervisorctl reload
-    sudo systemctl restart supervisor
+    # Restart Celery
+    sudo systemctl restart celery
 
     # Kill old celery workers (if any)
     sudo pkill -f celery
 
-Make sure everything is *green*
+Inspect the logs
 
 .. code-block:: shell
 
-    # Check the supervisor service status
-    sudo systemctl status supervisor
+    # Check the celery service status
+    sudo systemctl status celery
 
-    # Check the celery workers logs
-    sudo tail -F -n 300 /var/logs/geonode-celery.log
+    # Check the celery logs
+    sudo tail -F -n 300 /var/log/celery.log
 
-Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-and-configure-supervisor-on-ubuntu-16-04/>`_
-...........................................................................................................................
+----
+
+**Troubleshooting**
+
+Celery might crash during startup with this error:
+
+.. code-block:: text
+
+    looking for plugins in '/usr/lib64/sasl2', failed to open directory, error: No such file or directory
+
+The workaround is a symlink at that path.
+
+.. code-block:: shell
+
+    ln -sfn /usr/lib/x86_64-linux-gnu/sasl2/ /usr/lib64/sasl2
+
+Install Memcached
+.................
 
 .. code-block:: shell
 
@@ -1523,16 +1264,8 @@ Install and configure `"memcached" <https://cloudwafer.com/blog/how-to-install-a
     sudo systemctl start memcached
     sudo systemctl enable memcached
 
-    workon <your_geonode_venv_name>
-    cd /<full_path_to_the_geonode_source_code>
-
-    sudo apt install libmemcached-dev zlib1g-dev
-
-    pip install pylibmc==1.6.1
-    pip install sherlock==0.3.2
-
-    sudo systemctl restart supervisor.service
-    sudo systemctl status supervisor.service
+    sudo systemctl restart celery
+    sudo systemctl status celery
 
 
 Docker

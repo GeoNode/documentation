@@ -61,7 +61,6 @@ Add the Ubuntu GIS packages prior to installing the other system packages.
 
 .. code-block:: shell
 
-  sudo add-apt-repository ppa:ubuntugis/ppa
   sudo apt update
 
 .. note:: You don't need to install the **system packages** if you want to run the project using Docker

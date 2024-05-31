@@ -160,8 +160,26 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   pip install -e . --upgrade
   pip install pygdal=="`gdal-config --version`.*"
 
+Edit ``/opt/geonode/celery-cmd``.
 
-.. _configure_dbs_core:
+.. code-block:: shell
+
+   CELERY__STATE_DB=${CELERY__STATE_DB:-"/opt/geonode/worker@%h.state"}
+
+Edit ``/opt/geonode/geonode/settings.py``.
+
+.. code-block:: python
+
+   FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o777
+   FILE_UPLOAD_PERMISSIONS = 0o777
+
+Edit ``/opt/geonode/uwsgi.ini``.
+
+.. code-block:: ini
+
+   chdir = /opt/geonode/
+
+   touch-reload = /opt/geonode/geonode/wsgi.py
 
 3. Postgis database Setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^

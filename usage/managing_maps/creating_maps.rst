@@ -32,7 +32,7 @@ Using the :guilabel:`Add dataset` link, you can add a layer by clicking on one o
 In the upper left corner the *TOC button* button opens the :ref:`toc` of the *Map*. It allows to manage all the datasets associated with the map and to add new ones from the :guilabel:`Add dataset`.
 The *TOC* component makes possible to manage datasets overlap on the map by shifting their relative positions in the list (drag and drop them up or down in the list).
 It also allows to hide/show datasets ( |show_button| and |hide_button| ), to zoom to datasets extents ( |zoom_to_dataset_extent_button| ) and to manage their properties ( |dataset_settings_button| ).
-Once the map datasets have been settled it is possible to save the *Map* by clicking on the :guilabel:`Save as` link in the map toolbar.
+Once the map datasets have been settled it is possible to save the *Map* by clicking on the :guilabel:`Save as` under the :guilabel:`Resources` link in the map toolbar.
 
 
 If you followed the steps above, you have just created your first *Map*.

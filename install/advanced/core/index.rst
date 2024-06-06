@@ -569,6 +569,24 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
 
 .. warning:: The default options we are going to add to the Servlet Container, assume you can reserve at least ``4GB`` of ``RAM`` to ``GeoServer`` (see the option ``-Xmx4096m``). You must be sure your machine has enough memory to run both ``GeoServer`` and ``GeoNode``, which in this case means at least ``4GB`` for ``GeoServer`` plus at least ``2GB`` for ``GeoNode``. A total of at least ``6GB`` of ``RAM`` available on your machine. If you don't have enough ``RAM`` available, you can lower down the values ``-Xms512m -Xmx4096m``. Consider that with less ``RAM`` available, the performances of your services will be highly impacted.
 
+.. code-block:: shell
+
+   # Create the Logrotate config
+   sudo tee /etc/logrotate.d/geoserver <<EOF
+   /opt/data/geoserver_logs/geoserver.log
+   /opt/tomcat/apache-tomcat-*/logs/*.log
+   /opt/tomcat/apache-tomcat-*/logs/*.out
+   /opt/tomcat/apache-tomcat-*/logs/*.txt
+   {
+     copytruncate
+     daily
+     rotate 5
+     delaycompress
+     missingok
+     su tomcat tomcat
+   }
+   EOF
+
 Conifgure the Geofence DB
 ............................
 
@@ -761,6 +779,21 @@ Serving {“geonode”, “geoserver”} via NGINX
   sudo systemctl start geonode-uwsgi.service
   sudo systemctl status geonode-uwsgi.service
   sudo systemctl enable geonode-uwsgi.service
+
+.. code-block:: shell
+
+   # Create the Logrotate config
+   sudo tee /etc/logrotate.d/uwsgi-geonode <<EOF
+   "/var/log/geonode.log" {
+     copytruncate
+     daily
+     rotate 5
+     delaycompress
+     missingok
+     notifempty
+     su root root
+   }
+   EOF
 
 .. code-block:: shell
 
@@ -1231,6 +1264,21 @@ Daemonize and configure Celery
     
     [Install]
     WantedBy=multi-user.target
+
+.. code-block:: shell
+
+   # Create the Logrotate config
+   sudo tee /etc/logrotate.d/celery <<EOF
+   "/var/log/celery.log" {
+     copytruncate
+     daily
+     rotate 5
+     delaycompress
+     missingok
+     notifempty
+     su root root
+   }
+   EOF
 
 ----
 

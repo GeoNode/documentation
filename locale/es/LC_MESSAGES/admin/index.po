@@ -30,21 +30,21 @@ msgstr "Comandos del Manage de GeoNode"
 #: ../../admin/index.rst:39 ../../admin/index.rst:41
 #: 19d601a793924f3b892bb453061cad77 c1d5c0ab2742414bb63d3dc1c1d6ef0b
 msgid "Changing the default Languages"
-msgstr ""
+msgstr "Cambiar el idioma predeterminado"
 
 #: ../../admin/index.rst:48 ../../admin/index.rst:50
 #: 1f4362a150f042faab55b6cfcffe388e d4446100679745a5aad56d9e48d90309
 msgid "GeoNode Upgrade from older versions"
-msgstr ""
+msgstr "Actualización de GeoNode desde versiones anteriores"
 
 #: ../../admin/index.rst:57 ../../admin/index.rst:59
 #: 1cb6705f428a49f29b4462cb85430a71 e013c521d11c433fb5e5f202f7bfd9d7
 msgid "GeoNode Async Signals"
-msgstr ""
+msgstr "GeoNode Async Signals"
 
 #: ../../admin/index.rst:2 4a17a911d1bf4370ab161dfbbefa8d56
 msgid "GeoNode Admins Guide"
-msgstr ""
+msgstr "Guía de administradores de GeoNode"
 
 #: ../../admin/index.rst:4 c468e8c8bde243bfbd590435a753675d
 msgid ""
@@ -53,6 +53,12 @@ msgid ""
 "and should be done through the normal GeoNode interface, the admin panel "
 "provides a quick overview and management tool over the database."
 msgstr ""
+"GeoNode tiene un panel de administración, basado en el administrador de "
+"Django, que puede ser utilizado para realizar algunas operaciones en la base"
+" de datos. Aunque la mayoría de las operaciones pueden y deben ser "
+"realizadas a través de la interfaz normal de GeoNode, el panel de "
+"administración proporciona una herramienta de gestión y vista general rápida"
+" sobre la base de datos."
 
 #: ../../admin/index.rst:8 ac10916b72fa4d36bb01246933872f5b
 msgid ""
@@ -61,6 +67,10 @@ msgid ""
 "sections not covered in this guide are meant to be managed through GeoNode "
 "UI."
 msgstr ""
+"Las siguientes secciones explicarán más en profundidad qué funcionalidades "
+"te ofrece el panel de administración. Cabe destacar que las secciones no "
+"cubiertas en esta guía están destinadas a ser gestionadas a través de la "
+"interfaz de usuario de GeoNode."
 
 #: ../../admin/index.rst:19 e06289d724064fc0886e1b56cea1dfa3
 msgid ""
@@ -69,22 +79,33 @@ msgid ""
 "Any call to python is prepended with a configuration parameter to indicate "
 "the GeoNode settings module to be used."
 msgstr ""
+"Los comandos de gestión son funciones utilitarias para las tareas de "
+"mantenimiento de GeoNode. Generalmente, se ejecutan desde un shell SSH/bash "
+"en el servidor que ejecuta GeoNode. Cualquier llamada a python se precede "
+"con un parámetro de configuración para indicar el módulo de configuración de"
+" GeoNode que se debe usar."
 
 #: ../../admin/index.rst:26 06b004e7df76419a8c46fff07ef96065
 msgid ""
 "If you have enabled ``local_settings.py`` the command will change as "
 "follows:"
 msgstr ""
+"Si has habilitado \"local_settings.py\", el comando cambiará de la siguiente"
+" manera:"
 
 #: ../../admin/index.rst:66 d433aea7c59744a8a9278cd0e55220cc
 msgid "GeoNode Add a thesaurus"
-msgstr ""
+msgstr "GeoNode Añadir un tesauro"
 
 #~ msgid ""
 #~ "The following sections will explain more in depth what functionalities the "
 #~ "admin panel makes you available. It should be highlighted that the sections "
 #~ "not covered in this guide are meant to be managed through GeoNode UI."
 #~ msgstr ""
+#~ "Las siguientes secciones explicarán más en profundidad qué funcionalidades "
+#~ "te ofrece el panel de administración. Cabe destacar que las secciones no "
+#~ "cubiertas en esta guía están destinadas a ser gestionadas a través de la "
+#~ "interfaz de usuario de GeoNode."
 
 #~ msgid "GeoNode add a thesaurus"
-#~ msgstr ""
+#~ msgstr "GeoNode añadir un tesauro"

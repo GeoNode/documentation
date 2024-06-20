@@ -9,12 +9,17 @@ Dashboard is a MapStore tool integrated in GeoNode that provides the user with a
 * Interact spatially and analytically with the data by creating connections between widgets
 * Perform analysis on involved data/layers
 
-To build a new Dashboard go to :guilabel:`Add Resource` option on the resource page and choose option *Create dashboard*.
+To build a new Dashboard go to :guilabel:`Add Resource` option on the *All Resources* page and choose option *Create dashboard* or select :guilabel:`New` option on the *Dashboards* page
 
-.. figure:: img/new_dashboard.png
-    :align: center
+  .. figure:: img/create_dashboard_link.png
+      :align: center
 
-    *New Dashboard Apps option*
+      *Create dashboard from All Resources page*
+
+.. figure:: img/create_dashboard.png
+      :align: center
+
+      *Create dashboard from Dashboards page*
 
 Now you landed on the Dashboard edition page that is composed of the following sections:
 

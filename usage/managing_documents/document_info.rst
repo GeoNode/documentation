@@ -68,23 +68,22 @@ As soon as a document is opened, the **Info** panel is shown. It reports the doc
     *Document Info*
 
 
-Through the :guilabel:`View`, it should look as follows.
- button it is possible to visualize the metadata of the document
+
+Selecting *View Metadata* from the :guilabel:`View` button it is possible to visualize the metadata of the document
 
 .. figure:: img/view_metadata.png
     :align: center
+    
     *Document Metadata*
 
-The :guilabel:`Share`, it should look as follows.
- link provides the document link to share.
+Under the :guilabel:`Resource` button, it is possible to select the *Share* option to provides the document link to share.
 
 .. figure:: img/document_sharing.png
     :align: center
 
     *Document Sharing*
 
-If you want to download the document, click on the :guilabel:`Download`, it should look as follows.
- link in the menu and the document will be downloaded automatically.
+If you want to download the document, click on the :guilabel:`Download` button and the document will be downloaded automatically.
 
 .. figure:: img/document_download.png
     :align: center

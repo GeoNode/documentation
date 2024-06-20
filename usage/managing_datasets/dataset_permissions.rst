@@ -3,7 +3,7 @@
 Share Options
 =============
 
-In order to modify the Dataset *Share options* settings, on the detail page of the dataset click the :guilabel:`Share` link in the menu. By default only owners can edit and manage datasets, anyone can view them.
+In order to modify the Dataset *Share options* settings, on the detail page of the dataset click the :guilabel:`Share` link in the :guilabel:`Resource` menu. By default only owners can edit and manage datasets, anyone can view them.
 
 .. figure:: img/change_dataset_permissions.png
     :align: center

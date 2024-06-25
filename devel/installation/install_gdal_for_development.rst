@@ -24,13 +24,13 @@ The steps to be followed are:
 
 Installation steps
 
-On a fresh Ubuntu 20.04 installation, we will be installing gdal version 3.3.2
+On a fresh Ubuntu 22.04 installation, we will be installing gdal version 3.3.2
 
 1- Using the terminal in the host machine, run the following commands:
 
 .. code-block:: shell
 
-    $ sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
+    $ sudo apt-get update
     $ sudo apt-get install python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2
 
 .. note:: Make sure you don't have a newer version on the software list under /et/apt/sources.list.d/

@@ -10,7 +10,7 @@ Managing Maps
     :maxdepth: 1
 
     creating_maps
+    maps_configuration/index
     map_info
     map_metadata
     map_permissions
-    exploring_maps/index

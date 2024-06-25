@@ -33,6 +33,17 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
 .. warning:: From the :ref:`document-info` the *Location* tab is in read only mode, to edit it see the :ref:`document-editing`
 
+* The *Linked Resources* tab shows the resources, that can be *Datasets*, *Maps*, *GeoStories* and *Dashboards*, linked to the document.
+
+.. figure:: img/document_linked_resources.png
+    :align: center
+
+    *Document Linked Resources tab*
+
+.. note:: When a resource is `linked from` the document the link is under the *Linked by* list while when a resource is `linked to` the document the link is under the *Used by* list
+
+.. warning:: From the :ref:`document_metadata` it is possible edit the document *Linked Resources*
+
 From the right toolbar on the **Info** panel it is possible:
 
 .. figure:: img/document_info_toolbar.png

@@ -61,20 +61,20 @@ Resource Links
 From the resource detail response, URls and links to services can be obtained from the ``resource.links[]`` array value.
 The purpose of each link is defined by its ``link_type``. The “name” also can specify additional information about the linked resource. 
 
-1. Metadata
-^^^^^^^^^^^
+Metadata
+^^^^^^^^
 
 Links to each metadata format can be obtained from links with ``link_type = "metadata"``
 
-2. OGC services
-^^^^^^^^^^^^^^^
+OGC services
+^^^^^^^^
 
 OGC requests can be built by taking:
 the OGC base url from  links from ``resource.links[]`` with ``"link_type"= ("OGC:WMS | OGC:WFS | OGC:WCS)``
 the OGC service layername obtained from the ``resource.alternate`` property 
 
-1. Embedding
-^^^^^^^^^^^^
+Embedding
+^^^^^^^^
 A resource can be embedded inside a third party website. The “embed view” of a resource is suitable to be placed inside an iframe.
 The URL for the embedded view can be obtained from the ``resource.embed_url`` property.
 
@@ -115,7 +115,6 @@ GeoNode resources can be filtered with the following query parameters:
      - /api/v2/resources?extent=-180,-90,180,90
 
 Examples:
-^^^^^^^^^
 
 1. Filter with a single value
 
@@ -145,21 +144,7 @@ Examples:
     It's important to note that other methods are case sensitive except the icontains.
 
 
-Obtaining Available Resource Types
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The list of available resource types can be obtained from API
-``GET /api/v2/resources/resource_types``
-
-Example:
-
-.. code-block:: python
-
-    import requests
-    
-    url = "https://master.demo.geonode.org/api/v2/resources/resource_types"
-    response = requests.request("GET", url, headers=headers, data=payload)
-
-Dataset Get standardized Metadata
+Dataset specific resources
 -----------------------------
 Get the metadata of uploaded datasets with:
     - API: ``GET /api/v2/datasets/{id}``
@@ -183,10 +168,10 @@ Get the metadata of uploaded datasets with:
 Resource Upload
 ---------------
 
-GeoNode allows upload of datasets and documents.
+The API supports the upload of datasets and documents.
 
-1. Datasets
-
+Datasets
+""""""""""
 The dataset upload form accepts file formats of ESRI Shapefile, GeoTIFF, Comma Separated Value (CSV), Zip Archive, XML Metadata File, and Styled Layer Descriptor (SLD).
 For a successful upload, the form requires base_file, dbf_file, shx_file, and prj_file. The xml_file, and Sld_file are optional.
 
@@ -209,8 +194,8 @@ Example:
     }
     response = requests.request("POST", url, headers=headers, files=files)
 
-2. Documents
-
+Documents
+""""""""""
 Documents can be uploaded as form data.
 
 - API: ``POST /api/v2/documents``
@@ -248,7 +233,7 @@ Example:
     url = "http://localhost:8000/api/v2/documents"
     payload={
         'title': 'An example image',
-        'doc_url',('http://examples.com/image.jpg'
+        'doc_url' : 'http://examples.com/image.jpg'
     }
     headers = {
         'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
@@ -257,8 +242,57 @@ Example:
 
 Notice that if the URL doesn't end with a valid doc extension, the ``extension`` parameter must be used (e.g. ``extension: 'jpeg'``).
 
-3. Metadata
+Tracking dataset upload progress
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+When an upload request is executed, GeoNode creates an "Execution request" and keeps updating its state and progress (it’s a property attribute, calculated on getting the response) attributes as the resource is being created and configured in Geoserver.
+An execution can be in one of the following status:
+    - ``ready``
+    - ``running``
+    - ``failed``
+    - ``finished``
 
+When the dataset is successfully uploaded, the final state of the upload is set to ``finished``.
+
+In order to view status of the execution, the API method ``GET /api/v2/executionrequest/{execution_id}`` where ``{execution_id}`` is the value returned by the initial call to the upload API. 
+
+The returned object contains, beyond all the information related to the execution, the inputs that were passed to the execution request, and output params specific to the type of execution.
+In the case of a dataset upload, the output params contain the URL of the catalog page for the new datast.
+
+.. code-block:: json
+
+    "output_params": {
+        "detail_url": [
+            "/catalogue/#/dataset/9881"
+        ]
+    },
+
+You can also filter executions by status.
+Eg ``GET /api/v2/executionrequest?filter{action}=import&filter{source}=upload&filter{status}=finished``
+
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://stable.demo.geonode.org/api/v2/executionrequest/5f640b6b-8c51-4514-a054-995133fee107"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("GET", url, headers=headers)
+
+Overwriting a dataset
+^^^^^^^^^^^^^^^^^
+Uploading a resource will create by default a new dataset. This behaviour can be changed by setting the ``overwrite_existing_layer`` parameter to ``True``. 
+In this case the upload procedure will overwrite a resource whose name matches with the new one.
+
+Skip existing dataset
+^^^^^^^^^^^^
+If the parameter ``skip_existing_layers`` is set to true ``True`` the uplad procedure will ignore files whose name matched with already existing resources.
+
+Upload of a metadata file
+^^^^^^^^^^^^
 A complete metadata file conforming to ISO-19115 can be uploaded for a dataset.
 
 - API: ``PUT /api/v2/datasets/{dataset_id}/metadata``
@@ -279,71 +313,6 @@ Example:
     }
     response = requests.request("PUT", url, headers=headers, data={}, files=files)
 
-Tracking dataset upload progress
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-When an upload request is executed, GeoNode creates an “upload object” and keeps updating its state and progress (it’s a property attribute, calculated on getting the response) attributes as the resource is being created and configured in Geoserver.
-The states used include:
-    - READY
-    - RUNNING
-    - PENDING
-    - WAITING
-    - INCOMPLETE
-    - COMPLETE
-    - INVALID
-    - PROCESSED
-
-When the dataset is successfully uploaded, the final state of the upload is set to ``PROCESSED`` and progress is calculated as ``100.0``.
-
-In order to view ongoing uploads, and their states, you can use the API ``GET /api/v2/uploads`` or ``GET /api/v2/uploads/{id}`` if the upload id is known. You can also filter uploads with state.
-Eg ``GET /api/v2/uploads?filter{state}=PROCESSED``
-
-Example:
-
-.. code-block:: python
-
-    import requests
-    
-    url = "https://master.demo.geonode.org/api/v2/uploads"
-    headers = {
-        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
-    }
-    response = requests.request("GET", url, headers=headers)
-
-Overwrite dataset
-^^^^^^^^^^^^^^^^^
-Uploading a resource will create by default a new dataset. This behaviour can be changed by setting the ``overwrite_existing_layer`` parameter to ``True``. 
-In this case the upload procedure will overwrite a resource whose name matches with the new one.
-
-Skip dataset
-^^^^^^^^^^^^
-If the parameter ``skip_existing_layers`` is set to true ``True`` the uplad procedure will ignore files whose name matched with already existing resources.
-
-Dataset Update Metadata 
------------------------------
-
-Update individual metadata:
-    - API: ``PATCH /api/v2/datasets/{id}``
-    - Status Code: ``200``
-
-    Example:
-
-    This example changes the title and the license of a dataset.
-
-    .. code-block:: python
-
-        import requests
-
-        url = ROOT + "api/v2/datasets/" + DATASET_ID
-        auth = (LOGIN_NAME, LOGIN_PASSWORD)
-
-        data = {
-            "title": "a new title",
-            "license": 4, 
-        }
-        response = requests.patch(url, auth=auth, json=data)
-    .. note::
-        `bbox_polygon` and `ll_bbox_polygon` are derived values which cannot be changed.
-
 Resource Delete
 ---------------
 
@@ -353,6 +322,7 @@ Resource Delete
 Example:
 
 .. code-block:: python
+
     import requests
     
     url = "https://master.demo.geonode.org/api/v2/resources/1778"
@@ -361,14 +331,16 @@ Example:
     }
     response = requests.request("DELETE", url, headers=headers)
 
+eee
+
 Resource Download
 -----------------
 
 GeoNode offers a download option to resources of resource_type dataset and document.
 For datasets, the download option is available for only datasets with uploaded files.
 
-1. Datasets
-
+Datasets
+^^^^^^^^
 - API: ``GET /datasets/{resource.alternate}/dataset_download``
 - Status Code: ``200``
 
@@ -381,8 +353,8 @@ Example:
     url = "https://master.demo.geonode.org/datasets/geonode:BoulderCityLimits3/dataset_download"
     response = requests.request("GET", url)
 
-2. Documents
-
+Documents
+^^^^^^^^
 - API: ``GET /documents/{resource.pk}/download``
 - Status Code: ``200``
 
@@ -395,6 +367,28 @@ Example:
     url = "https://master.demo.geonode.org/documents/1781/download"
     response = requests.request("GET", url)
 
+Dataset Update Metadata 
+-----------------------------
+
+- API: ``PATCH /api/v2/datasets/{id}``
+- Status Code: ``200``
+
+The following example changes the title and the license of a dataset.
+
+.. code-block:: python
+
+    import requests
+
+    url = ROOT + "api/v2/datasets/" + DATASET_ID
+    auth = (LOGIN_NAME, LOGIN_PASSWORD)
+
+    data = {
+        "title": "a new title",
+        "license": 4, 
+    }
+    response = requests.patch(url, auth=auth, json=data)
+.. note::
+    `bbox_polygon` and `ll_bbox_polygon` are derived values which cannot be changed.
 
 Users, Groups and Permissions
 -----------------------------
@@ -402,8 +396,8 @@ Users, Groups and Permissions
 Users
 ^^^^^
 
-1. Listing
-
+Listing
+""""""""""
 - API: ``POST /api/v2/users``
 - Status Code: ``200``
 
@@ -419,11 +413,9 @@ Example:
     }
     response = requests.request("GET", url, headers=headers)
 
-
  
- 
-1. Detail
-
+User detail
+""""""""""
 - API: ``POST /api/v2/users/{pk}``
 - Status Code: ``200``
 
@@ -439,10 +431,73 @@ Example:
     }
     response = requests.request("GET", url, headers=headers)
 
+Create a new user
+""""""""""
+- API: ``POST /api/v2/users``
+- Status Code: ``200``
 
-		
-3. List user groups
+Example:
 
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/users"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    payload={"username": "username",
+            "password": "password",
+            "email": "email@email.com",
+            "first_name":"first_name",
+            "last_name":"last_name",
+            "avatar": "https://www.gravatar.com/avatar/7a68c67c8d409ff07e42aa5d5ab7b765/?s=240"}
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+
+Edit a User
+""""""""""
+- API: ``PATCH /api/v2/users/{pk}``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/users/1000"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    payload={"password": "new_password"}
+    response = requests.request("PATCH", url, headers=headers, data=payload)
+
+
+Delete a User
+""""""""""
+- API: ``DELETE /api/v2/users/{pk}``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/users/1000"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    payload={"password": "new_password"}
+    response = requests.request("DELETE", url, headers=headers, data=payload)
+
+
+In this case the list of validation rules configured in :ref:`user-deletion-rules` are checked before the deletion is executed.
+
+
+List user groups
+""""""""""
 - API: ``POST /api/v2/users/{pk}/groups``
 - Status Code: ``200``
 
@@ -457,6 +512,51 @@ Example:
         'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
     }
     response = requests.request("GET", url, headers=headers)
+
+
+Transfer resources owned by a user to another
+""""""""""
+- API: ``POST /api/v2/users/{pk}/transfer_resources``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    payload={"owner": 1001}
+    url = "https://master.demo.geonode.org/api/v2/users/1000/transfer_resources"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+In this case the resources will be transfered to the user with id 1001,
+instead using the payload={"owner": "DEFAULT"} the resources will be transfered to the principal user
+
+Remove user as a group manager
+""""""""""
+- API: ``POST /api/v2/users/{pk}/remove_from_group_manager``
+- Status Code: ``200``
+
+Example:
+
+.. code-block:: python
+
+    import requests
+    payload={"groups": [1,2,3]}
+    url = "https://master.demo.geonode.org/api/v2/users/1000/remove_from_group_manager"
+    headers = {
+        'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+In this case the user shall be removed as a group manager from the following group ids, 
+if the payload would be payload={"groups": "ALL"} the user will be removed as a group manager from all the groups its part of
+
+
+
+
 
 Groups
 ^^^^^^
@@ -630,3 +730,21 @@ The ``status_url`` property returns the URL to track kthe progress of the reques
 
 
 The operation will be completed once the ``status`` property is updated with the value ``finished``.
+
+Linked Resources Listing and Details
+------------------------------------
+
+All available linked_resources  can be listed with API ``GET /api/v2/resources/{pk}/linked_resources``.
+where pk Resource base id
+
+Example Requests:
+^^^^^^^^^^^^^^^^^
+
+1. List all resource links
+
+.. code-block:: python
+
+    import requests
+
+    url = "https://master.demo.geonode.org/api/v2/resources/{pk}/linked_resources"
+    response = requests.request("GET", url)

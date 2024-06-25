@@ -33,3 +33,4 @@ GeoNode Django Contrib Apps
     :maxdepth: 3
 
     contrib/index
+

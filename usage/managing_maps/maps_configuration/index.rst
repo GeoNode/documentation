@@ -1,17 +1,17 @@
 .. _exploring-maps:
 .. _asemap-switcher:
 
-Exploring Maps
-==============
+Map tools and configuration
+================================
 
-In this section, we are going to explore all tools provided on the Map View page. From the list of available maps, you can select the map you are interested in and click *View map*, the map vie will look like this.
+In this section, we are going to explore all tools provided on the Map View page. From the list of available maps, you can select the map you are interested in and click *View map*, the map will look like this.
 
 .. figure:: img/explore_map_viewer.png
      :align: center
 
      *The Map View*
 
-The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_) provides the following tools:
+The Map View (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_) provides the following tools:
 
 * the :ref:`toc` to manage the map contents;
 * the *Basemap Switcher* to change the basemap (see the next paragraphs);
@@ -21,16 +21,20 @@ The Map Viewer (based on `MapStore <https://mapstore2.geo-solutions.it/mapstore/
 * the *Navigation Bar* and its tools such as the *Zoom* tools, the *3D Navigation* tool and the *Get Features Info* tool;
 * the *Footer Tools* to manage the scale of the map, to track the mouse coordinates and change the CRS (Coordinates Reference System).
 
+A map can be configured to use a custom :ref:`map-viewers`, with which the lsit of tools available in the map can be customized.
+
 .. toctree::
     :hidden:
     :maxdepth: 1
 
+    map_viewers
     toc
     attribute_table
     creating_widgets
     timeline
     options_menu
     get_fetureinfo
+    
 
 Search Bar
 ----------

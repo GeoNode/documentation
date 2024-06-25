@@ -22,9 +22,9 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 First Step: Deploy GeoNode on a local server
 ============================================
 
-.. _Ubuntu (20.04) Basic Setup:
+.. _Ubuntu (22.04) Basic Setup:
 
-Docker Setup for Ubuntu (20.04)
+Docker Setup for Ubuntu (22.04)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: shell
@@ -56,7 +56,11 @@ Let's say your project is named :guilabel:`my_geonode` perform the following ste
 
 .. code-block:: shell
 
-  git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
+  git clone https://github.com/GeoNode/geonode-project.git
+
+  # Checkout the desired branch. For example, 4.2.2 to generate a project for GeoNode 4.2.2
+
+  git checkout -b 4.2.2
 
   # Ubuntu
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh

@@ -15,12 +15,12 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
 
 1. On the **Basic Metadata** page, the essential information that has to be filled is:
 
-  * The *Title* of the document, which should be clear and understandable;
-  * An *Abstract* on the document;
-  * The *Creation/Publication/Revision* dates which define the time period that is covered by the document;
-  * The *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word. Key-words should be relevant to the imported document;
-  * The *Category* in which the document belongs;
-  * The *Group* to which the document is linked.
+  * *Title* of the document, which should be clear and understandable;
+  * *Abstract* of the document;
+  * *Creation/Publication/Revision* dates which define the time period that is covered by the document;
+  * *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word. Key-words should be relevant to the imported document;
+  * *Category* in which the document belongs;
+  * *Group* to which the document is linked.
 
   .. figure:: img/document_basic_metadata.png
       :align: center
@@ -31,9 +31,9 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
 
 2. On the **Location and Licenses** page, the following information should be filled:
 
-  * The *Language* of the document;
-  * The *Regions*, which informs on the spatial extent covered by the document. Proposed extents cover the following scales: global, continental, regional, national;
-  * The *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
+  * *Language* of the document;
+  * *Regions*, which informs on the spatial extent covered by the document. Proposed extents cover the following scales: global, continental, regional, national;
+  * *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
   * Potential *Restrictions* to sharing the document should be provided in the Restrictions box.
 
   .. figure:: img/document_location_licenses.png
@@ -43,13 +43,14 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
 
   Click on the blue button :guilabel:`Next >>` to go ahead to the next step.
 
-3. On the **Optional Metadata** page, complementary information can be added:
+3. On the **Optional Metadata** page, complementary information can be added: 
 
-  * The *Edition* to indicate the reference or the source of the document;
-  * The *Purpose* of the document and its objectives;
-  * Any *Supplemental information* that can provide a better understanding of the uploaded document;
-  * The *Maintenance frequency* of the document;
-  * The *Spatial representation type* used.
+  * *Edition* to indicate the reference or the source of the document;
+  * *Purpose* of the document and its objectives;
+  * *Supplemental information* that can provide a better understanding of the uploaded document;
+  * *Maintenance frequency* of the document;
+  * *Spatial representation type* used.
+  * *Related resources* to link one or multiple resources to the document. These will be visible inside the :ref:`document-info` panel
 
   *Responsible Parties*, *Owner* and *Share options* are listed on the right side of the page, you can edit them.
 

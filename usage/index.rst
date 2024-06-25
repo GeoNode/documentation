@@ -10,6 +10,9 @@ GeoNode Users Guide
     managing_documents/index
     managing_datasets/index
     managing_maps/index
+    dashboard/index
+    geostory/index
     publishing_data/index
     other_apps/index
     extra_metadata/index
+    download_handlers/index

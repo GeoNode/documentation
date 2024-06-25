@@ -1,4 +1,4 @@
-sphinx==4.2.0
+sphinx==5.3.0
 sphinx-intl==2.0.1
 sphinx_rtd_theme==0.5.2
 readthedocs-sphinx-ext==2.1.4

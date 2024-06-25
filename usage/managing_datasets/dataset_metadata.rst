@@ -24,16 +24,16 @@ You can open the *Metadata* form of a *Dataset* by clicking the :guilabel:`Edit 
 
   In the first step the system asks you to insert the following metadata:
 
-  * The *Thumbnail* of the dataset (click :guilabel:`Edit` to change it);
-  * The *Title* of the dataset, which should be clear and understandable;
-  * An *Abstract*; brief narrative summary of the content of the dataset
+  * *Thumbnail* of the dataset (click :guilabel:`Edit` to change it);
+  * *Title* of the dataset, which should be clear and understandable;
+  * *Abstract*; brief narrative summary of the content of the dataset
 
         .. note:: The *Abstract* panel allows you to insert HTML code through a *wysiwyg* text editor
 
-  * The *Creation/Publication/Revision Dates*  which define the time period that is covered by the dataset;
-  * The *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word;
-  * The *Category* which the dataset belongs to;
-  * The *Group* which the dataset is linked to.
+  * *Creation/Publication/Revision Dates*  which define the time period that is covered by the dataset;
+  * *Keywords*, which should be chosen within the available list. The contributor search for available keywords by clicking on the searching bar, or on the folder logo representing, or by entering the first letters of the desired word;
+  * *Category* which the dataset belongs to;
+  * *Group* which the dataset is linked to.
 
 
 * **Location and Licenses**
@@ -45,12 +45,12 @@ You can open the *Metadata* form of a *Dataset* by clicking the :guilabel:`Edit 
 
   The following list shows what kinds of metadata you are required to enter (see also the picture below):
 
-  * The *Language* of the dataset;
-  * The *License* of the dataset;
-  * The *DOI* of the dataset; if available, this represents the `Digital Object Identifier <https://www.doi.org/>`_ of the resource
-  * The *Attribution* of the dataset; authority or function assigned, as to a ruler, legislative assembly, delegate, or the like
-  * The *Regions*, which informs on the spatial extent covered by the dataset. Proposed extents cover the following scales: global, continental, regional, national;
-  * The *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
+  * *Language* of the dataset;
+  * *License* of the dataset;
+  * *DOI* of the dataset; if available, this represents the `Digital Object Identifier <https://www.doi.org/>`_ of the resource
+  * *Attribution* of the dataset; authority or function assigned, as to a ruler, legislative assembly, delegate, or the like
+  * *Regions*, which informs on the spatial extent covered by the dataset. Proposed extents cover the following scales: global, continental, regional, national;
+  * *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
   * Potential *Restrictions* on dataset sharing.
 
         .. note:: The *Data Quality statement* and *Restrictions* panels allow you to insert HTML code through a *wysiwyg* text editor
@@ -65,12 +65,13 @@ You can open the *Metadata* form of a *Dataset* by clicking the :guilabel:`Edit 
 
   Complementary information are:
 
-  * The *Edition* to indicate the reference or the source of the dataset;
-  * The *Purpose* of the dataset and its objectives;
-  * Any *Supplemental information* that can provide a better understanding of the uploaded dataset;
-  * The *Maintenance frequency* of the dataset;
-  * The users who are *Responsible* for the dataset, its *Owner*, and the *Author* of its metadata;
-  * The *Spatial representation type* used.
+  * *Edition* to indicate the reference or the source of the dataset;
+  * *Purpose* of the dataset and its objectives;
+  * *Supplemental information* that can provide a better understanding of the uploaded dataset;
+  * *Maintenance frequency* of the dataset;
+  * users who are *Responsible* for the dataset, its *Owner*, and the *Author* of its metadata;
+  * *Spatial representation type* used.
+  * *Related resources* to link one or multiple resources to the document. These will be visible inside the :ref:`dataset-info` panel
 
         .. note:: The *Purpose* and *Supplemental information* panels allow you to insert HTML code through a *wysiwyg* text editor
 

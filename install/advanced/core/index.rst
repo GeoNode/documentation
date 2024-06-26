@@ -160,8 +160,26 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   pip install -e . --upgrade
   pip install pygdal=="`gdal-config --version`.*"
 
+Edit ``/opt/geonode/celery-cmd``.
 
-.. _configure_dbs_core:
+.. code-block:: shell
+
+   CELERY__STATE_DB=${CELERY__STATE_DB:-"/opt/geonode/worker@%h.state"}
+
+Edit ``/opt/geonode/geonode/settings.py``.
+
+.. code-block:: python
+
+   FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o777
+   FILE_UPLOAD_PERMISSIONS = 0o777
+
+Edit ``/opt/geonode/uwsgi.ini``.
+
+.. code-block:: ini
+
+   chdir = /opt/geonode/
+
+   touch-reload = /opt/geonode/geonode/wsgi.py
 
 3. Postgis database Setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -551,6 +569,24 @@ Let's now configure the ``JAVA_OPTS``, i.e. the parameters to run the Servlet Co
 
 .. warning:: The default options we are going to add to the Servlet Container, assume you can reserve at least ``4GB`` of ``RAM`` to ``GeoServer`` (see the option ``-Xmx4096m``). You must be sure your machine has enough memory to run both ``GeoServer`` and ``GeoNode``, which in this case means at least ``4GB`` for ``GeoServer`` plus at least ``2GB`` for ``GeoNode``. A total of at least ``6GB`` of ``RAM`` available on your machine. If you don't have enough ``RAM`` available, you can lower down the values ``-Xms512m -Xmx4096m``. Consider that with less ``RAM`` available, the performances of your services will be highly impacted.
 
+.. code-block:: shell
+
+   # Create the Logrotate config
+   sudo tee /etc/logrotate.d/geoserver <<EOF
+   /opt/data/geoserver_logs/geoserver.log
+   /opt/tomcat/apache-tomcat-*/logs/*.log
+   /opt/tomcat/apache-tomcat-*/logs/*.out
+   /opt/tomcat/apache-tomcat-*/logs/*.txt
+   {
+     copytruncate
+     daily
+     rotate 5
+     delaycompress
+     missingok
+     su tomcat tomcat
+   }
+   EOF
+
 Conifgure the Geofence DB
 ............................
 
@@ -743,6 +779,21 @@ Serving {“geonode”, “geoserver”} via NGINX
   sudo systemctl start geonode-uwsgi.service
   sudo systemctl status geonode-uwsgi.service
   sudo systemctl enable geonode-uwsgi.service
+
+.. code-block:: shell
+
+   # Create the Logrotate config
+   sudo tee /etc/logrotate.d/uwsgi-geonode <<EOF
+   "/var/log/geonode.log" {
+     copytruncate
+     daily
+     rotate 5
+     delaycompress
+     missingok
+     notifempty
+     su root root
+   }
+   EOF
 
 .. code-block:: shell
 
@@ -1006,7 +1057,7 @@ In particular the steps to do are:
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname
-        PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.local_settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
+        PYTHONWARNINGS=ignore VIRTUAL_ENV=$VIRTUAL_ENV DJANGO_SETTINGS_MODULE=geonode.settings GEONODE_ETC=/opt/geonode/geonode GEOSERVER_DATA_DIR=/opt/data/geoserver_data TOMCAT_SERVICE="service tomcat9" APACHE_SERVICE="service nginx" geonode_updateip -l localhost -p www.example.org
 
 	exit
 
@@ -1022,14 +1073,14 @@ In particular the steps to do are:
 	# Add these to make available. Change user, password and server information to yours
 	export DATABASE_URL='postgresql://<postgresqluser>:<postgresqlpass>@localhost:5432/geonode'
 
-	#Close virtual environmetn and aopen it again to update variables
+	# Close virtual environment and aopen it again to update variables
 	deactivate
 	
 	workon geonode
         cd /opt/geonode
 
         # Update the GeoNode ip or hostname
-        DJANGO_SETTINGS_MODULE=geonode.local_settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py migrate_baseurl --source-address=http://localhost --target-address=http://www.example.org
 	
 .. note:: If at the end you get a "bad gateway" error when accessing your geonode site, check uwsgi log with ``sudo tail -f /var/log/geonode.log`` and if theres is an error related with port 5432 check the listening configuration from the postgresql server and allow the incoming traffic from geonode.
 
@@ -1213,6 +1264,21 @@ Daemonize and configure Celery
     
     [Install]
     WantedBy=multi-user.target
+
+.. code-block:: shell
+
+   # Create the Logrotate config
+   sudo tee /etc/logrotate.d/celery <<EOF
+   "/var/log/celery.log" {
+     copytruncate
+     daily
+     rotate 5
+     delaycompress
+     missingok
+     notifempty
+     su root root
+   }
+   EOF
 
 ----
 

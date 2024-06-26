@@ -6,12 +6,17 @@ GeoStory
 GeoStory is a MapStore tool integrated in GeoNode that provides the user a way to create inspiring and immersive stories by combining text, interactive maps, and other multimedia content like images and video or other third party contents.
 Through this tool you can simply tell your stories on the web and then publish and share them with different groups of GeoNode users or make them public to everyone around the world.
 
-To build a new GeoStory go to :guilabel:`Add Resource` option on the resource page and choose option *Create geostory*.
+To build a new GeoStory go to :guilabel:`Add Resource` option on the *All Resources* page and choose option *Create geostory* or select :guilabel:`New` option on the *Geostories* page
 
-.. figure:: img/new_geostory.png
-    :align: center
+  .. figure:: img/create_geostory_link.png
+      :align: center
 
-    *New GeoStory Apps option*
+      *Create geostory from All Resources page*
+
+.. figure:: img/create_geostory.png
+      :align: center
+
+      *Create geostory from Geostories page*
 
 Now you landed on the GeoStory edition page that is composed of the following sections:
 

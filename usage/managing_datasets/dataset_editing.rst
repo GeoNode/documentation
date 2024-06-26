@@ -12,12 +12,11 @@ The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of opt
 
 In that options list, you can see three options listed as:
 
-1. *Edit Info*
-2. *Edit Data* 
-3. *Edit Styles* 
-4. *Edit Metadata*
-5. *Upload Style*
-6. *Upload Metadata*
+1. *Edit Data* 
+2. *Edit Styles* 
+3. *Edit Metadata*
+4. *Upload Style*
+5. *Upload Metadata*
 
 
 In this section you will learn how to edit a *Dataset*, and its data. See :ref:`dataset-metadata` to learn how to explore the dataset *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`dataset-style`.

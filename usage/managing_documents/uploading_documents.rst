@@ -7,12 +7,21 @@ GeoNode allows to share reports, conceptual notes, posters, spreadsheets, etc. A
 
 .. warning:: Only authenticated users can upload data into GeoNode.
 
-*Documents* uploading is accessible by clicking *Create new* which displays a list including `upload document link`:
+It is possible to upload a *Documents* in two ways:
+
+- From the :guilabel:`All Resources` page, by clicking *Add Resource* which displays a list including `Upload document` link:
 
   .. figure:: img/upload_document_link.png
       :align: center
 
-      *Document Upload link*
+      *Document Upload from All Resources page*
+
+- From the :guilabel:`Documents` page, by clicking on *New* button.
+
+.. figure:: img/upload_document.png
+      :align: center
+
+      *Document Upload from Documents page*
 
 The *Document Upload* page looks like the one shown in the picture below.
 

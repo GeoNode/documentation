@@ -6,12 +6,21 @@ Datasets Uploading
 | The most important resource type in GeoNode is the *Dataset*. A dataset represents spatial information so it can be displayed inside a map.
 | To better understand what we are talking about lets upload your first dataset.
 
-The *Dataset Uploading* page can be reached from the :guilabel:`Upload dataset` link of the :guilabel:`Add Resource` menu above the resources list page.
+It is possible to upload a *Datasets* in two ways:
 
-.. figure:: img/upload_dataset_link.png
+- From the :guilabel:`All Resources` page, by clicking *Add Resource* which displays a list including `Upload dataset` link:
+
+  .. figure:: img/upload_dataset_link.png
      :align: center
 
-     *Link for Datasets Uploading*
+     *Dataset Upload from All Resources page*
+
+- From the :guilabel:`Datasets` page, by clicking on *New* which displays a list including `Upload dataset` link:
+
+.. figure:: img/upload_dataset.png
+      :align: center
+
+      *Dataset Upload from Datasets page*
 
 The *Datasets Uploading* page looks like the one in the picture below.
 

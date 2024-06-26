@@ -7,19 +7,26 @@ In this section, we’ll create a *Map* using some uploaded datasets, combine th
 
 In order to create new maps you can use:
 
-* The :guilabel:`Create map` listed after clicking the :guilabel:`Create new` link on the menu above the resources list page.
+* The :guilabel:`Create map` listed after clicking the :guilabel:`Add Resource` button on the *All Resources* list page.
 
   .. figure:: img/create_map_link.png
        :align: center
 
-       *The Create Map link*
+       *The Create Map from All Resources page*
+
+- The :guilabel:`New` button after clicking the :guilabel:`Maps` button on the menu bar.
+
+  .. figure:: img/new_map_link.png
+      :align: center
+
+      *The Create Map from Maps page*
 
 * The :guilabel:`Create map` link in the *Dataset Page* (it creates a map using a specific dataset)
 
   .. figure:: img/create_map_button.png
        :align: center
 
-       *The Create map link from dataset*
+       *The Create map from dataset*
 
 The new *Map* will open in a *Map Viewer* like the one in the picture below.
 

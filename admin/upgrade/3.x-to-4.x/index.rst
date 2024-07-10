@@ -4,7 +4,7 @@
 Upgrade Process from GeoNode 3.x to 4.x
 ========================================
 
-The purpose of this document is to detail the process that we will implement to upgrade GeoNode from version 3.x to version 4.x. This document is proposed to ensure that the upgrade process is efficient and understandable for everyone.
+The purpose of this document is to detail the process that we will implement to upgrade GeoNode from version 3.x to version 4.x. This document is proposed to ensure that the upgrade process is efficient and understandable for everyone. It is important to note that this guide is specifically for a GeoNode installation running on Docker.
 
 The objective of this document is for everyone to understand the processes and steps necessary to carry out the migration.
 
@@ -31,13 +31,13 @@ It is recommended to do this in a separate directory to keep the previous versio
 
 ::
 
-    C:\Users\berna\geonode3>
+    my/work/dir/geonode3
 
 * Directory of the new version:
 
 ::
 
-    C:\Users\berna\geonode4>
+    my/work/dir/geonode4
 
 2. Stop the Current GeoNode
 ---------------------------
@@ -58,45 +58,6 @@ Open the ``.env`` file of the new GeoNode in a text editor:
     nano .env
 
 Adjust the environment variables to match the configuration of the previous GeoNode version. This may include variables related to the database, URLs, ports, etc.
-
-The following code is an example environment setup. Please replace the placeholder values with the actual data specific to your system:
-
-::
-
-    # ################
-    # backend
-    # ################
-    POSTGRES_USER=postgres_user
-    POSTGRES_PASSWORD=postgres_password
-    GEONODE_DATABASE=geonode_db
-    GEONODE_DATABASE_PASSWORD=geonode_password
-    GEONODE_GEODATABASE=geonode_data_db
-    GEONODE_GEODATABASE_PASSWORD=geonode_data_password
-    GEONODE_DATABASE_SCHEMA=public
-    GEONODE_GEODATABASE_SCHEMA=public
-    DATABASE_HOST=database_host
-    DATABASE_PORT=5432
-    DATABASE_URL=postgis://geonode:geonode_password@db:5432/geonode_db
-    GEODATABASE_URL=postgis://geonode_data:geonode_data_password@db:5432/geonode_data_db
-    GEONODE_DB_CONN_MAX_AGE=0
-    GEONODE_DB_CONN_TOUT=5
-    DEFAULT_BACKEND_DATASTORE=datastore
-    BROKER_URL=amqp://guest:guest@localhost:5672/
-    CELERY_BEAT_SCHEDULER=celery.beat.PersistentScheduler
-    ASYNC_SIGNALS=True
-
-    SITEURL=https://site_url/
-
-    ALLOWED_HOSTS=['django', '*']
-
-    # Data Uploader
-    DEFAULT_BACKEND_UPLOADER=geonode.importer
-    TIME_ENABLED=True
-    MOSAIC_ENABLED=False
-    HAYSTACK_SEARCH=False
-    HAYSTACK_ENGINE_URL=http://elasticsearch:9200/
-    HAYSTACK_ENGINE_INDEX_NAME=haystack
-    HAYSTACK_SEARCH_RESULTS_PER_PAGE=200
 
 4. Start the GeoNode Containers
 -------------------------------

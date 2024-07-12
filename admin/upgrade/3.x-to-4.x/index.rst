@@ -23,7 +23,9 @@ With the following command, we will download the new version of GeoNode from the
 
 ::
 
-    https://github.com/GeoNode/geonode.git -b 4x
+    https://github.com/GeoNode/geonode.git -b <branch-or-tag>
+
+**Note:** Replace <branch-or-tag> with the appropriate branch or tag for the version you wish to install.
 
 It is recommended to do this in a separate directory to keep the previous version intact in case of need.
 
@@ -46,7 +48,7 @@ Run the following command in the directory where the current GeoNode is deployed
 
 ::
 
-    docker-compose down
+    docker compose down
 
 3. Modify the GeoNode .env File
 -------------------------------
@@ -66,7 +68,7 @@ Once you have made the necessary changes to the ``.env`` file, run the following
 
 ::
 
-    docker-compose up -d
+    docker compose up -d
 
 Possible Issues
 ===============

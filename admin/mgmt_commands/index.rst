@@ -348,6 +348,58 @@ This will produce output that looks like the following
 
         DJANGO_SETTINGS_MODULE=geonode.settings python manage.py set_all_datasets_metadata -d
 
+Management Command ``regenerate_xml``
+----------------------------------------------
+
+The command will regenerate the :guilabel:`CSW Catalogue` XML metadata files.
+
+The main options are:
+
+* **layer**; Only process specified layers.
+
+* **dry-run**; Do not actually perform any change.
+
+When run with the :guilabel:`--help` option the full list of available options will be presented.
+
+.. code-block:: shell
+
+    DJANGO_SETTINGS_MODULE=geonode.settings python manage.py regenerate_xml --help
+
+This will produce the following output:
+
+.. code-block:: shell
+
+    usage: manage.py regenerate_xml [-h] [-l LAYERS] [--skip-logger-setup] [-d] [--version] [-v {0,1,2,3}] [--settings SETTINGS] [--pythonpath PYTHONPATH] [--traceback] [--no-color] [--force-color]
+                                [--skip-checks]
+
+    Re-create XML metadata documents
+
+    options:
+    -h, --help            show this help message and exit
+    -l LAYERS, --layer LAYERS
+                            Only process specified layers
+    --skip-logger-setup   Skips setup of the "geonode.br" logger, "br" handler and "br" format if not present in settings
+    -d, --dry-run         Do not actually perform any change
+    --version             Show program's version number and exit.
+    -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output, 2=verbose output, 3=very verbose output
+    --settings SETTINGS   The Python path to a settings module, e.g. "myproject.settings.main". If this isn't provided, the DJANGO_SETTINGS_MODULE environment variable will be used.
+    --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g. "/home/djangoprojects/myproject".
+    --traceback           Raise on CommandError exceptions.
+    --no-color            Don't colorize the command output.
+    --force-color         Force colorization of the command output.
+    --skip-checks         Skip system checks.
+
+* **Example**: 
+
+    .. warning:: Make sure you are using the **correct** settings
+
+    .. code-block:: shell
+
+        DJANGO_SETTINGS_MODULE=geonode.settings python manage.py regenerate_xml -d
+
+
 .. _load_data_into_geonode:
 
 Loading Data into GeoNode

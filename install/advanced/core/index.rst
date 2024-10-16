@@ -92,7 +92,7 @@ First, we are going to install all the **system packages** needed for the GeoNod
   # Cleanup the packages
   sudo apt update -y; sudo apt autoremove --purge
 
-.. warning:: GeoNode 4.2.x is not compatible with Python < 3.7
+.. warning:: GeoNode 4.4.x is not compatible with Python < 3.7
 
 .. _install_venv:
 
@@ -150,7 +150,7 @@ At this point your command prompt shows a ``(geonode)`` prefix, this indicates t
   sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
   # Clone the GeoNode source code on /opt/geonode
-  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.2.x geonode
+  cd /opt; git clone https://github.com/GeoNode/geonode.git -b 4.4.x geonode
 
 .. code-block:: shell
 

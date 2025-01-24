@@ -4,7 +4,6 @@ GeoNode API
 .. toctree::
     :maxdepth: 3
 
-    api/V2/index
     api/usage/index
     api/linked_resources/index
 

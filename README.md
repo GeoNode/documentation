@@ -18,10 +18,10 @@ Guide](http://docs.geoserver.org/latest/en/docguide/style.html)
       - [Sphinx reStructuredText
         Primer](http://www.sphinx-doc.org/rest.html)
 
-## Building with Docker
+## Build with Docker
 
  - Build the local Docker image `docker build . -t geonode/docs`
- - Run the container `docker run --name geonodedocs --rm -it -p 8001:8000  -v ./:/docs geonode/docs`
+ - Run the container `docker run --rm -it -p 8001:8000  -v ./:/docs geonode/docs`
  - Build html: `make html`
  - Build PDF: `make latexpdf`
  - Preview the output:

@@ -2,12 +2,13 @@
 #
 
 # You can set these variables from the command line.
-LANG          = en
-SPHINXBUILD   = sphinx-build
-PAPER         =
-SOURCEDIR     = .
-BUILDDIR      = _build/$(LANG)
-SPHINXOPTS    = -D language='$(LANG)' $(SOURCEDIR)
+LANG          	= en
+SPHINXBUILD   	= sphinx-build
+SPHINXAUTOBUILD = sphinx-autobuild
+PAPER         	=
+SOURCEDIR     	= .
+BUILDDIR      	= _build/$(LANG)
+SPHINXOPTS    	= -D language='$(LANG)' $(SOURCEDIR)
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -42,6 +43,11 @@ clean:
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+watch:
+	$(SPHINXAUTOBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html --host 0.0.0.0
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 

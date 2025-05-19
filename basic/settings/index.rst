@@ -723,15 +723,6 @@ DEBUG
     One of the main features of debug mode is the display of detailed error pages. If your app raises an exception when DEBUG is True, Django will display a detailed traceback, including a lot of metadata about your environment, such as all the currently defined Django settings (from settings.py).
     This is a `Django Setting <https://docs.djangoproject.com/en/3.2/ref/settings/#debug>`__
 
-
-DEBUG_STATIC
-------------
-
-    | Default: ``False``
-    | Env: ``DEBUG_STATIC``
-
-    Load non minified version of static files.
-
 DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION
 -------------------------------------
 

@@ -109,7 +109,7 @@ Online Demo
     
     See the section :ref:`get_in_touch` for details.
 
-A live demo of the latest stable build is available at http://master.demo.geonode.org/.
+A live demo of the latest stable build is available at http://stable.demo.geonode.org/.
 
   .. figure:: img/online_demo-001.png
         :align: center

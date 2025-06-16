@@ -1,11 +1,21 @@
 GeoNode API
-==========
+===========
 
 .. toctree::
     :maxdepth: 3
 
     api/usage/index
     api/linked_resources/index
+
+
+Metadata
+========
+
+.. toctree::
+    :maxdepth: 4
+
+    metadata/index
+
 
 How to Develop
 ==============

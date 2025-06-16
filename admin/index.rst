@@ -62,7 +62,7 @@ GeoNode Async Signals
 
     async/index
 
-GeoNode Managing thesauri
+Managing thesauri
 =========================
 
 .. toctree::

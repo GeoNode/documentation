@@ -1,3 +1,5 @@
+.. _thesauri:
+
 Thesauri
 ========
 
@@ -46,6 +48,7 @@ ThesaurusKeywordLabel:
      * Stores the multilingual labels for each keyword. 
      * In SKOS terms, it's a ``skos:preflabel`` within the ``skos:Concept``.
 
+.. _thesaurus_add:
 
 Adding a Thesaurus
 ==================

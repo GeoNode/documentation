@@ -17,7 +17,8 @@ The proposed/implemented idea is to use a codelist, implemented as a thesaurus w
    * ``about`` = explicit "title" annotation, otherwise field name
    * ``alt_label`` = Default label
 * ``ThesaurusKeywordLabel``:
-   * localized label
+   * ``label``: localized label
+   * ``language``: 2-letters language code
 
 In order to avoid clashes, the schema fields keys should be prefixed with the metadata handler id ("``inspire_``", "``myproject_``", ...)
 
@@ -27,42 +28,86 @@ The implementation will look for translations in the thesaurus, and then will th
 Procedure
 _________
 
-JSON schema provides the annotations ``title`` and ``description`` to document the purpose of a field. 
+JSON schema provides the optional annotations ``title`` and ``description`` to document the purpose of a field. 
 
 The metadata editor will show the "title" as the label for the field and the "description", if present, as a tooltip.  
 If the ``title`` field does not exist in the schema, the editor will usually show the field name as the label.
 
+The SparseHandler will look for the ``title`` and ``description`` annotation in the source subschema, and will try to localize them, using the content as the key for the localization procedures.
 
-The SparseHandler will look for the ``title`` and ``description`` annotation in the subschema, and will try to localize them, using the content as the key for the localization procedures.
+As an example, if there's a property named ``pname`` with a ``title`` defined with the content ``tstring``:
 
-So, if ``title`` is defined with the content ``title_key``, the procedures will look, in order, for:
+.. code-block:: json
+    
+    "pname": {
+        "title": "tstring",
+        "description": "dstring",
+        "type": "...",
+        ...
+    }
 
-* a ThesaurusKeyword with about = ``title_key__ovr``
-* a ThesaurusKeyword with about = ``title_key``
-* a ``getText`` entry with key ``title_key``
+the title localization procedure will look, in order, for:
 
-and the first returned result is usaed as a replacemente for the "title" annotation. The `getText` value is used as a fallback anyway, since it returns the searched key if no entry is found.
+* a ThesaurusKeyword with ``about = "pname__ovr"`` with matching language
+* a ThesaurusKeyword with ``about = "tstring"``
+* a ``getText`` entry with key ``tstring``
 
-.. note::
+and the first returned result is used as a replacement for the "title" annotation. The `getText` value is used as a fallback anyway, since it returns the searched key if no entry is found.
 
-   The ``getText`` is used as a fallback for base fields for which localization was already provided. In this way the core GeoNode installation does not require the ``labels_i18n`` thesaurus, allowing for a smooth transition toward the new localization procedure.
+For the description localization, similar steps will be performed; the overriding key will be slightly different tho; these are the steps:
 
-.. note::
-
-   The ``__ovr`` mechanism has been added as a way to customize locally standard fields' labels, avoiding conflicts when official thesauri content are changed
-
-   Please note that the thesauri can be partially dumped or imported, in order to ease the handling of customized labels.
+* a ThesaurusKeyword with ``about = "pname__descr__ovr"`` with matching language
+* a ThesaurusKeyword with ``about = "dstring"``
+* a ``getText`` entry with key ``dstring``
 
 
+Overriding labels
+^^^^^^^^^^^^^^^^^
 
-Even if the ``title`` annotation is not present in the subschema, the GeoNode metadata engine will search for a localized string having key equal to the property name. If found, the ``title`` annotation will be automatically added.
+The ``__ovr`` mechanism has been added as a way to locally customize standard fields' labels.
+
+By not having ``__ovr`` items in the official label thesaurus, there will not be key conflicts when official thesauri content are changed, so an upgrade of GeoNode and its vocabularies will leave the local customization intact.
+Also note that the thesauri can be partially dumped, in order to be able to only dump keys with a given prefix or suffix.
+
+The ThesaurusKeyword key (``about``) is based on the property name (suffixed with ``__ovr``), so that by simply inspecting the output jsonschema the admin will be able to create the related overriding label.
+
+Please note that the overrides are language based, so you may override the label for a specified language, and leave the other language unmodified.
+This also means that the default label for and overriding ThesaurusKeyword will never be used.
+
+Plain localization
+^^^^^^^^^^^^^^^^^^
+
+The standard localization foresee the use of a ThesaurusKeyword with ``about = "tstring"``.
+If the translation in the requested language is not found, the default label will be used instead.
+
+
+Fallback
+^^^^^^^^
+
+The ``getText`` is used as a fallback for base fields for which localization was already provided. In this way the core GeoNode installation does not require the ``labels_i18n`` thesaurus, allowing for a smooth transition toward this new localization procedure.
+
+
+Implicit title and description
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the ``title`` annotation is not present in the subschema, the GeoNode metadata engine will search for a localized string having a key equal to the property name. If found, the ``title`` annotation will be automatically added.
+
+
+.. code-block:: json
+    
+    "pname": {
+        "type": "...",
+        ...
+    }
 
 Similar to the above procedure, these keys are searched for:
 
-* a ThesaurusKeyword with about = ``<fieldname>__ovr``
-* a ThesaurusKeyword with about = ``<fieldname>``
+* a ThesaurusKeyword with ``about = "pname__ovr"`` with matching language
+* a ThesaurusKeyword with ``about = "pname"``
 
-If anything is found, the ``title`` annotation will be automatically added with the found content.
+If any of these two values is found, the ``title`` annotation will be automatically added with the found content.
 
+In the same way, if the ``description`` annotation is not declared, these keys will be searched for:
 
-In the same way, if the ``description`` annotation is not declared, the key ``<fieldname>__descr`` will be searched, and, if found, ``description`` will be added.
+* a ThesaurusKeyword with ``about = "pname__descr__ovr"`` with matching language
+* a ThesaurusKeyword with ``about = "pname__descr"``

@@ -748,3 +748,72 @@ Example Requests:
 
     url = "https://master.demo.geonode.org/api/v2/resources/{pk}/linked_resources"
     response = requests.request("GET", url)
+
+
+Assets
+------------
+
+Assets Create
+^^^^^^^^^^^^^
+
+The Assets Create API allows you to create new assets with optional file uploads and resource linking.
+
+**Endpoint**:
+
+- **URL**: ``POST /api/v2/assets/``
+- **Success Status Code**: ``201 Created``
+
+**Parameters**:
+
+.. list-table::
+   :widths: 15 10 75
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``file``
+     - File
+     - The file to upload. If provided, creates a local asset type
+   * - ``title``
+     - String
+     - Title for the asset
+   * - ``description``
+     - String
+     - Description of the asset
+   * - ``type``
+     - String
+     - Asset type specification
+   * - ``resource_id``
+     - Integer
+     - ID of the resource to link the asset to
+
+**Behavior**:
+
+- **With File**: When a file is provided, a local asset type will be created
+- **With Resource ID**: When ``resource_id`` is provided, the asset will be linked to the specified resource
+- **Without Resource ID**: Asset will be created as standalone without resource linking
+
+
+**Example Request**:
+
+.. code-block:: python
+
+    import requests
+
+    url = "https://master.demo.geonode.org/api/v2/assets/"
+
+    payload = {'resource_id': 1,
+    'title': 'My Asset Title',
+    'description': 'Description of my asset',
+    'type': 'document'}
+
+    files=[
+    ('file',('assets.png',open('/location/of/file','rb'),'image/png'))
+    ]
+    
+    headers = {
+    'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)

@@ -753,15 +753,18 @@ Example Requests:
 Assets
 ------------
 
-Assets Create
+Assets Upload
 ^^^^^^^^^^^^^
 
-The Assets Create API allows you to create new assets with optional file uploads and resource linking.
+Assets can be attached to a resource as a file.
+
 
 **Endpoint**:
 
-- **URL**: ``POST /api/v2/assets/``
+- **URL**: ``POST /api/v2/resources/{pk}/assets/``
 - **Success Status Code**: ``201 Created``
+
+where ``{pk}`` is the resource base id to which the asset is to be attached.
 
 **Parameters**:
 
@@ -772,27 +775,15 @@ The Assets Create API allows you to create new assets with optional file uploads
    * - Parameter
      - Type
      - Description
-   * - ``file``
-     - File
-     - The file to upload. If provided, creates a local asset type
+   * - ``files``
+     - Files
+     - The files to upload, can be multiple files.
    * - ``title``
      - String
-     - Title for the asset
+     - Title for the asset which is optional
    * - ``description``
      - String
-     - Description of the asset
-   * - ``type``
-     - String
-     - Asset type specification
-   * - ``resource_id``
-     - Integer
-     - ID of the resource to link the asset to
-
-**Behavior**:
-
-- **With File**: When a file is provided, a local asset type will be created
-- **With Resource ID**: When ``resource_id`` is provided, the asset will be linked to the specified resource
-- **Without Resource ID**: Asset will be created as standalone without resource linking
+     - Description of the asset which is optional
 
 
 **Example Request**:
@@ -801,12 +792,12 @@ The Assets Create API allows you to create new assets with optional file uploads
 
     import requests
 
-    url = "https://master.demo.geonode.org/api/v2/assets/"
+    url = "https://master.demo.geonode.org/api/v2/resources/{pk}/assets/"
 
-    payload = {'resource_id': 1,
+    payload = {
     'title': 'My Asset Title',
-    'description': 'Description of my asset',
-    'type': 'document'}
+    'description': 'Description of my asset'
+    }
 
     files=[
     ('file',('assets.png',open('/location/of/file','rb'),'image/png'))
@@ -817,3 +808,5 @@ The Assets Create API allows you to create new assets with optional file uploads
     }
 
     response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+

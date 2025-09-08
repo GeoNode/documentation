@@ -761,8 +761,8 @@ Assets can be attached to a resource as a file.
 
 **Endpoint**:
 
-- **URL**: ``POST /api/v2/resources/{pk}/assets/``
-- **Success Status Code**: ``201 Created``
+- **API**: ``POST /api/v2/resources/{pk}/assets/``
+- **Status Code**: ``201``
 
 where ``{pk}`` is the resource base id to which the asset is to be attached.
 
@@ -810,3 +810,28 @@ where ``{pk}`` is the resource base id to which the asset is to be attached.
     response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
 
+Asset Remove
+^^^^^^^^^^^^^
+
+Atatched assets can be removed from a resource.
+
+**Endpoint**:
+
+- **API**: ``DELETE /api/v2/resources/{resource_pk}/assets/{asset_pk}``
+- **Status Code**: ``204``
+
+where ``{resource_pk}`` is the resource base id from which the asset is to be removed and ``{asset_pk}`` is the asset id to be removed.
+
+**Example Request**:
+
+.. code-block:: python
+
+    import requests
+
+    url = "https://master.demo.geonode.org/api/v2/resources/{resource_pk}/assets/{asset_pk}"
+
+    headers = {
+    'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("DELETE", url, headers=headers)
+    

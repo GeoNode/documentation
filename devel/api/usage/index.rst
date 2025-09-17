@@ -748,3 +748,90 @@ Example Requests:
 
     url = "https://master.demo.geonode.org/api/v2/resources/{pk}/linked_resources"
     response = requests.request("GET", url)
+
+
+Assets
+------------
+
+Assets Upload
+^^^^^^^^^^^^^
+
+Assets can be attached to a resource as a file.
+
+
+**Endpoint**:
+
+- **API**: ``POST /api/v2/resources/{pk}/assets/``
+- **Status Code**: ``201``
+
+where ``{pk}`` is the resource base id to which the asset is to be attached.
+
+**Parameters**:
+
+.. list-table::
+   :widths: 15 10 75
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``files``
+     - Files
+     - The files to upload, can be multiple files.
+   * - ``title``
+     - String
+     - Title for the asset which is optional
+   * - ``description``
+     - String
+     - Description of the asset which is optional
+
+
+**Example Request**:
+
+.. code-block:: python
+
+    import requests
+
+    url = "https://master.demo.geonode.org/api/v2/resources/{pk}/assets/"
+
+    payload = {
+    'title': 'My Asset Title',
+    'description': 'Description of my asset'
+    }
+
+    files=[
+    ('file',('assets.png',open('/location/of/file','rb'),'image/png'))
+    ]
+    
+    headers = {
+    'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+
+Asset Remove
+^^^^^^^^^^^^^
+
+Atatched assets can be removed from a resource.
+
+**Endpoint**:
+
+- **API**: ``DELETE /api/v2/resources/{resource_pk}/assets/{asset_pk}``
+- **Status Code**: ``204``
+
+where ``{resource_pk}`` is the resource base id from which the asset is to be removed and ``{asset_pk}`` is the asset id to be removed.
+
+**Example Request**:
+
+.. code-block:: python
+
+    import requests
+
+    url = "https://master.demo.geonode.org/api/v2/resources/{resource_pk}/assets/{asset_pk}"
+
+    headers = {
+    'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("DELETE", url, headers=headers)
+    

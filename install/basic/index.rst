@@ -373,4 +373,40 @@ You may want to provide your own certificates to GeoNode
     nginx -s reload
     exit
 
+Fourth Step: Secure your production deployment
+==============================================
+
+Once your GeoNode instance is running in production, it's crucial to secure it by changing default passwords and OAuth2 keys.
+
+Change Admin Passwords
+^^^^^^^^^^^^^^^^^^^^^^^
+
+1. **GeoNode Admin Password**: Change the default admin password by logging into your GeoNode instance at ``https://my_geonode.geonode.org/admin`` and updating the admin user password.
+
+2. **GeoServer Admin Password**: Update the GeoServer admin password by:
+
+   - Logging into GeoServer at ``https://my_geonode.geonode.org/geoserver``
+   - Going to :guilabel:`Security` > :guilabel:`Users, Groups, and Roles` > :guilabel:`Users/Groups`
+   - Changing the admin user password
+
+Update OAuth2 Keys
+^^^^^^^^^^^^^^^^^^
+
+Generate new OAuth2 client credentials for enhanced security:
+
+1. **Generate new OAuth2 credentials** in your ``.env`` file:
+
+   .. code-block:: shell
+
+       OAUTH2_CLIENT_ID=your_new_client_id
+       OAUTH2_CLIENT_SECRET=your_new_client_secret
+
+2. **Update GeoServer OAuth2 configuration** to match the new credentials.
+
+3. **Restart the containers**
+
+   .. code-block:: shell
+
+       docker-compose restart django
+       docker-compose restart geoserver
 

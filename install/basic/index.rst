@@ -236,11 +236,11 @@ If for some reason you are not able to reach the server on the :guilabel:`HTTPS`
       rm nginx.https.enabled.conf
       ln -s nginx.https.available.conf nginx.https.enabled.conf
 
-4. Inspect the ``nginx.https.enabled.conf`` contents
+4. Inspect the ``nginx.https.available.conf`` contents
 
     .. code-block:: shell
 
-      nano nginx.https.enabled.conf
+      nano nginx.https.available.conf
 
     Make sure the contents match the following
 
@@ -340,6 +340,10 @@ In production deployment mode, GeoNode uses by default :guilabel:`Let's Encrypt`
 
 You may want to provide your own certificates to GeoNode
 
+.. note::
+
+   **Important**: When making SSL-related configuration changes, always edit ``nginx.https.available.conf`` (the actual configuration file), not ``nginx.https.enabled.conf`` (which is a symlink). This ensures your changes are persistent and properly applied.
+
 .. code-block:: shell
 
     docker exec -it nginx4my_geonode_geonode sh -c 'mkdir /geonode-certificates/my_geonode'
@@ -357,7 +361,7 @@ You may want to provide your own certificates to GeoNode
     docker-compose exec geonode sh
     apk add vim
 
-    vim nginx.https.enabled.conf
+    vim nginx.https.available.conf
 
 
 .. code-block:: diff

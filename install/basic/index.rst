@@ -401,9 +401,23 @@ Generate new OAuth2 client credentials for enhanced security:
        OAUTH2_CLIENT_ID=your_new_client_id
        OAUTH2_CLIENT_SECRET=your_new_client_secret
 
-2. **Update GeoServer OAuth2 configuration** to match the new credentials.
+2. **Update GeoNode OAuth2 configuration**:
 
-3. **Restart the containers**
+   - Log into your GeoNode admin panel at ``https://my_geonode.geonode.org/admin``
+   - Navigate to :guilabel:`Django Oauth Toolkit` > :guilabel:`Applications`
+   - Find and edit the existing GeoServer application
+   - Update the :guilabel:`Client id` and :guilabel:`Client secret` to match your new ``.env`` values
+   - Save the changes
+
+3. **Update GeoServer OAuth2 configuration**:
+
+   - Log into GeoServer at ``https://my_geonode.geonode.org/geoserver``
+   - Go to :guilabel:`Security` > :guilabel:`Authentication` > :guilabel:`Authentication Filters`
+   - Edit the :guilabel:`geonode-oauth2` filter
+   - Update the :guilabel:`Client ID` and :guilabel:`Client Secret` to match your new ``.env`` values
+   - Save the changes
+
+4. **Restart the containers**
 
    .. code-block:: shell
 

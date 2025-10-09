@@ -176,12 +176,21 @@ In order to do that, follow the procedure below:
 
 .. code-block:: ini
 
-    geofenceVendorAdapter.databasePlatform=org.hibernatespatial.postgis.PostgisDialect
+    geofenceVendorAdapter.databasePlatform=org.hibernate.spatial.dialect.postgis.PostgisDialect
     geofenceDataSource.driverClassName=org.postgresql.Driver
     geofenceDataSource.url=jdbc:postgresql://db:5432/my_geonode_data
     geofenceDataSource.username=my_geonode_data
     geofenceDataSource.password=********
     geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
+
+    geofenceDataSource.testOnBorrow=true
+    geofenceDataSource.validationQuery=SELECT 1
+    geofenceEntityManagerFactory.jpaPropertyMap[hibernate.testOnBorrow]=true
+    geofenceEntityManagerFactory.jpaPropertyMap[hibernate.validationQuery]=SELECT 1
+
+    geofenceDataSource.removeAbandoned=true
+    geofenceDataSource.removeAbandonedTimeout=60
+    geofenceDataSource.connectionProperties=ApplicationName=GeoFence;
 
 .. code-block:: shell
 

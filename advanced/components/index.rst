@@ -1031,12 +1031,21 @@ By default GeoFence is configured to use a filesystem based DB stored on the Geo
         #  * application directory.
         #  */
         #
-        geofenceVendorAdapter.databasePlatform=org.hibernatespatial.postgis.PostgisDialect
+        geofenceVendorAdapter.databasePlatform=org.hibernate.spatial.dialect.postgis.PostgisDialect
         geofenceDataSource.driverClassName=org.postgresql.Driver
         geofenceDataSource.url=jdbc:postgresql://localhost:5432/geofence
         geofenceDataSource.username=postgres
         geofenceDataSource.password=postgres
         geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
+
+        geofenceDataSource.testOnBorrow=true
+        geofenceDataSource.validationQuery=SELECT 1
+        geofenceEntityManagerFactory.jpaPropertyMap[hibernate.testOnBorrow]=true
+        geofenceEntityManagerFactory.jpaPropertyMap[hibernate.validationQuery]=SELECT 1
+
+        geofenceDataSource.removeAbandoned=true
+        geofenceDataSource.removeAbandonedTimeout=60
+        geofenceDataSource.connectionProperties=ApplicationName=GeoFence;
 
         ################################################################################
         ## Other setup entries

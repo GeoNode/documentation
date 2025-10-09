@@ -604,12 +604,21 @@ And paste the following code by replace the placehoders with the required files
 
 .. code-block:: shell
 
-  geofenceVendorAdapter.databasePlatform=org.hibernatespatial.postgis.PostgisDialect
+  ggeofenceVendorAdapter.databasePlatform=org.hibernate.spatial.dialect.postgis.PostgisDialect
   geofenceDataSource.driverClassName=org.postgresql.Driver
   geofenceDataSource.url=jdbc:postgresql://localhost:5432/geonode_data
   geofenceDataSource.username=geonode
   geofenceDataSource.password=geonode
   geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
+
+  geofenceDataSource.testOnBorrow=true
+  geofenceDataSource.validationQuery=SELECT 1
+  geofenceEntityManagerFactory.jpaPropertyMap[hibernate.testOnBorrow]=true
+  geofenceEntityManagerFactory.jpaPropertyMap[hibernate.validationQuery]=SELECT 1
+
+  geofenceDataSource.removeAbandoned=true
+  geofenceDataSource.removeAbandonedTimeout=60
+  geofenceDataSource.connectionProperties=ApplicationName=GeoFence;
 
 
 In order to make the changes effective, you'll need to restart the Servlet Container.

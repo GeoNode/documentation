@@ -17,7 +17,7 @@ So, click on your profile picture in the top right of the screen. A drop-down li
 
 The *Profile* page looks like the one shown in the picture below.
 
-.. figure:: img/user_profile_page.jpg
+.. figure:: img/user_profile_page.png
      :align: center
 
      *User profile page*
@@ -30,7 +30,7 @@ On the right side of the page there are many useful links to edit personal infor
 
 The :guilabel:`My Activities` link allows to see all your recent activities on GeoNode such as datasets uploading and maps creation.
 
-.. figure:: img/user_activities.jpg
+.. figure:: img/user_activities.png
      :align: center
 
      *Recent activities*

@@ -4,12 +4,12 @@ Viewing other users information
 ===============================
 
 | Once your account is created, you can view other accounts on the system.
-| To see information about other users on the system, click the :guilabel:`People` link of the :guilabel:`About` menu in *Home* page.
+| To see information about other users on the system, click the :guilabel:`People` link of the :guilabel:`User` menu.
 
 .. figure:: img/people_link.png
      :align: center
 
-     *About menu - People link*
+     *User menu - People link*
 
 You will see a list of users registered on the system.
 
@@ -35,9 +35,8 @@ Through the :guilabel:`User Activities` link, in right side of the page, it is p
 
      *User activities*
 
-The :guilabel:`Message User` link lets you to contact other users, see the next section to read more about that.
 
-It is also possible, in GeoNode, to see the recent activities of all users through the :guilabel:`Recent Activities` link of the user menu.
+It is also possible, in GeoNode, to see the recent activities of all users through the :guilabel:`Recent Activity` link of the user menu.
 
 .. figure:: img/recent_activities_link.png
      :align: center

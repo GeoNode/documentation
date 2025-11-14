@@ -66,10 +66,9 @@ From the upper of the document's properties table, it is possible:
 * Directly *Download* the document or copy the resource's URL (down right buttons).
 
 
-You can access the document details page by clicking on *View document* in the overview panel.
-That page looks like the one shown in the picture below.
+You can access the document details page by clicking the document itself from the document list or the *View document* in the overview panel.
 
-.. figure:: img/document_detail.png
+.. figure:: img/document_view.png
     :align: center
 
     *Document page*
@@ -81,12 +80,6 @@ Exploring the Document detail menu Sections
 
 As soon as a document is opened, the **Info** panel is shown. It reports the document metadata such as its title, abstract, date of publication etc. The metadata also indicates the user who is responsible for uploading and managing this content, as well as the group to which it is linked.
 
-.. figure:: img/document_info.png
-    :align: center
-    *Document Info*
-
-
-
 Selecting *View Metadata* from the :guilabel:`View` button it is possible to visualize the metadata of the document
 
 .. figure:: img/view_metadata.png
@@ -94,14 +87,14 @@ Selecting *View Metadata* from the :guilabel:`View` button it is possible to vis
     
     *Document Metadata*
 
-Under the :guilabel:`Resource` button, it is possible to select the *Share* option to provides the document link to share.
+By selecting the :guilabel:`Share` tab, the corresponding :guilabel:`Share` tab from the properties table is opened.
 
 .. figure:: img/document_sharing.png
     :align: center
 
     *Document Sharing*
 
-If you want to download the document, click on the :guilabel:`Download` button and the document will be downloaded automatically.
+If you want to download the document, click on the :guilabel:`Download` tab and then from the dropdown menu click :guilabel:`Download`.
 
 .. figure:: img/document_download.png
     :align: center

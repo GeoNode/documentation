@@ -31,7 +31,7 @@ The *Datasets Uploading* page looks like the one in the picture below.
 
 
 | Through the :guilabel:`Select files` button you can select files from your disk, make sure they are valid raster or vector spatial data, then you can click to :guilabel:`Upload` button. 
-A progress bar shows the operation made during the dataset upload and alerts you when the process is over.
+A progress bar and a spinning icon show the operation made during the dataset upload and alert you when the process is over.
 
 .. figure:: img/dataset_upload_confirm.png
      :align: center
@@ -39,15 +39,13 @@ A progress bar shows the operation made during the dataset upload and alerts you
      *Upload dataset*
 
 
-In this example the ``ne_10m_airports2`` ESRI Shapefile, with all its mandatory files (`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen.
+In this example the ``states_test1`` ESRI Shapefile, with all its mandatory files (`.shp`, `.shx`, `.dbf` and `.prj`), has been chosen.
 When the process ends click on :guilabel:`View` button
 
 .. figure:: img/dataset_upload_view.png
      :align: center
 
      *Dataset uploading finished*
-
-.. note:: There are lot of free spatial dataset available in the Internet. In this example, an extract of the Berlin city center roads map from the `BBBike extracts OpenStreetMap <https://extract.bbbike.org>`_ dataset has been used.
 
 In the next paragraphs you will learn how to create a dataset from scratch, how to set share options, how to explore the dataset properties and how to edit them.
 

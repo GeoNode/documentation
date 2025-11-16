@@ -8,7 +8,7 @@ Let's try it!
 
 Click on the :guilabel:`Remote Services` link of the :guilabel:`New` menu in the navigation bar.
 
-.. figure:: img/remote_services_link.png
+.. figure:: img/remote_service_link.png
     :align: center
 
     *Remote Services link*
@@ -25,11 +25,12 @@ To configure a new service:
 * click on :guilabel:`Add Remote Service`
 * type the *Service URL*
 * select the *Service Type*
+* (Optional) define the credentials of the remote service, if it requires authentication
 
-  .. figure:: img/service_type.png
+  .. figure:: img/new_service_form.png
       :align: center
 
-      *Service Types*
+      *New Service form*
 
 * click on :guilabel:`Create`
 
@@ -67,12 +68,17 @@ GeoNode supports four **types of remote services**:
 
 Once the service has been configured, you can load the resources you are interested in through the *Import Resources* page where you will be automatically redirected to.
 
+.. figure:: img/import_remote_resources.png
+    :align: center
+
+    *Remote Service resources list*
+
 | From the page where the services are listed, it is possible to click on the *Title* of a service. It opens the *Service Details* page.
 | Each service has its own metadata such as the *Service Type*, the *URL*, an *Abstract*, some *Keywords* and the *Contact* user.
 
 You can edit those metadata through the form available from the :guilabel:`Edit Service Metadata` link of the *Service Details* page (see the picture below).
 
-.. figure:: img/remote_service_metadata.png
+.. figure:: img/remote_service_info.png
     :align: center
 
     *Remote Service metadata*

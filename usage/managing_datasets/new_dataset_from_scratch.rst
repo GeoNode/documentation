@@ -21,14 +21,14 @@ In order to create the new Dataset you have to fill out the required fields:
 * *Geometry type*
 * *Attributes* (name, geometry type, etc)
 
-At the user has to define a dataset title and the geometry type:
+At first, the user has to define a dataset title and the geometry type:
 
   .. figure:: img/geometry_types.png
       :align: center
 
       *Geometry types*
 
-Usually the datasets features should have some *Attributes* that enrich the amount of information associated with each of them. Through the :guilabel:`Add Attribute` button you can add new attributes.
+While then, through the :guilabel:`Add Attribute` button, the user can add new attributes. Usually the datasets features should have some *Attributes* that enrich the amount of information associated with each of them.
 
 .. figure:: img/new_dataset_from_scratch.png
     :align: center

@@ -3,7 +3,7 @@
 Dataset Information
 =================
 
-From the *Dataset Search Page* (see :ref:`finding-data`) you can select the dataset you are interested in and click on its name to see an overview about it.
+From the *Dataset Search Page* (see :ref:`finding-data`) you can select the :guilabel:`Open properties` icon from the dataset you are interested in to see an overview about it.
 
 .. figure:: img/dataset_overview.png
     :align: center
@@ -31,38 +31,45 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
     *Bounding Box and Center*
 
-* The *Attributes* tab shows the data structure behind the dataset. All the attributes are listed and for each of them some statistics (e.g. the range of values) are estimated (if possible).
+*  The *Assets* tab presents the current dataset's download link. Moreover, the user is able to add additional assets that are related to this dataset.
+
+.. figure:: img/dataset_assets.png
+    :align: center
+
+    *Dataset Attributes tab*
+
+* The *Data* tab shows the data structure behind the dataset. All the attributes are listed and for each of them some statistics (e.g. the range of values) are estimated (if possible).
 
 .. figure:: img/dataset_attributes_tab.png
     :align: center
 
     *Dataset Attributes tab*
 
-* The *Linked Resources* tab shows the resources, that can be *Documents*, *Maps*, *GeoStories* and *Dashboards*, linked to the dataset.
+* The *Share* tab allows to the owner of the dataset to edit its permissions.
 
-.. figure:: img/dataset_linked_resources.png
+.. figure:: img/dataset_share.png
     :align: center
 
     *Dataset Linked Resources tab*
 
-.. note:: When a resource is `linked from` the dataset the link is shown under the *Linked by* list while when a resource is `linked to` the dataset the link is shown under the *Used by* list
-
-From the right toolbar on the **Info** panel it is possible:
+From the upper left toolbar on the thumbnail part of the properties panel it is possible to:
 
 .. figure:: img/dataset_info_toolbar.png
     :align: center
 
     *Dataset Info toolbar*
 
-* Add dataset in your *Favorites* (see :ref:`editing-profile`), clicking on star icon.
+* Upload a new thumbnail for this dataset
+* Set a thumbnail by using the full extent of the dataset
+* Remove the thumbnail
 
-* Directly *Download* the dataset oh `ShapeFile` format
+While from the low right toolbar on the thumbnail part of the properties panel it is possible to:
 
-* *Share* the dataset url
+* Save the current changes of the dataset
+* Download the dataset
+* Copy the resource URL
+* Copy the OGC resource web services URL
 
-* Copy the *WMS Capabilities url* 
-
-* Change the dataset *Title* by clicking on it
 
 You can access the dataset details page by clicking on *View dataset* in the overview panel.
 That page looks like the one shown in the picture below.

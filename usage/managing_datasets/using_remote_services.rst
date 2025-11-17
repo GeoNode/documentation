@@ -74,9 +74,7 @@ Once the service has been configured, you can load the resources you are interes
     *Remote Service resources list*
 
 | From the page where the services are listed, it is possible to click on the *Title* of a service. It opens the *Service Details* page.
-| Each service has its own metadata such as the *Service Type*, the *URL*, an *Abstract*, some *Keywords* and the *Contact* user.
-
-You can edit those metadata through the form available from the :guilabel:`Edit Service Metadata` link of the *Service Details* page (see the picture below).
+| If you want to import more resources from that service, you can click on :guilabel:`Import Service Resources` button. 
 
 .. figure:: img/remote_service_info.png
     :align: center

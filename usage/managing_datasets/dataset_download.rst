@@ -4,36 +4,29 @@
 Downloading Datasets
 ==================
 
-At the top of the *Dataset Menu* there is an :guilabel:`Download` link where it is possible to download:
+At the top of the *Dataset Menu* there is an :guilabel:`Download` link where it is possible to perform the following actions:
 
-* Dataset
+* Download the Dataset
 
-* ISO Metadata
+* Export in another format
 
-* Dublin Core Metadata
+* Download the ISO Metadata
 
-Clicking the :guilabel:`ISO Metadata` or the :guilabel:`Dublin Core Metadata` exports the layer metadata in `xml` format.
-
-.. figure:: img/export_metadata.png
+.. figure:: img/download_dataset.png
      :align: center
 
-     *Downloading Metadata*
+     *Downloading dataset*
 
-Open the :guilabel:`Dataset` option you will be able to select from a list of options of the supported export file formats.
+By selecting on the :guilabel:`Export data` option you will be able to select from a list of options of the supported export file formats.
 
-.. figure:: img/export_dataset_form.png
+.. figure:: img/export_dataset.png
      :align: center
 
-     *Downloading Datasets*
+     *Export Dataset in a different format*
 
-As shown in the image above, GeoNode allows you to download a subset of data. Click on :guilabel:`Download filtered dataset` to download filtered data.
+As shown in the image above, GeoNode allows you to download a subset of data. Click on :guilabel:`Crop dataset to the current viewport` to download filtered data.
 
-On clicking Export, the file is prepared and a notification is showed when file is ready
-
-.. figure:: img/export_notification.png
-     :align: center
-
-     *Export Ready*
+On clicking Export, the file is prepared and a notification is showed when file is ready.
 
 To download the file to your machine, click on the export dataset icon. This opens the prepared export files and you can save the files on your by clicking on the save icon on each item.
 

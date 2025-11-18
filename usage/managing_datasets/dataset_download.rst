@@ -43,7 +43,7 @@ Printing
 --------------
 
 | The `MapStore <https://mapstore2.geo-solutions.it/mapstore/#/>`_ based map viewer of GeoNode allows you to print the current view with a customizable layout.
-| Click the :guilabel:`Print` option from the *Menu*, the **Printing Window** will open.
+| Click the :guilabel:`Print` button, located on the right of the screen and the **Printing Window** will open.
 
 .. figure:: img/printing_window.png
      :align: center
@@ -81,7 +81,7 @@ To print the view click on :guilabel:`Print`.
 Performing Measurements
 -----------------------
 
-Click on the :guilabel:`Measure` option of the *Menu* to perform a measurement.
+Click on the :guilabel:`Measure` located on the right of the screen to perform a measurement.
 As you can see in the picture below, this tool allows you to measure *Distances*, *Areas* and the *Bearing* of lines.
 
 .. figure:: img/measuring.png

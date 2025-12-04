@@ -1,40 +1,40 @@
 FROM python:3.11-slim
 
-# Install system dependencies for LaTeX and Sphinx
-RUN apt-get update && apt-get install -y \
-    texlive-latex-base \
-    texlive-latex-recommended \
-    texlive-latex-extra \
-    texlive-fonts-recommended \
-    texlive-lang-english \
-    latexmk \
-    make \
-    build-essential \
-    ghostscript \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+ARG UID=1000
+ARG GID=1000
+ARG USER=dev
+ARG HOME=/home/dev
+ARG APP=/app
 
-# Install Sphinx and PDF builder
-RUN pip install --no-cache-dir \
-    sphinx==5.3.0 \
-    sphinx-intl==2.0.1 \
-    sphinx_rtd_theme==0.5.2 \
-    readthedocs-sphinx-ext==2.1.4 \
-    m2r2==0.3.2 \
-    mistune==0.8.4 \
-    sphinxcontrib-httpdomain==1.7.0 \
-    sphinxcontrib-openapi==0.7.0 \
-    docutils==0.16 \
-    sphinxcontrib-bibtex \
-    sphinxcontrib-serializinghtml \
-    sphinx-autobuild
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      bash ca-certificates \
+      git curl \
+      adduser \
+      libglib2.0-0 \
+        libcairo2 \
+        libpango-1.0-0 \
+        libpangocairo-1.0-0 \
+        libpangoft2-1.0-0 \
+        libgdk-pixbuf-2.0-0 \
+    && rm -rf /var/lib/apt/lists/* \
+    && addgroup --gid "${GID}" "${USER}" \
+    && adduser  --disabled-password --gecos "" \
+                --uid "${UID}" --gid "${GID}" \
+                --home "${HOME}" \
+                "${USER}"
 
-# Set working directory
-WORKDIR /docs
+WORKDIR ${APP}
 
-EXPOSE 8000
+COPY docs/requirements.txt ${APP}/requirements.txt
 
-# Entrypoint for manual usage
-ENTRYPOINT ["/bin/bash"]
-CMD []
-#CMD ["make", "latexpdf"]
+RUN python -m venv ${APP}/.venv \
+    && ${APP}/.venv/bin/pip install --upgrade pip wheel setuptools \
+    && ${APP}/.venv/bin/pip install -r ${APP}/requirements.txt
+
+ENV VIRTUAL_ENV=${APP}/.venv
+ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
+
+RUN chown -R "${UID}:${GID}" "${APP}" "${HOME}"
+
+USER ${USER}
+CMD ["bash"]

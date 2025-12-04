@@ -1,0 +1,38 @@
+site_name: GeoNode documentation
+repo_name: 'geonode/Geonode'
+repo_url: https://github.com/GeoNode/geonode/
+use_directory_urls: true
+
+nav:
+  - Home: index.md
+  - Setup: setup.md
+  - Users: user.md
+  - Administrators: admin.md
+  - Developers: devel.md
+
+extra_css:
+  - theme/css/extra.css
+
+theme:
+  name: material
+  logo: theme/img/geonode-logo-white.svg
+  favicon: theme/img/favicon.ico
+  custom_dir: 'docs/theme'
+  language: 'en'
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.indexes
+    - content.code.copy
+    
+plugins:
+  - to-pdf:
+      author: GeoNode 
+      copyright: Copyright (C) 2025 OSGeo
+      cover_title: GeoNode Documentation
+      cover_logo: https://geonode.org/static/img/geonode_logo.png
+  - search

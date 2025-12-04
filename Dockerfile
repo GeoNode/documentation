@@ -26,6 +26,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR ${APP}
 
 COPY docs/requirements.txt ${APP}/requirements.txt
+COPY mkdocs.yml ${APP}/mkdocs.yml
+COPY pdf_event_hook.py ${APP}/pdf_event_hook.py
 
 RUN python -m venv ${APP}/.venv \
     && ${APP}/.venv/bin/pip install --upgrade pip wheel setuptools \

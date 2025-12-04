@@ -22,6 +22,6 @@ Guide](http://docs.geoserver.org/latest/en/docguide/style.html)
 
  - Build the local Docker image `docker build . -t geonode/docs`
  - Run the container `docker run --rm -it -p 8000:8000  -v ./docs:/app/docs geonode/docs`
- - cd docs
- - mkdocs serve -a 0.0.0.0:8000
+ - export ENABLE_PDF_EXPORT=1
+ - mkdocs serve --livereload -a 0.0.0.0:8000
    ```

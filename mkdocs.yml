@@ -30,9 +30,20 @@ theme:
     - content.code.copy
     
 plugins:
-  - to-pdf:
-      author: GeoNode 
-      copyright: Copyright (C) 2025 OSGeo
+  - with-pdf: # https://pypi.org/project/mkdocs-with-pdf/
+      author: GeoSolutions Group
+      copyright: 'OsGeo ©'
+      #
+      #cover: false
+      #back_cover: true
+      cover_logo: 'theme/geonode.png'
       cover_title: GeoNode Documentation
-      cover_logo: https://geonode.org/static/img/geonode_logo.png
+      cover_subtitle: User Guide and Developer Guide
+      toc_level: 3
+      output_path: pdf/geonode_documentation.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+      debug_html: false # set to true to log the html content of the pdf on the console on build
+      show_anchors: true
+      verbose: false    # set to true to log the pdf generation steps in detail
+      custom_template_path: 'docs/print_template' # includes custom styles.scss for pdf
   - search

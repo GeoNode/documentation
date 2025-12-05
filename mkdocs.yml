@@ -1,12 +1,14 @@
 site_name: GeoNode documentation
-repo_name: 'geonode/Geonode'
+repo_name: 'GeoNode/geonode'
 repo_url: https://github.com/GeoNode/geonode/
 use_directory_urls: true
 
 nav:
   - Home: index.md
   - Setup: setup.md
-  - User Guide: user.md
+  - User Guide:
+    - User account: "user-guide/user_account.md"
+    - Catalog Resources: "user-guide/catalog.md"
   - Administration: admin.md
   - Developer Guide: devel.md
 

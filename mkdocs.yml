@@ -6,9 +6,9 @@ use_directory_urls: true
 nav:
   - Home: index.md
   - Setup: setup.md
-  - Users: user.md
-  - Administrators: admin.md
-  - Developers: devel.md
+  - User Guide: user.md
+  - Administration: admin.md
+  - Developer Guide: devel.md
 
 extra_css:
   - theme/css/extra.css

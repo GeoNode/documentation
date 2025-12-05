@@ -3,7 +3,7 @@
 Map Information
 ===============
 
-From the *Map Search Page* (see :ref:`finding-data`) you can select the map you are interested in and click on its name to see an overview about it.
+From the Maps catalogue you can select the `Open Attributes table` in order to see an overview of the interested map.
 
 .. figure:: img/map_overview.png
     :align: center
@@ -31,31 +31,46 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
     *Bounding Box and Center*
 
-* The *Linked Resources* tab shows resources, that can be *Documents*, *Datasets*, *GeoStories* and *Dashboards*, linked to the map.
+* The *Relations* tab shows resources, that can be *Documents*, *Datasets*, *GeoStories* and *Dashboards*, linked to the map.
 
-.. figure:: img/map_linked_resources.png
+.. figure:: img/map_relations.png
     :align: center
 
-    *Map Linked Resources tab*
+    *Map Relations tab*
 
-.. note:: When a resource is `linked from` the map the link is shown under the *Linked by* list while when a resource is `linked to` the map the link is shown under the *Used by* list
+* From the *Assets* tab, the user is able to add additional assets that are related to this map.
 
+.. figure:: img/map_assets.png
+    :align: center
 
-From the right toolbar on the **Info** panel it is possible:
+    *Map Assets tab*
 
-.. figure:: img/map_info_toolbar.png
+* The *Share* tab allows to the owner of the map to edit its permissions.
+
+.. figure:: img/map_share.png
+    :align: center
+
+    *Map Share tab*
+
+* The *Settings* tab allows to the owner of the map to define a group, the publishing status, and more options (e.g Approved).
+
+.. figure:: img/map_settings.png
+    :align: center
+
+    *Map Settings tab*
+
+From the upper part of the `properties table` it is possible:
+
+.. figure:: img/map_info_thumbnail.png
     :align: center
 
     *Map Info toolbar*
 
-* Add map in your *Favorites* (see :ref:`editing-profile`), clicking on star icon.
+* `Upload` a thumbnail, `define` a new one or `remove` the thumbnail (upper left toolbar)
 
-* *Share* the map url
+* `Save` a change on the map, `copy` the map's URL or `view` the detail page of the map (down right toolbar)
 
-* Change the map *Title* by clicking on it
-
-You can access the map details page by clicking on *View map* in the overview panel.
-That page looks like the one shown in the picture below.
+The detail page looks like the one shown in the picture below.
 
 .. figure:: img/map_detail_page.png
      :align: center

@@ -9,6 +9,9 @@ nav:
   - User Guide:
     - User account: "user-guide/user_account.md"
     - Catalog Resources: "user-guide/catalog.md"
+    - Create Rsources: "user-guide/data_management.md"
+    - Sharing: "user-guide/sharing.md"
+    - Metadata: "user-guide/metadata.md"
   - Administration: admin.md
   - Developer Guide: devel.md
 

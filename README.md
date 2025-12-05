@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 ### Develop
 ```bash
-mkdocs serve --licereload 
+mkdocs serve --livereload 
 ```
 
 ### Build

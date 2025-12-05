@@ -28,6 +28,11 @@ theme:
     - navigation.path
     - navigation.indexes
     - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
     
 plugins:
   - with-pdf: # https://pypi.org/project/mkdocs-with-pdf/

@@ -21,7 +21,6 @@ You can open the *Metadata* form of a *Dataset* by clicking the :guilabel:`Edit 
 
   In the first fields the system asks you to insert metadata including:
 
-  * *Thumbnail* of the dataset (click :guilabel:`Edit` to change it);
   * *Title* of the dataset, which should be clear and understandable;
   * *Abstract*, brief narrative summary of the content of the dataset
   * *Date / Date type*

@@ -52,6 +52,13 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
     *Dataset Linked Resources tab*
 
+* The *Settings* tab allows to the owner of the dataset to define a group, the publishing status, and more options (e.g Approved).
+
+.. figure:: img/dataset_settings.png
+    :align: center
+
+    *Dataset Settings tab*
+
 From the upper left toolbar on the thumbnail part of the properties panel it is possible to:
 
 .. figure:: img/dataset_info_toolbar.png

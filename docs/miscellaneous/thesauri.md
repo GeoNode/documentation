@@ -1,15 +1,12 @@
-.. _thesauri:
+# Thesauri
 
-Thesauri
-========
 
-Introduction
+## Introduction
 ------------
 
 A **thesaurus** is a structured vocabulary used to manage and standardize keywords (also known as tags) that describe resources. It helps improve metadata quality, searchability, and interoperability by enforcing controlled vocabularies.
 
-Key Functions
--------------
+## Key Functions
 
 Controlled Vocabulary
    Instead of free-text keywords, thesauri offer predefined and **standardized terms** organized thematically (e.g., ISO 19115 topics, GEMET, INSPIRE themes).
@@ -27,8 +24,7 @@ Metadata Standards Integration
    Thesauri can align with **international standards** (like ISO, INSPIRE, GEMET), which is especially important when GeoNode is used in institutional or governmental contexts.
 
 
-Data model
-----------
+## Data model
 
 The *GeoNode thesaurus model* is designed to support multilingual, structured vocabularies. It consists of the following key components:
 
@@ -48,10 +44,8 @@ ThesaurusKeywordLabel:
      * Stores the multilingual labels for each keyword. 
      * In SKOS terms, it's a ``skos:preflabel`` within the ``skos:Concept``.
 
-.. _thesaurus_add:
 
-Adding a Thesaurus
-==================
+## Adding a Thesaurus
 
 A thesaurus can be added in Geonode by:
 
@@ -65,37 +59,33 @@ A thesaurus can be added in Geonode by:
 * loading a RDF file using the `thesaurus load` management command (see :ref:`load_thesaurus`).
 
 
-Upload an RDF file via the thesaurus admin page
------------------------------------------------
+## Upload an RDF file via the thesaurus admin page
+
 
 Navigate to the thesaurus page in the admin panel ``http://<your_geonode_host>/admin/base/thesaurus``.  
 On the top-right of the page a button named :guilabel:`Upload thesaurus` will be available:
 
-.. figure:: img/thesaurus_admin_1.png
-     :align: center
+![thesaurus_admin_1](img/thesaurus_admin_1.png)
 
 After clicking on it, a simple form for the upload will be shown which will allow you to select your desired RDF file:
 
-.. figure:: img/thesaurus_admin_2.png
-     :align: center
+![thesaurus_admin_2](img/thesaurus_admin_2.png)
 
 By clicking on `Upload RDF`, the system will load the thesaurus and assign it a "slugified" name based on the file name.
 The name can be easily changed later in the edit page.
 
 If everything goes fine, a success message will be shown:
 
-.. figure:: img/thesaurus_admin_success.png
-     :align: center
+![thesaurus_admin_success](img/thesaurus_admin_success.png)
 
 Otherwise the UI will show the error message:
 
-.. figure:: img/thesaurus_admin_fail.png
-     :align: center
+![thesaurus_admin_fail](img/thesaurus_admin_fail.png)
 
 
 
-Management commands
-===================
+## Management commands
+
 
 GeoNode provides a single command (``thesaurus``) with multiple actions: 
 
@@ -153,18 +143,15 @@ GeoNode provides a single command (``thesaurus``) with multiple actions:
       --default-lang LANG   Default language code for untagged string literals (default: None)
 
 
-List thesauri: ``thesaurus list``
----------------------------------
+### List thesauri: ``thesaurus list``
+
 
 Get a list of the thesauri in GeoNode.  
 
 Useful to find out the id of the thesauri when you need to export one of them.
 
 
-.. _load_thesaurus:
-
-Importing a thesaurus: ``thesaurus load``
------------------------------------------
+### Importing a thesaurus: ``thesaurus load``
 
 The ``load`` command may create an entire Thesaurus, or just update part of it.
 
@@ -202,10 +189,7 @@ Actions:
       If it exists updates "label"
 
 
-.. _dump_thesaurus:
-
-Exporting a thesaurus: ``thesaurus dump``
------------------------------------------
+### Exporting a thesaurus: ``thesaurus dump``
 
 The ``dump`` command may export an entire Thesaurus or just a part of it.
 
@@ -220,8 +204,7 @@ Allowed params:
 - ``out``: Full path to the output file to be created. Optional; if omitted the RDF content is sent to stderr.
 
 
-Format
-^^^^^^
+### Format
 
 All the formats, except for ``sorted-xml``, use the *RDFlib* library to serialize the thesaurus data. Since RDFlib handles the concepts as a graph, there is no ordering in the output data. This means that two consecutive ``dump`` of the same thesaurus may create two different files. 
 
@@ -229,8 +212,7 @@ When importing and exporting thesauri as a file, it may be useful to perform dif
 The format ``sorted-xml`` creates a predictable output, where the ConceptScheme is at the start of the file, and the Concepts are sorted by their ``about`` field. Furthermore, the ``prefLabel``'s are sorted by their ``lang`` attribute.
 
 
-Partial export
-^^^^^^^^^^^^^^
+### Partial export
 
 The ``dump`` command also allows to export a subset of the keywords (concepts) in a Thesaurus.
 
@@ -245,8 +227,8 @@ In order to only export the entries we edited, we'll issue the command::
     python manage.py thesaurus dump -i labels-i18n --include "proj1_*" --include "*_ovr" -f labels-i18n.proj1.rdf
 
 
-Configuring a Thesaurus
-=======================
+## Configuring a Thesaurus
+
 
 After a thesaurus is loaded o created in GeoNode, it should be configured in the :guilabel:`Admin` panel.
 
@@ -254,8 +236,8 @@ The panel can be reached from :guilabel:`Admin` link of the *User Menu* in the n
 
 Once you are on the Thesaurus lists, select one thesaurus to open the Edit page
 
-.. figure:: img/thesaurus_edit_page.png
-     :align: center
+
+![thesaurus_edit_page](img/thesaurus_edit_page.png)
 
      *The GeoNode Thesaurus edit Interface*
 
@@ -287,8 +269,7 @@ More precisely these are the cases according to the two cardinality fields:
 The metadata editor will show all the thesauri with ``card_max != 0``, each one with its own title, like in the following image:
 
 
-.. figure:: img/thesaurus_choices.png
-     :align: center
+![thesaurus_edit_page](img/thesaurus_choices.png)
 
      *The metadata interface with the Thesaurus enabled*
 
@@ -298,8 +279,8 @@ The Thesauri having ``card_max == 0`` are used as **codelists**: it means that t
 For instance, the thesaurus with identifier ``labels-i18n`` is used for the metadata labels translations.
 
 
-Using keywords from a thesaurus
-===============================
+## Using keywords from a thesaurus
+
 
 After you've finished the setup you should find a new input widget in the metadata editor allowing you to choose keywords from the thesaurus for your resource.
 
@@ -307,24 +288,20 @@ Also, if you set the ``facet`` attribute to ``true``,  the thesaurus should be l
 
 For instance, if we have these thesauri:
 
-.. figure:: img/thesaurus_admin_list.png
-     :align: center
-     :width: 450px
+
+![thesaurus_admin_list](img/thesaurus_admin_list.png)
 
      *List of configured sample thesauri*
 
 
 both set with ``card max != 0`` and ``facet = true``, we'll have in the editor:
 
-.. figure:: img/thesaurus_edit_sample.png
-     :align: center
-     :width: 450px
+![thesaurus_edit_sample](img/thesaurus_edit_sample.png)
 
      *Keyword selectors for sample thesauri*
 
 and we'll also have them in the filtering panel as facets:
 
-.. figure:: img/thesaurus_facet_sample.png
-     :align: center
+![thesaurus_facet_sample](img/thesaurus_facet_sample.png)
 
      *Facets selectors for sample thesauri*

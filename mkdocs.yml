@@ -5,7 +5,8 @@ use_directory_urls: true
 
 nav:
   - Home: index.md
-  - Setup: setup.md
+  - Setup:
+    - Vanilla Docker installation: "setup/vanilla-docker-installation.md"
   - User Guide:
     - User account: "user-guide/user_account.md"
     - Catalog Resources: "user-guide/catalog.md"

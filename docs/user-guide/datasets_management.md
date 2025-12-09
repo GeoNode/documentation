@@ -1,19 +1,7 @@
-## Creating new resources
-GeoNode lets you publish different kinds of resources, but they fall into two big families:
-
-Source resources are created directly from data: you can upload a file (e.g., a vector/raster dataset, a PDF, an image) or connect a remote source (when supported). In GeoNode, these are:
-
- - **Datasets**: geospatial data that can be styled, visualized, queried, and reused across the platform.
- - **Documents**: supporting files such as reports, manuals, images, and other attachments that provide context and additional information.
-
-Derived resources are built from existing content already in GeoNode. Instead of uploading new data, you combine and present what you’ve already published as Datasets and Documents. These include **Maps**, **Dashboards**, and **GeoStories**, which are curated outputs that reference previously uploaded resources as their inputs.
-
-No matter which type you create, all resources share the same foundation: consistent metadata management (title, abstract, keywords, contacts, licensing, and more) and a common set of configuration options (permissions, visibility/sharing, and other resource settings). This keeps your workflow uniform—upload once, describe it well, and reuse it everywhere.
-
-### Datasets
 Datasets are published resources representing raster o vector spatial data sources. Datasets can also be associated with metadata, ratings, and comments.
 In this section, you will learn how to create a new dataset by uploading a local data set, add dataset info, change the style of the dataset, and share the results.
-#### Upload from file
+
+## Upload from file
 The most important resource type in GeoNode is the Dataset. A dataset represents spatial information so it can be displayed inside a map.
 To better understand what we are talking about lets upload your first dataset.
 It is possible to upload a Datasets in two ways:
@@ -43,10 +31,10 @@ A progress bar and a spinning icon show the operation made during the dataset up
 
     You can modify the upload parallelism limits at the admin panel for parallelism limits.
 
-#### Remote datasets
+## Remote datasets
 GeoNode is also capable to publish resources served from remote sources. Third-party WMS and ArcGIS REST services, and 3D Tiles tilesets served over HTTPS can be published inside the catalog, with the same metadata and sharing options as other resource types. GeoNode is not managing contents from these soruces, so editing and other more advanced content management features are not supported.
 
-##### Remote Services
+### Remote Services
 
 Remote services are references to external WMS servers, from which multiple layers can be obtained and published inside the GeoNode catalog.
 They can be created either through **Add Resource -> Remote Services** (All resources page) or **New -> Remote Services** (Datasets page).
@@ -74,22 +62,20 @@ Once the service has been configured, you can select the resources you are inter
 From the page where the services are listed, it is possible to click on the Title of a service, which will open the Service Details page.
 If you want to import more resources from that service, you can click on the **Import Service Resources** button.
 
+### Remote 3D Tiles
+
+The GeoNode client supports visualization of [3D Tiles](https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/catalog/#3d-tiles-catalog) thanks to the capabilities fo the MapStore framework on which it is based. 3D Tiles tilesets can be published either from a file upload (.zip file containing the tileset) or by reference of a remotwly published tileset, served over HTTP(S).
+
+Remote 3D Tiles can be configured by switching to the "Form Url" tab inside the upload dataset sidebar.
+
+![Remote£DTiles](img/remote_3d_tiles.png)
+
+## The dataset viewer
+
+### Data viewer and editor
+For vector (tabular) datasets, data content can be edited. When the **View/Edit Data** menu item is clicked, the **Attribute Table** panel of the Dataset will automatically appear at the bottom of the Map. In that panel all the features are listed. For each feature you can zoom to its extent by clicking on the corresponding magnifying glass icon  at the beginning of the row, edit its attribute values, and remove it. New features can also be created. 
+You can reference MapStore's documentation about basic and advanced usage of the [Attribute table](https://docs.mapstore.geosolutionsgroup.com/en/latest/user-guide/attributes-table/){ target=_blank }.
 
 
-
-### Documents
-
-#### Upload from file
-TBD
-
-#### Remote documents
-
-## Maps
-TBD
-
-## Geostories and Dashboards
-TBD
-## Remote services
-TBD
-
-
+### Create a Map
+Datasets can be previewed inside a map. The viewer provides a subset of the map tools that are available for Maps, because the viewer is mainly intended for just previewing the spatial content of a dataset. For a full featured map (including map widgets, and additional plugins) a Map can be created, containing the dataset.

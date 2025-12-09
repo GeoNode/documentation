@@ -17,6 +17,10 @@ nav:
   - Dataset Importer:
     - Dataset replace: "importer/replace.md"
     - Dataset upsert: "importer/upsert.md"
+  - Miscellaneous:
+    - Thesauri: "miscellaneous/thesauri.md"
+    - Backup And Restore: "miscellaneous/br.md"
+    - Settings: "miscellaneous/settings.md"
 
 extra_css:
   - theme/css/extra.css

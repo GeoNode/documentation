@@ -87,23 +87,13 @@ Once you click "Replace", the following steps happen in the background, and you 
 
 The Upsert functionality in GeoNode allows users to efficiently manage geospatial data by combining the operations of Update and Insert into a single transaction. Instead of running a check to see if a record exists before deciding whether to update it or create a new one, upsert handles this logic automatically.
 
-This is primarily used when working with GeoNode Dataset that are backed by a database table (typically PostGIS).
-
-**NB:** _This functionality is available only in GeoNode >=5.0.0_
-
 ### How it works
 
 When you perform an upsert operation on a GeoNode layer, the system evaluates the incoming data against the existing records using one or more specified key columns.
 
-`Check for Existence (Update)`
-
-- The system checks if a record with the same value(s) in the key column(s) already exists in the layer's data table.
-
-- If a match is found, the existing record is updated with the new attribute values and geometry from the incoming data.
-
-`Creation (Insert)`
-
-- If no match is found for the specified key(s), a brand new record (row) is inserted into the data table with the provided attribute values and geometry.
+- The system checks if a record with the same value(s) in the key column(s) already exists in the layer's data table
+- If a match is found, the existing record is updated with the new attribute values and geometry from the incoming data
+- If no match is found for the specified key(s), a brand new record (row) is inserted into the data table with the provided attribute values and geometry
 
 
 ### Common Use Cases
@@ -118,13 +108,11 @@ Upsert is invaluable for data synchronization tasks:
 
 ### How to upsert a dataset
 
-Before starting...
-
 !!! warning "Important notes"
 
     1) This is an experimental functionality
 
-    2) Upsert is present ONLY for vector dataset (3dTiles are excluded)
+    2) Upsert is available ONLY for vector dataset (3dTiles are excluded)
 
     3) You can replace a shapefile with any other vector file format
 

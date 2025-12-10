@@ -12,7 +12,8 @@ nav:
     - Managing Datasets: "user-guide/datasets_management.md"
     - Sharing: "user-guide/sharing.md"
     - Metadata: "user-guide/metadata.md"
-  - Developer Guide: devel.md
+  - Developer Guide: 
+    - API Usage: "development/api.md"
   - Administration:
     - Accessing the panel: "admin/panel.md"
     - Users: "admin/user.md"

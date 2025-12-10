@@ -60,3 +60,32 @@ Finally, to build and run GeoNode run the following:
 docker compose build --no-cache
 docker compose up -d
 ```
+
+If the build is successful, you will be able to navigate on GeoNode project at `http://localhost`
+
+### Investigate the logs
+
+If something went wrong, you can check the logs of the containers from `my_geonode` root folder by running the following commands:
+
+```bash
+# GeoNode Container
+docker-compose logs -f django
+
+# GeoServer Container
+docker-compose logs -f geoserver
+
+# DB Container
+docker-compose logs -f db
+
+# NGINX Container
+docker-compose logs -f geonode
+```
+
+### Login as an administrator on GeoNode
+
+To connect on the GeoNode project as administrator, use the credentials from the `.env` file:
+
+```bash
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD={geonodepwd}
+```

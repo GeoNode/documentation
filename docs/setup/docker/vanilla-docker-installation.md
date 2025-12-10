@@ -43,6 +43,17 @@ docker compose build
 docker compose up -d
 ```
 
+If the build is successful, you will be able to navigate on GeoNode project at `http://localhost`
+
+### Login as an administrator on GeoNode
+
+To connect on the GeoNode project as administrator, use the credentials from the `.env` file:
+
+```bash
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD={geonodepwd}
+```
+
 ### Test the instance and follow the logs
 
 If you run the containers daemonized (with the `-d` option), you can either run specific Docker commands to follow the ``startup and initialization logs`` or entering the image `shell` and check for the `GeoNode logs`.

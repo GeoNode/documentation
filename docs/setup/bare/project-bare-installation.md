@@ -1,0 +1,1 @@
+# GeoNode project bare installation

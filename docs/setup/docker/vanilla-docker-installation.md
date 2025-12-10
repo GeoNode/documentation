@@ -2,57 +2,10 @@
 
 In this section, we are going to list the steps needed to deploy a vanilla **GeoNode** with **Docker**.
 
-### Docker Setup for Ubuntu 24.04
-
-To prepare an Ubuntu 24.04 machine with Docker and Docker Compose you can follow the steps below:
+### Clone the source code
 
 ```bash
-# Install required libraries:
-sudo apt update
-sudo apt install -y software-properties-common
-sudo add-apt-repository universe
-sudo apt install curl
-
-# Add Docker GPG key
-sudo install -m 0755 -d /etc/apt/keyrings
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
-  | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-# Add Docker APT repository
-UBUNTU_CODENAME=$(lsb_release -cs)
-
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $UBUNTU_CODENAME stable" \
-  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-# Install Docker Engine + Docker Compose plugin
-sudo apt-get update -y
-
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
-# Allow your user to run Docker without sudo
-sudo usermod -aG docker $USER
-
-# Refresh your group membership in the current shell
-newgrp docker
-```
-
-### Clone GeoNode
-
-```bash
-# Create a geonode user
-sudo adduser geonode
-
-# Let's create the GeoNode core base folder and clone it
-sudo mkdir -p /opt/geonode/
-sudo usermod -a -G www-data geonode
-sudo chown -Rf geonode:www-data /opt/geonode/
-sudo chmod -Rf 775 /opt/geonode/
-
-# Clone the GeoNode source code on /opt/geonode
-cd /opt
+cd ~
 git clone https://github.com/GeoNode/geonode.git
 ```
 
@@ -97,14 +50,14 @@ If you run the containers daemonized (with the `-d` option), you can either run 
 In order to follow the `startup and initialization logs`, you will need to run the following command from the repository folder
 
 ```bash
-cd /opt/geonode
+cd ~/geonode
 docker logs -f django4geonode
 ```
 
 Alternatively:
 
 ```bash
-cd /opt/geonode
+cd ~/geonode
 docker compose logs -f django
 ```
 You should be able to see several initialization messages. Once the container is up and running, you will see the following statements
@@ -158,7 +111,8 @@ Whenever you change someting on .env file, you will need to rebuild the containe
 docker-compose up -d
 ```
 
-> **Note**: This command drops any change you might have done manually inside the containers, except for the static volumes.
+!!! Note 
+    This command drops any change you might have done manually inside the containers, except for the static volumes.
 
 ### Remove all data and bring your running GeoNode deployment to the initial stage
 
@@ -168,7 +122,7 @@ This action allows you to stop all the containers and reset all the data with th
     The following command should be used with caution because it will delete all the data included in the instance
 
 ```bash
-cd /opt/geonode
+cd ~/geonode
 # stop containers and remove volumes
 docker-compose down -v
 ```

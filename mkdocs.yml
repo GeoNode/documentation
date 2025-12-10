@@ -6,7 +6,10 @@ use_directory_urls: true
 nav:
   - Home: index.md
   - Setup:
-    - Vanilla Docker installation: "setup/vanilla-docker-installation.md"
+    - Docker installation:
+          - Prerequisites: setup/docker/prerequisites.md
+          - Vanilla Docker installation: setup/docker/vanilla-docker-installation.md
+          - GeoNode project Docker installation: setup/docker/project-docker-installation.md
   - User Guide:
     - User account: "user-guide/user_account.md"
     - Catalog Resources: "user-guide/catalog.md"

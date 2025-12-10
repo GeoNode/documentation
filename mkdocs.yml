@@ -13,19 +13,16 @@ nav:
     - Sharing: "user-guide/sharing.md"
     - Metadata: "user-guide/metadata.md"
   - Developer Guide: devel.md
-  - Dataset Importer:
-    - Dataset replace: "importer/replace.md"
-    - Dataset upsert: "importer/upsert.md"
-  - Miscellaneous:
-    - Thesauri: "miscellaneous/thesauri.md"
-    - Backup And Restore: "miscellaneous/br.md"
-    - Settings: "miscellaneous/settings.md"
   - Administration:
     - Accessing the panel: "admin/panel.md"
     - Users: "admin/user.md"
     - Groups: "admin/group.md"
     - Social Logins: "admin/social.md"
     - OAuth2: "admin/oauth.md"
+  - Miscellaneous:
+    - Thesauri: "miscellaneous/thesauri.md"
+    - Backup And Restore: "miscellaneous/br.md"
+    - Settings: "miscellaneous/settings.md"
 
 extra_css:
   - theme/css/extra.css

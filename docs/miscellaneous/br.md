@@ -249,23 +249,20 @@ The history of restored backups can be verified in the admin panel.
 
 Login to the admin panel and select ``Restored backups`` table from ``BACKUP/RESTORE`` application.
 
-.. figure:: img/br_1.png
-   :align: center
+![br_1](img/br_1.png)
 
 
 A list will be displayed with a history of all restored backups. You can select a certain backup to view it's data.
 
-.. figure:: img/br_2.png
-   :align: center
+![br_2](img/br_2.png)
 
 
 The detailed view of the restored backup shows backup archive's name, it's MD5 hash, it's creation/modification date (in the target folder), and the date of the restoration. Please note Restored Backup history cannot be modified.
 
-.. figure:: img/br_3.png
-   :align: center
+![br_3](img/br_3.png)
 
-B/R in Docker environment
-=========================
+## B/R in Docker environment
+
 
 When executing B/R in the Docker environment, creation backup to / restoration from should be executed in ``/backup_restore`` directory.
 It is a shared volume between Geoserver and Geonode images, created for this purpose only. Pointing at another
@@ -277,27 +274,25 @@ location will fail, as one of the images won't have an access to the files.
 !!! note "Important Notes"
     The only other volume shared between images is ``/geoserver_data/data``, but backup creation **should not** be performed there, as the recursive Geoserver backups may be created in such case.
 
-B/R Jenkins Job in Docker environment
-=====================================
-
-When installing GeoNode through the :guilabel:`geonode-project` Docker (see :ref:`geonode-project-basic`), an instance of `Jenkins CI/CD <https://www.jenkins.io/>`_ is also automatically deployed and available through :guilabel:`http://<geonode_host>/jenkins`.
+## B/R Jenkins Job in Docker environment
 
 
-.. figure:: img/br_jenkins_1.png
-   :align: center
+When installing GeoNode through the `geonode-project` Docker (see :ref:`geonode-project-basic`), an instance of `Jenkins CI/CD <https://www.jenkins.io/>`_ is also automatically deployed and available through `http://<geonode_host>/jenkins`.
 
-Configure Jenkins at first startup
-----------------------------------
+
+![br_jenkins_1](img/br_jenkins_1.png)
+
+### Configure Jenkins at first startup
+
 
 The very first time you try to access Jenkins, you will need to unlock it and generate a new administrator username and password.
 
 In order to do that, you need to print the contents of the auto-generated file ``/var/jenkins_home/secrets/initialAdminPassword``
 
-- First of all search for the Jenkins container ID, usually :guilabel:`jenkins4{{project_name}}` where ``{{project_name}}`` is the name of your :guilabel:`geonode-project` instance (e.g. ``my_geonode``)
+- First of all search for the Jenkins container ID, usually `jenkins4{{project_name}}` where ``{{project_name}}`` is the name of your `geonode-project` instance (e.g. ``my_geonode``)
 
-.. code:: shell
-
-  $> docker ps
+   ```
+   $> docker ps
 
     CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                                                                                NAMES
     e9fc97a75d1a        geonode/nginx:geoserver      "/docker-entrypoint.…"   2 hours ago         Up 2 hours          0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp                                             nginx4my_geonode
@@ -308,122 +303,110 @@ In order to do that, you need to print the contents of the auto-generated file `
     3f9ce0be7f88        rabbitmq                     "docker-entrypoint.s…"   2 hours ago         Up 2 hours          4369/tcp, 5671-5672/tcp, 25672/tcp                                                   rabbitmq4my_geonode
     02fdbce9ae73        geonode/letsencrypt:latest   "./docker-entrypoint…"   2 hours ago         Up 14 seconds                                                                                            my_geonode_letsencrypt_1
     c745520fd551        jenkins/jenkins:lts          "/sbin/tini -- /usr/…"   2 hours ago         Up 2 hours          0.0.0.0:9080->9080/tcp, 8080/tcp, 0.0.0.0:50000->50000/tcp, 0.0.0.0:9443->8443/tcp   jenkins4my_geonode
+   ```
 
 - Now just ``cat`` the file above inside the Jenkins container
 
-.. code:: shell
-
-  $> docker container exec -u 0 -it jenkins4my_geonode sh -c 'cat /var/jenkins_home/secrets/initialAdminPassword'
-
-    b91e9d*****************373834
+   ```
+   $> docker container exec -u 0 -it jenkins4my_geonode sh -c 'cat /var/jenkins_home/secrets/initialAdminPassword'
+   b91e9d*****************373834
+   ```
 
 - Copy the hash code you just got form the print above, and copy-and-paste to the browser window
 
-.. figure:: img/br_jenkins_2.png
-   :align: center
+![br_jenkins_2](img/br_jenkins_2.png)
 
-In the next step just install the :guilabel:`Default Plugins`. You can install more of them later on from the management page.
 
-.. figure:: img/br_jenkins_3.png
-   :align: center
+In the next step just install the `Default Plugins`. You can install more of them later on from the management page.
+
+![br_jenkins_3](img/br_jenkins_3.png)
 
 Wait until Jenkins has finished configuring the plugins
 
-.. figure:: img/br_jenkins_4.png
-   :align: center
+![br_jenkins_4](img/br_jenkins_4.png)
+
 
 Provide the administrator credentials as requested
 
-.. figure:: img/br_jenkins_5.png
-   :align: center
+![br_jenkins_5](img/br_jenkins_5.png)
 
 Confirm the Jenkins instance URL, this can be changed form the configuration later in case you will need to update the server address
 
-.. figure:: img/br_jenkins_6.png
-   :align: center
+![br_jenkins_6](img/br_jenkins_6.png)
 
 Well done, Jenkins is ready now
 
-.. figure:: img/br_jenkins_7.png
-   :align: center
+![br_jenkins_7](img/br_jenkins_7.png)
 
 The next step is to configure a Jenkins Job able to interact with the Django Docker container and run a full backup
 
-.. figure:: img/br_jenkins_8.png
-   :align: center
+![br_jenkins_8](img/br_jenkins_8.png)
 
-Configure a Jenkins Job to run a full backup on the Django Container
---------------------------------------------------------------------
+### Configure a Jenkins Job to run a full backup on the Django Container
+
 
 Before creating the new Jenkins job, we need to install and configure a new plugin, `Publish over SSH <https://plugins.jenkins.io/publish-over-ssh>`_
 
-In order to do that, once logged in as ``admin``, go to the Jenkins :guilabel:`Management Page > Manage Plugins` tab
+In order to do that, once logged in as ``admin``, go to the Jenkins `Management Page > Manage Plugins` tab
 
-.. figure:: img/br_jenkins_9.png
-   :align: center
 
-.. figure:: img/br_jenkins_10.png
-   :align: center
+![br_jenkins_9](img/br_jenkins_9.png)
 
-Click on :guilabel:`Available` tab and search for ``SSH`` available plugins
+![br_jenkins_10](img/br_jenkins_10.png)
 
-.. figure:: img/br_jenkins_11.png
-   :align: center
+
+Click on `Available` tab and search for ``SSH`` available plugins
+
+![br_jenkins_10](img/br_jenkins_11.png)
 
 Select and check the ``Publish over SSH`` one
 
-.. figure:: img/br_jenkins_12.png
-   :align: center
+![br_jenkins_10](img/br_jenkins_12.png)
 
 Install the plugins and restart Jenkins
 
-.. figure:: img/br_jenkins_13.png
-   :align: center
+![br_jenkins_10](img/br_jenkins_13.png)
 
-The next step is to configure the ``SSH Server Connection`` for the :guilabel:`Publish over SSH` plugin.
+The next step is to configure the ``SSH Server Connection`` for the `Publish over SSH` plugin.
 
-Move to :guilabel:`Jenkins Configuration` 
+Move to `Jenkins Configuration` 
 
-.. figure:: img/br_jenkins_14.png
-   :align: center
+![br_jenkins_14](img/br_jenkins_14.png)
+ì
+Scroll down until you find the `Publish over SSH` plugin section
 
-Scroll down until you find the :guilabel:`Publish over SSH` plugin section
-
-.. figure:: img/br_jenkins_15.png
-   :align: center
+![br_jenkins_15](img/br_jenkins_15.png)
 
 Depending on how your ``HOST SSH service`` has been configured, you might need several information in order to setup the connection.
 
 Here below an example using a global host (``master.demo.geonode.org``) accepting ``SSH`` connections via ``RSA keys``
 
-.. figure:: img/br_jenkins_16.png
-   :align: center
+![br_jenkins_16](img/br_jenkins_16.png)
 
-.. note::
-   Before saving the configuration always ensure the connection is ok by using the :guilabel:`Test Configuration` button
 
-   .. figure:: img/br_jenkins_17.png
-      :align: center
+!!! note "Important Notes"
+      Before saving the configuration always ensure the connection is ok by using the `Test Configuration` button
 
-It is possible also to run and configure :guilabel:`Jenkins` to run locally, as an instance on :guilabel:`localhost`.
-In that case you will need to change few things in order to allow :guilabel:`Jenkins` to access your local network.
+![br_jenkins_17](img/br_jenkins_17.png)
 
-- First of all, be sure :guilabel:`OpenSSH Server` is correctly installed and running on your PC. Eventually check any firewall rules.
+It is possible also to run and configure `Jenkins` to run locally, as an instance on `localhost`.
+In that case you will need to change few things in order to allow `Jenkins` to access your local network.
 
-   .. code:: shell
-
+- First of all, be sure `OpenSSH Server` is correctly installed and running on your PC. Eventually check any firewall rules.
+      ```
       $> sudo apt install openssh-server
 
       # Test your connection locally
       $> ssh -p 22 user@localhost
          user@localhost's password: 
+      ```
 
-- You will need to do some changed to your ``docker-compose.yml`` file in order to enable the :guilabel:`host network` configuration.
+- You will need to do some changed to your ``docker-compose.yml`` file in order to enable the `host network` configuration.
 
-   .. note:: Enable ``network_mode: "host"`` on Jenkins container
+!!! note "Important Notes"
+      Enable ``network_mode: "host"`` on Jenkins container
 
-   .. code:: shell
-
+      ```
       $> vim docker-compose.yml
 
       ...
@@ -449,127 +432,127 @@ In that case you will need to change few things in order to allow :guilabel:`Jen
       $> docker-compose stop jenkins
       $> docker-compose rm jenkins
       $> docker-compose up -d jenkins
+      ```
 
-    !!! warning "Warning"
-        From now on, your local Jenkins instance will be accessible from :guilabel:`http://localhost:9080/jenkins`
+!!! warning "Warning"
+      From now on, your local Jenkins instance will be accessible from `http://localhost:9080/jenkins`
 
-- Add ``localhost`` Server to the :guilabel:`Publish over SSH` plugin configuration
+- Add ``localhost`` Server to the `Publish over SSH` plugin configuration
 
-   Mode to :guilabel:`http://localhost:9080/jenkins/configure` and fill the required information
+   Mode to `http://localhost:9080/jenkins/configure` and fill the required information
 
-   .. figure:: img/br_jenkins_18.png
+![br_jenkins_16](img/br_jenkins_18.png)
       :align: center
 
-   .. note::
-      Before saving the configuration always ensure the connection is ok by using the :guilabel:`Test Configuration` button
+
+!!! note "Important Notes"
+      Before saving the configuration always ensure the connection is ok by using the `Test Configuration` button
 
       .. figure:: img/br_jenkins_17.png
          :align: center
 
 We are now ready to create the Jenkins Job which will run a full backup & restore of our GeoNode dockerized instance.
 
-- Move to the Jenkins Home and click on :guilabel:`Create a Job` button
+- Move to the Jenkins Home and click on `Create a Job` button
 
-   .. figure:: img/br_jenkins_19.png
-      :align: center
+![br_jenkins_16](img/br_jenkins_19.png)
 
-- Provide a name to the Job and select :guilabel:`Freestyle project`
+- Provide a name to the Job and select `Freestyle project`
 
-   .. figure:: img/br_jenkins_20.png
-      :align: center
+![br_jenkins_16](img/br_jenkins_20.png)
 
-- Enable the :guilabel:`Log rotation` strategy if needed
 
-   .. figure:: img/br_jenkins_21.png
-      :align: center
+- Enable the `Log rotation` strategy if needed
 
-- Configure the :guilabel:`Job Parameters` which will be used by the script later on.
+![br_jenkins_16](img/br_jenkins_21.png)
 
-   Add three :guilabel:`String Parameters`
 
-   .. figure:: img/br_jenkins_22.png
-      :align: center
+- Configure the `Job Parameters` which will be used by the script later on.
+
+   Add three `String Parameters`
+
+![br_jenkins_16](img/br_jenkins_22.png)
+
 
    as shown below
    
-   - :guilabel:`BKP_FOLDER_NAME`
+   - `BKP_FOLDER_NAME`
 
-      .. figure:: img/br_jenkins_23.png
-         :align: center
+![br_jenkins_16](img/br_jenkins_23.png)
 
-   - :guilabel:`SOURCE_URL`
 
-      .. warning:: Provide the correct URL of your GeoNode instance
-
-      .. figure:: img/br_jenkins_24.png
-         :align: center
-
-   - :guilabel:`TARGET_URL`
+   - `SOURCE_URL`
 
       .. warning:: Provide the correct URL of your GeoNode instance
+![br_jenkins_16](img/br_jenkins_24.png)
 
-      .. figure:: img/br_jenkins_25.png
-         :align: center
 
-- Enable the :guilabel:`Delete workspace before build starts` and :guilabel:`Add timestamps to the Console Output` :guilabel:`Build Environment` options
+   - `TARGET_URL`
 
-   .. figure:: img/br_jenkins_26.png
-      :align: center
+      .. warning:: Provide the correct URL of your GeoNode instance
+![br_jenkins_16](img/br_jenkins_25.png)
 
-- Finally let's create the :guilabel:`SSH Build Step`
 
-   .. figure:: img/br_jenkins_27.png
-      :align: center
+- Enable the `Delete workspace before build starts` and `Add timestamps to the Console Output` `Build Environment` options
 
-   Select the correct :guilabel:`SSH Server` and provide the :guilabel:`Exec Command` below
+![br_jenkins_16](img/br_jenkins_26.png)
 
-      .. warning:: Replace :guilabel:`{{project_name}}` with your :guilabel:`geonode-project instance name` (e.g. :guilabel:`my_geonode`)
 
-      .. code:: shell
+- Finally let's create the `SSH Build Step`
+
+![br_jenkins_16](img/br_jenkins_27.png)
+
+
+   Select the correct `SSH Server` and provide the `Exec Command` below
+
+   
+!!! warning "warning"
+      Replace `{{project_name}}` with your `geonode-project instance name` (e.g. `my_geonode`)
+
+         ```
 
          # Replace {{project_name}} with your geonode-project instance name (e.g. my_geonode)
          # docker exec -u 0 -it django4{{project_name}} sh -c 'SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL ./{{project_name}}/br/backup.sh $BKP_FOLDER_NAME'
          # e.g.:
          docker exec -u 0 -it django4my_geonode sh -c 'SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL ./my_geonode/br/backup.sh $BKP_FOLDER_NAME'
+         ```
 
-      .. figure:: img/br_jenkins_28.png
-         :align: center
+      ![br_jenkins_28](img/br_jenkins_28.png)
 
-  Click on :guilabel:`Advanced` and change the parameters as shown below
+
+  Click on `Advanced` and change the parameters as shown below
 
       .. figure:: img/br_jenkins_29.png
          :align: center
 
 **Save!** You are ready to run the Job...
 
-.. figure:: img/br_jenkins_30.png
-   :align: center
+![br_jenkins_16](img/br_jenkins_30.png)
+![br_jenkins_16](img/br_jenkins_31.png)
+![br_jenkins_16](img/br_jenkins_32.png)
+![br_jenkins_16](img/br_jenkins_33.png)
 
-.. figure:: img/br_jenkins_31.png
-   :align: center
 
-.. figure:: img/br_jenkins_32.png
-   :align: center
+### Link the `backup_restore` folder to a local folder on the `HOST`
 
-.. figure:: img/br_jenkins_33.png
-   :align: center
+In the case you need to save the backup archives outside the docker container, there's the possibility to directly link the `backup_restore` folder to a local folder on the `HOST`.
 
-Link the :guilabel:`backup_restore` folder to a local folder on the :guilabel:`HOST`
-------------------------------------------------------------------------------------
+In that case you won't need to `docker cp` the files everytime from the containers, they will be directly available on the host filesystem.
 
-In the case you need to save the backup archives outside the docker container, there's the possibility to directly link the :guilabel:`backup_restore` folder to a local folder on the :guilabel:`HOST`.
 
-In that case you won't need to :guilabel:`docker cp` the files everytime from the containers, they will be directly available on the host filesystem.
+!!! warning "warning"
+      Always keep an eye to the disk space. Backups archives may be huge.
 
-.. warning:: Always keep an eye to the disk space. Backups archives may be huge.
-
-.. note:: You might want also to consider filtering the files through the backup dt filters on the :guilabel:`settings.ini` in order to reduce the size of the archive files, including only the new ones.
+!!! note "Important Notes"
+      You might want also to consider filtering the files through the backup dt filters on the `settings.ini` in order to reduce the size of the archive files, including only the new ones.
 
 Modify the ``docker-compose.override.yml`` as follows in order to link the backup folders outside.
 
-.. note:: ``/data/backup_restore`` is a folder physically located into the host filesystem.
+!!! note "Important Notes"
+      ``/data/backup_restore`` is a folder physically located into the host filesystem.
 
-.. code:: shell
+
+   ```
 
    $> vim docker-compose.override.yml
 
@@ -599,3 +582,4 @@ Modify the ``docker-compose.override.yml`` as follows in order to link the backu
 
    # Restart the containers
    $> docker-compose up -d
+   ```

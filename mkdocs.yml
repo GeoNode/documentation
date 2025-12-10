@@ -12,7 +12,6 @@ nav:
     - Managing Datasets: "user-guide/datasets_management.md"
     - Sharing: "user-guide/sharing.md"
     - Metadata: "user-guide/metadata.md"
-  - Administration: admin.md
   - Developer Guide: devel.md
   - Dataset Importer:
     - Dataset replace: "importer/replace.md"
@@ -21,7 +20,7 @@ nav:
     - Thesauri: "miscellaneous/thesauri.md"
     - Backup And Restore: "miscellaneous/br.md"
     - Settings: "miscellaneous/settings.md"
-  - Admin:
+  - Administration:
     - Accessing the panel: "admin/panel.md"
     - Users: "admin/user.md"
     - Groups: "admin/group.md"

@@ -212,7 +212,7 @@ instance environment.
 
 The ``restore`` command has a number of arguments, modifying its execution:
 
-# ``-c`` / ``--config``: path to the ``settings.ini`` configuration file. If the Backup archive is provided with his settings, the latter will be used by the restore command and this option won't be mandatory anymore
+``-c`` / ``--config``: path to the ``settings.ini`` configuration file. If the Backup archive is provided with his settings, the latter will be used by the restore command and this option won't be mandatory anymore
 
 - ``--skip-geoserver``: the GeoServer backup restoration won't be performed
 
@@ -236,15 +236,14 @@ The ``restore`` command has a number of arguments, modifying its execution:
 
 In order to perform a default backup restoration just run the command:
 
-        python manage.py restore --backup-file=<target_restore_file_path> --config=</path/to/settings.ini>
+      python manage.py restore --backup-file=<target_restore_file_path> --config=</path/to/settings.ini>
 
 For restore to run it requires either ``--backup-file`` or ``--backup-files-dir`` argument defined.
 
 !!! warning "Warning"
     The Restore will **overwrite** the whole target instances of GeoNode (and by default GeoServer) including users, catalog and database, so be very careful.
 
-GeoNode Admin GUI Inspection
-============================
+## GeoNode Admin GUI Inspection
 
 The history of restored backups can be verified in the admin panel.
 

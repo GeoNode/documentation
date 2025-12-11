@@ -1020,3 +1020,156 @@ vim /opt/geonode/.env
 # Restart the service
 sudo systemctl restart geonode-uwsgi
 ```
+
+## 7. Enabling Fully Asynchronous Tasks
+
+#### Redis installation
+
+GeoNode 5 uses Redis as a message broker and `Celery backend` for the asyncronous tasks.
+
+Reference: [Redis installation](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/install-redis-on-linux/)
+
+Add Redis repository (optional, to get latest stable version):
+
+```bash
+sudo add-apt-repository ppa:redislabs/redis -y
+sudo apt update
+```
+
+Install Redis Server
+
+```bash
+sudo apt install redis -y
+```
+
+Check Redis status
+
+```bash
+sudo systemctl status redis
+```
+
+Redis should already be running and enabled to start on boot.
+
+#### Managing Redis
+
+You can manage the Redis service like any other system service:
+
+```bash
+sudo systemctl stop redis
+sudo systemctl start redis
+sudo systemctl restart redis
+```
+
+Redis also provides a command-line tool redis-cli for administration:
+
+```bash
+redis-cli
+
+# Ping Redis
+ping
+
+# You should see the following response:
+PONG
+```
+
+#### Daemonize and configure Celery
+
+**Create the Systemd unit**
+
+```bash
+sudo vim /etc/systemd/system/celery.service
+```
+
+```bash
+[Unit]
+Description=Celery
+After=network.target
+
+[Service]
+Type=simple
+# the specific user that our service will run as
+EnvironmentFile=/opt/geonode/.env
+User=geosolutions
+Group=geosolutions
+# another option for an even more restricted service is
+# DynamicUser=yes
+# see http://0pointer.net/blog/dynamic-users-with-systemd.html
+RuntimeDirectory=celery
+WorkingDirectory=/opt/geonode
+ExecStart=bash -c 'source /home/geosolutions/.virtualenvs/geonode/bin/activate && /opt/geonode/celery-cmd'
+ExecReload=/bin/kill -s HUP $MAINPID
+Restart=always
+TimeoutSec=900
+TimeoutStopSec=60
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+# Create the Logrotate config
+sudo tee /etc/logrotate.d/celery <<EOF
+"/var/log/celery.log" {
+    copytruncate
+    daily
+    rotate 5
+    delaycompress
+    missingok
+    notifempty
+    su root root
+}
+EOF
+```
+
+----
+
+#### Manage Celery
+
+Restart Celery 
+
+```bash
+# Restart Celery
+sudo systemctl restart celery
+
+# Kill old celery workers (if any)
+sudo pkill -f celery
+```
+
+Inspect the logs
+
+```bash
+# Check the celery service status
+sudo systemctl status celery
+
+# Check the celery logs
+sudo tail -F -n 300 /var/log/celery.log
+```
+
+----
+
+#### Troubleshooting
+
+Celery might crash during startup with this error:
+
+```bash
+looking for plugins in '/usr/lib64/sasl2', failed to open directory, error: No such file or directory
+```
+
+The workaround is a symlink at that path.
+
+```bash
+ln -sfn /usr/lib/x86_64-linux-gnu/sasl2/ /usr/lib64/sasl2
+```
+
+#### Install Memcached
+
+```bash
+sudo apt install memcached
+
+sudo systemctl start memcached
+sudo systemctl enable memcached
+
+sudo systemctl restart celery
+sudo systemctl status celery
+```

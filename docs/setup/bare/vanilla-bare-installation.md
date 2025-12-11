@@ -87,7 +87,7 @@ sudo apt install -y \
   postgresql-15-postgis-3-scripts
 ```
 
-We now must create two databases, `geonode` and `geonode_data`, belonging to the role geonode.
+We now must create two databases, `geonode` and `geonode_data`, belonging to the role `geonode`.
 
 !!! Warning
     This is our default configuration. You can use any database or role you need. The connection parameters must be correctly configured on settings, as we will see later in this section.
@@ -188,6 +188,26 @@ psql -U geonode geonode
 # Repeat the test with geonode_data DB
 psql -U postgres geonode_data
 psql -U geonode geonode_data
+```
+
+### Database migrations and data initialization
+
+After the creation of the databases, you need to apply database migrations:
+
+```bash
+cd /opt/geonode_projects/my_project
+# Run migrations for the my_geonode database
+python manage.py migrate
+# Run migrations for the my_geonode_data database
+python manage.py migrate --database=datastore
+```
+
+And then initialize the data
+
+```bash
+python manage.py loaddata /opt/geonode/geonode/people/fixtures/sample_admin.json
+python manage.py loaddata /opt/geonode/geonode/base/fixtures/default_oauth_apps.json
+python manage.py loaddata /opt/geonode/geonode/base/fixtures/initial_data.json
 ```
 
 ## 3. Install GeoServer
@@ -541,6 +561,27 @@ http://localhost:8080/geoserver/
  ```bash
  sudo less /opt/tomcat/latest/logs/catalina.out
  ```
+
+### Run GeoNode in development mode
+
+Now you have a completely working GeoNode instance installed which can be run by running the development server of Django.
+
+To start GeoNode in development mode run the following:
+
+```bash
+cd /opt/geonode
+python manage.py runserver
+```
+
+If you navigate to [http://localhost:8000](http://localhost:8000) you should see the `home` page of GeoNode.
+
+You can login as administrator by using the credentials below:
+```bash
+username: admin
+password: admin
+```
+
+Next sections are focused on setting GeoNode in a production environment.
 
 ## 4. Web Server
 

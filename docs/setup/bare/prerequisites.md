@@ -57,7 +57,7 @@ sudo apt install -y --allow-downgrades \
   software-properties-common \
   git unzip gcc zlib1g-dev libgeos-dev libproj-dev \
   sqlite3 spatialite-bin libsqlite3-mod-spatialite libsqlite3-dev \
-  wget
+  wget ufw
 
 # Install Openjdk
 sudo apt install openjdk-11-jdk-headless default-jdk-headless -y

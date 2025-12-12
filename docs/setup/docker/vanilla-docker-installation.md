@@ -5,7 +5,7 @@ In this section, we are going to list the steps needed to deploy a vanilla **Geo
 ### Clone the source code
 
 ```bash
-cd ~
+cd /opt
 git clone https://github.com/GeoNode/geonode.git
 ```
 
@@ -61,14 +61,14 @@ If you run the containers daemonized (with the `-d` option), you can either run 
 In order to follow the `startup and initialization logs`, you will need to run the following command from the repository folder
 
 ```bash
-cd ~/geonode
+cd /opt/geonode
 docker logs -f django4geonode
 ```
 
 Alternatively:
 
 ```bash
-cd ~/geonode
+cd /opt/geonode
 docker compose logs -f django
 ```
 You should be able to see several initialization messages. Once the container is up and running, you will see the following statements
@@ -133,7 +133,7 @@ This action allows you to stop all the containers and reset all the data with th
     The following command should be used with caution because it will delete all the data included in the instance
 
 ```bash
-cd ~/geonode
+cd /opt/geonode
 # stop containers and remove volumes
 docker-compose down -v
 ```

@@ -5,8 +5,8 @@ In this section, we are going to list the steps needed to deploy a GeoNode proje
 ### Clone the source code
 
 ```bash
-mkdir -p ~/geonode_projects
-cd ~/geonode_projects
+mkdir -p /opt/geonode_projects
+cd /opt/geonode_projects
 git clone https://github.com/GeoNode/geonode-project.git
 ```
 
@@ -33,7 +33,7 @@ source /path/to/.venvs/my_geonode_env/bin/activate
 # Install Django in the activated Python environment
 pip install Django==5.2.8
 
-cd ~/geonode_projects
+cd /opt/geonode_projects
 django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 ```
 

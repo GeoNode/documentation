@@ -38,6 +38,7 @@ This will clone the ``master`` branch. You will have to checkout the desidered b
 As an example, if you want to generate a project for GeoNode 4.4.3 run the following:
 
 ```bash
+cd geonode-project
 git checkout -b 4.4.3
 ```
 
@@ -50,9 +51,9 @@ This is the most important part for the GeoNode project installation. Before bui
 
 ```bash
 # Create and activate a Python environment called my_geonode_env
-mkdir path/to/.venvs
-python3 -m venv /path/to/.venvs/my_geonode_env
-source /path/to/.venvs/my_geonode_env/bin/activate
+mkdir -p ~/.virtualenvs
+python3 -m venv ~/.virtualenvs/geonode
+source ~/.virtualenvs/geonode/bin/activate
 
 # Install Django in the activated Python environment
 pip install Django==5.2.8
@@ -161,14 +162,14 @@ local   all             postgres                                trust
 # "local" is for Unix domain socket connections only
 local   all             all                                     md5
 # IPv4 local connections:
-host    all             all             127.0.0.1/32            md5
+host    all             all             127.0.0.1/32            scram-sha-256
 # IPv6 local connections:
-host    all             all             ::1/128                 md5
+host    all             all             ::1/128                 scram-sha-256
 # Allow replication connections from localhost, by a user with the
 # replication privilege.
 local   replication     all                                     peer
-host    replication     all             127.0.0.1/32            md5
-host    replication     all             ::1/128                 md5
+host    replication     all             127.0.0.1/32            scram-sha-256
+host    replication     all             ::1/128                 scram-sha-256
 ```
 
 !!! Warning 
@@ -200,10 +201,22 @@ After the creation of the databases, you need to apply database migrations:
 
 ```bash
 cd /opt/geonode_projects/my_project
+
+# Load the .env file that you have the database settings.
+# For instance, if you use the .env_dev file type:
+set -a && source .env_dev && set +a
 # Run migrations for the my_geonode database
 python manage.py migrate
 # Run migrations for the my_geonode_data database
 python manage.py migrate --database=datastore
+```
+
+And then initialize the data
+
+```bash
+python manage.py loaddata /opt/geonode_projects/my_geonode/src/fixtures/sample_admin.json
+python manage.py loaddata /opt/geonode_projects/my_geonode/src/fixtures/default_oauth_apps.json
+python manage.py loaddata /opt/geonode_projects/my_geonode/src/fixtures/initial_data.json
 ```
 
 ### Install GeoServer

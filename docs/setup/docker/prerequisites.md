@@ -49,18 +49,11 @@ Afterward, set up the working directory, and assign the appropriate permissions 
 For production environments, you can deploy GeoNode on `/opt` folder:
 
 ```bash
-sudo adduser geonode
-sudo usermod -a -G www-data geonode
+# For Vanilla GeoNode
+sudo mkdir -p /opt/geonode/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode/; sudo chmod -Rf 775 /opt/geonode/
 
-# in case of vanilla GeoNode
-sudo mkdir -p /opt/geonode/
-sudo chown -Rf geonode:www-data /opt/geonode/
-sudo chmod -Rf 775 /opt/geonode/
-
-# in case of GeoNode project
-sudo mkdir -p /opt/my_geonode
-sudo chown -Rf geonode:www-data /opt/my_geonode/
-sudo chmod -Rf 775 /opt/my_geonode/
+# For the GeoNode project
+sudo mkdir -p /opt/geonode_projects/; sudo usermod -a -G www-data $USER; sudo chown -Rf $USER:www-data /opt/geonode_projects; sudo chmod -Rf 775 /opt/geonode_projects
 ```
 
-However, GeoNode can be installed in a subdirectory within the home directory e.g `/home/<organization>/geonode`. This is the approach followed in this guide.
+This guide uses the `/opt` folder for the GeoNode installation, but you can use also the `/home` directory. 

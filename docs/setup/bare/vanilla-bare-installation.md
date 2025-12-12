@@ -157,18 +157,18 @@ local   all             postgres                                trust
 # "local" is for Unix domain socket connections only
 local   all             all                                     md5
 # IPv4 local connections:
-host    all             all             127.0.0.1/32            md5
+host    all             all             127.0.0.1/32            scram-sha-256
 # IPv6 local connections:
-host    all             all             ::1/128                 md5
+host    all             all             ::1/128                 scram-sha-256
 # Allow replication connections from localhost, by a user with the
 # replication privilege.
 local   replication     all                                     peer
-host    replication     all             127.0.0.1/32            md5
-host    replication     all             ::1/128                 md5
+host    replication     all             127.0.0.1/32            scram-sha-256
+host    replication     all             ::1/128                 scram-sha-256
 ```
 
 !!! Warning 
-    If your `PostgreSQL` database resides on a **separate/remote machine**, you'll have to **allow** remote access to the databases in the `/etc/postgresql/13/main/pg_hba.conf` to the `geonode` user and tell PostgreSQL to **accept** non-local connections in your `/etc/postgresql/13/main/postgresql.conf` file
+    If your `PostgreSQL` database resides on a **separate/remote machine**, you'll have to **allow** remote access to the databases in the `/etc/postgresql/15/main/pg_hba.conf` to the `geonode` user and tell PostgreSQL to **accept** non-local connections in your `/etc/postgresql/15/main/postgresql.conf` file
 
 Restart PostgreSQL to make the change effective.
 
@@ -195,10 +195,13 @@ psql -U geonode geonode_data
 After the creation of the databases, you need to apply database migrations:
 
 ```bash
-cd /opt/geonode_projects/my_project
-# Run migrations for the my_geonode database
+cd /opt/geonode
+# Load the .env file that you have the database settings.
+# For instance, if you use the .env_dev file type:
+set -a && source .env_dev && set +a
+# Run migrations for the geonode database
 python manage.py migrate
-# Run migrations for the my_geonode_data database
+# Run migrations for the geonode_data database
 python manage.py migrate --database=datastore
 ```
 
@@ -247,7 +250,7 @@ VERSION=9.0.106; wget https://archive.apache.org/dist/tomcat/tomcat-9/v${VERSION
 Once the download is complete, extract the tar file to the /opt/tomcat directory:
 
 ```bash
-sudo mkdir /opt/tomcat
+sudo mkdir -p /opt/tomcat
 sudo tar -xf apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/; rm apache-tomcat-${VERSION}.tar.gz
 ```
 
@@ -395,7 +398,7 @@ sudo chown -Rf $USER:www-data /opt/data/logs
 sudo chmod -Rf 775 /opt/data/logs
 
 # Download and extract the default GEOSERVER_DATA_DIR
-GS_VERSION=2.24.2
+GS_VERSION=2.27.3
 sudo wget "https://artifacts.geonode.org/geoserver/$GS_VERSION/geonode-geoserver-ext-web-app-data.zip" -O data-$GS_VERSION.zip
   
 sudo unzip data-$GS_VERSION.zip -d /opt/data/

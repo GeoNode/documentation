@@ -2,20 +2,16 @@
 
 Data management tools built into GeoNode allow integrated creation of resources eg datasets, documents, link to external documents, map visualizations and other configured geonode apps. Each resource in the system can be shared publicly or restricted to allow access to only specific users. Social features like user profiles and commenting and rating systems allow for the development of communities around each platform to facilitate the use, management, and quality control of the data the GeoNode instance contains.
 
-The following sections will explain more in depth what data can be managed in GeoNode and how to easily find that data.
+GeoNode lets you publish different kinds of resources, but they fall into two big families:
 
-ata Types
-GeoNode welcome page shows a variety of information about the current GeoNode instance.
-You can explore the existing data using many search tools and filters or through the links of the navigation bar at the top of the page.
-There are five main types of resources that GeoNode can manage:
+Source resources are created directly from data: you can upload a file (e.g., a vector/raster dataset, a PDF, an image) or connect a remote source (when supported). In GeoNode, these are:
 
- - Datasets
- - Maps
- - Documents
- - GeoStories
- - Dashboards
+ - **Datasets**: geospatial data that can be styled, visualized, queried, and reused across the platform.
+ - **Documents**: supporting files such as reports, manuals, images, and other attachments that provide context and additional information.
 
-Each resource type has its own menu and can be reached through Datasets, Maps, Documents, GeoStories and Dashboards buttons on the navigation bar.
+Derived resources are built from existing content already in GeoNode. Instead of uploading new data, you combine and present what you’ve already published as Datasets and Documents. These include **Maps**, **Dashboards**, and **GeoStories**, which are curated outputs that reference previously uploaded resources as their inputs.
+
+No matter which type you create, all resources share the same foundation: consistent metadata management (title, abstract, keywords, contacts, licensing, and more) and a common set of configuration options (permissions, visibility/sharing, and other resource settings). This keeps your workflow uniform—upload once, describe it well, and reuse it everywhere.
 
 #### Datasets
 Datasets are a primary component of GeoNode.

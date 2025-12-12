@@ -14,6 +14,8 @@ nav:
           - Prerequisites: setup/bare/prerequisites.md
           - Vanilla bare installation: setup/bare/vanilla-bare-installation.md
           - GeoNode project bare installation: setup/bare/project-bare-installation.md
+    - Further Enhancements:
+          - Further Production Enhancements: setup/further-enhancements/further-production-enhancements.md
   - User Guide:
     - User account: "user-guide/user_account.md"
     - Catalog Resources: "user-guide/catalog.md"

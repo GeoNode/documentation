@@ -68,14 +68,6 @@ django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,
 cd /opt/geonode_projects/my_geonode
 pip install -r src/requirements.txt --upgrade
 pip install -e src/ --upgrade
-
-# Install GDAL Utilities for Python
-pip install pygdal=="`gdal-config --version`.*"
-
-# Dev scripts
-mv .override_dev_env.sample src/.override_dev_env
-mv src/manage_dev.sh.sample src/manage_dev.sh
-mv src/paver_dev.sh.sample src/paver_dev.sh
 ```
 
 ### PostGIS database setup

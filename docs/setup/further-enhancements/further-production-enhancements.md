@@ -55,266 +55,222 @@ docker compose restart geoserver
 
 ### Global And Services Settings
 
- * Check the GeoServer Memory usage and status; ensure the ``GEOSERVER_DATA_DIR`` path points to the static volume
+- Check the GeoServer Memory usage and status; ensure the ``GEOSERVER_DATA_DIR`` path points to the static volume
 
-![GeoServer Status](img/production_geoserver_001.png){width=300}
-*GeoServer Status*
+![GeoServer Status](img/production_geoserver_001.png){ width=600 .center }
 
- * GeoServer :guilabel:`Global Settings`; make sure the ``Proxy Base Url`` points to the publlc URL and the ``LOGGING`` levels are set to :guilabel:`Production Mode`
+- GeoServer `Global Settings`; make sure the ``Proxy Base Url`` points to the publlc URL and the ``LOGGING`` levels are set to `Production Mode`
 
- .. figure:: img/production_geoserver_002.png
-    :width: 350px
-    :align: center
+![Global Settings](img/production_geoserver_002.png){ width=600 .center }
 
-    *Global Settings*
+- GeoServer `Image Processing Settings`; unless you are using some specific renderer or GeoServer plugin, use the following recommended options
 
- * GeoServer :guilabel:`Image Processing Settings`; unless you are using some specific renderer or GeoServer plugin, use the following recommended options
+!!! Note 
+    Further details at [https://docs.geoserver.org/stable/en/user/configuration/image_processing/index.html#image-processing](https://docs.geoserver.org/stable/en/user/configuration/image_processing/index.html#image-processing)
 
- .. note:: Further details at https://docs.geoserver.org/stable/en/user/configuration/image_processing/index.html#image-processing
+![Image Processing Settings](img/production_geoserver_003.png){ width=600 .center }
 
- .. figure:: img/production_geoserver_003.png
-    :width: 350px
-    :align: center
-
-    *Image Processing Settings*
-
- * Tune up :guilabel:`GeoServer Services Configuration`; :guilabel:`WCS`, :guilabel:`WFS`, :guilabel:`WMS` and :guilabel:`WPS`;
+- Tune up `GeoServer Services Configuration`; `WCS`, `WFS`, `WMS` and `WPS`;
 
     - **WCS**: Update the limits accordingly to your needs. Do not use very high values, this will set GeoServer prone to DoS Attacks.
 
-    .. figure:: img/production_geoserver_004.png
-        :width: 350px
-        :align: center
-
-        *WCS Resource Consuption Limits*
+    ![WCS Resource Consuption Limits](img/production_geoserver_004.png){ width=400 .center }
 
     - **WMS**: Specify here the SRS List you are going to use. Empty means all the ones supported by GeoServer, but be carefull since the ``GetCapabilities`` output will become huge.
 
-    .. figure:: img/production_geoserver_005.png
-        :width: 350px
-        :align: center
+    ![WMS Supported SRS List](img/production_geoserver_005.png){ width=400 .center }
 
-        *WMS Supported SRS List*
+    - **WMS**: `Raster Rendering Options` allows you to tune up the WMS output for better performance or quality. Best Performance: ``Nearest Neighbour`` - Best Quality: ``Bicubic``
 
-    - **WMS**: :guilabel:`Raster Rendering Options` allows you to tune up the WMS output for better performance or quality. Best Performance: ``Nearest Neighbour`` - Best Quality: ``Bicubic``
-
-    .. warning:: Raster Images should be always optimized before ingested into GeoNode. The general recommendation is to **never** upload a non-processed GeoTIFF image to GeoNode. 
-
-          Further details at:
-          
-          - https://geoserver.geo-solutions.it/edu/en/enterprise/raster.html
-          - https://geoserver.geo-solutions.it/edu/en/raster_data/advanced_gdal/index.html
-
-    .. figure:: img/production_geoserver_006.png
-        :width: 350px
-        :align: center
-
-        *WMS Raster Rendering Options*
+    ![WMS Raster Rendering Options](img/production_geoserver_006.png){ width=400 .center }
 
     - **WMS**: Update the limits accordingly to your needs. Do not use very high values, this will set GeoServer prone to DoS Attacks.
 
-    .. figure:: img/production_geoserver_007.png
-        :width: 350px
-        :align: center
+    ![WMS Resource Consuption Limits](img/production_geoserver_007.png){ width=400 .center }
 
-        *WMS Resource Consuption Limits*
-
-GeoWebCache DiskQuota On Postgis
-................................
+### GeoWebCache DiskQuota On Postgis
 
 By default GeoWebCache DiskQuota is disabled. That means that the layers cache might potentially grow up indefinitely.
 
 GeoWebCache DiskQuota should be always enabled on a production system. In the case it is enabled, this **must** be configured to make use of a DB engine like Postgis to store its indexes.
 
- - First of all ensure :guilabel:`Tile Caching` is enabled on all available layers
+ - First of all ensure `Tile Caching` is enabled on all available layers
 
- .. note:: GeoNode tipically does this automatically for you. It is worth to double check anyway.
+!!!Note 
+    GeoNode typically does this automatically for you. It is worth to double check anyway.
 
- .. figure:: img/production_geoserver_008.png
-     :width: 350px
-     :align: center
+![Tile Caching: Tiled Datasets](img/production_geoserver_008.png){ width=600 .center }
 
-     *Tile Caching: Tiled Datasets*
+- Configure `Disk Quota` by providing the connection string to the DB Docker Container as specified in the `.env` file
 
- - Configure :guilabel:`Disk Quota` by providing the connection string to the DB Docker Container as specified in the :guilabel:`.env` file
+![Disk Quota Configuration](img/production_geoserver_009.png){ width=600 .center }
 
- .. figure:: img/production_geoserver_009.png
-     :width: 350px
-     :align: center
 
-     *Tile Caching: Disk Quota Configuration*
+### GeoFence Security Rules On Postgis
 
-GeoFence Security Rules On Postgis
-..................................
-
-By default GeoFence stores the security rules on an :guilabel:`H2` db.
+By default GeoFence stores the security rules on an `H2` db.
 
 On a production system, this is not really recommended. You will need to update the GeoServer Docker container in order to enable GeoFence storing the rules into the DB Docker Container instead.
 
 In order to do that, follow the procedure below:
 
-.. code-block:: shell
+```bash
+# Enter the GeoServer Docker Container
+docker compose exec geoserver bash
 
-    # Enter the GeoServer Docker Container
-    docker-compose exec geoserver bash
+# Install a suitable editor
+apt update
+apt install nano
 
-    # Install a suitable editor
-    apt update
-    apt install nano
+# Edit the GeoFence DataStore .properties file
+nano /geoserver_data/data/geofence/geofence-datasource-ovr.properties
+```
 
-    # Edit the GeoFence DataStore .properties file
-    nano /geoserver_data/data/geofence/geofence-datasource-ovr.properties
+!!! Note 
+    Make sure to provide the same connection parameters specified in the `.env` file
 
-.. note:: Make sure to provide the same connection parameters specified in the :guilabel:`.env` file
+```bash
+geofenceVendorAdapter.databasePlatform=org.hibernate.spatial.dialect.postgis.PostgisDialect
+geofenceDataSource.driverClassName=org.postgresql.Driver
+geofenceDataSource.url=jdbc:postgresql://db:5432/my_geonode_data
+geofenceDataSource.username=my_geonode_data
+geofenceDataSource.password=********
+geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
 
-.. code-block:: ini
+geofenceDataSource.testOnBorrow=true
+geofenceDataSource.validationQuery=SELECT 1
+geofenceEntityManagerFactory.jpaPropertyMap[hibernate.testOnBorrow]=true
+geofenceEntityManagerFactory.jpaPropertyMap[hibernate.validationQuery]=SELECT 1
 
-    geofenceVendorAdapter.databasePlatform=org.hibernate.spatial.dialect.postgis.PostgisDialect
-    geofenceDataSource.driverClassName=org.postgresql.Driver
-    geofenceDataSource.url=jdbc:postgresql://db:5432/my_geonode_data
-    geofenceDataSource.username=my_geonode_data
-    geofenceDataSource.password=********
-    geofenceEntityManagerFactory.jpaPropertyMap[hibernate.default_schema]=public
+geofenceDataSource.removeAbandoned=true
+geofenceDataSource.removeAbandonedTimeout=60
+geofenceDataSource.connectionProperties=ApplicationName=GeoFence;
+```
 
-    geofenceDataSource.testOnBorrow=true
-    geofenceDataSource.validationQuery=SELECT 1
-    geofenceEntityManagerFactory.jpaPropertyMap[hibernate.testOnBorrow]=true
-    geofenceEntityManagerFactory.jpaPropertyMap[hibernate.validationQuery]=SELECT 1
+```bash
+# Remove legacy JARs (optional cleanup)
+rm -f /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/postgis-jdbc-*.jar
+rm -f /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/hibernate-spatial-*.jar
+rm -f /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/hibernate-spatial-h2-geodb-*.jar
 
-    geofenceDataSource.removeAbandoned=true
-    geofenceDataSource.removeAbandonedTimeout=60
-    geofenceDataSource.connectionProperties=ApplicationName=GeoFence;
+# Download current PostgreSQL JDBC driver
+wget https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar -O postgresql.jar
 
-.. code-block:: shell
-
-    # Update the GeoServer WEB-INF/lib JARs accordingly
-    wget --no-check-certificate "https://repo1.maven.org/maven2/org/postgis/postgis-jdbc/1.3.3/postgis-jdbc-1.3.3.jar" -O postgis-jdbc-1.3.3.jar && \
-    wget --no-check-certificate "https://maven.geo-solutions.it/org/hibernatespatial/hibernate-spatial-postgis/1.1.3.2/hibernate-spatial-postgis-1.1.3.2.jar" -O hibernate-spatial-postgis-1.1.3.2.jar && \
-    rm /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/hibernate-spatial-h2-geodb-1.1.3.1.jar && \
-    mv hibernate-spatial-postgis-1.1.3.2.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/ && \
-    mv postgis-jdbc-1.3.3.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/
+# Move driver to GeoServer WEB-INF/lib
+mv postgresql.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/
+```
 
 The container is ready to be restarted now.
 
-.. warning:: Remember to do a **soft restart** otherwise the WEB-INF/lib JARs will be reset to the original state
+!!! Warning 
+    Remember to do a **soft restart** otherwise the `WEB-INF/lib` JARs will be reset to the original state
 
-.. code-block:: shell
+```bash
+# Exit the GeoServer container
+exit
 
-    # Exit the GeoServer container
-    exit
-
-    # Soft Restart GeoServer Docker Container
-    docker-compose restart geoserver
+# Soft Restart GeoServer Docker Container
+docker compose restart geoserver
+```
 
 **IMPORTANT**: The first time you perform this procedure, GeoFence won't be able to retrieve the old security rules anymore.
 
-You will need to :ref:`fixup_geonode_layers_permissions` in order to regenerate the security rules.
+You will need to [Fixup GeoNode Datasets Permissions](#fixup-geonode-datasets-permissions) in order to regenerate the security rules.
 
-.. _fixup_geonode_layers_permissions:
 
-Fixup GeoNode Datasets Permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Fixup GeoNode Datasets Permissions
 
-The list of the GeoFence Security Rules is available from the :guilabel:`GeoFence Data Rules` section.
+The list of the GeoFence Security Rules is available from `GeoFence Data Rules` section.
 
 Always double check the list is accessible and the data rules are there. If empty, no layer will be accessible by standard users other than admin.
 
-.. figure:: img/production_geoserver_010.png
-    :width: 350px
-    :align: center
-
-    *GeoFence Data Rules*
+![GeoFence Data Rules](img/production_geoserver_010.png){ width=600 .center }
 
 In order to re-sync the GeoFence security rules, follow the procedure below:
 
-.. code-block:: shell
+```bash
+# Enter the GeoNode Docker Container
+docker compose exec django bash
 
-    # Enter the GeoNode Docker Container
-    docker-compose exec django bash
+# Run the `sync_geonode_datasets` management command
+./manage.sh sync_geonode_datasets --updatepermissions
+```
 
-    # Run the `sync_geonode_datasets` management command
-    ./manage.sh sync_geonode_datasets --updatepermissions
-
-Regenerate GeoNode Datasets Thumbnails
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Regenerate GeoNode Datasets Thumbnails
 
 The following procedure allows you to *batch* regenerate all Datasets Thumbnails:
 
-.. code-block:: shell
+```bash
+# Enter the GeoNode Docker Container
+docker compose exec django bash
 
-    # Enter the GeoNode Docker Container
-    docker-compose exec django bash
+# Run the `sync_geonode_datasets` management command
+./manage.sh sync_geonode_datasets --updatethumbnails
+```
 
-    # Run the `sync_geonode_datasets` management command
-    ./manage.sh sync_geonode_datasets --updatethumbnails
-
-Regenerate GeoNode Datasets BBOXES
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Regenerate GeoNode Datasets BBOXES
 
 The following procedure allows you to *batch* regenerate all Datasets BBOXES:
 
-.. code-block:: shell
+```bash
+# Enter the GeoNode Docker Container
+docker compose exec django bash
 
-    # Enter the GeoNode Docker Container
-    docker-compose exec django bash
+# Run the `sync_geonode_datasets` management command
+./manage.sh sync_geonode_datasets --updatebbox
+```
 
-    # Run the `sync_geonode_datasets` management command
-    ./manage.sh sync_geonode_datasets --updatebbox
-
-Fixup GeoNode Datasets Metadata And Download Links
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Fixup GeoNode Datasets Metadata And Download Links
 
 The following procedure allows you to fix-up broken or incorrect Metadata Links:
 
-.. code-block:: shell
+```bash
+# Enter the GeoNode Docker Container
+docker compose exec django bash
 
-    # Enter the GeoNode Docker Container
-    docker-compose exec django bash
-
-    # Run the `set_all_datasets_metadata` management command
-    ./manage.sh set_all_datasets_metadata -d
+# Run the `set_all_datasets_metadata` management command
+./manage.sh set_all_datasets_metadata -d
+```
 
 It is also possible to *force* purging the links before regenerating:
 
-.. code-block:: shell
+```bash
+# Enter the GeoNode Docker Container
+docker compose exec django bash
 
-    # Enter the GeoNode Docker Container
-    docker-compose exec django bash
+# Run the `set_all_datasets_metadata` management command
+./manage.sh set_all_datasets_metadata -d --prune
+```
 
-    # Run the `set_all_datasets_metadata` management command
-    ./manage.sh set_all_datasets_metadata -d --prune
-
-Migrate GeoNode To A New Hostname
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Migrate GeoNode To A New Hostname
 
 In the case you will need to move your instance to another domain, as an example from ``https://my_geonode.geonode.org/`` to ``https://prod_geonode.geonode.org/``, follow the procedure below:
 
-- Update the :guilabel:`.env` file by specifyig the new name accordingly.
+- Update the `.env` file by specifyig the new name accordingly.
 
 - Restart the GeoNode Docker Container.
 
-    .. code:: shell
-
-        docker-compose up -d geonode
+    ```bash
+    docker compose up -d geonode
+    ```
 
 - Run the following management commands from inside the GeoNode Docker Container.
 
-    .. code:: shell
+    ```bash
+    # Enter the GeoNode Docker Container
+    docker compose exec django bash
 
-        # Enter the GeoNode Docker Container
-        docker-compose exec django bash
+    # Run the `migrate_baseurl` management command
+    ./manage.sh migrate_baseurl --source-address=my_geonode.geonode.org --target-address=prod_geonode.geonode.org
 
-        # Run the `migrate_baseurl` management command
-        ./manage.sh migrate_baseurl --source-address=my_geonode.geonode.org --target-address=prod_geonode.geonode.org
-
-        # Run the `set_all_datasets_metadata` management command
-        ./manage.sh set_all_datasets_metadata -d
+    # Run the `set_all_datasets_metadata` management command
+    ./manage.sh set_all_datasets_metadata -d
+    ```
 
 
-Add Huge Or DB Datasets To Your Instance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Add Huge Or DB Datasets To Your Instance
 
-Uploaing huge datasets, or DB tables, to GeoNode from the :guilabel:`Web Upload Interface` is not really possible sometimes.
+Uploaing huge datasets, or DB tables, to GeoNode from the `Web Upload Interface` is not really possible sometimes.
 
 The suggested procedure in such cases is the following one:
 
@@ -324,10 +280,10 @@ The suggested procedure in such cases is the following one:
 
 - Once the dataset is correctly configured on GeoServer, run the following management command from inside the GeoNode Docker Container
 
-    .. code:: shell
+    ```bash
+    # Enter the GeoNode Docker Container
+    docker compose exec django bash
 
-        # Enter the GeoNode Docker Container
-        docker-compose exec django bash
-
-        # Run the `updatelayers` management command
-        ./manage.sh updatelayers -w <workspace_name> -f <layer_name>
+    # Run the `updatelayers` management command
+    ./manage.sh updatelayers -w <workspace_name> -f <layer_name>
+    ```

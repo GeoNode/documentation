@@ -35,5 +35,18 @@ While then, through the :guilabel:`Add Attribute` button, the user can add new a
 
     *New Dataset creation from scratch*
 
+Defining attributes contraints
+^^^^^^^^^^^^^^^^^
+
+For Numeric and Textual attributes two contraints can be defined. These will contraint the admitted values for the attribute, either during a :ref:`dataset-update` operation or a :ref:`dataset-editing` session.
+
+Two types of contraints can be selected from the dropdown under the *Restrictions* column:
+
+* **Options**: For numeric and string values a list of controlled values (domain) can be defined.
+.. figure:: img/create_dataset_contraints_options.png
+     :align: center
+* **Range**: For numeric values a range of values can be defined. This will contraint the admitted values for the attribute, either during a *Dataet Update* operation or a *Data Editing* session.
+.. figure:: img/create_dataset_contraints_range.png
+     :align: center
 
 Once the form has been filled out, click on :guilabel:`Create new dataset`. You will be redirected to the *Dataset Page* (see :ref:`dataset-info`). Now your Dataset is created but is still empty, no features have been added yet. See the :ref:`dataset-editing` section to learn how to add new features.

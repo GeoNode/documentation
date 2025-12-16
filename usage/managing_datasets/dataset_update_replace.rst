@@ -36,6 +36,8 @@ Behavior and Limitations:
 * All existing features or raster data are permanently removed.
 * The operation cannot be undone and should be used with caution.
 
+.. _dataset-update:
+
 Dataset Update (Vector)
 ------------------------
 

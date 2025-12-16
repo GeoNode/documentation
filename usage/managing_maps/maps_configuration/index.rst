@@ -40,7 +40,7 @@ Search Bar
 ----------
 
 | The *Search Bar* of the map viewer allows you to find point of interests (POIs), streets or locations by name.
-| Lets type the name of some place then select the first record.
+| Lets type the keyword airport (since one of the added layers is related to airports) and select one of the records.
 
 .. figure:: img/search_bar_typing_name.png
      :align: center

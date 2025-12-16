@@ -3,8 +3,7 @@
 Share Options
 =============
 
-In GeoNode the share options management system is indeed more complex.
-Administrators can choose who can do what for each map.
+In Share options, Administrators can choose who can do what for each map.
 Users can manage only the maps they own or the maps which they are authorize to manage.
 
 By default only owners can edit and manage maps, and anyone can view them.

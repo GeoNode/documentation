@@ -3,7 +3,7 @@
 Share Options
 =============
 
-In order to modify the Dataset *Share options* settings, on the detail page of the dataset click the :guilabel:`Share` link in the :guilabel:`Resource` menu. By default only owners can edit and manage datasets, anyone can view them.
+In order to modify the Dataset *Share options* settings, on the detail page of the dataset click the :guilabel:`Share` tab in the properties table. By default only owners can edit and manage datasets, anyone can view them.
 
 .. figure:: img/change_dataset_permissions.png
     :align: center
@@ -26,4 +26,4 @@ You can set the following share options:
 
 .. warning:: When assigning options to a group, all the group members will have those options. Be careful in case of editing them.
 
-Click on :guilabel:`Save` link in the menu to save these settings.
+To save the new share settings, click on :guilabel:`Resource` tab (from the navigation bar above the map) and then click on :guilabel:`Save`.

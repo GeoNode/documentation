@@ -32,9 +32,6 @@ Try to set some filter and see how the resulting data list changes accordingly. 
 
 Data can be ordered by Most recent, Less recent, Name and Popularity.
 
-.. figure:: img/ordering_link.png
-     :align: center
-     *Ordering Link*
 
 .. figure:: img/ordering_data.png
      :align: center

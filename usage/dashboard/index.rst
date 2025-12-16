@@ -21,9 +21,9 @@ To build a new Dashboard go to :guilabel:`Add Resource` option on the *All Resou
 
       *Create dashboard from Dashboards page*
 
-Now you landed on the Dashboard edition page that is composed of the following sections:
+Now you landed on the Dashboard edition page that you can start to create a dashboard:
 
-.. figure:: https://mapstore.readthedocs.io/en/latest/user-guide/img/exploring-dashboards/dashboard-1.jpg
+.. figure:: img/dashboard_1.png
     :align: center
 
     *New Dashboard Apps option*

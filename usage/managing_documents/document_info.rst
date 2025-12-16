@@ -3,7 +3,7 @@
 Document Information
 ====================
 
-From the *Documents Search Page* (see :ref:`finding-data`) you can select the document you are interested in and click on its name to see an overview about it.
+From the *Documents Search Page* (see :ref:`finding-data`) click on the **open properties** button on the document you are interested in to see an overview of it.
 
 .. figure:: img/document_overview.png
     :align: center
@@ -33,36 +33,42 @@ By clicking on the copy icons you have a copy of the current *Bounding Box* or t
 
 .. warning:: From the :ref:`document-info` the *Location* tab is in read only mode, to edit it see the :ref:`document-editing`
 
-* The *Linked Resources* tab shows the resources, that can be *Datasets*, *Maps*, *GeoStories* and *Dashboards*, linked to the document.
+* The *Assets* tab presents the current document's download link. Moreover, the user is able to add additional assets that are related to this document.
 
-.. figure:: img/document_linked_resources.png
+.. figure:: img/document_assets.png
     :align: center
 
-    *Document Linked Resources tab*
+    *Document Assets tab*
 
-.. note:: When a resource is `linked from` the document the link is under the *Linked by* list while when a resource is `linked to` the document the link is under the *Used by* list
+* The *Share* tab allows to the owner of the document to edit its permissions.
 
-.. warning:: From the :ref:`document_metadata` it is possible edit the document *Linked Resources*
-
-From the right toolbar on the **Info** panel it is possible:
-
-.. figure:: img/document_info_toolbar.png
+.. figure:: img/document_share.png
     :align: center
 
-    *Document Info toolbar*
+    *Document Share tab*
 
-* Add document in your *Favorites* (see :ref:`editing-profile`), clicking on star icon.
+* The *Settings* tab allows to the owner of the document to define a group, the publishing status, and more options (e.g Approved).
 
-* Directly *Download* the document oh `ShapeFile` format
+.. figure:: img/document_settings.png
+    :align: center
 
-* *Share* the document url
+    *Document Settings tab*
 
-* Change the document *Title* by clicking on it
+From the upper of the document's properties table, it is possible:
 
-You can access the document details page by clicking on *View document* in the overview panel.
-That page looks like the one shown in the picture below.
+.. figure:: img/document_thumbnail.png
+    :align: center
 
-.. figure:: img/document_detail.png
+    *Document thumbnail's toolbar*
+
+* Upload / set a new thumbnail for the document or remove the current thumbnail (upper left buttons).
+
+* Directly *Download* the document or copy the resource's URL (down right buttons).
+
+
+You can access the document details page by clicking the document itself from the document list or the *View document* in the overview panel.
+
+.. figure:: img/document_view.png
     :align: center
 
     *Document page*
@@ -74,12 +80,6 @@ Exploring the Document detail menu Sections
 
 As soon as a document is opened, the **Info** panel is shown. It reports the document metadata such as its title, abstract, date of publication etc. The metadata also indicates the user who is responsible for uploading and managing this content, as well as the group to which it is linked.
 
-.. figure:: img/document_info.png
-    :align: center
-    *Document Info*
-
-
-
 Selecting *View Metadata* from the :guilabel:`View` button it is possible to visualize the metadata of the document
 
 .. figure:: img/view_metadata.png
@@ -87,14 +87,14 @@ Selecting *View Metadata* from the :guilabel:`View` button it is possible to vis
     
     *Document Metadata*
 
-Under the :guilabel:`Resource` button, it is possible to select the *Share* option to provides the document link to share.
+By selecting the :guilabel:`Share` tab, the corresponding :guilabel:`Share` tab from the properties table is opened.
 
 .. figure:: img/document_sharing.png
     :align: center
 
     *Document Sharing*
 
-If you want to download the document, click on the :guilabel:`Download` button and the document will be downloaded automatically.
+If you want to download the document, click on the :guilabel:`Download` tab and then from the dropdown menu click :guilabel:`Download`.
 
 .. figure:: img/document_download.png
     :align: center

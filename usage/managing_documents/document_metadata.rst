@@ -22,7 +22,7 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
   * *Category* in which the document belongs;
   * *Group* to which the document is linked.
 
-  .. figure:: img/document_basic_metadata.png
+  .. figure:: img/document_metadata_1.png
       :align: center
 
       *Document Basic Metadata*
@@ -36,7 +36,7 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
   * *Data Quality statement* (general explanation of the data producer's knowledge about the lineage of a dataset);
   * Potential *Restrictions* to sharing the document should be provided in the Restrictions box.
 
-  .. figure:: img/document_location_licenses.png
+  .. figure:: img/document_metadata_2.png
       :align: center
 
       *Document Location and Licenses*
@@ -54,7 +54,7 @@ Editing a document's metadata is done in three steps (*Basic Metadata*, *Locatio
 
   *Responsible Parties*, *Owner* and *Share options* are listed on the right side of the page, you can edit them.
 
-  .. figure:: img/document_optional_metadata.png
+  .. figure:: img/document_metadata_3.png
       :align: center
 
       *Document Optional Metadata*

@@ -8,18 +8,27 @@ An interesting tool that GeoNode makes available to you is the *Create dataset*.
 
      *Create dataset link*
 
+The corresponding form where the users are able to create a dataset from scratch is presented below:
+
+.. figure:: img/create_dataset_form.png
+     :align: center
+
+     *Form for creating a datset
+
 In order to create the new Dataset you have to fill out the required fields:
 
-* *Name*
-* *Title*
+* *Dataset title*
 * *Geometry type*
+* *Attributes* (name, geometry type, etc)
+
+At first, the user has to define a dataset title and the geometry type:
 
   .. figure:: img/geometry_types.png
       :align: center
 
       *Geometry types*
 
-Usually the datasets features should have some *Attributes* that enrich the amount of information associated with each of them. Through the :guilabel:`Add Attribute` button you can add new attributes.
+While then, through the :guilabel:`Add Attribute` button, the user can add new attributes. Usually the datasets features should have some *Attributes* that enrich the amount of information associated with each of them.
 
 .. figure:: img/new_dataset_from_scratch.png
     :align: center
@@ -27,4 +36,4 @@ Usually the datasets features should have some *Attributes* that enrich the amou
     *New Dataset creation from scratch*
 
 
-Once the form has been filled out, click on :guilabel:`Create`. You will be redirected to the *Dataset Page* (see :ref:`dataset-info`). Now your Dataset is created but is still empty, no features have been added yet. See the :ref:`dataset-editing` section to learn how to add new features.
+Once the form has been filled out, click on :guilabel:`Create new dataset`. You will be redirected to the *Dataset Page* (see :ref:`dataset-info`). Now your Dataset is created but is still empty, no features have been added yet. See the :ref:`dataset-editing` section to learn how to add new features.

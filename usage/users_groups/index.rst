@@ -20,10 +20,9 @@ A message will confirm that invitations have been correctly sent.
 
 .. note:: You can invite more than one user at the same time by typing the email addresses inline with a semi-colon separator.
 
-The next sections will show you how to view information about other users and how to contact them.
+The next section will show you how to view information about other users.
 
 .. toctree::
     :maxdepth: 1
 
     users_info
-    contacting_users

@@ -16,4 +16,5 @@ Managing Datasets
     dataset_editing
     dataset_metadata
     dataset_styling
+    dataset_update_replace
     dataset_advanced

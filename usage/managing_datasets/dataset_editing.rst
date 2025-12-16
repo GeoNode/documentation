@@ -1,24 +1,9 @@
 .. _dataset-editing:
 
-Dataset Editing
+Dataset Editing (Vectors)
 ===============
 
-The :guilabel:`Edit` link in the menu of the *Dataset Page*  opens a list of options like ones shown in the picture below.
-
-.. figure:: img/dataset_editing_link.png
-     :align: center
-
-     *Dataset Editing Link*
-
-In that options list, you can see three options listed as:
-
-1. *Edit Data* 
-2. *Edit Style* 
-3. *Map layer settings
-4. *Edit Metadata*
-5. *Upload Metadata*
-6. *Update Dataset*
-
+The data content of vector datasets can be edited from the UI by clicking the :guilabel:`Edit Data` link from the :guilabel:`Edit` options on the *Dataset Page*.
 
 In this section you will learn how to edit a *Dataset*, and its data. See :ref:`dataset-metadata` to learn how to explore the dataset *Metadata*, how to upload and edit them. The *Styles* will be covered in a dedicated section, see :ref:`dataset-style`.
 

@@ -373,4 +373,54 @@ You may want to provide your own certificates to GeoNode
     nginx -s reload
     exit
 
+Fourth Step: Secure your production deployment
+==============================================
+
+Once your GeoNode instance is running in production, it's crucial to secure it by changing default passwords and OAuth2 keys.
+
+Change Admin Passwords
+^^^^^^^^^^^^^^^^^^^^^^^
+
+1. **GeoNode Admin Password**: Change the default admin password by logging into your GeoNode instance at ``https://my_geonode.geonode.org/admin`` and updating the admin user password.
+
+2. **GeoServer Admin Password**: Update the GeoServer admin password by:
+
+   - Logging into GeoServer at ``https://my_geonode.geonode.org/geoserver``
+   - Going to :guilabel:`Security` > :guilabel:`Users, Groups, and Roles` > :guilabel:`Users/Groups`
+   - Changing the admin user password
+
+Update OAuth2 Keys
+^^^^^^^^^^^^^^^^^^
+
+Generate new OAuth2 client credentials for enhanced security:
+
+1. **Generate new OAuth2 credentials** in your ``.env`` file:
+
+   .. code-block:: shell
+
+       OAUTH2_CLIENT_ID=your_new_client_id
+       OAUTH2_CLIENT_SECRET=your_new_client_secret
+
+2. **Update GeoNode OAuth2 configuration**:
+
+   - Log into your GeoNode admin panel at ``https://my_geonode.geonode.org/admin``
+   - Navigate to :guilabel:`Django Oauth Toolkit` > :guilabel:`Applications`
+   - Find and edit the existing GeoServer application
+   - Update the :guilabel:`Client id` and :guilabel:`Client secret` to match your new ``.env`` values
+   - Save the changes
+
+3. **Update GeoServer OAuth2 configuration**:
+
+   - Log into GeoServer at ``https://my_geonode.geonode.org/geoserver``
+   - Go to :guilabel:`Security` > :guilabel:`Authentication` > :guilabel:`Authentication Filters`
+   - Edit the :guilabel:`geonode-oauth2` filter
+   - Update the :guilabel:`Client ID` and :guilabel:`Client Secret` to match your new ``.env`` values
+   - Save the changes
+
+4. **Restart the containers**
+
+   .. code-block:: shell
+
+       docker-compose restart django
+       docker-compose restart geoserver
 

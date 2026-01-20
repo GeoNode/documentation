@@ -1814,6 +1814,22 @@ OPENGRAPH_ENABLED
 
     A boolean that specifies whether Open Graph is enabled.  Open Graph is used by Facebook and Slack.
 
+OWNER_CAN_SET_PUBLIC_PERMISSIONS
+----------------------------
+
+    | Default: ``True``
+    | Env: ``OWNER_CAN_SET_PUBLIC_PERMISSIONS``
+
+    If set to True, resource owners will be able to set public permissions on their resources.
+
+OWNER_CAN_SET_REGISTERED_MEMBERS_PERMISSIONS 
+--------------------------------------------
+
+    | Default: ``True``
+    | Env: ``OWNER_CAN_SET_REGISTERED_MEMBERS_PERMISSIONS``
+
+    If set to True, resource owners will be able to set registered members permissions on their resources.
+
 P
 =
 

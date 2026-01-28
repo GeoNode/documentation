@@ -188,8 +188,8 @@ Restrictions can be configured in two ways:
 
 From GeoServer version 2.27.3, it is possible to define [validation constraints](https://docs.geoserver.org/main/en/user/data/webadmin/layers.html#feature-type-details-vector) on vector feature types, including:
 
-- **Integer type** has restriction options of **range** and **option**
-- **String type** has the **option** restriction
+- Allowed value ranges for numeric fields
+- Enumerated lists of accepted values for numeric or textual fields
 
 Each incoming feature is validated against these constraints during the upsert process.
 
@@ -201,8 +201,8 @@ You can set the restriction for each field during the empty dataset creation pro
 
 You can add attributes along with optional restrictions, which include:
 
-- **Integer type** has restriction options of **range** and **option**
-- **String type** has the **option** restriction
+- Allowed value ranges for numeric fields
+- Enumerated lists of accepted values for numeric or textual fields
 
 
 #### Validation During Upsert

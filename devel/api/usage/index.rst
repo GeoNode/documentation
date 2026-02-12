@@ -214,7 +214,7 @@ Catalog resources can also be created for the following remote sources:
     - ``type``: "cog"
 - WMS
     - ``title``: Title for the resource
-    - ``url``: URL of the remote WMS GetCapabilities request
+    - ``url``: URL of the remote WMS GetCapabilities request. Notice that, in case the URL matches a registered Remote Service, the resource is automatically connected to the service (see :ref:`remote-services`).
     - ``type``: "wms"
     - ``identifier``: The name of the layer to be published in geoserver, in case of a WMS service this is mandatory and should be in format workspace:layername
     - ``parse_remote_metadata``: if set to true, GeoNode will try to parse the metadata of the remote resource and set it on the GeoNode resource. This is only supported for WMS services at the moment.

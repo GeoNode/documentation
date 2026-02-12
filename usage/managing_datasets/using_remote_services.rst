@@ -1,3 +1,5 @@
+.. _remote-services:
+
 Using Remote Services
 =====================
 

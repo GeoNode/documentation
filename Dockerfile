@@ -23,7 +23,6 @@ RUN pip install --no-cache-dir \
     m2r2==0.3.2 \
     mistune==0.8.4 \
     sphinxcontrib-httpdomain==1.7.0 \
-    sphinxcontrib-openapi==0.7.0 \
     docutils==0.16 \
     sphinxcontrib-bibtex \
     sphinxcontrib-serializinghtml \

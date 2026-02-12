@@ -31,7 +31,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "geonode.settings")
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinxcontrib.openapi'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

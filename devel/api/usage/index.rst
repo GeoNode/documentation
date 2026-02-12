@@ -171,7 +171,10 @@ Resource Upload
 The API supports the upload of datasets and documents.
 
 Datasets
-""""""""""
+--------
+
+Local files
+^^^^^^^^^^^
 The dataset upload form accepts file formats of ESRI Shapefile, GeoTIFF, Comma Separated Value (CSV), Zip Archive, XML Metadata File, and Styled Layer Descriptor (SLD).
 For a successful upload, the form requires base_file, dbf_file, shx_file, and prj_file. The xml_file, and Sld_file are optional.
 
@@ -185,6 +188,9 @@ Example:
     import requests
     
     url = "https://master.demo.geonode.org/api/v2/uploads/upload"
+    payload={
+        "action": "upload"
+    }
     files= [
     ('sld_file',('BoulderCityLimits.sld',open('/home/myuser/BoulderCityLimits.sld','rb'),'application/octet-stream')),   ('base_file',('BoulderCityLimits.shp',open('/home/BoulderCityLimits.shp','rb'),'application/octet-stream')),  ('dbf_file',('BoulderCityLimits.dbf',open('/home/BoulderCityLimits.dbf','rb'),'application/octet-stream')),  ('shx_file',('BoulderCityLimits.shx',open('/home/BoulderCityLimits.shx','rb'),'application/octet-stream')),
     ('prj_file',('BoulderCityLimits.prj',open('/home/myuser/BoulderCityLimits.prj','rb'),'application/octet-stream))
@@ -192,10 +198,49 @@ Example:
     headers = {
     'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
     }
-    response = requests.request("POST", url, headers=headers, files=files)
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+Remote sources
+^^^^^^^^^^^^^^
+Catalog resources can also be created for the following remote sources:
+
+- 3D Tiles
+   - ``title``: Title for the resource
+   - ``url``: URL of the remote tileset.json file
+   - ``type``: "3dtiles"
+- COG Geotiff
+    - ``title``: Title for the resource
+    - ``url``: URL of the remote COG file
+    - ``type``: "cog"
+- WMS
+    - ``title``: Title for the resource
+    - ``url``: URL of the remote WMS GetCapabilities request
+    - ``type``: "wms"
+    - ``identifier``: The name of the layer to be published in geoserver, in case of a WMS service this is mandatory and should be in format workspace:layername
+    - ``parse_remote_metadata``: if set to true, GeoNode will try to parse the metadata of the remote resource and set it on the GeoNode resource. This is only supported for WMS services at the moment.
+
+Example for a WMS resource:
+
+.. code-block:: python
+
+    import requests
+    
+    url = "https://master.demo.geonode.org/api/v2/uploads/upload"
+    payload= {
+        "title": "Remote Title",
+        "url": "http://geoserver:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+        "type": "wms",
+        "identifier": "geonode:boxes_with_date",
+        "parse_remote_metadata": true,
+        "action": "upload"
+    }
+    headers = {
+    'Authorization': 'Basic dXNlcjpwYXNzd29yZA=='
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
 
 Documents
-""""""""""
+---------
 Documents can be uploaded as form data.
 
 - API: ``POST /api/v2/documents``

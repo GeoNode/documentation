@@ -176,15 +176,50 @@ Follows some general rule to successfully perform the upsert
 7) Is not possible to upsert a dataset with a different CRS
 
 
-### Common errors
+### Upsert Validation
 
-In case of failing, the procedure always return a general feedback to the user
+The upsert validation process first performs the validation checks described in the **Upsert Limitations** section. If those limitations are satisfied, it then validates each feature by checking the restriction configured to determine if each feature is valid.
 
-![alt text](img/general_error.png)
+#### Setting Restrictions
 
-The upsert can also return errors on feature level
+Restrictions can be configured in two ways:
 
-![alt text](img/feature_error.png)
+##### 1. Setting Restriction on GeoServer
+
+From GeoServer version 2.27.3, it is possible to define [validation constraints](https://docs.geoserver.org/main/en/user/data/webadmin/layers.html#feature-type-details-vector) on vector feature types, including:
+
+- Allowed value ranges for numeric fields
+- Enumerated lists of accepted values for numeric or textual fields
+
+Each incoming feature is validated against these constraints during the upsert process.
+
+##### 2. While Creating an Empty Dataset
+
+You can set the restriction for each field during the empty dataset creation process.
+
+![Setting restrictions during dataset creation](img/empty_dataset.png)
+
+You can add attributes along with optional restrictions, which include:
+
+- Allowed value ranges for numeric fields
+- Enumerated lists of accepted values for numeric or textual fields
+
+
+#### Validation During Upsert
+
+During the upsert operation, each feature is validated against its attribute restrictions. If a feature does not satisfy the restriction, the operation will fail and an error will be recorded in a CSV.
+
+**Error reporting**
+
+If validation fails for one or more features, the upsert will surface a general error message and generate a CSV file with detailed, per‑feature errors. You can find and download this CSV from the **Assets** panel, following the steps and screenshots shown below.
+
+##### Example
+
+If you pass a value of `30` for an age field that requires values between 1-20 (inclusive), an error will be displayed.
+
+Initially, a general error message appears:
+
+![General error message](img/gerror.png)
 
 To obtail the CSV file with the error information:
 
@@ -194,9 +229,10 @@ To obtail the CSV file with the error information:
 
 3) In the asset list a new file is present with the name `error_<dataset_name>_<datetime>.csv`
 
-After downloading the CSV, the file will return the error raised for each feature like:
+After downloading the CSV, the error can be seen like below:
 
-![alt text](img/image.png)
+![Validation Error](img/val_error.png)
+
 
 ## Remote datasets
 GeoNode is also capable to publish resources served from remote sources. Third-party WMS and ArcGIS REST services, and 3D Tiles tilesets served over HTTPS can be published inside the catalog, with the same metadata and sharing options as other resource types. GeoNode is not managing contents from these soruces, so editing and other more advanced content management features are not supported.

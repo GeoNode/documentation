@@ -1,5 +1,9 @@
 # GeoNode Documentation
 
+> [!WARNING]
+> Documentation has been migrated to **MkDocs** and is now maintained under the main [GeoNode repo](https://github.com/GeoNode/geonode/tree/master/docs).
+> This repository must be considered deprecated and will be archived soon.
+
 ## How to write Documentation
 
 GeoNode uses reStructuredText with [Sphinx](http://www.sphinx-doc.org) .

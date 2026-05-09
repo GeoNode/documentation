@@ -3,6 +3,6 @@ sphinx-intl==2.0.1
 sphinx_rtd_theme==0.5.2
 readthedocs-sphinx-ext==2.1.4
 m2r2==0.3.2
-mistune==0.8.4
+mistune==3.2.1
 sphinxcontrib-httpdomain==1.7.0
 docutils==0.16

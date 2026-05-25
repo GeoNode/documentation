@@ -13,9 +13,9 @@ The followings are the easiest and recommended ways to deploy a full-stack GeoNo
 
 #. **Second Step**: Deploy :guilabel:`GeoNode on a production server`, running as ``https://my_geonode.geonode.org/`` service. :guilabel:`GeoServer` will be also available at ``https://my_geonode.geonode.org/geoserver/``
 
-#. **Third Step**: Customize :guilabel:`.env` to match your needs
+#. **Third Step**: Review and customize :guilabel:`.env` to match your needs
 
-#. **Fourth Step**: Secure your production deployment; change the :guilabel:`admin` passwords and :guilabel:`OAUth2` keys
+#. **Fourth Step**: Verify and secure credentials; check the :guilabel:`admin` passwords and :guilabel:`OAuth2` keys
 
 #. **Further Production Enhancements**
 
@@ -89,6 +89,7 @@ GeoNode uses an ``.env`` where the environment variables required by Docker and 
 A simple way to generate a basic ``.env`` is using the ``create-envfile.py`` utility command. If run without arguments it will generate a valid ``.env`` for a local deployment.
 
 .. code-block:: shell
+
     cd my_geonode
     python create-envfile.py
 
@@ -108,6 +109,8 @@ The command accepts the following arguments:
 * `--geodbpwd`: GeoNode data DB user role's password. A random value is set if left empty
 * `--clientid`: Client id of Geoserver's GeoNode Oauth2 client. A random value is set if left empty
 * `--clientsecret`: Client secret of Geoserver's GeoNode Oauth2 client. A random value is set if left empty
+
+.. note:: When password or OAuth2 arguments are omitted, ``create-envfile.py`` writes random values to ``.env``. Review the generated values before starting the containers and keep the admin passwords available for the first login.
 
 .. _Docker build and run:
 
@@ -155,7 +158,7 @@ If everything goes well, you should be able to see from the ``geonode startup lo
 
 Connect to :guilabel:`http://localhost/`
 
-The default credentials are:
+The admin credentials depend on how ``.env`` was created. If you used ``create-envfile.py`` without passing explicit ``--geonodepwd`` or ``--geoserverpwd`` values, check the generated ``.env`` file for the random passwords. If you created ``.env`` manually and kept the default values, the credentials are:
 
  * GeoNode (:guilabel:`http://localhost/`) :guilabel:`admin`:
 
@@ -307,8 +310,8 @@ If for some reason you are not able to reach the server on the :guilabel:`HTTPS`
       ln -s nginx.conf nginx.http.enabled.conf
       nano nginx.http.enabled.conf
 
-Customize :guilabel:`.env` to match your needs
-===========================================================
+Third Step: Review and customize :guilabel:`.env` to match your needs
+======================================================================
 
 In the case you would like to modify the GeoNode behavior, always use the :guilabel:`.env` file in order to update the :guilabel:`settings`.
 
@@ -373,26 +376,26 @@ You may want to provide your own certificates to GeoNode
     nginx -s reload
     exit
 
-Fourth Step: Secure your production deployment
-==============================================
+Fourth Step: Verify and secure credentials
+==========================================
 
-Once your GeoNode instance is running in production, it's crucial to secure it by changing default passwords and OAuth2 keys.
+Credential review applies to every deployment method. For production deployments, complete this check before exposing the instance publicly. If ``.env`` was generated with ``create-envfile.py``, double check that the generated random admin passwords and OAuth2 client credentials are the values you intend to use. If ``.env`` was created manually or copied from a sample, replace any default passwords and OAuth2 keys.
 
-Change Admin Passwords
-^^^^^^^^^^^^^^^^^^^^^^^
+Verify Admin Passwords
+^^^^^^^^^^^^^^^^^^^^^^
 
-1. **GeoNode Admin Password**: Change the default admin password by logging into your GeoNode instance at ``https://my_geonode.geonode.org/admin`` and updating the admin user password.
+1. **GeoNode Admin Password**: Confirm that the GeoNode admin password is not the default value and matches the value you expect from ``.env``. If you need to change it, log into your GeoNode instance at ``https://my_geonode.geonode.org/admin`` and update the admin user password.
 
-2. **GeoServer Admin Password**: Update the GeoServer admin password by:
+2. **GeoServer Admin Password**: Confirm that the GeoServer admin password is not the default value and matches the value you expect from ``.env``. If you need to change it:
 
    - Logging into GeoServer at ``https://my_geonode.geonode.org/geoserver``
    - Going to :guilabel:`Security` > :guilabel:`Users, Groups, and Roles` > :guilabel:`Users/Groups`
    - Changing the admin user password
 
-Update OAuth2 Keys
-^^^^^^^^^^^^^^^^^^
+Verify or Update OAuth2 Keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Generate new OAuth2 client credentials for enhanced security:
+Confirm that the OAuth2 client credentials are not default or sample values. Generate new OAuth2 client credentials when the values were copied from a sample file or when you need to rotate them:
 
 1. **Generate new OAuth2 credentials** in your ``.env`` file:
 
@@ -423,4 +426,3 @@ Generate new OAuth2 client credentials for enhanced security:
 
        docker-compose restart django
        docker-compose restart geoserver
-
